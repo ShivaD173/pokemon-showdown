@@ -48,7 +48,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "LC",
 	},
 	wartortle: {
-		tier: "SU",
+		tier: "NFE",
 	},
 	blastoise: {
 		tier: "RU",
@@ -309,7 +309,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "LC",
 	},
 	clefairy: {
-		tier: "SU",
+		tier: "NFE",
 		doublesTier: "DUU",
 		natDexTier: "NFE",
 	},
@@ -319,7 +319,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		natDexTier: "UU",
 	},
 	vulpix: {
-		tier: "ZUBL",
+		tier: "NFE",
 		doublesTier: "NFE",
 		natDexTier: "NFE",
 	},
@@ -1447,7 +1447,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		natDexTier: "ZU",
 	},
 	dunsparce: {
-		tier: "SU",
+		tier: "NFE",
 	},
 	dudunsparce: {
 		tier: "PU",
@@ -2017,12 +2017,12 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		natDexTier: "RU",
 	},
 	plusle: {
-		tier: "SU",
+		tier: "IU",
 		doublesTier: "(DUU)",
 		natDexTier: "ZU",
 	},
 	minun: {
-		tier: "SU",
+		tier: "IU",
 		doublesTier: "(DUU)",
 		natDexTier: "ZU",
 	},
@@ -2383,7 +2383,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		natDexTier: "ZU",
 	},
 	regice: {
-		tier: "SU",
+		tier: "IU",
 		doublesTier: "(DUU)",
 		natDexTier: "ZU",
 	},
@@ -2834,7 +2834,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		natDexTier: "OU",
 	},
 	regigigas: {
-		tier: "SU",
+		tier: "IU",
 		doublesTier: "(DUU)",
 		natDexTier: "ZU",
 	},
@@ -3173,7 +3173,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "LC",
 	},
 	krokorok: {
-		tier: "SU",
+		tier: "NFE",
 	},
 	krookodile: {
 		tier: "NU",
@@ -3826,7 +3826,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "LC",
 	},
 	meowstic: {
-		tier: "SU",
+		tier: "IU",
 		doublesTier: "(DUU)",
 		natDexTier: "ZU",
 	},
@@ -3954,7 +3954,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "NFE",
 	},
 	sliggoohisui: {
-		tier: "SU",
+		tier: "NFE",
 	},
 	goodra: {
 		tier: "PU",
@@ -3975,7 +3975,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "LC",
 	},
 	trevenant: {
-		tier: "SU",
+		tier: "IU",
 		doublesTier: "(DUU)",
 		natDexTier: "ZU",
 	},
@@ -4228,7 +4228,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		isNonstandard: "Past",
 	},
 	mareanie: {
-		tier: "SU",
+		tier: "LC",
 	},
 	toxapex: {
 		tier: "UU",
@@ -4671,7 +4671,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "LC",
 	},
 	raboot: {
-		tier: "SU",
+		tier: "NFE",
 	},
 	cinderace: {
 		tier: "OU",

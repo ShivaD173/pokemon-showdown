@@ -243,7 +243,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "IU",
 	},
 	magneton: {
-		tier: "SU",
+		tier: "SUBL",
 	},
 	farfetchd: {
 		tier: "IU",
