@@ -96,7 +96,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "UU",
 	},
 	nidoranm: {
-		tier: "9U",
+		tier: "8U",
 	},
 	nidorino: {
 		tier: "ZU",
