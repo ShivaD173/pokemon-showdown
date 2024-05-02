@@ -562,7 +562,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		natDexTier: "ZU",
 	},
 	golemalola: {
-		tier: "ZU",
+		tier: "SU",
 		doublesTier: "(DUU)",
 		natDexTier: "ZU",
 	},
@@ -689,7 +689,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "NFE",
 	},
 	haunter: {
-		tier: "ZU",
+		tier: "SU",
 		doublesTier: "NFE",
 		natDexTier: "NFE",
 	},
@@ -969,7 +969,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		natDexTier: "NFE",
 	},
 	electivire: {
-		tier: "ZU",
+		tier: "SU",
 		doublesTier: "(DUU)",
 		natDexTier: "ZU",
 	},
@@ -1028,7 +1028,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		natDexTier: "UUBL",
 	},
 	lapras: {
-		tier: "ZU",
+		tier: "SU",
 		doublesTier: "(DUU)",
 		natDexTier: "ZU",
 	},
@@ -1320,7 +1320,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "NFE",
 	},
 	ampharos: {
-		tier: "ZU",
+		tier: "SU",
 		doublesTier: "(DUU)",
 		natDexTier: "ZU",
 	},
@@ -2025,7 +2025,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		natDexTier: "ZU",
 	},
 	volbeat: {
-		tier: "ZU",
+		tier: "SU",
 		doublesTier: "(DUU)",
 		natDexTier: "ZU",
 	},
@@ -2086,7 +2086,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "LC",
 	},
 	camerupt: {
-		tier: "ZU",
+		tier: "SU",
 		doublesTier: "(DUU)",
 		natDexTier: "ZU",
 	},
@@ -2550,7 +2550,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "LC",
 	},
 	bastiodon: {
-		tier: "ZU",
+		tier: "SU",
 		doublesTier: "(DUU)",
 		natDexTier: "ZU",
 	},
@@ -2782,7 +2782,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		natDexTier: "ZU",
 	},
 	rotomfan: {
-		tier: "ZU",
+		tier: "SU",
 		doublesTier: "(DUU)",
 		natDexTier: "ZU",
 	},
@@ -3338,7 +3338,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "LC",
 	},
 	swanna: {
-		tier: "ZU",
+		tier: "SU",
 		doublesTier: "(DUU)",
 		natDexTier: "ZU",
 	},
@@ -3361,7 +3361,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "LC",
 	},
 	sawsbuck: {
-		tier: "ZU",
+		tier: "SU",
 		doublesTier: "(DUU)",
 		natDexTier: "ZU",
 	},
@@ -3483,7 +3483,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "LC",
 	},
 	beartic: {
-		tier: "ZU",
+		tier: "SU",
 		doublesTier: "(DUU)",
 		natDexTier: "ZU",
 	},
@@ -4652,7 +4652,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "LC",
 	},
 	thwackey: {
-		tier: "ZU",
+		tier: "SU",
 		doublesTier: "NFE",
 		natDexTier: "NFE",
 	},
@@ -5374,7 +5374,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "LC",
 	},
 	naclstack: {
-		tier: "ZU",
+		tier: "SU",
 		doublesTier: "NFE",
 		natDexTier: "NFE",
 	},
