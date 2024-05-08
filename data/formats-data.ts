@@ -519,7 +519,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	machamp: {
 		isNonstandard: "Past",
 		tier: "Illegal",
-		natDexTier: "ZU",
+		natDexTier: "ZUBL",
 	},
 	machampgmax: {
 		isNonstandard: "Past",
@@ -643,7 +643,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	sirfetchd: {
 		isNonstandard: "Past",
 		tier: "Illegal",
-		natDexTier: "ZU",
+		natDexTier: "ZUBL",
 	},
 	doduo: {
 		tier: "LC",
@@ -4409,7 +4409,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	silvallyground: {
 		isNonstandard: "Past",
 		tier: "Illegal",
-		natDexTier: "ZU",
+		natDexTier: "ZUBL",
 	},
 	silvallyice: {
 		isNonstandard: "Past",
