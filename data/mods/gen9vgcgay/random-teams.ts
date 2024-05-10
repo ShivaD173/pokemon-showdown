@@ -1,5 +1,4 @@
-import {RandomTeams} from './../../random-teams';
-import {ZeroAttackHPIVs} from './../../mods/gen7/random-teams';
+import RandomTeams from '../../random-battles/gen9/teams';
 
 // Always useful items
 const USEFUL_ITEMS = [
@@ -162,18 +161,18 @@ export class RandomGayTeams extends RandomTeams {
 			}
 		}
 		// Fix IVs for non-Bottle Cap-able sets
-		if (hasHiddenPower) {
-			let hpType;
-			for (const move of moves) {
-				if (move.startsWith('hiddenpower')) hpType = move.substr(11);
-			}
-			if (!hpType) throw new Error(`hasHiddenPower is true, but no Hidden Power move was found.`);
-			const HPivs = ivs.atk === 0 ? ZeroAttackHPIVs[hpType] : this.dex.types.get(hpType).HPivs;
-			let iv: StatID;
-			for (iv in HPivs) {
-				ivs[iv] = HPivs[iv]!;
-			}
-		}
+		// if (hasHiddenPower) {
+		// 	let hpType;
+		// 	for (const move of moves) {
+		// 		if (move.startsWith('hiddenpower')) hpType = move.substr(11);
+		// 	}
+		// 	if (!hpType) throw new Error(`hasHiddenPower is true, but no Hidden Power move was found.`);
+		// 	const HPivs = ivs.atk === 0 ? ZeroAttackHPIVs[hpType] : this.dex.types.get(hpType).HPivs;
+		// 	let iv: StatID;
+		// 	for (iv in HPivs) {
+		// 		ivs[iv] = HPivs[iv]!;
+		// 	}
+		// }
 
 		// Get ability
 		// ability = this.getAbility(types, moves, abilities, counter, teamDetails, species, isLead, isDoubles, teraType, role);
