@@ -341,7 +341,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "LC",
 	},
 	cloyster: {
-		tier: "OU",
+		tier: "Uber",
 		doublesTier: "DOU",
 	},
 	gastly: {
