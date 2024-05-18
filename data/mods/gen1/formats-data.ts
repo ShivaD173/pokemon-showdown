@@ -210,7 +210,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "SU",
 	},
 	victreebel: {
-		tier: "NU",
+		tier: "OU",
 	},
 	tentacool: {
 		tier: "ZU",
