@@ -154,12 +154,12 @@ export class RandomGayTeams extends RandomTeams {
 		// const counter = this.queryMoves(moves, species, teraType, abilities);
 
 		// Shouldn't need to do this?
-		let hasHiddenPower = false;
-		for (const move of moves) {
-			if (move.startsWith('hiddenpower')) {
-				hasHiddenPower = true;
-			}
-		}
+		// let hasHiddenPower = false;
+		// for (const move of moves) {
+		// 	if (move.startsWith('hiddenpower')) {
+		// 		hasHiddenPower = true;
+		// 	}
+		// }
 		// Fix IVs for non-Bottle Cap-able sets
 		// if (hasHiddenPower) {
 		// 	let hpType;
