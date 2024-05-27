@@ -35,7 +35,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "LC",
 	},
 	wartortle: {
-		tier: "SU",
+		tier: "NFE",
 	},
 	blastoise: {
 		tier: "RU",
@@ -814,7 +814,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		doublesTier: "DOU",
 	},
 	natu: {
-		tier: "SU",
+		tier: "LC",
 	},
 	xatu: {
 		tier: "NU",
@@ -1773,7 +1773,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "LC",
 	},
 	bastiodon: {
-		tier: "SU",
+		tier: "IU",
 		doublesTier: "(DUU)",
 	},
 	burmy: {
@@ -1924,7 +1924,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		doublesTier: "(DUU)",
 	},
 	carnivine: {
-		tier: "SU",
+		tier: "IU",
 		doublesTier: "(DUU)",
 	},
 	finneon: {
@@ -2471,7 +2471,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "LC",
 	},
 	lampent: {
-		tier: "SU",
+		tier: "NFE",
 	},
 	chandelure: {
 		tier: "UU",
@@ -2738,7 +2738,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "LC",
 	},
 	floette: {
-		tier: "IU",
+		tier: "SU",
 	},
 	floetteeternal: {
 		isNonstandard: "Unobtainable",
@@ -2791,7 +2791,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 	aegislashblade: {
 	},
 	spritzee: {
-		tier: "IU",
+		tier: "SU",
 	},
 	aromatisse: {
 		tier: "RU",
@@ -2903,7 +2903,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "LC",
 	},
 	gourgeist: {
-		tier: "SU",
+		tier: "IU",
 		doublesTier: "(DUU)",
 	},
 	gourgeistsmall: {
