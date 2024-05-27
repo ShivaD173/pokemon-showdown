@@ -69,7 +69,7 @@ export class LogReaderRoom {
 			return dates.map(x => x.month);
 		}
 		try {
-			const listing = await FS(`logs/chat/${this.roomid}`).readdir();
+			const listing = await Monitor.logPath(`chat/${this.roomid}`).readdir();
 			return listing.filter(file => /^[0-9][0-9][0-9][0-9]-[0-9][0-9]$/.test(file));
 		} catch {
 			return [];
@@ -84,7 +84,7 @@ export class LogReaderRoom {
 			return dates.map(x => x.date);
 		}
 		try {
-			const listing = await FS(`logs/chat/${this.roomid}/${month}`).readdir();
+			const listing = await Monitor.logPath(`chat/${this.roomid}/${month}`).readdir();
 			return listing.filter(file => file.endsWith(".txt")).map(file => file.slice(0, -4));
 		} catch {
 			return [];
@@ -106,7 +106,7 @@ export class LogReaderRoom {
 			});
 		}
 		const month = LogReader.getMonth(day);
-		const log = FS(`logs/chat/${this.roomid}/${month}/${day}.txt`);
+		const log = Monitor.logPath(`chat/${this.roomid}/${month}/${day}.txt`);
 		if (!await log.exists()) return null;
 		return log.createReadStream().byLine();
 	}
@@ -117,7 +117,7 @@ export const LogReader = new class {
 		if (roomlogTable) {
 			if (!(await roomlogTable.selectOne()`WHERE roomid = ${roomid}`)) return null;
 		} else {
-			if (!await FS(`logs/chat/${roomid}`).exists()) return null;
+			if (!await Monitor.logPath(`chat/${roomid}`).exists()) return null;
 		}
 		return new LogReaderRoom(roomid);
 	}
@@ -127,7 +127,7 @@ export const LogReader = new class {
 			const roomids = await roomlogTable.query()`SELECT DISTINCT roomid FROM roomlogs`;
 			return roomids.map(x => x.roomid) as RoomID[];
 		}
-		const listing = await FS(`logs/chat`).readdir();
+		const listing = await Monitor.logPath(`chat`).readdir();
 		return listing.filter(file => /^[a-z0-9-]+$/.test(file)) as RoomID[];
 	}
 
@@ -244,7 +244,10 @@ export const LogViewer = new class {
 			buf += `<p class="message-error">Room "${roomid}" doesn't have logs for ${day}</p>`;
 		} else {
 			for await (const line of stream) {
-				buf += this.renderLine(line, opts, {roomid, date: day});
+				// sometimes there can be newlines in there. parse accordingly
+				for (const part of line.split('\n')) {
+					buf += this.renderLine(part, opts, {roomid, date: day});
+				}
 			}
 		}
 		buf += `</div>`;
@@ -471,10 +474,10 @@ export abstract class Searcher {
 		buf += `<strong>Month: ${month}:</strong><br />`;
 		const nextMonth = LogReader.nextMonth(month);
 		const prevMonth = LogReader.prevMonth(month);
-		if (FS(`logs/chat/${roomid}/${prevMonth}`).existsSync()) {
+		if (Monitor.logPath(`chat/${roomid}/${prevMonth}`).existsSync()) {
 			buf += `<small><a roomid="view-roomstats-${roomid}--${prevMonth}${user ? `--${user}` : ''}">Previous month</a></small>`;
 		}
-		if (FS(`logs/chat/${roomid}/${nextMonth}`).existsSync()) {
+		if (Monitor.logPath(`chat/${roomid}/${nextMonth}`).existsSync()) {
 			buf += ` <small><a roomid="view-roomstats-${roomid}--${nextMonth}${user ? `--${user}` : ''}">Next month</a></small>`;
 		}
 		if (!results) {
@@ -530,10 +533,10 @@ export abstract class Searcher {
 	// this would normally be abstract, but it's very difficult with ripgrep
 	// so it's easier to just do it the same way for both.
 	async roomStats(room: RoomID, month: string) {
-		if (!FS(`logs/chat/${room}`).existsSync()) {
+		if (!Monitor.logPath(`chat/${room}`).existsSync()) {
 			return LogViewer.error(Utils.html`Room ${room} not found.`);
 		}
-		if (!FS(`logs/chat/${room}/${month}`).existsSync()) {
+		if (!Monitor.logPath(`chat/${room}/${month}`).existsSync()) {
 			return LogViewer.error(Utils.html`Room ${room} does not have logs for the month ${month}.`);
 		}
 		const stats = await PM.query({
@@ -543,8 +546,8 @@ export abstract class Searcher {
 		buf += `<strong>Total days with logs: ${stats.average.days}</strong><br />`;
 		const next = LogReader.nextMonth(month);
 		const prev = LogReader.prevMonth(month);
-		const prevExists = FS(`logs/chat/${room}/${prev}`).existsSync();
-		const nextExists = FS(`logs/chat/${room}/${next}`).existsSync();
+		const prevExists = Monitor.logPath(`chat/${room}/${prev}`).existsSync();
+		const nextExists = Monitor.logPath(`chat/${room}/${next}`).existsSync();
 		if (prevExists) {
 			buf += `<br /><a roomid="view-roominfo-${room}--${prev}">Previous month</a>`;
 			buf += nextExists ? ` | ` : `<br />`;
@@ -591,7 +594,7 @@ export abstract class Searcher {
 		return buf;
 	}
 	async activityStats(room: RoomID, month: string) {
-		const days = (await FS(`logs/chat/${room}/${month}`).readdir()).map(f => f.slice(0, -4));
+		const days = (await Monitor.logPath(`chat/${room}/${month}`).readdir()).map(f => f.slice(0, -4));
 		const stats: RoomStats[] = [];
 		const today = Chat.toTimestamp(new Date()).split(' ')[0];
 		for (const day of days) {
@@ -648,7 +651,7 @@ export abstract class Searcher {
 			averagePresent: 0,
 			day,
 		};
-		const path = FS(`logs/chat/${room}/${LogReader.getMonth(day)}/${day}.txt`);
+		const path = Monitor.logPath(`chat/${room}/${LogReader.getMonth(day)}/${day}.txt`);
 		if (!path.existsSync()) return false;
 		const stream = path.createReadStream();
 		let lastTime = new Date(day).getTime(); // start at beginning of day to be sure
@@ -716,7 +719,7 @@ export class FSLogSearcher extends Searcher {
 		this.results = 0;
 	}
 	async searchLinecounts(roomid: RoomID, month: string, user?: ID) {
-		const directory = FS(`logs/chat/${roomid}/${month}`);
+		const directory = Monitor.logPath(`chat/${roomid}/${month}`);
 		if (!directory.existsSync()) {
 			return this.renderLinecountResults(null, roomid, month, user);
 		}
@@ -724,7 +727,7 @@ export class FSLogSearcher extends Searcher {
 		const results: {[date: string]: {[userid: string]: number}} = {};
 		for (const file of files) {
 			const day = file.slice(0, -4);
-			const stream = FS(`logs/chat/${roomid}/${month}/${file}`).createReadStream();
+			const stream = Monitor.logPath(`chat/${roomid}/${month}/${file}`).createReadStream();
 			for await (const line of stream.byLine()) {
 				const parts = line.split('|').map(toID);
 				const id = parts[2];
@@ -753,7 +756,7 @@ export class RipgrepLogSearcher extends Searcher {
 		try {
 			const options = [
 				'-e', search,
-				`logs/chat/${roomid}/${month}`,
+				Monitor.logPath(`chat/${roomid}/${month}`).path,
 				'-i',
 			];
 			if (args) {
@@ -816,8 +819,8 @@ export class DatabaseLogSearcher extends Searcher {
 		if (!Rooms.Roomlogs.table) throw new Error(`Database search made while database is disabled.`);
 		const results: {[date: string]: {[user: string]: number}} = {};
 		const [year, month] = monthString.split('-').map(Number);
-		const rows = await Rooms.Roomlogs.table.selectAll()` 
-			WHERE EXTRACT("year" FROM time::DATE) = ${year} AND EXTRACT("month" FROM time::DATE) = ${month} AND 
+		const rows = await Rooms.Roomlogs.table.selectAll()`
+			WHERE EXTRACT("year" FROM time::DATE) = ${year} AND EXTRACT("month" FROM time::DATE) = ${month} AND
 			roomid = ${roomid} AND type = ${'c'}${user ? SQL` AND userid = ${user}` : SQL``}
 		`;
 
@@ -896,7 +899,7 @@ if (!PM.isParentProcess) {
 	PM.spawn(MAX_PROCESSES);
 }
 
-const accessLog = FS(`logs/chatlog-access.txt`).createAppendStream();
+const accessLog = Monitor.logPath(`chatlog-access.txt`).createAppendStream();
 
 export const pages: Chat.PageTable = {
 	async chatlog(args, user, connection) {
@@ -1015,7 +1018,7 @@ export const pages: Chat.PageTable = {
 		let buf = `<div class="pad"><h2>${title}`;
 		if (userid) buf += ` for ${userid}`;
 		buf += `</h2><hr /><ol>`;
-		const accessStream = FS(`logs/chatlog-access.txt`).createReadStream();
+		const accessStream = Monitor.logPath(`chatlog-access.txt`).createReadStream();
 		for await (const line of accessStream.byLine()) {
 			const [id, rest] = Utils.splitFirst(line, ': ');
 			if (userid && id !== userid) continue;
@@ -1291,7 +1294,7 @@ export const commands: Chat.ChatCommands = {
 		if (target.length < 3) {
 			return this.errorReply(`Too short of a search term.`);
 		}
-		const files = await FS(`logs/chat`).readdir();
+		const files = await Monitor.logPath(`chat`).readdir();
 		const buffer = [];
 		for (const roomid of files) {
 			if (roomid.startsWith('groupchat-') && roomid.includes(target)) {

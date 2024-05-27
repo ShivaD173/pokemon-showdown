@@ -838,9 +838,10 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
-		onModifyPriority(priority, pokemon) {
-			const move = this.queue.willMove(pokemon.foes()[0])?.moveid;
-			if (move && pokemon.foes()[0].moves.indexOf(move) === pokemon.foes()[0].moves.length - 1) {
+		onModifyPriority(priority, pokemon, target) {
+			if (!target) return;
+			const move = this.queue.willMove(target)?.moveid;
+			if (move && target.moves.indexOf(move) === target.moves.length - 1) {
 				this.debug('BSC priority boost');
 				return priority + 3;
 			}
@@ -3804,7 +3805,9 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		onTry(pokemon, target, move) {
 			if (move.sourceEffect !== '3' && this.randomChance(1, 10)) {
 				this.add('-message', "The move backfired!");
-				this.actions.useMove('3', target, pokemon);
+				const activeMove = this.dex.getActiveMove(':3');
+				activeMove.hasBounced = true;
+				this.actions.useMove(activeMove, target, pokemon);
 				return null;
 			}
 		},
@@ -4766,8 +4769,8 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		accuracy: 100,
 		basePower: 80,
 		category: "Physical",
-		shortDesc: "User: Recycle; Target: Leech Seed.",
-		desc: "If this attack is successful, the user regains its last used held item, unless it was forcibly removed. This move summons Leech Seed on the foe.",
+		shortDesc: "The user recycles their item.",
+		desc: "If this attack is successful, the user regains its last used held item, unless it was forcibly removed.",
 		name: "Like..?",
 		pp: 5,
 		priority: 0,
@@ -4778,11 +4781,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		onPrepareHit(target, source) {
 			this.add('-anim', source, 'Recycle', target);
 			this.add('-anim', source, 'Seed Bomb', target);
-			this.add('-anim', source, 'Leech Seed', target);
-		},
-		onHit(target, source) {
-			if (target.hasType('Grass')) return null;
-			target.addVolatile('leechseed', source);
 		},
 		self: {
 			onHit(pokemon) {
