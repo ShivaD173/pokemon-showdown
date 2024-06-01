@@ -464,7 +464,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "LC",
 	},
 	seadra: {
-		tier: "NFE",
+		tier: "SU",
 	},
 	kingdra: {
 		tier: "UU",
@@ -907,7 +907,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "LC",
 	},
 	octillery: {
-		tier: "IU",
+		tier: "SU",
 		doublesTier: "DUU",
 	},
 	delibird: {
@@ -1010,7 +1010,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "LC",
 	},
 	marshtomp: {
-		tier: "NFE",
+		tier: "SU",
 	},
 	swampert: {
 		tier: "UU",
@@ -1138,7 +1138,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "NFE",
 	},
 	exploud: {
-		tier: "SU",
+		tier: "IU",
 		doublesTier: "DUU",
 	},
 	makuhita: {
@@ -2004,7 +2004,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "LC",
 	},
 	palpitoad: {
-		tier: "NFE",
+		tier: "SU",
 	},
 	seismitoad: {
 		tier: "NU",
@@ -2351,7 +2351,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		doublesTier: "DUU",
 	},
 	heatmor: {
-		tier: "SU",
+		tier: "IU",
 		doublesTier: "DUU",
 	},
 	durant: {
