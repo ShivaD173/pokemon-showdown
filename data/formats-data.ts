@@ -1886,6 +1886,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	},
 	vigoroth: {
 		tier: "SU",
+		natDexTier: "NFE",
 	},
 	slaking: {
 		tier: "IU",
@@ -2483,6 +2484,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	},
 	monferno: {
 		tier: "SU",
+		natDexTier: "NFE",
 	},
 	infernape: {
 		tier: "NU",
@@ -2688,6 +2690,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	},
 	gabite: {
 		tier: "SU",
+		natDexTier: "NFE",
 	},
 	garchomp: {
 		tier: "UUBL",
@@ -4911,6 +4914,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	},
 	hattrem: {
 		tier: "SU",
+		natDexTier: "NFE",
 	},
 	hatterene: {
 		tier: "OU",

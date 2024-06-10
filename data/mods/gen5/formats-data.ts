@@ -277,7 +277,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "LC",
 	},
 	graveler: {
-		tier: "ZU",
+		tier: "SU",
 	},
 	golem: {
 		tier: "NU",
@@ -1647,7 +1647,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "LC",
 	},
 	lopunny: {
-		tier: "ZU",
+		tier: "SU",
 		doublesTier: "DUU",
 	},
 	glameow: {
@@ -2182,7 +2182,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "NFE",
 	},
 	vanilluxe: {
-		tier: "ZU",
+		tier: "SU",
 		doublesTier: "DUU",
 	},
 	deerling: {
@@ -2344,7 +2344,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		doublesTier: "DUU",
 	},
 	vullaby: {
-		tier: "ZU",
+		tier: "SU",
 	},
 	mandibuzz: {
 		tier: "NU",
