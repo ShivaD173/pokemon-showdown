@@ -3902,7 +3902,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "LC",
 	},
 	clawitzer: {
-		tier: "SU",
+		tier: "SUBL",
 		doublesTier: "(DUU)",
 		natDexTier: "ZU",
 	},
