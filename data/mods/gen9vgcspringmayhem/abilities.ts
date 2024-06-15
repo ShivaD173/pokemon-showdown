@@ -113,17 +113,6 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 			pokemon.trapped = pokemon.maybeTrapped = false;
 		},
 	},
-	tanglinghair: {
-		inherit: true,
-		onDamagingHit(damage, target, source, move) {
-			if (this.checkMoveMakesContact(move, source, target, true)) {
-				this.add('-ability', target, 'Tangling Hair');
-				source.addVolatile('trapped', source, null, 'trapper');
-				this.boost({spe: -1}, source, target, null, true);
-			}
-		},
-		shortDesc: "Traps target and -1 speed on contact."
-	},
 	rockhead: {
 		inherit: true,
 		shortDesc: "This Pokemon does not take recoil damage besides Struggle/Life Orb damage.",
@@ -163,21 +152,6 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 					source.trySetStatus('brn', target);
 				}
 			}
-		},
-	},
-	flamebody: {
-		inherit: true,
-		shortDesc: "30% to burn on any contact",
-		onModifyMove(move) {
-			if (!move?.flags['contact'] || move.target === 'self') return;
-			if (!move.secondaries) {
-				move.secondaries = [];
-			}
-			move.secondaries.push({
-				chance: 30,
-				status: 'brn',
-				ability: this.dex.abilities.get('flamebody'),
-			});
 		},
 	},
 	liquidooze: {
@@ -222,27 +196,6 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 					this.add('-activate', pokemon, 'ability: Healer');
 					allyActive.cureStatus();
 				}
-			}
-		},
-	},
-	bigpecks: {
-		inherit: true,
-		shortDesc: "Immune to defense lowering, +1 Atk/SpA/Spe if intimidated.",
-		onTryBoost(boost, target, source, effect) {
-			if (source && target === source) return;
-			if (boost.def && boost.def < 0) {
-				delete boost.def;
-				if (!(effect as ActiveMove).secondaries && effect.id !== 'octolock') {
-					this.add("-fail", target, "unboost", "Defense", "[from] ability: Big Pecks", "[of] " + target);
-				}
-			}
-			if (effect.name === 'Intimidate' && boost.atk) {
-				this.add('-fail', target, 'unboost', 'Attack', '[from] ability: Big Pecks', '[of] ' + target);
-				boost.atk = 1;
-				// boost.def = 1;
-				boost.spa = 1;
-				// boost.spd = 1;
-				boost.spe = 1;
 			}
 		},
 	},
@@ -403,20 +356,6 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		},
 	},
 	// Signature Ability Buffs
-	plus: {
-		inherit: true,
-		shortDesc: "Copies all moves used by an ally with Minus.",
-		// Done in battle-actions.ts
-		onModifySpA(spa, pokemon) {
-		}
-	},
-	minus: {
-		inherit: true,
-		shortDesc: "Copies all moves used by an ally with Plus.",
-		// Done in battle-actions.ts
-		onModifySpA(spa, pokemon) {
-		}
-	},
 	toxicchain: {
 		inherit: true,
 		shortDesc: "This Pokemon's moves have a 40% chance of badly poisoning.",
@@ -744,16 +683,6 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 			}
 		},
 	},
-	// longreach: {
-	// 	inherit: true,
-	// 	shortDesc: "Moves no longer make contact, Arrow moves do 1.5x",
-	// 	onBasePower(basePower, attacker, defender, move) {
-	// 		if (['Triple Arrows', 'Thousand Arrows', 'Spirit Shackle'].includes(move.name)) {
-	// 			this.debug('Long Reach boost');
-	// 			return this.chainModify([3, 2]);
-	// 		}
-	// 	},
-	// },
 	wonderguard: {
 		shortDesc: "If not Terad, then can only be damaged by supereffective moves and indirect damage.",
 		onTryHit(target, source, move) {
@@ -991,29 +920,6 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 			}
 		},
 	},
-	windrider: {
-		inherit: true,
-		shortDesc: "+1 Atk when Tailwind begins, +2 Attack if hit by a wind move. Wind move immunity.",
-		onStart(pokemon) {
-			if (pokemon.side.sideConditions['tailwind']) {
-				this.boost({atk: 1}, pokemon, pokemon);
-			}
-		},
-		onTryHit(target, source, move) {
-			if (target !== source && move.flags['wind']) {
-				if (!this.boost({atk: 2}, target, target)) {
-					this.add('-immune', target, '[from] ability: Wind Rider');
-				}
-				return null;
-			}
-		},
-		onAllySideConditionStart(target, source, sideCondition) {
-			const pokemon = this.effectState.target;
-			if (sideCondition.id === 'tailwind') {
-				this.boost({atk: 1}, pokemon, pokemon);
-			}
-		},
-	},
 	guarddog: {
 		inherit: true,
 		shortDesc: "Takes an attack directed at ally once per switch in, Reverses Intim",
@@ -1038,38 +944,6 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 			this.add('-ability', target, 'Perish Body');
 			source.addVolatile('perishsong');
 		},
-	},
-	mummy: {
-		inherit: true,
-		shortDesc: "On contact: Ability changed to Mummy; 0.8x Atk, SpAtk to non-Cofagrigus.",
-		onModifyAtkPriority: 6,
-		onModifyAtk(atk, pokemon) {
-			if (pokemon.species.baseSpecies !== "Cofagrigus") {
-				return this.chainModify([4, 5]);
-			}
-		},
-		onModifySpAPriority: 6,
-		onModifySpA(spa, pokemon) {
-			if (pokemon.species.baseSpecies !== "Cofagrigus") {
-				return this.chainModify([4, 5]);
-			}
-		}
-	},
-	wanderingspirit: {
-		inherit: true,
-		shortDesc: "On contact: Abilities swapped; 0.8x Def, SpDef to non-Runerigus.",
-		onModifyDefPriority: 6,
-		onModifyDef(def, pokemon) {
-			if (pokemon.species.baseSpecies !== "Runerigus") {
-				return this.chainModify([4, 5]);
-			}
-		},
-		onModifySpDPriority: 6,
-		onModifySpD(spd, pokemon) {
-			if (pokemon.species.baseSpecies !== "Runerigus") {
-				return this.chainModify([4, 5]);
-			}
-		}
 	},
 	fullmetalbody: {
 		inherit: true,
@@ -1107,15 +981,6 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 			}
 		},
 	},
-	lingeringaroma: {
-		inherit: true,
-		shortDesc: "On contact: Abilities swapped; -1 Priority to non-Oinkologne",
-		onModifyPriority(priority, pokemon, target, move) {
-			if (pokemon.species.baseSpecies !== "Oinkologne") {
-				return priority - 1;
-			}
-		},
-	},
 	schooling: {
 		inherit: true,
 		shortDesc: "Heals 1/16th each turn. Changes to School Form if it has > 1/4 max HP, else Solo Form.",
@@ -1133,25 +998,6 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 				if (pokemon.species.id === 'wishiwashischool') {
 					pokemon.formeChange('Wishiwashi');
 				}
-			}
-		},
-	},
-	angershell: {
-		inherit: true,
-		shortDesc: "Once per turn, if user gets hit, +1 Atk/SpA/Spe and -1 Def/SpD.",
-		onResidual(pokemon) {
-			this.effectState.angerShell = false;
-		},
-		onDamage(damage, target, source, effect) {
-		},
-		onTryEatItem(item) {
-		},
-		onAfterMoveSecondary(target, source, move) {
-		},
-		onDamagingHit(damage, target, source, move) {
-			if (!this.effectState.angerShell) {
-				this.boost({atk: 1, spa: 1, spe: 1, def: -1, spd: -1}, target, target);
-				this.effectState.angerShell = true;
 			}
 		},
 	},
@@ -1180,15 +1026,6 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 				}
 				this.boost({spe: -1}, pokemon, target, null, true);
 			}
-		},
-	},
-	stancechange: {
-		inherit: true,
-		onModifyMove(move, attacker, defender) {
-			if (attacker.species.baseSpecies !== 'Aegislash' || attacker.transformed) return;
-			if (move.category === 'Status' && move.id !== 'kingsshield') return;
-			const targetForme = ((move.id === 'kingsshield' || move.id === 'behemothbash') ? 'Aegislash' : 'Aegislash-Blade');
-			if (attacker.species.name !== targetForme) attacker.formeChange(targetForme);
 		},
 	},
 	// Ruin Nerf

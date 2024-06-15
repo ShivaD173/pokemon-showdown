@@ -5648,30 +5648,74 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 
 	// GAY
 	triplethreat: {
-		isNonstandard: "CAP",
+		onModifyMove(move) {
+			if (move.secondaries) {
+				this.debug('halving secondary chance');
+				for (const secondary of move.secondaries) {
+					if (secondary.chance) secondary.chance *= 0.5;
+				}
+			}
+			if (move.self?.chance) move.self.chance *= 0.5;
+			if (!move.multihit && move.basePower > 0) {
+				move.multihit = 3;
+				move.basePower = move.basePower * 0.4;
+			}
+		},
 		name: "Triple Threat",
+		isNonstandard: "CAP",
 		rating: 3,
 		num: -5,
 	},
 	mindsurfer: {
-		isNonstandard: "CAP",
+		onModifySpe(spe) {
+			if (this.field.isTerrain('psychicterrain')) {
+				return this.chainModify(2);
+			}
+		},
 		name: "Mind Surfer",
+		isNonstandard: "CAP",
 		rating: 3,
 		num: -6,
 	},
 	thunderstorm: {
+		// Set as 3 turns in conditions
+		onStart(source) {
+			this.field.setWeather('raindance');
+			this.field.setTerrain('electricterrain');
+		},
 		isNonstandard: "CAP",
 		name: "Thunderstorm",
 		rating: 4,
 		num: -7,
 	},
 	justthetip: {
+		onBasePower(basePower, attacker, defender, move) {
+			if (move.name.toLowerCase().includes("drill")) {
+				return this.chainModify([3, 2]);
+			}
+		},
+		onAnyAccuracy(accuracy, target, source, move) {
+			if (move.name === "Horn Drill") {
+				return 45;
+			}
+			return accuracy;
+		},
 		isNonstandard: "CAP",
 		name: "Just the Tip",
 		rating: 3,
 		num: -8,
 	},
 	arcticrush: {
+		onModifySpe(spe, pokemon) {
+			if (this.field.isWeather(['hail', 'snow', 'raindance', 'primordialsea'])) {
+				return this.chainModify(2);
+			}
+		},
+		onModifySpD(spd, pokemon) {
+			if (this.field.isWeather(['hail', 'snow', 'raindance', 'primordialsea'])) {
+				return this.chainModify([3, 2]);
+			}
+		},
 		isNonstandard: "CAP",
 		name: "Arctic Rush",
 		flags: {breakable: 1},
@@ -5679,6 +5723,13 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		num: -9,
 	},
 	cloakchange: {
+		onModifyMovePriority: 1,
+		onModifyMove(move, attacker, defender) {
+			if (attacker.species.baseSpecies !== 'Wormadam' || attacker.transformed) return;
+			if (move.category === 'Status') attacker.formeChange('Wormadam-Trash');
+			if (move.category === 'Physical') attacker.formeChange('Wormadam-Sandy');
+			if (move.category === 'Special') attacker.formeChange('Wormadam');
+		},
 		isNonstandard: "CAP",
 		name: "Cloak Change",
 		flags: {failroleplay: 1, noreceiver: 1, noentrain: 1, notrace: 1, failskillswap: 1, cantsuppress: 1},
@@ -5686,12 +5737,34 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		num: -10,
 	},
 	bigballs: {
+		onStart(pokemon) {
+			if (this.suppressingAbility(pokemon)) return;
+			this.add('-ability', pokemon, 'Big Balls');
+		},
+		onModifyCritRatio(relayVar, source, target, move) {
+			if (move.priority === 0) {
+				move.willCrit = true;
+			}
+		},
+		// Rest implemented in battle-actions:1688
 		isNonstandard: "CAP",
 		name: "Big Balls",
 		rating: 0,
 		num: -11,
 	},
 	oddkeystone: {
+		onSwitchIn(pokemon) {
+			this.effectState.oddKeystone = true;
+		},
+		onPrepareHit(source, target, move) {
+			this.effectState.oddKeystone = false;
+		},
+		onTryHit(target, source, move) {
+			if (target !== source && this.effectState.oddKeystone && move.category !== 'Status') {
+				this.add('-immune', target, '[from] ability: Odd Keystone');
+				return null;
+			}
+		},
 		isNonstandard: "CAP",
 		name: "Odd Keystone",
 		flags: {breakable: 1},
@@ -5699,12 +5772,54 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		num: -12,
 	},
 	monkeybusiness: {
+		onStart(pokemon) {
+			pokemon.abilityState.choiceLock = "";
+		},
+		onBeforeMove(pokemon, target, move) {
+			if (move.isZOrMaxPowered || move.id === 'struggle') return;
+			if (pokemon.abilityState.choiceLock && pokemon.abilityState.choiceLock !== move.id) {
+				// Fails unless ability is being ignored (these events will not run), no PP lost.
+				this.addMove('move', pokemon, move.name);
+				this.attrLastMove('[still]');
+				this.add('-fail', pokemon);
+				return false;
+			}
+		},
+		onModifyMove(move, pokemon) {
+			if (pokemon.abilityState.choiceLock || move.isZOrMaxPowered || move.id === 'struggle') return;
+			pokemon.abilityState.choiceLock = move.id;
+		},
+		onModifySpAPriority: 1,
+		onModifySpA(atk, pokemon) {
+			if (pokemon.volatiles['dynamax']) return;
+			// PLACEHOLDER
+			this.debug('Monkey Business SpA Boost');
+			return this.chainModify(1.5);
+		},
+		onDisableMove(pokemon) {
+			if (!pokemon.abilityState.choiceLock) return;
+			if (pokemon.volatiles['dynamax']) return;
+			for (const moveSlot of pokemon.moveSlots) {
+				if (moveSlot.id !== pokemon.abilityState.choiceLock) {
+					pokemon.disableMove(moveSlot.id, false, this.effectState.sourceEffect);
+				}
+			}
+		},
+		onEnd(pokemon) {
+			pokemon.abilityState.choiceLock = "";
+		},
 		isNonstandard: "CAP",
 		name: "Monkey Business",
 		rating: 4,
 		num: -13,
 	},
 	wideeyed: {
+		onModifyMove(move, pokemon, target) {
+			if (move.category === "Status" && ['normal', 'any'].includes(move.target) && !target?.isAlly(pokemon)) {
+				move.target = "allAdjacentFoes";
+				pokemon.deductPP(move.id, 3);
+			}
+		},
 		isNonstandard: "CAP",
 		name: "Wide Eyed",
 		flags: {failroleplay: 1, noreceiver: 1, noentrain: 1, failskillswap: 1},
@@ -5712,12 +5827,26 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		num: -14,
 	},
 	constrictor: {
+		onAfterMoveSecondarySelf(source, target, move) {
+			if (move.flags['contact'] && move.target === 'normal') {
+				this.add('-ability', source, 'Constrictor');
+				target.addVolatile('partiallytrapped', source);
+			}
+		},
 		isNonstandard: "CAP",
 		name: "Constrictor",
 		rating: 4,
 		num: -15,
 	},
 	heatsink: {
+		onTryHit(target, source, move) {
+			if (target !== source && move.type === 'Fire') {
+				if (!this.boost({spa: 1})) {
+					this.add('-immune', target, '[from] ability: Heat Sink');
+				}
+				return null;
+			}
+		},
 		isNonstandard: "CAP",
 		name: "Heat Sink",
 		flags: {breakable: 1},
@@ -5725,72 +5854,230 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		num: -16,
 	},
 	captivatingsong: {
+		onAnyTryHit(target, source, move) {
+			// Hack to get around the fact that perish song doesnt hit
+			if (move.id === "perishsong") {
+				if (move.flags['sound'] && !source.alliesAndSelf().includes(target)) {
+					// this.add('-ability', source, 'Captivating Song');
+					target.addVolatile('trapped', source, move, 'trapper');
+				}
+			}
+		},
+		onSourceHit(target, source, move) {
+		// onHit(target, source, move) {
+			if (move.flags['sound'] && !source.alliesAndSelf().includes(target)) {
+				// this.add('-ability', source, 'Captivating Song');
+				return target.addVolatile('trapped', source, move, 'trapper');
+			}
+		},
 		isNonstandard: "CAP",
 		name: "Captivating Song",
 		rating: 4,
 		num: -17,
 	},
 	transphobia: {
+		onStart(pokemon) {
+			if (this.suppressingAbility(pokemon)) return;
+			this.add('-ability', pokemon, 'Transphobia');
+		},
+		onBasePower(basePower, attacker, defender, move) {
+			if (defender.gender === 'N' || defender.gender === '') {
+				return this.chainModify(1.3);
+			}
+		},
 		isNonstandard: "CAP",
 		name: "Transphobia",
 		rating: 3,
 		num: -18,
 	},
 	homophobia: {
+		onStart(pokemon) {
+			if (this.suppressingAbility(pokemon)) return;
+			this.add('-ability', pokemon, 'Homophobia');
+		},
+		onBasePower(basePower, attacker, defender, move) {
+			const gender = defender.gender;
+			if (defender.allies().length > 0) {
+				for (const opp of defender.allies()) {
+					if (opp.gender === gender) {
+						return this.chainModify(1.3);
+					}
+				}
+			}
+		},
 		isNonstandard: "CAP",
 		name: "Homophobia",
 		rating: 3,
 		num: -19,
 	},
 	ilvaticano: {
+		onBasePower(basePower, attacker, defender, move) {
+			if (defender.position === attacker.position) {
+				this.add('-ability', attacker, 'Il Vaticano');
+				return this.chainModify(1.5);
+			}
+		},
 		isNonstandard: "CAP",
 		name: "Il Vaticano",
 		rating: 3,
 		num: -20,
 	},
 	lawnsurfer: {
+		onModifySpe(spe) {
+			if (this.field.isTerrain('grassyterrain')) {
+				return this.chainModify(2);
+			}
+		},
 		isNonstandard: "CAP",
 		name: "Lawn Surfer",
 		rating: 3,
 		num: -21,
 	},
 	trueaurora: {
+		// Implemented in Aurora Veil
+		onBasePower(relayVar, source, target, move) {
+			if (move.id === 'aurorabeam') {
+				this.chainModify([3, 2]);
+			}
+		},
 		isNonstandard: "CAP",
 		name: "True Aurora",
 		rating: 3,
 		num: -22,
 	},
 	singularity: {
+		onStart(pokemon) {
+			if (this.suppressingAbility(pokemon)) return;
+			this.add('-ability', pokemon, 'Singularity');
+		},
+		onAnyModifyPriority(relayVar, source, target, move) {
+			if (move.priority >= -2 && move.priority <= 3) {
+				return 0;
+			}
+		},
 		isNonstandard: "CAP",
 		name: "Singularity",
 		rating: 3,
 		num: -23,
 	},
 	catscradle: {
+		onAnyBeforeSwitchOut(pokemon) {
+			this.debug('Pursuit start');
+			pokemon.removeVolatile('destinybond');
+			for (const [actionIndex, action] of this.queue.entries()) {
+				const moveAction = action as MoveAction;
+				if (
+					!moveAction.move || !moveAction.pokemon?.isActive ||
+					moveAction.pokemon.fainted
+				) {
+					continue;
+				}
+				if (moveAction.pokemon.hasAbility('catscradle')) {
+					const targets = ["allAdjacent", "allAdjacentFoes"];
+					if (moveAction.originalTarget === pokemon || targets.includes(moveAction.move.target)) {
+						this.add('-ability', moveAction.pokemon, "Cat's Cradle");
+						(moveAction.move.basePower as any) = moveAction.move.basePower * 2;
+						this.actions.runMove(moveAction.move, moveAction.pokemon, moveAction.targetLoc);
+						this.queue.list.splice(actionIndex, 1);
+						break;
+					}
+				}
+			}
+		},
 		isNonstandard: "CAP",
 		name: "Cat's Cradle",
 		rating: 4,
 		num: -24,
 	},
 	superduperluck: {
+		onModifyCritRatio(critRatio) {
+			return critRatio + 2;
+		},
 		isNonstandard: "CAP",
 		name: "Super Duper Luck",
 		rating: 3,
 		num: -25,
 	},
 	largewingspan: {
+		onModifyMove(move, source, target) {
+			if (move.type === "Flying" && ['normal', 'any'].includes(move.target) && !target?.isAlly(source)) {
+				move.target = 'allAdjacentFoes';
+			}
+		},
 		isNonstandard: "CAP",
 		name: "Large Wingspan",
 		rating: 3,
 		num: -26,
 	},
 	theflock: {
+		// Addtional Check in battle-actions:1912
+		onStart(pokemon) {
+			let activated = false;
+			for (const target of pokemon.adjacentFoes()) {
+				if (!activated) {
+					this.add('-ability', pokemon, 'The Flock', 'boost');
+					activated = true;
+				}
+				if (target.volatiles['substitute']) {
+					this.add('-immune', target);
+				} else {
+					(this.event.name as string) = "Intimidate";
+					this.boost({atk: -1}, target, pokemon, null, true);
+				}
+			}
+		},
+		onModifyAtkPriority: 5,
+		onModifyAtk(atk, pokemon) {
+			if (pokemon.status) {
+				return this.chainModify(2.25);
+			} else {
+				return this.chainModify(1.5);
+			}
+		},
+		onSourceModifyAccuracy(accuracy, target, source, move) {
+			if (move.category === 'Physical' && typeof accuracy === 'number') {
+				return this.chainModify([3277, 4096]);
+			}
+		},
+		onModifyMove(move, pokemon) {
+			if (move.secondaries) {
+				delete move.secondaries;
+				// Technically not a secondary effect, but it is negated
+				delete move.self;
+				if (move.id === 'clangoroussoulblaze') delete move.selfBoost;
+				// Actual negation of `AfterMoveSecondary` effects implemented in scripts.js
+				move.hasSheerForce = true;
+			}
+		},
+		onBasePowerPriority: 21,
+		onBasePower(basePower, pokemon, target, move) {
+			if (move.hasSheerForce) return this.chainModify([5325, 4096]);
+		},
 		isNonstandard: "CAP",
 		name: "The Flock",
 		rating: 3,
 		num: -27,
 	},
 	growingpumpkin: {
+		onResidual(pokemon) {
+			if (pokemon.baseSpecies.baseSpecies !== 'Gourgeist' || !pokemon.hp) return;
+			if (pokemon.species.id === 'gourgeistsuper') return;
+			this.add('-activate', pokemon, 'ability: Growing Pumpkin');
+			if (pokemon.species.id === 'gourgeistsmall') {
+				pokemon.formeChange('Gourgeist', this.effect, true);
+			} else if (pokemon.species.id === 'gourgeist') {
+				pokemon.formeChange('Gourgeist-Large', this.effect, true);
+			} else if (pokemon.species.id === 'gourgeistlarge') {
+				pokemon.formeChange('Gourgeist-Super', this.effect, true);
+			}
+			pokemon.baseMaxhp = Math.floor(Math.floor(
+				2 * pokemon.species.baseStats['hp'] + pokemon.set.ivs['hp'] + Math.floor(pokemon.set.evs['hp'] / 4) + 100
+			) * pokemon.level / 100 + 10);
+			const newMaxHP = pokemon.volatiles['dynamax'] ? (2 * pokemon.baseMaxhp) : pokemon.baseMaxhp;
+			pokemon.hp = newMaxHP - (pokemon.maxhp - pokemon.hp);
+			pokemon.maxhp = newMaxHP;
+			this.add('-heal', pokemon, pokemon.getHealth, '[silent]');
+		},
 		isNonstandard: "CAP",
 		name: "Growing Pumpkin",
 		flags: {failroleplay: 1, noreceiver: 1, noentrain: 1, notrace: 1, failskillswap: 1, cantsuppress: 1},
@@ -5798,6 +6085,13 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		num: -28,
 	},
 	doubledown: {
+		onChangeBoost(boost, target, source, effect) {
+			if (effect && effect.id === 'zpower') return;
+			let i: BoostID;
+			for (i in boost) {
+				boost[i]! *= -2;
+			}
+		},
 		isNonstandard: "CAP",
 		name: "Double Down",
 		flags: {failroleplay: 1, noreceiver: 1, noentrain: 1, failskillswap: 1, breakable: 1},
@@ -5805,30 +6099,142 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		num: -29,
 	},
 	sinnohangrit: {
+		onDamage(damage, target, source, effect) {
+			if (effect.id === 'recoil' || effect.id === 'mindblown' || effect.id === 'steelbeam') {
+				if (!this.activeMove) throw new Error("Battle.activeMove is null");
+				if (this.activeMove.id !== 'struggle') return null;
+			}
+		},
+		onTryBoost(boost, target, source, effect) {
+			if (source && target === source) {
+				let showMsg = false;
+				let i: BoostID;
+				for (i in boost) {
+					if (boost[i]! < 0) {
+						delete boost[i];
+						showMsg = true;
+					}
+				}
+				if (showMsg) {
+					this.add("-fail", target, "unboost", "[from] ability: Sinnohan Grit");
+				}
+			}
+		},
 		isNonstandard: "CAP",
 		name: "Sinnohan Grit",
 		rating: 3,
 		num: -30,
 	},
 	hammertime: {
+		onBasePower(basePower, attacker, defender, move) {
+			if (move.name.toLowerCase().includes("hammer")) {
+				return this.chainModify(1.5);
+			}
+		},
 		isNonstandard: "CAP",
 		name: "Hammer Time",
 		rating: 3,
 		num: -31,
 	},
 	rampage: {
+		onSwitchIn(pokemon) {
+			this.effectState.rampage = false;
+		},
+		onResidual(pokemon) {
+			this.effectState.rampage = false;
+		},
+		onDamagePriority: -101,
+		onAnyDamage(damage, target, source, effect) {
+			if (source && source.ability === "rampage" && damage >= target.hp) {
+				this.effectState.rampage = true;
+				const lockedmove = source.getVolatile('lockedmove');
+				if (lockedmove) {
+					this.add('-activate', source, 'ability: Rampage');
+					delete source.volatiles['lockedmove'];
+				}
+			}
+		},
+		onDamage(damage, target, source, effect) {
+			if (this.effectState.rampage) {
+				if (effect.id === 'recoil' || effect.id === 'mindblown' || effect.id === 'steelbeam') {
+					if (!this.activeMove) throw new Error("Battle.activeMove is null");
+					this.add('-activate', source, 'ability: Rampage');
+					if (this.activeMove.id !== 'struggle') return null;
+				}
+				this.effectState.rampage = false;
+			}
+		},
+		onTryBoost(boost, target, source, effect) {
+			if (source && target === source && this.effectState.rampage) {
+				let showMsg = false;
+				let i: BoostID;
+				for (i in boost) {
+					if (boost[i]! < 0) {
+						delete boost[i];
+						showMsg = true;
+					}
+				}
+				if (showMsg) {
+					this.add("-fail", target, "unboost", "[from] ability: Rampage");
+				}
+			}
+		},
 		isNonstandard: "CAP",
 		name: "Rampage",
 		rating: 3,
 		num: -32,
 	},
 	calmb4storm: {
+		onWeatherChange(pokemon) {
+			if (!pokemon.isActive) return;
+			if (!pokemon.hp) return;
+			if (!this.canSwitch(pokemon.side) || pokemon.forceSwitchFlag || pokemon.switchFlag) return;
+			if (['raindance', 'primordialsea'].includes(pokemon.effectiveWeather())) {
+				for (const action of this.queue.list as MoveAction[]) {
+					if (
+						!action.move || !action.pokemon?.isActive ||
+						action.pokemon.fainted || action.maxMove || action.zmove
+					) {
+						continue;
+					}
+					if (action.pokemon === pokemon) {
+						this.add('-activate', pokemon, 'ability: Calm B4 Storm');
+						this.queue.prioritizeAction(action);
+						(action.move.selfSwitch as boolean) = true;
+						break;
+					}
+				}
+			}
+		},
+		onDamagingHit(damage, target, source, move) {
+			if (move.type === 'Water') {
+				for (const action of this.queue.list as MoveAction[]) {
+					if (
+						!action.move || !action.pokemon?.isActive ||
+						action.pokemon.fainted || action.maxMove || action.zmove
+					) {
+						continue;
+					}
+					if (action.pokemon === target) {
+						this.add('-activate', target, 'ability: Calm Before Storm');
+						this.queue.prioritizeAction(action);
+						(action.move.selfSwitch as boolean) = true;
+						break;
+					}
+				}
+			}
+		},
 		isNonstandard: "CAP",
 		name: "Calm B4 Storm",
 		rating: 3,
 		num: -33,
 	},
 	lifetaker: {
+		onSourceAfterFaint(length, target, source, effect) {
+			if (effect && effect.effectType === 'Move') {
+				this.heal(source.baseMaxhp / 3, source);
+			}
+		},
 		isNonstandard: "CAP",
 		name: "Lifetaker",
 		rating: 3,
