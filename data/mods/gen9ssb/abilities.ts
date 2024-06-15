@@ -1640,14 +1640,18 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 					'syrupbomb', 'tarshot', 'taunt', 'telekinesis', 'torment', 'uproar', 'yawn', 'flashfire', 'protosynthesis',
 					'quarkdrive', 'slowstart', 'truant', 'unburden', 'metronome', 'beakblast', 'charge', 'echoedvoice', 'encore',
 					'focuspunch', 'furycutter', 'gmaxcannonade', 'gmaxchistrike', 'gmaxvinelash', 'gmaxvolcalith', 'gmaxwildfire',
-					'iceball', 'rollout', 'laserfocus', 'lockon', 'perishsong', 'shelltrap', 'throatchop', 'trapped', 'trapper',
+					'iceball', 'rollout', 'laserfocus', 'lockon', 'perishsong', 'shelltrap', 'throatchop', 'trapped', 'ultramystik',
 					'choicelock', 'stall', 'catstampofapproval', 'beefed', 'boiled', 'flipped', 'therollingspheal', 'treasurebag',
 					'torisstori', 'anyonecanbekilled', 'sigilsstorm', 'wonderwing', 'riseabove', 'superrollout', 'meatgrinder',
-					'risingsword', 'ultramystik',
+					'risingsword',
 				];
 				for (const volatile of volatilesToClear) {
 					if (mon.volatiles[volatile]) {
 						mon.removeVolatile(volatile);
+						if (volatile === 'flipped') {
+							changeSet(this, mon, ssbSets['Clementine']);
+							this.add(`c:|${getName('Clementine')}|┬──┬◡ﾉ(° -°ﾉ)`);
+						}
 						this.add('-activate', pokemon, 'ability: End Round');
 					}
 				}
@@ -1976,11 +1980,11 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		shortDesc: "Becomes a random typing at the beginning of each turn.",
 		name: "High Performance Computing",
 		flags: {},
-		onBeforeTurn(source) {
-			if (source.terastallized) return;
+		onResidual(source) {
 			const type = this.sample(this.dex.types.names().filter(i => i !== 'Stellar'));
-			source.setType(type);
-			this.add('-start', source, 'typechange', type, '[from] ability: High Performance Computing');
+			if (source.setType(type)) {
+				this.add('-start', source, 'typechange', type, '[from] ability: High Performance Computing');
+			}
 		},
 	},
 
@@ -2051,7 +2055,8 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 			if (target.getMoveHitData(move).typeMod > 0) {
 				this.effectState.superHit = true;
 				target.removeVolatile('ultramystik');
-				target.setAbility('Healer', undefined, true);
+				target.setAbility('Healer', null, true);
+				target.baseAbility = target.ability;
 			}
 		},
 		condition: {

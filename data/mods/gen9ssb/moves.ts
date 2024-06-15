@@ -520,11 +520,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			this.add('-anim', source, 'Earthquake', target);
 		},
 		volatileStatus: 'flinch',
-		onHit(target, source, move) {
-			if (target && !target.getMoveHitData(move).crit) {
-				delete move.volatileStatus;
-			}
-		},
 		secondary: null,
 		target: "normal",
 		type: "???",
@@ -691,7 +686,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		shortDesc: "If hit, Trick Room. Else, attack+random effect.",
 		desc: "Begins to charge an attack at the start of the turn. Nearly always moves last. If the user is directly damaged while charging, Trick Room is set instead, making the slower Pokemon move first for 5 turns. The Trick Room effect occurs before Cascade if both would activate on the same turn. If the user was not directly damaged while charging, the attack executes and one random effect will occur from the following: poison; burn; paralysis; confusion; the user recovers HP equal to 75% of damage dealt; all entry hazards are removed from the field; a random entry hazard is set, except G-Max Steelsurge; two random stats of the user are raised by 1 stage each, except Accuracy and Evasion; two random stats of the target are lowered by 1 stage each, except Accuracy and Evasion; or the target transforms into a Fennekin with Ember, Scratch, and Growl until they switch out.",
 		name: "Sigil's Storm",
-		pp: 5,
+		pp: 20,
 		priority: -6,
 		onModifyPriority(priority, source, target, move) {
 			if (source.species.id === 'mismagius') return priority + 6;
@@ -920,6 +915,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		accuracy: true,
 		basePower: 0,
 		category: "Status",
+		shortDesc: "Protect, hit=-2 Atk/SpA/or Spe, user swap.",
 		name: "Shatter and Scatter",
 		pp: 10,
 		priority: 4,
@@ -3786,7 +3782,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 				return;
 			}
 			const plagiarismIndex = source.moves.indexOf('plagiarism');
-			const plagiarism = source.moveSlots[plagiarismIndex];
 			if (plagiarismIndex < 0) return false;
 			this.add(`c:|${getName((source.illusion || source).name)}|yoink`);
 			const plagiarisedMove = {
@@ -3799,22 +3794,12 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 				used: false,
 			};
 			source.moveSlots[plagiarismIndex] = plagiarisedMove;
-			source.baseMoveSlots[plagiarismIndex] = plagiarisedMove;
 			this.add('-activate', source, 'move: Plagiarism', move.name);
 			this.add('-message', `${source.name} plagiarised ${target.name}'s ${move.name}!`);
 			this.actions.useMove(move.id, source, target);
 			delete target.volatiles['imprison'];
 			source.addVolatile('imprison', source);
-			source.addVolatile('plagiarism');
-			source.volatiles['plagiarism'].moveSlot = plagiarism;
-			source.volatiles['plagiarism'].index = plagiarismIndex;
 			source.m.usedPlagiarism = true;
-		},
-		condition: {
-			onSwitchOut(source) {
-				const index = this.effectState.index;
-				source.moveSlots[index] = source.baseMoveSlots[index] = this.effectState.plagiarism;
-			},
 		},
 		noSketch: true,
 		secondary: null,
@@ -6655,7 +6640,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			},
 			// groundedness implemented in battle.engine.js:BattlePokemon#isGrounded
 			onDragOut(pokemon, source, move) {
-				if (source && this.queue.willMove(source)?.moveid !== 'protectoroftheskies') return;
+				if (source && this.queue.willMove(source)?.moveid === 'protectoroftheskies') return;
 				this.add('-activate', pokemon, 'move: Ingrain');
 				return null;
 			},
