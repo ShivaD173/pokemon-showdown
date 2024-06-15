@@ -627,6 +627,94 @@ export const Conditions: {[k: string]: ConditionData} = {
 			this.add('-weather', 'none');
 		},
 	},
+	locusts: {
+		name: 'Locusts',
+		effectType: 'Weather',
+		duration: 5,
+		// This should be applied directly to the stat before any of the other modifiers are chained
+		// So we give it increased priority.
+		onFieldStart(field, source, effect) {
+			this.add('-weather', 'Locusts');
+		},
+		onFieldResidualOrder: 1,
+		onFieldResidual() {
+			this.add('-weather', 'Locusts', '[upkeep]');
+			this.eachEvent('Weather');
+		},
+		onWeather(target) {
+			this.damage(target.baseMaxhp / 16);
+		},
+		onFieldEnd() {
+			this.add('-weather', 'none');
+		},
+	},
+	acidrain: {
+		name: 'AcidRain',
+		effectType: 'Weather',
+		duration: 5,
+		// This should be applied directly to the stat before any of the other modifiers are chained
+		// So we give it increased priority.
+		onFieldStart(field, source, effect) {
+			this.add('-weather', 'AcidRain');
+		},
+		onFieldResidualOrder: 1,
+		onFieldResidual() {
+			this.add('-weather', 'AcidRain', '[upkeep]');
+			this.eachEvent('Weather');
+		},
+		onWeather(target) {
+			this.damage(target.baseMaxhp / 16);
+		},
+		onFieldEnd() {
+			this.add('-weather', 'none');
+		},
+	},
+	stellarstorm: {
+		name: 'StellarStorm',
+		effectType: 'Weather',
+		duration: 5,
+		onEffectivenessPriority: -1,
+		onEffectiveness(typeMod, target, type, move) {
+			if (target?.terastallized) {
+				this.add('-fieldactivate', 'Stellar Storm');
+				return 1;
+			}
+		},
+		onFieldStart(field, source, effect) {
+			this.add('-weather', 'StellarStorm', '[from] ability: ' + effect.name, '[of] ' + source);
+		},
+		onFieldResidualOrder: 1,
+		onFieldResidual() {
+			this.add('-weather', 'StellarStorm', '[upkeep]');
+			this.eachEvent('Weather');
+		},
+		onFieldEnd() {
+			this.add('-weather', 'none');
+		},
+	},
+	darkness: {
+		name: 'Darkness',
+		effectType: 'Weather',
+		duration: 5,
+		onModifyAccuracyPriority: 9,
+		onModifyAccuracy(accuracy, target, source, move) {
+			if (!source.hasType('Dark')) {
+				if (typeof accuracy !== 'number') return;
+				return this.chainModify([3277, 4096]);
+			}
+		},
+		onFieldStart(field, source, effect) {
+			this.add('-weather', 'Darkness', '[from] ability: ' + effect.name, '[of] ' + source);
+		},
+		onFieldResidualOrder: 1,
+		onFieldResidual() {
+			this.add('-weather', 'Darkness', '[upkeep]');
+			this.eachEvent('Weather');
+		},
+		onFieldEnd() {
+			this.add('-weather', 'none');
+		},
+	},
 	sandstorm: {
 		name: 'Sandstorm',
 		effectType: 'Weather',

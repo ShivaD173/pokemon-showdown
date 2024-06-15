@@ -1,15 +1,21 @@
+const weathers = ['Rain Dance', 'Sunny Day', 'Hail', 'Snow', 'Sandstorm',
+	'Locusts', 'Delta Stream', 'Acid Rain', 'Stellar Storm', 'Darkness'];
+// const weathers = ['Acid Rain', 'Stellar Storm', 'Darkness', 'Locusts'];
+function newWeather(battle: Battle, currentWeather: string) {
+	battle.add('-weather', currentWeather.replace(' ', ''), '[upkeep]');
+	battle.eachEvent('Weather');
+	const otherWeathers = weathers.filter(item => item !== currentWeather);
+	const rndInt = Math.floor(Math.random() * otherWeathers.length);
+	const weather = otherWeathers[rndInt];
+	const lowercase = weather.toLowerCase().replace(' ', '');
+	battle.add('-weather', weather);
+	battle.field.weather = lowercase as ID;
+	battle.field.weatherState = {id: lowercase};
+}
+
 export const Conditions: {[k: string]: ModdedConditionData} = {
 	raindance: {
 		inherit: true,
-		durationCallback(source, effect) {
-			if (effect.ability === 'thunderstorm') {
-				return 3;
-			}
-			if (source?.hasItem('damprock')) {
-				return 8;
-			}
-			return 5;
-		},
 		onWeatherModifyDamage(damage, attacker, defender, move) {
 			if (defender.hasItem('utilityumbrella')) return;
 			if (move.type === 'Water') {
@@ -20,6 +26,10 @@ export const Conditions: {[k: string]: ModdedConditionData} = {
 				this.debug('rain fire suppress');
 				return this.chainModify(0.5);
 			}
+		},
+
+		onFieldResidual() {
+			newWeather(this, "Rain Dance");
 		},
 	},
 	sunnyday: {
@@ -38,6 +48,58 @@ export const Conditions: {[k: string]: ModdedConditionData} = {
 				this.debug('Sunny Day water suppress');
 				return this.chainModify(0.5);
 			}
+		},
+
+		onFieldResidual() {
+			newWeather(this, "Sunny Day");
+		},
+	},
+	hail: {
+		inherit: true,
+		onFieldResidual() {
+			newWeather(this, "Hail");
+		},
+	},
+	snow: {
+		inherit: true,
+		onFieldResidual() {
+			newWeather(this, "Snow");
+		},
+	},
+	sandstorm: {
+		inherit: true,
+		onFieldResidual() {
+			newWeather(this, "Sandstorm");
+		},
+	},
+	locusts: {
+		inherit: true,
+		onFieldResidual() {
+			newWeather(this, "Locusts");
+		},
+	},
+	acidrain: {
+		inherit: true,
+		onFieldResidual() {
+			newWeather(this, "Acid Rain");
+		},
+	},
+	stellarstorm: {
+		inherit: true,
+		onFieldResidual() {
+			newWeather(this, "Stellar Storm");
+		},
+	},
+	darkness: {
+		inherit: true,
+		onFieldResidual() {
+			newWeather(this, "Darkness");
+		},
+	},
+	deltastream: {
+		inherit: true,
+		onFieldResidual() {
+			newWeather(this, "Delta Stream");
 		},
 	},
 	slp: {

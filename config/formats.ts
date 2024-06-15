@@ -33,18 +33,13 @@ export const Formats: FormatList = [
 		ruleset: ['Flat Rules', '!! Adjust Level = 50', 'Tera Type Preview', 'Sketch Post-Gen 7 Moves', 'Draft Timer'],
 		bestOfDefault: true,
 		unbanlist: ['Greninja-Bond'],
-		onBeforeTurn() {
-			this.add('-message', 'Starting Turn');
-			const weathers = ['Rain Dance', 'Sunny Day', 'Hail', 'Snow', 'Sandstorm'];
-			// const rndInt = Math.floor(Math.random() * 5);
-			const rndInt = this.turn % 5;
-			const weather = weathers[rndInt];
-			this.add('-message', 'Starting' + weather);
+		onBegin() {
+			const weather = "Delta Stream";
 			const lowercase = weather.toLowerCase().replace(' ', '');
 			this.add('-weather', weather);
 			this.field.weather = lowercase as ID;
 			this.field.weatherState = {id: lowercase};
-		}
+		  },
 	},
 	{
 		name: "[Gen 9] VGC Gay",

@@ -1,6 +1,7 @@
 export const TypeChart: {[k: string]: TypeData} = {
 	bug: {
 		damageTaken: {
+			locusts: 3,
 			Bug: 0,
 			Dark: 0,
 			Dragon: 0,
@@ -332,6 +333,7 @@ export const TypeChart: {[k: string]: TypeData} = {
 		damageTaken: {
 			psn: 3,
 			tox: 3,
+			acidrain: 3,
 			Bug: 2,
 			Dark: 0,
 			Dragon: 0,

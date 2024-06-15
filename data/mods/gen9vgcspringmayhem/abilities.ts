@@ -1,4 +1,10 @@
 export const Abilities: {[k: string]: ModdedAbilityData} = {
+	deltastream: {
+		inherit: true,
+		onAnySetWeather(target, source, weather) {
+		}
+	},
+	// Gay
 	slowstart: {
 		inherit: true,
 		shortDesc: "On switch-in, this Pokemon's Attack and Speed are halved for 3 turns.",
