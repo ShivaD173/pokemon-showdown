@@ -1653,7 +1653,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	entei: {
 		tier: "RU",
 		doublesTier: "(DUU)",
-		natDexTier: "PU",
+		natDexTier: "PUBL",
 	},
 	suicune: {
 		tier: "NUBL",
@@ -3888,7 +3888,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	barbaracle: {
 		isNonstandard: "Past",
 		tier: "Illegal",
-		natDexTier: "ZU",
+		natDexTier: "PUBL",
 	},
 	skrelp: {
 		tier: "LC",
@@ -4779,7 +4779,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	drednaw: {
 		tier: "PUBL",
 		doublesTier: "(DUU)",
-		natDexTier: "ZU",
+		natDexTier: "PUBL",
 	},
 	drednawgmax: {
 		isNonstandard: "Past",

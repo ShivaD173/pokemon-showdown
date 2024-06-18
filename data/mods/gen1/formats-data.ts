@@ -96,7 +96,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "9U",
 	},
 	nidorino: {
-		tier: "SU",
+		tier: "IU",
 	},
 	nidoking: {
 		tier: "NU",
@@ -297,7 +297,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "NU",
 	},
 	voltorb: {
-		tier: "IU",
+		tier: "SU",
 	},
 	electrode: {
 		tier: "UU",
@@ -345,7 +345,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 		tier: "UU",
 	},
 	horsea: {
-		tier: "IU",
+		tier: "SU",
 	},
 	seadra: {
 		tier: "NU",
