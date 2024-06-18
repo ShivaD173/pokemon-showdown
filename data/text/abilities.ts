@@ -2477,4 +2477,19 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		start: "  [POKEMON] can't get off the ground!",
 		end: "  [POKEMON] took flight!",
 	},
+	loveydovey: {
+		name: "Lovey-Dovey",
+		desc: "Sets up Love In The Air, which makes all Fairy moves perfectly accurate.",
+		shortDesc: "Sets up Love In The Air."
+	},
+	acidrain: {
+		name: "Acid Rain",
+		desc: "Sets up Acid Rain.",
+		shortDesc: "Sets up Acid Rain."
+	},
+	pollinator: {
+		name: "Pollinator",
+		desc: "Sets up Pollen.",
+		shortDesc: "Sets up Pollen."
+	},
 };

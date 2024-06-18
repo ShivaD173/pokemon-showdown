@@ -1,4 +1,70 @@
 export const Moves: {[k: string]: ModdedMoveData} = {
+	attract: {
+		inherit: true,
+		shortDesc: "A target of ANY gender gets infatuated.",
+		volatileStatus: 'attract',
+		condition: {
+			noCopy: true, // doesn't get copied by Baton Pass
+			onStart(pokemon, source, effect) {
+				if (!(pokemon.gender === 'M' && source.gender === 'F') && !(pokemon.gender === 'F' && source.gender === 'M')) {
+					this.debug('incompatible gender');
+					return false;
+				}
+				if (!this.runEvent('Attract', pokemon, source)) {
+					this.debug('Attract event failed');
+					return false;
+				}
+
+				if (effect.name === 'Cute Charm') {
+					this.add('-start', pokemon, 'Attract', '[from] ability: Cute Charm', '[of] ' + source);
+				} else if (effect.name === 'Destiny Knot') {
+					this.add('-start', pokemon, 'Attract', '[from] item: Destiny Knot', '[of] ' + source);
+				} else {
+					this.add('-start', pokemon, 'Attract');
+				}
+			},
+			onUpdate(pokemon) {
+				if (this.effectState.source && !this.effectState.source.isActive && pokemon.volatiles['attract']) {
+					this.debug('Removing Attract volatile on ' + pokemon);
+					pokemon.removeVolatile('attract');
+				}
+			},
+			onBeforeMovePriority: 2,
+			onBeforeMove(pokemon, target, move) {
+				this.add('-activate', pokemon, 'move: Attract', '[of] ' + this.effectState.source);
+				if (target.effectiveWeather() === "loveintheair" || this.randomChance(1, 4)) {
+					this.add('cant', pokemon, 'Attract');
+					return false;
+				}
+			},
+			onEnd(pokemon) {
+				this.add('-end', pokemon, 'Attract', '[silent]');
+			},
+		},
+		onTryImmunity(target, source) {
+			return true;
+		},
+	},
+	lastrespects: {
+		inherit: true,
+		basePowerCallback(pokemon, target, move) {
+			if (pokemon.effectiveWeather() === "twilightzone") {
+				return 200;
+			}
+			return 50 + 50 * pokemon.side.totalFainted;
+		},
+	},
+	risingvoltage: {
+		inherit: true,
+		basePowerCallback(source, target, move) {
+			if (this.field.isWeather('thunderstorm') || (this.field.isTerrain('electricterrain') && target.isGrounded())) {
+				if (!source.isAlly(target)) this.hint(`${move.name}'s BP doubled.`);
+				return move.basePower * 2;
+			}
+			return move.basePower;
+		},
+	},
+	// Gay Stuff
 	struggle: {
 		inherit: true,
 		basePower: 60,
@@ -7,13 +73,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	spore: {
 		inherit: true,
 		pp: 5,
-		shortDesc: "Puts target to sleep. Fails if priority",
-		onTryMove(attacker, defender, move) {
-			if (move.pranksterBoosted) {
-				this.add('-fail', attacker, 'move: Spore');
-				return null;
-			}
-		},
 	},
 	hypnosis: {
 		inherit: true,
@@ -25,22 +84,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	},
 	sing: {
 		inherit: true,
-		accuracy: 60,
 		pp: 5,
-	},
-	// Sleeping Moves
-	snore: {
-		inherit: true,
-		basePower: 110,
-		category: 'Physical',
-	},
-	dreameater: {
-		inherit: true,
-		shortDesc: "User or Target must be sleeping. Heal 50%.",
-		onTryImmunity(target, source) {
-			return target.status === 'slp' || target.hasAbility('comatose') ||
-					source.status === 'slp' || source.hasAbility('comatose');
-		},
 	},
 	// Genie moves
 	bleakwindstorm: {
@@ -246,6 +290,12 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	"mistyexplosion": {
 		inherit: true,
 		"basePower": 150,
+		shortDesc: "User faints. User in Love In The Air: 1.5x power.",
+		onBasePower(basePower, source) {
+			if (this.field.isWeather("loveintheair") || (this.field.isTerrain('mistyterrain') && source.isGrounded())) {
+				return this.chainModify(1.5);
+			}
+		},
 		isNonstandard: null
 	},
 	"explosion": {
@@ -261,30 +311,9 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		basePower: 70,
 	},
-	payback: {
-		inherit: true,
-		basePowerCallback(pokemon, target) {
-			if (this.queue.willMove(target)) {
-				return 50;
-			}
-			this.debug('BP doubled');
-			return 100;
-		},
-	},
 	zenheadbutt: {
 		inherit: true,
 		accuracy: 95,
-	},
-	visegrip: {
-		inherit: true,
-		basePower: 70,
-		shortDesc: "High Crit. Does 2x damage if it crits.",
-		critRatio: 2,
-		onBasePower(basePower, source, target, move) {
-			if (target.getMoveHitData(move).crit) {
-				return this.chainModify(2);
-			}
-		},
 	},
 	holdhands: {
 		inherit: true,
@@ -295,35 +324,11 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			this.boost({atk: 1, spa: 1}, source, source, move, false, true);
 		},
 	},
-	gastroacid: {
-		inherit: true,
-		target: "allAdjacent",
-		shortDesc: "Nullifies the ability of all other pokemon.",
-		flags: {protect: 1, reflectable: 1, mirror: 1, distance: 1},
-		condition: {
-			onStart(pokemon) {
-				if (pokemon.getAbility().flags['cantsuppress']) return false;
-				if (pokemon.hasItem('Ability Shield')) return false;
-				this.add('-endability', pokemon);
-				this.singleEvent('End', pokemon.getAbility(), pokemon.abilityState, pokemon, pokemon, 'gastroacid');
-			},
-			onCopy(pokemon) {
-				if (pokemon.getAbility().flags['cantsuppress']) pokemon.removeVolatile('gastroacid');
-			},
-		},
-		onTryHit() {
-		},
-	},
-	lick: {
-		inherit: true,
-		shortDesc: "50% chance to paralyze the target.",
-		secondary: {chance: 50, status: 'par'},
-	},
 	growth: {
 		inherit: true,
-		shortDesc: "User's Atk and SpA +1; +2 in Sun/Grassy Terrain.",
+		shortDesc: "User's Atk and SpA +1; +2 in Sun/Pollen.",
 		onModifyMove(move, pokemon) {
-			if (['sunnyday', 'desolateland'].includes(pokemon.effectiveWeather()) ||
+			if (['sunnyday', 'desolateland', 'pollen'].includes(pokemon.effectiveWeather()) ||
 				this.field.isTerrain('grassyterrain') && pokemon.isGrounded()) {
 				move.boosts = {atk: 2, spa: 2};
 			}
@@ -359,16 +364,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		accuracy: 100,
 	},
-	rage: {
-		inherit: true,
-		isNonstandard: null,
-		shortDesc: "+25 power for each time user was hit. Max: 1000bp",
-		basePower: 25,
-		basePowerCallback(pokemon) {
-			return Math.min(1000, 25 + 25 * pokemon.timesAttacked);
-		},
-		self: {},
-	},
 	punishment: {
 		inherit: true,
 		isNonstandard: null,
@@ -383,30 +378,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 	gunkshot: {
 		inherit: true,
 		accuracy: 85,
-	},
-	triattack: {
-		inherit: true,
-		basePower: 30,
-		multihit: 3,
-		shortDesc: "Hits 3x, 10% chance to burn/para/frostbite each.",
-		secondary: {
-			chance: 10,
-			onHit(target, source) {
-				const result = this.random(3);
-				if (result === 0) {
-					target.trySetStatus('brn', source);
-				} else if (result === 1) {
-					target.trySetStatus('par', source);
-				} else {
-					target.trySetStatus('fst', source);
-				}
-			},
-		},
-	},
-	smartstrike: {
-		inherit: true,
-		flags: {contact: 1, protect: 1, mirror: 1, slicing: 1},
-		isNonstandard: null
 	},
 	slash: {
 		inherit: true,
@@ -472,10 +443,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 				}
 			},
 		},
-	},
-	spark: {
-		inherit: true,
-		basePower: 70,
 	},
 	supercellslam: {
 		inherit: true,
@@ -543,30 +510,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		basePower: 75,
 		accuracy: 95
 	},
-	rollingkick: {
-		inherit: true,
-		isNonstandard: null,
-		shortDesc: "100% chance to lower speed by 1.",
-		basePower: 70,
-		accuracy: 100,
-		secondary: {chance: 100, boosts: {spe: -1}},
-	},
-	frostbreath: {
-		inherit: true,
-		isNonstandard: null,
-		basePower: 55,
-		accuracy: 100
-	},
-	skyuppercut: {
-		inherit: true,
-		isNonstandard: null,
-		shortDesc: "Super effective on Flying. Hits Flying Enemies.",
-		onEffectiveness(typeMod, target, type) {
-			if (type === 'Flying') return 1;
-		},
-		basePower: 70,
-		accuracy: 100,
-	},
 	meteorbeam: {
 		inherit: true,
 		accuracy: 100,
@@ -600,43 +543,10 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		],
 	},
 	// Near Signaure Moves
-	veeveevolley: {
-		inherit: true,
-		isNonstandard: null,
-		desc: "Power is equal to the greater of (user's Happiness * 2/5), rounded down, or 1. Can't Miss. Uses user's primary type. Becomes Special if user's spA is higher.",
-		shortDesc: "Max: 102 BP. Uses primary type and highest atk stat.",
-		onModifyMove(move, pokemon) {
-			if (pokemon.getStat('atk', false, true) < pokemon.getStat('spa', false, true)) move.category = 'Special';
-		},
-		onModifyType(move, pokemon) {
-			move.type = pokemon.baseTypes[0];
-		},
-	},
 	razorshell: {
 		inherit: true,
 		shortDesc: "100% chance to lower the target's Defense by 1.",
 		secondary: {chance: 100, boosts: {def: -1}},
-	},
-	magneticflux: {
-		shortDesc: "Burns all other Steel types on field.",
-		target: "all",
-		flags: {distance: 1},
-		onHitField(t, source, move) {
-			const targets: Pokemon[] = [];
-			for (const pokemon of this.getAllActive()) {
-				if (pokemon.hasType('Steel') && pokemon !== source && !pokemon.status) {
-					// This move affects every Steel-type Pokemon in play.
-					targets.push(pokemon);
-				}
-			}
-			let success = false;
-			for (const target of targets) {
-				success = target.trySetStatus('brn', source) || success;
-			}
-			return success;
-		},
-		inherit: true,
-		isNonstandard: null,
 	},
 	hardpress: {
 		inherit: true,
@@ -682,35 +592,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		secondary: {
 			chance: 30,
 			boosts: {spe: -1},
-		},
-	},
-	present: {
-		inherit: true,
-		shortDesc: "80, 110, 140 power, if target ally, heals 50%.",
-		accuracy: 100,
-		onTryHit(target, source, move) {
-			if (source.isAlly(target)) {
-				move.basePower = 0;
-				move.infiltrates = true;
-			}
-		},
-		onHit(target, source) {
-			if (source.isAlly(target)) {
-				if (!this.heal(Math.floor(target.baseMaxhp * 0.5))) {
-					this.add('-immune', target);
-					return this.NOT_FAIL;
-				}
-			}
-		},
-		onModifyMove(move, pokemon, target) {
-			const rand = this.random(3);
-			if (rand < 1) {
-				move.basePower = 80;
-			} else if (rand < 2) {
-				move.basePower = 110;
-			} else {
-				move.basePower = 140;
-			}
 		},
 	},
 	furycutter: {
@@ -844,16 +725,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		shortDesc: "+2 critical hit ratio. Cannot be redirected.",
 		critRatio: 3,
-	},
-	shelter: {
-		inherit: true,
-		shortDesc: "Raises the user's Defense and Sp. Def by 1.",
-		boosts: {def: 1, spd: 1},
-	},
-	spicyextract: {
-		inherit: true,
-		shortDesc: "Raises target's Atk by 3 and lowers its Def by 3.",
-		boosts: {atk: 3, def: -3},
 	},
 	mysticalpower: {
 		inherit: true,
@@ -1018,34 +889,10 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		basePower: 130,
 	},
-	tripledive: {
-		inherit: true,
-		isNonstandard: null,
-		shortDesc: "Hits 3 times. Each hit can miss.",
-		multiaccuracy: true,
-		basePower: 80,
-		accuracy: 90,
-	},
 	geargrind: {
 		inherit: true,
 		isNonstandard: null,
 		accuracy: 90
-	},
-	gearup: {
-		inherit: true,
-		isNonstandard: null,
-		shortDesc: "Raises Atk, Sp. Atk of allies by 1.",
-		onHitSide(side, source, move) {
-			const targets = side.allies().filter(target => (
-				!target.volatiles['maxguard'] || this.runEvent('TryHit', target, source, move)
-			));
-			if (!targets.length) return false;
-			let didSomething = false;
-			for (const target of targets) {
-				didSomething = this.boost({atk: 1, spa: 1}, target, source, move, false, true) || didSomething;
-			}
-			return didSomething;
-		},
 	},
 	icehammer: {
 		inherit: true,
@@ -1335,170 +1182,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			}
 			return this.clampIntRange(target.getUndynamaxedHP() / 2, 1);
 		},
-	},
-	// Z Moves
-	trickortreat: {
-		inherit: true,
-		isNonstandard: null,
-		// shortDesc: "Charges, +Ghost to target type, omniboost turn 2.",
-		// pp: 1,
-		// flags: {charge: 1, protect: 1, reflectable: 1, mirror: 1, allyanim: 1},
-		// onTryMove(attacker, defender, move) {
-		// 	if (attacker.removeVolatile(move.id)) {
-		// 		this.boost({atk: 1, def: 1, spa: 1, spd: 1, spe: 1}, attacker, attacker, move);
-		// 		return;
-		// 	}
-		// 	this.add('-prepare', attacker, move.name);
-		// 	if (!this.runEvent('ChargeMove', attacker, defender, move)) {
-		// 		this.boost({atk: 1, def: 1, spa: 1, spd: 1, spe: 1}, attacker, attacker, move);
-		// 		return;
-		// 	}
-		// 	attacker.addVolatile('twoturnmove', defender);
-		// 	return null;
-		// }
-	},
-	forestscurse: {
-		inherit: true,
-		isNonstandard: null,
-		shortDesc: "Charges, +Grass to target type, omniboost turn 2.",
-		pp: 1,
-		flags: {charge: 1, protect: 1, reflectable: 1, mirror: 1, allyanim: 1},
-		onTryMove(attacker, defender, move) {
-			if (attacker.removeVolatile(move.id)) {
-				this.boost({atk: 1, def: 1, spa: 1, spd: 1, spe: 1}, attacker, attacker, move);
-				return;
-			}
-			this.add('-prepare', attacker, move.name);
-			if (!this.runEvent('ChargeMove', attacker, defender, move)) {
-				this.boost({atk: 1, def: 1, spa: 1, spd: 1, spe: 1}, attacker, attacker, move);
-				return;
-			}
-			attacker.addVolatile('twoturnmove', defender);
-			return null;
-		}
-	},
-	conversion: {
-		inherit: true,
-		isNonstandard: null,
-		pp: 1,
-		shortDesc: "Charges, User's type to first move, Omniboost turn 2.",
-		boosts: {atk: 1, def: 1, spa: 1, spd: 1, spe: 1},
-		flags: {charge: 1, nonsky: 1, nosleeptalk: 1, failinstruct: 1},
-		onTryMove(attacker, defender, move) {
-			if (attacker.removeVolatile(move.id)) {
-				return;
-			}
-			this.add('-prepare', attacker, move.name);
-			if (!this.runEvent('ChargeMove', attacker, defender, move)) {
-				return;
-			}
-			attacker.addVolatile('twoturnmove', defender);
-			return null;
-		}
-	},
-	extremeevoboost: {
-		inherit: true,
-		isNonstandard: null,
-		isZ: false,
-		shortDesc: "Eevee Only, Charges, Double Omniboosts turn 2",
-		onTry(source, target, move) {
-			if (source.species.name === 'Eevee' || move.hasBounced) {
-				return;
-			}
-			this.add('-fail', source, 'move: Extreme Evoboost');
-			this.hint("Only a Pokemon whose form is Eevee can use this move.");
-			return null;
-		},
-		onTryMove(attacker, defender, move) {
-			if (attacker.removeVolatile(move.id)) {
-				return;
-			}
-			this.add('-prepare', attacker, move.name);
-			if (!this.runEvent('ChargeMove', attacker, defender, move)) {
-				return;
-			}
-			attacker.addVolatile('twoturnmove', defender);
-			return null;
-		}
-	},
-	// Max Moves
-	gmaxreplenish: {
-		inherit: true,
-		isNonstandard: null,
-		isMax: false,
-		flags: {protect: 1, mirror: 1},
-		basePower: 65,
-		shortDesc: "Restores berry on attack.",
-		self: {
-			onHit(source) {
-				// if (this.random(2) === 0) return;
-				if (source.item) return;
-				if (source.lastItem && this.dex.items.get(source.lastItem).isBerry) {
-					const item = source.lastItem;
-					source.lastItem = '';
-					this.add('-item', source, this.dex.items.get(item), '[from] move: G-Max Replenish');
-					source.setItem(item);
-				}
-			},
-		},
-	},
-	gmaxmalodor: {
-		inherit: true,
-		isNonstandard: null,
-		isMax: false,
-		flags: {protect: 1, mirror: 1},
-		basePower: 80,
-		shortDesc: "Poisons both foes after successful use.",
-	},
-	gmaxterror: {
-		inherit: true,
-		isNonstandard: null,
-		isMax: false,
-		flags: {protect: 1, mirror: 1},
-		basePower: 80,
-		category: "Special",
-		secondary: {
-			chance: 100,
-			onHit(target, source, move) {
-				if (source.isActive) target.addVolatile('trapped', source, move, 'trapper');
-			},
-		},
-		shortDesc: "Prevents the target from switching out.",
-	},
-	gmaxsteelsurge: {
-		inherit: true,
-		isNonstandard: null,
-		isMax: false,
-		flags: {protect: 1, mirror: 1},
-		basePower: 90,
-		shortDesc: "Sets up a Steel Hazard after use.",
-	},
-	gmaxgravitas: {
-		inherit: true,
-		isNonstandard: null,
-		isMax: false,
-		flags: {protect: 1, mirror: 1},
-		category: "Special",
-		basePower: 90,
-		shortDesc: "Sets up Gravity after succesful use.",
-	},
-	gmaxfinale: {
-		inherit: true,
-		isNonstandard: null,
-		isMax: false,
-		flags: {protect: 1, mirror: 1},
-		category: "Special",
-		basePower: 80,
-		shortDesc: "Heals self and allies by 1/6th.",
-	},
-	gmaxdepletion: {
-		inherit: true,
-		isNonstandard: null,
-		isMax: false,
-		flags: {protect: 1, mirror: 1},
-		category: "Special",
-		basePower: 90,
-		shortDesc: "Foes: last move -2 PP.",
 	},
 	// Pledges
 	firepledge: {

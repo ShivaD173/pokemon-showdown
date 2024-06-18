@@ -627,12 +627,46 @@ export const Conditions: {[k: string]: ConditionData} = {
 			this.add('-weather', 'none');
 		},
 	},
+	thunderstorm: {
+		name: 'Thunderstorm',
+		effectType: 'Weather',
+		duration: 5,
+		onWeatherModifyDamage(damage, attacker, defender, move) {
+			if (defender.hasItem('utilityumbrella')) return;
+			if (move.type === 'Water' || move.type === 'Electric') {
+				return this.chainModify(1.3);
+			}
+		},
+		onFieldStart(field, source, effect) {
+			this.add('-weather', 'Thunderstorm');
+		},
+		onFieldResidualOrder: 1,
+		onFieldResidual() {
+			this.add('-weather', 'Thunderstorm', '[upkeep]');
+			this.eachEvent('Weather');
+		},
+		onFieldEnd() {
+			this.add('-weather', 'none');
+		},
+	},
 	locusts: {
 		name: 'Locusts',
 		effectType: 'Weather',
 		duration: 5,
-		// This should be applied directly to the stat before any of the other modifiers are chained
-		// So we give it increased priority.
+		onModifyAtkPriority: 5,
+		onModifyAtk(atk, attacker, defender, move) {
+			if (move.type === 'Bug' && attacker.hp <= attacker.maxhp / 3) {
+				this.debug('Swarm boost');
+				return this.chainModify(1.5);
+			}
+		},
+		onModifySpAPriority: 5,
+		onModifySpA(atk, attacker, defender, move) {
+			if (move.type === 'Bug' && attacker.hp <= attacker.maxhp / 3) {
+				this.debug('Swarm boost');
+				return this.chainModify(1.5);
+			}
+		},
 		onFieldStart(field, source, effect) {
 			this.add('-weather', 'Locusts');
 		},
@@ -652,8 +686,13 @@ export const Conditions: {[k: string]: ConditionData} = {
 		name: 'AcidRain',
 		effectType: 'Weather',
 		duration: 5,
-		// This should be applied directly to the stat before any of the other modifiers are chained
-		// So we give it increased priority.
+		onSourceDamagingHit(damage, target, source, move) {
+			// Despite not being a secondary, Shield Dust / Covert Cloak block Toxic Chain's effect
+			if (target.hasAbility('shielddust') || target.hasItem('covertcloak')) return;
+			if (this.randomChance(3, 10)) {
+				target.trySetStatus('tox', source);
+			}
+		},
 		onFieldStart(field, source, effect) {
 			this.add('-weather', 'AcidRain');
 		},
@@ -664,6 +703,91 @@ export const Conditions: {[k: string]: ConditionData} = {
 		},
 		onWeather(target) {
 			this.damage(target.baseMaxhp / 16);
+		},
+		onFieldEnd() {
+			this.add('-weather', 'none');
+		},
+	},
+	twilightzone: {
+		name: 'TwilightZone',
+		effectType: 'Weather',
+		duration: 5,
+		onFieldStart(field, source, effect) {
+			this.add('-weather', 'TwilightZone');
+		},
+		onFieldResidualOrder: 1,
+		onFieldResidual() {
+			this.add('-weather', 'TwilightZone', '[upkeep]');
+			this.eachEvent('Weather');
+		},
+		onBasePower(basePower, attacker, defender, move) {
+			let fallen = Math.min(attacker.side.totalFainted, 3);
+			if (attacker.hasType("Ghost")) {
+				fallen = 3;
+			}
+			if (fallen) {
+				const powMod = [4096, 4506, 4915, 5325, 5734, 6144];
+				return this.chainModify([powMod[fallen], 4096]);
+			}
+		},
+		onFieldEnd() {
+			this.add('-weather', 'none');
+		},
+	},
+	loveintheair: {
+		name: 'LoveInTheAir',
+		effectType: 'Weather',
+		duration: 5,
+		onSetStatus(status, target, source, effect) {
+			if (!target.isGrounded() || target.isSemiInvulnerable()) return;
+			if (effect && ((effect as Move).status || effect.id === 'yawn')) {
+				this.add('-activate', target, 'move: Misty Terrain');
+			}
+			return false;
+		},
+		onTryAddVolatile(status, target, source, effect) {
+			if (!target.isGrounded() || target.isSemiInvulnerable()) return;
+			if (status.id === 'confusion') {
+				if (effect.effectType === 'Move' && !effect.secondaries) this.add('-activate', target, 'move: Misty Terrain');
+				return null;
+			}
+		},
+		onAccuracy(accuracy, target, source, move) {
+			if (move.type === "Fairy") {
+				return true;
+			}
+		},
+		onFieldStart(field, source, effect) {
+			this.add('-weather', 'LoveInTheAir');
+		},
+		onFieldResidualOrder: 1,
+		onFieldResidual() {
+			this.add('-weather', 'LoveInTheAir', '[upkeep]');
+			this.eachEvent('Weather');
+		},
+		onFieldEnd() {
+			this.add('-weather', 'none');
+		},
+	},
+	pollen: {
+		name: 'Pollen',
+		effectType: 'Weather',
+		duration: 5,
+		onBasePower(basePower, attacker, defender, move) {
+			if (move.type === 'Grass') {
+				return this.chainModify([5325, 4096]);
+			}
+		},
+		onWeather(target) {
+			this.heal(target.baseMaxhp / 16, target, target);
+		},
+		onFieldStart(field, source, effect) {
+			this.add('-weather', 'Pollen', '[from] ability: ' + effect.name, '[of] ' + source);
+		},
+		onFieldResidualOrder: 1,
+		onFieldResidual() {
+			this.add('-weather', 'Pollen', '[upkeep]');
+			this.eachEvent('Weather');
 		},
 		onFieldEnd() {
 			this.add('-weather', 'none');

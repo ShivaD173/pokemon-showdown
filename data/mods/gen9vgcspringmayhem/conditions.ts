@@ -1,6 +1,6 @@
-const weathers = ['Rain Dance', 'Sunny Day', 'Hail', 'Snow', 'Sandstorm',
-	'Locusts', 'Delta Stream', 'Acid Rain', 'Stellar Storm', 'Darkness'];
-// const weathers = ['Acid Rain', 'Stellar Storm', 'Darkness', 'Locusts'];
+const weathers = ['Rain Dance', 'Sunny Day', 'Hail', 'Snow', 'Sandstorm', 'Locusts',
+	'Delta Stream', 'Acid Rain', 'Stellar Storm', 'Darkness', 'Pollen', 'Thunderstorm'];
+// const weathers = ['Acid Rain', 'Darkness', 'Twilight Zone', 'Pollen', 'Thunderstorm'];
 function newWeather(battle: Battle, currentWeather: string) {
 	battle.add('-weather', currentWeather.replace(' ', ''), '[upkeep]');
 	battle.eachEvent('Weather');
@@ -94,6 +94,24 @@ export const Conditions: {[k: string]: ModdedConditionData} = {
 		inherit: true,
 		onFieldResidual() {
 			newWeather(this, "Darkness");
+		},
+	},
+	twilightzone: {
+		inherit: true,
+		onFieldResidual() {
+			newWeather(this, "Twilight Zone");
+		},
+	},
+	pollen: {
+		inherit: true,
+		onFieldResidual() {
+			newWeather(this, "Pollen");
+		},
+	},
+	thunderstorm: {
+		inherit: true,
+		onFieldResidual() {
+			newWeather(this, "Thunderstorm");
 		},
 	},
 	deltastream: {

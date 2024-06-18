@@ -6492,4 +6492,32 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: -1,
 		num: -48,
 	},
+	// Spring Mod
+	loveydovey: {
+		onStart(source) {
+			this.field.setWeather('loveintheair');
+		},
+		name: "Lovey-Dovey",
+		isNonstandard: "CAP",
+		rating: 3,
+		num: -49,
+	},
+	acidrain: {
+		onStart(source) {
+			this.field.setWeather('acidrain');
+		},
+		name: "Acid Rain",
+		isNonstandard: "CAP",
+		rating: 3,
+		num: -50,
+	},
+	pollinator: {
+		onStart(source) {
+			this.field.setWeather('pollen');
+		},
+		name: "Pollinator",
+		isNonstandard: "CAP",
+		rating: 3,
+		num: -51,
+	},
 };

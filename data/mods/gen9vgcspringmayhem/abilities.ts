@@ -1,32 +1,108 @@
 export const Abilities: {[k: string]: ModdedAbilityData} = {
 	deltastream: {
 		inherit: true,
+		isNonstandard: null,
 		onAnySetWeather(target, source, weather) {
 		}
 	},
-	// Gay
-	slowstart: {
+	loveydovey: {
 		inherit: true,
-		shortDesc: "On switch-in, this Pokemon's Attack and Speed are halved for 3 turns.",
-		condition: {
-			duration: 3,
-			onResidualOrder: 28,
-			onResidualSubOrder: 2,
-			onStart(target) {
-				this.add('-start', target, 'ability: Slow Start');
-			},
-			onModifyAtkPriority: 5,
-			onModifyAtk(atk, pokemon) {
-				return this.chainModify(0.5);
-			},
-			onModifySpe(spe, pokemon) {
-				return this.chainModify(0.5);
-			},
-			onEnd(target) {
-				this.add('-end', target, 'Slow Start');
-			},
+		isNonstandard: null,
+	},
+	swarm: {
+		inherit: true,
+		isNonstandard: null,
+		onStart(source) {
+			this.field.setWeather('locusts');
+		},
+		onModifyAtk() {},
+		onModifySpA() {}
+	},
+	illuminate: {
+		inherit: true,
+		shortDesc: "This pokemon and allies have 1.1x Accuracy, 1.3x in Darkness",
+		onTryBoost(boost, target, source, effect) {
+		},
+		onModifyMove(move) {
+		},
+		onAnyModifyAccuracyPriority: -1,
+		onAnyModifyAccuracy(accuracy, target, source) {
+			if (source.isAlly(this.effectState.target) && typeof accuracy === 'number') {
+				if (source.effectiveWeather() === "darkness") {
+					return this.chainModify([5325, 4096]);
+				} else {
+					return this.chainModify([4506, 4096]);
+				}
+			}
 		},
 	},
+	thunderstorm: {
+		inherit: true,
+		isNonstandard: null,
+		onStart(source) {
+			this.field.setWeather('thunderstorm');
+		},
+	},
+	surgesurfer: {
+		inherit: true,
+		onModifySpe(spe) {
+			if (this.field.isWeather("Thunderstorm")) {
+				return this.chainModify(2);
+			}
+		},
+	},
+	windrider: {
+		inherit: true,
+		onStart(pokemon) {
+			if (pokemon.side.sideConditions['tailwind']) {
+				this.boost({atk: 1}, pokemon, pokemon);
+			}
+			if (pokemon.effectiveWeather() === "deltastream") {
+				this.boost({atk: 1}, pokemon, pokemon);
+			}
+		},
+		onAllySideConditionStart(target, source, sideCondition) {
+			const pokemon = this.effectState.target;
+			if (sideCondition.id === 'tailwind') {
+				this.boost({atk: 1}, pokemon, pokemon);
+			}
+			if (pokemon.effectiveWeather() === "deltastream") {
+				this.boost({atk: 1}, pokemon, pokemon);
+			}
+		},
+	},
+	windpower: {
+		inherit: true,
+		onAllySideConditionStart(target, source, sideCondition) {
+			const pokemon = this.effectState.target;
+			if (sideCondition.id === 'tailwind') {
+				pokemon.addVolatile('charge');
+			}
+			if (pokemon.effectiveWeather() === "deltastream") {
+				pokemon.addVolatile('charge');
+			}
+		},
+		flags: {},
+		name: "Wind Power",
+		rating: 1,
+		num: 277,
+	},
+	rivalry: {
+		inherit: true,
+		shortDesc: "1.5x damage on same gender, 0.9x damage on opposite gender",
+		onBasePower(basePower, attacker, defender, move) {
+			if (attacker.gender && defender.gender) {
+				if (attacker.gender === defender.gender || attacker.effectiveWeather() === "loveintheair") {
+					this.debug('Rivalry boost');
+					return this.chainModify(1.5);
+				} else {
+					this.debug('Rivalry weaken');
+					return this.chainModify(0.9);
+				}
+			}
+		},
+	},
+	// Gay
 	reckless: {
 		inherit: true,
 		shortDesc: "This Pokemon's attacks with recoil or crash damage have 1.3x power; not Struggle.",
@@ -129,21 +205,6 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 			}
 		}
 	},
-	rivalry: {
-		inherit: true,
-		shortDesc: "1.5x damage on same gender, 0.9x damage on opposite gender",
-		onBasePower(basePower, attacker, defender, move) {
-			if (attacker.gender && defender.gender) {
-				if (attacker.gender === defender.gender) {
-					this.debug('Rivalry boost');
-					return this.chainModify(1.5);
-				} else {
-					this.debug('Rivalry weaken');
-					return this.chainModify(0.9);
-				}
-			}
-		},
-	},
 	magmaarmor: {
 		inherit: true,
 		shortDesc: "Reduces Contact damage by 25%, 30% Chance to burn on contact moves",
@@ -159,21 +220,6 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 				}
 			}
 		},
-	},
-	liquidooze: {
-		inherit: true,
-		shortDesc: "Deals damage instead of draining, Replaces foods with Black Sludges on hit.",
-		onModifyMove(move) {
-			move.secondaries?.push({
-				chance: 100,
-				onHit(target) {
-					if (target.item === "leftovers" || target.item.endsWith("berry")) {
-						this.add('message', 'Item replaced with Liquid Ooze');
-						target.setItem("blacksludge");
-					}
-				}
-			});
-		}
 	},
 	stickyhold: {
 		inherit: true,
@@ -211,20 +257,6 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		onDamagingHit(damage, target, source, move) {
 			if (!target.hp && this.checkMoveMakesContact(move, source, target, true)) {
 				this.damage(source.baseMaxhp / 3, source, target);
-			}
-		},
-	},
-	illuminate: {
-		inherit: true,
-		shortDesc: "While this Pokemon is active, all moves has 1.2x accuracy.",
-		onTryBoost(boost, target, source, effect) {
-		},
-		onModifyMove(move) {
-		},
-		onAnyModifyAccuracyPriority: -1,
-		onAnyModifyAccuracy(accuracy, target, source) {
-			if (typeof accuracy === 'number') {
-				return this.chainModify([4915, 4096]);
 			}
 		},
 	},
@@ -343,22 +375,6 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		onEnd() {
 		},
 		onFoeTryEatItem() {
-		},
-	},
-	swarm: {
-		inherit: true,
-		shortDesc: "This Pokemon's allies have the power of their bug moves multiplied by 1.5.",
-		desc: "This Pokemon's allies have the power of their bug moves multiplied by 1.5.",
-		onAllyBasePowerPriority: 22,
-		onAllyBasePower(basePower, attacker, defender, move) {
-			if (attacker !== this.effectState.target && move.type === 'Bug') {
-				this.debug('Swarm boost');
-				return this.chainModify([6144, 4096]);
-			}
-		},
-		onModifyAtk(atk, attacker, defender, move) {
-		},
-		onModifySpA(atk, attacker, defender, move) {
 		},
 	},
 	// Signature Ability Buffs
@@ -849,16 +865,6 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 			}
 		},
 	},
-	supremeoverlord: {
-		inherit: true,
-		shortDesc: "15% more power per fainted ally, Max 45%.",
-		onBasePower(basePower, attacker, defender, move) {
-			if (this.effectState.fallen) {
-				const powMod = [20, 23, 26, 29, 29, 29];
-				return this.chainModify([powMod[this.effectState.fallen], 20]);
-			}
-		},
-	},
 	magician: {
 		inherit: true,
 		shortDesc: "Sets Magic Room on entrance, steals item with attack.",
@@ -1089,10 +1095,6 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		isNonstandard: null,
 	},
 	mindsurfer: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	thunderstorm: {
 		inherit: true,
 		isNonstandard: null,
 	},
