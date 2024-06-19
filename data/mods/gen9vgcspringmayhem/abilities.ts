@@ -82,10 +82,6 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 				pokemon.addVolatile('charge');
 			}
 		},
-		flags: {},
-		name: "Wind Power",
-		rating: 1,
-		num: 277,
 	},
 	rivalry: {
 		inherit: true,
@@ -99,6 +95,115 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 					this.debug('Rivalry weaken');
 					return this.chainModify(0.9);
 				}
+			}
+		},
+	},
+	forecast: {
+		inherit: true,
+		onWeatherChange(pokemon) {
+			if (pokemon.baseSpecies.baseSpecies !== 'Castform' || pokemon.transformed) return;
+			let forme = null;
+			let type = "Normal";
+			switch (pokemon.effectiveWeather()) {
+			case 'sunnyday':
+			case 'desolateland':
+				if (pokemon.species.id !== 'castformsunny') forme = 'Castform-Sunny';
+				type = "Fire";
+				break;
+			case 'raindance':
+			case 'primordialsea':
+				if (pokemon.species.id !== 'castformrainy') forme = 'Castform-Rainy';
+				type = "Water";
+				break;
+			case 'hail':
+			case 'snow':
+				if (pokemon.species.id !== 'castformsnowy') forme = 'Castform-Snowy';
+				type = "Ice";
+				break;
+			case 'deltastream':
+				type = "Flying";
+				break;
+			case 'thunderstorm':
+				type = "Electric";
+				break;
+			case 'pollen':
+				type = "Grass";
+				break;
+			case 'locusts':
+				type = "Bug";
+				break;
+			case 'acidrain':
+				type = "Poison";
+				break;
+			case 'darkness':
+				type = "Dark";
+				break;
+			case 'twilightzone':
+				type = "Ghost";
+				break;
+			case 'loveintheair':
+				type = "Fairy";
+				break;
+			default:
+				if (pokemon.species.id !== 'castform') forme = 'Castform';
+				break;
+			}
+			if (pokemon.isActive && forme) {
+				pokemon.formeChange(forme, this.effect, false, '[msg]');
+			}
+			if (type && pokemon.getTypes().join() !== type) {
+				if (!pokemon.setType(type)) return;
+				this.effectState.protean = true;
+				this.add('-start', pokemon, 'typechange', type, '[from] ability: Forecast');
+			}
+		},
+	},
+	lonewolf: {
+		inherit: true,
+		isNonstandard: null,
+		shortDesc: "1.3x damage if alone or in darkness.",
+		desc: "1.3x damage if no allies on the field or in darkness.",
+		onBasePower(basePower, attacker, defender, move) {
+			if (attacker.side.hasAlly(attacker) || attacker.effectiveWeather() === "darkness") {
+				this.add('-activate', attacker, 'ability: Lone Wolf');
+				return this.chainModify([5325, 4096]);
+			}
+		},
+	},
+
+	sandveil: {
+		inherit: true,
+		shortDesc: "1.2x defenses in Sandstorm. Immune to Sandstorm.",
+		onModifyAccuracy(accuracy) {
+		},
+		onModifyDefPriority: 6,
+		onModifyDef(def) {
+			if (this.field.isWeather('sandstorm')) {
+				return this.chainModify(1.2);
+			}
+		},
+		onModifySpDPriority: 6,
+		onModifySpD(def) {
+			if (this.field.isWeather('sandstorm')) {
+				return this.chainModify(1.2);
+			}
+		},
+	},
+	snowcloak: {
+		inherit: true,
+		shortDesc: "1.2x defenses in Snow.",
+		onModifyAccuracy(accuracy) {
+		},
+		onModifyDefPriority: 6,
+		onModifyDef(spd) {
+			if (this.field.isWeather(['hail', 'snow'])) {
+				return this.chainModify(1.2);
+			}
+		},
+		onModifySpDPriority: 6,
+		onModifySpD(spd) {
+			if (this.field.isWeather(['hail', 'snow'])) {
+				return this.chainModify(1.2);
 			}
 		},
 	},
@@ -138,10 +243,10 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 	},
 	megalauncher: {
 		inherit: true,
-		shortDesc: "Pulse, Cannon, and Bullet moves have 1.3x Power.",
+		shortDesc: "Pulse, and Bullet moves have 1.5x Power.",
 		onBasePower(basePower, attacker, defender, move) {
-			if (move.flags['pulse'] || move.flags['bullet'] || move.name.toLowerCase().includes("cannon")) {
-				return this.chainModify(1.3);
+			if (move.flags['pulse'] || move.flags['bullet']) {
+				return this.chainModify(1.5);
 			}
 		},
 	},
@@ -152,38 +257,6 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 			if (move.category === 'Status' && target !== source) {
 				this.add('-immune', target, '[from] ability: Wonder Skin');
 				return null;
-			}
-		},
-	},
-	sandforce: {
-		inherit: true,
-		shortDesc: "This Pokemon's Ground/Rock/Steel attacks do 1.5x in Sandstorm; immunity to it.",
-		onBasePower(basePower, attacker, defender, move) {
-			if (this.field.isWeather('sandstorm')) {
-				if (move.type === 'Rock' || move.type === 'Ground' || move.type === 'Steel') {
-					this.debug('Sand Force boost');
-					return this.chainModify([3, 2]);
-				}
-			}
-		},
-	},
-	leafguard: {
-		inherit: true,
-		shortDesc: "Guards Self and Allies from Status Conditions in Sun.",
-		onAllySetStatus(status, target, source, effect) {
-			if (['sunnyday', 'desolateland'].includes(target.effectiveWeather())) {
-				if ((effect as Move)?.status) {
-					this.add('-immune', target, '[from] ability: Leaf Guard');
-				}
-				return false;
-			}
-		},
-		onSetStatus(status, target, source, effect) {
-			if (['sunnyday', 'desolateland'].includes(target.effectiveWeather())) {
-				if ((effect as Move)?.status) {
-					this.add('-immune', target, '[from] ability: Leaf Guard');
-				}
-				return false;
 			}
 		},
 	},
@@ -291,30 +364,6 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 			}
 			if (boosted) {
 				return this.chainModify([11, 10]);
-			}
-		},
-	},
-	sandveil: {
-		inherit: true,
-		shortDesc: "1.2x Defense in Sandstorm. Immune to Sandstorm.",
-		onModifyAccuracy(accuracy) {
-		},
-		onModifyDefPriority: 6,
-		onModifyDef(def) {
-			if (this.field.isWeather('sandstorm')) {
-				return this.chainModify(1.2);
-			}
-		},
-	},
-	snowcloak: {
-		inherit: true,
-		shortDesc: "1.2x Special Defense in Snow",
-		onModifyAccuracy(accuracy) {
-		},
-		onModifySpDPriority: 6,
-		onModifySpD(spd) {
-			if (this.field.isWeather(['hail', 'snow'])) {
-				return this.chainModify(1.2);
 			}
 		},
 	},

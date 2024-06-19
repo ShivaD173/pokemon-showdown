@@ -64,6 +64,99 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			return move.basePower;
 		},
 	},
+	weatherball: {
+		inherit: true,
+		onModifyType(move, pokemon) {
+			switch (pokemon.effectiveWeather()) {
+			case 'sunnyday':
+			case 'desolateland':
+				move.type = 'Fire';
+				break;
+			case 'raindance':
+			case 'primordialsea':
+				move.type = 'Water';
+				break;
+			case 'sandstorm':
+				move.type = 'Rock';
+				break;
+			case 'hail':
+			case 'snow':
+				move.type = 'Ice';
+				break;
+			case 'deltastream':
+				move.type = "Flying";
+				break;
+			case 'thunderstorm':
+				move.type = "Electric";
+				break;
+			case 'pollen':
+				move.type = "Grass";
+				break;
+			case 'locusts':
+				move.type = "Bug";
+				break;
+			case 'acidrain':
+				move.type = "Poison";
+				break;
+			case 'darkness':
+				move.type = "Dark";
+				break;
+			case 'twilightzone':
+				move.type = "Ghost";
+				break;
+			case 'loveintheair':
+				move.type = "Fairy";
+				break;
+			case 'stellarstorm':
+				move.type = "Stellar";
+			}
+		},
+		onModifyMove(move, pokemon) {
+			if (pokemon.effectiveWeather()) {
+				move.basePower *= 2;
+			}
+			this.debug('BP: ' + move.basePower);
+		},
+	},
+	flyingpress: {
+		inherit: true,
+		basePower: 110,
+	},
+	mountaingale: {
+		inherit: true,
+		shortDesc: "Hits both opponents. 20% chance to frostbite.",
+		target: "allAdjacentFoes",
+		isNonstandard: null,
+		accuracy: 100,
+		secondary: {chance: 20, status: 'fst'},
+	},
+	diamondstorm: {
+		inherit: true,
+		isNonstandard: null,
+		shortDesc: "Hits both in sandstorm, 50% raise defense by 1",
+		target: "normal",
+		category: "Special",
+		basePower: 90,
+		accuracy: 100,
+		onModifyMove(move, source, target) {
+			if (this.field.isWeather('sandstorm')) {
+				move.target = 'allAdjacentFoes';
+			}
+		},
+		self: {
+			chance: 50,
+			boosts: {def: 1},
+		},
+	},
+	gmaxgravitas: {
+		inherit: true,
+		isNonstandard: null,
+		isMax: false,
+		flags: {protect: 1, mirror: 1},
+		category: "Special",
+		basePower: 80,
+		shortDesc: "Sets up Gravity after succesful use.",
+	},
 	// Gay Stuff
 	struggle: {
 		inherit: true,
@@ -87,24 +180,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		pp: 5,
 	},
 	// Genie moves
-	bleakwindstorm: {
-		inherit: true,
-		basePower: 95,
-		accuracy: 85,
-		shortDesc: "30% to lower foe(s) Speed by 1. Snow: can't miss.",
-		onModifyMove(move, pokemon, target) {
-			if (this.field.isWeather(['hail', 'snow'])) move.accuracy = true;
-		},
-	},
-	sandsearstorm: {
-		inherit: true,
-		basePower: 95,
-		accuracy: 85,
-		shortDesc: "20% chance to burn foe(s). Sand: can't miss.",
-		onModifyMove(move, pokemon, target) {
-			if (this.field.isWeather('sandstorm')) move.accuracy = true;
-		},
-	},
 	springtidestorm: {
 		inherit: true,
 		basePower: 95,
@@ -113,11 +188,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		onModifyMove(move, pokemon, target) {
 			if (target && ['sunnyday', 'desolateland'].includes(target.effectiveWeather())) move.accuracy = true;
 		},
-	},
-	wildboltstorm: {
-		inherit: true,
-		basePower: 95,
-		accuracy: 85,
 	},
 	// Omniboost moves
 	ominouswind: {
@@ -763,14 +833,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		isNonstandard: null,
 		basePower: 90,
 	},
-	mountaingale: {
-		inherit: true,
-		shortDesc: "Hits both opponents. 20% chance to frostbite.",
-		target: "allAdjacentFoes",
-		isNonstandard: null,
-		accuracy: 90,
-		secondary: {chance: 20, status: 'fst'},
-	},
 	gravapple: {
 		inherit: true,
 		shortDesc: "Target: 100% -2 Def. During Gravity: 2x power.",
@@ -858,24 +920,6 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		shortDesc: "Hits twice. Doubles: Tries to hit each foe once.",
 		basePower: 55,
 		smartTarget: true,
-	},
-	diamondstorm: {
-		inherit: true,
-		isNonstandard: null,
-		shortDesc: "Hits both in sandstorm, 50% raise defense by 1",
-		target: "normal",
-		category: "Special",
-		basePower: 95,
-		accuracy: 100,
-		onModifyMove(move, source, target) {
-			if (this.field.isWeather('sandstorm')) {
-				move.target = 'allAdjacentFoes';
-			}
-		},
-		self: {
-			chance: 50,
-			boosts: {def: 1},
-		},
 	},
 	doubleshock: {
 		inherit: true,

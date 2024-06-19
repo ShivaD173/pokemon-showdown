@@ -6520,4 +6520,16 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 3,
 		num: -51,
 	},
+	lonewolf: {
+		onBasePowerPriority: 23,
+		onBasePower(basePower, attacker, defender, move) {
+			if (attacker.side.hasAlly(attacker)) {
+				return this.chainModify([5325, 4096]);
+			}
+		},
+		name: "Lone Wolf",
+		isNonstandard: "CAP",
+		rating: 3,
+		num: -52,
+	},
 };

@@ -2492,4 +2492,10 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		desc: "Sets up Pollen.",
 		shortDesc: "Sets up Pollen."
 	},
+	lonewolf: {
+		name: "Lone Wolf",
+		shortDesc: "1.3x damage if alone or in darkness.",
+		desc: "1.3x damage if no allies on the field or in darkness.",
+		activate: "  [POKEMON] Powered up!",
+	},
 };
