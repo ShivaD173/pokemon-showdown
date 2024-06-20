@@ -8,7 +8,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} =
 		"baseStats": {
 			"hp": 80,
 			"atk": 87,
-			"def": 88,
+			"def": 83,
 			"spa": 100,
 			"spd": 105,
 			"spe": 80
@@ -26,11 +26,11 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} =
 			"Flying"
 		],
 		"baseStats": {
-			"hp": 78,
+			"hp": 83,
 			"atk": 90,
-			"def": 78,
+			"def": 73,
 			"spa": 109,
-			"spd": 85,
+			"spd": 80,
 			"spe": 100
 		},
 		"abilities": {
@@ -45,7 +45,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} =
 			"Water"
 		],
 		"baseStats": {
-			"hp": 79,
+			"hp": 74,
 			"atk": 88,
 			"def": 100,
 			"spa": 90,
@@ -144,7 +144,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} =
 			"hp": 80,
 			"atk": 70,
 			"def": 65,
-			"spa": 100,
+			"spa": 90,
 			"spd": 120,
 			"spe": 100
 		},
@@ -202,7 +202,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} =
 			"atk": 35,
 			"def": 55,
 			"spa": 125,
-			"spd": 125,
+			"spd": 130,
 			"spe": 95
 		},
 		"abilities": {
@@ -245,7 +245,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} =
 		"abilities": {
 			"0": "Swift Swim",
 			"1": "Symbiosis",
-			"H": "Hydration"
+			"H": "Rivalry"
 		},
 		"inherit": true
 	},
@@ -265,7 +265,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} =
 		"abilities": {
 			"0": "Sand Rush",
 			"1": "Sturdy",
-			"H": "Weak Armor"
+			"H": "Rivalry"
 		},
 		"inherit": true
 	},
@@ -398,9 +398,9 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} =
 			"Flying"
 		],
 		"baseStats": {
-			"hp": 70,
+			"hp": 75,
 			"atk": 130,
-			"def": 85,
+			"def": 80,
 			"spa": 50,
 			"spd": 60,
 			"spe": 105
@@ -418,9 +418,9 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} =
 		],
 		"baseStats": {
 			"hp": 103,
-			"atk": 130,
+			"atk": 125,
 			"def": 95,
-			"spa": 85,
+			"spa": 90,
 			"spd": 85,
 			"spe": 102
 		},
@@ -678,12 +678,12 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} =
 			"Steel"
 		],
 		"baseStats": {
-			"hp": 100,
-			"atk": 135,
+			"hp": 95,
+			"atk": 130,
 			"def": 120,
-			"spa": 60,
-			"spd": 85,
-			"spe": 50
+			"spa": 65,
+			"spd": 80,
+			"spe": 60
 		},
 		"abilities": {
 			"0": "Supreme Overlord"

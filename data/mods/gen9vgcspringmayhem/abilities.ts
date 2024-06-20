@@ -21,6 +21,23 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	trueaurora: {
+		inherit: true,
+		isNonstandard: null
+	},
+	rampage: {
+		inherit: true,
+		isNonstandard: null
+	},
+	mysticfist: {
+		inherit: true,
+		shortDesc: "This Pokemon's punch attacks have 1.2x power and become Special.",
+		onBasePower(basePower, attacker, defender, move) {
+			if (move.flags['punch']) {
+				return this.chainModify([4915, 4096]);
+			}
+		},
+	},
 	swarm: {
 		inherit: true,
 		isNonstandard: null,
@@ -70,6 +87,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 	},
 	windrider: {
 		inherit: true,
+		shortDesc: "Attack +1 if hit by wind move or Tailwind/Strong Winds begins. Wind move immunity.",
 		onStart(pokemon) {
 			if (pokemon.side.sideConditions['tailwind']) {
 				this.boost({atk: 1}, pokemon, pokemon);
@@ -92,6 +110,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 	},
 	windpower: {
 		inherit: true,
+		shortDesc: "Pokemon gains Charge when hit by a wind move or Tailwind/Strong Winds begins.",
 		onAllySideConditionStart(target, source, sideCondition) {
 			const pokemon = this.effectState.target;
 			if (sideCondition.id === 'tailwind') {
@@ -121,6 +140,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 	},
 	forecast: {
 		inherit: true,
+		shortDesc: "Castform's type changes to the current weather condition's type",
 		onWeatherChange(pokemon) {
 			if (pokemon.baseSpecies.baseSpecies !== 'Castform' || pokemon.transformed) return;
 			let forme = null;
@@ -235,6 +255,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 	},
 	raindish: {
 		inherit: true,
+		shortDesc: "If Rain Dance is active, this Pokemon heals 1/8 of its max HP each turn.",
 		onWeather(target, source, effect) {
 			if (target.hasItem('utilityumbrella')) return;
 			if (effect.id === 'raindance' || effect.id === 'primordialsea') {

@@ -4974,6 +4974,15 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} =
             ],
             "waterpledge": [
                 "9M"
+            ],
+            "fleurcannon": [
+                "9M"
+            ],
+            "moonblast": [
+                "9M"
+            ],
+            "dazzlinggleam": [
+                "9M"
             ]
         }
     },
@@ -8153,6 +8162,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} =
                 "9M"
             ],
             "rocktomb": [
+                "9M"
+            ],
+            "stoneedge": [
                 "9M"
             ]
         }

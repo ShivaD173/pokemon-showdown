@@ -189,9 +189,10 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		inherit: true,
 		basePower: 110,
 	},
-	iciclecrash: {
+	octazooka: {
 		inherit: true,
-		basePower: 90
+		isNonstandard: null,
+		accuracy: 90
 	},
 	mountaingale: {
 		inherit: true,
