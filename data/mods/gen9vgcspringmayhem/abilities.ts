@@ -31,6 +31,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 	},
 	mysticfist: {
 		inherit: true,
+		isNonstandard: null,
 		shortDesc: "This Pokemon's punch attacks have 1.2x power and become Special.",
 		onBasePower(basePower, attacker, defender, move) {
 			if (move.flags['punch']) {
