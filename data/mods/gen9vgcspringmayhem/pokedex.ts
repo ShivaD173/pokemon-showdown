@@ -149,9 +149,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} =
 			"spe": 100
 		},
 		"abilities": {
-			"0": "Clear Body",
-			"1": "Acid Rain",
-			"H": "Rain Dish"
+			"0": "Acid Rain"
 		},
 		"inherit": true
 	},
@@ -480,7 +478,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} =
 			"spe": 90
 		},
 		"abilities": {
-			"0": "Pollen"
+			"0": "Pollinator"
 		},
 		"inherit": true
 	},
@@ -536,8 +534,8 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} =
 			"spe": 87
 		},
 		"abilities": {
-			"0": "Keen Eye",
-			"1": "Lone Wolf",
+			"0": "Lone Wolf",
+			"1": "Vital Spirit",
 			"H": "No Guard"
 		},
 		"inherit": true
@@ -646,7 +644,7 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} =
 			"def": 60,
 			"spa": 110,
 			"spd": 60,
-			"spe": 130
+			"spe": 125
 		},
 		"abilities": {
 			"0": "Wind Power",

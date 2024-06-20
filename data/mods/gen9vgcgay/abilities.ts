@@ -755,6 +755,7 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 	// 	},
 	// },
 	wonderguard: {
+		inherit: true,
 		shortDesc: "If not Terad, then can only be damaged by supereffective moves and indirect damage.",
 		onTryHit(target, source, move) {
 			if (target === source || move.category === 'Status' || move.type === '???' || move.id === 'struggle') return;
@@ -770,9 +771,6 @@ export const Abilities: {[k: string]: ModdedAbilityData} = {
 				return null;
 			}
 		},
-		name: "Wonder Guard",
-		rating: 5,
-		num: 25,
 	},
 	punkrock: {
 		inherit: true,

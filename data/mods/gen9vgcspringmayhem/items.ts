@@ -17,18 +17,6 @@ export const Items: {[k: string]: ModdedItemData} = {
 			}
 		},
 	},
-	luckypunch: {
-		inherit: true,
-		isNonstandard: null,
-		shortDesc: "If held by a Chansey/Ledian, its critical hit ratio is raised by 2 stages.",
-		desc: "If held by a Chansey/Ledian, its critical hit ratio is raised by 2 stages.",
-		onModifyCritRatio(critRatio, user) {
-			if (user.baseSpecies.name === 'Chansey' || user.baseSpecies.name === 'Ledian') {
-				return critRatio + 2;
-			}
-		},
-		itemUser: ["Chansey", "Ledian"],
-	},
 	// Making Illegal
 	focusband: {
 		"inherit": true,
@@ -224,5 +212,4 @@ export const Items: {[k: string]: ModdedItemData} = {
 		inherit: true,
 		isNonstandard: null,
 	},
-
 };

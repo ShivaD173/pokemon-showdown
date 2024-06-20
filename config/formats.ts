@@ -34,7 +34,13 @@ export const Formats: FormatList = [
 		bestOfDefault: true,
 		unbanlist: ['Greninja-Bond'],
 		onBegin() {
-			const weather = "Delta Stream";
+			const weathers = ['Rain Dance', 'Sunny Day', 'Snow', 'Sandstorm', 'Locusts',
+				'Delta Stream', 'Acid Rain', 'Stellar Storm', 'Darkness', 'Pollen',
+				'Thunderstorm', 'Twilight Zone', 'Love In The Air'];
+
+			const rndInt = Math.floor(Math.random() * weathers.length);
+			const weather = weathers[rndInt];
+			// const weather = "Delta Stream";
 			const lowercase = weather.toLowerCase().replace(' ', '');
 			this.add('-weather', weather);
 			this.field.weather = lowercase as ID;

@@ -12,6 +12,7 @@ function newWeather(battle: Battle, currentWeather: string) {
 	battle.add('-weather', weather);
 	battle.field.weather = lowercase as ID;
 	battle.field.weatherState = {id: lowercase};
+	battle.eachEvent('WeatherChange');
 }
 
 export const Conditions: {[k: string]: ModdedConditionData} = {
@@ -119,6 +120,13 @@ export const Conditions: {[k: string]: ModdedConditionData} = {
 		inherit: true,
 		onFieldResidual() {
 			newWeather(this, "Delta Stream");
+		},
+		onFieldStart(field, source, effect) {
+			if (effect?.effectType === 'Ability') {
+				this.add('-weather', 'DeltaStream', '[from] ability: ' + effect.name, '[of] ' + source);
+			} else {
+				this.add('-weather', 'DeltaStream');
+			}
 		},
 	},
 	slp: {

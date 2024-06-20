@@ -6366,6 +6366,9 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} =
             ],
             "ominouswind": [
                 "9M"
+            ],
+            "firepledge": [
+                "9M"
             ]
         }
     },

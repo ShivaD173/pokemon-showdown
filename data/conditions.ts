@@ -638,7 +638,11 @@ export const Conditions: {[k: string]: ConditionData} = {
 			}
 		},
 		onFieldStart(field, source, effect) {
-			this.add('-weather', 'Thunderstorm');
+			if (effect?.effectType === 'Ability') {
+				this.add('-weather', 'Thunderstorm', '[from] ability: ' + effect.name, '[of] ' + source);
+			} else {
+				this.add('-weather', 'Thunderstorm');
+			}
 		},
 		onFieldResidualOrder: 1,
 		onFieldResidual() {
@@ -668,7 +672,11 @@ export const Conditions: {[k: string]: ConditionData} = {
 			}
 		},
 		onFieldStart(field, source, effect) {
-			this.add('-weather', 'Locusts');
+			if (effect?.effectType === 'Ability') {
+				this.add('-weather', 'Locusts', '[from] ability: ' + effect.name, '[of] ' + source);
+			} else {
+				this.add('-weather', 'Locusts');
+			}
 		},
 		onFieldResidualOrder: 1,
 		onFieldResidual() {
@@ -694,7 +702,11 @@ export const Conditions: {[k: string]: ConditionData} = {
 			}
 		},
 		onFieldStart(field, source, effect) {
-			this.add('-weather', 'AcidRain');
+			if (effect?.effectType === 'Ability') {
+				this.add('-weather', 'AcidRain', '[from] ability: ' + effect.name, '[of] ' + source);
+			} else {
+				this.add('-weather', 'AcidRain');
+			}
 		},
 		onFieldResidualOrder: 1,
 		onFieldResidual() {
@@ -713,7 +725,11 @@ export const Conditions: {[k: string]: ConditionData} = {
 		effectType: 'Weather',
 		duration: 5,
 		onFieldStart(field, source, effect) {
-			this.add('-weather', 'TwilightZone');
+			if (effect?.effectType === 'Ability') {
+				this.add('-weather', 'TwilightZone', '[from] ability: ' + effect.name, '[of] ' + source);
+			} else {
+				this.add('-weather', 'TwilightZone');
+			}
 		},
 		onFieldResidualOrder: 1,
 		onFieldResidual() {
@@ -758,7 +774,11 @@ export const Conditions: {[k: string]: ConditionData} = {
 			}
 		},
 		onFieldStart(field, source, effect) {
-			this.add('-weather', 'LoveInTheAir');
+			if (effect?.effectType === 'Ability') {
+				this.add('-weather', 'LoveInTheAir', '[from] ability: ' + effect.name, '[of] ' + source);
+			} else {
+				this.add('-weather', 'LoveInTheAir');
+			}
 		},
 		onFieldResidualOrder: 1,
 		onFieldResidual() {
@@ -782,7 +802,11 @@ export const Conditions: {[k: string]: ConditionData} = {
 			this.heal(target.baseMaxhp / 16, target, target);
 		},
 		onFieldStart(field, source, effect) {
-			this.add('-weather', 'Pollen', '[from] ability: ' + effect.name, '[of] ' + source);
+			if (effect?.effectType === 'Ability') {
+				this.add('-weather', 'Pollen', '[from] ability: ' + effect.name, '[of] ' + source);
+			} else {
+				this.add('-weather', 'Pollen');
+			}
 		},
 		onFieldResidualOrder: 1,
 		onFieldResidual() {
