@@ -5,14 +5,16 @@ const weathers = ['Rain Dance', 'Sunny Day', 'Snow', 'Sandstorm', 'Locusts',
 function newWeather(battle: Battle, currentWeather: string) {
 	battle.add('-weather', currentWeather.replace(' ', ''), '[upkeep]');
 	battle.eachEvent('Weather');
-	const otherWeathers = weathers.filter(item => item !== currentWeather);
-	const rndInt = Math.floor(Math.random() * otherWeathers.length);
-	const weather = otherWeathers[rndInt];
-	const lowercase = weather.toLowerCase().replace(' ', '');
-	battle.add('-weather', weather);
-	battle.field.weather = lowercase as ID;
-	battle.field.weatherState = {id: lowercase};
-	battle.eachEvent('WeatherChange');
+	if (battle.turn % 2 == 0) {
+		const otherWeathers = weathers.filter(item => item !== currentWeather);
+		const rndInt = Math.floor(Math.random() * otherWeathers.length);
+		const weather = otherWeathers[rndInt];
+		const lowercase = weather.toLowerCase().replace(' ', '');
+		battle.add('-weather', weather);
+		battle.field.weather = lowercase as ID;
+		battle.field.weatherState = {id: lowercase};
+		battle.eachEvent('WeatherChange');
+	}
 }
 
 export const Conditions: {[k: string]: ModdedConditionData} = {

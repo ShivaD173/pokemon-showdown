@@ -380,12 +380,12 @@ export const Pokedex: {[k: string]: ModdedSpeciesData} =
 			"Fairy"
 		],
 		"baseStats": {
-			"hp": 60,
+			"hp": 55,
 			"atk": 30,
 			"def": 75,
 			"spa": 100,
 			"spd": 75,
-			"spe": 125
+			"spe": 120
 		},
 		"abilities": {
 			"0": "Lovey-Dovey"

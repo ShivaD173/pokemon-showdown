@@ -813,6 +813,11 @@ export const Conditions: {[k: string]: ConditionData} = {
 			this.add('-weather', 'Pollen', '[upkeep]');
 			this.eachEvent('Weather');
 		},
+		onAccuracy(accuracy, target, source, move) {
+			if (move.flags["powder"]) {
+				return true;
+			}
+		},
 		onFieldEnd() {
 			this.add('-weather', 'none');
 		},
