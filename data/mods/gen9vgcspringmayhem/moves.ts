@@ -4,10 +4,9 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 		condition: {
 			onStart(pokemon, source, effect) {
 				if (effect && ['Electromorphosis', 'Wind Power'].includes(effect.name)) {
-					if (this.activeMove){
-						this.add('-start', pokemon, 'Charge', this.activeMove!.name, '[from] ability: ' + effect.name);
-					}
-					else {
+					if (this.activeMove) {
+						this.add('-start', pokemon, 'Charge', this.activeMove.name, '[from] ability: ' + effect.name);
+					} else {
 						this.add('-start', pokemon, 'Charge', 'Delta Stream', '[from] ability: ' + effect.name);
 					}
 				} else {
@@ -17,9 +16,8 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 			onRestart(pokemon, source, effect) {
 				if (effect && ['Electromorphosis', 'Wind Power'].includes(effect.name)) {
 					if (this.activeMove) {
-						this.add('-start', pokemon, 'Charge', this.activeMove!.name, '[from] ability: ' + effect.name);
-					}
-					else {
+						this.add('-start', pokemon, 'Charge', this.activeMove.name, '[from] ability: ' + effect.name);
+					} else {
 						this.add('-start', pokemon, 'Charge', 'Delta Stream', '[from] ability: ' + effect.name);
 					}
 				} else {
