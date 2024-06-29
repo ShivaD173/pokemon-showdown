@@ -1,11 +1,10 @@
 const weathers = ['Rain Dance', 'Sunny Day', 'Snow', 'Sandstorm', 'Locusts',
 	'Delta Stream', 'Acid Rain', 'Stellar Storm', 'Darkness', 'Pollen',
 	'Thunderstorm', 'Twilight Zone', 'Love In The Air'];
-// const weathers = ['Acid Rain', 'Darkness', 'Twilight Zone', 'Pollen', 'Thunderstorm'];
 function newWeather(battle: Battle, currentWeather: string) {
 	battle.add('-weather', currentWeather.replace(' ', ''), '[upkeep]');
 	battle.eachEvent('Weather');
-	if (battle.turn % 2 == 0) {
+	if (battle.turn % 2 === 0) {
 		const otherWeathers = weathers.filter(item => item !== currentWeather);
 		const rndInt = Math.floor(Math.random() * otherWeathers.length);
 		const weather = otherWeathers[rndInt];
