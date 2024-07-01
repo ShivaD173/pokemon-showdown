@@ -888,7 +888,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "NFE",
 	},
 	kingdra: {
-		tier: "ZU",
+		tier: "ZUBL",
 		doublesTier: "(DUU)",
 		natDexTier: "PU",
 	},
@@ -5681,7 +5681,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	pecharunt: {
 		tier: "UU",
 		doublesTier: "DUU",
-		natDexTier: "RU",
+		natDexTier: "RUBL",
 	},
 	missingno: {
 		isNonstandard: "Custom",
