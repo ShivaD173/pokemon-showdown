@@ -325,6 +325,13 @@ export const Formats: FormatList = [
 		searchShow: true,
 	},
 	{
+		name: "[Gen 4] RU",
+		mod: 'gen4',
+		searchShow: true,
+		ruleset: ['[Gen 4] UU'],
+		banlist: ['UU', 'RUBL'],
+	},
+	{
 		name: "[Gen 4] SU",
 		mod: 'gen4',
 		searchShow: true,
@@ -340,26 +347,11 @@ export const Formats: FormatList = [
 		unbanlist: ['Damp Rock'],
 	},
 	{
-		name: "[Gen 4] 8U",
-		mod: 'gen4',
-		searchShow: true,
-		ruleset: ['[Gen 4] IU'],
-		banlist: ['IU', '8UBL'],
-		unbanlist: ['Heat Rock'],
-	},
-	{
-		name: "[Gen 4] 9U",
-		mod: 'gen4',
-		searchShow: true,
-		ruleset: ['[Gen 4] 8U'],
-		banlist: ['8U', '9UBL'],
-	},
-	{
 		name: "[Gen 4] Lol",
 		mod: 'gen4',
 		searchShow: true,
-		ruleset: ['[Gen 4] 9U'],
-		banlist: ['9U', '10UBL', '10U', '11UBL', 'NFE', 'LC'],
+		ruleset: ['[Gen 4] IU'],
+		banlist: ['IU', '8UBL', '8U', '9U', '10UBL', '10U', '11UBL', 'NFE', 'LC', 'UR'],
 	},
 	{
 		section: "Gen 5 Lower Tiers",
@@ -952,7 +944,6 @@ export const Formats: FormatList = [
 		],
 
 		mod: 'gen9',
-		searchShow: false,
 		ruleset: ['Standard OMs', 'Not Fully Evolved', 'Sleep Moves Clause', 'Terastal Clause'],
 		banlist: [
 			'Basculin-White-Striped', 'Bisharp', 'Chansey', 'Dipplin', 'Duraludon', 'Gurdurr', 'Haunter', 'Magmar', 'Magneton', 'Porygon2', 'Primeape',
@@ -5052,7 +5043,7 @@ export const Formats: FormatList = [
 		mod: 'gen4',
 		searchShow: false,
 		ruleset: ['[Gen 4] UU', 'Baton Pass Clause'],
-		banlist: ['UU', 'NUBL'],
+		banlist: ['UU', 'NUBL', 'RU', 'RUBL'],
 		unbanlist: ['Sand Veil', 'Baton Pass'],
 	},
 	{
