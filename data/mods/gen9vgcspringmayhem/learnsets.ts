@@ -1,5 +1,4 @@
-export const Learnsets: {[k: string]: ModdedLearnsetData} = 
-{
+export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTable = {
     "venusaur": {
         "inherit": true,
         "learnset": {
@@ -8868,4 +8867,4 @@ export const Learnsets: {[k: string]: ModdedLearnsetData} =
             ]
         }
     }
-}
+};

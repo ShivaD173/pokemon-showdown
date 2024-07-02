@@ -2,7 +2,7 @@ import {ssbSets} from "./random-teams";
 import {PSEUDO_WEATHERS, changeSet, getName} from "./scripts";
 import {Teams} from '../../../sim/teams';
 
-export const Moves: {[k: string]: ModdedMoveData} = {
+export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 	/*
 	// Example
 	moveid: {
@@ -3830,7 +3830,7 @@ export const Moves: {[k: string]: ModdedMoveData} = {
 						this.add('-sideend', pokemon.side, this.dex.conditions.get(condition).name, '[from] move: Time Skip', '[of] ' + pokemon);
 					}
 				}
-				// 9 turn addition so the +1 from nextTurn totals to 10 turns
+				// 9 turn addition so the +1 from endTurn totals to 10 turns
 				this.turn += 9;
 			},
 			boosts: {

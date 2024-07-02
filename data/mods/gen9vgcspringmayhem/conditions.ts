@@ -16,7 +16,7 @@ function newWeather(battle: Battle, currentWeather: string) {
 	}
 }
 
-export const Conditions: {[k: string]: ModdedConditionData} = {
+export const Conditions: import('../../../sim/dex-conditions').ModdedConditionDataTable = {
 	raindance: {
 		inherit: true,
 		onWeatherModifyDamage(damage, attacker, defender, move) {

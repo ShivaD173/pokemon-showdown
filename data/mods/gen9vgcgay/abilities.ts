@@ -1,4 +1,4 @@
-export const Abilities: {[k: string]: ModdedAbilityData} = {
+export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTable = {
 	slowstart: {
 		inherit: true,
 		shortDesc: "On switch-in, this Pokemon's Attack and Speed are halved for 3 turns.",
