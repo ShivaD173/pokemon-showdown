@@ -646,6 +646,15 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		banlist: ['Basculin-White-Striped', 'Dunsparce', 'Duraludon', 'Gligar', 'Murkrow', 'Qwilfish-Hisui', 'Scyther', 'Sneasel', 'Sneasel-Hisui', 'Vulpix', 'Vulpix-Alola', 'Yanma'],
 	},
 	{
+		name: "[Gen 9] VGC 2023 Reg D",
+		mod: 'gen9predlc',
+		gameType: 'doubles',
+		searchShow: false,
+		bestOfDefault: true,
+		ruleset: ['Flat Rules', '!! Adjust Level = 50', 'Min Source Gen = 9', 'VGC Timer', 'Open Team Sheets'],
+		banlist: [],
+	},
+	{
 		name: "[Gen 9] VGC 2024 Reg F",
 		mod: 'gen9',
 		gameType: 'doubles',
@@ -1441,6 +1450,14 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 	{
 		section: "Challengeable OMs",
 		column: 3,
+	},
+	{
+		name: "[Gen 9] 350 Cup",
+		desc: `Pokemon with a BST of 350 or lower have their stats doubled.`,
+		mod: 'gen9',
+		searchShow: false,
+		ruleset: ['Standard OMs', 'Sleep Moves Clause', '350 Cup Mod', 'Evasion Clause'],
+		banlist: ['Calyrex-Shadow', 'Flittle', 'Gastly', 'Miraidon', 'Pikachu', 'Rufflet', 'Arena Trap', 'Moody', 'Shadow Tag', 'Eviolite', 'Baton Pass'],
 	},
 	{
 		name: "[Gen 9] 350 Cup",
@@ -2462,7 +2479,6 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 	},
 	{
 		name: "[Gen 9] National Dex VGC",
-
 		mod: 'gen9',
 		gameType: 'doubles',
 		searchShow: false,
