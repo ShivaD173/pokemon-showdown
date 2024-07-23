@@ -295,13 +295,6 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		unbanlist: ['Baton Pass + Substitute']
 	},
 	{
-		name: "[Gen 3] 8U",
-		mod: 'gen3',
-		searchShow: true,
-		ruleset: ['[Gen 3] IU'],
-		banlist: ['IU', '8UBL'],
-	},
-	{
 		name: "[Gen 3] Lol",
 		mod: 'gen3',
 		searchShow: true,
@@ -751,16 +744,6 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		searchShow: false,
 		ruleset: ['Standard Doubles', 'Little Cup', 'Sleep Clause Mod'],
 		banlist: ['Basculin-White-Striped', 'Dunsparce', 'Duraludon', 'Gligar', 'Murkrow', 'Qwilfish-Hisui', 'Scyther', 'Sneasel', 'Sneasel-Hisui', 'Vulpix', 'Vulpix-Alola', 'Yanma'],
-	},
-	{
-		name: "[Gen 9] VGC 2023 Reg D",
-
-		mod: 'gen9predlc',
-		gameType: 'doubles',
-		searchShow: false,
-		bestOfDefault: true,
-		ruleset: ['Flat Rules', '!! Adjust Level = 50', 'Min Source Gen = 9', 'VGC Timer', 'Open Team Sheets'],
-		banlist: ['Walking Wake', 'Iron Leaves'],
 	},
 	{
 		name: "[Gen 9] VGC 2024 Reg F",

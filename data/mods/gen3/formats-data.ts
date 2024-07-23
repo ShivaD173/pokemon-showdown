@@ -444,7 +444,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "11U",
 	},
 	eevee: {
-		tier: "8UBL",
+		tier: "LC",
 	},
 	vaporeon: {
 		tier: "UUBL",
@@ -633,7 +633,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "UU",
 	},
 	unown: {
-		tier: "8U",
+		tier: "UR",
 	},
 	wynaut: {
 		tier: "Uber",

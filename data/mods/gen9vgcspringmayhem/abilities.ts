@@ -3,7 +3,9 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 		inherit: true,
 		isNonstandard: null,
 		onAnySetWeather(target, source, weather) {
-		}
+		},
+		onEnd(pokemon) {
+		},
 	},
 	arcticrush: {
 		inherit: true,

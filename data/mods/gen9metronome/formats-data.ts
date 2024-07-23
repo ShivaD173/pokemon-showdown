@@ -1,4 +1,4 @@
-export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
+export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormatsDataTable = {
 	"clefairy": {
 		"isNonstandard": null,
 		"tier": "UU"
@@ -137,7 +137,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 	},
 	"politoed": {
 		"isNonstandard": null,
-		"tier": "OU"
+		"tier": "UU"
 	},
 	"aipom": {
 		"isNonstandard": null,
@@ -169,7 +169,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 	},
 	"ludicolo": {
 		"isNonstandard": null,
-		"tier": "OU"
+		"tier": "UU"
 	},
 	"ralts": {
 		"isNonstandard": null,
@@ -277,7 +277,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 	},
 	"lucario": {
 		"isNonstandard": null,
-		"tier": "UU"
+		"tier": "OU"
 	},
 	"weavile": {
 		"isNonstandard": null,
@@ -293,7 +293,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 	},
 	"uxie": {
 		"isNonstandard": null,
-		"tier": "OU"
+		"tier": "UU"
 	},
 	"mesprit": {
 		"isNonstandard": null,
@@ -313,7 +313,7 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 	},
 	"gothitelle": {
 		"isNonstandard": null,
-		"tier": "RU"
+		"tier": "OU"
 	},
 	"tornadus": {
 		"isNonstandard": null,
@@ -473,15 +473,15 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 	},
 	"hitmonlee": {
 		"isNonstandard": null,
-		"tier": "OU"
+		"tier": "UU"
 	},
 	"hitmonchan": {
 		"isNonstandard": null,
-		"tier": "OU"
+		"tier": "UU"
 	},
 	"magmar": {
 		"isNonstandard": null,
-		"tier": "NU"
+		"tier": "NFE"
 	},
 	"magmortar": {
 		"isNonstandard": null,
@@ -489,11 +489,11 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 	},
 	"electabuzz": {
 		"isNonstandard": null,
-		"tier": "NU"
+		"tier": "NFE"
 	},
 	"electivire": {
 		"isNonstandard": null,
-		"tier": "OU"
+		"tier": "UU"
 	},
 	"snubbull": {
 		"isNonstandard": null,
@@ -501,15 +501,15 @@ export const FormatsData: {[k: string]: ModdedSpeciesFormatsData} = {
 	},
 	"granbull": {
 		"isNonstandard": null,
-		"tier": "OU"
+		"tier": "UU"
 	},
 	"alcremie": {
 		"isNonstandard": null,
-		"tier": "OU"
+		"tier": "UU"
 	},
 	"smeargle": {
 		"isNonstandard": null,
-		"tier": "OU"
+		"tier": "UU"
 	},
 	"scrafty": {
 		"isNonstandard": null,

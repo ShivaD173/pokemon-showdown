@@ -156,7 +156,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "ZU",
 	},
 	venonat: {
-		tier: "IU",
+		tier: "SU",
 	},
 	venomoth: {
 		tier: "PU",
@@ -315,7 +315,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "UU",
 	},
 	krabby: {
-		tier: "SU",
+		tier: "IU",
 	},
 	kingler: {
 		tier: "NU",
@@ -510,7 +510,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "Uber",
 	},
 	chikorita: {
-		tier: "IU",
+		tier: "SU",
 	},
 	bayleef: {
 		tier: "ZU",
@@ -549,7 +549,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "PU",
 	},
 	ledyba: {
-		tier: "SU",
+		tier: "IU",
 	},
 	ledian: {
 		tier: "NU",
