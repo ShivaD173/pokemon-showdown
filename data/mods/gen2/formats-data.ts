@@ -210,7 +210,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "UU",
 	},
 	alakazam: {
-		tier: "UUBL",
+		tier: "OU",
 	},
 	machop: {
 		tier: "SU",
@@ -450,7 +450,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "OU",
 	},
 	jolteon: {
-		tier: "UUBL",
+		tier: "OU",
 	},
 	flareon: {
 		tier: "NU",

@@ -1279,6 +1279,7 @@ export class Pokemon {
 				if (pokemon.volatiles[volatile]) {
 					this.addVolatile(volatile);
 					if (volatile === 'gmaxchistrike') this.volatiles[volatile].layers = pokemon.volatiles[volatile].layers;
+					if (volatile === 'dragoncheer') this.volatiles[volatile].hasDragonType = pokemon.volatiles[volatile].hasDragonType;
 				} else {
 					this.removeVolatile(volatile);
 				}
@@ -1952,9 +1953,9 @@ export class Pokemon {
 		if (!this.hp) return false;
 		status = this.battle.dex.conditions.get(status) as Effect;
 		if (!this.volatiles[status.id]) return false;
-		this.battle.singleEvent('End', status, this.volatiles[status.id], this);
 		const linkedPokemon = this.volatiles[status.id].linkedPokemon;
 		const linkedStatus = this.volatiles[status.id].linkedStatus;
+		this.battle.singleEvent('End', status, this.volatiles[status.id], this);
 		delete this.volatiles[status.id];
 		if (linkedPokemon) {
 			this.removeLinkedVolatiles(linkedStatus, linkedPokemon);

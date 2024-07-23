@@ -2431,15 +2431,20 @@ export class TeamValidator {
 				}
 			}
 
-			const formeCantInherit = checkingPrevo && !originalSpecies.prevo &&
-				(!originalSpecies.changesFrom || originalSpecies.name === "Greninja-Ash");
+			let formeCantInherit = false;
+			let nextSpecies = dex.species.learnsetParent(baseSpecies);
+			while (nextSpecies) {
+				if (nextSpecies.name === species.name) break;
+				nextSpecies = dex.species.learnsetParent(nextSpecies);
+			}
+			if (checkingPrevo && !nextSpecies) formeCantInherit = true;
 			if (formeCantInherit && dex.gen < 9) break;
 
 			let sources = learnset[moveid] || [];
 			if (moveid === 'sketch') {
 				sketch = true;
 			} else if (learnset['sketch']) {
-				if (move.noSketch || move.isZ || move.isMax) {
+				if (move.flags['nosketch'] || move.isZ || move.isMax) {
 					cantLearnReason = `can't be Sketched.`;
 				} else if (move.gen > 7 && !canSketchPostGen7Moves &&
 					(dex.gen === 8 ||

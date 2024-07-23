@@ -701,11 +701,12 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 			for (i in ally.boosts) {
 				pokemon.boosts[i] = ally.boosts[i];
 			}
-			const volatilesToCopy = ['focusenergy', 'gmaxchistrike', 'laserfocus'];
+			const volatilesToCopy = ['dragoncheer', 'focusenergy', 'gmaxchistrike', 'laserfocus'];
 			for (const volatile of volatilesToCopy) {
 				if (ally.volatiles[volatile]) {
 					pokemon.addVolatile(volatile);
 					if (volatile === 'gmaxchistrike') pokemon.volatiles[volatile].layers = ally.volatiles[volatile].layers;
+					if (volatile === 'dragoncheer') pokemon.volatiles[volatile].hasDragonType = ally.volatiles[volatile].hasDragonType;
 				} else {
 					pokemon.removeVolatile(volatile);
 				}
@@ -4868,7 +4869,7 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		onEffectiveness(typeMod, target, type, move) {
 			if (!target || target.species.name !== 'Terapagos-Terastal') return;
 			if (this.effectState.resisted) return -1; // all hits of multi-hit move should be not very effective
-			if (move.category === 'Status') return;
+			if (move.category === 'Status' || move.id === 'struggle') return;
 			if (!target.runImmunity(move.type)) return; // immunity has priority
 			if (target.hp < target.maxhp) return;
 
