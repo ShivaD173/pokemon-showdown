@@ -1460,14 +1460,6 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		banlist: ['Calyrex-Shadow', 'Flittle', 'Gastly', 'Miraidon', 'Pikachu', 'Rufflet', 'Arena Trap', 'Moody', 'Shadow Tag', 'Eviolite', 'Baton Pass'],
 	},
 	{
-		name: "[Gen 9] 350 Cup",
-		desc: `Pokemon with a BST of 350 or lower have their stats doubled.`,
-		mod: 'gen9',
-		searchShow: false,
-		ruleset: ['Standard OMs', 'Sleep Moves Clause', '350 Cup Mod', 'Evasion Clause'],
-		banlist: ['Calyrex-Shadow', 'Flittle', 'Gastly', 'Miraidon', 'Pikachu', 'Rufflet', 'Arena Trap', 'Moody', 'Shadow Tag', 'Eviolite', 'Baton Pass'],
-	},
-	{
 		name: "[Gen 9] Camomons",
 		desc: `Pok&eacute;mon have their types set to match their first two moves.`,
 		mod: 'gen9',
