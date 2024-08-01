@@ -909,13 +909,9 @@ export async function getOpponent(link: string, submitter: ID): Promise<string |
 		}
 	}
 	if (!room) {
-		const replayUrl = Net(`https://${Config.routes.replays}/${link.slice(link.indexOf('-') + 1)}.json`);
-		try {
-			const body = await replayUrl.get();
-			const data = JSON.parse(body);
-			return data.p1id === submitter ? data.p2id : data.p1id;
-		} catch {
-			return null;
+		const battleData = await getBattleLog(link);
+		if (battleData) {
+			return battleData.players.p1 === submitter ? battleData.players.p2 : battleData.players.p1;
 		}
 	}
 	return null;
@@ -924,71 +920,29 @@ export async function getOpponent(link: string, submitter: ID): Promise<string |
 export async function getBattleLog(battle: string, noReplay = false): Promise<BattleInfo | null> {
 	const battleRoom = Rooms.get(battle);
 	const seenPokemon = new Set<string>();
-	if (battleRoom && battleRoom.type !== 'chat') {
-		const playerTable: Partial<BattleInfo['players']> = {};
-		const monTable: BattleInfo['pokemon'] = {};
-		// i kinda hate this, but this will always be accurate to the battle players.
-		// consulting room.battle.playerTable might be invalid (if battle is over), etc.
-		for (const line of battleRoom.log.log) {
-			// |switch|p2a: badnite|Dragonite, M|323/323
-			if (line.startsWith('|switch|')) { // name cannot have been seen until it switches in
-				const [, , playerWithNick, speciesWithGender] = line.split('|');
-				let [slot, name] = playerWithNick.split(':');
-				const species = speciesWithGender.split(',')[0].trim(); // should always exist
-				slot = slot.slice(0, -1); // p2a -> p2
-				if (!monTable[slot]) monTable[slot] = [];
-				const identifier = `${name || ""}-${species}`;
-				if (seenPokemon.has(identifier)) continue;
-				// technically, if several mons have the same name and species, this will ignore them.
-				// BUT if they have the same name and species we only need to see it once
-				// so it doesn't matter
-				seenPokemon.add(identifier);
-				name = name?.trim() || "";
-				monTable[slot].push({
-					species,
-					name: species === name ? undefined : name,
-				});
-			}
-			if (line.startsWith('|player|')) {
-				// |player|p1|Mia|miapi.png|1000
-				const [, , playerSlot, name] = line.split('|');
-				playerTable[playerSlot as SideID] = toID(name);
-			}
-			for (const k in monTable) {
-				// SideID => userID, cannot do conversion at time of collection
-				// because the playerID => userid mapping might not be there.
-				// strictly, yes it will, but this is for maximum safety.
-				const userid = playerTable[k as SideID];
-				if (userid) {
-					monTable[userid] = monTable[k];
-					delete monTable[k];
-				}
-			}
-		}
-		return {
-			log: battleRoom.log.log.filter(k => k.startsWith('|c|')),
-			title: battleRoom.title,
-			url: `/${battle}`,
-			players: playerTable as BattleInfo['players'],
-			pokemon: monTable,
+	let data: {log: string, players: string[]} | null = null;
+	// try battle room first
+	if (battleRoom && battleRoom.type !== 'chat' && battleRoom.battle) {
+		data = {
+			log: battleRoom.log.log.join('\n'),
+			players: battleRoom.battle.players.map(x => x.id),
 		};
-	}
-	if (noReplay) return null;
-	battle = battle.replace(`battle-`, ''); // don't wanna strip passwords
+	} else { // fall back to replay
+		if (noReplay) return null;
+		battle = battle.replace(`battle-`, ''); // don't wanna strip passwords
 
-	// let's get the replay info
-	let data;
-	if (Rooms.Replays.db) { // direct conn exists, use it
-		if (battle.endsWith('pw')) {
-			battle = battle.slice(0, battle.lastIndexOf("-", battle.length - 2));
+		if (Rooms.Replays.db) { // direct conn exists, use it
+			if (battle.endsWith('pw')) {
+				battle = battle.slice(0, battle.lastIndexOf("-", battle.length - 2));
+			}
+			data = await Rooms.Replays.get(battle);
+		} else {
+			// call out to API
+			try {
+				const raw = await Net(`https://${Config.routes.replays}/${battle}.json`).get();
+				data = JSON.parse(raw);
+			} catch {}
 		}
-		data = await Rooms.Replays.get(battle);
-	} else {
-		// call out to replays db
-		try {
-			const raw = await Net(`https://${Config.routes.replays}/${battle}.json`).get();
-			data = JSON.parse(raw);
-		} catch {}
 	}
 
 	// parse
@@ -1350,30 +1304,28 @@ export const textTickets: {[k: string]: TextTicketInfo} = {
 			buf += `<p><strong>Battle links given:</strong><p>`;
 			links = links.filter((url, i) => links.indexOf(url) === i);
 			buf += links.map(uri => Chat.formatText(`<<${uri}>>`)).join(', ');
-			const battleRooms = links.map(r => Rooms.get(r)).filter(room => room?.battle) as GameRoom[];
-			if (battleRooms.length) {
-				buf += `<div class="infobox"><strong>Names in given battles:</strong><hr />`;
-				for (const room of battleRooms) {
-					const names = [];
-					for (const id in room.battle!.playerTable) {
-						const user = Users.get(id);
-						if (!user) continue;
-						const team = await room.battle!.getTeam(user);
-						if (team) {
-							const teamNames = team.map(p => (
-								p.name !== p.species ? Utils.html`${p.name} (${p.species})` : p.species
-							));
-							names.push(`<strong>${user.id}:</strong> ${teamNames.join(', ')}`);
-						}
-					}
-					if (names.length) {
-						buf += `<a href="/${room.roomid}">${room.title}</a><br />`;
-						buf += names.join('<br />');
-						buf += `<hr />`;
+			buf += `<div class="infobox"><strong>Names in given battles:</strong><hr />`;
+			for (const link of links) {
+				const names = [];
+				const roomData = await getBattleLog(link);
+				if (!roomData) continue;
+				for (const id of Object.values(roomData.players)) {
+					const user = Users.get(id)?.name || id;
+					const team = roomData.pokemon[id];
+					if (team) {
+						const teamNames = team.map(p => (
+							p.name !== p.species ? Utils.html`${p.name} (${p.species})` : p.species
+						));
+						names.push(`<strong>${user}:</strong> ${teamNames.join(', ')}`);
 					}
 				}
-				buf += `</div>`;
+				if (names.length) {
+					buf += `<a href="/${getBattleLinks(link)[0]}">${roomData.title}</a><br />`;
+					buf += names.join('<br />');
+					buf += `<hr />`;
+				}
 			}
+			buf += `</div>`;
 			return buf;
 		},
 		onSubmit(ticket, text, submitter, conn) {
