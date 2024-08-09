@@ -35,7 +35,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "LC",
 	},
 	wartortle: {
-		tier: "NFE",
+		tier: "IU",
 	},
 	blastoise: {
 		tier: "RU",
@@ -814,7 +814,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		doublesTier: "DOU",
 	},
 	natu: {
-		tier: "LC",
+		tier: "IU",
 	},
 	xatu: {
 		tier: "NU",
@@ -2471,7 +2471,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "LC",
 	},
 	lampent: {
-		tier: "NFE",
+		tier: "IU",
 	},
 	chandelure: {
 		tier: "UU",

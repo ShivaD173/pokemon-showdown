@@ -40,7 +40,6 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 
 			const rndInt = Math.floor(Math.random() * weathers.length);
 			const weather = weathers[rndInt];
-			// const weather = "Delta Stream";
 			const lowercase = weather.toLowerCase().replace(' ', '');
 			this.add('-weather', weather);
 			this.field.weather = lowercase as ID;
@@ -76,14 +75,14 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 	},
 	{
 		name: "[Gen 9] VGC Plat",
-		searchShow: true,
+		// searchShow: true,
 		mod: 'gen4vgcplat',
 		gameType: 'doubles',
 		ruleset: ['Flat Rules', '!! Adjust Level = 50', 'Draft Timer', 'Terastal Clause', 'VGC Plat Pokedex', 'Evasion Moves Clause', 'Evasion Items Clause'],
 	},
 	{
 		name: "[Gen 9] VGC Plat Tera",
-		searchShow: true,
+		// searchShow: true,
 		mod: 'gen4vgcplat',
 		gameType: 'doubles',
 		ruleset: ['Flat Rules', '!! Adjust Level = 50', 'Draft Timer', 'VGC Plat Pokedex', 'TB Legality'],

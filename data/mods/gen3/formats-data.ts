@@ -879,7 +879,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "RUBL",
 	},
 	shedinja: {
-		tier: "ZUBL",
+		tier: "PU",
 	},
 	whismur: {
 		tier: "LC",
@@ -915,7 +915,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "SU",
 	},
 	lairon: {
-		tier: "ZUBL",
+		tier: "PU",
 	},
 	aggron: {
 		tier: "RU",

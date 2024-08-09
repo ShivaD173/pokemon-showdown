@@ -54,13 +54,13 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "NU",
 	},
 	rattata: {
-		tier: "IU",
+		tier: "IUBL",
 	},
 	raticate: {
 		tier: "NU",
 	},
 	spearow: {
-		tier: "IU",
+		tier: "IUBL",
 	},
 	fearow: {
 		tier: "NU",
