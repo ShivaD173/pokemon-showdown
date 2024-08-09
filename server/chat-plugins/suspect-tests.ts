@@ -173,7 +173,7 @@ export const commands: Chat.ChatCommands = {
 				return this.parse(`/help ${cmd}`);
 			}
 			const [formatid, source] = this.splitOne(target).map(toID);
-			let bVal: number | undefined = parseInt(source);
+			let bVal: number | undefined = parseFloat(source);
 			if (cmd.startsWith('d')) {
 				bVal = undefined;
 			} else if (!source || isNaN(bVal) || bVal < 1) {
@@ -217,7 +217,7 @@ export const commands: Chat.ChatCommands = {
 			`<code>/suspects remove [tier]</code>: deletes a suspect test. Requires: &<br />` +
 			`<code>/suspects whitelist [username]</code>: allows [username] to add suspect tests. Requires: &<br />` +
 			`<code>/suspects unwhitelist [username]</code>: disallows [username] from adding suspect tests. Requires: &<br />` +
-			`/suspects setcoil OR /suspects sc [formatid], [B value] - Activate COIL ranking for the given [formatid] with the given [B value].` +
+			`<code>/suspects setcoil OR /suspects sc [formatid], [B value]</code>: Activate COIL ranking for the given [formatid] with the given [B value].` +
 			`Requires: suspect whitelist &`
 		);
 	},

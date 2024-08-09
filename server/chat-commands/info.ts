@@ -1811,13 +1811,8 @@ export const commands: Chat.ChatCommands = {
 		const SUPPORTED_BATTLESPOT_FORMATS = [
 			'gen5gbusingles', 'gen5gbudoubles', 'gen6battlespotsingles', 'gen6battlespotdoubles', 'gen6battlespottriples', 'gen7battlespotsingles', 'gen7battlespotdoubles', 'gen7bssfactory',
 		];
-		if (room?.battle?.format === "gen9vgcplat") {
-			return this.sendReplyBox(
-				`VGC Plat damage calculator. (Courtesy of StaraptorOP)<br />` +
-				`- <a href="https://shivad173.github.io">VGC Plat Damage Calculator</a>`
-			);
-		}
-		const isRandomBattle = room?.battle?.format.endsWith('randombattle');
+		const isRandomBattle = (room?.battle && (room.battle.format.endsWith('randombattle') ||
+			room.battle.format.endsWith('randomdoublesbattle')));
 		const isBattleSpotBattle = (room?.battle && (SUPPORTED_BATTLESPOT_FORMATS.includes(room.battle.format) ||
 			room.battle.format.includes("battlespotspecial")));
 		const {dex} = this.extractFormat(room?.battle?.format);
@@ -2566,8 +2561,7 @@ export const commands: Chat.ChatCommands = {
 	pr: 'pickrandom',
 	pick: 'pickrandom',
 	pickrandom(target, room, user) {
-		if (!target) return false;
-		if (!target.includes(',')) return this.parse('/help pick');
+		if (!target || !target.includes(',')) return this.parse('/help pick');
 		if (!this.runBroadcast(true)) return false;
 		if (this.broadcasting) {
 			[, target] = Utils.splitFirst(this.message, ' ');
