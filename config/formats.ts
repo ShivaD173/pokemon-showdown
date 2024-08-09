@@ -96,7 +96,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		gameType: 'freeforall',
 		rated: false,
 		tournamentShow: false,
-		ruleset: ['Standard NatDex', 'Item Clause'],
+		ruleset: ['Standard NatDex', 'Item Clause = 1'],
 		banlist: [
 			'Arceus', 'Calyrex-Ice', 'Calyrex-Shadow', 'Chi-Yu', 'Dialga', 'Dialga-Origin', 'Flutter Mane', 'Giratina', 'Giratina-Origin', 'Groudon',
 			'Iron Bundle', 'Koraidon', 'Kyogre', 'Landorus-Base', 'Magearna', 'Mewtwo', 'Miraidon', 'Palafin', 'Palkia', 'Palkia-Origin', 'Rayquaza', 'Spectrier',
@@ -110,7 +110,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		gameType: 'freeforall',
 		rated: false,
 		tournamentShow: false,
-		ruleset: ['Standard', '!Evasion Items Clause', 'Item Clause'],
+		ruleset: ['Standard', '!Evasion Items Clause', 'Item Clause = 1'],
 		banlist: ['Toxic Debris', 'Regenerator>1'],
 		onValidateSet(set) {
 			if (set.moves.length !== 1 || this.dex.moves.get(set.moves[0]).id !== 'metronome') {
