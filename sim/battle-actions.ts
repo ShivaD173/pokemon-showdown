@@ -377,7 +377,7 @@ export class BattleActions {
 					targetOf1stDance :
 					pokemon;
 				const dancersTargetLoc = dancer.getLocOf(dancersTarget);
-				this.runMove("echoedvoice", dancer, dancersTargetLoc, this.dex.abilities.get('windchime'), undefined, true);
+				this.runMove("echoedvoice", dancer, dancersTargetLoc, {sourceEffect: this.dex.abilities.get('windchime'), externalMove: true});
 			}
 		}
 		// Passimian's Gay Ability
@@ -401,7 +401,7 @@ export class BattleActions {
 					targetOf1stDance :
 					pokemon;
 				const dancersTargetLoc = dancer.getLocOf(dancersTarget);
-				this.runMove(move.id, dancer, dancersTargetLoc, this.dex.abilities.get('ballin'), undefined, true);
+				this.runMove(move.id, dancer, dancersTargetLoc, {sourceEffect: this.dex.abilities.get('ballin'), externalMove: true});
 			}
 		}
 		if (this.battle.format.fullname.includes("vgcgay")) {
@@ -425,7 +425,7 @@ export class BattleActions {
 						targetOf1stDance :
 						pokemon;
 					const dancersTargetLoc = dancer.getLocOf(dancersTarget);
-					this.runMove(move.id, dancer, dancersTargetLoc, this.dex.abilities.get('minus'), undefined, true);
+					this.runMove(move.id, dancer, dancersTargetLoc, {sourceEffect: this.dex.abilities.get('minus'), externalMove: true});
 				}
 			}
 
@@ -449,7 +449,7 @@ export class BattleActions {
 						targetOf1stDance :
 						pokemon;
 					const dancersTargetLoc = dancer.getLocOf(dancersTarget);
-					this.runMove(move.id, dancer, dancersTargetLoc, this.dex.abilities.get('plus'), undefined, true);
+					this.runMove(move.id, dancer, dancersTargetLoc, {sourceEffect: this.dex.abilities.get('plus'), externalMove: true});
 				}
 			}
 		}
