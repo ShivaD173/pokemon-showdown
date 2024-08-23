@@ -606,7 +606,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "IU",
 	},
 	jumpluff: {
-		tier: "RU",
+		tier: "RUBL",
 	},
 	aipom: {
 		tier: "ZU",
@@ -645,7 +645,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "RU",
 	},
 	pineco: {
-		tier: "ZUBL",
+		tier: "PU",
 	},
 	forretress: {
 		tier: "OU",
