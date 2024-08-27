@@ -72,13 +72,13 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "ZUBL",
 	},
 	pikachu: {
-		tier: "SU",
+		tier: "IU",
 	},
 	raichu: {
 		tier: "UU",
 	},
 	sandshrew: {
-		tier: "SU",
+		tier: "IU",
 	},
 	sandslash: {
 		tier: "ZU",

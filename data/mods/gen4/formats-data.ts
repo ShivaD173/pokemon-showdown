@@ -760,7 +760,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "(OU)",
 	},
 	corsola: {
-		tier: "IU",
+		tier: "SU",
 	},
 	remoraid: {
 		tier: "LC",
@@ -814,7 +814,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "LC",
 	},
 	pupitar: {
-		tier: "IU",
+		tier: "SU",
 	},
 	tyranitar: {
 		tier: "OU",
@@ -1363,7 +1363,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "LC",
 	},
 	cherrim: {
-		tier: "IU",
+		tier: "SU",
 	},
 	cherrimsunshine: {
 	},

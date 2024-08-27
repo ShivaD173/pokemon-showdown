@@ -794,7 +794,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "LC",
 	},
 	marowak: {
-		tier: "IU",
+		tier: "SU",
 		doublesTier: "(DUU)",
 		natDexTier: "ZU",
 	},
@@ -1542,7 +1542,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		natDexTier: "ZU",
 	},
 	corsolagalar: {
-		tier: "NFE",
+		tier: "SU",
 		natDexTier: "LC",
 	},
 	cursola: {
@@ -2125,7 +2125,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		natDexTier: "ZU",
 	},
 	lunatone: {
-		tier: "SU",
+		tier: "IU",
 		doublesTier: "(DUU)",
 		natDexTier: "ZU",
 	},
@@ -3967,7 +3967,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		natDexTier: "ZU",
 	},
 	carbink: {
-		tier: "SU",
+		tier: "IU",
 		doublesTier: "(DUU)",
 		natDexTier: "ZU",
 	},
@@ -4436,7 +4436,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		natDexTier: "ZU",
 	},
 	silvallygrass: {
-		tier: "SU",
+		tier: "IU",
 		doublesTier: "(DUU)",
 		natDexTier: "ZU",
 	},
@@ -4774,7 +4774,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "NFE",
 	},
 	orbeetle: {
-		tier: "IU",
+		tier: "SU",
 		doublesTier: "(DUU)",
 		natDexTier: "ZU",
 	},
