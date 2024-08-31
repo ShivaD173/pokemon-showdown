@@ -2101,7 +2101,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	torkoal: {
 		tier: "UU",
 		doublesTier: "DOU",
-		natDexTier: "PU",
+		natDexTier: "NU",
 	},
 	spoink: {
 		tier: "LC",

@@ -1,4 +1,11 @@
 export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTable = {
+	unseenfist: {
+		inherit: true,
+		shortDesc: "This Pokemon's PUNCH moves ignore the target's protection.",
+		onModifyMove(move) {
+			if (move.flags['punch']) delete move.flags['protect'];
+		},
+	},
 	slowstart: {
 		inherit: true,
 		shortDesc: "On switch-in, this Pokemon's Attack and Speed are halved for 3 turns.",
