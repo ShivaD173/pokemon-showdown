@@ -4171,7 +4171,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		natDexTier: "ZU",
 	},
 	oricorio: {
-		tier: "ZU",
+		tier: "SU",
 		doublesTier: "(DUU)",
 		natDexTier: "ZU",
 	},
@@ -4913,7 +4913,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		tier: "LC",
 	},
 	hattrem: {
-		tier: "ZU",
+		tier: "NFE",
 		natDexTier: "NFE",
 	},
 	hatterene: {
