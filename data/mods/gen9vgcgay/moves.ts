@@ -1421,6 +1421,15 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 			return null;
 		}
 	},
+	//i'm putting Geomancy here cuz i can
+	geomancy:{
+		inherit: true,
+		isNonstandard: null,
+		boosts: {
+			atk: 3,
+			spa: 3,
+		},
+	},
 	// Max Moves
 	gmaxreplenish: {
 		inherit: true,
@@ -1661,6 +1670,36 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		isNonstandard: null,
 		self: null,
 		shortDesc: "User cannot move next turn if it fails to KO.",
+		onHit(target, source) {
+			if (target.hp) {
+				source.addVolatile('mustrecharge');
+			}
+		},
+	},
+	freezeshock: {
+		inherit: true,
+		isNonstandard: null,
+		self: null,
+		shortDesc: "User cannot move next turn if it fails to KO. 30% paralysis.",
+		flags: {recharge: 1, protect: 1, mirror: 1, nosleeptalk: 1, failinstruct: 1},
+		onTryMove(attacker, defender, move){
+			return;
+		},
+		onHit(target, source) {
+			if (target.hp) {
+				source.addVolatile('mustrecharge');
+			}
+		},
+	},
+	iceburn: {
+		inherit: true,
+		isNonstandard: null,
+		self: null,
+		shortDesc: "User cannot move next turn if it fails to KO. 30% burn.",
+		flags: {recharge: 1, protect: 1, mirror: 1, nosleeptalk: 1, failinstruct: 1},
+		onTryMove(attacker, defender, move){
+			return;
+		},
 		onHit(target, source) {
 			if (target.hp) {
 				source.addVolatile('mustrecharge');
@@ -2133,6 +2172,18 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		isNonstandard: null,
 	},
 	pikapapow: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	oblivionwing: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	thousandwaves: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	landswrath: {
 		inherit: true,
 		isNonstandard: null,
 	},

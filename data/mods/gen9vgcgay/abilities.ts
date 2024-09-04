@@ -1245,6 +1245,26 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 			return this.chainModify(0.8);
 		},
 	},
+	turboblaze: {
+		inherit: true,
+		shortDesc: "Mold Breaker effect. Fire moves: 1.5x when resisted."
+		onModifyDamage(damage, source, target, move) {
+			if (target.getMoveHitData(move).typeMod < 0 && move.type == 'Fire') {
+				this.debug('Turboblaze boost');
+				return this.chainModify(1.5);
+			}
+		},
+	},
+	teravolt: {
+		inherit: true,
+		shortDesc: "Mold Breaker effect. Electric moves: 1.5x when resisted."
+		onModifyDamage(damage, source, target, move) {
+			if (target.getMoveHitData(move).typeMod < 0 && move.type == 'Electric') {
+				this.debug('Teravolt boost');
+				return this.chainModify(1.5);
+			}
+		},
+	},
 	// New Abilities
 	triplethreat: {
 		inherit: true,
