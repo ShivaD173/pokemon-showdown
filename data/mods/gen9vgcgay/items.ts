@@ -29,6 +29,46 @@ export const Items: import('../../../sim/dex-items').ModdedItemDataTable = {
 		},
 		itemUser: ["Chansey", "Ledian"],
 	},
+	// Origin forme items
+	lustrousglobe: {
+		inherit: true,
+		onResidualOrder: 29,
+		onResidual(pokemon) {
+			if (pokemon.baseSpecies.baseSpecies !== 'Palkia' || pokemon.transformed || !pokemon.hp) return;
+			if (pokemon.species.id === 'palkiaorigin' || pokemon.hp > pokemon.maxhp / 2) return;
+			this.add('-activate', pokemon, 'item: Lustrous Orb');
+			pokemon.formeChange('Palkia-Origin', this.effect, true);
+		},
+		onBasePowerPriority: 15,
+		onBasePower() {},
+		forcedForme: "",
+	},
+	adamantcrystal: {
+		inherit: true,
+		onResidualOrder: 29,
+		onResidual(pokemon) {
+			if (pokemon.baseSpecies.baseSpecies !== 'Dialga' || pokemon.transformed || !pokemon.hp) return;
+			if (pokemon.species.id === 'dialgaorigin' || pokemon.hp > pokemon.maxhp / 2) return;
+			this.add('-activate', pokemon, 'item: Adamant Crystal');
+			pokemon.formeChange('Dialga-Origin', this.effect, true);
+		},
+		onBasePowerPriority: 15,
+		onBasePower() {},
+		forcedForme: "",
+	},
+	griseouscore: {
+		inherit: true,
+		onResidualOrder: 29,
+		onResidual(pokemon) {
+			if (pokemon.baseSpecies.baseSpecies !== 'Giratina' || pokemon.transformed || !pokemon.hp) return;
+			if (pokemon.species.id === 'giratinaorigin' || pokemon.hp > pokemon.maxhp / 2) return;
+			this.add('-activate', pokemon, 'item: Griseous Core');
+			pokemon.formeChange('Giratina-Origin', this.effect, true);
+		},
+		onBasePowerPriority: 15,
+		onBasePower() {},
+		forcedForme: "",
+	},
 	// Making Illegal
 	focusband: {
 		"inherit": true,
@@ -38,7 +78,7 @@ export const Items: import('../../../sim/dex-items').ModdedItemDataTable = {
 		"inherit": true,
 		isNonstandard: "Past",
 	},
-	// Making Illegal
+	// Making Legal
 	thickclub: {
 		"inherit": true,
 		isNonstandard: null,

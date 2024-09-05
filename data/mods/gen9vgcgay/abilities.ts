@@ -1078,38 +1078,12 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 	},
 	fullmetalbody: {
 		inherit: true,
-		shortDesc: "Prevents stat lowering. Adds Steel STAB.",
-		onModifyAtkPriority: 5,
-		onModifyAtk(atk, attacker, defender, move) {
-			if (move.type === 'Steel') {
-				this.debug('Steelworker boost');
-				return this.chainModify(1.5);
-			}
-		},
-		onModifySpAPriority: 5,
-		onModifySpA(atk, attacker, defender, move) {
-			if (move.type === 'Steel') {
-				this.debug('Steelworker boost');
-				return this.chainModify(1.5);
-			}
-		},
-	},
-	shadowshield: {
-		inherit: true,
-		shortDesc: "Halves damage at full health. Adds Ghost STAB.",
-		onModifyAtkPriority: 5,
-		onModifyAtk(atk, attacker, defender, move) {
-			if (move.type === 'Ghost') {
-				this.debug('Steelworker boost');
-				return this.chainModify(1.5);
-			}
-		},
-		onModifySpAPriority: 5,
-		onModifySpA(atk, attacker, defender, move) {
-			if (move.type === 'Ghost') {
-				this.debug('Steelworker boost');
-				return this.chainModify(1.5);
-			}
+		shortDesc: "This Pokemon takes 1/2 damage from contact moves, 2x damage from Fire moves.",
+		onSourceModifyDamage(damage, source, target, move) {
+			let mod = 1;
+			if (move.type === 'Fire') mod *= 2;
+			if (move.flags['contact']) mod /= 2;
+			return this.chainModify(mod);
 		},
 	},
 	lingeringaroma: {
@@ -1245,9 +1219,10 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 			return this.chainModify(0.8);
 		},
 	},
+	// turboblaze/teravolt buffs
 	turboblaze: {
 		inherit: true,
-		shortDesc: "Mold Breaker effect. Fire moves: 1.5x when resisted."
+		shortDesc: "Mold Breaker effect. Fire moves: 1.5x when resisted.",
 		onModifyDamage(damage, source, target, move) {
 			if (target.getMoveHitData(move).typeMod < 0 && move.type == 'Fire') {
 				this.debug('Turboblaze boost');
@@ -1257,7 +1232,7 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 	},
 	teravolt: {
 		inherit: true,
-		shortDesc: "Mold Breaker effect. Electric moves: 1.5x when resisted."
+		shortDesc: "Mold Breaker effect. Electric moves: 1.5x when resisted.",
 		onModifyDamage(damage, source, target, move) {
 			if (target.getMoveHitData(move).typeMod < 0 && move.type == 'Electric') {
 				this.debug('Teravolt boost');

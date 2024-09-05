@@ -1675,6 +1675,11 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 				source.addVolatile('mustrecharge');
 			}
 		},
+		onModifyMove(move, pokemon) {
+			if (pokemon.species.name === 'Dialga-Origin') {
+				move.target = 'allAdjacentFoes';
+			}
+		},
 	},
 	freezeshock: {
 		inherit: true,
@@ -1704,6 +1709,34 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 			if (target.hp) {
 				source.addVolatile('mustrecharge');
 			}
+		},
+	},
+	// Origin forme changes
+	spacialrend: {
+		inherit: true,
+		isNonstandard: null,
+		onModifyMove(move, pokemon) {
+			if (pokemon.species.name === 'Palkia-Origin') {
+				move.willCrit = true;
+			}
+		},
+	},
+	shadowforce: {
+		inherit: true,
+		isNonstandard: null,
+		onTryMove(attacker, defender, move) {
+			if (attacker.removeVolatile(move.id)) {
+				return;
+			}
+			if (attacker.species.name === 'Giratina-Origin') {
+				return;
+			}
+			this.add('-prepare', attacker, move.name);
+			if (!this.runEvent('ChargeMove', attacker, defender, move)) {
+				return;
+			}
+			attacker.addVolatile('twoturnmove', defender);
+			return null;
 		},
 	},
 	// Thick Fat makes weight-based moves deal maximum damage
@@ -2172,10 +2205,6 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		isNonstandard: null,
 	},
 	pikapapow: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	oblivionwing: {
 		inherit: true,
 		isNonstandard: null,
 	},
