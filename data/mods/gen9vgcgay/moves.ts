@@ -1421,8 +1421,8 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 			return null;
 		}
 	},
-	//i'm putting Geomancy here cuz i can
-	geomancy:{
+	// i'm putting Geomancy here cuz i can
+	geomancy: {
 		inherit: true,
 		isNonstandard: null,
 		boosts: {
@@ -1687,7 +1687,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		self: null,
 		shortDesc: "User cannot move next turn if it fails to KO. 30% paralysis.",
 		flags: {recharge: 1, protect: 1, mirror: 1, nosleeptalk: 1, failinstruct: 1},
-		onTryMove(attacker, defender, move){
+		onTryMove(attacker, defender, move) {
 			return;
 		},
 		onHit(target, source) {
@@ -1702,7 +1702,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		self: null,
 		shortDesc: "User cannot move next turn if it fails to KO. 30% burn.",
 		flags: {recharge: 1, protect: 1, mirror: 1, nosleeptalk: 1, failinstruct: 1},
-		onTryMove(attacker, defender, move){
+		onTryMove(attacker, defender, move) {
 			return;
 		},
 		onHit(target, source) {
