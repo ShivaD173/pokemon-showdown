@@ -32,12 +32,19 @@ export const Items: import('../../../sim/dex-items').ModdedItemDataTable = {
 	// Origin forme items
 	lustrousglobe: {
 		inherit: true,
-		onResidualOrder: 29,
+		/*onResidualOrder: 29,
 		onResidual(pokemon) {
 			if (pokemon.baseSpecies.baseSpecies !== 'Palkia' || pokemon.transformed || !pokemon.hp) return;
 			if (pokemon.species.id === 'palkiaorigin' || pokemon.hp > pokemon.maxhp / 2) return;
-			this.add('-activate', pokemon, 'item: Lustrous Orb');
+			this.add('-activate', pokemon, 'item: Lustrous Globe');
 			pokemon.formeChange('Palkia-Origin', this.effect, true);
+		},*/
+		onDamagingHitOrder: 2,
+		onDamagingHit(damage, target, source, move) {
+			if (target.baseSpecies.baseSpecies !== 'Palkia' || target.transformed || !target.hp) return;
+			if (target.species.id === 'palkiaorigin' || target.hp > target.maxhp / 2) return;
+			this.add('-activate', target, 'item: Lustrous Globe');
+			target.formeChange('Palkia-Origin', this.effect, true);
 		},
 		onBasePowerPriority: 15,
 		onBasePower() {},
@@ -45,12 +52,19 @@ export const Items: import('../../../sim/dex-items').ModdedItemDataTable = {
 	},
 	adamantcrystal: {
 		inherit: true,
-		onResidualOrder: 29,
+		/*onResidualOrder: 29,
 		onResidual(pokemon) {
 			if (pokemon.baseSpecies.baseSpecies !== 'Dialga' || pokemon.transformed || !pokemon.hp) return;
 			if (pokemon.species.id === 'dialgaorigin' || pokemon.hp > pokemon.maxhp / 2) return;
 			this.add('-activate', pokemon, 'item: Adamant Crystal');
 			pokemon.formeChange('Dialga-Origin', this.effect, true);
+		},*/
+		onDamagingHitOrder: 2,
+		onDamagingHit(damage, target, source, move) {
+			if (target.baseSpecies.baseSpecies !== 'Dialga' || target.transformed || !target.hp) return;
+			if (target.species.id === 'dialgaorigin' || target.hp > target.maxhp / 2) return;
+			this.add('-activate', target, 'item: Adamant Crystal');
+			target.formeChange('Dialga-Origin', this.effect, true);
 		},
 		onBasePowerPriority: 15,
 		onBasePower() {},
@@ -58,12 +72,19 @@ export const Items: import('../../../sim/dex-items').ModdedItemDataTable = {
 	},
 	griseouscore: {
 		inherit: true,
-		onResidualOrder: 29,
+		/*onResidualOrder: 29,
 		onResidual(pokemon) {
 			if (pokemon.baseSpecies.baseSpecies !== 'Giratina' || pokemon.transformed || !pokemon.hp) return;
 			if (pokemon.species.id === 'giratinaorigin' || pokemon.hp > pokemon.maxhp / 2) return;
 			this.add('-activate', pokemon, 'item: Griseous Core');
 			pokemon.formeChange('Giratina-Origin', this.effect, true);
+		},*/
+		onDamagingHitOrder: 2,
+		onDamagingHit(damage, target, source, move) {
+			if (target.baseSpecies.baseSpecies !== 'Giratina' || target.transformed || !target.hp) return;
+			if (target.species.id === 'giratinaorigin' || target.hp > target.maxhp / 2) return;
+			this.add('-activate', target, 'item: Griseous Core');
+			target.formeChange('Giratina-Origin', this.effect, true);
 		},
 		onBasePowerPriority: 15,
 		onBasePower() {},

@@ -6501,8 +6501,8 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 				move.ignoreImmunity['Psychic'] = true;
 			}
 		},
-		onEffectiveness(typeMod, target, type) {
-			if (type === 'Dark') return -1;
+		onFoeEffectiveness(typeMod, target, type, move) {
+			if (type === 'Dark' && move.type === 'Psychic') return -1;
 		},
 		flags: {},
 		name: "Dauntless",
