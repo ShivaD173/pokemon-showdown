@@ -2483,4 +2483,43 @@ export const AbilitiesText: {[id: IDEntry]: AbilityText} = {
 		desc: "This Pokemon's Psychic-type moves are resisted by Dark types, rather than immune.",
 		shortDesc: "Psychic does 0.5x damage to Dark instead of 0.",
 	},
+	copycore: {
+		name: "Copy Core",
+		desc: "User uses Psych Up on opposite Pokemon on switch in.",
+		shortDesc: "User uses Psych Up on opposite Pokemon on switch in.",
+	},
+	onslaughtcore: {
+		name: "Onslaught Core",
+		desc: "User uses Hidden Power on opposite Pokemon on switch in.",
+		shortDesc: "User uses Hidden Power on opposite Pokemon on switch in.",
+	},
+	barriercore: {
+		name: "Barrier Core",
+		desc: "User uses Magic Coat on switch in.",
+		shortDesc: "User uses Barrier on switch in.",
+	},
+	hazardcore: {
+		name: "Hazard Core",
+		desc: "User uses Spikes on switch in.",
+		shortDesc: "User uses Spikes on switch in.",
+	},
+	hyperbolictime: {
+		name: "Hyperbolic Time",
+		desc: "End-of-turn effects happen twice while user is on the field.",
+		shortDesc: "End-of-turn effects happen twice while user is on the field.",
+	},
+	megashiftx: {
+		name: "Mega Shift X",
+		desc: "If this Pokemon is a Mewtwo, it transforms into Mewtwo-Mega-X if it attacks and knocks out another Pokemon.",
+		shortDesc: "After KOing a Pokemon: becomes Mewtwo-Mega-X.",
+		activate: "  [POKEMON] became fully charged due to its bond with its Trainer!",
+		transform: "[POKEMON] Mega Evolved into Mewtwo-Mega-X!",
+	},
+	megashifty: {
+		name: "Mega Shift Y",
+		desc: "If this Pokemon is a Mewtwo, it transforms into Mewtwo-Mega-Y if it attacks and knocks out another Pokemon.",
+		shortDesc: "After KOing a Pokemon: becomes Mewtwo-Mega-Y.",
+		activate: "  [POKEMON] became fully charged due to its bond with its Trainer!",
+		transform: "[POKEMON] Mega Evolved into Mewtwo-Mega-Y!",
+	},
 };

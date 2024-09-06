@@ -1711,6 +1711,25 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 			}
 		},
 	},
+	prismaticlaser: {
+		inherit: true,
+		isNonstandard: null,
+		self: null,
+		onModifyMove(move, pokemon) {
+			if (pokemon.getStat('atk', false, true) > pokemon.getStat('spa', false, true)) move.category = 'Physical';
+		},
+		onHit(target, source) {
+			if (target.hp) {
+				source.addVolatile('mustrecharge');
+			}
+		},
+	},
+	eternabeam: {
+		inherit: true,
+		isNonstandard: null,
+		self: null,
+		basePower: 200,
+	},
 	// Origin forme changes
 	spacialrend: {
 		inherit: true,
@@ -1783,6 +1802,23 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 			this.debug('BP: ' + bp);
 			return bp;
 		},
+	},
+	// nerfs
+	doubleironbash: {
+		inherit: true,
+		isNonstandard: null,
+		basePower: 50,
+		secondary: {},
+	},
+	glaciallance: {
+		inherit: true,
+		isNonstandard: null,
+		basePower: 100,
+	},
+	astralbarrage: {
+		inherit: true,
+		isNonstandard: null,
+		basePower: 100,
 	},
 	// pp changes
 	whirlwind: {

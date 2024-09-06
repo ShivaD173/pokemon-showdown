@@ -1428,7 +1428,19 @@ export class Pokemon {
 			// Ogerpon's forme change doesn't override permanent abilities
 			if (source || !this.getAbility().flags['cantsuppress']) this.setAbility(species.abilities['0'], null, true);
 			// However, its ability does reset upon switching out
-			this.baseAbility = toID(species.abilities['0']);
+			// this.baseAbility = toID(species.abilities['0']);
+			let abilityKey: keyof typeof rawSpecies.abilities
+			const baseSpecies = this.battle.dex.species.get(rawSpecies.baseSpecies)
+			let abilitySlot;
+
+			for (abilityKey in baseSpecies.abilities) {
+				if (this.battle.dex.abilities.getByID(this.baseAbility).name === this.battle.dex.abilities.get(baseSpecies.abilities[abilityKey]).name) {
+					if (!(abilityKey as string).includes('I')) abilitySlot = abilityKey
+				}
+			}
+			if (species.abilities[abilitySlot as string] === undefined) abilitySlot = '0'
+			this.setAbility(species.abilities[abilitySlot as string], null, true);
+			this.baseAbility = this.ability;
 		}
 		if (this.terastallized) {
 			this.knownType = true;
