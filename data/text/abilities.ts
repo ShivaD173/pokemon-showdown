@@ -2478,6 +2478,11 @@ export const AbilitiesText: {[id: IDEntry]: AbilityText} = {
 		start: "  [POKEMON] can't get off the ground!",
 		end: "  [POKEMON] took flight!",
 	},
+	dauntless: {
+		name: "Dauntless",
+		desc: "This Pokemon's Psychic-type moves are resisted by Dark types, rather than immune.",
+		shortDesc: "Psychic does 0.5x damage to Dark instead of 0.",
+	},
 	loveydovey: {
 		name: "Lovey-Dovey",
 		desc: "Sets up Love In The Air, which makes all Fairy moves perfectly accurate.",

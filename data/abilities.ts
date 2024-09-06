@@ -6493,6 +6493,22 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		rating: -1,
 		num: -48,
 	},
+	dauntless: {
+		onModifyMovePriority: -5,
+		onModifyMove(move) {
+			if (!move.ignoreImmunity) move.ignoreImmunity = {};
+			if (move.ignoreImmunity !== true) {
+				move.ignoreImmunity['Psychic'] = true;
+			}
+		},
+		onEffectiveness(typeMod, target, type) {
+			if (type === 'Dark') return -1;
+		},
+		flags: {},
+		name: "Dauntless",
+		rating: 3,
+		num: -53,
+	},
 	// Spring Mod
 	loveydovey: {
 		onStart(source) {
