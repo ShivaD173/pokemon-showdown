@@ -2483,25 +2483,4 @@ export const AbilitiesText: {[id: IDEntry]: AbilityText} = {
 		desc: "This Pokemon's Psychic-type moves are resisted by Dark types, rather than immune.",
 		shortDesc: "Psychic does 0.5x damage to Dark instead of 0.",
 	},
-	loveydovey: {
-		name: "Lovey-Dovey",
-		desc: "Sets up Love In The Air, which makes all Fairy moves perfectly accurate.",
-		shortDesc: "Sets up Love In The Air."
-	},
-	acidrain: {
-		name: "Acid Rain",
-		desc: "Sets up Acid Rain.",
-		shortDesc: "Sets up Acid Rain."
-	},
-	pollinator: {
-		name: "Pollinator",
-		desc: "Sets up Pollen.",
-		shortDesc: "Sets up Pollen."
-	},
-	lonewolf: {
-		name: "Lone Wolf",
-		shortDesc: "1.3x damage if alone or in darkness.",
-		desc: "1.3x damage if no allies on the field or in darkness.",
-		activate: "  [POKEMON] Powered up!",
-	},
 };

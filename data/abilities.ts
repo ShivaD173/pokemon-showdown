@@ -6507,46 +6507,6 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		flags: {},
 		name: "Dauntless",
 		rating: 3,
-		num: -53,
-	},
-	// Spring Mod
-	loveydovey: {
-		onStart(source) {
-			this.field.setWeather('loveintheair');
-		},
-		name: "Lovey-Dovey",
-		isNonstandard: "CAP",
-		rating: 3,
 		num: -49,
-	},
-	acidrain: {
-		onStart(source) {
-			this.field.setWeather('acidrain');
-		},
-		name: "Acid Rain",
-		isNonstandard: "CAP",
-		rating: 3,
-		num: -50,
-	},
-	pollinator: {
-		onStart(source) {
-			this.field.setWeather('pollen');
-		},
-		name: "Pollinator",
-		isNonstandard: "CAP",
-		rating: 3,
-		num: -51,
-	},
-	lonewolf: {
-		onBasePowerPriority: 23,
-		onBasePower(basePower, attacker, defender, move) {
-			if (attacker.side.hasAlly(attacker)) {
-				return this.chainModify([5325, 4096]);
-			}
-		},
-		name: "Lone Wolf",
-		isNonstandard: "CAP",
-		rating: 3,
-		num: -52,
 	},
 };

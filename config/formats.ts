@@ -26,25 +26,14 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		section: "Custom Modes",
 	},
 	{
-		name: "[Gen 9] VGC Spring Mayhem",
+		name: "[Gen 9] VGC Gay Random Battle",
 		searchShow: true,
-		mod: 'gen9vgcspringmayhem',
+		mod: 'gen9vgcgay',
+		team: 'random',
 		gameType: 'doubles',
-		ruleset: ['Flat Rules', '!! Adjust Level = 50', 'Tera Type Preview', 'Sketch Post-Gen 7 Moves', 'Draft Timer'],
+		ruleset: ['Flat Rules', 'Tera Type Preview', 'Sketch Post-Gen 7 Moves'],
 		bestOfDefault: true,
 		unbanlist: ['Greninja-Bond'],
-		onBegin() {
-			const weathers = ['Rain Dance', 'Sunny Day', 'Snow', 'Sandstorm', 'Locusts',
-				'Delta Stream', 'Acid Rain', 'Stellar Storm', 'Darkness', 'Pollen',
-				'Thunderstorm', 'Twilight Zone', 'Love In The Air'];
-
-			const rndInt = Math.floor(Math.random() * weathers.length);
-			const weather = weathers[rndInt];
-			const lowercase = weather.toLowerCase().replace(' ', '');
-			this.add('-weather', weather);
-			this.field.weather = lowercase as ID;
-			this.field.weatherState = {id: lowercase};
-		  },
 	},
 	{
 		name: "[Gen 9] VGC Gay",
@@ -56,36 +45,22 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		unbanlist: ['Greninja-Bond'],
 	},
 	{
+		name: "[Gen 9] VGC Gay Restricted",
+		searchShow: true,
+		mod: 'gen9vgcgay',
+		gameType: 'doubles',
+		ruleset: ['Flat Rules', '!! Adjust Level = 50', 'Tera Type Preview', 'Sketch Post-Gen 7 Moves', 'Draft Timer', 'Limit Two Restricted'],
+		bestOfDefault: true,
+		unbanlist: ['Greninja-Bond'],
+		restricted: ['Ubers'],
+	},
+	{
 		name: "[Gen 9] VGC Gay FFA",
 		searchShow: true,
 		mod: 'gen9vgcgay',
 		gameType: 'freeforall',
 		ruleset: ['Flat Rules', '!! Adjust Level = 50', 'Sketch Post-Gen 7 Moves'],
 		unbanlist: ['Greninja-Bond'],
-	},
-	{
-		name: "[Gen 9] VGC Gay Random Battle",
-		searchShow: true,
-		mod: 'gen9vgcgay',
-		team: 'random',
-		gameType: 'doubles',
-		ruleset: ['Flat Rules', 'Tera Type Preview', 'Sketch Post-Gen 7 Moves'],
-		bestOfDefault: true,
-		unbanlist: ['Greninja-Bond'],
-	},
-	{
-		name: "[Gen 9] VGC Plat",
-		// searchShow: true,
-		mod: 'gen4vgcplat',
-		gameType: 'doubles',
-		ruleset: ['Flat Rules', '!! Adjust Level = 50', 'Draft Timer', 'Terastal Clause', 'VGC Plat Pokedex', 'Evasion Moves Clause', 'Evasion Items Clause'],
-	},
-	{
-		name: "[Gen 9] VGC Plat Tera",
-		// searchShow: true,
-		mod: 'gen4vgcplat',
-		gameType: 'doubles',
-		ruleset: ['Flat Rules', '!! Adjust Level = 50', 'Draft Timer', 'VGC Plat Pokedex', 'TB Legality'],
 	},
 	{
 		section: "Free For All",
