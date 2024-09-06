@@ -32,7 +32,7 @@ export const Items: import('../../../sim/dex-items').ModdedItemDataTable = {
 	// Origin forme items
 	lustrousglobe: {
 		inherit: true,
-		/*onResidualOrder: 29,
+		/* onResidualOrder: 29,
 		onResidual(pokemon) {
 			if (pokemon.baseSpecies.baseSpecies !== 'Palkia' || pokemon.transformed || !pokemon.hp) return;
 			if (pokemon.species.id === 'palkiaorigin' || pokemon.hp > pokemon.maxhp / 2) return;
@@ -46,13 +46,16 @@ export const Items: import('../../../sim/dex-items').ModdedItemDataTable = {
 			this.add('-activate', target, 'item: Lustrous Globe');
 			target.formeChange('Palkia-Origin', this.effect, true);
 		},
+		desc: "If the holder is Palkia, transforms into Origin forme at 1/2 HP.",
+		shortDesc: "Palkia: transforms at 1/2 HP.",
+		itemUser: ["Palkia-Origin"],
 		onBasePowerPriority: 15,
 		onBasePower() {},
 		forcedForme: "",
 	},
 	adamantcrystal: {
 		inherit: true,
-		/*onResidualOrder: 29,
+		/* onResidualOrder: 29,
 		onResidual(pokemon) {
 			if (pokemon.baseSpecies.baseSpecies !== 'Dialga' || pokemon.transformed || !pokemon.hp) return;
 			if (pokemon.species.id === 'dialgaorigin' || pokemon.hp > pokemon.maxhp / 2) return;
@@ -66,13 +69,16 @@ export const Items: import('../../../sim/dex-items').ModdedItemDataTable = {
 			this.add('-activate', target, 'item: Adamant Crystal');
 			target.formeChange('Dialga-Origin', this.effect, true);
 		},
+		desc: "If the holder is Dialga, transforms into Origin forme at 1/2 HP.",
+		shortDesc: "Dialga: transforms at 1/2 HP.",
+		itemUser: ["Dialga"],
 		onBasePowerPriority: 15,
 		onBasePower() {},
 		forcedForme: "",
 	},
 	griseouscore: {
 		inherit: true,
-		/*onResidualOrder: 29,
+		/* onResidualOrder: 29,
 		onResidual(pokemon) {
 			if (pokemon.baseSpecies.baseSpecies !== 'Giratina' || pokemon.transformed || !pokemon.hp) return;
 			if (pokemon.species.id === 'giratinaorigin' || pokemon.hp > pokemon.maxhp / 2) return;
@@ -86,6 +92,9 @@ export const Items: import('../../../sim/dex-items').ModdedItemDataTable = {
 			this.add('-activate', target, 'item: Griseous Core');
 			target.formeChange('Giratina-Origin', this.effect, true);
 		},
+		desc: "If the holder is Giratina, transforms into Origin forme at 1/2 HP.",
+		shortDesc: "Giratina: transforms at 1/2 HP.",
+		itemUser: ["Giratina"],
 		onBasePowerPriority: 15,
 		onBasePower() {},
 		forcedForme: "",
