@@ -1408,5 +1408,33 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 	dauntless: {
 		inherit: true,
 		isNonstandard: null,
+	},
+	copycore: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	onslaughtcore: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	barriercore: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	hazardcore: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	hyperbolictime: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	megashiftx: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	megashifty: {
+		inherit: true,
+		isNonstandard: null,
 	}
 };

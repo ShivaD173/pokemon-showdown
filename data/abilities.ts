@@ -6504,10 +6504,89 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		onFoeEffectiveness(typeMod, target, type, move) {
 			if (type === 'Dark' && move.type === 'Psychic') return -1;
 		},
-		flags: {},
 		name: "Dauntless",
+		isNonstandard: "CAP",
 		rating: 3,
 		num: -53,
+	},
+	copycore: {
+		onSwitchIn(pokemon) {
+			const target = pokemon.side.foe.active[pokemon.side.foe.active.length - 1 - pokemon.position];
+			if(target){
+				this.actions.useMove(Dex.moves.get('psychup'), pokemon, target);
+			}
+		},
+		name: "Copy Core",
+		isNonstandard: "CAP",
+		rating: 3,
+		num: -54,
+	},
+	onslaughtcore: {
+		onSwitchIn(pokemon) {
+			const target = pokemon.side.foe.active[pokemon.side.foe.active.length - 1 - pokemon.position];
+			if(target){
+				this.actions.useMove(Dex.moves.get('hiddenpower'), pokemon, target);
+			}
+		},
+		name: "Onslaught Core",
+		isNonstandard: "CAP",
+		rating: 3,
+		num: -55,
+	},
+	barriercore: {
+		onSwitchIn(pokemon) {
+			this.actions.useMove(Dex.moves.get('magiccoat'), pokemon);
+		},
+		name: "Barrier Core",
+		isNonstandard: "CAP",
+		rating: 3,
+		num: -56,
+	},
+	hazardcore: {
+		onSwitchIn(pokemon) {
+			this.actions.useMove(Dex.moves.get('spikes'), pokemon);
+
+		},
+		name: "Hazard Core",
+		isNonstandard: "CAP",
+		rating: 3,
+		num: -57,
+	},
+	hyperbolictime: {
+		name: "Hyperbolic Time",
+		isNonstandard: "CAP",
+		rating: 4,
+		num: -58,
+	},
+	megashiftx: {
+		onSourceAfterFaint(length, target, source, effect) {
+			if (effect?.effectType !== 'Move') {
+				return;
+			}
+			if (source.species.id === 'mewtwo' && source.hp && !source.transformed && source.side.foePokemonLeft()) {
+				this.add('-activate', source, 'ability: Mega Shift X');
+				source.formeChange('Mewtwo-Mega-X', this.effect, true);
+			}
+		},
+		name: "Mega Shift X",
+		isNonstandard: "CAP",
+		rating: 4,
+		num: -59,
+	},
+	megashifty: {
+		onSourceAfterFaint(length, target, source, effect) {
+			if (effect?.effectType !== 'Move') {
+				return;
+			}
+			if (source.species.id === 'mewtwo' && source.hp && !source.transformed && source.side.foePokemonLeft()) {
+				this.add('-activate', source, 'ability: Mega Shift Y');
+				source.formeChange('Mewtwo-Mega-Y', this.effect, true);
+			}
+		},
+		name: "Mega Shift Y",
+		isNonstandard: "CAP",
+		rating: 4,
+		num: -60,
 	},
 	// Spring Mod
 	loveydovey: {
