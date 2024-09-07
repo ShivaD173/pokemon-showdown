@@ -39,8 +39,8 @@ export const Items: import('../../../sim/dex-items').ModdedItemDataTable = {
 			this.add('-activate', pokemon, 'item: Lustrous Globe');
 			pokemon.formeChange('Palkia-Origin', this.effect, true);
 		},*/
-		onDamagingHitOrder: 2,
-		onDamagingHit(damage, target, source, move) {
+		onDamagePriority: 1,
+		onDamage(damage, target, source, effect) {
 			if (target.baseSpecies.baseSpecies !== 'Palkia' || target.transformed || !target.hp) return;
 			if (target.species.id === 'palkiaorigin' || target.hp > target.maxhp / 2) return;
 			this.add('-activate', target, 'item: Lustrous Globe');
@@ -62,8 +62,8 @@ export const Items: import('../../../sim/dex-items').ModdedItemDataTable = {
 			this.add('-activate', pokemon, 'item: Adamant Crystal');
 			pokemon.formeChange('Dialga-Origin', this.effect, true);
 		},*/
-		onDamagingHitOrder: 2,
-		onDamagingHit(damage, target, source, move) {
+		onDamagePriority: 1,
+		onDamage(damage, target, source, effect) {
 			if (target.baseSpecies.baseSpecies !== 'Dialga' || target.transformed || !target.hp) return;
 			if (target.species.id === 'dialgaorigin' || target.hp > target.maxhp / 2) return;
 			this.add('-activate', target, 'item: Adamant Crystal');
@@ -85,8 +85,8 @@ export const Items: import('../../../sim/dex-items').ModdedItemDataTable = {
 			this.add('-activate', pokemon, 'item: Griseous Core');
 			pokemon.formeChange('Giratina-Origin', this.effect, true);
 		},*/
-		onDamagingHitOrder: 2,
-		onDamagingHit(damage, target, source, move) {
+		onDamagePriority: 1,
+		onDamage(damage, target, source, effect) {
 			if (target.baseSpecies.baseSpecies !== 'Giratina' || target.transformed || !target.hp) return;
 			if (target.species.id === 'giratinaorigin' || target.hp > target.maxhp / 2) return;
 			this.add('-activate', target, 'item: Griseous Core');
