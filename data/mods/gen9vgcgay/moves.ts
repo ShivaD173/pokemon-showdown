@@ -1670,7 +1670,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		inherit: true,
 		isNonstandard: null,
 		self: null,
-		shortDesc: "User cannot move next turn if it fails to KO. Dialga-Origin: Hits both foes.",
+		shortDesc: "User recharges doesn't KO. Dialga-Origin: Hits both foes.",
 		onHit(target, source) {
 			if (target.hp) {
 				source.addVolatile('mustrecharge');
@@ -1686,7 +1686,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		inherit: true,
 		isNonstandard: null,
 		self: null,
-		shortDesc: "User cannot move next turn if it fails to KO. 30% paralysis.",
+		shortDesc: "User recharges doesn't KO. 30% paralysis.",
 		flags: {recharge: 1, protect: 1, mirror: 1, nosleeptalk: 1, failinstruct: 1},
 		onTryMove(attacker, defender, move) {
 			return;
@@ -1701,7 +1701,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		inherit: true,
 		isNonstandard: null,
 		self: null,
-		shortDesc: "User cannot move next turn if it fails to KO. 30% burn.",
+		shortDesc: "User recharges doesn't KO. 30% burn.",
 		flags: {recharge: 1, protect: 1, mirror: 1, nosleeptalk: 1, failinstruct: 1},
 		onTryMove(attacker, defender, move) {
 			return;
@@ -1716,6 +1716,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		inherit: true,
 		isNonstandard: null,
 		self: null,
+		basePower: 140,
 		shortDesc: "User recharges doesn't KO. Physical if Atk > SpA.",
 		onModifyMove(move, pokemon) {
 			if (pokemon.getStat('atk', false, true) > pokemon.getStat('spa', false, true)) move.category = 'Physical';
@@ -1761,6 +1762,13 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 			attacker.addVolatile('twoturnmove', defender);
 			return null;
 		},
+	},
+	// Relic Song buff
+	relicsong: {
+		inherit: true,
+		isNonstandard: null,
+		basePower: 90,
+		shortDesc: "10% sleep. Transforms Meloetta. Uses highest stat.",
 	},
 	// Thick Fat makes weight-based moves deal maximum damage
 	heatcrash: {
@@ -1812,6 +1820,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		inherit: true,
 		isNonstandard: null,
 		basePower: 50,
+		shortDesc: "Hits twice.",
 		secondary: {},
 	},
 	glaciallance: {

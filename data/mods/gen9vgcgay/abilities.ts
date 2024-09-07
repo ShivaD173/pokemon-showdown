@@ -476,6 +476,29 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 			}
 		},
 	},
+	hadronengine: {
+		inherit: true,
+		shortDesc: "During E. Terrain, Atk and SpA is 1.3333x.",
+		onStart(pokemon) {},
+		onModifyAtkPriority: 5,
+		onModifyAtk(atk, pokemon) {
+			if (this.field.isTerrain('electricterrain')) {
+				this.debug('Hadron Engine boost');
+				return this.chainModify([5461, 4096]);
+			}
+		},
+		onModifySpAPriority: 5,
+		onModifySpA(atk, attacker, defender, move) {
+			if (this.field.isTerrain('electricterrain')) {
+				this.debug('Hadron Engine boost');
+				return this.chainModify([5461, 4096]);
+			}
+		},
+		flags: {},
+		name: "Hadron Engine",
+		rating: 4.5,
+		num: 289,
+	},
 	toxicboost: {
 		inherit: true,
 		shortDesc: "While Pokemon is poisoned, its physical attacks have 1.5x power, Immune to psn dmg.",
@@ -1238,6 +1261,63 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 				this.debug('Teravolt boost');
 				return this.chainModify(1.5);
 			}
+		},
+	},
+	// As One now gives Symbioisis
+	asoneglastrier: {
+		inherit: true,
+		onPreStart(pokemon) {
+		},
+		onStart(pokemon) {
+			this.add('-ability', pokemon, 'As One');
+			this.add('-ability', pokemon, 'Unnerve');
+		},
+		onEnd() {
+		},
+		onFoeTryEatItem() {
+			return true;
+		},
+		onAllyAfterUseItem(item, pokemon) {
+			if (pokemon.switchFlag) return;
+			const source = this.effectState.target;
+			const myItem = source.takeItem();
+			if (!myItem) return;
+			if (
+				!this.singleEvent('TakeItem', myItem, source.itemState, pokemon, source, this.effect, myItem) ||
+				!pokemon.setItem(myItem)
+			) {
+				source.item = myItem.id;
+				return;
+			}
+			this.add('-activate', source, 'ability: As One', myItem, '[of] ' + pokemon);
+		},
+	},
+	asonespectrier: {
+		inherit: true,
+		onPreStart(pokemon) {
+		},
+		onStart(pokemon) {
+			this.add('-ability', pokemon, 'As One');
+			this.add('-ability', pokemon, 'Unnerve');
+		},
+		onEnd() {
+		},
+		onFoeTryEatItem() {
+			return true;
+		},
+		onAllyAfterUseItem(item, pokemon) {
+			if (pokemon.switchFlag) return;
+			const source = this.effectState.target;
+			const myItem = source.takeItem();
+			if (!myItem) return;
+			if (
+				!this.singleEvent('TakeItem', myItem, source.itemState, pokemon, source, this.effect, myItem) ||
+				!pokemon.setItem(myItem)
+			) {
+				source.item = myItem.id;
+				return;
+			}
+			this.add('-activate', source, 'ability: As One', myItem, '[of] ' + pokemon);
 		},
 	},
 	// New Abilities

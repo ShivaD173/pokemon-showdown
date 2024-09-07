@@ -5957,7 +5957,7 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 			this.add('-ability', pokemon, 'Singularity');
 		},
 		onAnyModifyPriority(relayVar, source, target, move) {
-			if (move.priority >= -2 && move.priority <= 3) {
+			if (move.priority >= -5 && move.priority <= 5) {
 				return 0;
 			}
 		},
