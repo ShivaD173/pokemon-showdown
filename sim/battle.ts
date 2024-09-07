@@ -490,8 +490,8 @@ export class Battle {
 		}
 		this.speedSort(handlers);
 		let hyperbolicTimeEnabled = false;
-		for (let i = 0; i < handlers.length; i++){
-			if ((handlers[i].effectHolder as Pokemon).hasAbility("Hyperbolic Time")){
+		for (const handler of handlers) {
+			if ((handler.effectHolder as Pokemon).hasAbility("Hyperbolic Time")) {
 				hyperbolicTimeEnabled = true;
 			}
 		}
@@ -516,10 +516,7 @@ export class Battle {
 			if (handler.callback) {
 				this.singleEvent(handlerEventid, effect, handler.state, handler.effectHolder, null, null, relayVar, handler.callback);
 			}
-			if(hyperbolicTimeEnabled){
-				let handlerEventid = eventid;
-				if ((handler.effectHolder as Side).sideConditions) handlerEventid = `Side${eventid}`;
-				if ((handler.effectHolder as Field).pseudoWeather) handlerEventid = `Field${eventid}`;
+			if (hyperbolicTimeEnabled) {
 				if (handler.callback) {
 					this.singleEvent(handlerEventid, effect, handler.state, handler.effectHolder, null, null, relayVar, handler.callback);
 				}

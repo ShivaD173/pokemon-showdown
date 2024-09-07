@@ -6512,7 +6512,7 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 	copycore: {
 		onSwitchIn(pokemon) {
 			const target = pokemon.side.foe.active[pokemon.side.foe.active.length - 1 - pokemon.position];
-			if(target){
+			if (target) {
 				this.actions.useMove(Dex.moves.get('psychup'), pokemon, {target: target});
 			}
 		},
@@ -6524,7 +6524,7 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 	onslaughtcore: {
 		onSwitchIn(pokemon) {
 			const target = pokemon.side.foe.active[pokemon.side.foe.active.length - 1 - pokemon.position];
-			if(target){
+			if (target) {
 				this.actions.useMove(Dex.moves.get('hiddenpower'), pokemon, {target: target});
 			}
 		},
@@ -6545,7 +6545,6 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 	hazardcore: {
 		onSwitchIn(pokemon) {
 			this.actions.useMove(Dex.moves.get('spikes'), pokemon);
-
 		},
 		name: "Hazard Core",
 		isNonstandard: "CAP",
