@@ -490,9 +490,11 @@ export class Battle {
 		}
 		this.speedSort(handlers);
 		let hyperbolicTimeEnabled = false;
-		for (const handler of handlers) {
-			if ((handler.effectHolder as Pokemon).hasAbility("Hyperbolic Time")) {
-				hyperbolicTimeEnabled = true;
+		for (const side of this.sides) {
+			for (const active of side.active) {
+				if (active.hasAbility("Hyperbolic Time")) {
+					hyperbolicTimeEnabled = true;
+				}
 			}
 		}
 		while (handlers.length) {

@@ -2496,7 +2496,7 @@ export const AbilitiesText: {[id: IDEntry]: AbilityText} = {
 	barriercore: {
 		name: "Barrier Core",
 		desc: "User uses Magic Coat on switch in.",
-		shortDesc: "User uses Barrier on switch in.",
+		shortDesc: "User uses Magic Coat on switch in.",
 	},
 	hazardcore: {
 		name: "Hazard Core",
@@ -2505,7 +2505,7 @@ export const AbilitiesText: {[id: IDEntry]: AbilityText} = {
 	},
 	hyperbolictime: {
 		name: "Hyperbolic Time",
-		desc: "End-of-turn effects happen twice while user is on the field.",
+		desc: "End-of-turn effects happen twice while user is on the field. Does not stack.",
 		shortDesc: "End-of-turn effects happen twice while user is on the field.",
 	},
 	megashiftx: {

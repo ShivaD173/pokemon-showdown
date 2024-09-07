@@ -3673,8 +3673,8 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		"tier": "Uber"
 	},
 	"zygarde": {
-		"isNonstandard": "Past",
-		"tier": "Illegal"
+		"isNonstandard": null,
+		"tier": "Uber"
 	},
 	"zygarde10": {
 		"isNonstandard": null,
@@ -5609,6 +5609,10 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		"tier": "Illegal"
 	},
 	"cresceidon": {
+		"isNonstandard": "Past",
+		"tier": "Illegal"
+	},
+	"chuggalong": {
 		"isNonstandard": "Past",
 		"tier": "Illegal"
 	},
