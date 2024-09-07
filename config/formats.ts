@@ -929,12 +929,13 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		mod: 'gen9',
 		gameType: 'triples',
 		// searchShow: false,
-		ruleset: ['Standard Doubles'],
+		ruleset: ['Standard Doubles', 'Evasion Abilities Clause'],
 		banlist: [
 			'Annihilape', 'Arceus', 'Calyrex-Ice', 'Calyrex-Shadow', 'Darkrai', 'Deoxys-Attack', 'Dialga', 'Dialga-Origin', 'Eternatus', 'Flutter Mane',
 			'Giratina', 'Giratina-Origin', 'Groudon', 'Ho-Oh', 'Koraidon', 'Kyogre', 'Kyurem-Black', 'Kyurem-White', 'Lugia', 'Lunala', 'Magearna', 'Mewtwo',
 			'Miraidon', 'Necrozma-Dawn-Wings', 'Necrozma-Dusk-Mane', 'Palkia', 'Palkia-Origin', 'Rayquaza', 'Reshiram', 'Solgaleo', 'Terapagos', 'Urshifu',
-			'Urshifu-Rapid-Strike', 'Zacian', 'Zacian-Crowned', 'Zamazenta', 'Zamazenta-Crowned', 'Zekrom', 'Shadow Tag',
+			'Urshifu-Rapid-Strike', 'Zacian', 'Zacian-Crowned', 'Zamazenta', 'Zamazenta-Crowned', 'Zekrom', 'Moody', 'Shadow Tag', 'Bright Powder', 'King\'s Rock',
+			'Razor Fang',
 		],
 	},
 	{
@@ -2761,8 +2762,8 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		column: 4,
 	},
 	{
-		name: "[Gen 9] Shared Power RandBats (Bring 12 Pick 6)",
-		desc: `[Gen 9] Random Battle with Team Preview, Bring 12 Pick 6, and Shared Power.`,
+		name: "[Gen 9] Random Battle (Shared Power, B12P6)",
+		desc: `[Gen 9] Random Battle with Shared Power, Team Preview, and Bring 12 Pick 6.`,
 		mod: 'sharedpower',
 		team: 'random',
 		ruleset: ['[Gen 9] Random Battle', 'Picked Team Size = 6', 'Max Team Size = 12', 'Team Preview'],
