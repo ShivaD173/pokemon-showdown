@@ -51,7 +51,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		gameType: 'doubles',
 		ruleset: ['Flat Rules', '!! Adjust Level = 50', 'Tera Type Preview', 'Sketch Post-Gen 7 Moves', 'Draft Timer', 'Limit Two Restricted'],
 		bestOfDefault: true,
-		unbanlist: ['Mythical', 'Greninja-Bond'],
+		unbanlist: ['Mythical', 'Restricted Legendary', 'Greninja-Bond'],
 		restricted: ['Uber'],
 	},
 	{
