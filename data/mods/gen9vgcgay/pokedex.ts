@@ -12013,6 +12013,295 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 		},
 		"inherit": true
 	},
+	"arceusbug": {
+		"types": [
+			"Bug"
+		],
+		"baseStats": {
+			"hp": 120,
+			"atk": 120,
+			"def": 120,
+			"spa": 120,
+			"spd": 120,
+			"spe": 120
+		},
+		"abilities": {
+			"0": "Multitype"
+		},
+		"inherit": true
+	},
+	"arceusdark": {
+		"types": [
+			"Dark"
+		],
+		"baseStats": {
+			"hp": 120,
+			"atk": 120,
+			"def": 120,
+			"spa": 120,
+			"spd": 120,
+			"spe": 120
+		},
+		"abilities": {
+			"0": "Multitype"
+		},
+		"inherit": true
+	},
+	"arceusdragon": {
+		"types": [
+			"Dragon"
+		],
+		"baseStats": {
+			"hp": 120,
+			"atk": 120,
+			"def": 120,
+			"spa": 120,
+			"spd": 120,
+			"spe": 120
+		},
+		"abilities": {
+			"0": "Multitype"
+		},
+		"inherit": true
+	},
+	"arceuselectric": {
+		"types": [
+			"Electric"
+		],
+		"baseStats": {
+			"hp": 120,
+			"atk": 120,
+			"def": 120,
+			"spa": 120,
+			"spd": 120,
+			"spe": 120
+		},
+		"abilities": {
+			"0": "Multitype"
+		},
+		"inherit": true
+	},
+	"arceusfairy": {
+		"types": [
+			"Fairy"
+		],
+		"baseStats": {
+			"hp": 120,
+			"atk": 120,
+			"def": 120,
+			"spa": 120,
+			"spd": 120,
+			"spe": 120
+		},
+		"abilities": {
+			"0": "Multitype"
+		},
+		"inherit": true
+	},
+	"arceusfighting": {
+		"types": [
+			"Fighting"
+		],
+		"baseStats": {
+			"hp": 120,
+			"atk": 120,
+			"def": 120,
+			"spa": 120,
+			"spd": 120,
+			"spe": 120
+		},
+		"abilities": {
+			"0": "Multitype"
+		},
+		"inherit": true
+	},
+	"arceusfire": {
+		"types": [
+			"Fire"
+		],
+		"baseStats": {
+			"hp": 120,
+			"atk": 120,
+			"def": 120,
+			"spa": 120,
+			"spd": 120,
+			"spe": 120
+		},
+		"abilities": {
+			"0": "Multitype"
+		},
+		"inherit": true
+	},
+	"arceusflying": {
+		"types": [
+			"Flying"
+		],
+		"baseStats": {
+			"hp": 120,
+			"atk": 120,
+			"def": 120,
+			"spa": 120,
+			"spd": 120,
+			"spe": 120
+		},
+		"abilities": {
+			"0": "Multitype"
+		},
+		"inherit": true
+	},
+	"arceusghost": {
+		"types": [
+			"Ghost"
+		],
+		"baseStats": {
+			"hp": 120,
+			"atk": 120,
+			"def": 120,
+			"spa": 120,
+			"spd": 120,
+			"spe": 120
+		},
+		"abilities": {
+			"0": "Multitype"
+		},
+		"inherit": true
+	},
+	"arceusgrass": {
+		"types": [
+			"Grass"
+		],
+		"baseStats": {
+			"hp": 120,
+			"atk": 120,
+			"def": 120,
+			"spa": 120,
+			"spd": 120,
+			"spe": 120
+		},
+		"abilities": {
+			"0": "Multitype"
+		},
+		"inherit": true
+	},
+	"arceusground": {
+		"types": [
+			"Ground"
+		],
+		"baseStats": {
+			"hp": 120,
+			"atk": 120,
+			"def": 120,
+			"spa": 120,
+			"spd": 120,
+			"spe": 120
+		},
+		"abilities": {
+			"0": "Multitype"
+		},
+		"inherit": true
+	},
+	"arceusice": {
+		"types": [
+			"Ice"
+		],
+		"baseStats": {
+			"hp": 120,
+			"atk": 120,
+			"def": 120,
+			"spa": 120,
+			"spd": 120,
+			"spe": 120
+		},
+		"abilities": {
+			"0": "Multitype"
+		},
+		"inherit": true
+	},
+	"arceuspoison": {
+		"types": [
+			"Poison"
+		],
+		"baseStats": {
+			"hp": 120,
+			"atk": 120,
+			"def": 120,
+			"spa": 120,
+			"spd": 120,
+			"spe": 120
+		},
+		"abilities": {
+			"0": "Multitype"
+		},
+		"inherit": true
+	},
+	"arceuspsychic": {
+		"types": [
+			"Psychic"
+		],
+		"baseStats": {
+			"hp": 120,
+			"atk": 120,
+			"def": 120,
+			"spa": 120,
+			"spd": 120,
+			"spe": 120
+		},
+		"abilities": {
+			"0": "Multitype"
+		},
+		"inherit": true
+	},
+	"arceusrock": {
+		"types": [
+			"Rock"
+		],
+		"baseStats": {
+			"hp": 120,
+			"atk": 120,
+			"def": 120,
+			"spa": 120,
+			"spd": 120,
+			"spe": 120
+		},
+		"abilities": {
+			"0": "Multitype"
+		},
+		"inherit": true
+	},
+	"arceussteel": {
+		"types": [
+			"Steel"
+		],
+		"baseStats": {
+			"hp": 120,
+			"atk": 120,
+			"def": 120,
+			"spa": 120,
+			"spd": 120,
+			"spe": 120
+		},
+		"abilities": {
+			"0": "Multitype"
+		},
+		"inherit": true
+	},
+	"arceuswater": {
+		"types": [
+			"Water"
+		],
+		"baseStats": {
+			"hp": 120,
+			"atk": 120,
+			"def": 120,
+			"spa": 120,
+			"spd": 120,
+			"spe": 120
+		},
+		"abilities": {
+			"0": "Multitype"
+		},
+		"inherit": true
+	},
 	"victini": {
 		"types": [
 			"Psychic",
@@ -12210,7 +12499,7 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 		},
 		"inherit": true
 	},
-	"zygarde50": {
+	"zygarde": {
 		"types": [
 			"Dragon",
 			"Ground"
@@ -12456,7 +12745,7 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 			"def": 70,
 			"spa": 92,
 			"spd": 75,
-			"spe": 143
+			"spe": 138
 		},
 		"abilities": {
 			"0": "Volt Absorb"
@@ -12600,7 +12889,7 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 			"spe": 50
 		},
 		"abilities": {
-			"0": "As One"
+			"0": "As One Glastrier"
 		},
 		"inherit": true
 	},
@@ -12618,7 +12907,7 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 			"spe": 150
 		},
 		"abilities": {
-			"0": "As One"
+			"0": "As One Spectrier"
 		},
 		"inherit": true
 	},
@@ -12673,6 +12962,23 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 		},
 		"abilities": {
 			"0": "Poison Puppeteer"
+		},
+		"inherit": true
+	},
+	"terapagos": {
+		"types": [
+			"Normal"
+		],
+		"baseStats": {
+			"hp": 90,
+			"atk": 65,
+			"def": 85,
+			"spa": 65,
+			"spd": 85,
+			"spe": 60
+		},
+		"abilities": {
+			"0": "Tera Shift"
 		},
 		"inherit": true
 	},

@@ -1,4 +1,4 @@
-export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTable =
+export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTable = 
 {
     "venusaur": {
         "inherit": true,
@@ -139527,5 +139527,13628 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
                 "9M"
             ]
         }
+    },
+    "mewtwo": {
+        "inherit": true,
+        "learnset": {
+            "aerialace": [
+                "9M"
+            ],
+            "agility": [
+                "9M"
+            ],
+            "allyswitch": [
+                "9M"
+            ],
+            "amnesia": [
+                "9M"
+            ],
+            "ancientpower": [
+                "9M"
+            ],
+            "aquatail": [
+                "9M"
+            ],
+            "aurasphere": [
+                "9M"
+            ],
+            "avalanche": [
+                "9M"
+            ],
+            "barrier": [
+                "9M"
+            ],
+            "bide": [
+                "9M"
+            ],
+            "blizzard": [
+                "9M"
+            ],
+            "bodyslam": [
+                "9M"
+            ],
+            "brickbreak": [
+                "9M"
+            ],
+            "brutalswing": [
+                "9M"
+            ],
+            "bubblebeam": [
+                "9M"
+            ],
+            "bulkup": [
+                "9M"
+            ],
+            "bulldoze": [
+                "9M"
+            ],
+            "calmmind": [
+                "9M"
+            ],
+            "chargebeam": [
+                "9M"
+            ],
+            "chillingwater": [
+                "9M"
+            ],
+            "confide": [
+                "9M"
+            ],
+            "confuseray": [
+                "9M"
+            ],
+            "confusion": [
+                "9M"
+            ],
+            "counter": [
+                "9M"
+            ],
+            "curse": [
+                "9M"
+            ],
+            "darkpulse": [
+                "9M"
+            ],
+            "detect": [
+                "9M"
+            ],
+            "disable": [
+                "9M"
+            ],
+            "dive": [
+                "9M"
+            ],
+            "doubleedge": [
+                "9M"
+            ],
+            "doubleteam": [
+                "9M"
+            ],
+            "drainpunch": [
+                "9M"
+            ],
+            "dreameater": [
+                "9M"
+            ],
+            "dynamicpunch": [
+                "9M"
+            ],
+            "earthpower": [
+                "9M"
+            ],
+            "earthquake": [
+                "9M"
+            ],
+            "electroball": [
+                "9M"
+            ],
+            "embargo": [
+                "9M"
+            ],
+            "endure": [
+                "9M"
+            ],
+            "energyball": [
+                "9M"
+            ],
+            "expandingforce": [
+                "9M"
+            ],
+            "facade": [
+                "9M"
+            ],
+            "fireblast": [
+                "9M"
+            ],
+            "firepunch": [
+                "9M"
+            ],
+            "flamethrower": [
+                "9M"
+            ],
+            "flash": [
+                "9M"
+            ],
+            "fling": [
+                "9M"
+            ],
+            "focusblast": [
+                "9M"
+            ],
+            "focuspunch": [
+                "9M"
+            ],
+            "foulplay": [
+                "9M"
+            ],
+            "frustration": [
+                "9M"
+            ],
+            "futuresight": [
+                "9M"
+            ],
+            "gigaimpact": [
+                "9M"
+            ],
+            "grassknot": [
+                "9M"
+            ],
+            "gravity": [
+                "9M"
+            ],
+            "guardswap": [
+                "9M"
+            ],
+            "headbutt": [
+                "9M"
+            ],
+            "healpulse": [
+                "9M"
+            ],
+            "helpinghand": [
+                "9M"
+            ],
+            "hex": [
+                "9M"
+            ],
+            "hiddenpower": [
+                "9M"
+            ],
+            "hurricane": [
+                "9M"
+            ],
+            "hyperbeam": [
+                "9M"
+            ],
+            "icebeam": [
+                "9M"
+            ],
+            "icepunch": [
+                "9M"
+            ],
+            "icywind": [
+                "9M"
+            ],
+            "imprison": [
+                "9M"
+            ],
+            "incinerate": [
+                "9M"
+            ],
+            "irontail": [
+                "9M"
+            ],
+            "knockoff": [
+                "9M"
+            ],
+            "laserfocus": [
+                "9M"
+            ],
+            "lashout": [
+                "9M"
+            ],
+            "lifedew": [
+                "9M"
+            ],
+            "lightscreen": [
+                "9M"
+            ],
+            "lowkick": [
+                "9M"
+            ],
+            "lowsweep": [
+                "9M"
+            ],
+            "magiccoat": [
+                "9M"
+            ],
+            "magicroom": [
+                "9M"
+            ],
+            "mefirst": [
+                "9M"
+            ],
+            "megakick": [
+                "9M"
+            ],
+            "megapunch": [
+                "9M"
+            ],
+            "metronome": [
+                "9M"
+            ],
+            "mimic": [
+                "9M"
+            ],
+            "miracleeye": [
+                "9M"
+            ],
+            "mist": [
+                "9M"
+            ],
+            "mudslap": [
+                "9M"
+            ],
+            "nastyplot": [
+                "9M"
+            ],
+            "naturalgift": [
+                "9M"
+            ],
+            "nightmare": [
+                "9M"
+            ],
+            "nightshade": [
+                "9M"
+            ],
+            "payday": [
+                "9M"
+            ],
+            "poisonjab": [
+                "9M"
+            ],
+            "powergem": [
+                "9M"
+            ],
+            "powerswap": [
+                "9M"
+            ],
+            "poweruppunch": [
+                "9M"
+            ],
+            "protect": [
+                "9M"
+            ],
+            "psybeam": [
+                "9M"
+            ],
+            "psychic": [
+                "9M"
+            ],
+            "psychicnoise": [
+                "9M"
+            ],
+            "psychicterrain": [
+                "9M"
+            ],
+            "psychocut": [
+                "9M"
+            ],
+            "psychup": [
+                "9M"
+            ],
+            "psyshock": [
+                "9M"
+            ],
+            "psystrike": [
+                "9M"
+            ],
+            "psywave": [
+                "9M"
+            ],
+            "rage": [
+                "9M"
+            ],
+            "raindance": [
+                "9M"
+            ],
+            "recover": [
+                "9M"
+            ],
+            "recycle": [
+                "9M"
+            ],
+            "reflect": [
+                "9M"
+            ],
+            "rest": [
+                "9M"
+            ],
+            "return": [
+                "9M"
+            ],
+            "reversal": [
+                "9M"
+            ],
+            "rockclimb": [
+                "9M"
+            ],
+            "rockslide": [
+                "9M"
+            ],
+            "rocksmash": [
+                "9M"
+            ],
+            "rocktomb": [
+                "9M"
+            ],
+            "roleplay": [
+                "9M"
+            ],
+            "round": [
+                "9M"
+            ],
+            "safeguard": [
+                "9M"
+            ],
+            "sandstorm": [
+                "9M"
+            ],
+            "scaryface": [
+                "9M"
+            ],
+            "secretpower": [
+                "9M"
+            ],
+            "seismictoss": [
+                "9M"
+            ],
+            "selfdestruct": [
+                "9M"
+            ],
+            "shadowball": [
+                "9M"
+            ],
+            "shockwave": [
+                "9M"
+            ],
+            "signalbeam": [
+                "9M"
+            ],
+            "skillswap": [
+                "9M"
+            ],
+            "skullbash": [
+                "9M"
+            ],
+            "sleeptalk": [
+                "9M"
+            ],
+            "snatch": [
+                "9M"
+            ],
+            "snore": [
+                "9M"
+            ],
+            "solarbeam": [
+                "9M"
+            ],
+            "speedswap": [
+                "9M"
+            ],
+            "spite": [
+                "9M"
+            ],
+            "stompingtantrum": [
+                "9M"
+            ],
+            "stoneedge": [
+                "9M"
+            ],
+            "storedpower": [
+                "9M"
+            ],
+            "strength": [
+                "9M"
+            ],
+            "submission": [
+                "9M"
+            ],
+            "substitute": [
+                "9M"
+            ],
+            "sunnyday": [
+                "9M"
+            ],
+            "swagger": [
+                "9M"
+            ],
+            "swift": [
+                "9M"
+            ],
+            "takedown": [
+                "9M"
+            ],
+            "taunt": [
+                "9M"
+            ],
+            "telekinesis": [
+                "9M"
+            ],
+            "teleport": [
+                "9M"
+            ],
+            "terablast": [
+                "9M"
+            ],
+            "thunder": [
+                "9M"
+            ],
+            "thunderbolt": [
+                "9M"
+            ],
+            "thunderpunch": [
+                "9M"
+            ],
+            "thunderwave": [
+                "9M"
+            ],
+            "torment": [
+                "9M"
+            ],
+            "toxic": [
+                "9M"
+            ],
+            "trailblaze": [
+                "9M"
+            ],
+            "triattack": [
+                "9M"
+            ],
+            "trick": [
+                "9M"
+            ],
+            "trickroom": [
+                "9M"
+            ],
+            "watergun": [
+                "9M"
+            ],
+            "waterpulse": [
+                "9M"
+            ],
+            "weatherball": [
+                "9M"
+            ],
+            "willowisp": [
+                "9M"
+            ],
+            "wonderroom": [
+                "9M"
+            ],
+            "zapcannon": [
+                "9M"
+            ],
+            "zenheadbutt": [
+                "9M"
+            ],
+            "snowscape": [
+                "9M"
+            ]
+        }
+    },
+    "mew": {
+        "inherit": true,
+        "learnset": {
+            "acidspray": [
+                "9M"
+            ],
+            "acrobatics": [
+                "9M"
+            ],
+            "aerialace": [
+                "9M"
+            ],
+            "afteryou": [
+                "9M"
+            ],
+            "agility": [
+                "9M"
+            ],
+            "aircutter": [
+                "9M"
+            ],
+            "airslash": [
+                "9M"
+            ],
+            "alluringvoice": [
+                "9M"
+            ],
+            "allyswitch": [
+                "9M"
+            ],
+            "amnesia": [
+                "9M"
+            ],
+            "ancientpower": [
+                "9M"
+            ],
+            "aquatail": [
+                "9M"
+            ],
+            "assurance": [
+                "9M"
+            ],
+            "attract": [
+                "9M"
+            ],
+            "aurasphere": [
+                "9M"
+            ],
+            "auroraveil": [
+                "9M"
+            ],
+            "avalanche": [
+                "9M"
+            ],
+            "barrier": [
+                "9M"
+            ],
+            "batonpass": [
+                "9M"
+            ],
+            "beatup": [
+                "9M"
+            ],
+            "bide": [
+                "9M"
+            ],
+            "bind": [
+                "9M"
+            ],
+            "blastburn": [
+                "9M"
+            ],
+            "blazekick": [
+                "9M"
+            ],
+            "blizzard": [
+                "9M"
+            ],
+            "block": [
+                "9M"
+            ],
+            "bodypress": [
+                "9M"
+            ],
+            "bodyslam": [
+                "9M"
+            ],
+            "bounce": [
+                "9M"
+            ],
+            "bravebird": [
+                "9M"
+            ],
+            "breakingswipe": [
+                "9M"
+            ],
+            "brickbreak": [
+                "9M"
+            ],
+            "brine": [
+                "9M"
+            ],
+            "brutalswing": [
+                "9M"
+            ],
+            "bubblebeam": [
+                "9M"
+            ],
+            "bugbite": [
+                "9M"
+            ],
+            "bugbuzz": [
+                "9M"
+            ],
+            "bulkup": [
+                "9M"
+            ],
+            "bulldoze": [
+                "9M"
+            ],
+            "bulletseed": [
+                "9M"
+            ],
+            "burningjealousy": [
+                "9M"
+            ],
+            "calmmind": [
+                "9M"
+            ],
+            "captivate": [
+                "9M"
+            ],
+            "charge": [
+                "9M"
+            ],
+            "chargebeam": [
+                "9M"
+            ],
+            "charm": [
+                "9M"
+            ],
+            "chillingwater": [
+                "9M"
+            ],
+            "closecombat": [
+                "9M"
+            ],
+            "coaching": [
+                "9M"
+            ],
+            "confide": [
+                "9M"
+            ],
+            "confuseray": [
+                "9M"
+            ],
+            "confusion": [
+                "9M"
+            ],
+            "corrosivegas": [
+                "9M"
+            ],
+            "cosmicpower": [
+                "9M"
+            ],
+            "counter": [
+                "9M"
+            ],
+            "covet": [
+                "9M"
+            ],
+            "crosspoison": [
+                "9M"
+            ],
+            "crunch": [
+                "9M"
+            ],
+            "curse": [
+                "9M"
+            ],
+            "cut": [
+                "9M"
+            ],
+            "darkestlariat": [
+                "9M"
+            ],
+            "darkpulse": [
+                "9M"
+            ],
+            "dazzlinggleam": [
+                "9M"
+            ],
+            "defensecurl": [
+                "9M"
+            ],
+            "defog": [
+                "9M"
+            ],
+            "detect": [
+                "9M"
+            ],
+            "dig": [
+                "9M"
+            ],
+            "disarmingvoice": [
+                "9M"
+            ],
+            "dive": [
+                "9M"
+            ],
+            "doubleedge": [
+                "9M"
+            ],
+            "doubleteam": [
+                "9M"
+            ],
+            "dracometeor": [
+                "9M"
+            ],
+            "dragonbreath": [
+                "9M"
+            ],
+            "dragoncheer": [
+                "9M"
+            ],
+            "dragonclaw": [
+                "9M"
+            ],
+            "dragondance": [
+                "9M"
+            ],
+            "dragonpulse": [
+                "9M"
+            ],
+            "dragonrage": [
+                "9M"
+            ],
+            "dragontail": [
+                "9M"
+            ],
+            "drainingkiss": [
+                "9M"
+            ],
+            "drainpunch": [
+                "9M"
+            ],
+            "dreameater": [
+                "9M"
+            ],
+            "drillrun": [
+                "9M"
+            ],
+            "dualchop": [
+                "9M"
+            ],
+            "dualwingbeat": [
+                "9M"
+            ],
+            "dynamicpunch": [
+                "9M"
+            ],
+            "earthpower": [
+                "9M"
+            ],
+            "earthquake": [
+                "9M"
+            ],
+            "echoedvoice": [
+                "9M"
+            ],
+            "eerieimpulse": [
+                "9M"
+            ],
+            "eggbomb": [
+                "9M"
+            ],
+            "electricterrain": [
+                "9M"
+            ],
+            "electroball": [
+                "9M"
+            ],
+            "electroweb": [
+                "9M"
+            ],
+            "embargo": [
+                "9M"
+            ],
+            "encore": [
+                "9M"
+            ],
+            "endeavor": [
+                "9M"
+            ],
+            "endure": [
+                "9M"
+            ],
+            "energyball": [
+                "9M"
+            ],
+            "expandingforce": [
+                "9M"
+            ],
+            "explosion": [
+                "9M"
+            ],
+            "facade": [
+                "9M"
+            ],
+            "fakeout": [
+                "9M"
+            ],
+            "faketears": [
+                "9M"
+            ],
+            "falseswipe": [
+                "9M"
+            ],
+            "featherdance": [
+                "9M"
+            ],
+            "feintattack": [
+                "9M"
+            ],
+            "fireblast": [
+                "9M"
+            ],
+            "firefang": [
+                "9M"
+            ],
+            "firepledge": [
+                "9M"
+            ],
+            "firepunch": [
+                "9M"
+            ],
+            "firespin": [
+                "9M"
+            ],
+            "fissure": [
+                "9M"
+            ],
+            "flamecharge": [
+                "9M"
+            ],
+            "flamethrower": [
+                "9M"
+            ],
+            "flareblitz": [
+                "9M"
+            ],
+            "flash": [
+                "9M"
+            ],
+            "flashcannon": [
+                "9M"
+            ],
+            "fling": [
+                "9M"
+            ],
+            "flipturn": [
+                "9M"
+            ],
+            "fly": [
+                "9M"
+            ],
+            "focusblast": [
+                "9M"
+            ],
+            "focusenergy": [
+                "9M"
+            ],
+            "focuspunch": [
+                "9M"
+            ],
+            "foulplay": [
+                "9M"
+            ],
+            "frenzyplant": [
+                "9M"
+            ],
+            "frostbreath": [
+                "9M"
+            ],
+            "frustration": [
+                "9M"
+            ],
+            "furycutter": [
+                "9M"
+            ],
+            "futuresight": [
+                "9M"
+            ],
+            "gastroacid": [
+                "9M"
+            ],
+            "gigadrain": [
+                "9M"
+            ],
+            "gigaimpact": [
+                "9M"
+            ],
+            "grassknot": [
+                "9M"
+            ],
+            "grasspledge": [
+                "9M"
+            ],
+            "grassyglide": [
+                "9M"
+            ],
+            "grassyterrain": [
+                "9M"
+            ],
+            "gravity": [
+                "9M"
+            ],
+            "guardswap": [
+                "9M"
+            ],
+            "gunkshot": [
+                "9M"
+            ],
+            "gyroball": [
+                "9M"
+            ],
+            "hardpress": [
+                "9M"
+            ],
+            "haze": [
+                "9M"
+            ],
+            "headbutt": [
+                "9M"
+            ],
+            "healbell": [
+                "9M"
+            ],
+            "heatcrash": [
+                "9M"
+            ],
+            "heatwave": [
+                "9M"
+            ],
+            "heavyslam": [
+                "9M"
+            ],
+            "helpinghand": [
+                "9M"
+            ],
+            "hex": [
+                "9M"
+            ],
+            "hiddenpower": [
+                "9M"
+            ],
+            "highhorsepower": [
+                "9M"
+            ],
+            "honeclaws": [
+                "9M"
+            ],
+            "horndrill": [
+                "9M"
+            ],
+            "hurricane": [
+                "9M"
+            ],
+            "hydrocannon": [
+                "9M"
+            ],
+            "hydropump": [
+                "9M"
+            ],
+            "hyperbeam": [
+                "9M"
+            ],
+            "hypervoice": [
+                "9M"
+            ],
+            "hypnosis": [
+                "9M"
+            ],
+            "icebeam": [
+                "9M"
+            ],
+            "icefang": [
+                "9M"
+            ],
+            "icepunch": [
+                "9M"
+            ],
+            "icespinner": [
+                "9M"
+            ],
+            "iciclespear": [
+                "9M"
+            ],
+            "icywind": [
+                "9M"
+            ],
+            "imprison": [
+                "9M"
+            ],
+            "incinerate": [
+                "9M"
+            ],
+            "infestation": [
+                "9M"
+            ],
+            "irondefense": [
+                "9M"
+            ],
+            "ironhead": [
+                "9M"
+            ],
+            "irontail": [
+                "9M"
+            ],
+            "knockoff": [
+                "9M"
+            ],
+            "laserfocus": [
+                "9M"
+            ],
+            "lashout": [
+                "9M"
+            ],
+            "lastresort": [
+                "9M"
+            ],
+            "leafblade": [
+                "9M"
+            ],
+            "leafstorm": [
+                "9M"
+            ],
+            "leechlife": [
+                "9M"
+            ],
+            "lifedew": [
+                "9M"
+            ],
+            "lightscreen": [
+                "9M"
+            ],
+            "liquidation": [
+                "9M"
+            ],
+            "lowkick": [
+                "9M"
+            ],
+            "lowsweep": [
+                "9M"
+            ],
+            "lunge": [
+                "9M"
+            ],
+            "magicalleaf": [
+                "9M"
+            ],
+            "magiccoat": [
+                "9M"
+            ],
+            "magicroom": [
+                "9M"
+            ],
+            "magnetrise": [
+                "9M"
+            ],
+            "mefirst": [
+                "9M"
+            ],
+            "megadrain": [
+                "9M"
+            ],
+            "megahorn": [
+                "9M"
+            ],
+            "megakick": [
+                "9M"
+            ],
+            "megapunch": [
+                "9M"
+            ],
+            "metalclaw": [
+                "9M"
+            ],
+            "metalsound": [
+                "9M"
+            ],
+            "meteorbeam": [
+                "9M"
+            ],
+            "metronome": [
+                "9M"
+            ],
+            "mimic": [
+                "9M"
+            ],
+            "mistyexplosion": [
+                "9M"
+            ],
+            "mistyterrain": [
+                "9M"
+            ],
+            "muddywater": [
+                "9M"
+            ],
+            "mudshot": [
+                "9M"
+            ],
+            "mudslap": [
+                "9M"
+            ],
+            "mysticalfire": [
+                "9M"
+            ],
+            "nastyplot": [
+                "9M"
+            ],
+            "naturalgift": [
+                "9M"
+            ],
+            "naturepower": [
+                "9M"
+            ],
+            "nightmare": [
+                "9M"
+            ],
+            "nightshade": [
+                "9M"
+            ],
+            "ominouswind": [
+                "9M"
+            ],
+            "outrage": [
+                "9M"
+            ],
+            "overheat": [
+                "9M"
+            ],
+            "painsplit": [
+                "9M"
+            ],
+            "payback": [
+                "9M"
+            ],
+            "payday": [
+                "9M"
+            ],
+            "petalblizzard": [
+                "9M"
+            ],
+            "phantomforce": [
+                "9M"
+            ],
+            "pinmissile": [
+                "9M"
+            ],
+            "playrough": [
+                "9M"
+            ],
+            "pluck": [
+                "9M"
+            ],
+            "poisonjab": [
+                "9M"
+            ],
+            "poisontail": [
+                "9M"
+            ],
+            "pollenpuff": [
+                "9M"
+            ],
+            "poltergeist": [
+                "9M"
+            ],
+            "pounce": [
+                "9M"
+            ],
+            "pound": [
+                "9M"
+            ],
+            "powergem": [
+                "9M"
+            ],
+            "powerswap": [
+                "9M"
+            ],
+            "poweruppunch": [
+                "9M"
+            ],
+            "powerwhip": [
+                "9M"
+            ],
+            "protect": [
+                "9M"
+            ],
+            "psybeam": [
+                "9M"
+            ],
+            "psychic": [
+                "9M"
+            ],
+            "psychicfangs": [
+                "9M"
+            ],
+            "psychicnoise": [
+                "9M"
+            ],
+            "psychicterrain": [
+                "9M"
+            ],
+            "psychocut": [
+                "9M"
+            ],
+            "psychup": [
+                "9M"
+            ],
+            "psyshock": [
+                "9M"
+            ],
+            "psywave": [
+                "9M"
+            ],
+            "quash": [
+                "9M"
+            ],
+            "rage": [
+                "9M"
+            ],
+            "raindance": [
+                "9M"
+            ],
+            "razorshell": [
+                "9M"
+            ],
+            "razorwind": [
+                "9M"
+            ],
+            "recycle": [
+                "9M"
+            ],
+            "reflect": [
+                "9M"
+            ],
+            "reflecttype": [
+                "9M"
+            ],
+            "rest": [
+                "9M"
+            ],
+            "retaliate": [
+                "9M"
+            ],
+            "return": [
+                "9M"
+            ],
+            "revenge": [
+                "9M"
+            ],
+            "reversal": [
+                "9M"
+            ],
+            "risingvoltage": [
+                "9M"
+            ],
+            "roar": [
+                "9M"
+            ],
+            "rockblast": [
+                "9M"
+            ],
+            "rockclimb": [
+                "9M"
+            ],
+            "rockpolish": [
+                "9M"
+            ],
+            "rockslide": [
+                "9M"
+            ],
+            "rocksmash": [
+                "9M"
+            ],
+            "rocktomb": [
+                "9M"
+            ],
+            "roleplay": [
+                "9M"
+            ],
+            "rollout": [
+                "9M"
+            ],
+            "roost": [
+                "9M"
+            ],
+            "round": [
+                "9M"
+            ],
+            "safeguard": [
+                "9M"
+            ],
+            "sandstorm": [
+                "9M"
+            ],
+            "sandtomb": [
+                "9M"
+            ],
+            "scald": [
+                "9M"
+            ],
+            "scaleshot": [
+                "9M"
+            ],
+            "scaryface": [
+                "9M"
+            ],
+            "scorchingsands": [
+                "9M"
+            ],
+            "screech": [
+                "9M"
+            ],
+            "secretpower": [
+                "9M"
+            ],
+            "seedbomb": [
+                "9M"
+            ],
+            "seismictoss": [
+                "9M"
+            ],
+            "selfdestruct": [
+                "9M"
+            ],
+            "shadowball": [
+                "9M"
+            ],
+            "shadowclaw": [
+                "9M"
+            ],
+            "shockwave": [
+                "9M"
+            ],
+            "signalbeam": [
+                "9M"
+            ],
+            "silverwind": [
+                "9M"
+            ],
+            "skillswap": [
+                "9M"
+            ],
+            "skittersmack": [
+                "9M"
+            ],
+            "skullbash": [
+                "9M"
+            ],
+            "skyattack": [
+                "9M"
+            ],
+            "skydrop": [
+                "9M"
+            ],
+            "sleeptalk": [
+                "9M"
+            ],
+            "sludgebomb": [
+                "9M"
+            ],
+            "sludgewave": [
+                "9M"
+            ],
+            "smackdown": [
+                "9M"
+            ],
+            "smartstrike": [
+                "9M"
+            ],
+            "snarl": [
+                "9M"
+            ],
+            "snatch": [
+                "9M"
+            ],
+            "snore": [
+                "9M"
+            ],
+            "snowscape": [
+                "9M"
+            ],
+            "softboiled": [
+                "9M"
+            ],
+            "solarbeam": [
+                "9M"
+            ],
+            "solarblade": [
+                "9M"
+            ],
+            "speedswap": [
+                "9M"
+            ],
+            "spikes": [
+                "9M"
+            ],
+            "spite": [
+                "9M"
+            ],
+            "stealthrock": [
+                "9M"
+            ],
+            "steelbeam": [
+                "9M"
+            ],
+            "steelroller": [
+                "9M"
+            ],
+            "steelwing": [
+                "9M"
+            ],
+            "stompingtantrum": [
+                "9M"
+            ],
+            "stoneedge": [
+                "9M"
+            ],
+            "storedpower": [
+                "9M"
+            ],
+            "strength": [
+                "9M"
+            ],
+            "stringshot": [
+                "9M"
+            ],
+            "strugglebug": [
+                "9M"
+            ],
+            "submission": [
+                "9M"
+            ],
+            "substitute": [
+                "9M"
+            ],
+            "suckerpunch": [
+                "9M"
+            ],
+            "sunnyday": [
+                "9M"
+            ],
+            "supercellslam": [
+                "9M"
+            ],
+            "superfang": [
+                "9M"
+            ],
+            "superpower": [
+                "9M"
+            ],
+            "surf": [
+                "9M"
+            ],
+            "swagger": [
+                "9M"
+            ],
+            "sweetscent": [
+                "9M"
+            ],
+            "swift": [
+                "9M"
+            ],
+            "swordsdance": [
+                "9M"
+            ],
+            "synthesis": [
+                "9M"
+            ],
+            "tailslap": [
+                "9M"
+            ],
+            "tailwind": [
+                "9M"
+            ],
+            "takedown": [
+                "9M"
+            ],
+            "taunt": [
+                "9M"
+            ],
+            "telekinesis": [
+                "9M"
+            ],
+            "teleport": [
+                "9M"
+            ],
+            "temperflare": [
+                "9M"
+            ],
+            "terablast": [
+                "9M"
+            ],
+            "terrainpulse": [
+                "9M"
+            ],
+            "thief": [
+                "9M"
+            ],
+            "throatchop": [
+                "9M"
+            ],
+            "thunder": [
+                "9M"
+            ],
+            "thunderbolt": [
+                "9M"
+            ],
+            "thunderfang": [
+                "9M"
+            ],
+            "thunderpunch": [
+                "9M"
+            ],
+            "thunderwave": [
+                "9M"
+            ],
+            "torment": [
+                "9M"
+            ],
+            "toxic": [
+                "9M"
+            ],
+            "toxicspikes": [
+                "9M"
+            ],
+            "trailblaze": [
+                "9M"
+            ],
+            "transform": [
+                "9M"
+            ],
+            "triattack": [
+                "9M"
+            ],
+            "trick": [
+                "9M"
+            ],
+            "trickroom": [
+                "9M"
+            ],
+            "tripleaxel": [
+                "9M"
+            ],
+            "twister": [
+                "9M"
+            ],
+            "upperhand": [
+                "9M"
+            ],
+            "uproar": [
+                "9M"
+            ],
+            "uturn": [
+                "9M"
+            ],
+            "vacuumwave": [
+                "9M"
+            ],
+            "venomdrench": [
+                "9M"
+            ],
+            "venoshock": [
+                "9M"
+            ],
+            "voltswitch": [
+                "9M"
+            ],
+            "waterfall": [
+                "9M"
+            ],
+            "watergun": [
+                "9M"
+            ],
+            "waterpledge": [
+                "9M"
+            ],
+            "waterpulse": [
+                "9M"
+            ],
+            "weatherball": [
+                "9M"
+            ],
+            "whirlpool": [
+                "9M"
+            ],
+            "whirlwind": [
+                "9M"
+            ],
+            "wildcharge": [
+                "9M"
+            ],
+            "willowisp": [
+                "9M"
+            ],
+            "wonderroom": [
+                "9M"
+            ],
+            "workup": [
+                "9M"
+            ],
+            "worryseed": [
+                "9M"
+            ],
+            "xscissor": [
+                "9M"
+            ],
+            "zapcannon": [
+                "9M"
+            ],
+            "zenheadbutt": [
+                "9M"
+            ]
+        }
+    },
+    "lugia": {
+        "inherit": true,
+        "learnset": {
+            "acrobatics": [
+                "9M"
+            ],
+            "aerialace": [
+                "9M"
+            ],
+            "aeroblast": [
+                "9M"
+            ],
+            "aircutter": [
+                "9M"
+            ],
+            "airslash": [
+                "9M"
+            ],
+            "ancientpower": [
+                "9M"
+            ],
+            "aquatail": [
+                "9M"
+            ],
+            "avalanche": [
+                "9M"
+            ],
+            "blizzard": [
+                "9M"
+            ],
+            "bodyslam": [
+                "9M"
+            ],
+            "bravebird": [
+                "9M"
+            ],
+            "brine": [
+                "9M"
+            ],
+            "bulldoze": [
+                "9M"
+            ],
+            "calmmind": [
+                "9M"
+            ],
+            "chargebeam": [
+                "9M"
+            ],
+            "chillingwater": [
+                "9M"
+            ],
+            "confide": [
+                "9M"
+            ],
+            "curse": [
+                "9M"
+            ],
+            "defog": [
+                "9M"
+            ],
+            "detect": [
+                "9M"
+            ],
+            "dive": [
+                "9M"
+            ],
+            "doubleedge": [
+                "9M"
+            ],
+            "doubleteam": [
+                "9M"
+            ],
+            "dragonbreath": [
+                "9M"
+            ],
+            "dragonpulse": [
+                "9M"
+            ],
+            "dragonrush": [
+                "9M"
+            ],
+            "dragontail": [
+                "9M"
+            ],
+            "dreameater": [
+                "9M"
+            ],
+            "dualwingbeat": [
+                "9M"
+            ],
+            "earthpower": [
+                "9M"
+            ],
+            "earthquake": [
+                "9M"
+            ],
+            "echoedvoice": [
+                "9M"
+            ],
+            "endure": [
+                "9M"
+            ],
+            "extrasensory": [
+                "9M"
+            ],
+            "facade": [
+                "9M"
+            ],
+            "featherdance": [
+                "9M"
+            ],
+            "flash": [
+                "9M"
+            ],
+            "fly": [
+                "9M"
+            ],
+            "frustration": [
+                "9M"
+            ],
+            "futuresight": [
+                "9M"
+            ],
+            "gigadrain": [
+                "9M"
+            ],
+            "gigaimpact": [
+                "9M"
+            ],
+            "gust": [
+                "9M"
+            ],
+            "headbutt": [
+                "9M"
+            ],
+            "helpinghand": [
+                "9M"
+            ],
+            "hiddenpower": [
+                "9M"
+            ],
+            "hurricane": [
+                "9M"
+            ],
+            "hydropump": [
+                "9M"
+            ],
+            "hyperbeam": [
+                "9M"
+            ],
+            "hypervoice": [
+                "9M"
+            ],
+            "icebeam": [
+                "9M"
+            ],
+            "icywind": [
+                "9M"
+            ],
+            "imprison": [
+                "9M"
+            ],
+            "ironhead": [
+                "9M"
+            ],
+            "irontail": [
+                "9M"
+            ],
+            "laserfocus": [
+                "9M"
+            ],
+            "lightscreen": [
+                "9M"
+            ],
+            "liquidation": [
+                "9M"
+            ],
+            "mimic": [
+                "9M"
+            ],
+            "mist": [
+                "9M"
+            ],
+            "mudslap": [
+                "9M"
+            ],
+            "naturalgift": [
+                "9M"
+            ],
+            "nightmare": [
+                "9M"
+            ],
+            "ominouswind": [
+                "9M"
+            ],
+            "protect": [
+                "9M"
+            ],
+            "psychic": [
+                "9M"
+            ],
+            "psychicnoise": [
+                "9M"
+            ],
+            "psychoboost": [
+                "9M"
+            ],
+            "psychup": [
+                "9M"
+            ],
+            "psyshock": [
+                "9M"
+            ],
+            "punishment": [
+                "9M"
+            ],
+            "raindance": [
+                "9M"
+            ],
+            "recover": [
+                "9M"
+            ],
+            "reflect": [
+                "9M"
+            ],
+            "rest": [
+                "9M"
+            ],
+            "return": [
+                "9M"
+            ],
+            "roar": [
+                "9M"
+            ],
+            "rocksmash": [
+                "9M"
+            ],
+            "roost": [
+                "9M"
+            ],
+            "round": [
+                "9M"
+            ],
+            "safeguard": [
+                "9M"
+            ],
+            "sandstorm": [
+                "9M"
+            ],
+            "scaleshot": [
+                "9M"
+            ],
+            "scaryface": [
+                "9M"
+            ],
+            "secretpower": [
+                "9M"
+            ],
+            "shadowball": [
+                "9M"
+            ],
+            "shockwave": [
+                "9M"
+            ],
+            "signalbeam": [
+                "9M"
+            ],
+            "skillswap": [
+                "9M"
+            ],
+            "skyattack": [
+                "9M"
+            ],
+            "skydrop": [
+                "9M"
+            ],
+            "sleeptalk": [
+                "9M"
+            ],
+            "snore": [
+                "9M"
+            ],
+            "steelwing": [
+                "9M"
+            ],
+            "strength": [
+                "9M"
+            ],
+            "substitute": [
+                "9M"
+            ],
+            "sunnyday": [
+                "9M"
+            ],
+            "surf": [
+                "9M"
+            ],
+            "swagger": [
+                "9M"
+            ],
+            "swift": [
+                "9M"
+            ],
+            "tailwind": [
+                "9M"
+            ],
+            "takedown": [
+                "9M"
+            ],
+            "telekinesis": [
+                "9M"
+            ],
+            "terablast": [
+                "9M"
+            ],
+            "thunder": [
+                "9M"
+            ],
+            "thunderbolt": [
+                "9M"
+            ],
+            "thunderwave": [
+                "9M"
+            ],
+            "toxic": [
+                "9M"
+            ],
+            "trick": [
+                "9M"
+            ],
+            "twister": [
+                "9M"
+            ],
+            "waterfall": [
+                "9M"
+            ],
+            "waterpulse": [
+                "9M"
+            ],
+            "weatherball": [
+                "9M"
+            ],
+            "whirlpool": [
+                "9M"
+            ],
+            "whirlwind": [
+                "9M"
+            ],
+            "wonderroom": [
+                "9M"
+            ],
+            "zapcannon": [
+                "9M"
+            ],
+            "zenheadbutt": [
+                "9M"
+            ],
+            "snowscape": [
+                "9M"
+            ]
+        }
+    },
+    "hooh": {
+        "inherit": true,
+        "learnset": {
+            "aerialace": [
+                "9M"
+            ],
+            "aircutter": [
+                "9M"
+            ],
+            "airslash": [
+                "9M"
+            ],
+            "ancientpower": [
+                "9M"
+            ],
+            "bodyslam": [
+                "9M"
+            ],
+            "bravebird": [
+                "9M"
+            ],
+            "bulldoze": [
+                "9M"
+            ],
+            "burnup": [
+                "9M"
+            ],
+            "calmmind": [
+                "9M"
+            ],
+            "celebrate": [
+                "9M"
+            ],
+            "chargebeam": [
+                "9M"
+            ],
+            "confide": [
+                "9M"
+            ],
+            "curse": [
+                "9M"
+            ],
+            "defog": [
+                "9M"
+            ],
+            "detect": [
+                "9M"
+            ],
+            "doubleedge": [
+                "9M"
+            ],
+            "doubleteam": [
+                "9M"
+            ],
+            "dragonbreath": [
+                "9M"
+            ],
+            "dreameater": [
+                "9M"
+            ],
+            "dualwingbeat": [
+                "9M"
+            ],
+            "earthpower": [
+                "9M"
+            ],
+            "earthquake": [
+                "9M"
+            ],
+            "echoedvoice": [
+                "9M"
+            ],
+            "endure": [
+                "9M"
+            ],
+            "extrasensory": [
+                "9M"
+            ],
+            "facade": [
+                "9M"
+            ],
+            "fireblast": [
+                "9M"
+            ],
+            "firespin": [
+                "9M"
+            ],
+            "flamecharge": [
+                "9M"
+            ],
+            "flamethrower": [
+                "9M"
+            ],
+            "flareblitz": [
+                "9M"
+            ],
+            "flash": [
+                "9M"
+            ],
+            "fly": [
+                "9M"
+            ],
+            "frustration": [
+                "9M"
+            ],
+            "futuresight": [
+                "9M"
+            ],
+            "gigadrain": [
+                "9M"
+            ],
+            "gigaimpact": [
+                "9M"
+            ],
+            "gust": [
+                "9M"
+            ],
+            "heatwave": [
+                "9M"
+            ],
+            "helpinghand": [
+                "9M"
+            ],
+            "hiddenpower": [
+                "9M"
+            ],
+            "hurricane": [
+                "9M"
+            ],
+            "hyperbeam": [
+                "9M"
+            ],
+            "hypervoice": [
+                "9M"
+            ],
+            "imprison": [
+                "9M"
+            ],
+            "incinerate": [
+                "9M"
+            ],
+            "ironhead": [
+                "9M"
+            ],
+            "laserfocus": [
+                "9M"
+            ],
+            "lifedew": [
+                "9M"
+            ],
+            "lightscreen": [
+                "9M"
+            ],
+            "mimic": [
+                "9M"
+            ],
+            "mudslap": [
+                "9M"
+            ],
+            "mysticalfire": [
+                "9M"
+            ],
+            "naturalgift": [
+                "9M"
+            ],
+            "nightmare": [
+                "9M"
+            ],
+            "ominouswind": [
+                "9M"
+            ],
+            "overheat": [
+                "9M"
+            ],
+            "pluck": [
+                "9M"
+            ],
+            "protect": [
+                "9M"
+            ],
+            "psychic": [
+                "9M"
+            ],
+            "psychup": [
+                "9M"
+            ],
+            "punishment": [
+                "9M"
+            ],
+            "raindance": [
+                "9M"
+            ],
+            "recover": [
+                "9M"
+            ],
+            "reflect": [
+                "9M"
+            ],
+            "rest": [
+                "9M"
+            ],
+            "return": [
+                "9M"
+            ],
+            "roar": [
+                "9M"
+            ],
+            "rocksmash": [
+                "9M"
+            ],
+            "roost": [
+                "9M"
+            ],
+            "round": [
+                "9M"
+            ],
+            "sacredfire": [
+                "9M"
+            ],
+            "safeguard": [
+                "9M"
+            ],
+            "sandstorm": [
+                "9M"
+            ],
+            "scorchingsands": [
+                "9M"
+            ],
+            "secretpower": [
+                "9M"
+            ],
+            "shadowball": [
+                "9M"
+            ],
+            "shockwave": [
+                "9M"
+            ],
+            "signalbeam": [
+                "9M"
+            ],
+            "skyattack": [
+                "9M"
+            ],
+            "skydrop": [
+                "9M"
+            ],
+            "sleeptalk": [
+                "9M"
+            ],
+            "snore": [
+                "9M"
+            ],
+            "solarbeam": [
+                "9M"
+            ],
+            "steelwing": [
+                "9M"
+            ],
+            "strength": [
+                "9M"
+            ],
+            "substitute": [
+                "9M"
+            ],
+            "sunnyday": [
+                "9M"
+            ],
+            "swagger": [
+                "9M"
+            ],
+            "swift": [
+                "9M"
+            ],
+            "tailwind": [
+                "9M"
+            ],
+            "takedown": [
+                "9M"
+            ],
+            "terablast": [
+                "9M"
+            ],
+            "thunder": [
+                "9M"
+            ],
+            "thunderbolt": [
+                "9M"
+            ],
+            "thunderwave": [
+                "9M"
+            ],
+            "toxic": [
+                "9M"
+            ],
+            "twister": [
+                "9M"
+            ],
+            "weatherball": [
+                "9M"
+            ],
+            "whirlwind": [
+                "9M"
+            ],
+            "willowisp": [
+                "9M"
+            ],
+            "zapcannon": [
+                "9M"
+            ],
+            "zenheadbutt": [
+                "9M"
+            ]
+        }
+    },
+    "celebi": {
+        "inherit": true,
+        "learnset": {
+            "aerialace": [
+                "9M"
+            ],
+            "allyswitch": [
+                "9M"
+            ],
+            "ancientpower": [
+                "9M"
+            ],
+            "aurasphere": [
+                "9M"
+            ],
+            "batonpass": [
+                "9M"
+            ],
+            "calmmind": [
+                "9M"
+            ],
+            "chargebeam": [
+                "9M"
+            ],
+            "confide": [
+                "9M"
+            ],
+            "confusion": [
+                "9M"
+            ],
+            "curse": [
+                "9M"
+            ],
+            "cut": [
+                "9M"
+            ],
+            "dazzlinggleam": [
+                "9M"
+            ],
+            "defensecurl": [
+                "9M"
+            ],
+            "detect": [
+                "9M"
+            ],
+            "doubleedge": [
+                "9M"
+            ],
+            "doubleteam": [
+                "9M"
+            ],
+            "dreameater": [
+                "9M"
+            ],
+            "dualwingbeat": [
+                "9M"
+            ],
+            "earthpower": [
+                "9M"
+            ],
+            "echoedvoice": [
+                "9M"
+            ],
+            "endure": [
+                "9M"
+            ],
+            "energyball": [
+                "9M"
+            ],
+            "expandingforce": [
+                "9M"
+            ],
+            "facade": [
+                "9M"
+            ],
+            "flash": [
+                "9M"
+            ],
+            "fling": [
+                "9M"
+            ],
+            "frustration": [
+                "9M"
+            ],
+            "futuresight": [
+                "9M"
+            ],
+            "gigadrain": [
+                "9M"
+            ],
+            "gigaimpact": [
+                "9M"
+            ],
+            "grassknot": [
+                "9M"
+            ],
+            "grassyglide": [
+                "9M"
+            ],
+            "grassyterrain": [
+                "9M"
+            ],
+            "healbell": [
+                "9M"
+            ],
+            "healblock": [
+                "9M"
+            ],
+            "healingwish": [
+                "9M"
+            ],
+            "helpinghand": [
+                "9M"
+            ],
+            "hiddenpower": [
+                "9M"
+            ],
+            "holdback": [
+                "9M"
+            ],
+            "hyperbeam": [
+                "9M"
+            ],
+            "imprison": [
+                "9M"
+            ],
+            "laserfocus": [
+                "9M"
+            ],
+            "lastresort": [
+                "9M"
+            ],
+            "leafblade": [
+                "9M"
+            ],
+            "leafstorm": [
+                "9M"
+            ],
+            "leechseed": [
+                "9M"
+            ],
+            "lifedew": [
+                "9M"
+            ],
+            "lightscreen": [
+                "9M"
+            ],
+            "magicalleaf": [
+                "9M"
+            ],
+            "magiccoat": [
+                "9M"
+            ],
+            "magicroom": [
+                "9M"
+            ],
+            "metronome": [
+                "9M"
+            ],
+            "mimic": [
+                "9M"
+            ],
+            "mudslap": [
+                "9M"
+            ],
+            "nastyplot": [
+                "9M"
+            ],
+            "naturalgift": [
+                "9M"
+            ],
+            "naturepower": [
+                "9M"
+            ],
+            "nightmare": [
+                "9M"
+            ],
+            "perishsong": [
+                "9M"
+            ],
+            "pollenpuff": [
+                "9M"
+            ],
+            "protect": [
+                "9M"
+            ],
+            "psychic": [
+                "9M"
+            ],
+            "psychicterrain": [
+                "9M"
+            ],
+            "psychocut": [
+                "9M"
+            ],
+            "psychup": [
+                "9M"
+            ],
+            "raindance": [
+                "9M"
+            ],
+            "recover": [
+                "9M"
+            ],
+            "reflect": [
+                "9M"
+            ],
+            "rest": [
+                "9M"
+            ],
+            "return": [
+                "9M"
+            ],
+            "round": [
+                "9M"
+            ],
+            "safeguard": [
+                "9M"
+            ],
+            "sandstorm": [
+                "9M"
+            ],
+            "secretpower": [
+                "9M"
+            ],
+            "seedbomb": [
+                "9M"
+            ],
+            "shadowball": [
+                "9M"
+            ],
+            "shockwave": [
+                "9M"
+            ],
+            "signalbeam": [
+                "9M"
+            ],
+            "silverwind": [
+                "9M"
+            ],
+            "skillswap": [
+                "9M"
+            ],
+            "sleeptalk": [
+                "9M"
+            ],
+            "snore": [
+                "9M"
+            ],
+            "solarbeam": [
+                "9M"
+            ],
+            "solarblade": [
+                "9M"
+            ],
+            "stealthrock": [
+                "9M"
+            ],
+            "substitute": [
+                "9M"
+            ],
+            "suckerpunch": [
+                "9M"
+            ],
+            "sunnyday": [
+                "9M"
+            ],
+            "swagger": [
+                "9M"
+            ],
+            "sweetscent": [
+                "9M"
+            ],
+            "swift": [
+                "9M"
+            ],
+            "swordsdance": [
+                "9M"
+            ],
+            "synthesis": [
+                "9M"
+            ],
+            "telekinesis": [
+                "9M"
+            ],
+            "thunderwave": [
+                "9M"
+            ],
+            "toxic": [
+                "9M"
+            ],
+            "trick": [
+                "9M"
+            ],
+            "trickroom": [
+                "9M"
+            ],
+            "uproar": [
+                "9M"
+            ],
+            "uturn": [
+                "9M"
+            ],
+            "waterpulse": [
+                "9M"
+            ],
+            "weatherball": [
+                "9M"
+            ],
+            "wonderroom": [
+                "9M"
+            ],
+            "worryseed": [
+                "9M"
+            ],
+            "zenheadbutt": [
+                "9M"
+            ],
+            "terablast": [
+                "9M"
+            ]
+        }
+    },
+    "kyogre": {
+        "inherit": true,
+        "learnset": {
+            "ancientpower": [
+                "9M"
+            ],
+            "aquaring": [
+                "9M"
+            ],
+            "aquatail": [
+                "9M"
+            ],
+            "avalanche": [
+                "9M"
+            ],
+            "blizzard": [
+                "9M"
+            ],
+            "block": [
+                "9M"
+            ],
+            "bodyslam": [
+                "9M"
+            ],
+            "brickbreak": [
+                "9M"
+            ],
+            "brine": [
+                "9M"
+            ],
+            "bulldoze": [
+                "9M"
+            ],
+            "calmmind": [
+                "9M"
+            ],
+            "chillingwater": [
+                "9M"
+            ],
+            "confide": [
+                "9M"
+            ],
+            "defensecurl": [
+                "9M"
+            ],
+            "dive": [
+                "9M"
+            ],
+            "doubleedge": [
+                "9M"
+            ],
+            "doubleteam": [
+                "9M"
+            ],
+            "earthquake": [
+                "9M"
+            ],
+            "endure": [
+                "9M"
+            ],
+            "facade": [
+                "9M"
+            ],
+            "frustration": [
+                "9M"
+            ],
+            "gigaimpact": [
+                "9M"
+            ],
+            "headbutt": [
+                "9M"
+            ],
+            "heavyslam": [
+                "9M"
+            ],
+            "helpinghand": [
+                "9M"
+            ],
+            "hiddenpower": [
+                "9M"
+            ],
+            "hydropump": [
+                "9M"
+            ],
+            "hyperbeam": [
+                "9M"
+            ],
+            "icebeam": [
+                "9M"
+            ],
+            "icywind": [
+                "9M"
+            ],
+            "ironhead": [
+                "9M"
+            ],
+            "liquidation": [
+                "9M"
+            ],
+            "mimic": [
+                "9M"
+            ],
+            "muddywater": [
+                "9M"
+            ],
+            "mudslap": [
+                "9M"
+            ],
+            "naturalgift": [
+                "9M"
+            ],
+            "originpulse": [
+                "9M"
+            ],
+            "protect": [
+                "9M"
+            ],
+            "psychup": [
+                "9M"
+            ],
+            "raindance": [
+                "9M"
+            ],
+            "rest": [
+                "9M"
+            ],
+            "return": [
+                "9M"
+            ],
+            "roar": [
+                "9M"
+            ],
+            "rockslide": [
+                "9M"
+            ],
+            "rocksmash": [
+                "9M"
+            ],
+            "rocktomb": [
+                "9M"
+            ],
+            "round": [
+                "9M"
+            ],
+            "safeguard": [
+                "9M"
+            ],
+            "scald": [
+                "9M"
+            ],
+            "scaryface": [
+                "9M"
+            ],
+            "secretpower": [
+                "9M"
+            ],
+            "sheercold": [
+                "9M"
+            ],
+            "shockwave": [
+                "9M"
+            ],
+            "signalbeam": [
+                "9M"
+            ],
+            "sleeptalk": [
+                "9M"
+            ],
+            "snore": [
+                "9M"
+            ],
+            "strength": [
+                "9M"
+            ],
+            "substitute": [
+                "9M"
+            ],
+            "surf": [
+                "9M"
+            ],
+            "swagger": [
+                "9M"
+            ],
+            "swift": [
+                "9M"
+            ],
+            "takedown": [
+                "9M"
+            ],
+            "terablast": [
+                "9M"
+            ],
+            "thunder": [
+                "9M"
+            ],
+            "thunderbolt": [
+                "9M"
+            ],
+            "thunderwave": [
+                "9M"
+            ],
+            "toxic": [
+                "9M"
+            ],
+            "uproar": [
+                "9M"
+            ],
+            "waterfall": [
+                "9M"
+            ],
+            "waterpulse": [
+                "9M"
+            ],
+            "waterspout": [
+                "9M"
+            ],
+            "whirlpool": [
+                "9M"
+            ],
+            "snowscape": [
+                "9M"
+            ]
+        }
+    },
+    "groudon": {
+        "inherit": true,
+        "learnset": {
+            "aerialace": [
+                "9M"
+            ],
+            "ancientpower": [
+                "9M"
+            ],
+            "block": [
+                "9M"
+            ],
+            "bodypress": [
+                "9M"
+            ],
+            "bodyslam": [
+                "9M"
+            ],
+            "brickbreak": [
+                "9M"
+            ],
+            "brutalswing": [
+                "9M"
+            ],
+            "bulkup": [
+                "9M"
+            ],
+            "bulldoze": [
+                "9M"
+            ],
+            "confide": [
+                "9M"
+            ],
+            "counter": [
+                "9M"
+            ],
+            "crunch": [
+                "9M"
+            ],
+            "cut": [
+                "9M"
+            ],
+            "defensecurl": [
+                "9M"
+            ],
+            "dig": [
+                "9M"
+            ],
+            "doubleedge": [
+                "9M"
+            ],
+            "doubleteam": [
+                "9M"
+            ],
+            "dragonclaw": [
+                "9M"
+            ],
+            "dragonpulse": [
+                "9M"
+            ],
+            "dragontail": [
+                "9M"
+            ],
+            "dynamicpunch": [
+                "9M"
+            ],
+            "earthpower": [
+                "9M"
+            ],
+            "earthquake": [
+                "9M"
+            ],
+            "endure": [
+                "9M"
+            ],
+            "eruption": [
+                "9M"
+            ],
+            "facade": [
+                "9M"
+            ],
+            "fireblast": [
+                "9M"
+            ],
+            "firefang": [
+                "9M"
+            ],
+            "firepunch": [
+                "9M"
+            ],
+            "fissure": [
+                "9M"
+            ],
+            "flamethrower": [
+                "9M"
+            ],
+            "fling": [
+                "9M"
+            ],
+            "focusblast": [
+                "9M"
+            ],
+            "focuspunch": [
+                "9M"
+            ],
+            "frustration": [
+                "9M"
+            ],
+            "furycutter": [
+                "9M"
+            ],
+            "gigaimpact": [
+                "9M"
+            ],
+            "hammerarm": [
+                "9M"
+            ],
+            "headbutt": [
+                "9M"
+            ],
+            "heatcrash": [
+                "9M"
+            ],
+            "heatwave": [
+                "9M"
+            ],
+            "heavyslam": [
+                "9M"
+            ],
+            "helpinghand": [
+                "9M"
+            ],
+            "hiddenpower": [
+                "9M"
+            ],
+            "highhorsepower": [
+                "9M"
+            ],
+            "honeclaws": [
+                "9M"
+            ],
+            "hyperbeam": [
+                "9M"
+            ],
+            "incinerate": [
+                "9M"
+            ],
+            "ironhead": [
+                "9M"
+            ],
+            "irontail": [
+                "9M"
+            ],
+            "lavaplume": [
+                "9M"
+            ],
+            "megakick": [
+                "9M"
+            ],
+            "megapunch": [
+                "9M"
+            ],
+            "metalclaw": [
+                "9M"
+            ],
+            "mimic": [
+                "9M"
+            ],
+            "mudshot": [
+                "9M"
+            ],
+            "mudslap": [
+                "9M"
+            ],
+            "naturalgift": [
+                "9M"
+            ],
+            "overheat": [
+                "9M"
+            ],
+            "poweruppunch": [
+                "9M"
+            ],
+            "precipiceblades": [
+                "9M"
+            ],
+            "protect": [
+                "9M"
+            ],
+            "psychup": [
+                "9M"
+            ],
+            "rest": [
+                "9M"
+            ],
+            "return": [
+                "9M"
+            ],
+            "roar": [
+                "9M"
+            ],
+            "rockblast": [
+                "9M"
+            ],
+            "rockclimb": [
+                "9M"
+            ],
+            "rockpolish": [
+                "9M"
+            ],
+            "rockslide": [
+                "9M"
+            ],
+            "rocksmash": [
+                "9M"
+            ],
+            "rocktomb": [
+                "9M"
+            ],
+            "rollout": [
+                "9M"
+            ],
+            "round": [
+                "9M"
+            ],
+            "safeguard": [
+                "9M"
+            ],
+            "sandstorm": [
+                "9M"
+            ],
+            "sandtomb": [
+                "9M"
+            ],
+            "scaryface": [
+                "9M"
+            ],
+            "scorchingsands": [
+                "9M"
+            ],
+            "secretpower": [
+                "9M"
+            ],
+            "seismictoss": [
+                "9M"
+            ],
+            "shadowclaw": [
+                "9M"
+            ],
+            "shockwave": [
+                "9M"
+            ],
+            "slash": [
+                "9M"
+            ],
+            "sleeptalk": [
+                "9M"
+            ],
+            "smackdown": [
+                "9M"
+            ],
+            "snore": [
+                "9M"
+            ],
+            "solarbeam": [
+                "9M"
+            ],
+            "spikes": [
+                "9M"
+            ],
+            "stealthrock": [
+                "9M"
+            ],
+            "stompingtantrum": [
+                "9M"
+            ],
+            "stoneedge": [
+                "9M"
+            ],
+            "strength": [
+                "9M"
+            ],
+            "substitute": [
+                "9M"
+            ],
+            "sunnyday": [
+                "9M"
+            ],
+            "swagger": [
+                "9M"
+            ],
+            "swift": [
+                "9M"
+            ],
+            "swordsdance": [
+                "9M"
+            ],
+            "takedown": [
+                "9M"
+            ],
+            "terablast": [
+                "9M"
+            ],
+            "thunder": [
+                "9M"
+            ],
+            "thunderbolt": [
+                "9M"
+            ],
+            "thunderpunch": [
+                "9M"
+            ],
+            "thunderwave": [
+                "9M"
+            ],
+            "toxic": [
+                "9M"
+            ],
+            "uproar": [
+                "9M"
+            ],
+            "willowisp": [
+                "9M"
+            ],
+            "zenheadbutt": [
+                "9M"
+            ]
+        }
+    },
+    "rayquaza": {
+        "inherit": true,
+        "learnset": {
+            "aerialace": [
+                "9M"
+            ],
+            "airslash": [
+                "9M"
+            ],
+            "ancientpower": [
+                "9M"
+            ],
+            "aquatail": [
+                "9M"
+            ],
+            "avalanche": [
+                "9M"
+            ],
+            "bind": [
+                "9M"
+            ],
+            "blizzard": [
+                "9M"
+            ],
+            "bodyslam": [
+                "9M"
+            ],
+            "breakingswipe": [
+                "9M"
+            ],
+            "brickbreak": [
+                "9M"
+            ],
+            "brutalswing": [
+                "9M"
+            ],
+            "bulkup": [
+                "9M"
+            ],
+            "bulldoze": [
+                "9M"
+            ],
+            "celebrate": [
+                "9M"
+            ],
+            "confide": [
+                "9M"
+            ],
+            "cosmicpower": [
+                "9M"
+            ],
+            "crunch": [
+                "9M"
+            ],
+            "defog": [
+                "9M"
+            ],
+            "dive": [
+                "9M"
+            ],
+            "doubleedge": [
+                "9M"
+            ],
+            "doubleteam": [
+                "9M"
+            ],
+            "dracometeor": [
+                "9M"
+            ],
+            "dragonascent": [
+                "9M"
+            ],
+            "dragoncheer": [
+                "9M"
+            ],
+            "dragonclaw": [
+                "9M"
+            ],
+            "dragondance": [
+                "9M"
+            ],
+            "dragonpulse": [
+                "9M"
+            ],
+            "dragontail": [
+                "9M"
+            ],
+            "earthpower": [
+                "9M"
+            ],
+            "earthquake": [
+                "9M"
+            ],
+            "echoedvoice": [
+                "9M"
+            ],
+            "endure": [
+                "9M"
+            ],
+            "energyball": [
+                "9M"
+            ],
+            "extremespeed": [
+                "9M"
+            ],
+            "facade": [
+                "9M"
+            ],
+            "fireblast": [
+                "9M"
+            ],
+            "flamethrower": [
+                "9M"
+            ],
+            "fling": [
+                "9M"
+            ],
+            "fly": [
+                "9M"
+            ],
+            "focusblast": [
+                "9M"
+            ],
+            "frustration": [
+                "9M"
+            ],
+            "furycutter": [
+                "9M"
+            ],
+            "gigaimpact": [
+                "9M"
+            ],
+            "gyroball": [
+                "9M"
+            ],
+            "headbutt": [
+                "9M"
+            ],
+            "helpinghand": [
+                "9M"
+            ],
+            "hiddenpower": [
+                "9M"
+            ],
+            "honeclaws": [
+                "9M"
+            ],
+            "hurricane": [
+                "9M"
+            ],
+            "hydropump": [
+                "9M"
+            ],
+            "hyperbeam": [
+                "9M"
+            ],
+            "hypervoice": [
+                "9M"
+            ],
+            "icebeam": [
+                "9M"
+            ],
+            "icywind": [
+                "9M"
+            ],
+            "incinerate": [
+                "9M"
+            ],
+            "ironhead": [
+                "9M"
+            ],
+            "irontail": [
+                "9M"
+            ],
+            "meteorbeam": [
+                "9M"
+            ],
+            "mimic": [
+                "9M"
+            ],
+            "mudslap": [
+                "9M"
+            ],
+            "naturalgift": [
+                "9M"
+            ],
+            "outrage": [
+                "9M"
+            ],
+            "overheat": [
+                "9M"
+            ],
+            "protect": [
+                "9M"
+            ],
+            "psychup": [
+                "9M"
+            ],
+            "raindance": [
+                "9M"
+            ],
+            "rest": [
+                "9M"
+            ],
+            "return": [
+                "9M"
+            ],
+            "roar": [
+                "9M"
+            ],
+            "rockslide": [
+                "9M"
+            ],
+            "rocksmash": [
+                "9M"
+            ],
+            "rocktomb": [
+                "9M"
+            ],
+            "round": [
+                "9M"
+            ],
+            "sandstorm": [
+                "9M"
+            ],
+            "scaleshot": [
+                "9M"
+            ],
+            "scaryface": [
+                "9M"
+            ],
+            "secretpower": [
+                "9M"
+            ],
+            "shadowclaw": [
+                "9M"
+            ],
+            "shockwave": [
+                "9M"
+            ],
+            "skydrop": [
+                "9M"
+            ],
+            "sleeptalk": [
+                "9M"
+            ],
+            "snore": [
+                "9M"
+            ],
+            "solarbeam": [
+                "9M"
+            ],
+            "stealthrock": [
+                "9M"
+            ],
+            "stoneedge": [
+                "9M"
+            ],
+            "strength": [
+                "9M"
+            ],
+            "substitute": [
+                "9M"
+            ],
+            "sunnyday": [
+                "9M"
+            ],
+            "surf": [
+                "9M"
+            ],
+            "swagger": [
+                "9M"
+            ],
+            "swift": [
+                "9M"
+            ],
+            "swordsdance": [
+                "9M"
+            ],
+            "tailwind": [
+                "9M"
+            ],
+            "takedown": [
+                "9M"
+            ],
+            "terablast": [
+                "9M"
+            ],
+            "thunder": [
+                "9M"
+            ],
+            "thunderbolt": [
+                "9M"
+            ],
+            "thunderwave": [
+                "9M"
+            ],
+            "toxic": [
+                "9M"
+            ],
+            "twister": [
+                "9M"
+            ],
+            "uproar": [
+                "9M"
+            ],
+            "uturn": [
+                "9M"
+            ],
+            "vcreate": [
+                "9M"
+            ],
+            "waterfall": [
+                "9M"
+            ],
+            "waterpulse": [
+                "9M"
+            ],
+            "whirlpool": [
+                "9M"
+            ],
+            "wildcharge": [
+                "9M"
+            ]
+        }
+    },
+    "jirachi": {
+        "inherit": true,
+        "learnset": {
+            "aerialace": [
+                "9M"
+            ],
+            "allyswitch": [
+                "9M"
+            ],
+            "amnesia": [
+                "9M"
+            ],
+            "ancientpower": [
+                "9M"
+            ],
+            "aurasphere": [
+                "9M"
+            ],
+            "batonpass": [
+                "9M"
+            ],
+            "bodyslam": [
+                "9M"
+            ],
+            "calmmind": [
+                "9M"
+            ],
+            "chargebeam": [
+                "9M"
+            ],
+            "charm": [
+                "9M"
+            ],
+            "confide": [
+                "9M"
+            ],
+            "confuseray": [
+                "9M"
+            ],
+            "confusion": [
+                "9M"
+            ],
+            "cosmicpower": [
+                "9M"
+            ],
+            "dazzlinggleam": [
+                "9M"
+            ],
+            "defensecurl": [
+                "9M"
+            ],
+            "doomdesire": [
+                "9M"
+            ],
+            "doubleedge": [
+                "9M"
+            ],
+            "doubleteam": [
+                "9M"
+            ],
+            "dracometeor": [
+                "9M"
+            ],
+            "drainpunch": [
+                "9M"
+            ],
+            "dreameater": [
+                "9M"
+            ],
+            "dynamicpunch": [
+                "9M"
+            ],
+            "encore": [
+                "9M"
+            ],
+            "endure": [
+                "9M"
+            ],
+            "energyball": [
+                "9M"
+            ],
+            "expandingforce": [
+                "9M"
+            ],
+            "facade": [
+                "9M"
+            ],
+            "faketears": [
+                "9M"
+            ],
+            "firepunch": [
+                "9M"
+            ],
+            "flash": [
+                "9M"
+            ],
+            "flashcannon": [
+                "9M"
+            ],
+            "fling": [
+                "9M"
+            ],
+            "followme": [
+                "9M"
+            ],
+            "frustration": [
+                "9M"
+            ],
+            "futuresight": [
+                "9M"
+            ],
+            "gigaimpact": [
+                "9M"
+            ],
+            "grassknot": [
+                "9M"
+            ],
+            "gravity": [
+                "9M"
+            ],
+            "happyhour": [
+                "9M"
+            ],
+            "headbutt": [
+                "9M"
+            ],
+            "healingwish": [
+                "9M"
+            ],
+            "heartstamp": [
+                "9M"
+            ],
+            "helpinghand": [
+                "9M"
+            ],
+            "hiddenpower": [
+                "9M"
+            ],
+            "hyperbeam": [
+                "9M"
+            ],
+            "icepunch": [
+                "9M"
+            ],
+            "icywind": [
+                "9M"
+            ],
+            "imprison": [
+                "9M"
+            ],
+            "irondefense": [
+                "9M"
+            ],
+            "ironhead": [
+                "9M"
+            ],
+            "lastresort": [
+                "9M"
+            ],
+            "lifedew": [
+                "9M"
+            ],
+            "lightscreen": [
+                "9M"
+            ],
+            "luckychant": [
+                "9M"
+            ],
+            "magiccoat": [
+                "9M"
+            ],
+            "magicroom": [
+                "9M"
+            ],
+            "megakick": [
+                "9M"
+            ],
+            "megapunch": [
+                "9M"
+            ],
+            "metalsound": [
+                "9M"
+            ],
+            "meteorbeam": [
+                "9M"
+            ],
+            "meteormash": [
+                "9M"
+            ],
+            "metronome": [
+                "9M"
+            ],
+            "mimic": [
+                "9M"
+            ],
+            "moonblast": [
+                "9M"
+            ],
+            "mudslap": [
+                "9M"
+            ],
+            "naturalgift": [
+                "9M"
+            ],
+            "nightmare": [
+                "9M"
+            ],
+            "playrough": [
+                "9M"
+            ],
+            "poweruppunch": [
+                "9M"
+            ],
+            "protect": [
+                "9M"
+            ],
+            "psybeam": [
+                "9M"
+            ],
+            "psychic": [
+                "9M"
+            ],
+            "psychicnoise": [
+                "9M"
+            ],
+            "psychup": [
+                "9M"
+            ],
+            "psyshock": [
+                "9M"
+            ],
+            "raindance": [
+                "9M"
+            ],
+            "recycle": [
+                "9M"
+            ],
+            "reflect": [
+                "9M"
+            ],
+            "refresh": [
+                "9M"
+            ],
+            "rest": [
+                "9M"
+            ],
+            "return": [
+                "9M"
+            ],
+            "round": [
+                "9M"
+            ],
+            "safeguard": [
+                "9M"
+            ],
+            "sandstorm": [
+                "9M"
+            ],
+            "secretpower": [
+                "9M"
+            ],
+            "shadowball": [
+                "9M"
+            ],
+            "shockwave": [
+                "9M"
+            ],
+            "signalbeam": [
+                "9M"
+            ],
+            "skillswap": [
+                "9M"
+            ],
+            "sleeptalk": [
+                "9M"
+            ],
+            "snore": [
+                "9M"
+            ],
+            "stealthrock": [
+                "9M"
+            ],
+            "steelbeam": [
+                "9M"
+            ],
+            "storedpower": [
+                "9M"
+            ],
+            "substitute": [
+                "9M"
+            ],
+            "sunnyday": [
+                "9M"
+            ],
+            "swagger": [
+                "9M"
+            ],
+            "swift": [
+                "9M"
+            ],
+            "telekinesis": [
+                "9M"
+            ],
+            "terablast": [
+                "9M"
+            ],
+            "thunder": [
+                "9M"
+            ],
+            "thunderbolt": [
+                "9M"
+            ],
+            "thunderpunch": [
+                "9M"
+            ],
+            "thunderwave": [
+                "9M"
+            ],
+            "toxic": [
+                "9M"
+            ],
+            "trick": [
+                "9M"
+            ],
+            "trickroom": [
+                "9M"
+            ],
+            "uproar": [
+                "9M"
+            ],
+            "uturn": [
+                "9M"
+            ],
+            "waterpulse": [
+                "9M"
+            ],
+            "wish": [
+                "9M"
+            ],
+            "zenheadbutt": [
+                "9M"
+            ]
+        }
+    },
+    "deoxys": {
+        "inherit": true,
+        "learnset": {
+            "aerialace": [
+                "9M"
+            ],
+            "agility": [
+                "9M"
+            ],
+            "allyswitch": [
+                "9M"
+            ],
+            "amnesia": [
+                "9M"
+            ],
+            "avalanche": [
+                "9M"
+            ],
+            "bind": [
+                "9M"
+            ],
+            "bodyslam": [
+                "9M"
+            ],
+            "brickbreak": [
+                "9M"
+            ],
+            "brutalswing": [
+                "9M"
+            ],
+            "calmmind": [
+                "9M"
+            ],
+            "chargebeam": [
+                "9M"
+            ],
+            "confide": [
+                "9M"
+            ],
+            "cosmicpower": [
+                "9M"
+            ],
+            "counter": [
+                "9M"
+            ],
+            "cut": [
+                "9M"
+            ],
+            "darkpulse": [
+                "9M"
+            ],
+            "detect": [
+                "9M"
+            ],
+            "doubleedge": [
+                "9M"
+            ],
+            "doubleteam": [
+                "9M"
+            ],
+            "drainpunch": [
+                "9M"
+            ],
+            "dreameater": [
+                "9M"
+            ],
+            "dynamicpunch": [
+                "9M"
+            ],
+            "endure": [
+                "9M"
+            ],
+            "energyball": [
+                "9M"
+            ],
+            "expandingforce": [
+                "9M"
+            ],
+            "extremespeed": [
+                "9M"
+            ],
+            "facade": [
+                "9M"
+            ],
+            "firepunch": [
+                "9M"
+            ],
+            "flash": [
+                "9M"
+            ],
+            "flashcannon": [
+                "9M"
+            ],
+            "fling": [
+                "9M"
+            ],
+            "focusblast": [
+                "9M"
+            ],
+            "focuspunch": [
+                "9M"
+            ],
+            "frustration": [
+                "9M"
+            ],
+            "futuresight": [
+                "9M"
+            ],
+            "gigaimpact": [
+                "9M"
+            ],
+            "grassknot": [
+                "9M"
+            ],
+            "gravity": [
+                "9M"
+            ],
+            "headbutt": [
+                "9M"
+            ],
+            "hiddenpower": [
+                "9M"
+            ],
+            "hyperbeam": [
+                "9M"
+            ],
+            "icebeam": [
+                "9M"
+            ],
+            "icepunch": [
+                "9M"
+            ],
+            "icywind": [
+                "9M"
+            ],
+            "imprison": [
+                "9M"
+            ],
+            "irondefense": [
+                "9M"
+            ],
+            "knockoff": [
+                "9M"
+            ],
+            "laserfocus": [
+                "9M"
+            ],
+            "leer": [
+                "9M"
+            ],
+            "lightscreen": [
+                "9M"
+            ],
+            "lowkick": [
+                "9M"
+            ],
+            "lowsweep": [
+                "9M"
+            ],
+            "magiccoat": [
+                "9M"
+            ],
+            "megakick": [
+                "9M"
+            ],
+            "megapunch": [
+                "9M"
+            ],
+            "meteorbeam": [
+                "9M"
+            ],
+            "meteormash": [
+                "9M"
+            ],
+            "mimic": [
+                "9M"
+            ],
+            "mirrorcoat": [
+                "9M"
+            ],
+            "mudslap": [
+                "9M"
+            ],
+            "nastyplot": [
+                "9M"
+            ],
+            "naturalgift": [
+                "9M"
+            ],
+            "nightmare": [
+                "9M"
+            ],
+            "nightshade": [
+                "9M"
+            ],
+            "painsplit": [
+                "9M"
+            ],
+            "poisonjab": [
+                "9M"
+            ],
+            "poweruppunch": [
+                "9M"
+            ],
+            "protect": [
+                "9M"
+            ],
+            "psybeam": [
+                "9M"
+            ],
+            "psychic": [
+                "9M"
+            ],
+            "psychicnoise": [
+                "9M"
+            ],
+            "psychicterrain": [
+                "9M"
+            ],
+            "psychoboost": [
+                "9M"
+            ],
+            "psychoshift": [
+                "9M"
+            ],
+            "psychup": [
+                "9M"
+            ],
+            "psyshock": [
+                "9M"
+            ],
+            "pursuit": [
+                "9M"
+            ],
+            "raindance": [
+                "9M"
+            ],
+            "recover": [
+                "9M"
+            ],
+            "recycle": [
+                "9M"
+            ],
+            "reflect": [
+                "9M"
+            ],
+            "rest": [
+                "9M"
+            ],
+            "return": [
+                "9M"
+            ],
+            "rockslide": [
+                "9M"
+            ],
+            "rocksmash": [
+                "9M"
+            ],
+            "rocktomb": [
+                "9M"
+            ],
+            "roleplay": [
+                "9M"
+            ],
+            "round": [
+                "9M"
+            ],
+            "safeguard": [
+                "9M"
+            ],
+            "scaryface": [
+                "9M"
+            ],
+            "secretpower": [
+                "9M"
+            ],
+            "seismictoss": [
+                "9M"
+            ],
+            "shadowball": [
+                "9M"
+            ],
+            "shockwave": [
+                "9M"
+            ],
+            "signalbeam": [
+                "9M"
+            ],
+            "skillswap": [
+                "9M"
+            ],
+            "sleeptalk": [
+                "9M"
+            ],
+            "snatch": [
+                "9M"
+            ],
+            "snore": [
+                "9M"
+            ],
+            "solarbeam": [
+                "9M"
+            ],
+            "spikes": [
+                "9M"
+            ],
+            "stealthrock": [
+                "9M"
+            ],
+            "stompingtantrum": [
+                "9M"
+            ],
+            "storedpower": [
+                "9M"
+            ],
+            "strength": [
+                "9M"
+            ],
+            "substitute": [
+                "9M"
+            ],
+            "sunnyday": [
+                "9M"
+            ],
+            "superpower": [
+                "9M"
+            ],
+            "swagger": [
+                "9M"
+            ],
+            "swift": [
+                "9M"
+            ],
+            "takedown": [
+                "9M"
+            ],
+            "taunt": [
+                "9M"
+            ],
+            "telekinesis": [
+                "9M"
+            ],
+            "teleport": [
+                "9M"
+            ],
+            "terablast": [
+                "9M"
+            ],
+            "throatchop": [
+                "9M"
+            ],
+            "thunder": [
+                "9M"
+            ],
+            "thunderbolt": [
+                "9M"
+            ],
+            "thunderpunch": [
+                "9M"
+            ],
+            "thunderwave": [
+                "9M"
+            ],
+            "torment": [
+                "9M"
+            ],
+            "toxic": [
+                "9M"
+            ],
+            "trick": [
+                "9M"
+            ],
+            "trickroom": [
+                "9M"
+            ],
+            "waterpulse": [
+                "9M"
+            ],
+            "wonderroom": [
+                "9M"
+            ],
+            "wrap": [
+                "9M"
+            ],
+            "zapcannon": [
+                "9M"
+            ],
+            "zenheadbutt": [
+                "9M"
+            ]
+        }
+    },
+    "dialga": {
+        "inherit": true,
+        "learnset": {
+            "aerialace": [
+                "9M"
+            ],
+            "ancientpower": [
+                "9M"
+            ],
+            "aurasphere": [
+                "9M"
+            ],
+            "blizzard": [
+                "9M"
+            ],
+            "bodypress": [
+                "9M"
+            ],
+            "bodyslam": [
+                "9M"
+            ],
+            "breakingswipe": [
+                "9M"
+            ],
+            "brickbreak": [
+                "9M"
+            ],
+            "bulkup": [
+                "9M"
+            ],
+            "bulldoze": [
+                "9M"
+            ],
+            "confide": [
+                "9M"
+            ],
+            "cut": [
+                "9M"
+            ],
+            "doubleteam": [
+                "9M"
+            ],
+            "dracometeor": [
+                "9M"
+            ],
+            "dragonbreath": [
+                "9M"
+            ],
+            "dragonclaw": [
+                "9M"
+            ],
+            "dragonpulse": [
+                "9M"
+            ],
+            "dragontail": [
+                "9M"
+            ],
+            "earthpower": [
+                "9M"
+            ],
+            "earthquake": [
+                "9M"
+            ],
+            "echoedvoice": [
+                "9M"
+            ],
+            "endure": [
+                "9M"
+            ],
+            "facade": [
+                "9M"
+            ],
+            "fireblast": [
+                "9M"
+            ],
+            "flamethrower": [
+                "9M"
+            ],
+            "flash": [
+                "9M"
+            ],
+            "flashcannon": [
+                "9M"
+            ],
+            "focusblast": [
+                "9M"
+            ],
+            "frustration": [
+                "9M"
+            ],
+            "furycutter": [
+                "9M"
+            ],
+            "gigaimpact": [
+                "9M"
+            ],
+            "gravity": [
+                "9M"
+            ],
+            "headbutt": [
+                "9M"
+            ],
+            "healblock": [
+                "9M"
+            ],
+            "heavyslam": [
+                "9M"
+            ],
+            "hiddenpower": [
+                "9M"
+            ],
+            "honeclaws": [
+                "9M"
+            ],
+            "hyperbeam": [
+                "9M"
+            ],
+            "hypervoice": [
+                "9M"
+            ],
+            "icebeam": [
+                "9M"
+            ],
+            "incinerate": [
+                "9M"
+            ],
+            "irondefense": [
+                "9M"
+            ],
+            "ironhead": [
+                "9M"
+            ],
+            "irontail": [
+                "9M"
+            ],
+            "magnetrise": [
+                "9M"
+            ],
+            "metalburst": [
+                "9M"
+            ],
+            "metalclaw": [
+                "9M"
+            ],
+            "metalsound": [
+                "9M"
+            ],
+            "mudslap": [
+                "9M"
+            ],
+            "naturalgift": [
+                "9M"
+            ],
+            "outrage": [
+                "9M"
+            ],
+            "overheat": [
+                "9M"
+            ],
+            "powergem": [
+                "9M"
+            ],
+            "protect": [
+                "9M"
+            ],
+            "psychup": [
+                "9M"
+            ],
+            "raindance": [
+                "9M"
+            ],
+            "rest": [
+                "9M"
+            ],
+            "return": [
+                "9M"
+            ],
+            "roar": [
+                "9M"
+            ],
+            "roaroftime": [
+                "9M"
+            ],
+            "rockslide": [
+                "9M"
+            ],
+            "rocksmash": [
+                "9M"
+            ],
+            "rocktomb": [
+                "9M"
+            ],
+            "round": [
+                "9M"
+            ],
+            "safeguard": [
+                "9M"
+            ],
+            "sandstorm": [
+                "9M"
+            ],
+            "scaleshot": [
+                "9M"
+            ],
+            "scaryface": [
+                "9M"
+            ],
+            "secretpower": [
+                "9M"
+            ],
+            "shadowclaw": [
+                "9M"
+            ],
+            "shockwave": [
+                "9M"
+            ],
+            "slash": [
+                "9M"
+            ],
+            "sleeptalk": [
+                "9M"
+            ],
+            "snore": [
+                "9M"
+            ],
+            "stealthrock": [
+                "9M"
+            ],
+            "steelbeam": [
+                "9M"
+            ],
+            "stompingtantrum": [
+                "9M"
+            ],
+            "stoneedge": [
+                "9M"
+            ],
+            "strength": [
+                "9M"
+            ],
+            "substitute": [
+                "9M"
+            ],
+            "sunnyday": [
+                "9M"
+            ],
+            "swagger": [
+                "9M"
+            ],
+            "swift": [
+                "9M"
+            ],
+            "takedown": [
+                "9M"
+            ],
+            "terablast": [
+                "9M"
+            ],
+            "thunder": [
+                "9M"
+            ],
+            "thunderbolt": [
+                "9M"
+            ],
+            "thunderwave": [
+                "9M"
+            ],
+            "toxic": [
+                "9M"
+            ],
+            "trick": [
+                "9M"
+            ],
+            "trickroom": [
+                "9M"
+            ],
+            "twister": [
+                "9M"
+            ]
+        }
+    },
+    "palkia": {
+        "inherit": true,
+        "learnset": {
+            "aerialace": [
+                "9M"
+            ],
+            "ancientpower": [
+                "9M"
+            ],
+            "aquaring": [
+                "9M"
+            ],
+            "aquatail": [
+                "9M"
+            ],
+            "aurasphere": [
+                "9M"
+            ],
+            "avalanche": [
+                "9M"
+            ],
+            "blizzard": [
+                "9M"
+            ],
+            "bodypress": [
+                "9M"
+            ],
+            "bodyslam": [
+                "9M"
+            ],
+            "breakingswipe": [
+                "9M"
+            ],
+            "brickbreak": [
+                "9M"
+            ],
+            "brine": [
+                "9M"
+            ],
+            "bulkup": [
+                "9M"
+            ],
+            "bulldoze": [
+                "9M"
+            ],
+            "chillingwater": [
+                "9M"
+            ],
+            "confide": [
+                "9M"
+            ],
+            "cut": [
+                "9M"
+            ],
+            "dive": [
+                "9M"
+            ],
+            "doubleteam": [
+                "9M"
+            ],
+            "dracometeor": [
+                "9M"
+            ],
+            "dragonbreath": [
+                "9M"
+            ],
+            "dragonclaw": [
+                "9M"
+            ],
+            "dragonpulse": [
+                "9M"
+            ],
+            "dragontail": [
+                "9M"
+            ],
+            "dualwingbeat": [
+                "9M"
+            ],
+            "earthpower": [
+                "9M"
+            ],
+            "earthquake": [
+                "9M"
+            ],
+            "echoedvoice": [
+                "9M"
+            ],
+            "endure": [
+                "9M"
+            ],
+            "facade": [
+                "9M"
+            ],
+            "fireblast": [
+                "9M"
+            ],
+            "flamethrower": [
+                "9M"
+            ],
+            "fling": [
+                "9M"
+            ],
+            "focusblast": [
+                "9M"
+            ],
+            "focuspunch": [
+                "9M"
+            ],
+            "frustration": [
+                "9M"
+            ],
+            "furycutter": [
+                "9M"
+            ],
+            "gigaimpact": [
+                "9M"
+            ],
+            "gravity": [
+                "9M"
+            ],
+            "headbutt": [
+                "9M"
+            ],
+            "healblock": [
+                "9M"
+            ],
+            "heavyslam": [
+                "9M"
+            ],
+            "hiddenpower": [
+                "9M"
+            ],
+            "honeclaws": [
+                "9M"
+            ],
+            "hydropump": [
+                "9M"
+            ],
+            "hyperbeam": [
+                "9M"
+            ],
+            "hypervoice": [
+                "9M"
+            ],
+            "icebeam": [
+                "9M"
+            ],
+            "icywind": [
+                "9M"
+            ],
+            "incinerate": [
+                "9M"
+            ],
+            "liquidation": [
+                "9M"
+            ],
+            "mudslap": [
+                "9M"
+            ],
+            "naturalgift": [
+                "9M"
+            ],
+            "outrage": [
+                "9M"
+            ],
+            "powergem": [
+                "9M"
+            ],
+            "protect": [
+                "9M"
+            ],
+            "psychup": [
+                "9M"
+            ],
+            "raindance": [
+                "9M"
+            ],
+            "rest": [
+                "9M"
+            ],
+            "return": [
+                "9M"
+            ],
+            "roar": [
+                "9M"
+            ],
+            "rockslide": [
+                "9M"
+            ],
+            "rocksmash": [
+                "9M"
+            ],
+            "rocktomb": [
+                "9M"
+            ],
+            "round": [
+                "9M"
+            ],
+            "safeguard": [
+                "9M"
+            ],
+            "sandstorm": [
+                "9M"
+            ],
+            "scaleshot": [
+                "9M"
+            ],
+            "scaryface": [
+                "9M"
+            ],
+            "secretpower": [
+                "9M"
+            ],
+            "shadowclaw": [
+                "9M"
+            ],
+            "shockwave": [
+                "9M"
+            ],
+            "slash": [
+                "9M"
+            ],
+            "sleeptalk": [
+                "9M"
+            ],
+            "snore": [
+                "9M"
+            ],
+            "snowscape": [
+                "9M"
+            ],
+            "spacialrend": [
+                "9M"
+            ],
+            "stompingtantrum": [
+                "9M"
+            ],
+            "stoneedge": [
+                "9M"
+            ],
+            "strength": [
+                "9M"
+            ],
+            "substitute": [
+                "9M"
+            ],
+            "sunnyday": [
+                "9M"
+            ],
+            "surf": [
+                "9M"
+            ],
+            "swagger": [
+                "9M"
+            ],
+            "swift": [
+                "9M"
+            ],
+            "takedown": [
+                "9M"
+            ],
+            "terablast": [
+                "9M"
+            ],
+            "thunder": [
+                "9M"
+            ],
+            "thunderbolt": [
+                "9M"
+            ],
+            "thunderwave": [
+                "9M"
+            ],
+            "toxic": [
+                "9M"
+            ],
+            "trick": [
+                "9M"
+            ],
+            "trickroom": [
+                "9M"
+            ],
+            "twister": [
+                "9M"
+            ],
+            "waterfall": [
+                "9M"
+            ],
+            "waterpulse": [
+                "9M"
+            ],
+            "whirlpool": [
+                "9M"
+            ]
+        }
+    },
+    "giratina": {
+        "inherit": true,
+        "learnset": {
+            "aerialace": [
+                "9M"
+            ],
+            "aircutter": [
+                "9M"
+            ],
+            "ancientpower": [
+                "9M"
+            ],
+            "aquatail": [
+                "9M"
+            ],
+            "aurasphere": [
+                "9M"
+            ],
+            "bodyslam": [
+                "9M"
+            ],
+            "breakingswipe": [
+                "9M"
+            ],
+            "brutalswing": [
+                "9M"
+            ],
+            "bulldoze": [
+                "9M"
+            ],
+            "calmmind": [
+                "9M"
+            ],
+            "chargebeam": [
+                "9M"
+            ],
+            "confide": [
+                "9M"
+            ],
+            "confuseray": [
+                "9M"
+            ],
+            "curse": [
+                "9M"
+            ],
+            "cut": [
+                "9M"
+            ],
+            "darkpulse": [
+                "9M"
+            ],
+            "defog": [
+                "9M"
+            ],
+            "destinybond": [
+                "9M"
+            ],
+            "doubleteam": [
+                "9M"
+            ],
+            "dracometeor": [
+                "9M"
+            ],
+            "dragonbreath": [
+                "9M"
+            ],
+            "dragonclaw": [
+                "9M"
+            ],
+            "dragonpulse": [
+                "9M"
+            ],
+            "dragontail": [
+                "9M"
+            ],
+            "dreameater": [
+                "9M"
+            ],
+            "dualwingbeat": [
+                "9M"
+            ],
+            "earthpower": [
+                "9M"
+            ],
+            "earthquake": [
+                "9M"
+            ],
+            "echoedvoice": [
+                "9M"
+            ],
+            "endure": [
+                "9M"
+            ],
+            "energyball": [
+                "9M"
+            ],
+            "facade": [
+                "9M"
+            ],
+            "fly": [
+                "9M"
+            ],
+            "frustration": [
+                "9M"
+            ],
+            "furycutter": [
+                "9M"
+            ],
+            "gigaimpact": [
+                "9M"
+            ],
+            "gravity": [
+                "9M"
+            ],
+            "headbutt": [
+                "9M"
+            ],
+            "healblock": [
+                "9M"
+            ],
+            "hex": [
+                "9M"
+            ],
+            "hiddenpower": [
+                "9M"
+            ],
+            "honeclaws": [
+                "9M"
+            ],
+            "hyperbeam": [
+                "9M"
+            ],
+            "hypervoice": [
+                "9M"
+            ],
+            "icywind": [
+                "9M"
+            ],
+            "ironhead": [
+                "9M"
+            ],
+            "irontail": [
+                "9M"
+            ],
+            "magiccoat": [
+                "9M"
+            ],
+            "mudslap": [
+                "9M"
+            ],
+            "naturalgift": [
+                "9M"
+            ],
+            "ominouswind": [
+                "9M"
+            ],
+            "outrage": [
+                "9M"
+            ],
+            "painsplit": [
+                "9M"
+            ],
+            "payback": [
+                "9M"
+            ],
+            "phantomforce": [
+                "9M"
+            ],
+            "poltergeist": [
+                "9M"
+            ],
+            "protect": [
+                "9M"
+            ],
+            "psychic": [
+                "9M"
+            ],
+            "psychup": [
+                "9M"
+            ],
+            "raindance": [
+                "9M"
+            ],
+            "rest": [
+                "9M"
+            ],
+            "return": [
+                "9M"
+            ],
+            "roar": [
+                "9M"
+            ],
+            "rockclimb": [
+                "9M"
+            ],
+            "rocksmash": [
+                "9M"
+            ],
+            "round": [
+                "9M"
+            ],
+            "safeguard": [
+                "9M"
+            ],
+            "scaryface": [
+                "9M"
+            ],
+            "secretpower": [
+                "9M"
+            ],
+            "shadowball": [
+                "9M"
+            ],
+            "shadowclaw": [
+                "9M"
+            ],
+            "shadowforce": [
+                "9M"
+            ],
+            "shadowsneak": [
+                "9M"
+            ],
+            "shockwave": [
+                "9M"
+            ],
+            "silverwind": [
+                "9M"
+            ],
+            "skittersmack": [
+                "9M"
+            ],
+            "slash": [
+                "9M"
+            ],
+            "sleeptalk": [
+                "9M"
+            ],
+            "snore": [
+                "9M"
+            ],
+            "spite": [
+                "9M"
+            ],
+            "steelwing": [
+                "9M"
+            ],
+            "stoneedge": [
+                "9M"
+            ],
+            "strength": [
+                "9M"
+            ],
+            "substitute": [
+                "9M"
+            ],
+            "sunnyday": [
+                "9M"
+            ],
+            "swagger": [
+                "9M"
+            ],
+            "swift": [
+                "9M"
+            ],
+            "tailwind": [
+                "9M"
+            ],
+            "takedown": [
+                "9M"
+            ],
+            "telekinesis": [
+                "9M"
+            ],
+            "terablast": [
+                "9M"
+            ],
+            "thunder": [
+                "9M"
+            ],
+            "thunderbolt": [
+                "9M"
+            ],
+            "thunderwave": [
+                "9M"
+            ],
+            "toxic": [
+                "9M"
+            ],
+            "twister": [
+                "9M"
+            ],
+            "willowisp": [
+                "9M"
+            ]
+        }
+    },
+    "manaphy": {
+        "inherit": true,
+        "learnset": {
+            "acidarmor": [
+                "9M"
+            ],
+            "alluringvoice": [
+                "9M"
+            ],
+            "ancientpower": [
+                "9M"
+            ],
+            "aquaring": [
+                "9M"
+            ],
+            "batonpass": [
+                "9M"
+            ],
+            "blizzard": [
+                "9M"
+            ],
+            "bounce": [
+                "9M"
+            ],
+            "brine": [
+                "9M"
+            ],
+            "bubble": [
+                "9M"
+            ],
+            "bubblebeam": [
+                "9M"
+            ],
+            "calmmind": [
+                "9M"
+            ],
+            "charm": [
+                "9M"
+            ],
+            "chillingwater": [
+                "9M"
+            ],
+            "confide": [
+                "9M"
+            ],
+            "covet": [
+                "9M"
+            ],
+            "dazzlinggleam": [
+                "9M"
+            ],
+            "disarmingvoice": [
+                "9M"
+            ],
+            "dive": [
+                "9M"
+            ],
+            "doubleteam": [
+                "9M"
+            ],
+            "endure": [
+                "9M"
+            ],
+            "energyball": [
+                "9M"
+            ],
+            "facade": [
+                "9M"
+            ],
+            "faketears": [
+                "9M"
+            ],
+            "flash": [
+                "9M"
+            ],
+            "fling": [
+                "9M"
+            ],
+            "flipturn": [
+                "9M"
+            ],
+            "frustration": [
+                "9M"
+            ],
+            "gigaimpact": [
+                "9M"
+            ],
+            "grassknot": [
+                "9M"
+            ],
+            "haze": [
+                "9M"
+            ],
+            "healbell": [
+                "9M"
+            ],
+            "heartswap": [
+                "9M"
+            ],
+            "helpinghand": [
+                "9M"
+            ],
+            "hiddenpower": [
+                "9M"
+            ],
+            "hydropump": [
+                "9M"
+            ],
+            "hyperbeam": [
+                "9M"
+            ],
+            "icebeam": [
+                "9M"
+            ],
+            "icywind": [
+                "9M"
+            ],
+            "knockoff": [
+                "9M"
+            ],
+            "lastresort": [
+                "9M"
+            ],
+            "lightscreen": [
+                "9M"
+            ],
+            "liquidation": [
+                "9M"
+            ],
+            "mudslap": [
+                "9M"
+            ],
+            "naturalgift": [
+                "9M"
+            ],
+            "protect": [
+                "9M"
+            ],
+            "psybeam": [
+                "9M"
+            ],
+            "psychic": [
+                "9M"
+            ],
+            "psychup": [
+                "9M"
+            ],
+            "raindance": [
+                "9M"
+            ],
+            "reflect": [
+                "9M"
+            ],
+            "rest": [
+                "9M"
+            ],
+            "return": [
+                "9M"
+            ],
+            "round": [
+                "9M"
+            ],
+            "safeguard": [
+                "9M"
+            ],
+            "scald": [
+                "9M"
+            ],
+            "secretpower": [
+                "9M"
+            ],
+            "shadowball": [
+                "9M"
+            ],
+            "signalbeam": [
+                "9M"
+            ],
+            "skillswap": [
+                "9M"
+            ],
+            "sleeptalk": [
+                "9M"
+            ],
+            "snore": [
+                "9M"
+            ],
+            "storedpower": [
+                "9M"
+            ],
+            "substitute": [
+                "9M"
+            ],
+            "supersonic": [
+                "9M"
+            ],
+            "surf": [
+                "9M"
+            ],
+            "swagger": [
+                "9M"
+            ],
+            "swift": [
+                "9M"
+            ],
+            "tailglow": [
+                "9M"
+            ],
+            "takeheart": [
+                "9M"
+            ],
+            "terablast": [
+                "9M"
+            ],
+            "toxic": [
+                "9M"
+            ],
+            "uproar": [
+                "9M"
+            ],
+            "uturn": [
+                "9M"
+            ],
+            "waterfall": [
+                "9M"
+            ],
+            "watergun": [
+                "9M"
+            ],
+            "waterpulse": [
+                "9M"
+            ],
+            "watersport": [
+                "9M"
+            ],
+            "weatherball": [
+                "9M"
+            ],
+            "whirlpool": [
+                "9M"
+            ],
+            "zenheadbutt": [
+                "9M"
+            ],
+            "snowscape": [
+                "9M"
+            ]
+        }
+    },
+    "darkrai": {
+        "inherit": true,
+        "learnset": {
+            "aerialace": [
+                "9M"
+            ],
+            "blizzard": [
+                "9M"
+            ],
+            "brickbreak": [
+                "9M"
+            ],
+            "calmmind": [
+                "9M"
+            ],
+            "chargebeam": [
+                "9M"
+            ],
+            "confide": [
+                "9M"
+            ],
+            "confuseray": [
+                "9M"
+            ],
+            "curse": [
+                "9M"
+            ],
+            "cut": [
+                "9M"
+            ],
+            "darkpulse": [
+                "9M"
+            ],
+            "darkvoid": [
+                "9M"
+            ],
+            "disable": [
+                "9M"
+            ],
+            "doubleteam": [
+                "9M"
+            ],
+            "drainpunch": [
+                "9M"
+            ],
+            "dreameater": [
+                "9M"
+            ],
+            "embargo": [
+                "9M"
+            ],
+            "endure": [
+                "9M"
+            ],
+            "facade": [
+                "9M"
+            ],
+            "feintattack": [
+                "9M"
+            ],
+            "flash": [
+                "9M"
+            ],
+            "fling": [
+                "9M"
+            ],
+            "focusblast": [
+                "9M"
+            ],
+            "focuspunch": [
+                "9M"
+            ],
+            "foulplay": [
+                "9M"
+            ],
+            "frustration": [
+                "9M"
+            ],
+            "gigaimpact": [
+                "9M"
+            ],
+            "haze": [
+                "9M"
+            ],
+            "headbutt": [
+                "9M"
+            ],
+            "hex": [
+                "9M"
+            ],
+            "hiddenpower": [
+                "9M"
+            ],
+            "hyperbeam": [
+                "9M"
+            ],
+            "hypnosis": [
+                "9M"
+            ],
+            "icebeam": [
+                "9M"
+            ],
+            "icywind": [
+                "9M"
+            ],
+            "incinerate": [
+                "9M"
+            ],
+            "knockoff": [
+                "9M"
+            ],
+            "lashout": [
+                "9M"
+            ],
+            "lastresort": [
+                "9M"
+            ],
+            "mudslap": [
+                "9M"
+            ],
+            "nastyplot": [
+                "9M"
+            ],
+            "naturalgift": [
+                "9M"
+            ],
+            "nightmare": [
+                "9M"
+            ],
+            "nightshade": [
+                "9M"
+            ],
+            "ominouswind": [
+                "9M"
+            ],
+            "payback": [
+                "9M"
+            ],
+            "phantomforce": [
+                "9M"
+            ],
+            "poisonjab": [
+                "9M"
+            ],
+            "poweruppunch": [
+                "9M"
+            ],
+            "protect": [
+                "9M"
+            ],
+            "psychic": [
+                "9M"
+            ],
+            "psychup": [
+                "9M"
+            ],
+            "psyshock": [
+                "9M"
+            ],
+            "pursuit": [
+                "9M"
+            ],
+            "quickattack": [
+                "9M"
+            ],
+            "raindance": [
+                "9M"
+            ],
+            "rest": [
+                "9M"
+            ],
+            "retaliate": [
+                "9M"
+            ],
+            "return": [
+                "9M"
+            ],
+            "roaroftime": [
+                "9M"
+            ],
+            "rockclimb": [
+                "9M"
+            ],
+            "rockslide": [
+                "9M"
+            ],
+            "rocksmash": [
+                "9M"
+            ],
+            "rocktomb": [
+                "9M"
+            ],
+            "round": [
+                "9M"
+            ],
+            "scaryface": [
+                "9M"
+            ],
+            "secretpower": [
+                "9M"
+            ],
+            "shadowball": [
+                "9M"
+            ],
+            "shadowclaw": [
+                "9M"
+            ],
+            "shockwave": [
+                "9M"
+            ],
+            "sleeptalk": [
+                "9M"
+            ],
+            "sludgebomb": [
+                "9M"
+            ],
+            "snarl": [
+                "9M"
+            ],
+            "snatch": [
+                "9M"
+            ],
+            "snore": [
+                "9M"
+            ],
+            "spacialrend": [
+                "9M"
+            ],
+            "spite": [
+                "9M"
+            ],
+            "strength": [
+                "9M"
+            ],
+            "substitute": [
+                "9M"
+            ],
+            "suckerpunch": [
+                "9M"
+            ],
+            "sunnyday": [
+                "9M"
+            ],
+            "swagger": [
+                "9M"
+            ],
+            "swift": [
+                "9M"
+            ],
+            "swordsdance": [
+                "9M"
+            ],
+            "taunt": [
+                "9M"
+            ],
+            "terablast": [
+                "9M"
+            ],
+            "thief": [
+                "9M"
+            ],
+            "throatchop": [
+                "9M"
+            ],
+            "thunder": [
+                "9M"
+            ],
+            "thunderbolt": [
+                "9M"
+            ],
+            "thunderwave": [
+                "9M"
+            ],
+            "torment": [
+                "9M"
+            ],
+            "toxic": [
+                "9M"
+            ],
+            "trick": [
+                "9M"
+            ],
+            "willowisp": [
+                "9M"
+            ],
+            "wonderroom": [
+                "9M"
+            ],
+            "xscissor": [
+                "9M"
+            ]
+        }
+    },
+    "shaymin": {
+        "inherit": true,
+        "learnset": {
+            "aircutter": [
+                "9M"
+            ],
+            "airslash": [
+                "9M"
+            ],
+            "aromatherapy": [
+                "9M"
+            ],
+            "batonpass": [
+                "9M"
+            ],
+            "bulletseed": [
+                "9M"
+            ],
+            "celebrate": [
+                "9M"
+            ],
+            "confide": [
+                "9M"
+            ],
+            "covet": [
+                "9M"
+            ],
+            "dazzlinggleam": [
+                "9M"
+            ],
+            "defensecurl": [
+                "9M"
+            ],
+            "disarmingvoice": [
+                "9M"
+            ],
+            "doubleedge": [
+                "9M"
+            ],
+            "doubleteam": [
+                "9M"
+            ],
+            "earthpower": [
+                "9M"
+            ],
+            "endeavor": [
+                "9M"
+            ],
+            "endure": [
+                "9M"
+            ],
+            "energyball": [
+                "9M"
+            ],
+            "facade": [
+                "9M"
+            ],
+            "flash": [
+                "9M"
+            ],
+            "frustration": [
+                "9M"
+            ],
+            "gigadrain": [
+                "9M"
+            ],
+            "gigaimpact": [
+                "9M"
+            ],
+            "grassknot": [
+                "9M"
+            ],
+            "grasswhistle": [
+                "9M"
+            ],
+            "grassyglide": [
+                "9M"
+            ],
+            "grassyterrain": [
+                "9M"
+            ],
+            "growth": [
+                "9M"
+            ],
+            "headbutt": [
+                "9M"
+            ],
+            "healingwish": [
+                "9M"
+            ],
+            "hiddenpower": [
+                "9M"
+            ],
+            "hyperbeam": [
+                "9M"
+            ],
+            "laserfocus": [
+                "9M"
+            ],
+            "lastresort": [
+                "9M"
+            ],
+            "leafstorm": [
+                "9M"
+            ],
+            "leechseed": [
+                "9M"
+            ],
+            "luckychant": [
+                "9M"
+            ],
+            "magicalleaf": [
+                "9M"
+            ],
+            "mudslap": [
+                "9M"
+            ],
+            "naturalgift": [
+                "9M"
+            ],
+            "naturepower": [
+                "9M"
+            ],
+            "ominouswind": [
+                "9M"
+            ],
+            "petalblizzard": [
+                "9M"
+            ],
+            "playrough": [
+                "9M"
+            ],
+            "protect": [
+                "9M"
+            ],
+            "psychic": [
+                "9M"
+            ],
+            "psychup": [
+                "9M"
+            ],
+            "quickattack": [
+                "9M"
+            ],
+            "rest": [
+                "9M"
+            ],
+            "return": [
+                "9M"
+            ],
+            "round": [
+                "9M"
+            ],
+            "safeguard": [
+                "9M"
+            ],
+            "secretpower": [
+                "9M"
+            ],
+            "seedbomb": [
+                "9M"
+            ],
+            "seedflare": [
+                "9M"
+            ],
+            "sleeptalk": [
+                "9M"
+            ],
+            "snore": [
+                "9M"
+            ],
+            "solarbeam": [
+                "9M"
+            ],
+            "substitute": [
+                "9M"
+            ],
+            "sunnyday": [
+                "9M"
+            ],
+            "swagger": [
+                "9M"
+            ],
+            "sweetkiss": [
+                "9M"
+            ],
+            "sweetscent": [
+                "9M"
+            ],
+            "swift": [
+                "9M"
+            ],
+            "swordsdance": [
+                "9M"
+            ],
+            "synthesis": [
+                "9M"
+            ],
+            "tailwind": [
+                "9M"
+            ],
+            "takedown": [
+                "9M"
+            ],
+            "terablast": [
+                "9M"
+            ],
+            "toxic": [
+                "9M"
+            ],
+            "trailblaze": [
+                "9M"
+            ],
+            "worryseed": [
+                "9M"
+            ],
+            "zenheadbutt": [
+                "9M"
+            ]
+        }
+    },
+    "arceus": {
+        "inherit": true,
+        "learnset": {
+            "acidspray": [
+                "9M"
+            ],
+            "aerialace": [
+                "9M"
+            ],
+            "agility": [
+                "9M"
+            ],
+            "airslash": [
+                "9M"
+            ],
+            "ancientpower": [
+                "9M"
+            ],
+            "aquatail": [
+                "9M"
+            ],
+            "aurasphere": [
+                "9M"
+            ],
+            "avalanche": [
+                "9M"
+            ],
+            "blastburn": [
+                "9M"
+            ],
+            "blizzard": [
+                "9M"
+            ],
+            "bodypress": [
+                "9M"
+            ],
+            "bodyslam": [
+                "9M"
+            ],
+            "brickbreak": [
+                "9M"
+            ],
+            "brine": [
+                "9M"
+            ],
+            "bugbuzz": [
+                "9M"
+            ],
+            "bulkup": [
+                "9M"
+            ],
+            "bulldoze": [
+                "9M"
+            ],
+            "bulletseed": [
+                "9M"
+            ],
+            "calmmind": [
+                "9M"
+            ],
+            "chargebeam": [
+                "9M"
+            ],
+            "chillingwater": [
+                "9M"
+            ],
+            "confide": [
+                "9M"
+            ],
+            "confuseray": [
+                "9M"
+            ],
+            "cosmicpower": [
+                "9M"
+            ],
+            "cut": [
+                "9M"
+            ],
+            "darkpulse": [
+                "9M"
+            ],
+            "dazzlinggleam": [
+                "9M"
+            ],
+            "defog": [
+                "9M"
+            ],
+            "dive": [
+                "9M"
+            ],
+            "doubleedge": [
+                "9M"
+            ],
+            "doubleteam": [
+                "9M"
+            ],
+            "dracometeor": [
+                "9M"
+            ],
+            "dragonclaw": [
+                "9M"
+            ],
+            "dragondance": [
+                "9M"
+            ],
+            "dragonpulse": [
+                "9M"
+            ],
+            "dragontail": [
+                "9M"
+            ],
+            "dreameater": [
+                "9M"
+            ],
+            "earthpower": [
+                "9M"
+            ],
+            "earthquake": [
+                "9M"
+            ],
+            "echoedvoice": [
+                "9M"
+            ],
+            "electricterrain": [
+                "9M"
+            ],
+            "endure": [
+                "9M"
+            ],
+            "energyball": [
+                "9M"
+            ],
+            "extremespeed": [
+                "9M"
+            ],
+            "facade": [
+                "9M"
+            ],
+            "fireblast": [
+                "9M"
+            ],
+            "flamethrower": [
+                "9M"
+            ],
+            "flareblitz": [
+                "9M"
+            ],
+            "flash": [
+                "9M"
+            ],
+            "flashcannon": [
+                "9M"
+            ],
+            "fly": [
+                "9M"
+            ],
+            "focusblast": [
+                "9M"
+            ],
+            "foulplay": [
+                "9M"
+            ],
+            "frustration": [
+                "9M"
+            ],
+            "furycutter": [
+                "9M"
+            ],
+            "futuresight": [
+                "9M"
+            ],
+            "gigadrain": [
+                "9M"
+            ],
+            "gigaimpact": [
+                "9M"
+            ],
+            "grassknot": [
+                "9M"
+            ],
+            "grassyterrain": [
+                "9M"
+            ],
+            "gravity": [
+                "9M"
+            ],
+            "gunkshot": [
+                "9M"
+            ],
+            "headbutt": [
+                "9M"
+            ],
+            "healingwish": [
+                "9M"
+            ],
+            "heatwave": [
+                "9M"
+            ],
+            "heavyslam": [
+                "9M"
+            ],
+            "hex": [
+                "9M"
+            ],
+            "hiddenpower": [
+                "9M"
+            ],
+            "honeclaws": [
+                "9M"
+            ],
+            "hurricane": [
+                "9M"
+            ],
+            "hydrocannon": [
+                "9M"
+            ],
+            "hydropump": [
+                "9M"
+            ],
+            "hyperbeam": [
+                "9M"
+            ],
+            "hypervoice": [
+                "9M"
+            ],
+            "icebeam": [
+                "9M"
+            ],
+            "icywind": [
+                "9M"
+            ],
+            "imprison": [
+                "9M"
+            ],
+            "incinerate": [
+                "9M"
+            ],
+            "irondefense": [
+                "9M"
+            ],
+            "ironhead": [
+                "9M"
+            ],
+            "irontail": [
+                "9M"
+            ],
+            "judgment": [
+                "9M"
+            ],
+            "laserfocus": [
+                "9M"
+            ],
+            "lastresort": [
+                "9M"
+            ],
+            "lightscreen": [
+                "9M"
+            ],
+            "liquidation": [
+                "9M"
+            ],
+            "magicalleaf": [
+                "9M"
+            ],
+            "magiccoat": [
+                "9M"
+            ],
+            "meteorbeam": [
+                "9M"
+            ],
+            "mistyterrain": [
+                "9M"
+            ],
+            "mudslap": [
+                "9M"
+            ],
+            "naturalgift": [
+                "9M"
+            ],
+            "ominouswind": [
+                "9M"
+            ],
+            "outrage": [
+                "9M"
+            ],
+            "overheat": [
+                "9M"
+            ],
+            "payback": [
+                "9M"
+            ],
+            "perishsong": [
+                "9M"
+            ],
+            "phantomforce": [
+                "9M"
+            ],
+            "poisonjab": [
+                "9M"
+            ],
+            "powergem": [
+                "9M"
+            ],
+            "protect": [
+                "9M"
+            ],
+            "psychic": [
+                "9M"
+            ],
+            "psychicterrain": [
+                "9M"
+            ],
+            "psychup": [
+                "9M"
+            ],
+            "psyshock": [
+                "9M"
+            ],
+            "punishment": [
+                "9M"
+            ],
+            "quash": [
+                "9M"
+            ],
+            "raindance": [
+                "9M"
+            ],
+            "recover": [
+                "9M"
+            ],
+            "recycle": [
+                "9M"
+            ],
+            "reflect": [
+                "9M"
+            ],
+            "refresh": [
+                "9M"
+            ],
+            "rest": [
+                "9M"
+            ],
+            "retaliate": [
+                "9M"
+            ],
+            "return": [
+                "9M"
+            ],
+            "roar": [
+                "9M"
+            ],
+            "roaroftime": [
+                "9M"
+            ],
+            "rockclimb": [
+                "9M"
+            ],
+            "rockslide": [
+                "9M"
+            ],
+            "rocksmash": [
+                "9M"
+            ],
+            "rocktomb": [
+                "9M"
+            ],
+            "round": [
+                "9M"
+            ],
+            "safeguard": [
+                "9M"
+            ],
+            "sandstorm": [
+                "9M"
+            ],
+            "scaryface": [
+                "9M"
+            ],
+            "scorchingsands": [
+                "9M"
+            ],
+            "secretpower": [
+                "9M"
+            ],
+            "seismictoss": [
+                "9M"
+            ],
+            "shadowball": [
+                "9M"
+            ],
+            "shadowclaw": [
+                "9M"
+            ],
+            "shadowforce": [
+                "9M"
+            ],
+            "shockwave": [
+                "9M"
+            ],
+            "signalbeam": [
+                "9M"
+            ],
+            "silverwind": [
+                "9M"
+            ],
+            "sleeptalk": [
+                "9M"
+            ],
+            "sludgebomb": [
+                "9M"
+            ],
+            "snarl": [
+                "9M"
+            ],
+            "snore": [
+                "9M"
+            ],
+            "solarbeam": [
+                "9M"
+            ],
+            "spacialrend": [
+                "9M"
+            ],
+            "stealthrock": [
+                "9M"
+            ],
+            "steelbeam": [
+                "9M"
+            ],
+            "stompingtantrum": [
+                "9M"
+            ],
+            "stoneedge": [
+                "9M"
+            ],
+            "storedpower": [
+                "9M"
+            ],
+            "strength": [
+                "9M"
+            ],
+            "substitute": [
+                "9M"
+            ],
+            "sunnyday": [
+                "9M"
+            ],
+            "supercellslam": [
+                "9M"
+            ],
+            "surf": [
+                "9M"
+            ],
+            "swagger": [
+                "9M"
+            ],
+            "swift": [
+                "9M"
+            ],
+            "swordsdance": [
+                "9M"
+            ],
+            "tailwind": [
+                "9M"
+            ],
+            "takedown": [
+                "9M"
+            ],
+            "taunt": [
+                "9M"
+            ],
+            "telekinesis": [
+                "9M"
+            ],
+            "terablast": [
+                "9M"
+            ],
+            "thunder": [
+                "9M"
+            ],
+            "thunderbolt": [
+                "9M"
+            ],
+            "thunderwave": [
+                "9M"
+            ],
+            "toxic": [
+                "9M"
+            ],
+            "trailblaze": [
+                "9M"
+            ],
+            "trick": [
+                "9M"
+            ],
+            "trickroom": [
+                "9M"
+            ],
+            "twister": [
+                "9M"
+            ],
+            "waterfall": [
+                "9M"
+            ],
+            "waterpulse": [
+                "9M"
+            ],
+            "whirlpool": [
+                "9M"
+            ],
+            "wildcharge": [
+                "9M"
+            ],
+            "willowisp": [
+                "9M"
+            ],
+            "workup": [
+                "9M"
+            ],
+            "xscissor": [
+                "9M"
+            ],
+            "zenheadbutt": [
+                "9M"
+            ],
+            "snowscape": [
+                "9M"
+            ]
+        }
+    },
+    "victini": {
+        "inherit": true,
+        "learnset": {
+            "batonpass": [
+                "9M"
+            ],
+            "blazekick": [
+                "9M"
+            ],
+            "blueflare": [
+                "9M"
+            ],
+            "boltstrike": [
+                "9M"
+            ],
+            "bounce": [
+                "9M"
+            ],
+            "brickbreak": [
+                "9M"
+            ],
+            "celebrate": [
+                "9M"
+            ],
+            "chargebeam": [
+                "9M"
+            ],
+            "confide": [
+                "9M"
+            ],
+            "confusion": [
+                "9M"
+            ],
+            "dazzlinggleam": [
+                "9M"
+            ],
+            "doubleedge": [
+                "9M"
+            ],
+            "doubleteam": [
+                "9M"
+            ],
+            "embargo": [
+                "9M"
+            ],
+            "encore": [
+                "9M"
+            ],
+            "endure": [
+                "9M"
+            ],
+            "energyball": [
+                "9M"
+            ],
+            "expandingforce": [
+                "9M"
+            ],
+            "facade": [
+                "9M"
+            ],
+            "finalgambit": [
+                "9M"
+            ],
+            "fireblast": [
+                "9M"
+            ],
+            "firepunch": [
+                "9M"
+            ],
+            "firespin": [
+                "9M"
+            ],
+            "flameburst": [
+                "9M"
+            ],
+            "flamecharge": [
+                "9M"
+            ],
+            "flamethrower": [
+                "9M"
+            ],
+            "flareblitz": [
+                "9M"
+            ],
+            "flash": [
+                "9M"
+            ],
+            "fling": [
+                "9M"
+            ],
+            "focusblast": [
+                "9M"
+            ],
+            "focusenergy": [
+                "9M"
+            ],
+            "frustration": [
+                "9M"
+            ],
+            "fusionbolt": [
+                "9M"
+            ],
+            "fusionflare": [
+                "9M"
+            ],
+            "futuresight": [
+                "9M"
+            ],
+            "gigaimpact": [
+                "9M"
+            ],
+            "glaciate": [
+                "9M"
+            ],
+            "grassknot": [
+                "9M"
+            ],
+            "guardswap": [
+                "9M"
+            ],
+            "headbutt": [
+                "9M"
+            ],
+            "heatwave": [
+                "9M"
+            ],
+            "helpinghand": [
+                "9M"
+            ],
+            "hiddenpower": [
+                "9M"
+            ],
+            "hyperbeam": [
+                "9M"
+            ],
+            "incinerate": [
+                "9M"
+            ],
+            "inferno": [
+                "9M"
+            ],
+            "laserfocus": [
+                "9M"
+            ],
+            "lastresort": [
+                "9M"
+            ],
+            "lightscreen": [
+                "9M"
+            ],
+            "magiccoat": [
+                "9M"
+            ],
+            "megakick": [
+                "9M"
+            ],
+            "megapunch": [
+                "9M"
+            ],
+            "mysticalfire": [
+                "9M"
+            ],
+            "overheat": [
+                "9M"
+            ],
+            "powerswap": [
+                "9M"
+            ],
+            "poweruppunch": [
+                "9M"
+            ],
+            "protect": [
+                "9M"
+            ],
+            "psychic": [
+                "9M"
+            ],
+            "psychup": [
+                "9M"
+            ],
+            "psyshock": [
+                "9M"
+            ],
+            "quickattack": [
+                "9M"
+            ],
+            "rest": [
+                "9M"
+            ],
+            "return": [
+                "9M"
+            ],
+            "reversal": [
+                "9M"
+            ],
+            "rocksmash": [
+                "9M"
+            ],
+            "roleplay": [
+                "9M"
+            ],
+            "round": [
+                "9M"
+            ],
+            "safeguard": [
+                "9M"
+            ],
+            "scorchingsands": [
+                "9M"
+            ],
+            "searingshot": [
+                "9M"
+            ],
+            "secretpower": [
+                "9M"
+            ],
+            "shadowball": [
+                "9M"
+            ],
+            "shockwave": [
+                "9M"
+            ],
+            "signalbeam": [
+                "9M"
+            ],
+            "skillswap": [
+                "9M"
+            ],
+            "sleeptalk": [
+                "9M"
+            ],
+            "snore": [
+                "9M"
+            ],
+            "solarbeam": [
+                "9M"
+            ],
+            "speedswap": [
+                "9M"
+            ],
+            "storedpower": [
+                "9M"
+            ],
+            "substitute": [
+                "9M"
+            ],
+            "sunnyday": [
+                "9M"
+            ],
+            "swagger": [
+                "9M"
+            ],
+            "swift": [
+                "9M"
+            ],
+            "taunt": [
+                "9M"
+            ],
+            "telekinesis": [
+                "9M"
+            ],
+            "thunder": [
+                "9M"
+            ],
+            "thunderbolt": [
+                "9M"
+            ],
+            "thunderpunch": [
+                "9M"
+            ],
+            "thunderwave": [
+                "9M"
+            ],
+            "toxic": [
+                "9M"
+            ],
+            "trick": [
+                "9M"
+            ],
+            "trickroom": [
+                "9M"
+            ],
+            "uproar": [
+                "9M"
+            ],
+            "uturn": [
+                "9M"
+            ],
+            "vcreate": [
+                "9M"
+            ],
+            "wildcharge": [
+                "9M"
+            ],
+            "willowisp": [
+                "9M"
+            ],
+            "workup": [
+                "9M"
+            ],
+            "zenheadbutt": [
+                "9M"
+            ],
+            "terablast": [
+                "9M"
+            ],
+            "victorydance": [
+                "9M"
+            ],
+            "veeveevolley": [
+                "9M"
+            ]
+        }
+    },
+    "reshiram": {
+        "inherit": true,
+        "learnset": {
+            "ancientpower": [
+                "9M"
+            ],
+            "blueflare": [
+                "9M"
+            ],
+            "bodypress": [
+                "9M"
+            ],
+            "bodyslam": [
+                "9M"
+            ],
+            "breakingswipe": [
+                "9M"
+            ],
+            "brutalswing": [
+                "9M"
+            ],
+            "confide": [
+                "9M"
+            ],
+            "crunch": [
+                "9M"
+            ],
+            "cut": [
+                "9M"
+            ],
+            "defog": [
+                "9M"
+            ],
+            "doubleedge": [
+                "9M"
+            ],
+            "doubleteam": [
+                "9M"
+            ],
+            "dracometeor": [
+                "9M"
+            ],
+            "dragonbreath": [
+                "9M"
+            ],
+            "dragoncheer": [
+                "9M"
+            ],
+            "dragonclaw": [
+                "9M"
+            ],
+            "dragondance": [
+                "9M"
+            ],
+            "dragonpulse": [
+                "9M"
+            ],
+            "dragonrage": [
+                "9M"
+            ],
+            "dragontail": [
+                "9M"
+            ],
+            "dualwingbeat": [
+                "9M"
+            ],
+            "earthpower": [
+                "9M"
+            ],
+            "echoedvoice": [
+                "9M"
+            ],
+            "endure": [
+                "9M"
+            ],
+            "extrasensory": [
+                "9M"
+            ],
+            "facade": [
+                "9M"
+            ],
+            "fireblast": [
+                "9M"
+            ],
+            "firefang": [
+                "9M"
+            ],
+            "firespin": [
+                "9M"
+            ],
+            "flamecharge": [
+                "9M"
+            ],
+            "flamethrower": [
+                "9M"
+            ],
+            "flareblitz": [
+                "9M"
+            ],
+            "fling": [
+                "9M"
+            ],
+            "fly": [
+                "9M"
+            ],
+            "focusblast": [
+                "9M"
+            ],
+            "frustration": [
+                "9M"
+            ],
+            "fusionflare": [
+                "9M"
+            ],
+            "gigaimpact": [
+                "9M"
+            ],
+            "heatcrash": [
+                "9M"
+            ],
+            "heatwave": [
+                "9M"
+            ],
+            "helpinghand": [
+                "9M"
+            ],
+            "hiddenpower": [
+                "9M"
+            ],
+            "honeclaws": [
+                "9M"
+            ],
+            "hyperbeam": [
+                "9M"
+            ],
+            "hypervoice": [
+                "9M"
+            ],
+            "imprison": [
+                "9M"
+            ],
+            "incinerate": [
+                "9M"
+            ],
+            "laserfocus": [
+                "9M"
+            ],
+            "lightscreen": [
+                "9M"
+            ],
+            "mist": [
+                "9M"
+            ],
+            "mysticalfire": [
+                "9M"
+            ],
+            "nobleroar": [
+                "9M"
+            ],
+            "outrage": [
+                "9M"
+            ],
+            "overheat": [
+                "9M"
+            ],
+            "payback": [
+                "9M"
+            ],
+            "protect": [
+                "9M"
+            ],
+            "psychic": [
+                "9M"
+            ],
+            "raindance": [
+                "9M"
+            ],
+            "reflect": [
+                "9M"
+            ],
+            "rest": [
+                "9M"
+            ],
+            "return": [
+                "9M"
+            ],
+            "roar": [
+                "9M"
+            ],
+            "rockslide": [
+                "9M"
+            ],
+            "rocksmash": [
+                "9M"
+            ],
+            "rocktomb": [
+                "9M"
+            ],
+            "roost": [
+                "9M"
+            ],
+            "round": [
+                "9M"
+            ],
+            "safeguard": [
+                "9M"
+            ],
+            "scaleshot": [
+                "9M"
+            ],
+            "scaryface": [
+                "9M"
+            ],
+            "scorchingsands": [
+                "9M"
+            ],
+            "secretpower": [
+                "9M"
+            ],
+            "shadowball": [
+                "9M"
+            ],
+            "shadowclaw": [
+                "9M"
+            ],
+            "slash": [
+                "9M"
+            ],
+            "sleeptalk": [
+                "9M"
+            ],
+            "snore": [
+                "9M"
+            ],
+            "solarbeam": [
+                "9M"
+            ],
+            "steelwing": [
+                "9M"
+            ],
+            "stoneedge": [
+                "9M"
+            ],
+            "strength": [
+                "9M"
+            ],
+            "substitute": [
+                "9M"
+            ],
+            "sunnyday": [
+                "9M"
+            ],
+            "swagger": [
+                "9M"
+            ],
+            "swift": [
+                "9M"
+            ],
+            "tailwind": [
+                "9M"
+            ],
+            "takedown": [
+                "9M"
+            ],
+            "terablast": [
+                "9M"
+            ],
+            "toxic": [
+                "9M"
+            ],
+            "weatherball": [
+                "9M"
+            ],
+            "willowisp": [
+                "9M"
+            ],
+            "zenheadbutt": [
+                "9M"
+            ]
+        }
+    },
+    "zekrom": {
+        "inherit": true,
+        "learnset": {
+            "ancientpower": [
+                "9M"
+            ],
+            "bodypress": [
+                "9M"
+            ],
+            "bodyslam": [
+                "9M"
+            ],
+            "boltstrike": [
+                "9M"
+            ],
+            "breakingswipe": [
+                "9M"
+            ],
+            "brickbreak": [
+                "9M"
+            ],
+            "brutalswing": [
+                "9M"
+            ],
+            "charge": [
+                "9M"
+            ],
+            "chargebeam": [
+                "9M"
+            ],
+            "confide": [
+                "9M"
+            ],
+            "crunch": [
+                "9M"
+            ],
+            "cut": [
+                "9M"
+            ],
+            "defog": [
+                "9M"
+            ],
+            "doubleedge": [
+                "9M"
+            ],
+            "doubleteam": [
+                "9M"
+            ],
+            "dracometeor": [
+                "9M"
+            ],
+            "dragonbreath": [
+                "9M"
+            ],
+            "dragoncheer": [
+                "9M"
+            ],
+            "dragonclaw": [
+                "9M"
+            ],
+            "dragondance": [
+                "9M"
+            ],
+            "dragonpulse": [
+                "9M"
+            ],
+            "dragonrage": [
+                "9M"
+            ],
+            "dragontail": [
+                "9M"
+            ],
+            "dualwingbeat": [
+                "9M"
+            ],
+            "earthpower": [
+                "9M"
+            ],
+            "echoedvoice": [
+                "9M"
+            ],
+            "electricterrain": [
+                "9M"
+            ],
+            "electroball": [
+                "9M"
+            ],
+            "endure": [
+                "9M"
+            ],
+            "facade": [
+                "9M"
+            ],
+            "flash": [
+                "9M"
+            ],
+            "flashcannon": [
+                "9M"
+            ],
+            "fling": [
+                "9M"
+            ],
+            "fly": [
+                "9M"
+            ],
+            "focusblast": [
+                "9M"
+            ],
+            "focuspunch": [
+                "9M"
+            ],
+            "frustration": [
+                "9M"
+            ],
+            "fusionbolt": [
+                "9M"
+            ],
+            "gigaimpact": [
+                "9M"
+            ],
+            "haze": [
+                "9M"
+            ],
+            "helpinghand": [
+                "9M"
+            ],
+            "hiddenpower": [
+                "9M"
+            ],
+            "honeclaws": [
+                "9M"
+            ],
+            "hyperbeam": [
+                "9M"
+            ],
+            "hypervoice": [
+                "9M"
+            ],
+            "imprison": [
+                "9M"
+            ],
+            "laserfocus": [
+                "9M"
+            ],
+            "lightscreen": [
+                "9M"
+            ],
+            "magnetrise": [
+                "9M"
+            ],
+            "nobleroar": [
+                "9M"
+            ],
+            "outrage": [
+                "9M"
+            ],
+            "payback": [
+                "9M"
+            ],
+            "protect": [
+                "9M"
+            ],
+            "psychic": [
+                "9M"
+            ],
+            "raindance": [
+                "9M"
+            ],
+            "reflect": [
+                "9M"
+            ],
+            "rest": [
+                "9M"
+            ],
+            "return": [
+                "9M"
+            ],
+            "risingvoltage": [
+                "9M"
+            ],
+            "roar": [
+                "9M"
+            ],
+            "rockslide": [
+                "9M"
+            ],
+            "rocksmash": [
+                "9M"
+            ],
+            "rocktomb": [
+                "9M"
+            ],
+            "roost": [
+                "9M"
+            ],
+            "round": [
+                "9M"
+            ],
+            "safeguard": [
+                "9M"
+            ],
+            "scaleshot": [
+                "9M"
+            ],
+            "scaryface": [
+                "9M"
+            ],
+            "secretpower": [
+                "9M"
+            ],
+            "shadowball": [
+                "9M"
+            ],
+            "shadowclaw": [
+                "9M"
+            ],
+            "shockwave": [
+                "9M"
+            ],
+            "signalbeam": [
+                "9M"
+            ],
+            "slash": [
+                "9M"
+            ],
+            "sleeptalk": [
+                "9M"
+            ],
+            "snore": [
+                "9M"
+            ],
+            "stealthrock": [
+                "9M"
+            ],
+            "steelwing": [
+                "9M"
+            ],
+            "stoneedge": [
+                "9M"
+            ],
+            "strength": [
+                "9M"
+            ],
+            "substitute": [
+                "9M"
+            ],
+            "sunnyday": [
+                "9M"
+            ],
+            "supercellslam": [
+                "9M"
+            ],
+            "swagger": [
+                "9M"
+            ],
+            "swift": [
+                "9M"
+            ],
+            "tailwind": [
+                "9M"
+            ],
+            "takedown": [
+                "9M"
+            ],
+            "terablast": [
+                "9M"
+            ],
+            "thunder": [
+                "9M"
+            ],
+            "thunderbolt": [
+                "9M"
+            ],
+            "thunderfang": [
+                "9M"
+            ],
+            "thunderpunch": [
+                "9M"
+            ],
+            "thunderwave": [
+                "9M"
+            ],
+            "toxic": [
+                "9M"
+            ],
+            "voltswitch": [
+                "9M"
+            ],
+            "weatherball": [
+                "9M"
+            ],
+            "wildcharge": [
+                "9M"
+            ],
+            "zenheadbutt": [
+                "9M"
+            ]
+        }
+    },
+    "kyuremwhite": {
+        "inherit": true,
+        "learnset": {
+            "aerialace": [
+                "9M"
+            ],
+            "ancientpower": [
+                "9M"
+            ],
+            "avalanche": [
+                "9M"
+            ],
+            "blizzard": [
+                "9M"
+            ],
+            "bodypress": [
+                "9M"
+            ],
+            "bodyslam": [
+                "9M"
+            ],
+            "breakingswipe": [
+                "9M"
+            ],
+            "brutalswing": [
+                "9M"
+            ],
+            "confide": [
+                "9M"
+            ],
+            "cut": [
+                "9M"
+            ],
+            "doubleteam": [
+                "9M"
+            ],
+            "dracometeor": [
+                "9M"
+            ],
+            "dragonbreath": [
+                "9M"
+            ],
+            "dragoncheer": [
+                "9M"
+            ],
+            "dragonclaw": [
+                "9M"
+            ],
+            "dragondance": [
+                "9M"
+            ],
+            "dragonpulse": [
+                "9M"
+            ],
+            "dragonrage": [
+                "9M"
+            ],
+            "dragontail": [
+                "9M"
+            ],
+            "dualwingbeat": [
+                "9M"
+            ],
+            "earthpower": [
+                "9M"
+            ],
+            "echoedvoice": [
+                "9M"
+            ],
+            "endeavor": [
+                "9M"
+            ],
+            "endure": [
+                "9M"
+            ],
+            "facade": [
+                "9M"
+            ],
+            "flashcannon": [
+                "9M"
+            ],
+            "fling": [
+                "9M"
+            ],
+            "fly": [
+                "9M"
+            ],
+            "focusblast": [
+                "9M"
+            ],
+            "freezedry": [
+                "9M"
+            ],
+            "frustration": [
+                "9M"
+            ],
+            "fusionflare": [
+                "9M"
+            ],
+            "gigaimpact": [
+                "9M"
+            ],
+            "helpinghand": [
+                "9M"
+            ],
+            "hiddenpower": [
+                "9M"
+            ],
+            "honeclaws": [
+                "9M"
+            ],
+            "hyperbeam": [
+                "9M"
+            ],
+            "hypervoice": [
+                "9M"
+            ],
+            "icebeam": [
+                "9M"
+            ],
+            "iceburn": [
+                "9M"
+            ],
+            "icefang": [
+                "9M"
+            ],
+            "iciclespear": [
+                "9M"
+            ],
+            "icywind": [
+                "9M"
+            ],
+            "imprison": [
+                "9M"
+            ],
+            "ironhead": [
+                "9M"
+            ],
+            "laserfocus": [
+                "9M"
+            ],
+            "lightscreen": [
+                "9M"
+            ],
+            "nobleroar": [
+                "9M"
+            ],
+            "outrage": [
+                "9M"
+            ],
+            "payback": [
+                "9M"
+            ],
+            "protect": [
+                "9M"
+            ],
+            "psychic": [
+                "9M"
+            ],
+            "raindance": [
+                "9M"
+            ],
+            "reflect": [
+                "9M"
+            ],
+            "rest": [
+                "9M"
+            ],
+            "return": [
+                "9M"
+            ],
+            "roar": [
+                "9M"
+            ],
+            "rockslide": [
+                "9M"
+            ],
+            "rocksmash": [
+                "9M"
+            ],
+            "rocktomb": [
+                "9M"
+            ],
+            "roost": [
+                "9M"
+            ],
+            "round": [
+                "9M"
+            ],
+            "safeguard": [
+                "9M"
+            ],
+            "scaleshot": [
+                "9M"
+            ],
+            "scaryface": [
+                "9M"
+            ],
+            "secretpower": [
+                "9M"
+            ],
+            "shadowball": [
+                "9M"
+            ],
+            "shadowclaw": [
+                "9M"
+            ],
+            "sheercold": [
+                "9M"
+            ],
+            "signalbeam": [
+                "9M"
+            ],
+            "slash": [
+                "9M"
+            ],
+            "sleeptalk": [
+                "9M"
+            ],
+            "snore": [
+                "9M"
+            ],
+            "snowscape": [
+                "9M"
+            ],
+            "steelwing": [
+                "9M"
+            ],
+            "stoneedge": [
+                "9M"
+            ],
+            "strength": [
+                "9M"
+            ],
+            "substitute": [
+                "9M"
+            ],
+            "sunnyday": [
+                "9M"
+            ],
+            "swagger": [
+                "9M"
+            ],
+            "swift": [
+                "9M"
+            ],
+            "takedown": [
+                "9M"
+            ],
+            "terablast": [
+                "9M"
+            ],
+            "toxic": [
+                "9M"
+            ],
+            "weatherball": [
+                "9M"
+            ],
+            "zenheadbutt": [
+                "9M"
+            ]
+        }
+    },
+    "kyuremblack": {
+        "inherit": true,
+        "learnset": {
+            "aerialace": [
+                "9M"
+            ],
+            "ancientpower": [
+                "9M"
+            ],
+            "avalanche": [
+                "9M"
+            ],
+            "blizzard": [
+                "9M"
+            ],
+            "bodypress": [
+                "9M"
+            ],
+            "bodyslam": [
+                "9M"
+            ],
+            "breakingswipe": [
+                "9M"
+            ],
+            "brutalswing": [
+                "9M"
+            ],
+            "confide": [
+                "9M"
+            ],
+            "cut": [
+                "9M"
+            ],
+            "doubleteam": [
+                "9M"
+            ],
+            "dracometeor": [
+                "9M"
+            ],
+            "dragonbreath": [
+                "9M"
+            ],
+            "dragoncheer": [
+                "9M"
+            ],
+            "dragonclaw": [
+                "9M"
+            ],
+            "dragondance": [
+                "9M"
+            ],
+            "dragonpulse": [
+                "9M"
+            ],
+            "dragonrage": [
+                "9M"
+            ],
+            "dragontail": [
+                "9M"
+            ],
+            "dualwingbeat": [
+                "9M"
+            ],
+            "earthpower": [
+                "9M"
+            ],
+            "echoedvoice": [
+                "9M"
+            ],
+            "endeavor": [
+                "9M"
+            ],
+            "endure": [
+                "9M"
+            ],
+            "facade": [
+                "9M"
+            ],
+            "flashcannon": [
+                "9M"
+            ],
+            "fling": [
+                "9M"
+            ],
+            "fly": [
+                "9M"
+            ],
+            "focusblast": [
+                "9M"
+            ],
+            "freezedry": [
+                "9M"
+            ],
+            "freezeshock": [
+                "9M"
+            ],
+            "frustration": [
+                "9M"
+            ],
+            "fusionbolt": [
+                "9M"
+            ],
+            "gigaimpact": [
+                "9M"
+            ],
+            "helpinghand": [
+                "9M"
+            ],
+            "hiddenpower": [
+                "9M"
+            ],
+            "honeclaws": [
+                "9M"
+            ],
+            "hyperbeam": [
+                "9M"
+            ],
+            "hypervoice": [
+                "9M"
+            ],
+            "icebeam": [
+                "9M"
+            ],
+            "icefang": [
+                "9M"
+            ],
+            "iciclespear": [
+                "9M"
+            ],
+            "icywind": [
+                "9M"
+            ],
+            "imprison": [
+                "9M"
+            ],
+            "ironhead": [
+                "9M"
+            ],
+            "laserfocus": [
+                "9M"
+            ],
+            "lightscreen": [
+                "9M"
+            ],
+            "nobleroar": [
+                "9M"
+            ],
+            "outrage": [
+                "9M"
+            ],
+            "payback": [
+                "9M"
+            ],
+            "protect": [
+                "9M"
+            ],
+            "psychic": [
+                "9M"
+            ],
+            "raindance": [
+                "9M"
+            ],
+            "reflect": [
+                "9M"
+            ],
+            "rest": [
+                "9M"
+            ],
+            "return": [
+                "9M"
+            ],
+            "roar": [
+                "9M"
+            ],
+            "rockslide": [
+                "9M"
+            ],
+            "rocksmash": [
+                "9M"
+            ],
+            "rocktomb": [
+                "9M"
+            ],
+            "roost": [
+                "9M"
+            ],
+            "round": [
+                "9M"
+            ],
+            "safeguard": [
+                "9M"
+            ],
+            "scaleshot": [
+                "9M"
+            ],
+            "scaryface": [
+                "9M"
+            ],
+            "secretpower": [
+                "9M"
+            ],
+            "shadowball": [
+                "9M"
+            ],
+            "shadowclaw": [
+                "9M"
+            ],
+            "sheercold": [
+                "9M"
+            ],
+            "signalbeam": [
+                "9M"
+            ],
+            "slash": [
+                "9M"
+            ],
+            "sleeptalk": [
+                "9M"
+            ],
+            "snore": [
+                "9M"
+            ],
+            "snowscape": [
+                "9M"
+            ],
+            "steelwing": [
+                "9M"
+            ],
+            "stoneedge": [
+                "9M"
+            ],
+            "strength": [
+                "9M"
+            ],
+            "substitute": [
+                "9M"
+            ],
+            "sunnyday": [
+                "9M"
+            ],
+            "swagger": [
+                "9M"
+            ],
+            "swift": [
+                "9M"
+            ],
+            "takedown": [
+                "9M"
+            ],
+            "terablast": [
+                "9M"
+            ],
+            "toxic": [
+                "9M"
+            ],
+            "weatherball": [
+                "9M"
+            ],
+            "zenheadbutt": [
+                "9M"
+            ],
+            "superpower": [
+                "9M"
+            ],
+            "icepunch": [
+                "9M"
+            ]
+        }
+    },
+    "keldeo": {
+        "inherit": true,
+        "learnset": {
+            "aerialace": [
+                "9M"
+            ],
+            "airslash": [
+                "9M"
+            ],
+            "aquajet": [
+                "9M"
+            ],
+            "aquatail": [
+                "9M"
+            ],
+            "aurasphere": [
+                "9M"
+            ],
+            "batonpass": [
+                "9M"
+            ],
+            "bounce": [
+                "9M"
+            ],
+            "brickbreak": [
+                "9M"
+            ],
+            "bubblebeam": [
+                "9M"
+            ],
+            "calmmind": [
+                "9M"
+            ],
+            "chillingwater": [
+                "9M"
+            ],
+            "closecombat": [
+                "9M"
+            ],
+            "coaching": [
+                "9M"
+            ],
+            "confide": [
+                "9M"
+            ],
+            "covet": [
+                "9M"
+            ],
+            "cut": [
+                "9M"
+            ],
+            "doubleedge": [
+                "9M"
+            ],
+            "doublekick": [
+                "9M"
+            ],
+            "doubleteam": [
+                "9M"
+            ],
+            "endeavor": [
+                "9M"
+            ],
+            "endure": [
+                "9M"
+            ],
+            "facade": [
+                "9M"
+            ],
+            "falseswipe": [
+                "9M"
+            ],
+            "flipturn": [
+                "9M"
+            ],
+            "focusblast": [
+                "9M"
+            ],
+            "frustration": [
+                "9M"
+            ],
+            "gigaimpact": [
+                "9M"
+            ],
+            "helpinghand": [
+                "9M"
+            ],
+            "hiddenpower": [
+                "9M"
+            ],
+            "hydropump": [
+                "9M"
+            ],
+            "hyperbeam": [
+                "9M"
+            ],
+            "icywind": [
+                "9M"
+            ],
+            "lastresort": [
+                "9M"
+            ],
+            "leer": [
+                "9M"
+            ],
+            "liquidation": [
+                "9M"
+            ],
+            "lowkick": [
+                "9M"
+            ],
+            "megahorn": [
+                "9M"
+            ],
+            "muddywater": [
+                "9M"
+            ],
+            "painsplit": [
+                "9M"
+            ],
+            "poisonjab": [
+                "9M"
+            ],
+            "protect": [
+                "9M"
+            ],
+            "psychup": [
+                "9M"
+            ],
+            "quickguard": [
+                "9M"
+            ],
+            "raindance": [
+                "9M"
+            ],
+            "reflect": [
+                "9M"
+            ],
+            "rest": [
+                "9M"
+            ],
+            "retaliate": [
+                "9M"
+            ],
+            "return": [
+                "9M"
+            ],
+            "revenge": [
+                "9M"
+            ],
+            "reversal": [
+                "9M"
+            ],
+            "roar": [
+                "9M"
+            ],
+            "rocksmash": [
+                "9M"
+            ],
+            "round": [
+                "9M"
+            ],
+            "sacredsword": [
+                "9M"
+            ],
+            "safeguard": [
+                "9M"
+            ],
+            "scald": [
+                "9M"
+            ],
+            "secretpower": [
+                "9M"
+            ],
+            "secretsword": [
+                "9M"
+            ],
+            "sleeptalk": [
+                "9M"
+            ],
+            "smartstrike": [
+                "9M"
+            ],
+            "snore": [
+                "9M"
+            ],
+            "stoneedge": [
+                "9M"
+            ],
+            "strength": [
+                "9M"
+            ],
+            "substitute": [
+                "9M"
+            ],
+            "sunnyday": [
+                "9M"
+            ],
+            "superpower": [
+                "9M"
+            ],
+            "surf": [
+                "9M"
+            ],
+            "swagger": [
+                "9M"
+            ],
+            "swift": [
+                "9M"
+            ],
+            "swordsdance": [
+                "9M"
+            ],
+            "takedown": [
+                "9M"
+            ],
+            "taunt": [
+                "9M"
+            ],
+            "terablast": [
+                "9M"
+            ],
+            "toxic": [
+                "9M"
+            ],
+            "trailblaze": [
+                "9M"
+            ],
+            "upperhand": [
+                "9M"
+            ],
+            "vacuumwave": [
+                "9M"
+            ],
+            "waterpulse": [
+                "9M"
+            ],
+            "workup": [
+                "9M"
+            ],
+            "xscissor": [
+                "9M"
+            ],
+            "snowscape": [
+                "9M"
+            ]
+        }
+    },
+    "meloetta": {
+        "inherit": true,
+        "learnset": {
+            "acrobatics": [
+                "9M"
+            ],
+            "alluringvoice": [
+                "9M"
+            ],
+            "allyswitch": [
+                "9M"
+            ],
+            "batonpass": [
+                "9M"
+            ],
+            "brickbreak": [
+                "9M"
+            ],
+            "calmmind": [
+                "9M"
+            ],
+            "celebrate": [
+                "9M"
+            ],
+            "chargebeam": [
+                "9M"
+            ],
+            "charm": [
+                "9M"
+            ],
+            "closecombat": [
+                "9M"
+            ],
+            "coaching": [
+                "9M"
+            ],
+            "confide": [
+                "9M"
+            ],
+            "confusion": [
+                "9M"
+            ],
+            "covet": [
+                "9M"
+            ],
+            "dazzlinggleam": [
+                "9M"
+            ],
+            "disarmingvoice": [
+                "9M"
+            ],
+            "doubleteam": [
+                "9M"
+            ],
+            "drainpunch": [
+                "9M"
+            ],
+            "dreameater": [
+                "9M"
+            ],
+            "dualchop": [
+                "9M"
+            ],
+            "echoedvoice": [
+                "9M"
+            ],
+            "embargo": [
+                "9M"
+            ],
+            "endure": [
+                "9M"
+            ],
+            "energyball": [
+                "9M"
+            ],
+            "facade": [
+                "9M"
+            ],
+            "faketears": [
+                "9M"
+            ],
+            "firepunch": [
+                "9M"
+            ],
+            "flash": [
+                "9M"
+            ],
+            "fling": [
+                "9M"
+            ],
+            "focusblast": [
+                "9M"
+            ],
+            "focuspunch": [
+                "9M"
+            ],
+            "frustration": [
+                "9M"
+            ],
+            "gigaimpact": [
+                "9M"
+            ],
+            "grassknot": [
+                "9M"
+            ],
+            "gravity": [
+                "9M"
+            ],
+            "healbell": [
+                "9M"
+            ],
+            "helpinghand": [
+                "9M"
+            ],
+            "hiddenpower": [
+                "9M"
+            ],
+            "honeclaws": [
+                "9M"
+            ],
+            "hyperbeam": [
+                "9M"
+            ],
+            "hypervoice": [
+                "9M"
+            ],
+            "icepunch": [
+                "9M"
+            ],
+            "knockoff": [
+                "9M"
+            ],
+            "laserfocus": [
+                "9M"
+            ],
+            "lastresort": [
+                "9M"
+            ],
+            "lightscreen": [
+                "9M"
+            ],
+            "lowkick": [
+                "9M"
+            ],
+            "lowsweep": [
+                "9M"
+            ],
+            "magiccoat": [
+                "9M"
+            ],
+            "magicroom": [
+                "9M"
+            ],
+            "metronome": [
+                "9M"
+            ],
+            "payback": [
+                "9M"
+            ],
+            "perishsong": [
+                "9M"
+            ],
+            "playrough": [
+                "9M"
+            ],
+            "poweruppunch": [
+                "9M"
+            ],
+            "protect": [
+                "9M"
+            ],
+            "psybeam": [
+                "9M"
+            ],
+            "psychic": [
+                "9M"
+            ],
+            "psychup": [
+                "9M"
+            ],
+            "psyshock": [
+                "9M"
+            ],
+            "quickattack": [
+                "9M"
+            ],
+            "raindance": [
+                "9M"
+            ],
+            "recycle": [
+                "9M"
+            ],
+            "relicsong": [
+                "9M"
+            ],
+            "rest": [
+                "9M"
+            ],
+            "retaliate": [
+                "9M"
+            ],
+            "return": [
+                "9M"
+            ],
+            "reversal": [
+                "9M"
+            ],
+            "rocksmash": [
+                "9M"
+            ],
+            "roleplay": [
+                "9M"
+            ],
+            "round": [
+                "9M"
+            ],
+            "safeguard": [
+                "9M"
+            ],
+            "secretpower": [
+                "9M"
+            ],
+            "shadowball": [
+                "9M"
+            ],
+            "shadowclaw": [
+                "9M"
+            ],
+            "shockwave": [
+                "9M"
+            ],
+            "signalbeam": [
+                "9M"
+            ],
+            "sing": [
+                "9M"
+            ],
+            "skillswap": [
+                "9M"
+            ],
+            "sleeptalk": [
+                "9M"
+            ],
+            "snatch": [
+                "9M"
+            ],
+            "snore": [
+                "9M"
+            ],
+            "stoneedge": [
+                "9M"
+            ],
+            "strength": [
+                "9M"
+            ],
+            "substitute": [
+                "9M"
+            ],
+            "sunnyday": [
+                "9M"
+            ],
+            "swagger": [
+                "9M"
+            ],
+            "swift": [
+                "9M"
+            ],
+            "swordsdance": [
+                "9M"
+            ],
+            "teeterdance": [
+                "9M"
+            ],
+            "telekinesis": [
+                "9M"
+            ],
+            "terablast": [
+                "9M"
+            ],
+            "thunder": [
+                "9M"
+            ],
+            "thunderbolt": [
+                "9M"
+            ],
+            "thunderpunch": [
+                "9M"
+            ],
+            "thunderwave": [
+                "9M"
+            ],
+            "toxic": [
+                "9M"
+            ],
+            "trick": [
+                "9M"
+            ],
+            "trickroom": [
+                "9M"
+            ],
+            "tripleaxel": [
+                "9M"
+            ],
+            "uproar": [
+                "9M"
+            ],
+            "uturn": [
+                "9M"
+            ],
+            "wakeupslap": [
+                "9M"
+            ],
+            "wonderroom": [
+                "9M"
+            ],
+            "workup": [
+                "9M"
+            ],
+            "zenheadbutt": [
+                "9M"
+            ]
+        }
+    },
+    "genesect": {
+        "inherit": true,
+        "learnset": {
+            "aerialace": [
+                "9M"
+            ],
+            "allyswitch": [
+                "9M"
+            ],
+            "assurance": [
+                "9M"
+            ],
+            "blazekick": [
+                "9M"
+            ],
+            "blizzard": [
+                "9M"
+            ],
+            "bugbite": [
+                "9M"
+            ],
+            "bugbuzz": [
+                "9M"
+            ],
+            "chargebeam": [
+                "9M"
+            ],
+            "confide": [
+                "9M"
+            ],
+            "darkpulse": [
+                "9M"
+            ],
+            "doubleteam": [
+                "9M"
+            ],
+            "electroweb": [
+                "9M"
+            ],
+            "endure": [
+                "9M"
+            ],
+            "energyball": [
+                "9M"
+            ],
+            "explosion": [
+                "9M"
+            ],
+            "extremespeed": [
+                "9M"
+            ],
+            "facade": [
+                "9M"
+            ],
+            "fellstinger": [
+                "9M"
+            ],
+            "flamecharge": [
+                "9M"
+            ],
+            "flamethrower": [
+                "9M"
+            ],
+            "flash": [
+                "9M"
+            ],
+            "flashcannon": [
+                "9M"
+            ],
+            "fly": [
+                "9M"
+            ],
+            "frustration": [
+                "9M"
+            ],
+            "furycutter": [
+                "9M"
+            ],
+            "gigadrain": [
+                "9M"
+            ],
+            "gigaimpact": [
+                "9M"
+            ],
+            "gravity": [
+                "9M"
+            ],
+            "gunkshot": [
+                "9M"
+            ],
+            "hiddenpower": [
+                "9M"
+            ],
+            "honeclaws": [
+                "9M"
+            ],
+            "hyperbeam": [
+                "9M"
+            ],
+            "icebeam": [
+                "9M"
+            ],
+            "infestation": [
+                "9M"
+            ],
+            "irondefense": [
+                "9M"
+            ],
+            "ironhead": [
+                "9M"
+            ],
+            "lastresort": [
+                "9M"
+            ],
+            "leechlife": [
+                "9M"
+            ],
+            "lightscreen": [
+                "9M"
+            ],
+            "lockon": [
+                "9M"
+            ],
+            "magiccoat": [
+                "9M"
+            ],
+            "magnetbomb": [
+                "9M"
+            ],
+            "magnetrise": [
+                "9M"
+            ],
+            "metalclaw": [
+                "9M"
+            ],
+            "metalsound": [
+                "9M"
+            ],
+            "protect": [
+                "9M"
+            ],
+            "psychic": [
+                "9M"
+            ],
+            "quickattack": [
+                "9M"
+            ],
+            "recycle": [
+                "9M"
+            ],
+            "reflect": [
+                "9M"
+            ],
+            "rest": [
+                "9M"
+            ],
+            "return": [
+                "9M"
+            ],
+            "rockpolish": [
+                "9M"
+            ],
+            "round": [
+                "9M"
+            ],
+            "screech": [
+                "9M"
+            ],
+            "secretpower": [
+                "9M"
+            ],
+            "selfdestruct": [
+                "9M"
+            ],
+            "shadowclaw": [
+                "9M"
+            ],
+            "shiftgear": [
+                "9M"
+            ],
+            "shockwave": [
+                "9M"
+            ],
+            "signalbeam": [
+                "9M"
+            ],
+            "simplebeam": [
+                "9M"
+            ],
+            "slash": [
+                "9M"
+            ],
+            "sleeptalk": [
+                "9M"
+            ],
+            "snore": [
+                "9M"
+            ],
+            "solarbeam": [
+                "9M"
+            ],
+            "steelbeam": [
+                "9M"
+            ],
+            "strugglebug": [
+                "9M"
+            ],
+            "substitute": [
+                "9M"
+            ],
+            "swagger": [
+                "9M"
+            ],
+            "swift": [
+                "9M"
+            ],
+            "technoblast": [
+                "9M"
+            ],
+            "telekinesis": [
+                "9M"
+            ],
+            "thunder": [
+                "9M"
+            ],
+            "thunderbolt": [
+                "9M"
+            ],
+            "thunderwave": [
+                "9M"
+            ],
+            "toxic": [
+                "9M"
+            ],
+            "triattack": [
+                "9M"
+            ],
+            "uturn": [
+                "9M"
+            ],
+            "xscissor": [
+                "9M"
+            ],
+            "zapcannon": [
+                "9M"
+            ],
+            "zenheadbutt": [
+                "9M"
+            ],
+            "terablast": [
+                "9M"
+            ]
+        }
+    },
+    "xerneas": {
+        "inherit": true,
+        "learnset": {
+            "aromatherapy": [
+                "9M"
+            ],
+            "aurorabeam": [
+                "9M"
+            ],
+            "block": [
+                "9M"
+            ],
+            "bodyslam": [
+                "9M"
+            ],
+            "calmmind": [
+                "9M"
+            ],
+            "closecombat": [
+                "9M"
+            ],
+            "confide": [
+                "9M"
+            ],
+            "cut": [
+                "9M"
+            ],
+            "dazzlinggleam": [
+                "9M"
+            ],
+            "defog": [
+                "9M"
+            ],
+            "doubleteam": [
+                "9M"
+            ],
+            "drainingkiss": [
+                "9M"
+            ],
+            "echoedvoice": [
+                "9M"
+            ],
+            "endeavor": [
+                "9M"
+            ],
+            "endure": [
+                "9M"
+            ],
+            "facade": [
+                "9M"
+            ],
+            "flash": [
+                "9M"
+            ],
+            "flashcannon": [
+                "9M"
+            ],
+            "focusblast": [
+                "9M"
+            ],
+            "frustration": [
+                "9M"
+            ],
+            "geomancy": [
+                "9M"
+            ],
+            "gigaimpact": [
+                "9M"
+            ],
+            "grassknot": [
+                "9M"
+            ],
+            "gravity": [
+                "9M"
+            ],
+            "healpulse": [
+                "9M"
+            ],
+            "hiddenpower": [
+                "9M"
+            ],
+            "hornleech": [
+                "9M"
+            ],
+            "hyperbeam": [
+                "9M"
+            ],
+            "hypervoice": [
+                "9M"
+            ],
+            "ingrain": [
+                "9M"
+            ],
+            "laserfocus": [
+                "9M"
+            ],
+            "lightscreen": [
+                "9M"
+            ],
+            "megahorn": [
+                "9M"
+            ],
+            "mistyexplosion": [
+                "9M"
+            ],
+            "mistyterrain": [
+                "9M"
+            ],
+            "moonblast": [
+                "9M"
+            ],
+            "naturepower": [
+                "9M"
+            ],
+            "nightslash": [
+                "9M"
+            ],
+            "outrage": [
+                "9M"
+            ],
+            "playrough": [
+                "9M"
+            ],
+            "protect": [
+                "9M"
+            ],
+            "psychic": [
+                "9M"
+            ],
+            "psychup": [
+                "9M"
+            ],
+            "psyshock": [
+                "9M"
+            ],
+            "raindance": [
+                "9M"
+            ],
+            "reflect": [
+                "9M"
+            ],
+            "rest": [
+                "9M"
+            ],
+            "return": [
+                "9M"
+            ],
+            "roar": [
+                "9M"
+            ],
+            "rockslide": [
+                "9M"
+            ],
+            "round": [
+                "9M"
+            ],
+            "secretpower": [
+                "9M"
+            ],
+            "sleeptalk": [
+                "9M"
+            ],
+            "smartstrike": [
+                "9M"
+            ],
+            "snore": [
+                "9M"
+            ],
+            "substitute": [
+                "9M"
+            ],
+            "sunnyday": [
+                "9M"
+            ],
+            "swagger": [
+                "9M"
+            ],
+            "swift": [
+                "9M"
+            ],
+            "tackle": [
+                "9M"
+            ],
+            "takedown": [
+                "9M"
+            ],
+            "terrainpulse": [
+                "9M"
+            ],
+            "thunder": [
+                "9M"
+            ],
+            "thunderbolt": [
+                "9M"
+            ],
+            "thunderwave": [
+                "9M"
+            ],
+            "toxic": [
+                "9M"
+            ],
+            "wonderroom": [
+                "9M"
+            ],
+            "zenheadbutt": [
+                "9M"
+            ],
+            "snowscape": [
+                "9M"
+            ],
+            "terablast": [
+                "9M"
+            ]
+        }
+    },
+    "yveltal": {
+        "inherit": true,
+        "learnset": {
+            "acrobatics": [
+                "9M"
+            ],
+            "aerialace": [
+                "9M"
+            ],
+            "airslash": [
+                "9M"
+            ],
+            "block": [
+                "9M"
+            ],
+            "bodyslam": [
+                "9M"
+            ],
+            "confide": [
+                "9M"
+            ],
+            "cut": [
+                "9M"
+            ],
+            "darkpulse": [
+                "9M"
+            ],
+            "defog": [
+                "9M"
+            ],
+            "disable": [
+                "9M"
+            ],
+            "doubleteam": [
+                "9M"
+            ],
+            "dragonclaw": [
+                "9M"
+            ],
+            "dragonrush": [
+                "9M"
+            ],
+            "dreameater": [
+                "9M"
+            ],
+            "dualwingbeat": [
+                "9M"
+            ],
+            "embargo": [
+                "9M"
+            ],
+            "endure": [
+                "9M"
+            ],
+            "facade": [
+                "9M"
+            ],
+            "fly": [
+                "9M"
+            ],
+            "focusblast": [
+                "9M"
+            ],
+            "foulplay": [
+                "9M"
+            ],
+            "frustration": [
+                "9M"
+            ],
+            "gigaimpact": [
+                "9M"
+            ],
+            "gust": [
+                "9M"
+            ],
+            "heatwave": [
+                "9M"
+            ],
+            "hiddenpower": [
+                "9M"
+            ],
+            "honeclaws": [
+                "9M"
+            ],
+            "hurricane": [
+                "9M"
+            ],
+            "hyperbeam": [
+                "9M"
+            ],
+            "hypervoice": [
+                "9M"
+            ],
+            "knockoff": [
+                "9M"
+            ],
+            "laserfocus": [
+                "9M"
+            ],
+            "lashout": [
+                "9M"
+            ],
+            "oblivionwing": [
+                "9M"
+            ],
+            "payback": [
+                "9M"
+            ],
+            "phantomforce": [
+                "9M"
+            ],
+            "protect": [
+                "9M"
+            ],
+            "psychic": [
+                "9M"
+            ],
+            "raindance": [
+                "9M"
+            ],
+            "razorwind": [
+                "9M"
+            ],
+            "rest": [
+                "9M"
+            ],
+            "return": [
+                "9M"
+            ],
+            "rockslide": [
+                "9M"
+            ],
+            "roost": [
+                "9M"
+            ],
+            "round": [
+                "9M"
+            ],
+            "secretpower": [
+                "9M"
+            ],
+            "shadowball": [
+                "9M"
+            ],
+            "shadowclaw": [
+                "9M"
+            ],
+            "skyattack": [
+                "9M"
+            ],
+            "skydrop": [
+                "9M"
+            ],
+            "sleeptalk": [
+                "9M"
+            ],
+            "snarl": [
+                "9M"
+            ],
+            "snore": [
+                "9M"
+            ],
+            "steelwing": [
+                "9M"
+            ],
+            "substitute": [
+                "9M"
+            ],
+            "suckerpunch": [
+                "9M"
+            ],
+            "sunnyday": [
+                "9M"
+            ],
+            "swagger": [
+                "9M"
+            ],
+            "swift": [
+                "9M"
+            ],
+            "tailwind": [
+                "9M"
+            ],
+            "taunt": [
+                "9M"
+            ],
+            "thief": [
+                "9M"
+            ],
+            "torment": [
+                "9M"
+            ],
+            "toxic": [
+                "9M"
+            ],
+            "uturn": [
+                "9M"
+            ],
+            "zenheadbutt": [
+                "9M"
+            ],
+            "terablast": [
+                "9M"
+            ]
+        }
+    },
+    "zygarde": {
+        "inherit": true,
+        "learnset": {
+            "bind": [
+                "9M"
+            ],
+            "bite": [
+                "9M"
+            ],
+            "block": [
+                "9M"
+            ],
+            "bodyslam": [
+                "9M"
+            ],
+            "breakingswipe": [
+                "9M"
+            ],
+            "brickbreak": [
+                "9M"
+            ],
+            "bulldoze": [
+                "9M"
+            ],
+            "camouflage": [
+                "9M"
+            ],
+            "coil": [
+                "9M"
+            ],
+            "confide": [
+                "9M"
+            ],
+            "coreenforcer": [
+                "9M"
+            ],
+            "crunch": [
+                "9M"
+            ],
+            "dig": [
+                "9M"
+            ],
+            "doubleteam": [
+                "9M"
+            ],
+            "dracometeor": [
+                "9M"
+            ],
+            "dragonbreath": [
+                "9M"
+            ],
+            "dragondance": [
+                "9M"
+            ],
+            "dragonpulse": [
+                "9M"
+            ],
+            "dragontail": [
+                "9M"
+            ],
+            "earthpower": [
+                "9M"
+            ],
+            "earthquake": [
+                "9M"
+            ],
+            "endure": [
+                "9M"
+            ],
+            "extremespeed": [
+                "9M"
+            ],
+            "facade": [
+                "9M"
+            ],
+            "focusblast": [
+                "9M"
+            ],
+            "frustration": [
+                "9M"
+            ],
+            "gigaimpact": [
+                "9M"
+            ],
+            "glare": [
+                "9M"
+            ],
+            "grassknot": [
+                "9M"
+            ],
+            "haze": [
+                "9M"
+            ],
+            "hiddenpower": [
+                "9M"
+            ],
+            "highhorsepower": [
+                "9M"
+            ],
+            "hyperbeam": [
+                "9M"
+            ],
+            "hypervoice": [
+                "9M"
+            ],
+            "irontail": [
+                "9M"
+            ],
+            "landswrath": [
+                "9M"
+            ],
+            "outrage": [
+                "9M"
+            ],
+            "painsplit": [
+                "9M"
+            ],
+            "payback": [
+                "9M"
+            ],
+            "protect": [
+                "9M"
+            ],
+            "rest": [
+                "9M"
+            ],
+            "retaliate": [
+                "9M"
+            ],
+            "return": [
+                "9M"
+            ],
+            "reversal": [
+                "9M"
+            ],
+            "rockslide": [
+                "9M"
+            ],
+            "rocksmash": [
+                "9M"
+            ],
+            "round": [
+                "9M"
+            ],
+            "safeguard": [
+                "9M"
+            ],
+            "sandstorm": [
+                "9M"
+            ],
+            "scaleshot": [
+                "9M"
+            ],
+            "scorchingsands": [
+                "9M"
+            ],
+            "secretpower": [
+                "9M"
+            ],
+            "shockwave": [
+                "9M"
+            ],
+            "skittersmack": [
+                "9M"
+            ],
+            "sleeptalk": [
+                "9M"
+            ],
+            "sludgewave": [
+                "9M"
+            ],
+            "snore": [
+                "9M"
+            ],
+            "spite": [
+                "9M"
+            ],
+            "stompingtantrum": [
+                "9M"
+            ],
+            "stoneedge": [
+                "9M"
+            ],
+            "strength": [
+                "9M"
+            ],
+            "substitute": [
+                "9M"
+            ],
+            "sunnyday": [
+                "9M"
+            ],
+            "superpower": [
+                "9M"
+            ],
+            "swagger": [
+                "9M"
+            ],
+            "swift": [
+                "9M"
+            ],
+            "thousandarrows": [
+                "9M"
+            ],
+            "thousandwaves": [
+                "9M"
+            ],
+            "toxic": [
+                "9M"
+            ],
+            "zenheadbutt": [
+                "9M"
+            ],
+            "terablast": [
+                "9M"
+            ]
+        }
+    },
+    "diancie": {
+        "inherit": true,
+        "learnset": {
+            "afteryou": [
+                "9M"
+            ],
+            "allyswitch": [
+                "9M"
+            ],
+            "amnesia": [
+                "9M"
+            ],
+            "ancientpower": [
+                "9M"
+            ],
+            "batonpass": [
+                "9M"
+            ],
+            "bodypress": [
+                "9M"
+            ],
+            "bodyslam": [
+                "9M"
+            ],
+            "bulldoze": [
+                "9M"
+            ],
+            "calmmind": [
+                "9M"
+            ],
+            "charm": [
+                "9M"
+            ],
+            "confide": [
+                "9M"
+            ],
+            "covet": [
+                "9M"
+            ],
+            "dazzlinggleam": [
+                "9M"
+            ],
+            "diamondstorm": [
+                "9M"
+            ],
+            "doubleteam": [
+                "9M"
+            ],
+            "drainingkiss": [
+                "9M"
+            ],
+            "earthpower": [
+                "9M"
+            ],
+            "encore": [
+                "9M"
+            ],
+            "endeavor": [
+                "9M"
+            ],
+            "endure": [
+                "9M"
+            ],
+            "explosion": [
+                "9M"
+            ],
+            "facade": [
+                "9M"
+            ],
+            "faketears": [
+                "9M"
+            ],
+            "flail": [
+                "9M"
+            ],
+            "flash": [
+                "9M"
+            ],
+            "flashcannon": [
+                "9M"
+            ],
+            "frustration": [
+                "9M"
+            ],
+            "gigaimpact": [
+                "9M"
+            ],
+            "gravity": [
+                "9M"
+            ],
+            "guardsplit": [
+                "9M"
+            ],
+            "guardswap": [
+                "9M"
+            ],
+            "gyroball": [
+                "9M"
+            ],
+            "harden": [
+                "9M"
+            ],
+            "healbell": [
+                "9M"
+            ],
+            "helpinghand": [
+                "9M"
+            ],
+            "hiddenpower": [
+                "9M"
+            ],
+            "hyperbeam": [
+                "9M"
+            ],
+            "irondefense": [
+                "9M"
+            ],
+            "lastresort": [
+                "9M"
+            ],
+            "lightscreen": [
+                "9M"
+            ],
+            "magnetrise": [
+                "9M"
+            ],
+            "meteorbeam": [
+                "9M"
+            ],
+            "metronome": [
+                "9M"
+            ],
+            "mistyexplosion": [
+                "9M"
+            ],
+            "moonblast": [
+                "9M"
+            ],
+            "mysticalfire": [
+                "9M"
+            ],
+            "naturepower": [
+                "9M"
+            ],
+            "playrough": [
+                "9M"
+            ],
+            "powergem": [
+                "9M"
+            ],
+            "protect": [
+                "9M"
+            ],
+            "psychic": [
+                "9M"
+            ],
+            "psychup": [
+                "9M"
+            ],
+            "psyshock": [
+                "9M"
+            ],
+            "raindance": [
+                "9M"
+            ],
+            "reflect": [
+                "9M"
+            ],
+            "rest": [
+                "9M"
+            ],
+            "return": [
+                "9M"
+            ],
+            "rockpolish": [
+                "9M"
+            ],
+            "rockslide": [
+                "9M"
+            ],
+            "rockthrow": [
+                "9M"
+            ],
+            "rocktomb": [
+                "9M"
+            ],
+            "round": [
+                "9M"
+            ],
+            "safeguard": [
+                "9M"
+            ],
+            "sandstorm": [
+                "9M"
+            ],
+            "sandtomb": [
+                "9M"
+            ],
+            "scorchingsands": [
+                "9M"
+            ],
+            "secretpower": [
+                "9M"
+            ],
+            "sharpen": [
+                "9M"
+            ],
+            "skillswap": [
+                "9M"
+            ],
+            "sleeptalk": [
+                "9M"
+            ],
+            "smackdown": [
+                "9M"
+            ],
+            "snore": [
+                "9M"
+            ],
+            "snowscape": [
+                "9M"
+            ],
+            "spikes": [
+                "9M"
+            ],
+            "stealthrock": [
+                "9M"
+            ],
+            "stoneedge": [
+                "9M"
+            ],
+            "storedpower": [
+                "9M"
+            ],
+            "substitute": [
+                "9M"
+            ],
+            "sunnyday": [
+                "9M"
+            ],
+            "swagger": [
+                "9M"
+            ],
+            "swift": [
+                "9M"
+            ],
+            "tackle": [
+                "9M"
+            ],
+            "takedown": [
+                "9M"
+            ],
+            "telekinesis": [
+                "9M"
+            ],
+            "terablast": [
+                "9M"
+            ],
+            "terrainpulse": [
+                "9M"
+            ],
+            "toxic": [
+                "9M"
+            ],
+            "trickroom": [
+                "9M"
+            ],
+            "wonderroom": [
+                "9M"
+            ]
+        }
+    },
+    "volcanion": {
+        "inherit": true,
+        "learnset": {
+            "bodypress": [
+                "9M"
+            ],
+            "bodyslam": [
+                "9M"
+            ],
+            "brickbreak": [
+                "9M"
+            ],
+            "bulldoze": [
+                "9M"
+            ],
+            "confide": [
+                "9M"
+            ],
+            "cut": [
+                "9M"
+            ],
+            "defog": [
+                "9M"
+            ],
+            "dig": [
+                "9M"
+            ],
+            "doubleedge": [
+                "9M"
+            ],
+            "doubleteam": [
+                "9M"
+            ],
+            "earthpower": [
+                "9M"
+            ],
+            "earthquake": [
+                "9M"
+            ],
+            "endure": [
+                "9M"
+            ],
+            "explosion": [
+                "9M"
+            ],
+            "facade": [
+                "9M"
+            ],
+            "fireblast": [
+                "9M"
+            ],
+            "firefang": [
+                "9M"
+            ],
+            "firespin": [
+                "9M"
+            ],
+            "flamecharge": [
+                "9M"
+            ],
+            "flamethrower": [
+                "9M"
+            ],
+            "flareblitz": [
+                "9M"
+            ],
+            "flashcannon": [
+                "9M"
+            ],
+            "fling": [
+                "9M"
+            ],
+            "focusblast": [
+                "9M"
+            ],
+            "focusenergy": [
+                "9M"
+            ],
+            "frustration": [
+                "9M"
+            ],
+            "gigaimpact": [
+                "9M"
+            ],
+            "gyroball": [
+                "9M"
+            ],
+            "haze": [
+                "9M"
+            ],
+            "heatcrash": [
+                "9M"
+            ],
+            "heatwave": [
+                "9M"
+            ],
+            "heavyslam": [
+                "9M"
+            ],
+            "hiddenpower": [
+                "9M"
+            ],
+            "hydropump": [
+                "9M"
+            ],
+            "hyperbeam": [
+                "9M"
+            ],
+            "incinerate": [
+                "9M"
+            ],
+            "leer": [
+                "9M"
+            ],
+            "liquidation": [
+                "9M"
+            ],
+            "mist": [
+                "9M"
+            ],
+            "mistyterrain": [
+                "9M"
+            ],
+            "mudshot": [
+                "9M"
+            ],
+            "overheat": [
+                "9M"
+            ],
+            "protect": [
+                "9M"
+            ],
+            "raindance": [
+                "9M"
+            ],
+            "rest": [
+                "9M"
+            ],
+            "return": [
+                "9M"
+            ],
+            "roar": [
+                "9M"
+            ],
+            "rockslide": [
+                "9M"
+            ],
+            "rocksmash": [
+                "9M"
+            ],
+            "rocktomb": [
+                "9M"
+            ],
+            "round": [
+                "9M"
+            ],
+            "sandstorm": [
+                "9M"
+            ],
+            "scald": [
+                "9M"
+            ],
+            "scaryface": [
+                "9M"
+            ],
+            "scorchingsands": [
+                "9M"
+            ],
+            "secretpower": [
+                "9M"
+            ],
+            "selfdestruct": [
+                "9M"
+            ],
+            "sleeptalk": [
+                "9M"
+            ],
+            "sludgebomb": [
+                "9M"
+            ],
+            "sludgewave": [
+                "9M"
+            ],
+            "smackdown": [
+                "9M"
+            ],
+            "snore": [
+                "9M"
+            ],
+            "solarbeam": [
+                "9M"
+            ],
+            "steameruption": [
+                "9M"
+            ],
+            "stomp": [
+                "9M"
+            ],
+            "stompingtantrum": [
+                "9M"
+            ],
+            "stoneedge": [
+                "9M"
+            ],
+            "strength": [
+                "9M"
+            ],
+            "substitute": [
+                "9M"
+            ],
+            "sunnyday": [
+                "9M"
+            ],
+            "superpower": [
+                "9M"
+            ],
+            "swagger": [
+                "9M"
+            ],
+            "takedown": [
+                "9M"
+            ],
+            "taunt": [
+                "9M"
+            ],
+            "terablast": [
+                "9M"
+            ],
+            "thunderfang": [
+                "9M"
+            ],
+            "toxic": [
+                "9M"
+            ],
+            "watergun": [
+                "9M"
+            ],
+            "waterpulse": [
+                "9M"
+            ],
+            "weatherball": [
+                "9M"
+            ],
+            "wildcharge": [
+                "9M"
+            ],
+            "willowisp": [
+                "9M"
+            ]
+        }
+    },
+    "cosmoem": {
+        "inherit": true,
+        "learnset": {
+            "cosmicpower": [
+                "9M"
+            ],
+            "teleport": [
+                "9M"
+            ],
+            "hiddenpower": [
+                "9M"
+            ],
+            "return": [
+                "9M"
+            ],
+            "terablast": [
+                "9M"
+            ]
+        }
+    },
+    "solgaleo": {
+        "inherit": true,
+        "learnset": {
+            "agility": [
+                "9M"
+            ],
+            "bodyslam": [
+                "9M"
+            ],
+            "bulldoze": [
+                "9M"
+            ],
+            "calmmind": [
+                "9M"
+            ],
+            "closecombat": [
+                "9M"
+            ],
+            "confide": [
+                "9M"
+            ],
+            "cosmicpower": [
+                "9M"
+            ],
+            "crunch": [
+                "9M"
+            ],
+            "doubleedge": [
+                "9M"
+            ],
+            "doubleteam": [
+                "9M"
+            ],
+            "earthquake": [
+                "9M"
+            ],
+            "endeavor": [
+                "9M"
+            ],
+            "endure": [
+                "9M"
+            ],
+            "expandingforce": [
+                "9M"
+            ],
+            "facade": [
+                "9M"
+            ],
+            "fireblast": [
+                "9M"
+            ],
+            "firespin": [
+                "9M"
+            ],
+            "flamecharge": [
+                "9M"
+            ],
+            "flamethrower": [
+                "9M"
+            ],
+            "flareblitz": [
+                "9M"
+            ],
+            "flashcannon": [
+                "9M"
+            ],
+            "focusblast": [
+                "9M"
+            ],
+            "frustration": [
+                "9M"
+            ],
+            "futuresight": [
+                "9M"
+            ],
+            "gigaimpact": [
+                "9M"
+            ],
+            "gyroball": [
+                "9M"
+            ],
+            "heatcrash": [
+                "9M"
+            ],
+            "heavyslam": [
+                "9M"
+            ],
+            "helpinghand": [
+                "9M"
+            ],
+            "hiddenpower": [
+                "9M"
+            ],
+            "hyperbeam": [
+                "9M"
+            ],
+            "hypervoice": [
+                "9M"
+            ],
+            "irondefense": [
+                "9M"
+            ],
+            "ironhead": [
+                "9M"
+            ],
+            "irontail": [
+                "9M"
+            ],
+            "knockoff": [
+                "9M"
+            ],
+            "lastresort": [
+                "9M"
+            ],
+            "lightscreen": [
+                "9M"
+            ],
+            "metalburst": [
+                "9M"
+            ],
+            "metalclaw": [
+                "9M"
+            ],
+            "metalsound": [
+                "9M"
+            ],
+            "meteorbeam": [
+                "9M"
+            ],
+            "morningsun": [
+                "9M"
+            ],
+            "mysticalfire": [
+                "9M"
+            ],
+            "nobleroar": [
+                "9M"
+            ],
+            "outrage": [
+                "9M"
+            ],
+            "protect": [
+                "9M"
+            ],
+            "psychic": [
+                "9M"
+            ],
+            "psychicfangs": [
+                "9M"
+            ],
+            "psychup": [
+                "9M"
+            ],
+            "psyshock": [
+                "9M"
+            ],
+            "reflect": [
+                "9M"
+            ],
+            "rest": [
+                "9M"
+            ],
+            "return": [
+                "9M"
+            ],
+            "roar": [
+                "9M"
+            ],
+            "rockslide": [
+                "9M"
+            ],
+            "rocktomb": [
+                "9M"
+            ],
+            "round": [
+                "9M"
+            ],
+            "safeguard": [
+                "9M"
+            ],
+            "scaryface": [
+                "9M"
+            ],
+            "shockwave": [
+                "9M"
+            ],
+            "sleeptalk": [
+                "9M"
+            ],
+            "snarl": [
+                "9M"
+            ],
+            "snore": [
+                "9M"
+            ],
+            "solarbeam": [
+                "9M"
+            ],
+            "steelbeam": [
+                "9M"
+            ],
+            "steelroller": [
+                "9M"
+            ],
+            "stoneedge": [
+                "9M"
+            ],
+            "substitute": [
+                "9M"
+            ],
+            "sunnyday": [
+                "9M"
+            ],
+            "sunsteelstrike": [
+                "9M"
+            ],
+            "superpower": [
+                "9M"
+            ],
+            "swagger": [
+                "9M"
+            ],
+            "swift": [
+                "9M"
+            ],
+            "takedown": [
+                "9M"
+            ],
+            "teleport": [
+                "9M"
+            ],
+            "terablast": [
+                "9M"
+            ],
+            "thunder": [
+                "9M"
+            ],
+            "thunderbolt": [
+                "9M"
+            ],
+            "thunderwave": [
+                "9M"
+            ],
+            "toxic": [
+                "9M"
+            ],
+            "trickroom": [
+                "9M"
+            ],
+            "wakeupslap": [
+                "9M"
+            ],
+            "wideguard": [
+                "9M"
+            ],
+            "wildcharge": [
+                "9M"
+            ],
+            "workup": [
+                "9M"
+            ],
+            "zenheadbutt": [
+                "9M"
+            ]
+        }
+    },
+    "lunala": {
+        "inherit": true,
+        "learnset": {
+            "acrobatics": [
+                "9M"
+            ],
+            "aerialace": [
+                "9M"
+            ],
+            "agility": [
+                "9M"
+            ],
+            "airslash": [
+                "9M"
+            ],
+            "blizzard": [
+                "9M"
+            ],
+            "calmmind": [
+                "9M"
+            ],
+            "chargebeam": [
+                "9M"
+            ],
+            "confide": [
+                "9M"
+            ],
+            "confuseray": [
+                "9M"
+            ],
+            "confusion": [
+                "9M"
+            ],
+            "cosmicpower": [
+                "9M"
+            ],
+            "dazzlinggleam": [
+                "9M"
+            ],
+            "defog": [
+                "9M"
+            ],
+            "doubleteam": [
+                "9M"
+            ],
+            "dreameater": [
+                "9M"
+            ],
+            "dualwingbeat": [
+                "9M"
+            ],
+            "endure": [
+                "9M"
+            ],
+            "expandingforce": [
+                "9M"
+            ],
+            "facade": [
+                "9M"
+            ],
+            "fly": [
+                "9M"
+            ],
+            "focusblast": [
+                "9M"
+            ],
+            "frustration": [
+                "9M"
+            ],
+            "futuresight": [
+                "9M"
+            ],
+            "gigaimpact": [
+                "9M"
+            ],
+            "heatwave": [
+                "9M"
+            ],
+            "helpinghand": [
+                "9M"
+            ],
+            "hex": [
+                "9M"
+            ],
+            "hiddenpower": [
+                "9M"
+            ],
+            "hyperbeam": [
+                "9M"
+            ],
+            "hypnosis": [
+                "9M"
+            ],
+            "icebeam": [
+                "9M"
+            ],
+            "icywind": [
+                "9M"
+            ],
+            "lightscreen": [
+                "9M"
+            ],
+            "magiccoat": [
+                "9M"
+            ],
+            "magicroom": [
+                "9M"
+            ],
+            "meteorbeam": [
+                "9M"
+            ],
+            "moonblast": [
+                "9M"
+            ],
+            "moongeistbeam": [
+                "9M"
+            ],
+            "moonlight": [
+                "9M"
+            ],
+            "nightdaze": [
+                "9M"
+            ],
+            "nightshade": [
+                "9M"
+            ],
+            "phantomforce": [
+                "9M"
+            ],
+            "poltergeist": [
+                "9M"
+            ],
+            "protect": [
+                "9M"
+            ],
+            "psychic": [
+                "9M"
+            ],
+            "psychocut": [
+                "9M"
+            ],
+            "psychup": [
+                "9M"
+            ],
+            "psyshock": [
+                "9M"
+            ],
+            "raindance": [
+                "9M"
+            ],
+            "reflect": [
+                "9M"
+            ],
+            "rest": [
+                "9M"
+            ],
+            "return": [
+                "9M"
+            ],
+            "roar": [
+                "9M"
+            ],
+            "roost": [
+                "9M"
+            ],
+            "round": [
+                "9M"
+            ],
+            "safeguard": [
+                "9M"
+            ],
+            "scaryface": [
+                "9M"
+            ],
+            "shadowball": [
+                "9M"
+            ],
+            "shadowclaw": [
+                "9M"
+            ],
+            "shockwave": [
+                "9M"
+            ],
+            "signalbeam": [
+                "9M"
+            ],
+            "skyattack": [
+                "9M"
+            ],
+            "skydrop": [
+                "9M"
+            ],
+            "sleeptalk": [
+                "9M"
+            ],
+            "snore": [
+                "9M"
+            ],
+            "solarbeam": [
+                "9M"
+            ],
+            "spite": [
+                "9M"
+            ],
+            "substitute": [
+                "9M"
+            ],
+            "sunnyday": [
+                "9M"
+            ],
+            "swagger": [
+                "9M"
+            ],
+            "swift": [
+                "9M"
+            ],
+            "tailwind": [
+                "9M"
+            ],
+            "telekinesis": [
+                "9M"
+            ],
+            "teleport": [
+                "9M"
+            ],
+            "terablast": [
+                "9M"
+            ],
+            "thunder": [
+                "9M"
+            ],
+            "thunderbolt": [
+                "9M"
+            ],
+            "thunderwave": [
+                "9M"
+            ],
+            "toxic": [
+                "9M"
+            ],
+            "trick": [
+                "9M"
+            ],
+            "trickroom": [
+                "9M"
+            ],
+            "wideguard": [
+                "9M"
+            ],
+            "willowisp": [
+                "9M"
+            ],
+            "wonderroom": [
+                "9M"
+            ],
+            "workup": [
+                "9M"
+            ]
+        }
+    },
+    "necrozmaduskmane": {
+        "inherit": true,
+        "learnset": {
+            "sunsteelstrike": [
+                "9M"
+            ],
+            "hiddenpower": [
+                "9M"
+            ],
+            "return": [
+                "9M"
+            ],
+            "terablast": [
+                "9M"
+            ]
+        }
+    },
+    "necrozmadawnwings": {
+        "inherit": true,
+        "learnset": {
+            "moongeistbeam": [
+                "9M"
+            ],
+            "hiddenpower": [
+                "9M"
+            ],
+            "return": [
+                "9M"
+            ],
+            "terablast": [
+                "9M"
+            ]
+        }
+    },
+    "magearna": {
+        "inherit": true,
+        "learnset": {
+            "afteryou": [
+                "9M"
+            ],
+            "agility": [
+                "9M"
+            ],
+            "aurasphere": [
+                "9M"
+            ],
+            "aurorabeam": [
+                "9M"
+            ],
+            "batonpass": [
+                "9M"
+            ],
+            "bodyslam": [
+                "9M"
+            ],
+            "brickbreak": [
+                "9M"
+            ],
+            "calmmind": [
+                "9M"
+            ],
+            "chargebeam": [
+                "9M"
+            ],
+            "confide": [
+                "9M"
+            ],
+            "confuseray": [
+                "9M"
+            ],
+            "craftyshield": [
+                "9M"
+            ],
+            "dazzlinggleam": [
+                "9M"
+            ],
+            "defensecurl": [
+                "9M"
+            ],
+            "disarmingvoice": [
+                "9M"
+            ],
+            "doubleteam": [
+                "9M"
+            ],
+            "drainingkiss": [
+                "9M"
+            ],
+            "echoedvoice": [
+                "9M"
+            ],
+            "eerieimpulse": [
+                "9M"
+            ],
+            "electroball": [
+                "9M"
+            ],
+            "electroweb": [
+                "9M"
+            ],
+            "embargo": [
+                "9M"
+            ],
+            "encore": [
+                "9M"
+            ],
+            "endure": [
+                "9M"
+            ],
+            "energyball": [
+                "9M"
+            ],
+            "explosion": [
+                "9M"
+            ],
+            "facade": [
+                "9M"
+            ],
+            "falseswipe": [
+                "9M"
+            ],
+            "flashcannon": [
+                "9M"
+            ],
+            "fleurcannon": [
+                "9M"
+            ],
+            "focusblast": [
+                "9M"
+            ],
+            "frustration": [
+                "9M"
+            ],
+            "gearup": [
+                "9M"
+            ],
+            "gigaimpact": [
+                "9M"
+            ],
+            "grassknot": [
+                "9M"
+            ],
+            "gravity": [
+                "9M"
+            ],
+            "guardswap": [
+                "9M"
+            ],
+            "gyroball": [
+                "9M"
+            ],
+            "healbell": [
+                "9M"
+            ],
+            "heartswap": [
+                "9M"
+            ],
+            "heavyslam": [
+                "9M"
+            ],
+            "helpinghand": [
+                "9M"
+            ],
+            "hiddenpower": [
+                "9M"
+            ],
+            "hyperbeam": [
+                "9M"
+            ],
+            "icebeam": [
+                "9M"
+            ],
+            "icespinner": [
+                "9M"
+            ],
+            "imprison": [
+                "9M"
+            ],
+            "irondefense": [
+                "9M"
+            ],
+            "ironhead": [
+                "9M"
+            ],
+            "lastresort": [
+                "9M"
+            ],
+            "lightscreen": [
+                "9M"
+            ],
+            "lockon": [
+                "9M"
+            ],
+            "luckychant": [
+                "9M"
+            ],
+            "magneticflux": [
+                "9M"
+            ],
+            "magnetrise": [
+                "9M"
+            ],
+            "metalsound": [
+                "9M"
+            ],
+            "mindreader": [
+                "9M"
+            ],
+            "mirrorshot": [
+                "9M"
+            ],
+            "mistyexplosion": [
+                "9M"
+            ],
+            "mistyterrain": [
+                "9M"
+            ],
+            "painsplit": [
+                "9M"
+            ],
+            "playrough": [
+                "9M"
+            ],
+            "powerswap": [
+                "9M"
+            ],
+            "protect": [
+                "9M"
+            ],
+            "psybeam": [
+                "9M"
+            ],
+            "psychic": [
+                "9M"
+            ],
+            "psyshock": [
+                "9M"
+            ],
+            "reflect": [
+                "9M"
+            ],
+            "rest": [
+                "9M"
+            ],
+            "return": [
+                "9M"
+            ],
+            "rollout": [
+                "9M"
+            ],
+            "round": [
+                "9M"
+            ],
+            "selfdestruct": [
+                "9M"
+            ],
+            "shadowball": [
+                "9M"
+            ],
+            "shiftgear": [
+                "9M"
+            ],
+            "shockwave": [
+                "9M"
+            ],
+            "signalbeam": [
+                "9M"
+            ],
+            "skillswap": [
+                "9M"
+            ],
+            "sleeptalk": [
+                "9M"
+            ],
+            "snore": [
+                "9M"
+            ],
+            "snowscape": [
+                "9M"
+            ],
+            "solarbeam": [
+                "9M"
+            ],
+            "sonicboom": [
+                "9M"
+            ],
+            "speedswap": [
+                "9M"
+            ],
+            "spikes": [
+                "9M"
+            ],
+            "steelbeam": [
+                "9M"
+            ],
+            "steelroller": [
+                "9M"
+            ],
+            "storedpower": [
+                "9M"
+            ],
+            "substitute": [
+                "9M"
+            ],
+            "sunnyday": [
+                "9M"
+            ],
+            "swagger": [
+                "9M"
+            ],
+            "swift": [
+                "9M"
+            ],
+            "synchronoise": [
+                "9M"
+            ],
+            "takedown": [
+                "9M"
+            ],
+            "terablast": [
+                "9M"
+            ],
+            "thunderbolt": [
+                "9M"
+            ],
+            "thunderwave": [
+                "9M"
+            ],
+            "triattack": [
+                "9M"
+            ],
+            "trick": [
+                "9M"
+            ],
+            "trickroom": [
+                "9M"
+            ],
+            "trumpcard": [
+                "9M"
+            ],
+            "voltswitch": [
+                "9M"
+            ],
+            "zapcannon": [
+                "9M"
+            ],
+            "zenheadbutt": [
+                "9M"
+            ]
+        }
+    },
+    "marshadow": {
+        "inherit": true,
+        "learnset": {
+            "acrobatics": [
+                "9M"
+            ],
+            "agility": [
+                "9M"
+            ],
+            "assurance": [
+                "9M"
+            ],
+            "aurasphere": [
+                "9M"
+            ],
+            "blazekick": [
+                "9M"
+            ],
+            "bounce": [
+                "9M"
+            ],
+            "brickbreak": [
+                "9M"
+            ],
+            "bulkup": [
+                "9M"
+            ],
+            "calmmind": [
+                "9M"
+            ],
+            "closecombat": [
+                "9M"
+            ],
+            "coaching": [
+                "9M"
+            ],
+            "confide": [
+                "9M"
+            ],
+            "copycat": [
+                "9M"
+            ],
+            "counter": [
+                "9M"
+            ],
+            "doubleteam": [
+                "9M"
+            ],
+            "drainpunch": [
+                "9M"
+            ],
+            "echoedvoice": [
+                "9M"
+            ],
+            "endeavor": [
+                "9M"
+            ],
+            "endure": [
+                "9M"
+            ],
+            "facade": [
+                "9M"
+            ],
+            "falseswipe": [
+                "9M"
+            ],
+            "feint": [
+                "9M"
+            ],
+            "firepunch": [
+                "9M"
+            ],
+            "fling": [
+                "9M"
+            ],
+            "focusblast": [
+                "9M"
+            ],
+            "focuspunch": [
+                "9M"
+            ],
+            "forcepalm": [
+                "9M"
+            ],
+            "foulplay": [
+                "9M"
+            ],
+            "frustration": [
+                "9M"
+            ],
+            "gigaimpact": [
+                "9M"
+            ],
+            "grassknot": [
+                "9M"
+            ],
+            "hex": [
+                "9M"
+            ],
+            "hiddenpower": [
+                "9M"
+            ],
+            "hyperbeam": [
+                "9M"
+            ],
+            "icepunch": [
+                "9M"
+            ],
+            "ironhead": [
+                "9M"
+            ],
+            "jumpkick": [
+                "9M"
+            ],
+            "knockoff": [
+                "9M"
+            ],
+            "laserfocus": [
+                "9M"
+            ],
+            "lastresort": [
+                "9M"
+            ],
+            "lowkick": [
+                "9M"
+            ],
+            "lowsweep": [
+                "9M"
+            ],
+            "megakick": [
+                "9M"
+            ],
+            "megapunch": [
+                "9M"
+            ],
+            "outrage": [
+                "9M"
+            ],
+            "payback": [
+                "9M"
+            ],
+            "phantomforce": [
+                "9M"
+            ],
+            "poisonjab": [
+                "9M"
+            ],
+            "poltergeist": [
+                "9M"
+            ],
+            "protect": [
+                "9M"
+            ],
+            "psychup": [
+                "9M"
+            ],
+            "pursuit": [
+                "9M"
+            ],
+            "rest": [
+                "9M"
+            ],
+            "return": [
+                "9M"
+            ],
+            "revenge": [
+                "9M"
+            ],
+            "reversal": [
+                "9M"
+            ],
+            "rockslide": [
+                "9M"
+            ],
+            "rocktomb": [
+                "9M"
+            ],
+            "roleplay": [
+                "9M"
+            ],
+            "rollingkick": [
+                "9M"
+            ],
+            "round": [
+                "9M"
+            ],
+            "shadowball": [
+                "9M"
+            ],
+            "shadowclaw": [
+                "9M"
+            ],
+            "shadowpunch": [
+                "9M"
+            ],
+            "shadowsneak": [
+                "9M"
+            ],
+            "skittersmack": [
+                "9M"
+            ],
+            "sleeptalk": [
+                "9M"
+            ],
+            "smackdown": [
+                "9M"
+            ],
+            "snatch": [
+                "9M"
+            ],
+            "snore": [
+                "9M"
+            ],
+            "spectralthief": [
+                "9M"
+            ],
+            "stoneedge": [
+                "9M"
+            ],
+            "substitute": [
+                "9M"
+            ],
+            "suckerpunch": [
+                "9M"
+            ],
+            "superpower": [
+                "9M"
+            ],
+            "swagger": [
+                "9M"
+            ],
+            "swift": [
+                "9M"
+            ],
+            "thief": [
+                "9M"
+            ],
+            "throatchop": [
+                "9M"
+            ],
+            "thunderpunch": [
+                "9M"
+            ],
+            "toxic": [
+                "9M"
+            ],
+            "willowisp": [
+                "9M"
+            ],
+            "workup": [
+                "9M"
+            ],
+            "zenheadbutt": [
+                "9M"
+            ],
+            "terablast": [
+                "9M"
+            ]
+        }
+    },
+    "zeraora": {
+        "inherit": true,
+        "learnset": {
+            "acrobatics": [
+                "9M"
+            ],
+            "aerialace": [
+                "9M"
+            ],
+            "agility": [
+                "9M"
+            ],
+            "assurance": [
+                "9M"
+            ],
+            "aurasphere": [
+                "9M"
+            ],
+            "blazekick": [
+                "9M"
+            ],
+            "bounce": [
+                "9M"
+            ],
+            "brickbreak": [
+                "9M"
+            ],
+            "brutalswing": [
+                "9M"
+            ],
+            "bulkup": [
+                "9M"
+            ],
+            "calmmind": [
+                "9M"
+            ],
+            "charge": [
+                "9M"
+            ],
+            "closecombat": [
+                "9M"
+            ],
+            "coaching": [
+                "9M"
+            ],
+            "confide": [
+                "9M"
+            ],
+            "discharge": [
+                "9M"
+            ],
+            "doubleteam": [
+                "9M"
+            ],
+            "drainpunch": [
+                "9M"
+            ],
+            "dualchop": [
+                "9M"
+            ],
+            "echoedvoice": [
+                "9M"
+            ],
+            "electricterrain": [
+                "9M"
+            ],
+            "electroball": [
+                "9M"
+            ],
+            "electroweb": [
+                "9M"
+            ],
+            "endeavor": [
+                "9M"
+            ],
+            "endure": [
+                "9M"
+            ],
+            "facade": [
+                "9M"
+            ],
+            "fakeout": [
+                "9M"
+            ],
+            "falseswipe": [
+                "9M"
+            ],
+            "firepunch": [
+                "9M"
+            ],
+            "fling": [
+                "9M"
+            ],
+            "focusblast": [
+                "9M"
+            ],
+            "focuspunch": [
+                "9M"
+            ],
+            "frustration": [
+                "9M"
+            ],
+            "furyswipes": [
+                "9M"
+            ],
+            "gigaimpact": [
+                "9M"
+            ],
+            "grassknot": [
+                "9M"
+            ],
+            "helpinghand": [
+                "9M"
+            ],
+            "hiddenpower": [
+                "9M"
+            ],
+            "honeclaws": [
+                "9M"
+            ],
+            "hyperbeam": [
+                "9M"
+            ],
+            "irontail": [
+                "9M"
+            ],
+            "knockoff": [
+                "9M"
+            ],
+            "laserfocus": [
+                "9M"
+            ],
+            "lowkick": [
+                "9M"
+            ],
+            "lowsweep": [
+                "9M"
+            ],
+            "megakick": [
+                "9M"
+            ],
+            "megapunch": [
+                "9M"
+            ],
+            "outrage": [
+                "9M"
+            ],
+            "payday": [
+                "9M"
+            ],
+            "plasmafists": [
+                "9M"
+            ],
+            "playrough": [
+                "9M"
+            ],
+            "poweruppunch": [
+                "9M"
+            ],
+            "protect": [
+                "9M"
+            ],
+            "quickattack": [
+                "9M"
+            ],
+            "quickguard": [
+                "9M"
+            ],
+            "rest": [
+                "9M"
+            ],
+            "return": [
+                "9M"
+            ],
+            "revenge": [
+                "9M"
+            ],
+            "reversal": [
+                "9M"
+            ],
+            "risingvoltage": [
+                "9M"
+            ],
+            "round": [
+                "9M"
+            ],
+            "scaryface": [
+                "9M"
+            ],
+            "scratch": [
+                "9M"
+            ],
+            "shockwave": [
+                "9M"
+            ],
+            "slash": [
+                "9M"
+            ],
+            "sleeptalk": [
+                "9M"
+            ],
+            "snarl": [
+                "9M"
+            ],
+            "snatch": [
+                "9M"
+            ],
+            "snore": [
+                "9M"
+            ],
+            "spark": [
+                "9M"
+            ],
+            "substitute": [
+                "9M"
+            ],
+            "superpower": [
+                "9M"
+            ],
+            "swift": [
+                "9M"
+            ],
+            "taunt": [
+                "9M"
+            ],
+            "throatchop": [
+                "9M"
+            ],
+            "thunder": [
+                "9M"
+            ],
+            "thunderbolt": [
+                "9M"
+            ],
+            "thunderpunch": [
+                "9M"
+            ],
+            "thunderwave": [
+                "9M"
+            ],
+            "toxic": [
+                "9M"
+            ],
+            "voltswitch": [
+                "9M"
+            ],
+            "wildcharge": [
+                "9M"
+            ],
+            "workup": [
+                "9M"
+            ],
+            "terablast": [
+                "9M"
+            ]
+        }
+    },
+    "melmetal": {
+        "inherit": true,
+        "learnset": {
+            "acidarmor": [
+                "9M"
+            ],
+            "bodypress": [
+                "9M"
+            ],
+            "bodyslam": [
+                "9M"
+            ],
+            "brickbreak": [
+                "9M"
+            ],
+            "brutalswing": [
+                "9M"
+            ],
+            "darkestlariat": [
+                "9M"
+            ],
+            "discharge": [
+                "9M"
+            ],
+            "doubleironbash": [
+                "9M"
+            ],
+            "dynamicpunch": [
+                "9M"
+            ],
+            "earthquake": [
+                "9M"
+            ],
+            "electricterrain": [
+                "9M"
+            ],
+            "endure": [
+                "9M"
+            ],
+            "facade": [
+                "9M"
+            ],
+            "flashcannon": [
+                "9M"
+            ],
+            "gigaimpact": [
+                "9M"
+            ],
+            "gyroball": [
+                "9M"
+            ],
+            "harden": [
+                "9M"
+            ],
+            "headbutt": [
+                "9M"
+            ],
+            "heavyslam": [
+                "9M"
+            ],
+            "highhorsepower": [
+                "9M"
+            ],
+            "hyperbeam": [
+                "9M"
+            ],
+            "icebeam": [
+                "9M"
+            ],
+            "icepunch": [
+                "9M"
+            ],
+            "irondefense": [
+                "9M"
+            ],
+            "ironhead": [
+                "9M"
+            ],
+            "megakick": [
+                "9M"
+            ],
+            "megapunch": [
+                "9M"
+            ],
+            "protect": [
+                "9M"
+            ],
+            "rest": [
+                "9M"
+            ],
+            "rockslide": [
+                "9M"
+            ],
+            "rocktomb": [
+                "9M"
+            ],
+            "round": [
+                "9M"
+            ],
+            "selfdestruct": [
+                "9M"
+            ],
+            "sleeptalk": [
+                "9M"
+            ],
+            "snore": [
+                "9M"
+            ],
+            "solarbeam": [
+                "9M"
+            ],
+            "steelbeam": [
+                "9M"
+            ],
+            "steelroller": [
+                "9M"
+            ],
+            "substitute": [
+                "9M"
+            ],
+            "superpower": [
+                "9M"
+            ],
+            "tailwhip": [
+                "9M"
+            ],
+            "thunder": [
+                "9M"
+            ],
+            "thunderbolt": [
+                "9M"
+            ],
+            "thunderpunch": [
+                "9M"
+            ],
+            "thundershock": [
+                "9M"
+            ],
+            "thunderwave": [
+                "9M"
+            ],
+            "toxic": [
+                "9M"
+            ],
+            "hiddenpower": [
+                "9M"
+            ],
+            "return": [
+                "9M"
+            ],
+            "terablast": [
+                "9M"
+            ]
+        }
+    },
+    "zacian": {
+        "inherit": true,
+        "learnset": {
+            "agility": [
+                "9M"
+            ],
+            "airslash": [
+                "9M"
+            ],
+            "assurance": [
+                "9M"
+            ],
+            "bite": [
+                "9M"
+            ],
+            "bodyslam": [
+                "9M"
+            ],
+            "brickbreak": [
+                "9M"
+            ],
+            "brutalswing": [
+                "9M"
+            ],
+            "closecombat": [
+                "9M"
+            ],
+            "crunch": [
+                "9M"
+            ],
+            "dazzlinggleam": [
+                "9M"
+            ],
+            "dig": [
+                "9M"
+            ],
+            "endure": [
+                "9M"
+            ],
+            "facade": [
+                "9M"
+            ],
+            "falseswipe": [
+                "9M"
+            ],
+            "firefang": [
+                "9M"
+            ],
+            "flashcannon": [
+                "9M"
+            ],
+            "focusblast": [
+                "9M"
+            ],
+            "focusenergy": [
+                "9M"
+            ],
+            "gigaimpact": [
+                "9M"
+            ],
+            "helpinghand": [
+                "9M"
+            ],
+            "howl": [
+                "9M"
+            ],
+            "hyperbeam": [
+                "9M"
+            ],
+            "hypervoice": [
+                "9M"
+            ],
+            "icefang": [
+                "9M"
+            ],
+            "imprison": [
+                "9M"
+            ],
+            "irondefense": [
+                "9M"
+            ],
+            "ironhead": [
+                "9M"
+            ],
+            "irontail": [
+                "9M"
+            ],
+            "laserfocus": [
+                "9M"
+            ],
+            "metalclaw": [
+                "9M"
+            ],
+            "mistyterrain": [
+                "9M"
+            ],
+            "moonblast": [
+                "9M"
+            ],
+            "nobleroar": [
+                "9M"
+            ],
+            "playrough": [
+                "9M"
+            ],
+            "poisonjab": [
+                "9M"
+            ],
+            "protect": [
+                "9M"
+            ],
+            "psychicfangs": [
+                "9M"
+            ],
+            "psychocut": [
+                "9M"
+            ],
+            "quickattack": [
+                "9M"
+            ],
+            "quickguard": [
+                "9M"
+            ],
+            "rest": [
+                "9M"
+            ],
+            "retaliate": [
+                "9M"
+            ],
+            "revenge": [
+                "9M"
+            ],
+            "reversal": [
+                "9M"
+            ],
+            "round": [
+                "9M"
+            ],
+            "sacredsword": [
+                "9M"
+            ],
+            "scaryface": [
+                "9M"
+            ],
+            "slash": [
+                "9M"
+            ],
+            "sleeptalk": [
+                "9M"
+            ],
+            "snarl": [
+                "9M"
+            ],
+            "snore": [
+                "9M"
+            ],
+            "solarblade": [
+                "9M"
+            ],
+            "steelbeam": [
+                "9M"
+            ],
+            "substitute": [
+                "9M"
+            ],
+            "swift": [
+                "9M"
+            ],
+            "swordsdance": [
+                "9M"
+            ],
+            "tailslap": [
+                "9M"
+            ],
+            "takedown": [
+                "9M"
+            ],
+            "terablast": [
+                "9M"
+            ],
+            "thunderfang": [
+                "9M"
+            ],
+            "trailblaze": [
+                "9M"
+            ],
+            "wildcharge": [
+                "9M"
+            ],
+            "workup": [
+                "9M"
+            ],
+            "hiddenpower": [
+                "9M"
+            ],
+            "return": [
+                "9M"
+            ]
+        }
+    },
+    "zaciancrowned": {
+        "inherit": true,
+        "learnset": {
+            "behemothblade": [
+                "9M"
+            ],
+            "hiddenpower": [
+                "9M"
+            ],
+            "return": [
+                "9M"
+            ],
+            "terablast": [
+                "9M"
+            ]
+        }
+    },
+    "zamazenta": {
+        "inherit": true,
+        "learnset": {
+            "agility": [
+                "9M"
+            ],
+            "bite": [
+                "9M"
+            ],
+            "bodypress": [
+                "9M"
+            ],
+            "bodyslam": [
+                "9M"
+            ],
+            "brickbreak": [
+                "9M"
+            ],
+            "closecombat": [
+                "9M"
+            ],
+            "coaching": [
+                "9M"
+            ],
+            "crunch": [
+                "9M"
+            ],
+            "dazzlinggleam": [
+                "9M"
+            ],
+            "dig": [
+                "9M"
+            ],
+            "endure": [
+                "9M"
+            ],
+            "facade": [
+                "9M"
+            ],
+            "firefang": [
+                "9M"
+            ],
+            "flashcannon": [
+                "9M"
+            ],
+            "focusblast": [
+                "9M"
+            ],
+            "focusenergy": [
+                "9M"
+            ],
+            "gigaimpact": [
+                "9M"
+            ],
+            "guardswap": [
+                "9M"
+            ],
+            "heavyslam": [
+                "9M"
+            ],
+            "helpinghand": [
+                "9M"
+            ],
+            "howl": [
+                "9M"
+            ],
+            "hyperbeam": [
+                "9M"
+            ],
+            "hypervoice": [
+                "9M"
+            ],
+            "icefang": [
+                "9M"
+            ],
+            "imprison": [
+                "9M"
+            ],
+            "irondefense": [
+                "9M"
+            ],
+            "ironhead": [
+                "9M"
+            ],
+            "irontail": [
+                "9M"
+            ],
+            "laserfocus": [
+                "9M"
+            ],
+            "lightscreen": [
+                "9M"
+            ],
+            "metalburst": [
+                "9M"
+            ],
+            "metalclaw": [
+                "9M"
+            ],
+            "moonblast": [
+                "9M"
+            ],
+            "payback": [
+                "9M"
+            ],
+            "playrough": [
+                "9M"
+            ],
+            "powerswap": [
+                "9M"
+            ],
+            "protect": [
+                "9M"
+            ],
+            "psychicfangs": [
+                "9M"
+            ],
+            "quickattack": [
+                "9M"
+            ],
+            "raindance": [
+                "9M"
+            ],
+            "reflect": [
+                "9M"
+            ],
+            "rest": [
+                "9M"
+            ],
+            "retaliate": [
+                "9M"
+            ],
+            "revenge": [
+                "9M"
+            ],
+            "reversal": [
+                "9M"
+            ],
+            "roar": [
+                "9M"
+            ],
+            "round": [
+                "9M"
+            ],
+            "safeguard": [
+                "9M"
+            ],
+            "sandstorm": [
+                "9M"
+            ],
+            "scaryface": [
+                "9M"
+            ],
+            "slash": [
+                "9M"
+            ],
+            "sleeptalk": [
+                "9M"
+            ],
+            "snarl": [
+                "9M"
+            ],
+            "snore": [
+                "9M"
+            ],
+            "solarbeam": [
+                "9M"
+            ],
+            "steelbeam": [
+                "9M"
+            ],
+            "stoneedge": [
+                "9M"
+            ],
+            "substitute": [
+                "9M"
+            ],
+            "sunnyday": [
+                "9M"
+            ],
+            "swift": [
+                "9M"
+            ],
+            "tailslap": [
+                "9M"
+            ],
+            "takedown": [
+                "9M"
+            ],
+            "terablast": [
+                "9M"
+            ],
+            "thunderfang": [
+                "9M"
+            ],
+            "trailblaze": [
+                "9M"
+            ],
+            "wideguard": [
+                "9M"
+            ],
+            "wildcharge": [
+                "9M"
+            ],
+            "workup": [
+                "9M"
+            ],
+            "hiddenpower": [
+                "9M"
+            ],
+            "return": [
+                "9M"
+            ]
+        }
+    },
+    "zamazentacrowned": {
+        "inherit": true,
+        "learnset": {
+            "behemothbash": [
+                "9M"
+            ],
+            "hiddenpower": [
+                "9M"
+            ],
+            "return": [
+                "9M"
+            ],
+            "terablast": [
+                "9M"
+            ]
+        }
+    },
+    "eternatus": {
+        "inherit": true,
+        "learnset": {
+            "agility": [
+                "9M"
+            ],
+            "assurance": [
+                "9M"
+            ],
+            "bodyslam": [
+                "9M"
+            ],
+            "brutalswing": [
+                "9M"
+            ],
+            "confuseray": [
+                "9M"
+            ],
+            "cosmicpower": [
+                "9M"
+            ],
+            "crosspoison": [
+                "9M"
+            ],
+            "dracometeor": [
+                "9M"
+            ],
+            "dragondance": [
+                "9M"
+            ],
+            "dragonpulse": [
+                "9M"
+            ],
+            "dragontail": [
+                "9M"
+            ],
+            "dynamaxcannon": [
+                "9M"
+            ],
+            "endure": [
+                "9M"
+            ],
+            "eternabeam": [
+                "9M"
+            ],
+            "facade": [
+                "9M"
+            ],
+            "fireblast": [
+                "9M"
+            ],
+            "firespin": [
+                "9M"
+            ],
+            "flamethrower": [
+                "9M"
+            ],
+            "flashcannon": [
+                "9M"
+            ],
+            "fly": [
+                "9M"
+            ],
+            "gigaimpact": [
+                "9M"
+            ],
+            "gravity": [
+                "9M"
+            ],
+            "gunkshot": [
+                "9M"
+            ],
+            "hyperbeam": [
+                "9M"
+            ],
+            "lightscreen": [
+                "9M"
+            ],
+            "meteorbeam": [
+                "9M"
+            ],
+            "mysticalfire": [
+                "9M"
+            ],
+            "outrage": [
+                "9M"
+            ],
+            "payback": [
+                "9M"
+            ],
+            "poisonjab": [
+                "9M"
+            ],
+            "poisontail": [
+                "9M"
+            ],
+            "protect": [
+                "9M"
+            ],
+            "raindance": [
+                "9M"
+            ],
+            "recover": [
+                "9M"
+            ],
+            "reflect": [
+                "9M"
+            ],
+            "rest": [
+                "9M"
+            ],
+            "round": [
+                "9M"
+            ],
+            "scaryface": [
+                "9M"
+            ],
+            "screech": [
+                "9M"
+            ],
+            "shadowball": [
+                "9M"
+            ],
+            "sleeptalk": [
+                "9M"
+            ],
+            "sludgebomb": [
+                "9M"
+            ],
+            "sludgewave": [
+                "9M"
+            ],
+            "snore": [
+                "9M"
+            ],
+            "solarbeam": [
+                "9M"
+            ],
+            "substitute": [
+                "9M"
+            ],
+            "sunnyday": [
+                "9M"
+            ],
+            "takedown": [
+                "9M"
+            ],
+            "terablast": [
+                "9M"
+            ],
+            "toxic": [
+                "9M"
+            ],
+            "toxicspikes": [
+                "9M"
+            ],
+            "venomdrench": [
+                "9M"
+            ],
+            "venoshock": [
+                "9M"
+            ],
+            "hiddenpower": [
+                "9M"
+            ],
+            "return": [
+                "9M"
+            ]
+        }
+    },
+    "zarude": {
+        "inherit": true,
+        "learnset": {
+            "acrobatics": [
+                "9M"
+            ],
+            "aerialace": [
+                "9M"
+            ],
+            "assurance": [
+                "9M"
+            ],
+            "bind": [
+                "9M"
+            ],
+            "bite": [
+                "9M"
+            ],
+            "bodyslam": [
+                "9M"
+            ],
+            "brickbreak": [
+                "9M"
+            ],
+            "brutalswing": [
+                "9M"
+            ],
+            "bulkup": [
+                "9M"
+            ],
+            "bulletseed": [
+                "9M"
+            ],
+            "closecombat": [
+                "9M"
+            ],
+            "crunch": [
+                "9M"
+            ],
+            "darkestlariat": [
+                "9M"
+            ],
+            "darkpulse": [
+                "9M"
+            ],
+            "dig": [
+                "9M"
+            ],
+            "doubleedge": [
+                "9M"
+            ],
+            "drainpunch": [
+                "9M"
+            ],
+            "encore": [
+                "9M"
+            ],
+            "endure": [
+                "9M"
+            ],
+            "energyball": [
+                "9M"
+            ],
+            "facade": [
+                "9M"
+            ],
+            "fling": [
+                "9M"
+            ],
+            "focuspunch": [
+                "9M"
+            ],
+            "furyswipes": [
+                "9M"
+            ],
+            "gigadrain": [
+                "9M"
+            ],
+            "gigaimpact": [
+                "9M"
+            ],
+            "grassknot": [
+                "9M"
+            ],
+            "grassyglide": [
+                "9M"
+            ],
+            "grassyterrain": [
+                "9M"
+            ],
+            "growth": [
+                "9M"
+            ],
+            "hammerarm": [
+                "9M"
+            ],
+            "helpinghand": [
+                "9M"
+            ],
+            "hyperbeam": [
+                "9M"
+            ],
+            "hypervoice": [
+                "9M"
+            ],
+            "irontail": [
+                "9M"
+            ],
+            "junglehealing": [
+                "9M"
+            ],
+            "knockoff": [
+                "9M"
+            ],
+            "lashout": [
+                "9M"
+            ],
+            "leafstorm": [
+                "9M"
+            ],
+            "leer": [
+                "9M"
+            ],
+            "lowkick": [
+                "9M"
+            ],
+            "lowsweep": [
+                "9M"
+            ],
+            "magicalleaf": [
+                "9M"
+            ],
+            "megakick": [
+                "9M"
+            ],
+            "megapunch": [
+                "9M"
+            ],
+            "mudshot": [
+                "9M"
+            ],
+            "nastyplot": [
+                "9M"
+            ],
+            "payback": [
+                "9M"
+            ],
+            "petalblizzard": [
+                "9M"
+            ],
+            "powerwhip": [
+                "9M"
+            ],
+            "protect": [
+                "9M"
+            ],
+            "rest": [
+                "9M"
+            ],
+            "revenge": [
+                "9M"
+            ],
+            "roar": [
+                "9M"
+            ],
+            "rockslide": [
+                "9M"
+            ],
+            "rocktomb": [
+                "9M"
+            ],
+            "round": [
+                "9M"
+            ],
+            "scaryface": [
+                "9M"
+            ],
+            "scratch": [
+                "9M"
+            ],
+            "seedbomb": [
+                "9M"
+            ],
+            "sleeptalk": [
+                "9M"
+            ],
+            "snarl": [
+                "9M"
+            ],
+            "snore": [
+                "9M"
+            ],
+            "solarbeam": [
+                "9M"
+            ],
+            "solarblade": [
+                "9M"
+            ],
+            "stompingtantrum": [
+                "9M"
+            ],
+            "substitute": [
+                "9M"
+            ],
+            "sunnyday": [
+                "9M"
+            ],
+            "superpower": [
+                "9M"
+            ],
+            "swagger": [
+                "9M"
+            ],
+            "swift": [
+                "9M"
+            ],
+            "swordsdance": [
+                "9M"
+            ],
+            "synthesis": [
+                "9M"
+            ],
+            "takedown": [
+                "9M"
+            ],
+            "taunt": [
+                "9M"
+            ],
+            "terablast": [
+                "9M"
+            ],
+            "thief": [
+                "9M"
+            ],
+            "thrash": [
+                "9M"
+            ],
+            "throatchop": [
+                "9M"
+            ],
+            "trailblaze": [
+                "9M"
+            ],
+            "uturn": [
+                "9M"
+            ],
+            "vinewhip": [
+                "9M"
+            ],
+            "hiddenpower": [
+                "9M"
+            ],
+            "return": [
+                "9M"
+            ]
+        }
+    },
+    "calyrexice": {
+        "inherit": true,
+        "learnset": {
+            "agility": [
+                "9M"
+            ],
+            "allyswitch": [
+                "9M"
+            ],
+            "aromatherapy": [
+                "9M"
+            ],
+            "assurance": [
+                "9M"
+            ],
+            "avalanche": [
+                "9M"
+            ],
+            "batonpass": [
+                "9M"
+            ],
+            "blizzard": [
+                "9M"
+            ],
+            "bodypress": [
+                "9M"
+            ],
+            "bodyslam": [
+                "9M"
+            ],
+            "bulldoze": [
+                "9M"
+            ],
+            "bulletseed": [
+                "9M"
+            ],
+            "calmmind": [
+                "9M"
+            ],
+            "closecombat": [
+                "9M"
+            ],
+            "confusion": [
+                "9M"
+            ],
+            "crunch": [
+                "9M"
+            ],
+            "curse": [
+                "9M"
+            ],
+            "doubleedge": [
+                "9M"
+            ],
+            "doublekick": [
+                "9M"
+            ],
+            "drainingkiss": [
+                "9M"
+            ],
+            "encore": [
+                "9M"
+            ],
+            "endure": [
+                "9M"
+            ],
+            "energyball": [
+                "9M"
+            ],
+            "expandingforce": [
+                "9M"
+            ],
+            "facade": [
+                "9M"
+            ],
+            "futuresight": [
+                "9M"
+            ],
+            "gigadrain": [
+                "9M"
+            ],
+            "gigaimpact": [
+                "9M"
+            ],
+            "glaciallance": [
+                "9M"
+            ],
+            "grassknot": [
+                "9M"
+            ],
+            "grassyterrain": [
+                "9M"
+            ],
+            "gravity": [
+                "9M"
+            ],
+            "growth": [
+                "9M"
+            ],
+            "guardswap": [
+                "9M"
+            ],
+            "healpulse": [
+                "9M"
+            ],
+            "heavyslam": [
+                "9M"
+            ],
+            "helpinghand": [
+                "9M"
+            ],
+            "highhorsepower": [
+                "9M"
+            ],
+            "hyperbeam": [
+                "9M"
+            ],
+            "icebeam": [
+                "9M"
+            ],
+            "iciclecrash": [
+                "9M"
+            ],
+            "iciclespear": [
+                "9M"
+            ],
+            "icywind": [
+                "9M"
+            ],
+            "imprison": [
+                "9M"
+            ],
+            "irondefense": [
+                "9M"
+            ],
+            "lashout": [
+                "9M"
+            ],
+            "leafstorm": [
+                "9M"
+            ],
+            "leechseed": [
+                "9M"
+            ],
+            "lifedew": [
+                "9M"
+            ],
+            "lightscreen": [
+                "9M"
+            ],
+            "magicalleaf": [
+                "9M"
+            ],
+            "magicroom": [
+                "9M"
+            ],
+            "megadrain": [
+                "9M"
+            ],
+            "megahorn": [
+                "9M"
+            ],
+            "metronome": [
+                "9M"
+            ],
+            "mist": [
+                "9M"
+            ],
+            "mudshot": [
+                "9M"
+            ],
+            "outrage": [
+                "9M"
+            ],
+            "payback": [
+                "9M"
+            ],
+            "payday": [
+                "9M"
+            ],
+            "pollenpuff": [
+                "9M"
+            ],
+            "pound": [
+                "9M"
+            ],
+            "powerswap": [
+                "9M"
+            ],
+            "protect": [
+                "9M"
+            ],
+            "psybeam": [
+                "9M"
+            ],
+            "psychic": [
+                "9M"
+            ],
+            "psychicterrain": [
+                "9M"
+            ],
+            "psychup": [
+                "9M"
+            ],
+            "psyshock": [
+                "9M"
+            ],
+            "reflect": [
+                "9M"
+            ],
+            "rest": [
+                "9M"
+            ],
+            "roar": [
+                "9M"
+            ],
+            "round": [
+                "9M"
+            ],
+            "safeguard": [
+                "9M"
+            ],
+            "scaryface": [
+                "9M"
+            ],
+            "seedbomb": [
+                "9M"
+            ],
+            "skillswap": [
+                "9M"
+            ],
+            "sleeptalk": [
+                "9M"
+            ],
+            "smartstrike": [
+                "9M"
+            ],
+            "snarl": [
+                "9M"
+            ],
+            "snore": [
+                "9M"
+            ],
+            "snowscape": [
+                "9M"
+            ],
+            "solarbeam": [
+                "9M"
+            ],
+            "solarblade": [
+                "9M"
+            ],
+            "speedswap": [
+                "9M"
+            ],
+            "stomp": [
+                "9M"
+            ],
+            "stompingtantrum": [
+                "9M"
+            ],
+            "storedpower": [
+                "9M"
+            ],
+            "substitute": [
+                "9M"
+            ],
+            "sunnyday": [
+                "9M"
+            ],
+            "superpower": [
+                "9M"
+            ],
+            "swift": [
+                "9M"
+            ],
+            "swordsdance": [
+                "9M"
+            ],
+            "tackle": [
+                "9M"
+            ],
+            "tailwhip": [
+                "9M"
+            ],
+            "takedown": [
+                "9M"
+            ],
+            "taunt": [
+                "9M"
+            ],
+            "terablast": [
+                "9M"
+            ],
+            "thrash": [
+                "9M"
+            ],
+            "throatchop": [
+                "9M"
+            ],
+            "torment": [
+                "9M"
+            ],
+            "trailblaze": [
+                "9M"
+            ],
+            "triattack": [
+                "9M"
+            ],
+            "trick": [
+                "9M"
+            ],
+            "trickroom": [
+                "9M"
+            ],
+            "uproar": [
+                "9M"
+            ],
+            "wonderroom": [
+                "9M"
+            ],
+            "zenheadbutt": [
+                "9M"
+            ],
+            "hiddenpower": [
+                "9M"
+            ],
+            "return": [
+                "9M"
+            ]
+        }
+    },
+    "calyrexshadow": {
+        "inherit": true,
+        "learnset": {
+            "agility": [
+                "9M"
+            ],
+            "allyswitch": [
+                "9M"
+            ],
+            "aromatherapy": [
+                "9M"
+            ],
+            "assurance": [
+                "9M"
+            ],
+            "astralbarrage": [
+                "9M"
+            ],
+            "batonpass": [
+                "9M"
+            ],
+            "bodyslam": [
+                "9M"
+            ],
+            "bulldoze": [
+                "9M"
+            ],
+            "bulletseed": [
+                "9M"
+            ],
+            "calmmind": [
+                "9M"
+            ],
+            "confuseray": [
+                "9M"
+            ],
+            "confusion": [
+                "9M"
+            ],
+            "crunch": [
+                "9M"
+            ],
+            "curse": [
+                "9M"
+            ],
+            "darkpulse": [
+                "9M"
+            ],
+            "disable": [
+                "9M"
+            ],
+            "doubleedge": [
+                "9M"
+            ],
+            "doublekick": [
+                "9M"
+            ],
+            "drainingkiss": [
+                "9M"
+            ],
+            "encore": [
+                "9M"
+            ],
+            "endure": [
+                "9M"
+            ],
+            "energyball": [
+                "9M"
+            ],
+            "expandingforce": [
+                "9M"
+            ],
+            "facade": [
+                "9M"
+            ],
+            "foulplay": [
+                "9M"
+            ],
+            "futuresight": [
+                "9M"
+            ],
+            "gigadrain": [
+                "9M"
+            ],
+            "gigaimpact": [
+                "9M"
+            ],
+            "grassknot": [
+                "9M"
+            ],
+            "grassyterrain": [
+                "9M"
+            ],
+            "gravity": [
+                "9M"
+            ],
+            "growth": [
+                "9M"
+            ],
+            "guardswap": [
+                "9M"
+            ],
+            "haze": [
+                "9M"
+            ],
+            "healpulse": [
+                "9M"
+            ],
+            "helpinghand": [
+                "9M"
+            ],
+            "hex": [
+                "9M"
+            ],
+            "hyperbeam": [
+                "9M"
+            ],
+            "imprison": [
+                "9M"
+            ],
+            "lashout": [
+                "9M"
+            ],
+            "leafstorm": [
+                "9M"
+            ],
+            "leechseed": [
+                "9M"
+            ],
+            "lifedew": [
+                "9M"
+            ],
+            "lightscreen": [
+                "9M"
+            ],
+            "magicalleaf": [
+                "9M"
+            ],
+            "magicroom": [
+                "9M"
+            ],
+            "megadrain": [
+                "9M"
+            ],
+            "metronome": [
+                "9M"
+            ],
+            "mudshot": [
+                "9M"
+            ],
+            "nastyplot": [
+                "9M"
+            ],
+            "nightshade": [
+                "9M"
+            ],
+            "painsplit": [
+                "9M"
+            ],
+            "payback": [
+                "9M"
+            ],
+            "payday": [
+                "9M"
+            ],
+            "phantomforce": [
+                "9M"
+            ],
+            "pollenpuff": [
+                "9M"
+            ],
+            "pound": [
+                "9M"
+            ],
+            "powerswap": [
+                "9M"
+            ],
+            "protect": [
+                "9M"
+            ],
+            "psybeam": [
+                "9M"
+            ],
+            "psychic": [
+                "9M"
+            ],
+            "psychicterrain": [
+                "9M"
+            ],
+            "psychocut": [
+                "9M"
+            ],
+            "psychup": [
+                "9M"
+            ],
+            "psyshock": [
+                "9M"
+            ],
+            "reflect": [
+                "9M"
+            ],
+            "rest": [
+                "9M"
+            ],
+            "round": [
+                "9M"
+            ],
+            "safeguard": [
+                "9M"
+            ],
+            "scaryface": [
+                "9M"
+            ],
+            "seedbomb": [
+                "9M"
+            ],
+            "shadowball": [
+                "9M"
+            ],
+            "skillswap": [
+                "9M"
+            ],
+            "sleeptalk": [
+                "9M"
+            ],
+            "snarl": [
+                "9M"
+            ],
+            "snore": [
+                "9M"
+            ],
+            "solarbeam": [
+                "9M"
+            ],
+            "solarblade": [
+                "9M"
+            ],
+            "speedswap": [
+                "9M"
+            ],
+            "stomp": [
+                "9M"
+            ],
+            "stompingtantrum": [
+                "9M"
+            ],
+            "storedpower": [
+                "9M"
+            ],
+            "substitute": [
+                "9M"
+            ],
+            "sunnyday": [
+                "9M"
+            ],
+            "swift": [
+                "9M"
+            ],
+            "tackle": [
+                "9M"
+            ],
+            "tailwhip": [
+                "9M"
+            ],
+            "takedown": [
+                "9M"
+            ],
+            "taunt": [
+                "9M"
+            ],
+            "terablast": [
+                "9M"
+            ],
+            "thrash": [
+                "9M"
+            ],
+            "triattack": [
+                "9M"
+            ],
+            "trick": [
+                "9M"
+            ],
+            "trickroom": [
+                "9M"
+            ],
+            "uproar": [
+                "9M"
+            ],
+            "willowisp": [
+                "9M"
+            ],
+            "wonderroom": [
+                "9M"
+            ],
+            "zenheadbutt": [
+                "9M"
+            ],
+            "hiddenpower": [
+                "9M"
+            ],
+            "return": [
+                "9M"
+            ]
+        }
+    },
+    "koraidon": {
+        "inherit": true,
+        "learnset": {
+            "acrobatics": [
+                "9M"
+            ],
+            "agility": [
+                "9M"
+            ],
+            "ancientpower": [
+                "9M"
+            ],
+            "bodypress": [
+                "9M"
+            ],
+            "bodyslam": [
+                "9M"
+            ],
+            "breakingswipe": [
+                "9M"
+            ],
+            "brickbreak": [
+                "9M"
+            ],
+            "bulkup": [
+                "9M"
+            ],
+            "bulldoze": [
+                "9M"
+            ],
+            "closecombat": [
+                "9M"
+            ],
+            "collisioncourse": [
+                "9M"
+            ],
+            "counter": [
+                "9M"
+            ],
+            "crunch": [
+                "9M"
+            ],
+            "dig": [
+                "9M"
+            ],
+            "doubleedge": [
+                "9M"
+            ],
+            "dracometeor": [
+                "9M"
+            ],
+            "dragoncheer": [
+                "9M"
+            ],
+            "dragonclaw": [
+                "9M"
+            ],
+            "dragonpulse": [
+                "9M"
+            ],
+            "dragontail": [
+                "9M"
+            ],
+            "drainpunch": [
+                "9M"
+            ],
+            "dualwingbeat": [
+                "9M"
+            ],
+            "endure": [
+                "9M"
+            ],
+            "facade": [
+                "9M"
+            ],
+            "fireblast": [
+                "9M"
+            ],
+            "firefang": [
+                "9M"
+            ],
+            "firespin": [
+                "9M"
+            ],
+            "flamecharge": [
+                "9M"
+            ],
+            "flamethrower": [
+                "9M"
+            ],
+            "flareblitz": [
+                "9M"
+            ],
+            "focusblast": [
+                "9M"
+            ],
+            "focuspunch": [
+                "9M"
+            ],
+            "gigaimpact": [
+                "9M"
+            ],
+            "heatcrash": [
+                "9M"
+            ],
+            "heatwave": [
+                "9M"
+            ],
+            "heavyslam": [
+                "9M"
+            ],
+            "helpinghand": [
+                "9M"
+            ],
+            "hyperbeam": [
+                "9M"
+            ],
+            "icefang": [
+                "9M"
+            ],
+            "ironhead": [
+                "9M"
+            ],
+            "lowkick": [
+                "9M"
+            ],
+            "lowsweep": [
+                "9M"
+            ],
+            "meteorbeam": [
+                "9M"
+            ],
+            "mudshot": [
+                "9M"
+            ],
+            "mudslap": [
+                "9M"
+            ],
+            "outrage": [
+                "9M"
+            ],
+            "overheat": [
+                "9M"
+            ],
+            "protect": [
+                "9M"
+            ],
+            "rest": [
+                "9M"
+            ],
+            "reversal": [
+                "9M"
+            ],
+            "roar": [
+                "9M"
+            ],
+            "rocksmash": [
+                "9M"
+            ],
+            "scaleshot": [
+                "9M"
+            ],
+            "scaryface": [
+                "9M"
+            ],
+            "screech": [
+                "9M"
+            ],
+            "shadowclaw": [
+                "9M"
+            ],
+            "sleeptalk": [
+                "9M"
+            ],
+            "snarl": [
+                "9M"
+            ],
+            "solarbeam": [
+                "9M"
+            ],
+            "stompingtantrum": [
+                "9M"
+            ],
+            "substitute": [
+                "9M"
+            ],
+            "sunnyday": [
+                "9M"
+            ],
+            "swordsdance": [
+                "9M"
+            ],
+            "takedown": [
+                "9M"
+            ],
+            "taunt": [
+                "9M"
+            ],
+            "temperflare": [
+                "9M"
+            ],
+            "terablast": [
+                "9M"
+            ],
+            "thunderfang": [
+                "9M"
+            ],
+            "uproar": [
+                "9M"
+            ],
+            "uturn": [
+                "9M"
+            ],
+            "wildcharge": [
+                "9M"
+            ],
+            "zenheadbutt": [
+                "9M"
+            ],
+            "hiddenpower": [
+                "9M"
+            ],
+            "return": [
+                "9M"
+            ]
+        }
+    },
+    "miraidon": {
+        "inherit": true,
+        "learnset": {
+            "acrobatics": [
+                "9M"
+            ],
+            "agility": [
+                "9M"
+            ],
+            "bodyslam": [
+                "9M"
+            ],
+            "calmmind": [
+                "9M"
+            ],
+            "charge": [
+                "9M"
+            ],
+            "chargebeam": [
+                "9M"
+            ],
+            "confuseray": [
+                "9M"
+            ],
+            "crunch": [
+                "9M"
+            ],
+            "dazzlinggleam": [
+                "9M"
+            ],
+            "discharge": [
+                "9M"
+            ],
+            "dracometeor": [
+                "9M"
+            ],
+            "dragonbreath": [
+                "9M"
+            ],
+            "dragoncheer": [
+                "9M"
+            ],
+            "dragonclaw": [
+                "9M"
+            ],
+            "dragonpulse": [
+                "9M"
+            ],
+            "dragontail": [
+                "9M"
+            ],
+            "eerieimpulse": [
+                "9M"
+            ],
+            "electricterrain": [
+                "9M"
+            ],
+            "electroball": [
+                "9M"
+            ],
+            "electrodrift": [
+                "9M"
+            ],
+            "endure": [
+                "9M"
+            ],
+            "facade": [
+                "9M"
+            ],
+            "flashcannon": [
+                "9M"
+            ],
+            "gigaimpact": [
+                "9M"
+            ],
+            "heavyslam": [
+                "9M"
+            ],
+            "helpinghand": [
+                "9M"
+            ],
+            "hyperbeam": [
+                "9M"
+            ],
+            "lightscreen": [
+                "9M"
+            ],
+            "metalsound": [
+                "9M"
+            ],
+            "mirrorcoat": [
+                "9M"
+            ],
+            "outrage": [
+                "9M"
+            ],
+            "overheat": [
+                "9M"
+            ],
+            "paraboliccharge": [
+                "9M"
+            ],
+            "powergem": [
+                "9M"
+            ],
+            "protect": [
+                "9M"
+            ],
+            "reflect": [
+                "9M"
+            ],
+            "rest": [
+                "9M"
+            ],
+            "scaryface": [
+                "9M"
+            ],
+            "shockwave": [
+                "9M"
+            ],
+            "sleeptalk": [
+                "9M"
+            ],
+            "snarl": [
+                "9M"
+            ],
+            "solarbeam": [
+                "9M"
+            ],
+            "substitute": [
+                "9M"
+            ],
+            "supercellslam": [
+                "9M"
+            ],
+            "swordsdance": [
+                "9M"
+            ],
+            "takedown": [
+                "9M"
+            ],
+            "taunt": [
+                "9M"
+            ],
+            "terablast": [
+                "9M"
+            ],
+            "thunder": [
+                "9M"
+            ],
+            "thunderbolt": [
+                "9M"
+            ],
+            "thundershock": [
+                "9M"
+            ],
+            "thunderwave": [
+                "9M"
+            ],
+            "uturn": [
+                "9M"
+            ],
+            "voltswitch": [
+                "9M"
+            ],
+            "wildcharge": [
+                "9M"
+            ],
+            "zenheadbutt": [
+                "9M"
+            ],
+            "hiddenpower": [
+                "9M"
+            ],
+            "return": [
+                "9M"
+            ]
+        }
+    },
+    "pecharunt": {
+        "inherit": true,
+        "learnset": {
+            "acidspray": [
+                "9M"
+            ],
+            "astonish": [
+                "9M"
+            ],
+            "curse": [
+                "9M"
+            ],
+            "defensecurl": [
+                "9M"
+            ],
+            "destinybond": [
+                "9M"
+            ],
+            "endure": [
+                "9M"
+            ],
+            "faketears": [
+                "9M"
+            ],
+            "foulplay": [
+                "9M"
+            ],
+            "gunkshot": [
+                "9M"
+            ],
+            "hex": [
+                "9M"
+            ],
+            "imprison": [
+                "9M"
+            ],
+            "malignantchain": [
+                "9M"
+            ],
+            "meanlook": [
+                "9M"
+            ],
+            "memento": [
+                "9M"
+            ],
+            "nastyplot": [
+                "9M"
+            ],
+            "nightshade": [
+                "9M"
+            ],
+            "partingshot": [
+                "9M"
+            ],
+            "phantomforce": [
+                "9M"
+            ],
+            "poisongas": [
+                "9M"
+            ],
+            "poltergeist": [
+                "9M"
+            ],
+            "protect": [
+                "9M"
+            ],
+            "recover": [
+                "9M"
+            ],
+            "rest": [
+                "9M"
+            ],
+            "rollout": [
+                "9M"
+            ],
+            "shadowball": [
+                "9M"
+            ],
+            "sleeptalk": [
+                "9M"
+            ],
+            "sludgebomb": [
+                "9M"
+            ],
+            "sludgewave": [
+                "9M"
+            ],
+            "smog": [
+                "9M"
+            ],
+            "spite": [
+                "9M"
+            ],
+            "substitute": [
+                "9M"
+            ],
+            "terablast": [
+                "9M"
+            ],
+            "toxic": [
+                "9M"
+            ],
+            "venoshock": [
+                "9M"
+            ],
+            "withdraw": [
+                "9M"
+            ],
+            "hiddenpower": [
+                "9M"
+            ],
+            "return": [
+                "9M"
+            ]
+        }
+    },
+    "terapagos": {
+        "inherit": true,
+        "learnset": {
+            "ancientpower": [
+                "9M"
+            ],
+            "aurasphere": [
+                "9M"
+            ],
+            "bodypress": [
+                "9M"
+            ],
+            "bodyslam": [
+                "9M"
+            ],
+            "bugbuzz": [
+                "9M"
+            ],
+            "calmmind": [
+                "9M"
+            ],
+            "crunch": [
+                "9M"
+            ],
+            "darkpulse": [
+                "9M"
+            ],
+            "dazzlinggleam": [
+                "9M"
+            ],
+            "doubleedge": [
+                "9M"
+            ],
+            "dragonpulse": [
+                "9M"
+            ],
+            "earthpower": [
+                "9M"
+            ],
+            "earthquake": [
+                "9M"
+            ],
+            "endure": [
+                "9M"
+            ],
+            "energyball": [
+                "9M"
+            ],
+            "facade": [
+                "9M"
+            ],
+            "flamethrower": [
+                "9M"
+            ],
+            "flareblitz": [
+                "9M"
+            ],
+            "flashcannon": [
+                "9M"
+            ],
+            "gigaimpact": [
+                "9M"
+            ],
+            "gravity": [
+                "9M"
+            ],
+            "gyroball": [
+                "9M"
+            ],
+            "headbutt": [
+                "9M"
+            ],
+            "heatcrash": [
+                "9M"
+            ],
+            "heavyslam": [
+                "9M"
+            ],
+            "hyperbeam": [
+                "9M"
+            ],
+            "icebeam": [
+                "9M"
+            ],
+            "icespinner": [
+                "9M"
+            ],
+            "ironhead": [
+                "9M"
+            ],
+            "meteorbeam": [
+                "9M"
+            ],
+            "powergem": [
+                "9M"
+            ],
+            "protect": [
+                "9M"
+            ],
+            "raindance": [
+                "9M"
+            ],
+            "rapidspin": [
+                "9M"
+            ],
+            "rest": [
+                "9M"
+            ],
+            "roar": [
+                "9M"
+            ],
+            "rockpolish": [
+                "9M"
+            ],
+            "rockslide": [
+                "9M"
+            ],
+            "scorchingsands": [
+                "9M"
+            ],
+            "sleeptalk": [
+                "9M"
+            ],
+            "solarbeam": [
+                "9M"
+            ],
+            "stealthrock": [
+                "9M"
+            ],
+            "stoneedge": [
+                "9M"
+            ],
+            "storedpower": [
+                "9M"
+            ],
+            "substitute": [
+                "9M"
+            ],
+            "sunnyday": [
+                "9M"
+            ],
+            "supercellslam": [
+                "9M"
+            ],
+            "surf": [
+                "9M"
+            ],
+            "takedown": [
+                "9M"
+            ],
+            "terastarstorm": [
+                "9M"
+            ],
+            "thunder": [
+                "9M"
+            ],
+            "thunderbolt": [
+                "9M"
+            ],
+            "toxic": [
+                "9M"
+            ],
+            "triattack": [
+                "9M"
+            ],
+            "waterpulse": [
+                "9M"
+            ],
+            "weatherball": [
+                "9M"
+            ],
+            "wildcharge": [
+                "9M"
+            ],
+            "withdraw": [
+                "9M"
+            ],
+            "zenheadbutt": [
+                "9M"
+            ],
+            "hiddenpower": [
+                "9M"
+            ],
+            "return": [
+                "9M"
+            ],
+            "terablast": [
+                "9M"
+            ]
+        }
     }
-};
+}

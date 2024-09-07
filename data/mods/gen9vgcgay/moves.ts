@@ -1666,22 +1666,6 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 			}
 		},
 	},
-	roaroftime: {
-		inherit: true,
-		isNonstandard: null,
-		self: null,
-		shortDesc: "User recharge if doesn't KO. Dialga-Origin: Hits both foes.",
-		onHit(target, source) {
-			if (target.hp) {
-				source.addVolatile('mustrecharge');
-			}
-		},
-		onModifyMove(move, pokemon) {
-			if (pokemon.species.name === 'Dialga-Origin') {
-				move.target = 'allAdjacentFoes';
-			}
-		},
-	},
 	freezeshock: {
 		inherit: true,
 		isNonstandard: null,
@@ -1730,14 +1714,29 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 	eternabeam: {
 		inherit: true,
 		isNonstandard: null,
-		self: null,
-		basePower: 200,
+		basePower: 180,
 	},
 	// Origin forme changes
+	roaroftime: {
+		inherit: true,
+		isNonstandard: null,
+		self: null,
+		shortDesc: "User recharge if doesn't KO. Dialga-O: Hits both foes.",
+		onHit(target, source) {
+			if (target.hp) {
+				source.addVolatile('mustrecharge');
+			}
+		},
+		onModifyMove(move, pokemon) {
+			if (pokemon.species.name === 'Dialga-Origin') {
+				move.target = 'allAdjacentFoes';
+			}
+		},
+	},
 	spacialrend: {
 		inherit: true,
 		isNonstandard: null,
-		shortDesc: "High critical hit ratio. Palkia-Origin: Always crits.",
+		shortDesc: "High critical hit ratio. Palkia-O: Always crits.",
 		onModifyMove(move, pokemon) {
 			if (pokemon.species.name === 'Palkia-Origin') {
 				move.willCrit = true;
@@ -1747,7 +1746,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 	shadowforce: {
 		inherit: true,
 		isNonstandard: null,
-		shortDesc: "Breaks protection. Not Giratina-Origin: Disappears T1, hits T2.",
+		shortDesc: "Breaks protection. Not Giratina-O: Disappears T1, hits T2.",
 		onTryMove(attacker, defender, move) {
 			if (attacker.removeVolatile(move.id)) {
 				return;

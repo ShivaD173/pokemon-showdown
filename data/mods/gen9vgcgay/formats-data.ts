@@ -2537,76 +2537,76 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		"tier": "Uber"
 	},
 	"arceusbug": {
-		"isNonstandard": "Past",
-		"tier": "Illegal"
+		"isNonstandard": null,
+		"tier": "Uber"
 	},
 	"arceusdark": {
-		"isNonstandard": "Past",
-		"tier": "Illegal"
+		"isNonstandard": null,
+		"tier": "Uber"
 	},
 	"arceusdragon": {
-		"isNonstandard": "Past",
-		"tier": "Illegal"
+		"isNonstandard": null,
+		"tier": "Uber"
 	},
 	"arceuselectric": {
-		"isNonstandard": "Past",
-		"tier": "Illegal"
+		"isNonstandard": null,
+		"tier": "Uber"
 	},
 	"arceusfairy": {
-		"isNonstandard": "Past",
-		"tier": "Illegal"
+		"isNonstandard": null,
+		"tier": "Uber"
 	},
 	"arceusfighting": {
-		"isNonstandard": "Past",
-		"tier": "Illegal"
+		"isNonstandard": null,
+		"tier": "Uber"
 	},
 	"arceusfire": {
-		"isNonstandard": "Past",
-		"tier": "Illegal"
+		"isNonstandard": null,
+		"tier": "Uber"
 	},
 	"arceusflying": {
-		"isNonstandard": "Past",
-		"tier": "Illegal"
+		"isNonstandard": null,
+		"tier": "Uber"
 	},
 	"arceusghost": {
-		"isNonstandard": "Past",
-		"tier": "Illegal"
+		"isNonstandard": null,
+		"tier": "Uber"
 	},
 	"arceusgrass": {
-		"isNonstandard": "Past",
-		"tier": "Illegal"
+		"isNonstandard": null,
+		"tier": "Uber"
 	},
 	"arceusground": {
-		"isNonstandard": "Past",
-		"tier": "Illegal"
+		"isNonstandard": null,
+		"tier": "Uber"
 	},
 	"arceusice": {
-		"isNonstandard": "Past",
-		"tier": "Illegal"
+		"isNonstandard": null,
+		"tier": "Uber"
 	},
 	"arceuspoison": {
-		"isNonstandard": "Past",
-		"tier": "Illegal"
+		"isNonstandard": null,
+		"tier": "Uber"
 	},
 	"arceuspsychic": {
-		"isNonstandard": "Past",
-		"tier": "Illegal"
+		"isNonstandard": null,
+		"tier": "Uber"
 	},
 	"arceusrock": {
-		"isNonstandard": "Past",
-		"tier": "Illegal"
+		"isNonstandard": null,
+		"tier": "OU"
 	},
 	"arceussteel": {
-		"isNonstandard": "Past",
-		"tier": "Illegal"
+		"isNonstandard": null,
+		"tier": "Uber"
 	},
 	"arceuswater": {
-		"isNonstandard": "Past",
-		"tier": "Illegal"
+		"isNonstandard": null,
+		"tier": "Uber"
 	},
 	"victini": {
 		"isNonstandard": null,
-		"tier": "Uber"
+		"tier": "OU"
 	},
 	"snivy": {
 		"isNonstandard": "Past",
@@ -4130,7 +4130,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 	},
 	"lunala": {
 		"isNonstandard": null,
-		"tier": "OU"
+		"tier": "Uber"
 	},
 	"nihilego": {
 		"isNonstandard": null,
@@ -5297,8 +5297,8 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		"tier": "OU"
 	},
 	"terapagos": {
-		"isNonstandard": "Past",
-		"tier": "Illegal"
+		"isNonstandard": null,
+		"tier": "OU"
 	},
 	"terapagosterastal": {
 		"isNonstandard": null,
