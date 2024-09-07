@@ -11545,7 +11545,9 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 			"spe": 130
 		},
 		"abilities": {
-			"0": "Neuroforce"
+			"0": "Neuroforce",
+			"1": "Mega Shift X",
+			"H": "Mega Shift Y"
 		},
 		"inherit": true
 	},
@@ -11743,7 +11745,8 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 			"spe": 110
 		},
 		"abilities": {
-			"0": "Pressure"
+			"0": "Pressure",
+			"H": "Copy Core"
 		},
 		"inherit": true
 	},
@@ -11760,7 +11763,8 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 			"spe": 150
 		},
 		"abilities": {
-			"0": "Pressure"
+			"0": "Pressure",
+			"H": "Onslaught Core"
 		},
 		"inherit": true
 	},
@@ -11777,7 +11781,8 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 			"spe": 90
 		},
 		"abilities": {
-			"0": "Pressure"
+			"0": "Pressure",
+			"H": "Barrier Core"
 		},
 		"inherit": true
 	},
@@ -11794,7 +11799,8 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 			"spe": 180
 		},
 		"abilities": {
-			"0": "Pressure"
+			"0": "Pressure",
+			"H": "Hazard Core"
 		},
 		"inherit": true
 	},
@@ -11813,6 +11819,7 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 		},
 		"abilities": {
 			"0": "Pressure",
+			"1": "Hyperbolic Time",
 			"H": "Telepathy"
 		},
 		"inherit": true
@@ -11832,6 +11839,7 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 		},
 		"abilities": {
 			"0": "Pressure",
+			"1": "Hyperbolic Time",
 			"H": "Telepathy"
 		},
 		"inherit": true,
@@ -11918,23 +11926,6 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 		},
 		"inherit": true,
 		"battleOnly": "giratina"
-	},
-	"phione": {
-		"types": [
-			"Water"
-		],
-		"baseStats": {
-			"hp": 80,
-			"atk": 80,
-			"def": 80,
-			"spa": 80,
-			"spd": 80,
-			"spe": 80
-		},
-		"abilities": {
-			"0": "Hydration"
-		},
-		"inherit": true
 	},
 	"manaphy": {
 		"types": [
@@ -12073,24 +12064,6 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 		},
 		"abilities": {
 			"0": "Teravolt"
-		},
-		"inherit": true
-	},
-	"kyurem": {
-		"types": [
-			"Dragon",
-			"Ice"
-		],
-		"baseStats": {
-			"hp": 125,
-			"atk": 130,
-			"def": 90,
-			"spa": 130,
-			"spd": 90,
-			"spe": 95
-		},
-		"abilities": {
-			"0": "Pressure"
 		},
 		"inherit": true
 	},
@@ -12263,11 +12236,11 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 		],
 		"baseStats": {
 			"hp": 64,
-			"atk": 145,
+			"atk": 140,
 			"def": 71,
-			"spa": 110,
+			"spa": 100,
 			"spd": 85,
-			"spe": 125
+			"spe": 140
 		},
 		"abilities": {
 			"0": "Aura Break",
@@ -12300,24 +12273,6 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 		],
 		"baseStats": {
 			"hp": 50,
-			"atk": 100,
-			"def": 150,
-			"spa": 100,
-			"spd": 150,
-			"spe": 50
-		},
-		"abilities": {
-			"0": "Clear Body"
-		},
-		"inherit": true
-	},
-	"megadiancie": {
-		"types": [
-			"Rock",
-			"Fairy"
-		],
-		"baseStats": {
-			"hp": 50,
 			"atk": 160,
 			"def": 110,
 			"spa": 160,
@@ -12329,25 +12284,7 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 		},
 		"inherit": true
 	},
-	"confinedhoopa": {
-		"types": [
-			"Psychic",
-			"Ghost"
-		],
-		"baseStats": {
-			"hp": 80,
-			"atk": 110,
-			"def": 60,
-			"spa": 150,
-			"spd": 130,
-			"spe": 70
-		},
-		"abilities": {
-			"0": "Magician"
-		},
-		"inherit": true
-	},
-	"unboundhoopa": {
+	"hoopaunbound": {
 		"types": [
 			"Psychic",
 			"Dark"
@@ -12380,23 +12317,6 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 		},
 		"abilities": {
 			"0": "Water Absorb"
-		},
-		"inherit": true
-	},
-	"cosmog": {
-		"types": [
-			"Psychic"
-		],
-		"baseStats": {
-			"hp": 43,
-			"atk": 29,
-			"def": 31,
-			"spa": 29,
-			"spd": 31,
-			"spe": 37
-		},
-		"abilities": {
-			"0": "Unaware"
 		},
 		"inherit": true
 	},
@@ -12454,23 +12374,6 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 		},
 		"inherit": true
 	},
-	"necrozma": {
-		"types": [
-			"Psychic"
-		],
-		"baseStats": {
-			"hp": 97,
-			"atk": 107,
-			"def": 101,
-			"spa": 127,
-			"spd": 89,
-			"spe": 79
-		},
-		"abilities": {
-			"0": "Prism Armor"
-		},
-		"inherit": true
-	},
 	"necrozmaduskmane": {
 		"types": [
 			"Psychic",
@@ -12485,7 +12388,7 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 			"spe": 77
 		},
 		"abilities": {
-			"0": "Prism Armor"
+			"0": "Neuroforce"
 		},
 		"inherit": true
 	},
@@ -12503,7 +12406,7 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 			"spe": 77
 		},
 		"abilities": {
-			"0": "Prism Armor"
+			"0": "Neuroforce"
 		},
 		"inherit": true
 	},
@@ -12680,24 +12583,6 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 		},
 		"abilities": {
 			"0": "Leaf Guard"
-		},
-		"inherit": true
-	},
-	"calyrex": {
-		"types": [
-			"Psychic",
-			"Grass"
-		],
-		"baseStats": {
-			"hp": 100,
-			"atk": 80,
-			"def": 80,
-			"spa": 80,
-			"spd": 80,
-			"spe": 80
-		},
-		"abilities": {
-			"0": "Symbiosis"
 		},
 		"inherit": true
 	},

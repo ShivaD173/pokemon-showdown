@@ -1,4 +1,5 @@
-export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormatsDataTable = {
+export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormatsDataTable =
+{
 	"bulbasaur": {
 		"isNonstandard": "Past",
 		"tier": "Illegal"
@@ -912,20 +913,20 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		"tier": "OU"
 	},
 	"mewtwo": {
-		"isNonstandard": "Past",
-		"tier": "Illegal"
+		"isNonstandard": null,
+		"tier": "Uber"
 	},
 	"mewtwomegax": {
-		"isNonstandard": "Past",
-		"tier": "Illegal"
+		"isNonstandard": null,
+		"tier": "Uber"
 	},
 	"mewtwomegay": {
-		"isNonstandard": "Past",
-		"tier": "Illegal"
+		"isNonstandard": null,
+		"tier": "Uber"
 	},
 	"mew": {
-		"isNonstandard": "Past",
-		"tier": "Illegal"
+		"isNonstandard": null,
+		"tier": "Uber"
 	},
 	"chikorita": {
 		"isNonstandard": "Past",
@@ -1368,16 +1369,16 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		"tier": "Illegal"
 	},
 	"lugia": {
-		"isNonstandard": "Past",
-		"tier": "Illegal"
+		"isNonstandard": null,
+		"tier": "Uber"
 	},
 	"hooh": {
-		"isNonstandard": "Past",
-		"tier": "Illegal"
+		"isNonstandard": null,
+		"tier": "Uber"
 	},
 	"celebi": {
-		"isNonstandard": "Past",
-		"tier": "Illegal"
+		"isNonstandard": null,
+		"tier": "OU"
 	},
 	"treecko": {
 		"isNonstandard": "Past",
@@ -1996,48 +1997,48 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		"tier": "Illegal"
 	},
 	"kyogre": {
-		"isNonstandard": "Past",
-		"tier": "Illegal"
+		"isNonstandard": null,
+		"tier": "Uber"
 	},
 	"kyogreprimal": {
 		"isNonstandard": "Past",
 		"tier": "Illegal"
 	},
 	"groudon": {
-		"isNonstandard": "Past",
-		"tier": "Illegal"
+		"isNonstandard": null,
+		"tier": "Uber"
 	},
 	"groudonprimal": {
 		"isNonstandard": "Past",
 		"tier": "Illegal"
 	},
 	"rayquaza": {
-		"isNonstandard": "Past",
-		"tier": "Illegal"
+		"isNonstandard": null,
+		"tier": "Uber"
 	},
 	"rayquazamega": {
 		"isNonstandard": "Past",
 		"tier": "Illegal"
 	},
 	"jirachi": {
-		"isNonstandard": "Past",
-		"tier": "Illegal"
+		"isNonstandard": null,
+		"tier": "OU"
 	},
 	"deoxys": {
-		"isNonstandard": "Past",
-		"tier": "Illegal"
+		"isNonstandard": null,
+		"tier": "Uber"
 	},
 	"deoxysattack": {
-		"isNonstandard": "Past",
-		"tier": "Illegal"
+		"isNonstandard": null,
+		"tier": "Uber"
 	},
 	"deoxysdefense": {
-		"isNonstandard": "Past",
-		"tier": "Illegal"
+		"isNonstandard": null,
+		"tier": "Uber"
 	},
 	"deoxysspeed": {
-		"isNonstandard": "Past",
-		"tier": "Illegal"
+		"isNonstandard": null,
+		"tier": "Uber"
 	},
 	"turtwig": {
 		"isNonstandard": "Past",
@@ -2476,20 +2477,20 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		"tier": "OU"
 	},
 	"dialga": {
-		"isNonstandard": "Past",
-		"tier": "Illegal"
+		"isNonstandard": null,
+		"tier": "Uber"
 	},
 	"dialgaorigin": {
-		"isNonstandard": "Past",
-		"tier": "Illegal"
+		"isNonstandard": null,
+		"tier": "Uber"
 	},
 	"palkia": {
-		"isNonstandard": "Past",
-		"tier": "Illegal"
+		"isNonstandard": null,
+		"tier": "Uber"
 	},
 	"palkiaorigin": {
-		"isNonstandard": "Past",
-		"tier": "Illegal"
+		"isNonstandard": null,
+		"tier": "Uber"
 	},
 	"heatran": {
 		"isNonstandard": null,
@@ -2500,12 +2501,12 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		"tier": "OU"
 	},
 	"giratina": {
-		"isNonstandard": "Past",
-		"tier": "Illegal"
+		"isNonstandard": null,
+		"tier": "Uber"
 	},
 	"giratinaorigin": {
-		"isNonstandard": "Past",
-		"tier": "Illegal"
+		"isNonstandard": null,
+		"tier": "Uber"
 	},
 	"cresselia": {
 		"isNonstandard": null,
@@ -2516,24 +2517,24 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		"tier": "Illegal"
 	},
 	"manaphy": {
-		"isNonstandard": "Past",
-		"tier": "Illegal"
+		"isNonstandard": null,
+		"tier": "OU"
 	},
 	"darkrai": {
-		"isNonstandard": "Past",
-		"tier": "Illegal"
+		"isNonstandard": null,
+		"tier": "Uber"
 	},
 	"shaymin": {
-		"isNonstandard": "Past",
-		"tier": "Illegal"
+		"isNonstandard": null,
+		"tier": "OU"
 	},
 	"shayminsky": {
-		"isNonstandard": "Past",
-		"tier": "Illegal"
+		"isNonstandard": null,
+		"tier": "OU"
 	},
 	"arceus": {
-		"isNonstandard": "Past",
-		"tier": "Illegal"
+		"isNonstandard": null,
+		"tier": "Uber"
 	},
 	"arceusbug": {
 		"isNonstandard": "Past",
@@ -2604,8 +2605,8 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		"tier": "Illegal"
 	},
 	"victini": {
-		"isNonstandard": "Past",
-		"tier": "Illegal"
+		"isNonstandard": null,
+		"tier": "Uber"
 	},
 	"snivy": {
 		"isNonstandard": "Past",
@@ -3268,12 +3269,12 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		"tier": "OU"
 	},
 	"reshiram": {
-		"isNonstandard": "Past",
-		"tier": "Illegal"
+		"isNonstandard": null,
+		"tier": "Uber"
 	},
 	"zekrom": {
-		"isNonstandard": "Past",
-		"tier": "Illegal"
+		"isNonstandard": null,
+		"tier": "Uber"
 	},
 	"landorus": {
 		"isNonstandard": null,
@@ -3288,32 +3289,32 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		"tier": "Illegal"
 	},
 	"kyuremblack": {
-		"isNonstandard": "Past",
-		"tier": "Illegal"
+		"isNonstandard": null,
+		"tier": "Uber"
 	},
 	"kyuremwhite": {
-		"isNonstandard": "Past",
-		"tier": "Illegal"
+		"isNonstandard": null,
+		"tier": "Uber"
 	},
 	"keldeo": {
-		"isNonstandard": "Past",
-		"tier": "Illegal"
+		"isNonstandard": null,
+		"tier": "OU"
 	},
 	"keldeoresolute": {
 		"isNonstandard": "Past",
 		"tier": "Illegal"
 	},
 	"meloetta": {
-		"isNonstandard": "Past",
-		"tier": "Illegal"
+		"isNonstandard": null,
+		"tier": "OU"
 	},
 	"meloettapirouette": {
-		"isNonstandard": "Past",
-		"tier": "Illegal"
+		"isNonstandard": null,
+		"tier": "OU"
 	},
 	"genesect": {
-		"isNonstandard": "Past",
-		"tier": "Illegal"
+		"isNonstandard": null,
+		"tier": "OU"
 	},
 	"genesectdouse": {
 		"isNonstandard": "Past",
@@ -3660,32 +3661,32 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		"tier": "OU"
 	},
 	"xerneas": {
-		"isNonstandard": "Past",
-		"tier": "Illegal"
+		"isNonstandard": null,
+		"tier": "Uber"
 	},
 	"xerneasneutral": {
 		"isNonstandard": "Past",
 		"tier": "Illegal"
 	},
 	"yveltal": {
-		"isNonstandard": "Past",
-		"tier": "Illegal"
+		"isNonstandard": null,
+		"tier": "Uber"
 	},
 	"zygarde": {
 		"isNonstandard": "Past",
 		"tier": "Illegal"
 	},
 	"zygarde10": {
-		"isNonstandard": "Past",
-		"tier": "Illegal"
+		"isNonstandard": null,
+		"tier": "Uber"
 	},
 	"zygardecomplete": {
 		"isNonstandard": "Past",
 		"tier": "Illegal"
 	},
 	"diancie": {
-		"isNonstandard": "Past",
-		"tier": "Illegal"
+		"isNonstandard": null,
+		"tier": "Uber"
 	},
 	"dianciemega": {
 		"isNonstandard": "Past",
@@ -3696,12 +3697,12 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		"tier": "Illegal"
 	},
 	"hoopaunbound": {
-		"isNonstandard": "Past",
-		"tier": "Illegal"
+		"isNonstandard": null,
+		"tier": "Uber"
 	},
 	"volcanion": {
-		"isNonstandard": "Past",
-		"tier": "Illegal"
+		"isNonstandard": null,
+		"tier": "OU"
 	},
 	"rowlet": {
 		"isNonstandard": "Past",
@@ -4120,16 +4121,16 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		"tier": "Illegal"
 	},
 	"cosmoem": {
-		"isNonstandard": "Past",
-		"tier": "Illegal"
+		"isNonstandard": null,
+		"tier": "Uber"
 	},
 	"solgaleo": {
-		"isNonstandard": "Past",
-		"tier": "Illegal"
+		"isNonstandard": null,
+		"tier": "Uber"
 	},
 	"lunala": {
-		"isNonstandard": "Past",
-		"tier": "Illegal"
+		"isNonstandard": null,
+		"tier": "OU"
 	},
 	"nihilego": {
 		"isNonstandard": null,
@@ -4164,28 +4165,28 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		"tier": "Illegal"
 	},
 	"necrozmaduskmane": {
-		"isNonstandard": "Past",
-		"tier": "Illegal"
+		"isNonstandard": null,
+		"tier": "Uber"
 	},
 	"necrozmadawnwings": {
-		"isNonstandard": "Past",
-		"tier": "Illegal"
+		"isNonstandard": null,
+		"tier": "Uber"
 	},
 	"necrozmaultra": {
 		"isNonstandard": "Past",
 		"tier": "Illegal"
 	},
 	"magearna": {
-		"isNonstandard": "Past",
-		"tier": "Illegal"
+		"isNonstandard": null,
+		"tier": "Uber"
 	},
 	"magearnaoriginal": {
 		"isNonstandard": "Past",
 		"tier": "Illegal"
 	},
 	"marshadow": {
-		"isNonstandard": "Past",
-		"tier": "Illegal"
+		"isNonstandard": null,
+		"tier": "OU"
 	},
 	"poipole": {
 		"isNonstandard": "Past",
@@ -4204,16 +4205,16 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		"tier": "OU"
 	},
 	"zeraora": {
-		"isNonstandard": "Past",
-		"tier": "Illegal"
+		"isNonstandard": null,
+		"tier": "OU"
 	},
 	"meltan": {
 		"isNonstandard": "Past",
 		"tier": "Illegal"
 	},
 	"melmetal": {
-		"isNonstandard": "Past",
-		"tier": "Illegal"
+		"isNonstandard": null,
+		"tier": "OU"
 	},
 	"melmetalgmax": {
 		"isNonstandard": "Past",
@@ -4636,24 +4637,24 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		"tier": "OU"
 	},
 	"zacian": {
-		"isNonstandard": "Past",
-		"tier": "Illegal"
+		"isNonstandard": null,
+		"tier": "Uber"
 	},
 	"zaciancrowned": {
-		"isNonstandard": "Past",
-		"tier": "Illegal"
+		"isNonstandard": null,
+		"tier": "Uber"
 	},
 	"zamazenta": {
-		"isNonstandard": "Past",
-		"tier": "Illegal"
+		"isNonstandard": null,
+		"tier": "Uber"
 	},
 	"zamazentacrowned": {
-		"isNonstandard": "Past",
-		"tier": "Illegal"
+		"isNonstandard": null,
+		"tier": "Uber"
 	},
 	"eternatus": {
-		"isNonstandard": "Past",
-		"tier": "Illegal"
+		"isNonstandard": null,
+		"tier": "Uber"
 	},
 	"eternatuseternamax": {
 		"isNonstandard": "Past",
@@ -4680,8 +4681,8 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		"tier": "Illegal"
 	},
 	"zarude": {
-		"isNonstandard": "Past",
-		"tier": "Illegal"
+		"isNonstandard": null,
+		"tier": "OU"
 	},
 	"zarudedada": {
 		"isNonstandard": "Past",
@@ -4708,12 +4709,12 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		"tier": "Illegal"
 	},
 	"calyrexice": {
-		"isNonstandard": "Past",
-		"tier": "Illegal"
+		"isNonstandard": null,
+		"tier": "Uber"
 	},
 	"calyrexshadow": {
-		"isNonstandard": "Past",
-		"tier": "Illegal"
+		"isNonstandard": null,
+		"tier": "Uber"
 	},
 	"wyrdeer": {
 		"isNonstandard": null,
@@ -5192,12 +5193,12 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		"tier": "OU"
 	},
 	"koraidon": {
-		"isNonstandard": "Past",
-		"tier": "Illegal"
+		"isNonstandard": null,
+		"tier": "Uber"
 	},
 	"miraidon": {
-		"isNonstandard": "Past",
-		"tier": "Illegal"
+		"isNonstandard": null,
+		"tier": "Uber"
 	},
 	"walkingwake": {
 		"isNonstandard": null,
@@ -5300,16 +5301,16 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		"tier": "Illegal"
 	},
 	"terapagosterastal": {
-		"isNonstandard": "Past",
-		"tier": "Illegal"
+		"isNonstandard": null,
+		"tier": "Uber"
 	},
 	"terapagosstellar": {
-		"isNonstandard": "Past",
-		"tier": "Illegal"
+		"isNonstandard": null,
+		"tier": "Uber"
 	},
 	"pecharunt": {
-		"isNonstandard": "Past",
-		"tier": "Illegal"
+		"isNonstandard": null,
+		"tier": "OU"
 	},
 	"missingno": {
 		"isNonstandard": "Past",
