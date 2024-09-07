@@ -1425,6 +1425,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 	geomancy: {
 		inherit: true,
 		isNonstandard: null,
+		shortDesc: "Charges, then raises Atk, SpA by 3 turn 2.",
 		boosts: {
 			atk: 3,
 			spa: 3,
@@ -1669,7 +1670,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		inherit: true,
 		isNonstandard: null,
 		self: null,
-		shortDesc: "User cannot move next turn if it fails to KO.",
+		shortDesc: "User cannot move next turn if it fails to KO. Dialga-Origin: Hits both foes.",
 		onHit(target, source) {
 			if (target.hp) {
 				source.addVolatile('mustrecharge');
@@ -1715,6 +1716,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		inherit: true,
 		isNonstandard: null,
 		self: null,
+		shortDesc: "User recharges doesn't KO. Physical if Atk > SpA.",
 		onModifyMove(move, pokemon) {
 			if (pokemon.getStat('atk', false, true) > pokemon.getStat('spa', false, true)) move.category = 'Physical';
 		},
@@ -1734,6 +1736,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 	spacialrend: {
 		inherit: true,
 		isNonstandard: null,
+		shortDesc: "High critical hit ratio. Palkia-Origin: Always crits.",
 		onModifyMove(move, pokemon) {
 			if (pokemon.species.name === 'Palkia-Origin') {
 				move.willCrit = true;
@@ -1743,6 +1746,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 	shadowforce: {
 		inherit: true,
 		isNonstandard: null,
+		shortDesc: "Breaks protection. Not Giratina-Origin: Disappears T1, hits T2.",
 		onTryMove(attacker, defender, move) {
 			if (attacker.removeVolatile(move.id)) {
 				return;
