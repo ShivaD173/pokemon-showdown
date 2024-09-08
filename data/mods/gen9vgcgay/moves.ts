@@ -257,6 +257,16 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		"basePower": 250
 	},
 	// Regular Moves
+	rocksmash: {
+		inherit: true,
+		shortDesc: "100% chance to lower the target's Defense by 1.",
+		secondary: {
+			chance: 100,
+			boosts: {
+				def: -1,
+			},
+		},
+	},
 	round: {
 		inherit: true,
 		basePower: 70,
@@ -1716,6 +1726,11 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		isNonstandard: null,
 		basePower: 180,
 	},
+	spectralthief: {
+		inherit: true,
+		isNonstandard: null,
+		basePower: 100,
+	},
 	// Origin forme changes
 	roaroftime: {
 		inherit: true,
@@ -2264,6 +2279,10 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		isNonstandard: null,
 	},
 	landswrath: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	vcreate: {
 		inherit: true,
 		isNonstandard: null,
 	},

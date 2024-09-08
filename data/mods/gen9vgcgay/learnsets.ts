@@ -59617,6 +59617,9 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
             ],
             "xscissor": [
                 "9M"
+            ],
+            "bodypress": [
+                "9M"
             ]
         }
     },
@@ -108721,6 +108724,9 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
             ],
             "terablast": [
                 "9M"
+            ],
+            "playrough": [
+                "9M"
             ]
         }
     },
@@ -149365,10 +149371,7 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
             "teleport": [
                 "9M"
             ],
-            "hiddenpower": [
-                "9M"
-            ],
-            "terablast": [
+            "storedpower": [
                 "9M"
             ]
         }

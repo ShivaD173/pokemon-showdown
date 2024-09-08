@@ -1,7 +1,7 @@
 export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormatsDataTable = {
 	"clefairy": {
 		"isNonstandard": null,
-		"tier": "UU"
+		"tier": "RU"
 	},
 	"clefable": {
 		"isNonstandard": null,
@@ -61,7 +61,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 	},
 	"golemalola": {
 		"isNonstandard": null,
-		"tier": "UU"
+		"tier": "RU"
 	},
 	"slowbro": {
 		"isNonstandard": null,
@@ -393,7 +393,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 	},
 	"grimmsnarl": {
 		"isNonstandard": null,
-		"tier": "UU"
+		"tier": "RU"
 	},
 	"perrserker": {
 		"isNonstandard": null,
@@ -457,7 +457,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 	},
 	"screamtail": {
 		"isNonstandard": null,
-		"tier": "UU"
+		"tier": "RU"
 	},
 	"ironhands": {
 		"isNonstandard": null,
@@ -473,15 +473,15 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 	},
 	"hitmonlee": {
 		"isNonstandard": null,
-		"tier": "UU"
+		"tier": "RU"
 	},
 	"hitmonchan": {
 		"isNonstandard": null,
-		"tier": "UU"
+		"tier": "RU"
 	},
 	"magmar": {
 		"isNonstandard": null,
-		"tier": "NFE"
+		"tier": "UU"
 	},
 	"magmortar": {
 		"isNonstandard": null,
@@ -493,7 +493,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 	},
 	"electivire": {
 		"isNonstandard": null,
-		"tier": "UU"
+		"tier": "RU"
 	},
 	"snubbull": {
 		"isNonstandard": null,
@@ -501,15 +501,15 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 	},
 	"granbull": {
 		"isNonstandard": null,
-		"tier": "UU"
+		"tier": "RU"
 	},
 	"alcremie": {
 		"isNonstandard": null,
-		"tier": "UU"
+		"tier": "RU"
 	},
 	"smeargle": {
 		"isNonstandard": null,
-		"tier": "UU"
+		"tier": "RU"
 	},
 	"scrafty": {
 		"isNonstandard": null,

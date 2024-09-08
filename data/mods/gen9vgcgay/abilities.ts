@@ -1104,6 +1104,8 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 			if (move.flags['contact']) mod /= 2;
 			return this.chainModify(mod);
 		},
+		onTryBoost(boost, target, source, effect) {
+		},
 	},
 	lingeringaroma: {
 		inherit: true,

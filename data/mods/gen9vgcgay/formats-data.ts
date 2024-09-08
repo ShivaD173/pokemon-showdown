@@ -2594,7 +2594,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 	},
 	"arceusrock": {
 		"isNonstandard": null,
-		"tier": "OU"
+		"tier": "Uber"
 	},
 	"arceussteel": {
 		"isNonstandard": null,
@@ -5298,7 +5298,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 	},
 	"terapagos": {
 		"isNonstandard": null,
-		"tier": "OU"
+		"tier": "Uber"
 	},
 	"terapagosterastal": {
 		"isNonstandard": null,

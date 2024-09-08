@@ -4124,7 +4124,6 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 		},
 		"abilities": {
 			"0": "Intimidate",
-			"1": "Hustle",
 			"H": "Unnerve"
 		},
 		"inherit": true
@@ -4902,7 +4901,7 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 			"spe": 45
 		},
 		"abilities": {
-			"0": "Singularity",
+			"0": "Pressure",
 			"1": "Iron Fist",
 			"H": "Frisk"
 		},
@@ -8697,7 +8696,7 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 		"abilities": {
 			"0": "Beast Boost",
 			"1": "Lifetaker",
-			"H": "Singularity"
+			"H": "Dragon's Maw"
 		},
 		"inherit": true
 	},
@@ -12889,7 +12888,7 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 			"spe": 50
 		},
 		"abilities": {
-			"0": "As One Glastrier"
+			"0": "As One (Glastrier)"
 		},
 		"inherit": true
 	},
@@ -12907,7 +12906,7 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 			"spe": 150
 		},
 		"abilities": {
-			"0": "As One Spectrier"
+			"0": "As One (Spectrier)"
 		},
 		"inherit": true
 	},

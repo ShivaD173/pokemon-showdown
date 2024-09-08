@@ -39,17 +39,15 @@ export const Items: import('../../../sim/dex-items').ModdedItemDataTable = {
 			this.add('-activate', pokemon, 'item: Lustrous Globe');
 			pokemon.formeChange('Palkia-Origin', this.effect, true);
 		},*/
-		onDamagePriority: 1,
-		onDamage(damage, target, source, effect) {
-			if (target.baseSpecies.baseSpecies !== 'Palkia' || target.transformed || !target.hp) return;
-			if (target.species.id === 'palkiaorigin' || target.hp > target.maxhp / 2) return;
-			this.add('-activate', target, 'item: Lustrous Globe');
-			target.formeChange('Palkia-Origin', this.effect, true);
+		onUpdate(pokemon) {
+			if (pokemon.baseSpecies.baseSpecies !== 'Palkia' || pokemon.transformed || !pokemon.hp) return;
+			if (pokemon.species.id === 'palkiaorigin' || pokemon.hp > pokemon.maxhp / 2) return;
+			this.add('-activate', pokemon, 'item: Lustrous Globe');
+			pokemon.formeChange('Palkia-Origin', this.effect, true);
 		},
 		desc: "If the holder is Palkia, transforms into Origin forme at 1/2 HP.",
 		shortDesc: "Palkia: transforms at 1/2 HP.",
 		itemUser: ["Palkia-Origin"],
-		onBasePowerPriority: 15,
 		onBasePower() {},
 		forcedForme: "",
 	},
@@ -62,17 +60,15 @@ export const Items: import('../../../sim/dex-items').ModdedItemDataTable = {
 			this.add('-activate', pokemon, 'item: Adamant Crystal');
 			pokemon.formeChange('Dialga-Origin', this.effect, true);
 		},*/
-		onDamagePriority: 1,
-		onDamage(damage, target, source, effect) {
-			if (target.baseSpecies.baseSpecies !== 'Dialga' || target.transformed || !target.hp) return;
-			if (target.species.id === 'dialgaorigin' || target.hp > target.maxhp / 2) return;
-			this.add('-activate', target, 'item: Adamant Crystal');
-			target.formeChange('Dialga-Origin', this.effect, true);
+		onUpdate(pokemon) {
+			if (pokemon.baseSpecies.baseSpecies !== 'Dialga' || pokemon.transformed || !pokemon.hp) return;
+			if (pokemon.species.id === 'dialgaorigin' || pokemon.hp > pokemon.maxhp / 2) return;
+			this.add('-activate', pokemon, 'item: Adamant Crystal');
+			pokemon.formeChange('Dialga-Origin', this.effect, true);
 		},
 		desc: "If the holder is Dialga, transforms into Origin forme at 1/2 HP.",
 		shortDesc: "Dialga: transforms at 1/2 HP.",
 		itemUser: ["Dialga"],
-		onBasePowerPriority: 15,
 		onBasePower() {},
 		forcedForme: "",
 	},
@@ -85,17 +81,15 @@ export const Items: import('../../../sim/dex-items').ModdedItemDataTable = {
 			this.add('-activate', pokemon, 'item: Griseous Core');
 			pokemon.formeChange('Giratina-Origin', this.effect, true);
 		},*/
-		onDamagePriority: 1,
-		onDamage(damage, target, source, effect) {
-			if (target.baseSpecies.baseSpecies !== 'Giratina' || target.transformed || !target.hp) return;
-			if (target.species.id === 'giratinaorigin' || target.hp > target.maxhp / 2) return;
-			this.add('-activate', target, 'item: Griseous Core');
-			target.formeChange('Giratina-Origin', this.effect, true);
+		onUpdate(pokemon) {
+			if (pokemon.baseSpecies.baseSpecies !== 'Giratina' || pokemon.transformed || !pokemon.hp) return;
+			if (pokemon.species.id === 'giratinaorigin' || pokemon.hp > pokemon.maxhp / 2) return;
+			this.add('-activate', pokemon, 'item: Griseous Core');
+			pokemon.formeChange('Giratina-Origin', this.effect, true);
 		},
 		desc: "If the holder is Giratina, transforms into Origin forme at 1/2 HP.",
 		shortDesc: "Giratina: transforms at 1/2 HP.",
 		itemUser: ["Giratina"],
-		onBasePowerPriority: 15,
 		onBasePower() {},
 		forcedForme: "",
 	},
