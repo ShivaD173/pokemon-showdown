@@ -297,7 +297,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 	},
 	"mesprit": {
 		"isNonstandard": null,
-		"tier": "UU"
+		"tier": "RU"
 	},
 	"azelf": {
 		"isNonstandard": null,

@@ -3317,20 +3317,20 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		"tier": "OU"
 	},
 	"genesectdouse": {
-		"isNonstandard": "Past",
-		"tier": "Illegal"
+		"isNonstandard": null,
+		"tier": "OU"
 	},
 	"genesectshock": {
-		"isNonstandard": "Past",
-		"tier": "Illegal"
+		"isNonstandard": null,
+		"tier": "OU"
 	},
 	"genesectburn": {
-		"isNonstandard": "Past",
-		"tier": "Illegal"
+		"isNonstandard": null,
+		"tier": "OU"
 	},
 	"genesectchill": {
-		"isNonstandard": "Past",
-		"tier": "Illegal"
+		"isNonstandard": null,
+		"tier": "OU"
 	},
 	"chespin": {
 		"isNonstandard": "Past",

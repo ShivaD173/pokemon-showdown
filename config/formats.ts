@@ -150,14 +150,14 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		mod: 'gen1',
 		searchShow: true,
 		ruleset: ['[Gen 1] ZU'],
-		banlist: ['ZU', 'SUBL'],
+		banlist: ['ZU', 'SUBL', 'Confuse Ray'],
 	},
 	{
 		name: "[Gen 1] IU",
 		mod: 'gen1',
 		searchShow: true,
 		ruleset: ['[Gen 1] SU'],
-		banlist: ['SU', 'IUBL', 'Confuse Ray'],
+		banlist: ['SU', 'IUBL'],
 	},
 	{
 		name: "[Gen 1] 8U",

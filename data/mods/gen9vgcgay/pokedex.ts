@@ -12416,9 +12416,9 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 		],
 		"baseStats": {
 			"hp": 100,
-			"atk": 75,
-			"def": 75,
-			"spa": 94,
+			"atk": 70,
+			"def": 74,
+			"spa": 100,
 			"spd": 128,
 			"spe": 128
 		},
@@ -12435,9 +12435,9 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 		"baseStats": {
 			"hp": 100,
 			"atk": 128,
-			"def": 94,
-			"spa": 75,
-			"spd": 75,
+			"def": 100,
+			"spa": 70,
+			"spd": 74,
 			"spe": 128
 		},
 		"abilities": {
@@ -12446,6 +12446,78 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 		"inherit": true
 	},
 	"genesect": {
+		"types": [
+			"Bug",
+			"Steel"
+		],
+		"baseStats": {
+			"hp": 66,
+			"atk": 115,
+			"def": 90,
+			"spa": 115,
+			"spd": 90,
+			"spe": 94
+		},
+		"abilities": {
+			"0": "Download"
+		},
+		"inherit": true
+	},
+	"genesectdouse": {
+		"types": [
+			"Bug",
+			"Steel"
+		],
+		"baseStats": {
+			"hp": 66,
+			"atk": 115,
+			"def": 90,
+			"spa": 115,
+			"spd": 90,
+			"spe": 94
+		},
+		"abilities": {
+			"0": "Download"
+		},
+		"inherit": true
+	},
+	"genesectshock": {
+		"types": [
+			"Bug",
+			"Steel"
+		],
+		"baseStats": {
+			"hp": 66,
+			"atk": 115,
+			"def": 90,
+			"spa": 115,
+			"spd": 90,
+			"spe": 94
+		},
+		"abilities": {
+			"0": "Download"
+		},
+		"inherit": true
+	},
+	"genesectburn": {
+		"types": [
+			"Bug",
+			"Steel"
+		],
+		"baseStats": {
+			"hp": 66,
+			"atk": 115,
+			"def": 90,
+			"spa": 115,
+			"spd": 90,
+			"spe": 94
+		},
+		"abilities": {
+			"0": "Download"
+		},
+		"inherit": true
+	},
+	"genesectchill": {
 		"types": [
 			"Bug",
 			"Steel"
