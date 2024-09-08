@@ -149368,9 +149368,6 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
             "hiddenpower": [
                 "9M"
             ],
-            "return": [
-                "9M"
-            ],
             "terablast": [
                 "9M"
             ]
@@ -149911,9 +149908,6 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
             "hiddenpower": [
                 "9M"
             ],
-            "return": [
-                "9M"
-            ],
             "terablast": [
                 "9M"
             ]
@@ -149926,9 +149920,6 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
                 "9M"
             ],
             "hiddenpower": [
-                "9M"
-            ],
-            "return": [
                 "9M"
             ],
             "terablast": [

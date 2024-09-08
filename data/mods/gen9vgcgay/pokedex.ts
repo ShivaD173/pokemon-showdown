@@ -12419,8 +12419,8 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 			"hp": 100,
 			"atk": 75,
 			"def": 75,
-			"spa": 132,
-			"spd": 90,
+			"spa": 94,
+			"spd": 128,
 			"spe": 128
 		},
 		"abilities": {
@@ -12435,8 +12435,8 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 		],
 		"baseStats": {
 			"hp": 100,
-			"atk": 132,
-			"def": 90,
+			"atk": 128,
+			"def": 94,
 			"spa": 75,
 			"spd": 75,
 			"spe": 128

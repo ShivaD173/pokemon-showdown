@@ -4186,7 +4186,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 	},
 	"marshadow": {
 		"isNonstandard": null,
-		"tier": "OU"
+		"tier": "Uber"
 	},
 	"poipole": {
 		"isNonstandard": "Past",
