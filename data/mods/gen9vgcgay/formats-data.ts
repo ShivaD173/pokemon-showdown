@@ -2525,8 +2525,8 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		"tier": "Uber"
 	},
 	"shaymin": {
-		"isNonstandard": null,
-		"tier": "OU"
+		"isNonstandard": "Past",
+		"tier": "Illegal"
 	},
 	"shayminsky": {
 		"isNonstandard": null,
@@ -3294,7 +3294,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 	},
 	"kyuremwhite": {
 		"isNonstandard": null,
-		"tier": "Uber"
+		"tier": "OU"
 	},
 	"keldeo": {
 		"isNonstandard": null,

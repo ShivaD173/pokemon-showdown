@@ -148836,6 +148836,9 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
             ],
             "terablast": [
                 "9M"
+            ],
+            "attackorder": [
+                "9M"
             ]
         }
     },
@@ -153138,9 +153141,6 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
                 "9M"
             ],
             "return": [
-                "9M"
-            ],
-            "terablast": [
                 "9M"
             ]
         }

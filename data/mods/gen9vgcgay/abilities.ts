@@ -1264,11 +1264,11 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 	// As One now gives Symbioisis
 	asoneglastrier: {
 		inherit: true,
+		shortDesc: "Combination of the Symbiosis and Chilling Neigh Abilities.",
 		onPreStart(pokemon) {
 		},
 		onStart(pokemon) {
 			this.add('-ability', pokemon, 'As One');
-			this.add('-ability', pokemon, 'Unnerve');
 		},
 		onEnd() {
 		},
@@ -1292,11 +1292,11 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 	},
 	asonespectrier: {
 		inherit: true,
+		shortDesc: "Combination of the Symbiosis and Grim Neigh Abilities.",
 		onPreStart(pokemon) {
 		},
 		onStart(pokemon) {
 			this.add('-ability', pokemon, 'As One');
-			this.add('-ability', pokemon, 'Unnerve');
 		},
 		onEnd() {
 		},

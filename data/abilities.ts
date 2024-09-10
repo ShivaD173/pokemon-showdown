@@ -5654,6 +5654,7 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 
 	// GAY
 	triplethreat: {
+		onModifyMovePriority: -2,
 		onModifyMove(move) {
 			if (move.secondaries) {
 				this.debug('halving secondary chance');
@@ -6513,7 +6514,7 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		onSwitchIn(pokemon) {
 			const target = pokemon.side.foe.active[pokemon.side.foe.active.length - 1 - pokemon.position];
 			if (target) {
-				this.actions.useMove(Dex.moves.get('psychup'), pokemon, {target: target});
+				this.actions.useMove(Dex.moves.get('copycat'), pokemon);
 			}
 		},
 		name: "Copy Core",
@@ -6525,7 +6526,7 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		onSwitchIn(pokemon) {
 			const target = pokemon.side.foe.active[pokemon.side.foe.active.length - 1 - pokemon.position];
 			if (target) {
-				this.actions.useMove(Dex.moves.get('hiddenpower'), pokemon, {target: target});
+				this.actions.useMove(Dex.moves.get('confusion'), pokemon, {target: target});
 			}
 		},
 		name: "Onslaught Core",
@@ -6558,33 +6559,83 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		num: -58,
 	},
 	megashiftx: {
-		onSourceAfterFaint(length, target, source, effect) {
-			if (effect?.effectType !== 'Move') {
-				return;
-			}
-			if (source.species.id === 'mewtwo' && source.hp && !source.transformed && source.side.foePokemonLeft()) {
-				this.add('-activate', source, 'ability: Mega Shift X');
-				source.formeChange('Mewtwo-Mega-X', this.effect, true);
+		onSwitchOut(pokemon) {
+			if (pokemon.baseSpecies.baseSpecies !== 'Mewtwo') return;
+			if (pokemon.species.name !== 'Mewtwo-Mega-X') {
+				pokemon.formeChange('Mewtwo-Mega-X', this.effect, true);
 			}
 		},
+		onSwitchIn() {
+			this.effectState.switchingIn = true;
+		},
+		onStart(pokemon) {
+			if (!this.effectState.switchingIn) return;
+			this.effectState.switchingIn = false;
+			if (pokemon.baseSpecies.baseSpecies !== 'Mewtwo') return;
+			if (!this.effectState.heroMessageDisplayed && pokemon.species.name === 'Mewtwo-Mega-X') {
+				this.add('-activate', pokemon, 'ability: Mega Shift X');
+				this.effectState.heroMessageDisplayed = true;
+			}
+		},
+		flags: {failroleplay: 1, noreceiver: 1, noentrain: 1, notrace: 1, failskillswap: 1, cantsuppress: 1, notransform: 1},
 		name: "Mega Shift X",
 		isNonstandard: "CAP",
 		rating: 4,
 		num: -59,
 	},
 	megashifty: {
-		onSourceAfterFaint(length, target, source, effect) {
-			if (effect?.effectType !== 'Move') {
-				return;
-			}
-			if (source.species.id === 'mewtwo' && source.hp && !source.transformed && source.side.foePokemonLeft()) {
-				this.add('-activate', source, 'ability: Mega Shift Y');
-				source.formeChange('Mewtwo-Mega-Y', this.effect, true);
+		onSwitchOut(pokemon) {
+			if (pokemon.baseSpecies.baseSpecies !== 'Mewtwo') return;
+			if (pokemon.species.name !== 'Mewtwo-Mega-Y') {
+				pokemon.formeChange('Mewtwo-Mega-Y', this.effect, true);
 			}
 		},
+		onSwitchIn() {
+			this.effectState.switchingIn = true;
+		},
+		onStart(pokemon) {
+			if (!this.effectState.switchingIn) return;
+			this.effectState.switchingIn = false;
+			if (pokemon.baseSpecies.baseSpecies !== 'Mewtwo') return;
+			if (!this.effectState.heroMessageDisplayed && pokemon.species.name === 'Mewtwo-Mega-Y') {
+				this.add('-activate', pokemon, 'ability: Mega Shift Y');
+				this.effectState.heroMessageDisplayed = true;
+			}
+		},
+		flags: {failroleplay: 1, noreceiver: 1, noentrain: 1, notrace: 1, failskillswap: 1, cantsuppress: 1, notransform: 1},
 		name: "Mega Shift Y",
 		isNonstandard: "CAP",
 		rating: 4,
 		num: -60,
+	},
+	ancestor: {
+		onPrepareHit(source, target, move) {
+			if (move.hasBounced || move.flags['futuremove'] || move.sourceEffect === 'snatch' || move.callsMove) return;
+			const type = move.type;
+			if (type && type !== '???' && source.getTypes().join() !== type) {
+				if (!source.setType(type)) return;
+				this.add('-start', source, 'typechange', type, '[from] ability: Ancestor');
+			}
+		},
+		flags: {},
+		name: "Ancestor",
+		rating: 4,
+		num: -61,
+	},
+	serenegracidea: {
+		onModifyMovePriority: -2,
+		onModifyMove(move) {
+			if (move.secondaries) {
+				this.debug('2.5x secondary chance');
+				for (const secondary of move.secondaries) {
+					if (secondary.chance) secondary.chance *= 2.5;
+				}
+			}
+			if (move.self?.chance) move.self.chance *= 2.5;
+		},
+		flags: {},
+		name: "Serene Gracidea",
+		rating: 4,
+		num: -62,
 	},
 };

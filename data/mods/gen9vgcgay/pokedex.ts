@@ -11599,7 +11599,7 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 		},
 		"abilities": {
 			"0": "Synchronize",
-			"H": "Protean"
+			"H": "Ancestor"
 		},
 		"inherit": true
 	},
@@ -11960,23 +11960,6 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 		},
 		"inherit": true
 	},
-	"shaymin": {
-		"types": [
-			"Grass"
-		],
-		"baseStats": {
-			"hp": 100,
-			"atk": 100,
-			"def": 100,
-			"spa": 100,
-			"spd": 100,
-			"spe": 100
-		},
-		"abilities": {
-			"0": "Natural Cure"
-		},
-		"inherit": true
-	},
 	"shayminsky": {
 		"types": [
 			"Grass",
@@ -11991,7 +11974,7 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 			"spe": 127
 		},
 		"abilities": {
-			"0": "Serene Grace"
+			"0": "Serene Gracidea"
 		},
 		"inherit": true
 	},

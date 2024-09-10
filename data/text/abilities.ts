@@ -2485,13 +2485,13 @@ export const AbilitiesText: {[id: IDEntry]: AbilityText} = {
 	},
 	copycore: {
 		name: "Copy Core",
-		desc: "User uses Psych Up on opposite Pokemon on switch in.",
-		shortDesc: "User uses Psych Up on opposite Pokemon on switch in.",
+		desc: "User uses Copycat on opposite Pokemon on switch in.",
+		shortDesc: "User uses Copycat on opposite Pokemon on switch in.",
 	},
 	onslaughtcore: {
 		name: "Onslaught Core",
-		desc: "User uses Hidden Power on opposite Pokemon on switch in.",
-		shortDesc: "User uses Hidden Power on opposite Pokemon on switch in.",
+		desc: "User uses Confusion on opposite Pokemon on switch in.",
+		shortDesc: "User uses Confusion on opposite Pokemon on switch in.",
 	},
 	barriercore: {
 		name: "Barrier Core",
@@ -2510,16 +2510,29 @@ export const AbilitiesText: {[id: IDEntry]: AbilityText} = {
 	},
 	megashiftx: {
 		name: "Mega Shift X",
-		desc: "If this Pokemon is a Mewtwo, it transforms into Mewtwo-Mega-X if it attacks and knocks out another Pokemon.",
-		shortDesc: "After KOing a Pokemon: becomes Mewtwo-Mega-X.",
+		desc: "Upon switching out, Mewtwo Mega Evolves into its X form",
+		shortDesc: "Upon switching out, Mewtwo Mega Evolves into its X form",
 		activate: "  [POKEMON] became fully charged due to its bond with its Trainer!",
 		transform: "[POKEMON] Mega Evolved into Mewtwo-Mega-X!",
 	},
 	megashifty: {
 		name: "Mega Shift Y",
-		desc: "If this Pokemon is a Mewtwo, it transforms into Mewtwo-Mega-Y if it attacks and knocks out another Pokemon.",
-		shortDesc: "After KOing a Pokemon: becomes Mewtwo-Mega-Y.",
+		desc: "Upon switching out, Mewtwo Mega Evolves into its Y form",
+		shortDesc: "Upon switching out, Mewtwo Mega Evolves into its Y form",
 		activate: "  [POKEMON] became fully charged due to its bond with its Trainer!",
 		transform: "[POKEMON] Mega Evolved into Mewtwo-Mega-Y!",
+	},
+	ancestor: {
+		name: "Ancestor",
+		desc: "This Pokemon's type changes to match the type of the move it is about to use. This effect comes after all effects that change a move's type.",
+		shortDesc: "This Pokemon's type changes to match the type of the move it is about to use.",
+	},
+	serenegracidea: {
+		name: "Serene Grace",
+		desc: "This Pokemon's moves have their secondary effect chance doubled. This effect stacks with the Rainbow effect, except for secondary effects that cause the target to flinch.",
+		shortDesc: "This Pokemon's moves have their secondary effect chance 2.5x.",
+		gen4: {
+			desc: "This Pokemon's moves have their secondary effect chance 2.5x.",
+		},
 	},
 };

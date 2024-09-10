@@ -1731,6 +1731,25 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		isNonstandard: null,
 		basePower: 100,
 	},
+	darkvoid: {
+		inherit: true,
+		isNonstandard: null,
+		accuracy: 75,
+	},
+	hyperspacehole: {
+		inherit: true,
+		isNonstandard: null,
+		basePower: 90,
+	},
+	confusion: {
+		inherit: true,
+		basePower: 30,
+		shortDesc: "Uses Highest attacking stat. Exists mainly for Deoxys-A",
+		secondary: {},
+		onModifyMove(move, pokemon) {
+			if (pokemon.getStat('atk', false, true) > pokemon.getStat('spa', false, true)) move.category = 'Physical';
+		},
+	},
 	// Origin forme changes
 	roaroftime: {
 		inherit: true,
