@@ -1744,7 +1744,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 	confusion: {
 		inherit: true,
 		basePower: 30,
-		shortDesc: "Uses Highest attacking stat. Exists mainly for Deoxys-A",
+		shortDesc: "Uses Highest attacking stat. Exists for Deoxys-A.",
 		secondary: {},
 		onModifyMove(move, pokemon) {
 			if (pokemon.getStat('atk', false, true) > pokemon.getStat('spa', false, true)) move.category = 'Physical';

@@ -2195,7 +2195,7 @@ export const Rulesets: import('../sim/dex-formats').FormatDataTable = {
 	prerutiershiftmod: {
 		effectType: "Rule",
 		name: "Pre RU Tier Shift Mod",
-		desc: `Pok&eacute;mon below OU get their stats, excluding HP, boosted. +5 per tier down to 10u.`,
+		desc: `Pok&eacute;mon below OU get their stats, excluding HP, boosted. UU/RUBL gets +15, +5 per tier down to 10u.`,
 		ruleset: ['Overflow Stat Mod'],
 		onBegin() {
 			this.add('rule', 'Tier Shift Mod: Pok\u00e9mon get stat buffs depending on their tier, excluding HP.');
@@ -2252,7 +2252,7 @@ export const Rulesets: import('../sim/dex-formats').FormatDataTable = {
 	tiershiftmod: {
 		effectType: "Rule",
 		name: "Tier Shift Mod",
-		desc: `Pok&eacute;mon below OU get their stats, excluding HP, boosted. UU/RUBL get +15, RU/NUBL get +20, NU/PUBL get +25, and PU or lower get +30.`,
+		desc: `Pok&eacute;mon below OU get their stats, excluding HP, boosted. UU/RUBL gets +15, +5 per tier down to 10u.`,
 		ruleset: ['Overflow Stat Mod'],
 		onBegin() {
 			this.add('rule', 'Tier Shift Mod: Pok\u00e9mon get stat buffs depending on their tier, excluding HP.');

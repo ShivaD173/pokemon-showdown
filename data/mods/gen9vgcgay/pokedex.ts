@@ -3254,9 +3254,9 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 		],
 		"baseStats": {
 			"hp": 90,
-			"atk": 60,
+			"atk": 50,
 			"def": 65,
-			"spa": 90,
+			"spa": 100,
 			"spd": 85,
 			"spe": 70
 		},
@@ -12591,7 +12591,7 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 		},
 		"inherit": true
 	},
-	"zygardecompleteform": {
+	"zygardecomplete": {
 		"types": [
 			"Dragon",
 			"Ground"
@@ -13041,11 +13041,11 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 			"Normal"
 		],
 		"baseStats": {
-			"hp": 95,
+			"hp": 105,
 			"atk": 95,
-			"def": 110,
-			"spa": 105,
-			"spd": 110,
+			"def": 100,
+			"spa": 115,
+			"spd": 100,
 			"spe": 85
 		},
 		"abilities": {

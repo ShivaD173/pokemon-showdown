@@ -126352,6 +126352,9 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
             ],
             "workup": [
                 "9M"
+            ],
+            "divebomb": [
+                "9M"
             ]
         }
     },
@@ -141167,6 +141170,9 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
             ],
             "zenheadbutt": [
                 "9M"
+            ],
+            "psychout": [
+                "9M"
             ]
         }
     },
@@ -143148,9 +143154,6 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
                 "9M"
             ],
             "fling": [
-                "9M"
-            ],
-            "followme": [
                 "9M"
             ],
             "frustration": [
@@ -146840,6 +146843,12 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
             ],
             "zenheadbutt": [
                 "9M"
+            ],
+            "dragonrush": [
+                "9M"
+            ],
+            "thunderouskick": [
+                "9M"
             ]
         }
     },
@@ -147371,6 +147380,9 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
                 "9M"
             ],
             "icepunch": [
+                "9M"
+            ],
+            "dragonrush": [
                 "9M"
             ]
         }
@@ -148196,6 +148208,9 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
                 "9M"
             ],
             "terablast": [
+                "9M"
+            ],
+            "feint": [
                 "9M"
             ]
         }
@@ -152659,6 +152674,18 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
             ],
             "return": [
                 "9M"
+            ],
+            "shiftgear": [
+                "9M"
+            ],
+            "dragondance": [
+                "9M"
+            ],
+            "dragonrush": [
+                "9M"
+            ],
+            "divebomb": [
+                "9M"
             ]
         }
     },
@@ -152837,6 +152864,9 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
                 "9M"
             ],
             "return": [
+                "9M"
+            ],
+            "shiftgear": [
                 "9M"
             ]
         }
