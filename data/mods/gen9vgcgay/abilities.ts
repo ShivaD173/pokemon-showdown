@@ -948,13 +948,13 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 			}
 		},
 	},
-	magician: {
-		inherit: true,
-		shortDesc: "Sets Magic Room on entrance, steals item with attack.",
-		onStart(source) {
-			this.field.addPseudoWeather('magicroom');
-		},
-	},
+	// magician: {
+	// 	inherit: true,
+	// 	shortDesc: "Sets Magic Room on entrance, steals item with attack.",
+	// 	onStart(source) {
+	// 		this.field.addPseudoWeather('magicroom');
+	// 	},
+	// },
 	watercompaction: {
 		inherit: true,
 		shortDesc: "This Pokemon's defense is raised by 2 stages if hit by a Water move; Water Immunity.",

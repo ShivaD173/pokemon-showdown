@@ -48,7 +48,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "8U",
 	},
 	pidgeotto: {
-		tier: "SU",
+		tier: "SUBL",
 	},
 	pidgeot: {
 		tier: "NU",
