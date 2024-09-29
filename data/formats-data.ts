@@ -6019,10 +6019,6 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		isNonstandard: "Custom",
 		tier: "Illegal",
 	},
-	pokestargiant2: {
-		isNonstandard: "Custom",
-		tier: "Illegal",
-	},
 	pokestarhumanoid: {
 		isNonstandard: "Custom",
 		tier: "Illegal",
@@ -6052,10 +6048,6 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		tier: "Illegal",
 	},
 	pokestarblackbelt: {
-		isNonstandard: "Custom",
-		tier: "Illegal",
-	},
-	pokestargiantpropo2: {
 		isNonstandard: "Custom",
 		tier: "Illegal",
 	},

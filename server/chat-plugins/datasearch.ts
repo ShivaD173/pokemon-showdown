@@ -1117,7 +1117,6 @@ function runDexsearch(target: string, cmd: string, canAll: boolean, message: str
 		if (nationalSearch && !ruleTable.has('standardnatdex')) additionalRules.push('standardnatdex');
 		if (nationalSearch && ruleTable.valueRules.has('minsourcegen')) additionalRules.push('!!minsourcegen=3');
 		validator = TeamValidator.get(`${format}${additionalRules.length ? `@@@${additionalRules.join(',')}` : ''}`);
-		pokemonSource = validator.allSources();
 	}
 	for (const alts of searches) {
 		if (alts.skip) continue;
@@ -1283,6 +1282,7 @@ function runDexsearch(target: string, cmd: string, canAll: boolean, message: str
 			if (matched) continue;
 
 			for (const move of altsMoves) {
+				pokemonSource = validator?.allSources();
 				if (validator && !validator.checkCanLearn(move, dex[mon], pokemonSource) === alts.moves[move.id]) {
 					matched = true;
 					break;
