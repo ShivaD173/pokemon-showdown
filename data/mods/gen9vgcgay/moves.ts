@@ -1410,7 +1410,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		inherit: true,
 		isNonstandard: null,
 		isZ: false,
-		shortDesc: "Eevee Only, Charges, Double Omniboosts turn 2",
+		shortDesc: "Eevee Only, Charges, Double Omniboosts turn 2.",
 		onTry(source, target, move) {
 			if (source.species.name === 'Eevee' || move.hasBounced) {
 				return;
@@ -1744,7 +1744,8 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 	confusion: {
 		inherit: true,
 		basePower: 30,
-		shortDesc: "Uses Highest attacking stat. Exists for Deoxys-A.",
+		shortDesc: "Uses Highest attacking stat. 25% Recoil.",
+		recoil: [1, 4],
 		secondary: {},
 		onModifyMove(move, pokemon) {
 			if (pokemon.getStat('atk', false, true) > pokemon.getStat('spa', false, true)) move.category = 'Physical';

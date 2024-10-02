@@ -32978,6 +32978,9 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
             ],
             "dragonrush": [
                 "9M"
+            ],
+            "highhorsepower": [
+                "9M"
             ]
         }
     },
@@ -142171,6 +142174,9 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
                 "9M"
             ],
             "terablast": [
+                "9M"
+            ],
+            "faketears": [
                 "9M"
             ]
         }

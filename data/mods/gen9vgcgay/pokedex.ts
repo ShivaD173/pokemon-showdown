@@ -2246,17 +2246,17 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 			"Dragon"
 		],
 		"baseStats": {
-			"hp": 85,
-			"atk": 105,
-			"def": 105,
-			"spa": 105,
-			"spd": 105,
-			"spe": 95
+			"hp": 80,
+			"atk": 95,
+			"def": 95,
+			"spa": 95,
+			"spd": 95,
+			"spe": 85
 		},
 		"abilities": {
-			"0": "Super Luck",
+			"0": "Swift Swim",
 			"1": "Sniper",
-			"H": "Damp"
+			"H": "Super Luck"
 		},
 		"inherit": true
 	},
@@ -3256,7 +3256,7 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 			"hp": 90,
 			"atk": 50,
 			"def": 65,
-			"spa": 100,
+			"spa": 105,
 			"spd": 85,
 			"spe": 70
 		},
@@ -3273,7 +3273,7 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 		],
 		"baseStats": {
 			"hp": 90,
-			"atk": 100,
+			"atk": 105,
 			"def": 85,
 			"spa": 50,
 			"spd": 65,
@@ -3686,9 +3686,9 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 		"baseStats": {
 			"hp": 55,
 			"atk": 30,
-			"def": 75,
+			"def": 70,
 			"spa": 105,
-			"spd": 75,
+			"spd": 70,
 			"spe": 125
 		},
 		"abilities": {
@@ -11422,9 +11422,9 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 		],
 		"baseStats": {
 			"hp": 90,
-			"atk": 105,
-			"def": 130,
-			"spa": 125,
+			"atk": 115,
+			"def": 125,
+			"spa": 120,
 			"spd": 65,
 			"spe": 85
 		},
@@ -11702,9 +11702,9 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 		],
 		"baseStats": {
 			"hp": 105,
-			"atk": 180,
+			"atk": 170,
 			"def": 90,
-			"spa": 180,
+			"spa": 170,
 			"spd": 90,
 			"spe": 95
 		},
