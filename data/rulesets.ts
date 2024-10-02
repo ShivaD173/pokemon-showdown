@@ -712,34 +712,98 @@ export const Rulesets: import('../sim/dex-formats').FormatDataTable = {
 			}
 		},
 	},
+	timerstarting: {
+		effectType: 'Rule',
+		name: 'Timer Starting',
+		desc: "Amount of time given at the start of the battle in seconds",
+		hasValue: 'positive-integer',
+		// hardcoded in server/room-battle.ts
+	},
+	dctimer: {
+		effectType: 'Rule',
+		name: 'DC Timer',
+		desc: "Enables or disables the disconnection timer",
+		// hardcoded in server/room-battle.ts
+	},
+	dctimerbank: {
+		effectType: 'Rule',
+		name: 'DC Timer Bank',
+		desc: "Enables or disables the disconnection timer bank",
+		// hardcoded in server/room-battle.ts
+	},
+	timergrace: {
+		effectType: 'Rule',
+		name: 'Timer Grace',
+		desc: "Grace period between timer activation and when total time starts ticking down.",
+		hasValue: 'positive-integer',
+		// hardcoded in server/room-battle.ts
+	},
+	timeraddperturn: {
+		effectType: 'Rule',
+		name: 'Timer Add Per Turn',
+		desc: "Amount of additional time given per turn in seconds",
+		hasValue: 'integer',
+		// hardcoded in server/room-battle.ts
+	},
+	timermaxperturn: {
+		effectType: 'Rule',
+		name: 'Timer Max Per Turn',
+		desc: "Maximum amount of time allowed per turn in seconds",
+		hasValue: 'positive-integer',
+		// hardcoded in server/room-battle.ts
+	},
+	timermaxfirstturn: {
+		effectType: 'Rule',
+		name: 'Timer Max First Turn',
+		desc: "Maximum amount of time allowed for the first turn in seconds",
+		hasValue: 'positive-integer',
+		// hardcoded in server/room-battle.ts
+	},
+	timeoutautochoose: {
+		effectType: 'Rule',
+		name: 'Timeout Auto Choose',
+		desc: "Enables or disables automatic selection of moves when a player times out",
+		// hardcoded in server/room-battle.ts
+	},
+	timeraccelerate: {
+		effectType: 'Rule',
+		name: 'Timer Accelerate',
+		desc: "Enables or disables timer acceleration",
+		// hardcoded in server/room-battle.ts
+	},
 	blitz: {
 		effectType: 'Rule',
 		name: 'Blitz',
 		// THIS 100% INTENTIONALLY SAYS TEN SECONDS PER TURN
-		// IGNORE maxPerTurn. addPerTurn IS 5, TRANSLATING TO AN INCREMENT OF 10.
+		// IGNORE Max Per Turn. Add Per Turn IS 5, TRANSLATING TO AN INCREMENT OF 10.
 		desc: "Super-fast 'Blitz' timer giving 30 second Team Preview and 10 seconds per turn.",
 		onBegin() {
 			this.add('rule', 'Blitz: Super-fast timer');
 		},
-		timer: {starting: 15, addPerTurn: 5, maxPerTurn: 15, maxFirstTurn: 40, grace: 30},
+		ruleset: [
+			'Timer Starting = 15', 'Timer Grace = 30',
+			'Timer Add Per Turn = 5', 'Timer Max Per Turn = 15', 'Timer Max First Turn = 40',
+		],
 	},
 	vgctimer: {
 		effectType: 'Rule',
 		name: 'VGC Timer',
 		desc: "VGC's timer: 90 second Team Preview, 7 minutes Your Time, 1 minute per turn",
-		timer: {
-			starting: 7 * 60, addPerTurn: 0, maxPerTurn: 55, maxFirstTurn: 90,
-			grace: 90, timeoutAutoChoose: true, dcTimerBank: false,
-		},
+		ruleset: [
+			'Timer Starting = 420', 'Timer Grace = 90',
+			'Timer Add Per Turn = 0', 'Timer Max Per Turn = 55', 'Timer Max First Turn = 90',
+			'Timeout Auto Choose', 'DC Timer Bank',
+		],
 	},
 	drafttimer: {
 		effectType: 'Rule',
 		name: 'Draft Timer',
-		desc: "VGC's timer: 240 second Team Preview, 14 minutes Your Time, 2 minute per turn",
-		timer: {
-			starting: 14 * 60, addPerTurn: 0, maxPerTurn: 120, maxFirstTurn: 240,
-			grace: 90, timeoutAutoChoose: true, dcTimerBank: false,
-		},
+		desc: "VGC's timer: 3 minute Team Preview, 12 minutes Your Time, 2 minute per turn",
+		ruleset: [
+			'Timer Starting = 720', 'Timer Grace = 90',
+			'Timer Add Per Turn = 0', 'Timer Max Per Turn = 120', 'Timer Max First Turn = 180',
+			'Timeout Auto Choose', 'DC Timer Bank',
+		],
 	},
 	speciesclause: {
 		effectType: 'ValidatorRule',
@@ -1007,6 +1071,13 @@ export const Rulesets: import('../sim/dex-formats').FormatDataTable = {
 			this.add('rule', 'Swagger Clause: Swagger is banned');
 		},
 	},
+	drypassclause: {
+		effectType: 'ValidatorRule',
+		name: 'DryPass Clause',
+		desc: "Stops teams from bringing Pok&eacute;mon with Baton Pass + any form of trapping, residual recovery, boosting, or Substitute.",
+		ruleset: ['Baton Pass Stat Clause', 'Baton Pass Stat Trap Clause'],
+		banlist: ['Baton Pass + Substitute', 'Baton Pass + Ingrain', 'Baton Pass + Aqua Ring', 'Baton Pass + Block', 'Baton Pass + Mean Look', 'Baton Pass + Spider Web', 'Baton Pass + Jaw Lock'],
+	},
 	batonpassclause: {
 		effectType: 'ValidatorRule',
 		name: 'Baton Pass Clause',
@@ -1176,7 +1247,8 @@ export const Rulesets: import('../sim/dex-formats').FormatDataTable = {
 				'Charge Beam', 'Cosmic Power', 'Curse', 'Defend Order', 'Defense Curl', 'Dragon Dance', 'Growth', 'Guard Swap', 'Harden', 'Heart Swap', 'Howl',
 				'Iron Defense', 'Ingrain', 'Mean Look', 'Meteor Mash', 'Meditate', 'Metal Claw', 'Nasty Plot', 'Ominous Wind', 'Power Trick', 'Psych Up', 'Rage',
 				'Rock Polish', 'Sharpen', 'Silver Wind', 'Skull Bash', 'Spider Web', 'Steel Wing', 'Stockpile', 'Swords Dance', 'Tail Glow', 'Withdraw', 'Speed Boost',
-				'Apicot Berry', 'Ganlon Berry', 'Liechi Berry', 'Petaya Berry', 'Salac Berry', 'Starf Berry',
+				'Apicot Berry', 'Ganlon Berry', 'Liechi Berry', 'Petaya Berry', 'Salac Berry', 'Starf Berry', 'Kee Berry', 'Maranga Berry', 'Weakness Policy',
+				'Blunder Policy', 'Luminiscent Moss', 'Snowball', 'Throat Spray', 'Mirror Herb', 'Adrenaline Orb',
 			].map(this.toID);
 			for (const set of team) {
 				if (!set.moves.map(this.toID).includes('batonpass' as ID)) continue;

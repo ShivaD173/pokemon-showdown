@@ -114,7 +114,7 @@ export class Auction extends Rooms.SimpleRoomGame {
 	}
 
 	sendMessage(message: string) {
-		this.room.add(`|c|&|${message}`).update();
+		this.room.add(`|c|~|${message}`).update();
 	}
 
 	sendHTMLBox(htmlContent: string) {
@@ -543,7 +543,13 @@ export class Auction extends Rooms.SimpleRoomGame {
 			this.state = 'bid';
 			this.highestBid = this.minBid;
 			this.highestBidder = this.nominatingTeam;
-			this.room.add(Utils.html`|notify|${this.room.title} Auction|${player.name} has been nominated!`);
+
+			const notifyMsg = Utils.html`|notify|${this.room.title} Auction|${player.name} has been nominated!`;
+			for (const currManager of this.managers.values()) {
+				if (currManager.team === this.nominatingTeam) continue;
+				Users.getExact(currManager.id)?.sendTo(this.room, notifyMsg);
+			}
+
 			this.sendMessage(Utils.html`/html <username class="username">${user.name}</username> from team <b>${this.nominatingTeam.name}</b> has nominated <username>${player.name}</username> for auction. Use /bid or type a number to place a bid!`);
 			if (this.type === 'auction') this.sendBidInfo();
 			this.sendTimer();
@@ -562,11 +568,13 @@ export class Auction extends Rooms.SimpleRoomGame {
 		if (this.type === 'blind') {
 			if (this.bidsPlaced.has(team)) throw new Chat.ErrorMessage(`Your team has already placed a bid.`);
 			if (bid <= this.minBid) throw new Chat.ErrorMessage(`Your bid must be higher than the minimum bid.`);
+
+			const msg = `|c:|${Math.floor(Date.now() / 1000)}|&|/html Your team placed a bid of <b>${bid}</b> on <username>${Utils.escapeHTML(this.nominatedPlayer.name)}</username>.`;
 			for (const manager of this.managers.values()) {
 				if (manager.team !== team) continue;
-				const msg = `|c:|${Math.floor(Date.now() / 1000)}|&|/html Your team placed a bid of <b>${bid}</b> on <username>${Utils.escapeHTML(this.nominatedPlayer.name)}</username>.`;
 				Users.getExact(manager.id)?.sendTo(this.room, msg);
 			}
+
 			if (bid > this.highestBid) {
 				this.highestBid = bid;
 				this.highestBidder = team;
@@ -588,9 +596,10 @@ export class Auction extends Rooms.SimpleRoomGame {
 	}
 
 	onChatMessage(message: string, user: User) {
-		if (this.state !== 'bid' || !Number(message.replace(',', '.'))) return;
-		this.bid(user, parseCredits(message));
-		return '';
+		if (this.state === 'bid' && Number(message.replace(',', '.'))) {
+			this.bid(user, parseCredits(message));
+			return '';
+		}
 	}
 
 	skipNom() {
@@ -704,7 +713,7 @@ export const commands: Chat.ChatCommands = {
 			this.modlog(`AUCTION CREATE`);
 		},
 		createhelp: [
-			`/auction create [startingcredits] - Creates an auction. Requires: % @ # &`,
+			`/auction create [startingcredits] - Creates an auction. Requires: % @ # ~`,
 		],
 		start(target, room, user) {
 			const auction = this.requireGame(Auction);
@@ -754,7 +763,7 @@ export const commands: Chat.ChatCommands = {
 			this.modlog('AUCTION MINBID', null, `${amount}`);
 		},
 		minbidhelp: [
-			`/auction minbid [amount] - Sets the minimum bid. Requires: # & auction owner`,
+			`/auction minbid [amount] - Sets the minimum bid. Requires: # ~ auction owner`,
 		],
 		minplayers(target, room, user) {
 			const auction = this.requireGame(Auction);
@@ -766,7 +775,7 @@ export const commands: Chat.ChatCommands = {
 			this.addModAction(`${user.name} set the minimum number of players to ${amount}.`);
 		},
 		minplayershelp: [
-			`/auction minplayers [amount] - Sets the minimum number of players. Requires: # & auction owner`,
+			`/auction minplayers [amount] - Sets the minimum number of players. Requires: # ~ auction owner`,
 		],
 		nomtimer(target, room, user) {
 			const auction = this.requireGame(Auction);
@@ -778,7 +787,7 @@ export const commands: Chat.ChatCommands = {
 			this.addModAction(`${user.name} set the nomination timer to ${seconds} seconds.`);
 		},
 		nomtimerhelp: [
-			`/auction nomtimer [seconds/off] - Sets the nomination timer to [seconds] seconds or disables it. Requires: # & auction owner`,
+			`/auction nomtimer [seconds/off] - Sets the nomination timer to [seconds] seconds or disables it. Requires: # ~ auction owner`,
 		],
 		bidtimer(target, room, user) {
 			const auction = this.requireGame(Auction);
@@ -790,7 +799,7 @@ export const commands: Chat.ChatCommands = {
 			this.addModAction(`${user.name} set the bid timer to ${seconds} seconds.`);
 		},
 		bidtimerhelp: [
-			`/auction timer [seconds] - Sets the bid timer to [seconds] seconds. Requires: # & auction owner`,
+			`/auction timer [seconds] - Sets the bid timer to [seconds] seconds. Requires: # ~ auction owner`,
 		],
 		settype(target, room, user) {
 			const auction = this.requireGame(Auction);
@@ -801,7 +810,7 @@ export const commands: Chat.ChatCommands = {
 			this.addModAction(`${user.name} set the auction type to ${toID(target)}.`);
 		},
 		settypehelp: [
-			`/auction settype [auction|blind|snake] - Sets the auction type. Requires: # & auction owner`,
+			`/auction settype [auction|blind|snake] - Sets the auction type. Requires: # ~ auction owner`,
 		],
 		addowner: 'addowners',
 		addowners(target, room, user) {
@@ -814,7 +823,7 @@ export const commands: Chat.ChatCommands = {
 			this.addModAction(`${user.name} added ${Chat.toListString(owners.map(o => Users.getExact(o)!.name))} as auction owner${Chat.plural(owners.length)}.`);
 		},
 		addownershelp: [
-			`/auction addowners [user1], [user2], ... - Adds users as auction owners. Requires: # & auction owner`,
+			`/auction addowners [user1], [user2], ... - Adds users as auction owners. Requires: # ~ auction owner`,
 		],
 		removeowner: 'removeowners',
 		removeowners(target, room, user) {
@@ -827,7 +836,7 @@ export const commands: Chat.ChatCommands = {
 			this.addModAction(`${user.name} removed ${Chat.toListString(owners.map(o => Users.getExact(o)?.name || o))} as auction owner${Chat.plural(owners.length)}.`);
 		},
 		removeownershelp: [
-			`/auction removeowners [user1], [user2], ... - Removes users as auction owners. Requires: # & auction owner`,
+			`/auction removeowners [user1], [user2], ... - Removes users as auction owners. Requires: # ~ auction owner`,
 		],
 		async importplayers(target, room, user) {
 			const auction = this.requireGame(Auction);
@@ -847,7 +856,7 @@ export const commands: Chat.ChatCommands = {
 			this.addModAction(`${user.name} imported the player list from ${target}.`);
 		},
 		importplayershelp: [
-			`/auction importplayers [pastebin url] - Imports a list of players from a pastebin. Requires: # & auction owner`,
+			`/auction importplayers [pastebin url] - Imports a list of players from a pastebin. Requires: # ~ auction owner`,
 			`The pastebin should be a list of tab-separated values with the first row containing tier names and subsequent rows containing the player names and a Y in the column corresponding to the tier.`,
 			`See https://pastebin.com/jPTbJBva for an example.`,
 		],
@@ -861,7 +870,7 @@ export const commands: Chat.ChatCommands = {
 			this.addModAction(`${user.name} added player ${player.name} to the auction.`);
 		},
 		addplayerhelp: [
-			`/auction addplayer [name], [tier1], [tier2], ... - Adds a player to the auction. Requires: # & auction owner`,
+			`/auction addplayer [name], [tier1], [tier2], ... - Adds a player to the auction. Requires: # ~ auction owner`,
 		],
 		removeplayer(target, room, user) {
 			const auction = this.requireGame(Auction);
@@ -872,7 +881,7 @@ export const commands: Chat.ChatCommands = {
 			this.addModAction(`${user.name} removed player ${player.name} from the auction.`);
 		},
 		removeplayerhelp: [
-			`/auction removeplayer [name] - Removes a player from the auction. Requires: # & auction owner`,
+			`/auction removeplayer [name] - Removes a player from the auction. Requires: # ~ auction owner`,
 		],
 		assignplayer(target, room, user) {
 			const auction = this.requireGame(Auction);
@@ -889,7 +898,7 @@ export const commands: Chat.ChatCommands = {
 			}
 		},
 		assignplayerhelp: [
-			`/auction assignplayer [player], [team] - Assigns a player to a team. If team is blank, returns player to draft pool. Requires: # & auction owner`,
+			`/auction assignplayer [player], [team] - Assigns a player to a team. If team is blank, returns player to draft pool. Requires: # ~ auction owner`,
 		],
 		addteam(target, room, user) {
 			const auction = this.requireGame(Auction);
@@ -902,7 +911,7 @@ export const commands: Chat.ChatCommands = {
 			auction.addManagers(team.name, managerNames);
 		},
 		addteamhelp: [
-			`/auction addteam [name], [manager1], [manager2], ... - Adds a team to the auction. Requires: # & auction owner`,
+			`/auction addteam [name], [manager1], [manager2], ... - Adds a team to the auction. Requires: # ~ auction owner`,
 		],
 		removeteam(target, room, user) {
 			const auction = this.requireGame(Auction);
@@ -913,7 +922,7 @@ export const commands: Chat.ChatCommands = {
 			this.addModAction(`${user.name} removed team ${team.name} from the auction.`);
 		},
 		removeteamhelp: [
-			`/auction removeteam [team] - Removes a team from the auction. Requires: # & auction owner`,
+			`/auction removeteam [team] - Removes a team from the auction. Requires: # ~ auction owner`,
 		],
 		suspendteam(target, room, user) {
 			const auction = this.requireGame(Auction);
@@ -924,7 +933,7 @@ export const commands: Chat.ChatCommands = {
 			this.addModAction(`${user.name} suspended team ${team.name}.`);
 		},
 		suspendteamhelp: [
-			`/auction suspendteam [team] - Suspends a team from the auction. Requires: # & auction owner`,
+			`/auction suspendteam [team] - Suspends a team from the auction. Requires: # ~ auction owner`,
 			`Suspended teams have their nomination turns skipped and are not allowed to place bids.`,
 		],
 		unsuspendteam(target, room, user) {
@@ -936,7 +945,7 @@ export const commands: Chat.ChatCommands = {
 			this.addModAction(`${user.name} unsuspended team ${team.name}.`);
 		},
 		unsuspendteamhelp: [
-			`/auction unsuspendteam [team] - Unsuspends a team from the auction. Requires: # & auction owner`,
+			`/auction unsuspendteam [team] - Unsuspends a team from the auction. Requires: # ~ auction owner`,
 		],
 		addmanager: 'addmanagers',
 		addmanagers(target, room, user) {
@@ -950,7 +959,7 @@ export const commands: Chat.ChatCommands = {
 			this.addModAction(`${user.name} added ${Chat.toListString(managers)} as manager${Chat.plural(managers.length)} for team ${team.name}.`);
 		},
 		addmanagershelp: [
-			`/auction addmanagers [team], [user1], [user2], ... - Adds users as managers to a team. Requires: # & auction owner`,
+			`/auction addmanagers [team], [user1], [user2], ... - Adds users as managers to a team. Requires: # ~ auction owner`,
 		],
 		removemanager: 'removemanagers',
 		removemanagers(target, room, user) {
@@ -964,7 +973,7 @@ export const commands: Chat.ChatCommands = {
 			this.addModAction(`${user.name} removed ${Chat.toListString(managers)} as manager${Chat.plural(managers.length)}.`);
 		},
 		removemanagershelp: [
-			`/auction removemanagers [user1], [user2], ... - Removes users as managers. Requires: # & auction owner`,
+			`/auction removemanagers [user1], [user2], ... - Removes users as managers. Requires: # ~ auction owner`,
 		],
 		addcredits(target, room, user) {
 			const auction = this.requireGame(Auction);
@@ -977,7 +986,7 @@ export const commands: Chat.ChatCommands = {
 			this.addModAction(`${user.name} ${credits < 0 ? 'removed' : 'added'} ${Math.abs(credits)} credits ${credits < 0 ? 'from' : 'to'} team ${team.name}.`);
 		},
 		addcreditshelp: [
-			`/auction addcredits [team], [amount] - Adds credits to a team. Requires: # & auction owner`,
+			`/auction addcredits [team], [amount] - Adds credits to a team. Requires: # ~ auction owner`,
 		],
 		nom: 'nominate',
 		nominate(target, room, user) {
