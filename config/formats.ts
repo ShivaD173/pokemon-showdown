@@ -296,8 +296,8 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		name: "[Gen 4] IU",
 		mod: 'gen4',
 		searchShow: true,
-		ruleset: ['[Gen 4] SU'],
-		banlist: ['SU', 'IUBL', 'Heat Rock'],
+		ruleset: ['[Gen 4] ZU'],
+		banlist: ['ZU', 'SUBL', 'SU', 'IUBL', 'Heat Rock'],
 		unbanlist: ['Damp Rock'],
 	},
 	{
