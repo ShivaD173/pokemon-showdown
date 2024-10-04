@@ -1617,7 +1617,6 @@ export const commands: Chat.ChatCommands = {
 		const globalRanks = [
 			`<strong>Global ranks</strong>`,
 			`+ <strong>Global Voice</strong> - They can use ! commands like !groups`,
-			`§ <strong>Section Leader</strong> - They oversee rooms in a particular section`,
 			`% <strong>Global Driver</strong> - Like Voice, and they can lock users and check for alts`,
 			`@ <strong>Global Moderator</strong> - The above, and they can globally ban users`,
 			`* <strong>Global Bot</strong> - An automated account that can use HTML anywhere`,
@@ -2425,8 +2424,8 @@ export const commands: Chat.ChatCommands = {
 		}
 	},
 	bulbapediahelp: [
-		`/veekun [pokemon/item/move/ability/nature] - Links to Bulbapedia wiki page for this pokemon/item/move/ability/nature.`,
-		`!veekun [pokemon/item/move/ability/nature] - Shows everyone this link. Requires: + % @ # ~`,
+		`/bulbapedia [pokemon/item/move/ability/nature] - Links to Bulbapedia wiki page for this pokemon/item/move/ability/nature.`,
+		`!bulbapedia [pokemon/item/move/ability/nature] - Shows everyone this link. Requires: + % @ # ~`,
 	],
 
 	register() {
