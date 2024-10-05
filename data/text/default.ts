@@ -326,36 +326,6 @@ export const DefaultText: {[id: IDEntry]: DefaultText} = {
 		block: "  The mysterious strong winds blow on regardless!",
 	},
 
-	// new ones
-
-	locusts: {
-		weatherName: "Locusts",
-		start: "  A swarm started!",
-		end: "  The swarm subsided.",
-		upkeep: "  (The swarm is raging.)",
-		damage: "  [POKEMON] is barraged by the locusts!",
-	},
-	acidrain: {
-		weatherName: "Acid Rain",
-		start: "  An acid rain started!",
-		end: "  The acid rain stopped.",
-		upkeep: "  (Acid Rain continues to fall.)",
-		damage: "  [POKEMON] is corroded by the acid!",
-	},
-	stellarstorm: {
-		weatherName: "Stellar Storm",
-		start: "  The weather turned Stellar!",
-		end: "  The lights have faded.",
-		activate: "  The storm powered up the attack!",
-		upkeep: "  (The storm continues.)",
-	},
-	darkness: {
-		weatherName: "Darkness",
-		start: "  The field went dark!",
-		end: "  The lights are back on!",
-		upkeep: "  (The dark continues.)",
-	},
-
 	// terrain
 	electricterrain: {
 		start: "  An electric current ran across the battlefield!",

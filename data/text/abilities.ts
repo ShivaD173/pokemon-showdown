@@ -2494,8 +2494,8 @@ export const AbilitiesText: {[id: IDEntry]: AbilityText} = {
 	},
 	onslaughtcore: {
 		name: "Onslaught Core",
-		desc: "User uses Confusion on opposite Pokemon on switch in.",
-		shortDesc: "User uses Confusion on opposite Pokemon on switch in.",
+		desc: "User uses Confusion (30bp, 25% recoil) on opposite Pokemon on switch in.",
+		shortDesc: "User uses Confusion (30bp, 25% recoil) on opposite Pokemon on switch in.",
 	},
 	barriercore: {
 		name: "Barrier Core",
@@ -2533,10 +2533,7 @@ export const AbilitiesText: {[id: IDEntry]: AbilityText} = {
 	},
 	serenegracidea: {
 		name: "Serene Grace",
-		desc: "This Pokemon's moves have their secondary effect chance doubled. This effect stacks with the Rainbow effect, except for secondary effects that cause the target to flinch.",
+		desc: "This Pokemon's moves have their secondary effect chance 2.5x. This effect stacks with the Rainbow effect, except for secondary effects that cause the target to flinch.",
 		shortDesc: "This Pokemon's moves have their secondary effect chance 2.5x.",
-		gen4: {
-			desc: "This Pokemon's moves have their secondary effect chance 2.5x.",
-		},
 	},
 };
