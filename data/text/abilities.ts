@@ -2271,8 +2271,8 @@ export const AbilitiesText: {[id: IDEntry]: AbilityText} = {
 	// GAY
 	triplethreat: {
 		name: "Triple Threat",
-		desc: "Moves hit 3 times at 40% power and halved effects.",
-		shortDesc: "Moves hit 3 times at 40% power and halved effects.",
+		desc: "Moves hit exactly 3 times at 1/3 power and halved effects.",
+		shortDesc: "Moves hit exactly 3 times at 1/3 power and halved effects.",
 	},
 	mindsurfer: {
 		name: "Mind Surfer",
@@ -2507,10 +2507,11 @@ export const AbilitiesText: {[id: IDEntry]: AbilityText} = {
 		desc: "User uses Spikes on switch in.",
 		shortDesc: "User uses Spikes on switch in.",
 	},
-	hyperbolictime: {
-		name: "Hyperbolic Time",
-		desc: "End-of-turn effects happen twice while user is on the field. Does not stack.",
-		shortDesc: "End-of-turn effects happen twice while user is on the field.",
+	timelord: {
+		name: "Time Lord",
+		desc: "Priority moves used by opposing Pokemon targeting this Pokemon or its allies are prevented from having an effect.",
+		shortDesc: "This Pokemon and its allies are protected from opposing priority moves.",
+		block: "#damp",
 	},
 	megashiftx: {
 		name: "Mega Shift X",

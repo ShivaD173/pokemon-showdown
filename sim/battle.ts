@@ -489,14 +489,6 @@ export class Battle {
 			}
 		}
 		this.speedSort(handlers);
-		let hyperbolicTimeEnabled = false;
-		for (const side of this.sides) {
-			for (const active of side.active) {
-				if (active.hasAbility("Hyperbolic Time")) {
-					hyperbolicTimeEnabled = true;
-				}
-			}
-		}
 		while (handlers.length) {
 			const handler = handlers[0];
 			handlers.shift();
@@ -518,12 +510,6 @@ export class Battle {
 			if (handler.callback) {
 				this.singleEvent(handlerEventid, effect, handler.state, handler.effectHolder, null, null, relayVar, handler.callback);
 			}
-			if (hyperbolicTimeEnabled) {
-				if (handler.callback) {
-					this.singleEvent(handlerEventid, effect, handler.state, handler.effectHolder, null, null, relayVar, handler.callback);
-				}
-			}
-
 			this.faintMessages();
 			if (this.ended) return;
 		}

@@ -417,11 +417,11 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 		],
 		"baseStats": {
 			"hp": 65,
-			"atk": 100,
-			"def": 80,
+			"atk": 110,
+			"def": 75,
 			"spa": 50,
-			"spd": 90,
-			"spe": 120
+			"spd": 85,
+			"spe": 135
 		},
 		"abilities": {
 			"0": "Triple Threat",
@@ -672,12 +672,12 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 			"Flying"
 		],
 		"baseStats": {
-			"hp": 65,
-			"atk": 110,
+			"hp": 75,
+			"atk": 125,
 			"def": 70,
 			"spa": 60,
 			"spd": 60,
-			"spe": 110
+			"spe": 125
 		},
 		"abilities": {
 			"0": "Run Away",
@@ -10175,9 +10175,9 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 		],
 		"baseStats": {
 			"hp": 75,
-			"atk": 125,
+			"atk": 120,
 			"def": 80,
-			"spa": 60,
+			"spa": 65,
 			"spd": 100,
 			"spe": 85
 		},
@@ -11480,11 +11480,11 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 			"Dragon"
 		],
 		"baseStats": {
-			"hp": 125,
-			"atk": 73,
-			"def": 91,
+			"hp": 115,
+			"atk": 79,
+			"def": 93,
 			"spa": 137,
-			"spd": 89,
+			"spd": 91,
 			"spe": 75
 		},
 		"abilities": {
@@ -11818,7 +11818,7 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 		},
 		"abilities": {
 			"0": "Pressure",
-			"1": "Hyperbolic Time",
+			"1": "Time Lord",
 			"H": "Telepathy"
 		},
 		"inherit": true
@@ -11838,7 +11838,7 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 		},
 		"abilities": {
 			"0": "Pressure",
-			"1": "Hyperbolic Time",
+			"1": "Time Lord",
 			"H": "Telepathy"
 		},
 		"inherit": true,
@@ -12795,11 +12795,11 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 		],
 		"baseStats": {
 			"hp": 78,
-			"atk": 102,
+			"atk": 107,
 			"def": 70,
-			"spa": 92,
+			"spa": 97,
 			"spd": 75,
-			"spe": 138
+			"spe": 143
 		},
 		"abilities": {
 			"0": "Volt Absorb"

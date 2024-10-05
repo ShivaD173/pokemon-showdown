@@ -10774,6 +10774,18 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
             ],
             "workup": [
                 "9M"
+            ],
+            "thunderouskick": [
+                "9M"
+            ],
+            "triplekick": [
+                "9M"
+            ],
+            "tripleaxel": [
+                "9M"
+            ],
+            "dig": [
+                "9M"
             ]
         }
     },
@@ -47247,6 +47259,9 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
                 "9M"
             ],
             "wonderroom": [
+                "9M"
+            ],
+            "tidyup": [
                 "9M"
             ]
         }
@@ -150610,9 +150625,6 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
                 "9M"
             ],
             "facade": [
-                "9M"
-            ],
-            "fakeout": [
                 "9M"
             ],
             "falseswipe": [

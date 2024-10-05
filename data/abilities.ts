@@ -5654,7 +5654,7 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 
 	// GAY
 	triplethreat: {
-		onModifyMovePriority: -2,
+		onModifyMovePriority: 0,
 		onModifyMove(move) {
 			if (move.secondaries) {
 				this.debug('halving secondary chance');
@@ -5663,9 +5663,11 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 				}
 			}
 			if (move.self?.chance) move.self.chance *= 0.5;
-			if (!move.multihit && move.basePower > 0) {
+			if (move.basePower > 0) {
+				if (!move.multihit) {
+					move.basePower = this.modify(move.basePower, 1366, 4096);
+				}
 				move.multihit = 3;
-				move.basePower = move.basePower * 0.4;
 			}
 		},
 		name: "Triple Threat",
@@ -6552,8 +6554,21 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		rating: 3,
 		num: -57,
 	},
-	hyperbolictime: {
-		name: "Hyperbolic Time",
+	timelord: {
+		onFoeTryMove(target, source, move) {
+			const targetAllExceptions = ['perishsong', 'flowershield', 'rototiller'];
+			if (move.target === 'foeSide' || (move.target === 'all' && !targetAllExceptions.includes(move.id))) {
+				return;
+			}
+			const dazzlingHolder = this.effectState.target;
+			if ((source.isAlly(dazzlingHolder) || move.target === 'all') && move.priority > 0.1) {
+				this.attrLastMove('[still]');
+				this.add('cant', dazzlingHolder, 'ability: Time Lord', move, '[of] ' + target);
+				return false;
+			}
+		},
+		flags: {breakable: 1},
+		name: "Time Lord",
 		isNonstandard: "CAP",
 		rating: 4,
 		num: -58,
