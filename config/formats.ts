@@ -26,7 +26,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		section: "Custom Modes",
 	},
 	{
-		name: "[Gen 9] VGC Gay Random Battle",
+		name: "[Gen 9] VGC Pride Random Battle",
 		searchShow: true,
 		mod: 'gen9vgcgay',
 		team: 'random',
@@ -36,7 +36,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		unbanlist: ['Greninja-Bond'],
 	},
 	{
-		name: "[Gen 9] VGC Gay",
+		name: "[Gen 9] VGC Pride",
 		searchShow: true,
 		mod: 'gen9vgcgay',
 		gameType: 'doubles',
@@ -45,7 +45,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		unbanlist: ['Greninja-Bond'],
 	},
 	{
-		name: "[Gen 9] VGC Gay Restricted",
+		name: "[Gen 9] VGC Pride Restricted",
 		searchShow: true,
 		mod: 'gen9vgcgay',
 		gameType: 'doubles',
@@ -55,7 +55,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		restricted: ['Uber'],
 	},
 	{
-		name: "[Gen 9] VGC Gay FFA",
+		name: "[Gen 9] VGC Pride FFA",
 		searchShow: true,
 		mod: 'gen9vgcgay',
 		gameType: 'freeforall',

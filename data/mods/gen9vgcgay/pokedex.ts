@@ -12392,6 +12392,24 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 		},
 		"inherit": true
 	},
+	"keldeoresolute": {
+		"types": [
+			"Water",
+			"Fighting"
+		],
+		"baseStats": {
+			"hp": 91,
+			"atk": 72,
+			"def": 90,
+			"spa": 129,
+			"spd": 90,
+			"spe": 108
+		},
+		"abilities": {
+			"0": "Justified"
+		},
+		"inherit": true
+	},
 	"meloetta": {
 		"types": [
 			"Normal",
@@ -12687,7 +12705,7 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 			"Steel"
 		],
 		"baseStats": {
-			"hp": 137,
+			"hp": 127,
 			"atk": 137,
 			"def": 107,
 			"spa": 113,
@@ -12705,7 +12723,7 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 			"Ghost"
 		],
 		"baseStats": {
-			"hp": 137,
+			"hp": 127,
 			"atk": 113,
 			"def": 89,
 			"spa": 137,
@@ -12726,8 +12744,8 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 			"hp": 97,
 			"atk": 157,
 			"def": 127,
-			"spa": 113,
-			"spd": 109,
+			"spa": 108,
+			"spd": 104,
 			"spe": 77
 		},
 		"abilities": {
@@ -12742,8 +12760,8 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 		],
 		"baseStats": {
 			"hp": 97,
-			"atk": 113,
-			"def": 109,
+			"atk": 108,
+			"def": 104,
 			"spa": 157,
 			"spd": 127,
 			"spe": 77
@@ -12811,11 +12829,11 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 			"Steel"
 		],
 		"baseStats": {
-			"hp": 135,
+			"hp": 125,
 			"atk": 133,
 			"def": 133,
-			"spa": 80,
-			"spd": 65,
+			"spa": 85,
+			"spd": 60,
 			"spe": 34
 		},
 		"abilities": {

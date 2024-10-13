@@ -30593,6 +30593,9 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
             ],
             "recycle": [
                 "9M"
+            ],
+            "shelter": [
+                "9M"
             ]
         }
     },
@@ -63071,6 +63074,9 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
                 "9M"
             ],
             "aeroblast": [
+                "9M"
+            ],
+            "partingshot": [
                 "9M"
             ]
         }
@@ -100215,6 +100221,9 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
                 "9M"
             ],
             "stalacbite": [
+                "9M"
+            ],
+            "trumpcard": [
                 "9M"
             ]
         }
@@ -140061,6 +140070,9 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
             ],
             "snowscape": [
                 "9M"
+            ],
+            "closecombat": [
+                "9M"
             ]
         }
     },
@@ -145969,6 +145981,9 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
                 "9M"
             ],
             "snowscape": [
+                "9M"
+            ],
+            "megahorn": [
                 "9M"
             ]
         }

@@ -1001,7 +1001,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 	diamondstorm: {
 		inherit: true,
 		isNonstandard: null,
-		shortDesc: "Hits both in sandstorm, 50% raise defense by 1",
+		shortDesc: "Hits both in sandstorm, 50% raise defense by 1.",
 		target: "normal",
 		category: "Special",
 		basePower: 95,
@@ -1781,7 +1781,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 	shadowforce: {
 		inherit: true,
 		isNonstandard: null,
-		shortDesc: "Breaks protection. Not Giratina-O: Disappears T1, hits T2.",
+		shortDesc: "Breaks Protect. Not Gira-O: Disappears T1, hits T2.",
 		onTryMove(attacker, defender, move) {
 			if (attacker.removeVolatile(move.id)) {
 				return;

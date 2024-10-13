@@ -3301,8 +3301,8 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		"tier": "OU"
 	},
 	"keldeoresolute": {
-		"isNonstandard": "Past",
-		"tier": "Illegal"
+		"isNonstandard": null,
+		"tier": "OU"
 	},
 	"meloetta": {
 		"isNonstandard": null,
