@@ -1514,5 +1514,17 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 	megashifty: {
 		inherit: true,
 		isNonstandard: null,
-	}
+	},
+	timelord: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	ancestor: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	serenegracidea: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };
