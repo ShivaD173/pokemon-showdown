@@ -1932,9 +1932,9 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 		"baseStats": {
 			"hp": 200,
 			"atk": 33,
-			"def": 68,
+			"def": 63,
 			"spa": 33,
-			"spd": 68,
+			"spd": 63,
 			"spe": 33
 		},
 		"abilities": {
@@ -4177,7 +4177,7 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 			"def": 80,
 			"spa": 97,
 			"spd": 88,
-			"spe": 90
+			"spe": 85
 		},
 		"abilities": {
 			"0": "Flower Gift"
@@ -4194,7 +4194,7 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 			"def": 80,
 			"spa": 97,
 			"spd": 88,
-			"spe": 90
+			"spe": 85
 		},
 		"abilities": {
 			"0": "Flower Gift"
@@ -12382,9 +12382,9 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 		"baseStats": {
 			"hp": 91,
 			"atk": 72,
-			"def": 90,
+			"def": 85,
 			"spa": 129,
-			"spd": 90,
+			"spd": 85,
 			"spe": 108
 		},
 		"abilities": {
@@ -12400,9 +12400,9 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 		"baseStats": {
 			"hp": 91,
 			"atk": 72,
-			"def": 90,
+			"def": 85,
 			"spa": 129,
-			"spd": 90,
+			"spd": 85,
 			"spe": 108
 		},
 		"abilities": {
@@ -12577,11 +12577,11 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 			"Ground"
 		],
 		"baseStats": {
-			"hp": 108,
+			"hp": 100,
 			"atk": 100,
-			"def": 121,
-			"spa": 81,
-			"spd": 95,
+			"def": 123,
+			"spa": 85,
+			"spd": 97,
 			"spe": 95
 		},
 		"abilities": {
@@ -12597,10 +12597,10 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 		],
 		"baseStats": {
 			"hp": 64,
-			"atk": 140,
-			"def": 71,
-			"spa": 100,
-			"spd": 85,
+			"atk": 135,
+			"def": 76,
+			"spa": 95,
+			"spd": 90,
 			"spe": 140
 		},
 		"abilities": {
@@ -12615,11 +12615,11 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 			"Ground"
 		],
 		"baseStats": {
-			"hp": 216,
+			"hp": 200,
 			"atk": 100,
-			"def": 121,
-			"spa": 91,
-			"spd": 95,
+			"def": 123,
+			"spa": 95,
+			"spd": 97,
 			"spe": 85
 		},
 		"abilities": {
@@ -12943,7 +12943,8 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 			"spe": 105
 		},
 		"abilities": {
-			"0": "Leaf Guard"
+			"0": "Leaf Guard",
+			"H": "Seed Sower"
 		},
 		"inherit": true
 	},
@@ -13059,11 +13060,11 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 			"Normal"
 		],
 		"baseStats": {
-			"hp": 105,
+			"hp": 95,
 			"atk": 95,
-			"def": 100,
-			"spa": 115,
-			"spd": 100,
+			"def": 110,
+			"spa": 105,
+			"spd": 110,
 			"spe": 85
 		},
 		"abilities": {

@@ -86089,9 +86089,6 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
             "partingshot": [
                 "9M"
             ],
-            "snarl": [
-                "9M"
-            ],
             "darkpulse": [
                 "9M"
             ],

@@ -2509,8 +2509,8 @@ export const AbilitiesText: {[id: IDEntry]: AbilityText} = {
 	},
 	timelord: {
 		name: "Time Lord",
-		desc: "Priority moves used by opposing Pokemon targeting this Pokemon or its allies are prevented from having an effect.",
-		shortDesc: "This Pokemon and its allies are protected from opposing priority moves.",
+		desc: "Priority moves used by opposing Pokemon targeting this Pokemon only are prevented from having an effect.",
+		shortDesc: "This Pokemon is protected from opposing priority moves.",
 		block: "#damp",
 	},
 	megashiftx: {

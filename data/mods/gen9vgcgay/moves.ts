@@ -966,7 +966,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		inherit: true,
 		isNonstandard: null,
 		shortDesc: "Hits Twice, 20% to drop defense",
-		basePower: 50,
+		basePower: 45,
 		multihit: 2,
 	},
 	ragefist: {
@@ -988,14 +988,10 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 			},
 		},
 	},
-	dragondarts: {
-		inherit: true,
-		basePower: 55
-	},
 	twinbeam: {
 		inherit: true,
 		shortDesc: "Hits twice. Doubles: Tries to hit each foe once.",
-		basePower: 55,
+		basePower: 50,
 		smartTarget: true,
 	},
 	diamondstorm: {
@@ -1734,7 +1730,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 	darkvoid: {
 		inherit: true,
 		isNonstandard: null,
-		accuracy: 75,
+		accuracy: 70,
 	},
 	hyperspacehole: {
 		inherit: true,
@@ -1756,21 +1752,19 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		inherit: true,
 		isNonstandard: null,
 		self: null,
-		shortDesc: "User recharge if doesn't KO. Dialga-O: Hits both foes.",
+		basePower: 140,
+		shortDesc: "User recharge if doesn't KO. Dialga-O: No Recharge.",
 		onHit(target, source) {
-			if (target.hp) {
+			if (target.hp || source.species.name === 'Dialga-Origin') {
 				source.addVolatile('mustrecharge');
-			}
-		},
-		onModifyMove(move, pokemon) {
-			if (pokemon.species.name === 'Dialga-Origin') {
-				move.target = 'allAdjacentFoes';
 			}
 		},
 	},
 	spacialrend: {
 		inherit: true,
 		isNonstandard: null,
+		basePower: 95,
+		accuracy: true,
 		shortDesc: "High critical hit ratio. Palkia-O: Always crits.",
 		onModifyMove(move, pokemon) {
 			if (pokemon.species.name === 'Palkia-Origin') {

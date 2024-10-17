@@ -6516,7 +6516,7 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		onSwitchIn(pokemon) {
 			const target = pokemon.side.foe.active[pokemon.side.foe.active.length - 1 - pokemon.position];
 			if (target) {
-				this.actions.useMove(Dex.moves.get('copycat'), pokemon);
+				this.actions.useMove(this.dex.moves.get('copycat'), pokemon);
 			}
 		},
 		name: "Copy Core",
@@ -6528,7 +6528,7 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		onSwitchIn(pokemon) {
 			const target = pokemon.side.foe.active[pokemon.side.foe.active.length - 1 - pokemon.position];
 			if (target) {
-				this.actions.useMove(Dex.moves.get('confusion'), pokemon, {target: target});
+				this.actions.useMove(this.dex.moves.get('confusion'), pokemon, {target: target});
 			}
 		},
 		name: "Onslaught Core",
@@ -6538,7 +6538,7 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 	},
 	barriercore: {
 		onSwitchIn(pokemon) {
-			this.actions.useMove(Dex.moves.get('magiccoat'), pokemon);
+			this.actions.useMove(this.dex.moves.get('magiccoat'), pokemon);
 		},
 		name: "Barrier Core",
 		isNonstandard: "CAP",
@@ -6547,7 +6547,7 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 	},
 	hazardcore: {
 		onSwitchIn(pokemon) {
-			this.actions.useMove(Dex.moves.get('spikes'), pokemon);
+			this.actions.useMove(this.dex.moves.get('spikes'), pokemon);
 		},
 		name: "Hazard Core",
 		isNonstandard: "CAP",
@@ -6561,7 +6561,7 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 				return;
 			}
 			const dazzlingHolder = this.effectState.target;
-			if ((source.isAlly(dazzlingHolder) || move.target === 'all') && move.priority > 0.1) {
+			if ((source === dazzlingHolder || move.target === 'all') && move.priority > 0.1) {
 				this.attrLastMove('[still]');
 				this.add('cant', dazzlingHolder, 'ability: Time Lord', move, '[of] ' + target);
 				return false;
