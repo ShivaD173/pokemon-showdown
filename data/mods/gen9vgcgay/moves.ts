@@ -789,6 +789,43 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		},
 	},
 	// Some signature Moves
+	stoneaxe: {
+		inherit: true,
+		accuracy: 100,
+		isNonstandard: null,
+	},
+	ceaselessedge: {
+		inherit: true,
+		accuracy: 100,
+		isNonstandard: null,
+	},
+	dragonhammer: {
+		inherit: true,
+		basePower: 100,
+		isNonstandard: null,
+	},
+	blazingtorque: {
+		inherit: true,
+		basePower: 100,
+		isNonstandard: null,
+	},
+	noxioustorque: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	magicaltorque: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	combattorque: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	wickedtorque: {
+		inherit: true,
+		basePower: 100,
+		isNonstandard: null,
+	},
 	electroshot: {
 		inherit: true,
 		isNonstandard: null,
@@ -1576,7 +1613,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		inherit: true,
 		self: null,
 		shortDesc: "User cannot move next turn if it fails to KO.",
-		basePower: 140,
+		basePower: 130,
 		onHit(target, source) {
 			if (target.hp) {
 				source.addVolatile('mustrecharge');
@@ -1587,7 +1624,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		inherit: true,
 		self: null,
 		shortDesc: "User cannot move next turn if it fails to KO.",
-		basePower: 140,
+		basePower: 130,
 		onHit(target, source) {
 			if (target.hp) {
 				source.addVolatile('mustrecharge');
@@ -1598,7 +1635,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		inherit: true,
 		self: null,
 		shortDesc: "User recharges doesn't KO. Physical if Atk > SpA.",
-		basePower: 140,
+		basePower: 130,
 		onHit(target, source, move) {
 			if (target.hp) {
 				source.addVolatile('mustrecharge');
@@ -1616,7 +1653,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		inherit: true,
 		self: null,
 		shortDesc: "User recharges doesn't KO. Physical if Atk > SpA.",
-		basePower: 140,
+		basePower: 130,
 		onHit(target, source, move) {
 			if (target.hp) {
 				source.addVolatile('mustrecharge');
@@ -1634,7 +1671,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		inherit: true,
 		self: null,
 		shortDesc: "User recharges doesn't KO. Physical if Atk > SpA.",
-		basePower: 140,
+		basePower: 130,
 		onHit(target, source, move) {
 			if (target.hp) {
 				source.addVolatile('mustrecharge');
@@ -1653,7 +1690,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		isNonstandard: null,
 		self: null,
 		shortDesc: "User cannot move next turn if it fails to KO.",
-		basePower: 140,
+		basePower: 130,
 		onHit(target, source) {
 			if (target.hp) {
 				source.addVolatile('mustrecharge');
@@ -1665,7 +1702,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		isNonstandard: null,
 		self: null,
 		shortDesc: "User cannot move next turn if it fails to KO.",
-		basePower: 150,
+		basePower: 130,
 		onHit(target, source) {
 			if (target.hp) {
 				source.addVolatile('mustrecharge');
@@ -1677,6 +1714,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		isNonstandard: null,
 		self: null,
 		shortDesc: "User recharges if doesn't KO. 30% paralysis.",
+		basePower: 130,
 		flags: {recharge: 1, protect: 1, mirror: 1, nosleeptalk: 1, failinstruct: 1},
 		onTryMove(attacker, defender, move) {
 			return;
@@ -1692,6 +1730,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		isNonstandard: null,
 		self: null,
 		shortDesc: "User recharges if doesn't KO. 30% burn.",
+		basePower: 130,
 		flags: {recharge: 1, protect: 1, mirror: 1, nosleeptalk: 1, failinstruct: 1},
 		onTryMove(attacker, defender, move) {
 			return;
@@ -1706,7 +1745,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		inherit: true,
 		isNonstandard: null,
 		self: null,
-		basePower: 140,
+		basePower: 130,
 		shortDesc: "User recharges if doesn't KO. Physical if Atk > SpA.",
 		onModifyMove(move, pokemon) {
 			if (pokemon.getStat('atk', false, true) > pokemon.getStat('spa', false, true)) move.category = 'Physical';
@@ -2195,32 +2234,6 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 	},
 	nightmare: {
 		inherit: true,
-		isNonstandard: null,
-	},
-	dragonhammer: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	blazingtorque: {
-		inherit: true,
-		basePower: 100,
-		isNonstandard: null,
-	},
-	noxioustorque: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	magicaltorque: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	combattorque: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	wickedtorque: {
-		inherit: true,
-		basePower: 100,
 		isNonstandard: null,
 	},
 	secretsword: {

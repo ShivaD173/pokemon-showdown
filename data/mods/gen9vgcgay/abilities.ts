@@ -324,7 +324,7 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 	},
 	snowcloak: {
 		inherit: true,
-		shortDesc: "1.2x Special Defense in Snow",
+		shortDesc: "1.2x Special Defense in Snow.",
 		onModifyAccuracy(accuracy) {
 		},
 		onModifySpDPriority: 6,
