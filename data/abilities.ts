@@ -6260,7 +6260,7 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		},
 		name: "Shadow Tagged",
 		rating: 2,
-		num: 221,
+		num: -36,
 	},
 	moltendown: {
 		isNonstandard: "CAP",
