@@ -761,7 +761,7 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 		},
 		"abilities": {
 			"0": "Mystic Fist",
-			"1": "Shadow Tagged",
+			"1": "Cursed Body",
 			"H": "Levitate"
 		},
 		"inherit": true
@@ -2443,7 +2443,7 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 		},
 		"abilities": {
 			"0": "Sand Stream",
-			"H": "Unnerve"
+			"H": "Sand Force"
 		},
 		"inherit": true
 	},
@@ -2552,11 +2552,11 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 		],
 		"baseStats": {
 			"hp": 70,
-			"atk": 90,
+			"atk": 70,
 			"def": 60,
 			"spa": 150,
 			"spd": 60,
-			"spe": 70
+			"spe": 90
 		},
 		"abilities": {
 			"0": "Shield Dust",
@@ -2806,9 +2806,9 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 		"baseStats": {
 			"hp": 144,
 			"atk": 120,
-			"def": 70,
+			"def": 60,
 			"spa": 40,
-			"spd": 70,
+			"spd": 60,
 			"spe": 50
 		},
 		"abilities": {
@@ -2904,7 +2904,7 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 		],
 		"baseStats": {
 			"hp": 60,
-			"atk": 80,
+			"atk": 75,
 			"def": 80,
 			"spa": 70,
 			"spd": 80,
@@ -3988,6 +3988,25 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 			"0": "Natural Cure",
 			"1": "Serene Grace",
 			"H": "Technician"
+		},
+		"inherit": true
+	},
+	"cranidos": {
+		"types": [
+			"Rock"
+		],
+		"baseStats": {
+			"hp": 67,
+			"atk": 125,
+			"def": 40,
+			"spa": 30,
+			"spd": 30,
+			"spe": 58
+		},
+		"abilities": {
+			"0": "Rock Head",
+			"1": "Reckless",
+			"H": "Sheer Force"
 		},
 		"inherit": true
 	},
@@ -6172,7 +6191,7 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 		},
 		"abilities": {
 			"0": "Flash Fire",
-			"1": "Shadow Tagged",
+			"1": "Flame Body",
 			"H": "Infiltrator"
 		},
 		"inherit": true
@@ -10519,7 +10538,7 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 			"Steel"
 		],
 		"baseStats": {
-			"hp": 75,
+			"hp": 90,
 			"atk": 85,
 			"def": 145,
 			"spa": 60,
@@ -11736,12 +11755,12 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 			"Psychic"
 		],
 		"baseStats": {
-			"hp": 50,
-			"atk": 110,
-			"def": 110,
-			"spa": 110,
-			"spd": 110,
-			"spe": 110
+			"hp": 75,
+			"atk": 105,
+			"def": 105,
+			"spa": 105,
+			"spd": 105,
+			"spe": 105
 		},
 		"abilities": {
 			"0": "Pressure",
@@ -11754,12 +11773,12 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 			"Psychic"
 		],
 		"baseStats": {
-			"hp": 50,
-			"atk": 180,
-			"def": 20,
-			"spa": 180,
-			"spd": 20,
-			"spe": 150
+			"hp": 75,
+			"atk": 175,
+			"def": 15,
+			"spa": 175,
+			"spd": 15,
+			"spe": 145
 		},
 		"abilities": {
 			"0": "Pressure",
@@ -11772,12 +11791,12 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 			"Psychic"
 		],
 		"baseStats": {
-			"hp": 50,
-			"atk": 70,
-			"def": 160,
-			"spa": 70,
-			"spd": 160,
-			"spe": 90
+			"hp": 75,
+			"atk": 65,
+			"def": 155,
+			"spa": 65,
+			"spd": 155,
+			"spe": 85
 		},
 		"abilities": {
 			"0": "Pressure",
@@ -11790,12 +11809,12 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 			"Psychic"
 		],
 		"baseStats": {
-			"hp": 50,
-			"atk": 95,
-			"def": 90,
-			"spa": 95,
-			"spd": 90,
-			"spe": 180
+			"hp": 75,
+			"atk": 90,
+			"def": 85,
+			"spa": 90,
+			"spd": 85,
+			"spe": 175
 		},
 		"abilities": {
 			"0": "Pressure",
@@ -11818,7 +11837,6 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 		},
 		"abilities": {
 			"0": "Pressure",
-			"1": "Time Lord",
 			"H": "Telepathy"
 		},
 		"inherit": true
@@ -11837,8 +11855,7 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 			"spe": 90
 		},
 		"abilities": {
-			"0": "Pressure",
-			"1": "Time Lord",
+			"0": "Time Lord",
 			"H": "Telepathy"
 		},
 		"inherit": true,
@@ -11859,7 +11876,6 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 		},
 		"abilities": {
 			"0": "Pressure",
-			"1": "Stalwart",
 			"H": "Telepathy"
 		},
 		"inherit": true
@@ -11878,8 +11894,7 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 			"spe": 120
 		},
 		"abilities": {
-			"0": "Pressure",
-			"1": "Stalwart",
+			"0": "Stalwart",
 			"H": "Telepathy"
 		},
 		"inherit": true,
@@ -11893,14 +11908,13 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 		"baseStats": {
 			"hp": 150,
 			"atk": 100,
-			"def": 120,
+			"def": 125,
 			"spa": 100,
-			"spd": 120,
-			"spe": 90
+			"spd": 125,
+			"spe": 80
 		},
 		"abilities": {
 			"0": "Pressure",
-			"1": "Infiltrator",
 			"H": "Telepathy"
 		},
 		"inherit": true
@@ -11912,15 +11926,14 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 		],
 		"baseStats": {
 			"hp": 150,
-			"atk": 120,
+			"atk": 125,
 			"def": 100,
-			"spa": 120,
+			"spa": 125,
 			"spd": 100,
-			"spe": 90
+			"spe": 80
 		},
 		"abilities": {
 			"0": "Levitate",
-			"1": "Infiltrator",
 			"H": "Telepathy"
 		},
 		"inherit": true,
@@ -12651,15 +12664,16 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 			"Dark"
 		],
 		"baseStats": {
-			"hp": 80,
+			"hp": 100,
 			"atk": 160,
 			"def": 60,
-			"spa": 170,
-			"spd": 130,
+			"spa": 160,
+			"spd": 120,
 			"spe": 80
 		},
 		"abilities": {
-			"0": "Magician"
+			"0": "Magician",
+			"H": "Loophole"
 		},
 		"inherit": true
 	},
@@ -12867,9 +12881,9 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 			"hp": 92,
 			"atk": 150,
 			"def": 115,
-			"spa": 80,
+			"spa": 90,
 			"spd": 115,
-			"spe": 148
+			"spe": 138
 		},
 		"abilities": {
 			"0": "Intrepid Sword"
@@ -12901,9 +12915,9 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 		"baseStats": {
 			"hp": 92,
 			"atk": 120,
-			"def": 140,
-			"spa": 80,
-			"spd": 140,
+			"def": 135,
+			"spa": 90,
+			"spd": 135,
 			"spe": 128
 		},
 		"abilities": {

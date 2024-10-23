@@ -6655,4 +6655,14 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		rating: 4,
 		num: -62,
 	},
+	loophole: {
+		onModifyMove(move) {
+			move.infiltrates = true;
+			delete move.flags['protect'];
+		},
+		flags: {},
+		name: "Loophole",
+		rating: 2.5,
+		num: 151,
+	},
 };

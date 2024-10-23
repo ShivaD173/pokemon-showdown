@@ -1237,7 +1237,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	typhlosionhisui: {
 		tier: "NU",
 		doublesTier: "(DUU)",
-		natDexTier: "NU",
+		natDexTier: "PU",
 	},
 	totodile: {
 		tier: "LC",
@@ -3531,7 +3531,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	druddigon: {
 		isNonstandard: "Past",
 		tier: "Illegal",
-		natDexTier: "PU",
+		natDexTier: "ZU",
 	},
 	golett: {
 		tier: "LC",

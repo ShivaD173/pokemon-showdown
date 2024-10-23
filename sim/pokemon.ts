@@ -1383,6 +1383,7 @@ export class Pokemon {
 		// The species the opponent sees
 		const apparentSpecies =
 			this.illusion ? this.illusion.species.name : species.baseSpecies;
+		const isSinnohItem = source && ['adamantcrystal', 'lustrousglobe', 'griseouscore'].includes(source.id);
 		if (isPermanent) {
 			this.baseSpecies = rawSpecies;
 			this.details = species.name + (this.level === 100 ? '' : ', L' + this.level) +
@@ -1398,7 +1399,7 @@ export class Pokemon {
 				if (source.zMove) {
 					this.battle.add('-burst', this, apparentSpecies, species.requiredItem);
 					this.moveThisTurnResult = true; // Ultra Burst counts as an action for Truant
-				} else if (source.onPrimal) {
+				} else if (source.onPrimal || isSinnohItem) {
 					if (this.illusion) {
 						this.ability = '';
 						this.battle.add('-primal', this.illusion, species.requiredItem);
@@ -1420,8 +1421,7 @@ export class Pokemon {
 				this.battle.add('-formechange', this, this.illusion ? this.illusion.species.name : species.name, message);
 			}
 		}
-		if (isPermanent && (!source || !['disguise', 'iceface',
-			'adamantcrystal', 'lustrousglobe', 'griseouscore'].includes(source.id))) {
+		if (isPermanent && (!source || !['disguise', 'iceface'].includes(source.id))) {
 			if (this.illusion) {
 				this.ability = ''; // Don't allow Illusion to wear off
 			}
@@ -1429,21 +1429,21 @@ export class Pokemon {
 			if (source || !this.getAbility().flags['cantsuppress']) this.setAbility(species.abilities['0'], null, true);
 			// However, its ability does reset upon switching out
 			this.baseAbility = toID(species.abilities['0']);
-			// Sinnoh Origin Attempt
-			// if (source && ['adamantcrystal', 'lustrousglobe', 'griseouscore'].includes(source.id)) {
-			// 	let abilityKey: keyof typeof rawSpecies.abilities;
-			// 	const baseSpecies = this.battle.dex.species.get(rawSpecies.baseSpecies);
-			// 	let abilitySlot;
+			const baseName = this.battle.dex.abilities.getByID(this.baseAbility).name;
+			if (isSinnohItem) {
+				let abilityKey: keyof typeof rawSpecies.abilities;
+				const baseSpecies = this.battle.dex.species.get(rawSpecies.baseSpecies);
+				let abilitySlot;
 
-			// 	for (abilityKey in baseSpecies.abilities) {
-			// 		if (this.battle.dex.abilities.getByID(this.baseAbility).name === this.battle.dex.abilities.get(baseSpecies.abilities[abilityKey]).name) {
-			// 			if (!(abilityKey as string).includes('I')) abilitySlot = abilityKey;
-			// 		}
-			// 	}
-			// 	if (species.abilities[abilitySlot as string] === undefined) abilitySlot = '0';
-			// 	this.setAbility(species.abilities[abilitySlot as string], null, true);
-			// 	this.baseAbility = this.ability;
-			// }
+				for (abilityKey in baseSpecies.abilities) {
+					if (baseName === this.battle.dex.abilities.get(baseSpecies.abilities[abilityKey]).name) {
+						if (!(abilityKey as string).includes('I')) abilitySlot = abilityKey;
+					}
+				}
+				if (species.abilities[abilitySlot as string] === undefined) abilitySlot = '0';
+				this.setAbility(species.abilities[abilitySlot as string], null, true);
+				this.baseAbility = this.ability;
+			}
 		}
 		if (this.terastallized) {
 			this.knownType = true;

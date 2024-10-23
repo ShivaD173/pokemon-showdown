@@ -1527,4 +1527,8 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 		inherit: true,
 		isNonstandard: null,
 	},
+	loophole: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };

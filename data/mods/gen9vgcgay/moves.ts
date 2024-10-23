@@ -2313,25 +2313,4 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	// Move Deletions
-	slam: {
-		inherit: true,
-		isNonstandard: "CAP",
-	},
-	bubblebeam: {
-		inherit: true,
-		isNonstandard: "CAP",
-	},
-	psybeam: {
-		inherit: true,
-		isNonstandard: "CAP",
-	},
-	hornattack: {
-		inherit: true,
-		isNonstandard: "CAP",
-	},
-	powdersnow: {
-		inherit: true,
-		isNonstandard: "CAP",
-	}
 };

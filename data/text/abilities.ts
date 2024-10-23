@@ -2537,4 +2537,9 @@ export const AbilitiesText: {[id: IDEntry]: AbilityText} = {
 		desc: "This Pokemon's moves have their secondary effect chance 2.5x. This effect stacks with the Rainbow effect, except for secondary effects that cause the target to flinch.",
 		shortDesc: "This Pokemon's moves have their secondary effect chance 2.5x.",
 	},
+	loophole: {
+		name: "Loophole",
+		desc: "This Pokemon's moves ignore substitutes, protects and the opposing side's Reflect, Light Screen, Safeguard, Mist, and Aurora Veil.",
+		shortDesc: "Moves ignore Protects, Substitute, Screens, Safeguard, and Mist.",
+	},
 };

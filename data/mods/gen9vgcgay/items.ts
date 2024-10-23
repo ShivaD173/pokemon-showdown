@@ -6,6 +6,15 @@ export const Items: import('../../../sim/dex-items').ModdedItemDataTable = {
 		desc: "On switch-in, raises holder's Attack by 1 and confuses it. Single use.",
 		shortDesc: "On switch-in, raises holder's Attack by 1 and confuses it. Single use.",
 		boosts: {atk: 1},
+		onStart() {
+			this.effectState.started = true;
+		},
+		onUpdate(pokemon) {
+			if (!this.effectState.started) return;
+			if (pokemon.useItem()) {
+				pokemon.addVolatile('confusion');
+			}
+		},
 	},
 	shellbell: {
 		inherit: true,
