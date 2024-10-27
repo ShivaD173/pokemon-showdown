@@ -726,6 +726,7 @@ export const AbilitiesText: {[id: IDEntry]: AbilityText} = {
 		name: "Illuminate",
 		desc: "Prevents other Pokemon from lowering this Pokemon's accuracy stat stage. This Pokemon ignores a target's evasiveness stat stage.",
 		shortDesc: "This Pokemon's accuracy can't be lowered by others; ignores their evasiveness stat.",
+		start: "  [POKEMON] lit up the battlefield!",
 		gen8: {
 			desc: "No competitive use.",
 			shortDesc: "No competitive use.",
@@ -2405,8 +2406,8 @@ export const AbilitiesText: {[id: IDEntry]: AbilityText} = {
 	},
 	hammertime: {
 		name: "Hammer Time",
-		desc: "Hammer-based moves deal 1.5x damage.",
-		shortDesc: "Hammer-based moves deal 1.5x damage.",
+		desc: "Hammer-based moves deal 1.3x damage.",
+		shortDesc: "Hammer-based moves deal 1.3x damage.",
 	},
 	rampage: {
 		name: "Rampage",

@@ -592,7 +592,7 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 			"Poison"
 		],
 		"baseStats": {
-			"hp": 80,
+			"hp": 85,
 			"atk": 70,
 			"def": 65,
 			"spa": 120,
@@ -1838,7 +1838,7 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 			"hp": 85,
 			"atk": 76,
 			"def": 60,
-			"spa": 145,
+			"spa": 150,
 			"spd": 90,
 			"spe": 29
 		},
@@ -3018,10 +3018,10 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 			"Poison"
 		],
 		"baseStats": {
-			"hp": 115,
+			"hp": 120,
 			"atk": 83,
 			"def": 93,
-			"spa": 83,
+			"spa": 78,
 			"spd": 93,
 			"spe": 55
 		},
@@ -3039,7 +3039,7 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 		],
 		"baseStats": {
 			"hp": 70,
-			"atk": 130,
+			"atk": 135,
 			"def": 50,
 			"spa": 105,
 			"spd": 50,
@@ -4912,8 +4912,8 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 			"Ghost"
 		],
 		"baseStats": {
-			"hp": 45,
-			"atk": 110,
+			"hp": 50,
+			"atk": 115,
 			"def": 135,
 			"spa": 65,
 			"spd": 135,
@@ -5434,7 +5434,6 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 		},
 		"abilities": {
 			"0": "Unaware",
-			"1": "Curious Medicine",
 			"H": "Simple"
 		},
 		"inherit": true
@@ -5759,11 +5758,11 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 			"Flying"
 		],
 		"baseStats": {
-			"hp": 82,
+			"hp": 77,
 			"atk": 58,
-			"def": 85,
+			"def": 80,
 			"spa": 108,
-			"spd": 85,
+			"spd": 80,
 			"spe": 97
 		},
 		"abilities": {
@@ -5859,7 +5858,7 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 			"def": 60,
 			"spa": 125,
 			"spd": 60,
-			"spe": 110
+			"spe": 105
 		},
 		"abilities": {
 			"0": "Illusion"
@@ -7848,12 +7847,12 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 			"Fire"
 		],
 		"baseStats": {
-			"hp": 68,
+			"hp": 78,
 			"atk": 64,
 			"def": 60,
-			"spa": 111,
+			"spa": 116,
 			"spd": 60,
-			"spe": 117
+			"spe": 127
 		},
 		"abilities": {
 			"0": "Corrosion",
@@ -9824,10 +9823,10 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 			"Ground"
 		],
 		"baseStats": {
-			"hp": 130,
+			"hp": 125,
 			"atk": 140,
 			"def": 105,
-			"spa": 45,
+			"spa": 50,
 			"spd": 80,
 			"spe": 50
 		},
@@ -9962,7 +9961,7 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 			"Ghost"
 		],
 		"baseStats": {
-			"hp": 104,
+			"hp": 109,
 			"atk": 75,
 			"def": 100,
 			"spa": 110,
@@ -9982,7 +9981,7 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 			"Fighting"
 		],
 		"baseStats": {
-			"hp": 90,
+			"hp": 85,
 			"atk": 120,
 			"def": 80,
 			"spa": 85,
@@ -10377,6 +10376,7 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 		},
 		"abilities": {
 			"0": "Synchronize",
+			"1": "Ballin'",
 			"H": "Telepathy"
 		},
 		"inherit": true
@@ -11166,12 +11166,12 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 			"Dragon"
 		],
 		"baseStats": {
-			"hp": 99,
-			"atk": 83,
-			"def": 91,
-			"spa": 125,
-			"spd": 83,
-			"spe": 109
+			"hp": 95,
+			"atk": 79,
+			"def": 87,
+			"spa": 123,
+			"spd": 79,
+			"spe": 107
 		},
 		"abilities": {
 			"0": "Protosynthesis",
@@ -11204,7 +11204,7 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 			"Ground"
 		],
 		"baseStats": {
-			"hp": 113,
+			"hp": 108,
 			"atk": 70,
 			"def": 120,
 			"spa": 135,
@@ -11480,12 +11480,12 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 			"Dragon"
 		],
 		"baseStats": {
-			"hp": 105,
-			"atk": 115,
-			"def": 121,
-			"spa": 65,
-			"spd": 93,
-			"spe": 91
+			"hp": 103,
+			"atk": 113,
+			"def": 115,
+			"spa": 63,
+			"spd": 89,
+			"spe": 87
 		},
 		"abilities": {
 			"0": "Protosynthesis",
@@ -11499,11 +11499,11 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 			"Dragon"
 		],
 		"baseStats": {
-			"hp": 115,
+			"hp": 109,
 			"atk": 79,
-			"def": 93,
-			"spa": 137,
-			"spd": 91,
+			"def": 89,
+			"spa": 131,
+			"spd": 87,
 			"spe": 75
 		},
 		"abilities": {
@@ -12688,7 +12688,7 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 			"def": 110,
 			"spa": 120,
 			"spd": 80,
-			"spe": 60
+			"spe": 70
 		},
 		"abilities": {
 			"0": "Water Absorb"

@@ -79,9 +79,9 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 	ominouswind: {
 		inherit: true,
 		"isNonstandard": null,
-		shortDesc: "20% chance to raise all stats by 1 (not acc/eva).",
+		shortDesc: "15% chance to raise all stats by 1 (not acc/eva).",
 		secondary: {
-			chance: 20,
+			chance: 15,
 			self: {
 				boosts: {atk: 1, def: 1, spa: 1, spd: 1, spe: 1},
 			},
@@ -90,9 +90,9 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 	ancientpower: {
 		inherit: true,
 		"isNonstandard": null,
-		shortDesc: "20% chance to raise all stats by 1 (not acc/eva).",
+		shortDesc: "15% chance to raise all stats by 1 (not acc/eva).",
 		secondary: {
-			chance: 20,
+			chance: 15,
 			self: {
 				boosts: {atk: 1, def: 1, spa: 1, spd: 1, spe: 1},
 			},
@@ -100,9 +100,9 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 	},
 	"silverwind": {
 		"inherit": true,
-		shortDesc: "20% chance to raise all stats by 1 (not acc/eva).",
+		shortDesc: "15% chance to raise all stats by 1 (not acc/eva).",
 		secondary: {
-			chance: 20,
+			chance: 15,
 			self: {
 				boosts: {atk: 1, def: 1, spa: 1, spd: 1, spe: 1},
 			},
@@ -459,7 +459,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 	},
 	aurorabeam: {
 		inherit: true,
-		shortDesc: "20% to lower target's Attack by 1",
+		shortDesc: "20% to lower target's Attack by 1.",
 		basePower: 75,
 		secondary: {chance: 20, boosts: {atk: -1}},
 	},
@@ -763,7 +763,8 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 	psychoshift: {
 		inherit: true,
 		isNonstandard: null,
-		shortDesc: "Transfers user's status to the target. Cures Ally Status.",
+		shortDesc: "Transfers the user's status to both targets.",
+		target: "allAdjacentFoes",
 		onTryHit(target, source, move) {
 			if (!source.status) return false;
 			move.status = source.status;
@@ -771,9 +772,6 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		self: {
 			onHit(pokemon) {
 				pokemon.cureStatus();
-				for (const allyActive of pokemon.adjacentAllies()) {
-					allyActive.cureStatus();
-				}
 			},
 		},
 	},
@@ -789,25 +787,35 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		},
 	},
 	// Some signature Moves
+	triplearrows: {
+		inherit: true,
+		isNonstandard: null,
+		basePower: 100,
+	},
+	aquastep: {
+		inherit: true,
+		isNonstandard: null,
+		basePower: 90,
+	},
 	stoneaxe: {
 		inherit: true,
-		accuracy: 100,
 		isNonstandard: null,
+		accuracy: 100,
 	},
 	ceaselessedge: {
 		inherit: true,
-		accuracy: 100,
 		isNonstandard: null,
+		accuracy: 100,
 	},
 	dragonhammer: {
 		inherit: true,
-		basePower: 100,
 		isNonstandard: null,
+		basePower: 100,
 	},
 	blazingtorque: {
 		inherit: true,
-		basePower: 100,
 		isNonstandard: null,
+		basePower: 100,
 	},
 	noxioustorque: {
 		inherit: true,
@@ -1791,7 +1799,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		inherit: true,
 		isNonstandard: null,
 		self: null,
-		basePower: 140,
+		basePower: 130,
 		shortDesc: "User recharge if doesn't KO. Dialga-O: No Recharge.",
 		onHit(target, source) {
 			if (target.hp || source.species.name === 'Dialga-Origin') {

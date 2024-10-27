@@ -521,7 +521,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	machamp: {
 		isNonstandard: "Past",
 		tier: "Illegal",
-		natDexTier: "ZUBL",
+		natDexTier: "ZU",
 	},
 	machampgmax: {
 		isNonstandard: "Past",
@@ -1507,7 +1507,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	sneasel: {
 		tier: "ZU",
 		doublesTier: "NFE",
-		natDexTier: "ZUBL",
+		natDexTier: "ZU",
 	},
 	sneaselhisui: {
 		tier: "SU",
@@ -3143,7 +3143,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		tier: "LC",
 	},
 	whimsicott: {
-		tier: "ZU",
+		tier: "NU",
 		doublesTier: "DOU",
 		natDexTier: "ZU",
 	},
@@ -4417,7 +4417,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	silvallyground: {
 		isNonstandard: "Past",
 		tier: "Illegal",
-		natDexTier: "ZUBL",
+		natDexTier: "ZU",
 	},
 	silvallyice: {
 		isNonstandard: "Past",

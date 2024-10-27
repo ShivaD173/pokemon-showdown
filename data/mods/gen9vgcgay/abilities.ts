@@ -189,15 +189,17 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 	},
 	liquidooze: {
 		inherit: true,
-		shortDesc: "Deals damage instead of draining, Replaces foods with Black Sludges on hit.",
+		shortDesc: "This Pokemon's contact moves replace items with Black Sludges on hit.",
+		onSourceTryHeal(damage, target, source, effect) {
+		},
 		onModifyMove(move) {
 			move.secondaries?.push({
 				chance: 100,
 				onHit(target) {
-					if (target.item === "leftovers" || target.item.endsWith("berry")) {
-						this.add('message', 'Item replaced with Liquid Ooze');
-						target.setItem("blacksludge");
-					}
+					const item = target.getItem();
+					if (!this.singleEvent('TakeItem', item, target.itemState, target, target, move, item)) return;
+					this.add('message', 'Item replaced with Liquid Ooze');
+					target.setItem("blacksludge");
 				}
 			});
 		}
@@ -265,6 +267,10 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 	illuminate: {
 		inherit: true,
 		shortDesc: "While this Pokemon is active, all moves has 1.2x accuracy.",
+		onStart(pokemon) {
+			if (this.suppressingAbility(pokemon)) return;
+			this.add('-ability', pokemon, 'Illuminate');
+		},
 		onTryBoost(boost, target, source, effect) {
 		},
 		onModifyMove(move) {

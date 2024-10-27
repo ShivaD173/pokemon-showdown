@@ -6513,7 +6513,7 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		num: -53,
 	},
 	copycore: {
-		onSwitchIn(pokemon) {
+		onStart(pokemon) {
 			const target = pokemon.side.foe.active[pokemon.side.foe.active.length - 1 - pokemon.position];
 			if (target) {
 				this.actions.useMove(this.dex.moves.get('copycat'), pokemon);
@@ -6525,7 +6525,7 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		num: -54,
 	},
 	onslaughtcore: {
-		onSwitchIn(pokemon) {
+		onStart(pokemon) {
 			const target = pokemon.side.foe.active[pokemon.side.foe.active.length - 1 - pokemon.position];
 			if (target) {
 				this.actions.useMove(this.dex.moves.get('confusion'), pokemon, {target: target});
@@ -6537,7 +6537,7 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		num: -55,
 	},
 	barriercore: {
-		onSwitchIn(pokemon) {
+		onStart(pokemon) {
 			this.actions.useMove(this.dex.moves.get('magiccoat'), pokemon);
 		},
 		name: "Barrier Core",
@@ -6546,7 +6546,7 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		num: -56,
 	},
 	hazardcore: {
-		onSwitchIn(pokemon) {
+		onStart(pokemon) {
 			this.actions.useMove(this.dex.moves.get('spikes'), pokemon);
 		},
 		name: "Hazard Core",

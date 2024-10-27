@@ -54,14 +54,14 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		unbanlist: ['Mythical', 'Restricted Legendary', 'Greninja-Bond'],
 		restricted: ['Uber'],
 	},
-	{
-		name: "[Gen 9] VGC Pride FFA",
-		searchShow: true,
-		mod: 'gen9vgcgay',
-		gameType: 'freeforall',
-		ruleset: ['Flat Rules', '!! Adjust Level = 50', 'Sketch Post-Gen 7 Moves'],
-		unbanlist: ['Greninja-Bond'],
-	},
+	// {
+	// 	name: "[Gen 9] VGC Pride FFA",
+	// 	searchShow: true,
+	// 	mod: 'gen9vgcgay',
+	// 	gameType: 'freeforall',
+	// 	ruleset: ['Flat Rules', '!! Adjust Level = 50', 'Sketch Post-Gen 7 Moves'],
+	// 	unbanlist: ['Greninja-Bond'],
+	// },
 	{
 		section: "Free For All",
 	},
@@ -262,13 +262,13 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		banlist: ['SU', 'IUBL'],
 		unbanlist: ['Baton Pass + Substitute']
 	},
-	{
-		name: "[Gen 3] Lol",
-		mod: 'gen3',
-		searchShow: true,
-		ruleset: ['[Gen 3] IU'],
-		banlist: ['IU', '8UBL', '8U', '9UBL', '9U', '10UBL', '10U', '11UBL', 'NFE', 'LC', 'Leftovers'],
-	},
+	// {
+	// 	name: "[Gen 3] Lol",
+	// 	mod: 'gen3',
+	// 	searchShow: true,
+	// 	ruleset: ['[Gen 3] IU'],
+	// 	banlist: ['IU', '8UBL', '8U', '9UBL', '9U', '10UBL', '10U', '11UBL', 'NFE', 'LC', 'Leftovers'],
+	// },
 	{
 		section: "Gen 4 Lower Tiers",
 	},
@@ -300,13 +300,13 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		banlist: ['ZU', 'SUBL', 'SU', 'IUBL', 'Heat Rock'],
 		unbanlist: ['Damp Rock'],
 	},
-	{
-		name: "[Gen 4] Lol",
-		mod: 'gen4',
-		searchShow: true,
-		ruleset: ['[Gen 4] IU'],
-		banlist: ['IU', '8UBL', '8U', '9U', '10UBL', '10U', '11UBL', 'NFE', 'LC', 'UR'],
-	},
+	// {
+	// 	name: "[Gen 4] Lol",
+	// 	mod: 'gen4',
+	// 	searchShow: true,
+	// 	ruleset: ['[Gen 4] IU'],
+	// 	banlist: ['IU', '8UBL', '8U', '9U', '10UBL', '10U', '11UBL', 'NFE', 'LC', 'UR'],
+	// },
 	{
 		section: "Gen 5 Lower Tiers",
 	},
@@ -446,7 +446,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		mod: 'gen9',
 		searchShow: true,
 		ruleset: ['[Gen 9] National Dex PU'],
-		banlist: ['ND PU', 'ND ZUBL', 'Shell Smash']
+		banlist: ['ND PU', 'ND ZUBL']
 	},
 	{
 		section: "S/V Singles",
