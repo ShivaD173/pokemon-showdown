@@ -1555,8 +1555,6 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	},
 	piloswine: {
 		tier: "NFE",
-		doublesTier: "NFE",
-		natDexTier: "NFE",
 	},
 	mamoswine: {
 		tier: "UU",
@@ -1714,8 +1712,6 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	},
 	combusken: {
 		tier: "NFE",
-		doublesTier: "NFE",
-		natDexTier: "NFE",
 	},
 	blaziken: {
 		tier: "UUBL",
@@ -4661,7 +4657,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	},
 	thwackey: {
 		tier: "SU",
-		doublesTier: "DUU",
+		doublesTier: "NFE",
 		natDexTier: "NFE",
 	},
 	rillaboom: {
@@ -5176,8 +5172,6 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	},
 	quaxwell: {
 		tier: "NFE",
-		doublesTier: "NFE",
-		natDexTier: "NFE",
 	},
 	quaquaval: {
 		tier: "UU",
