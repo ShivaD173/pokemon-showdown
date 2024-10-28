@@ -99,7 +99,6 @@ export const commands: Chat.ChatCommands = {
 				}
 				reqData[k] = val;
 			}
-
 			const [out, error] = await LoginServer.request("suspects/add", {
 				format: format.id,
 				reqs: JSON.stringify(reqData),
@@ -191,6 +190,28 @@ export const commands: Chat.ChatCommands = {
 
 			suspectTests.whitelist.splice(index, 1);
 			saveSuspectTests();
+		},
+
+		async verify(target, room, user) {
+			const formatid = toID(target);
+			if (!suspectTests.suspects[formatid]) {
+				throw new Chat.ErrorMessage("There is no suspect test running for the given format.");
+			}
+			const [out, error] = await LoginServer.request("suspects/verify", {
+				formatid,
+				userid: user.id,
+			});
+			if (error) {
+				throw new Chat.ErrorMessage("Error verifying for suspect: " + error.message);
+			}
+			if (out?.actionerror) {
+				throw new Chat.ErrorMessage(out.actionerror);
+			}
+			this.sendReply(
+				out.result ?
+					`You have successfully verified for the ${formatid} suspect test.` :
+					`You could not verify for the ${formatid} suspect test, as you do not meet the requirements.`
+			);
 		},
 
 		help() {

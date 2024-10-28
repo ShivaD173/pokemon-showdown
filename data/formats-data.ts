@@ -4174,7 +4174,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		natDexTier: "ZU",
 	},
 	oricoriopompom: {
-		tier: "PUBL",
+		tier: "NUBL",
 		doublesTier: "(DUU)",
 		natDexTier: "PU",
 	},
