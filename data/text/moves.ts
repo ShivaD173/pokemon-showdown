@@ -7593,7 +7593,7 @@ export const MovesText: {[id: IDEntry]: MoveText} = {
 		name: "Ice Rink",
 		desc: "The user has 1/8 of its maximum HP, rounded down, restored at the end of each turn while it remains active. If Big Root is held by the user, the HP recovered is 1.3x normal, rounded half down. If the user uses Baton Pass, the replacement will receive the healing effect.",
 		shortDesc: "User recovers 1/8 max HP per turn.",
-		start: "  [POKEMON] surrounded itself with a ice rink!",
+		start: "  [POKEMON] surrounded itself with an ice rink!",
 		heal: "  A veil of ice restored [POKEMON]'s HP!",
 	},
 	flashfreeze: {

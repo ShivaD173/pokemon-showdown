@@ -1048,6 +1048,21 @@ export const Conditions: {[id: IDEntry]: ModdedConditionData & {innateName?: str
 			}
 		},
 	},
+	imperial: {
+		noCopy: true,
+		onStart() {
+			this.add(`c:|${getName('Imperial')}|gmcat`);
+		},
+		onSwitchOut(pokemon) {
+			const foe = pokemon.side.foes()[0]?.name;
+			if (foe) {
+				this.add(`c:|${getName('Imperial')}|ofc u have ${foe}. bad mu as always...`);
+			}
+		},
+		onFaint() {
+			this.add(`c:|${getName('Imperial')}|crazy rng`);
+		},
+	},
 	inthehills: {
 		noCopy: true,
 		onStart() {
@@ -1702,6 +1717,18 @@ export const Conditions: {[id: IDEntry]: ModdedConditionData & {innateName?: str
 		},
 		innateName: "Natural Cure",
 	},
+	pants: {
+		noCopy: true,
+		onStart() {
+			this.add(`c:|${getName('pants')}|hell yeah, bro`);
+		},
+		onSwitchOut() {
+			this.add(`c:|${getName('pants')}|cya, dude :)`);
+		},
+		onFaint() {
+			this.add(`c:|${getName('pants')}|peace, bud`);
+		},
+	},
 	partman: {
 		noCopy: true,
 		onStart(pokemon) {
@@ -1841,18 +1868,6 @@ export const Conditions: {[id: IDEntry]: ModdedConditionData & {innateName?: str
 		},
 		onFaint() {
 			this.add(`c:|${getName('Peary')}|Blood all on my gears... damn`);
-		},
-	},
-	penquin: {
-		noCopy: true,
-		onStart(pokemon) {
-			this.add(`c:|${getName('PenQuin')}|'Sup ${pokemon.side.foe.name}. Wanna sling some dice? B)`);
-		},
-		onSwitchOut() {
-			this.add(`c:|${getName('PenQuin')}|Wait, one more roll...`);
-		},
-		onFaint() {
-			this.add(`c:|${getName('PenQuin')}|I want my fair one. Join <<survivor>> so we can roll battle.`);
 		},
 	},
 	phoopes: {
@@ -2009,6 +2024,15 @@ export const Conditions: {[id: IDEntry]: ModdedConditionData & {innateName?: str
 		},
 		onFaint() {
 			this.add(`c:|${getName('ReturnToMonkey')}|Reject the humanity...if you dare...`);
+		},
+	},
+	rissoux: {
+		noCopy: true,
+		onStart() {
+			this.add(`c:|${getName('Rissoux')}|:squad:`);
+		},
+		onFaint() {
+			this.add(`c:|${getName('Rissoux')}|Welcome to the Family`);
 		},
 	},
 	rsb: {

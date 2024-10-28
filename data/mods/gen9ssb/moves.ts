@@ -627,6 +627,11 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 				move.type = pokemon.m.artemisMoveType;
 			}
 		},
+		self: {
+			boosts: {
+				spa: -2,
+			},
+		},
 		target: "normal",
 		type: "Electric",
 	},
@@ -2607,6 +2612,41 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		type: "Electric",
 	},
 
+	// Imperial
+	stormshroud: {
+		accuracy: 100,
+		basePower: 95,
+		category: "Special",
+		name: "Storm Shroud",
+		shortDesc: "Physical + contact if stronger.",
+		desc: "This move becomes a physical attack that makes contact if the value of ((((2 * the user's level / 5 + 2) * 90 * X) / Y) / 50), where X is the user's Attack stat and Y is the target's Defense stat, is greater than the same value where X is the user's Special Attack stat and Y is the target's Special Defense stat. No stat modifiers other than stat stage changes are considered for this purpose. If the two values are equal, this move chooses a damage category at random.",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		onTryMove() {
+			this.attrLastMove('[still]');
+		},
+		onPrepareHit(target, source) {
+			this.add('-anim', source, 'Clangorous Soulblaze', target);
+		},
+		onModifyMove(move, pokemon, target) {
+			if (!target) return;
+			const atk = pokemon.getStat('atk', false, true);
+			const spa = pokemon.getStat('spa', false, true);
+			const def = target.getStat('def', false, true);
+			const spd = target.getStat('spd', false, true);
+			const physical = Math.floor(Math.floor(Math.floor(Math.floor(2 * pokemon.level / 5 + 2) * 90 * atk) / def) / 50);
+			const special = Math.floor(Math.floor(Math.floor(Math.floor(2 * pokemon.level / 5 + 2) * 90 * spa) / spd) / 50);
+			if (physical > special || (physical === special && this.random(2) === 0)) {
+				move.category = 'Physical';
+				move.flags.contact = 1;
+			}
+		},
+		secondary: null,
+		target: "normal",
+		type: "Dragon",
+	},
+
 	// in the hills
 	"102040": {
 		accuracy: 100,
@@ -4074,6 +4114,35 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		type: "Fairy",
 	},
 
+	// pants
+	eerieapathy: {
+		accuracy: 100,
+		basePower: 0,
+		category: "Status",
+		name: "Eerie Apathy",
+		shortDesc: "Wish + Taunts the foe.",
+		pp: 15,
+		priority: 0,
+		flags: {snatch: 1, heal: 1, protect: 1, reflectable: 1, mirror: 1, bypasssub: 1},
+		self: {
+			slotCondition: 'Wish',
+		},
+		onTryMove() {
+			this.attrLastMove('[still]');
+		},
+		onPrepareHit(target, source) {
+			this.add('-anim', source, 'Memento', target);
+		},
+		onHit(target, source, move) {
+			if (!target.volatiles['taunt']) {
+				target.addVolatile('taunt', source, move);
+			}
+		},
+		secondary: null,
+		target: "normal",
+		type: "Ghost",
+	},
+
 	// PartMan
 	alting: {
 		accuracy: true,
@@ -4208,41 +4277,6 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		secondary: null,
 		target: "self",
 		type: "Steel",
-	},
-
-	// PenQuin
-	splashnluckyblaze: {
-		accuracy: 100,
-		basePower: 40,
-		category: "Physical",
-		name: "Splash n' Lucky Blaze",
-		shortDesc: "User: +1 Attack; target: 100% chance of burn.",
-		desc: "Has a 100% chance to raise the user's Attack by 1 stage and a 100% chance to burn the target.",
-		pp: 20,
-		priority: 0,
-		flags: {protect: 1, mirror: 1},
-		onTryMove() {
-			this.attrLastMove('[still]');
-		},
-		onPrepareHit(target, source) {
-			this.add('-anim', source, 'Jet Punch', target);
-			this.add('-anim', source, 'Flare Blitz', target);
-		},
-		secondaries: [
-			{
-				chance: 100,
-				status: 'brn',
-			}, {
-				chance: 100,
-				self: {
-					boosts: {
-						atk: 1,
-					},
-				},
-			},
-		],
-		target: "normal",
-		type: "Water",
 	},
 
 	// phoopes
@@ -4715,6 +4749,33 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		},
 		target: "all",
 		type: "Psychic",
+	},
+
+	// Rissoux
+	callofthewild: {
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Call of the Wild",
+		shortDesc: "Boosts Atk, Spe, and accuracy by 1 stage.",
+		pp: 5,
+		priority: 0,
+		flags: {sound: 1},
+		boosts: {
+			atk: 1,
+			spe: 1,
+			accuracy: 1,
+		},
+		onTryMove() {
+			this.attrLastMove('[still]');
+		},
+		onPrepareHit(target, source) {
+			this.add('-anim', source, 'Dragon Dance', source);
+			this.add('-anim', source, 'Lock-On', source);
+		},
+		secondary: null,
+		target: "self",
+		type: "Fire",
 	},
 
 	// RSB

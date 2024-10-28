@@ -702,13 +702,13 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 				pokemon.boosts[i] = ally.boosts[i];
 			}
 			const volatilesToCopy = ['dragoncheer', 'focusenergy', 'gmaxchistrike', 'laserfocus'];
+			// we need to be sure to remove all the overlapping crit volatiles before trying to add any
+			for (const volatile of volatilesToCopy) pokemon.removeVolatile(volatile);
 			for (const volatile of volatilesToCopy) {
 				if (ally.volatiles[volatile]) {
 					pokemon.addVolatile(volatile);
 					if (volatile === 'gmaxchistrike') pokemon.volatiles[volatile].layers = ally.volatiles[volatile].layers;
 					if (volatile === 'dragoncheer') pokemon.volatiles[volatile].hasDragonType = ally.volatiles[volatile].hasDragonType;
-				} else {
-					pokemon.removeVolatile(volatile);
 				}
 			}
 			this.add('-copyboost', pokemon, ally, '[from] ability: Costar');
@@ -5654,6 +5654,7 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 
 	// GAY
 	triplethreat: {
+		onModifyMovePriority: 0,
 		onModifyMove(move) {
 			if (move.secondaries) {
 				this.debug('halving secondary chance');
@@ -5662,9 +5663,11 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 				}
 			}
 			if (move.self?.chance) move.self.chance *= 0.5;
-			if (!move.multihit && move.basePower > 0) {
+			if (move.basePower > 0) {
+				if (!move.multihit) {
+					move.basePower = this.modify(move.basePower, 1366, 4096);
+				}
 				move.multihit = 3;
-				move.basePower = move.basePower * 0.4;
 			}
 		},
 		name: "Triple Threat",
@@ -6134,7 +6137,7 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 	hammertime: {
 		onBasePower(basePower, attacker, defender, move) {
 			if (move.name.toLowerCase().includes("hammer")) {
-				return this.chainModify(1.5);
+				return this.chainModify(1.3);
 			}
 		},
 		isNonstandard: "CAP",
@@ -6257,7 +6260,7 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		},
 		name: "Shadow Tagged",
 		rating: 2,
-		num: 221,
+		num: -36,
 	},
 	moltendown: {
 		isNonstandard: "CAP",
@@ -6443,7 +6446,7 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 			}
 		},
 		onBasePower(basePower, attacker, defender, move) {
-			if (move.sourceEffect === "ballin'") {
+			if (move.sourceEffect === "ballin") {
 				this.debug('Ballin Debuff');
 				return this.chainModify([2048, 4096]);
 			}
@@ -6510,10 +6513,10 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		num: -53,
 	},
 	copycore: {
-		onSwitchIn(pokemon) {
+		onStart(pokemon) {
 			const target = pokemon.side.foe.active[pokemon.side.foe.active.length - 1 - pokemon.position];
-			if(target){
-				this.actions.useMove(Dex.moves.get('psychup'), pokemon, target);
+			if (target) {
+				this.actions.useMove(this.dex.moves.get('copycat'), pokemon);
 			}
 		},
 		name: "Copy Core",
@@ -6522,10 +6525,10 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		num: -54,
 	},
 	onslaughtcore: {
-		onSwitchIn(pokemon) {
+		onStart(pokemon) {
 			const target = pokemon.side.foe.active[pokemon.side.foe.active.length - 1 - pokemon.position];
-			if(target){
-				this.actions.useMove(Dex.moves.get('hiddenpower'), pokemon, target);
+			if (target) {
+				this.actions.useMove(this.dex.moves.get('confusion'), pokemon, {target: target});
 			}
 		},
 		name: "Onslaught Core",
@@ -6534,8 +6537,8 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		num: -55,
 	},
 	barriercore: {
-		onSwitchIn(pokemon) {
-			this.actions.useMove(Dex.moves.get('magiccoat'), pokemon);
+		onStart(pokemon) {
+			this.actions.useMove(this.dex.moves.get('cosmicpower'), pokemon);
 		},
 		name: "Barrier Core",
 		isNonstandard: "CAP",
@@ -6543,89 +6546,123 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		num: -56,
 	},
 	hazardcore: {
-		onSwitchIn(pokemon) {
-			this.actions.useMove(Dex.moves.get('spikes'), pokemon);
-
+		onStart(pokemon) {
+			this.actions.useMove(this.dex.moves.get('spikes'), pokemon);
 		},
 		name: "Hazard Core",
 		isNonstandard: "CAP",
 		rating: 3,
 		num: -57,
 	},
-	hyperbolictime: {
-		name: "Hyperbolic Time",
+	timelord: {
+		onFoeTryMove(target, source, move) {
+			const targetAllExceptions = ['perishsong', 'flowershield', 'rototiller'];
+			if (move.target === 'foeSide' || (move.target === 'all' && !targetAllExceptions.includes(move.id))) {
+				return;
+			}
+			const dazzlingHolder = this.effectState.target;
+			if ((source === dazzlingHolder || move.target === 'all') && move.priority > 0.1) {
+				this.attrLastMove('[still]');
+				this.add('cant', dazzlingHolder, 'ability: Time Lord', move, '[of] ' + target);
+				return false;
+			}
+		},
+		flags: {breakable: 1},
+		name: "Time Lord",
 		isNonstandard: "CAP",
 		rating: 4,
 		num: -58,
 	},
 	megashiftx: {
-		onSourceAfterFaint(length, target, source, effect) {
-			if (effect?.effectType !== 'Move') {
-				return;
-			}
-			if (source.species.id === 'mewtwo' && source.hp && !source.transformed && source.side.foePokemonLeft()) {
-				this.add('-activate', source, 'ability: Mega Shift X');
-				source.formeChange('Mewtwo-Mega-X', this.effect, true);
+		onSwitchOut(pokemon) {
+			if (pokemon.baseSpecies.baseSpecies !== 'Mewtwo') return;
+			if (pokemon.species.name !== 'Mewtwo-Mega-X') {
+				pokemon.formeChange('Mewtwo-Mega-X', this.effect, true);
 			}
 		},
+		onSwitchIn() {
+			this.effectState.switchingIn = true;
+		},
+		onStart(pokemon) {
+			if (!this.effectState.switchingIn) return;
+			this.effectState.switchingIn = false;
+			if (pokemon.baseSpecies.baseSpecies !== 'Mewtwo') return;
+			if (!this.effectState.heroMessageDisplayed && pokemon.species.name === 'Mewtwo-Mega-X') {
+				this.add('-activate', pokemon, 'ability: Mega Shift X');
+				this.effectState.heroMessageDisplayed = true;
+			}
+		},
+		flags: {failroleplay: 1, noreceiver: 1, noentrain: 1, notrace: 1, failskillswap: 1, cantsuppress: 1, notransform: 1},
 		name: "Mega Shift X",
 		isNonstandard: "CAP",
 		rating: 4,
 		num: -59,
 	},
 	megashifty: {
-		onSourceAfterFaint(length, target, source, effect) {
-			if (effect?.effectType !== 'Move') {
-				return;
-			}
-			if (source.species.id === 'mewtwo' && source.hp && !source.transformed && source.side.foePokemonLeft()) {
-				this.add('-activate', source, 'ability: Mega Shift Y');
-				source.formeChange('Mewtwo-Mega-Y', this.effect, true);
+		onSwitchOut(pokemon) {
+			if (pokemon.baseSpecies.baseSpecies !== 'Mewtwo') return;
+			if (pokemon.species.name !== 'Mewtwo-Mega-Y') {
+				pokemon.formeChange('Mewtwo-Mega-Y', this.effect, true);
 			}
 		},
+		onSwitchIn() {
+			this.effectState.switchingIn = true;
+		},
+		onStart(pokemon) {
+			if (!this.effectState.switchingIn) return;
+			this.effectState.switchingIn = false;
+			if (pokemon.baseSpecies.baseSpecies !== 'Mewtwo') return;
+			if (!this.effectState.heroMessageDisplayed && pokemon.species.name === 'Mewtwo-Mega-Y') {
+				this.add('-activate', pokemon, 'ability: Mega Shift Y');
+				this.effectState.heroMessageDisplayed = true;
+			}
+		},
+		flags: {failroleplay: 1, noreceiver: 1, noentrain: 1, notrace: 1, failskillswap: 1, cantsuppress: 1, notransform: 1},
 		name: "Mega Shift Y",
 		isNonstandard: "CAP",
 		rating: 4,
 		num: -60,
 	},
-	// Spring Mod
-	loveydovey: {
-		onStart(source) {
-			this.field.setWeather('loveintheair');
-		},
-		name: "Lovey-Dovey",
-		isNonstandard: "CAP",
-		rating: 3,
-		num: -49,
-	},
-	acidrain: {
-		onStart(source) {
-			this.field.setWeather('acidrain');
-		},
-		name: "Acid Rain",
-		isNonstandard: "CAP",
-		rating: 3,
-		num: -50,
-	},
-	pollinator: {
-		onStart(source) {
-			this.field.setWeather('pollen');
-		},
-		name: "Pollinator",
-		isNonstandard: "CAP",
-		rating: 3,
-		num: -51,
-	},
-	lonewolf: {
-		onBasePowerPriority: 23,
-		onBasePower(basePower, attacker, defender, move) {
-			if (attacker.side.hasAlly(attacker)) {
-				return this.chainModify([5325, 4096]);
+	ancestor: {
+		onPrepareHit(source, target, move) {
+			if (move.hasBounced || move.flags['futuremove'] || move.sourceEffect === 'snatch' || move.callsMove) return;
+			const type = move.type;
+			if (type && type !== '???' && source.getTypes().join() !== type) {
+				if (!source.setType(type)) return;
+				this.add('-start', source, 'typechange', type, '[from] ability: Ancestor');
 			}
 		},
-		name: "Lone Wolf",
+		flags: {},
+		name: "Ancestor",
 		isNonstandard: "CAP",
-		rating: 3,
-		num: -52,
+		rating: 4,
+		num: -61,
+	},
+	serenegracidea: {
+		onModifyMovePriority: -2,
+		onModifyMove(move) {
+			if (move.secondaries) {
+				this.debug('2.5x secondary chance');
+				for (const secondary of move.secondaries) {
+					if (secondary.chance) secondary.chance *= 2.5;
+				}
+			}
+			if (move.self?.chance) move.self.chance *= 2.5;
+		},
+		flags: {},
+		name: "Serene Gracidea",
+		isNonstandard: "CAP",
+		rating: 4,
+		num: -62,
+	},
+	loophole: {
+		onModifyMove(move) {
+			move.infiltrates = true;
+			delete move.flags['protect'];
+		},
+		flags: {},
+		name: "Loophole",
+		rating: 2.5,
+		num: 151,
 	},
 };

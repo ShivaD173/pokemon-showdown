@@ -79,9 +79,9 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 	ominouswind: {
 		inherit: true,
 		"isNonstandard": null,
-		shortDesc: "20% chance to raise all stats by 1 (not acc/eva).",
+		shortDesc: "15% chance to raise all stats by 1 (not acc/eva).",
 		secondary: {
-			chance: 20,
+			chance: 15,
 			self: {
 				boosts: {atk: 1, def: 1, spa: 1, spd: 1, spe: 1},
 			},
@@ -90,9 +90,9 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 	ancientpower: {
 		inherit: true,
 		"isNonstandard": null,
-		shortDesc: "20% chance to raise all stats by 1 (not acc/eva).",
+		shortDesc: "15% chance to raise all stats by 1 (not acc/eva).",
 		secondary: {
-			chance: 20,
+			chance: 15,
 			self: {
 				boosts: {atk: 1, def: 1, spa: 1, spd: 1, spe: 1},
 			},
@@ -100,9 +100,9 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 	},
 	"silverwind": {
 		"inherit": true,
-		shortDesc: "20% chance to raise all stats by 1 (not acc/eva).",
+		shortDesc: "15% chance to raise all stats by 1 (not acc/eva).",
 		secondary: {
-			chance: 20,
+			chance: 15,
 			self: {
 				boosts: {atk: 1, def: 1, spa: 1, spd: 1, spe: 1},
 			},
@@ -257,6 +257,16 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		"basePower": 250
 	},
 	// Regular Moves
+	rocksmash: {
+		inherit: true,
+		shortDesc: "100% chance to lower the target's Defense by 1.",
+		secondary: {
+			chance: 100,
+			boosts: {
+				def: -1,
+			},
+		},
+	},
 	round: {
 		inherit: true,
 		basePower: 70,
@@ -449,7 +459,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 	},
 	aurorabeam: {
 		inherit: true,
-		shortDesc: "20% to lower target's Attack by 1",
+		shortDesc: "20% to lower target's Attack by 1.",
 		basePower: 75,
 		secondary: {chance: 20, boosts: {atk: -1}},
 	},
@@ -753,7 +763,8 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 	psychoshift: {
 		inherit: true,
 		isNonstandard: null,
-		shortDesc: "Transfers user's status to the target. Cures Ally Status.",
+		shortDesc: "Transfers the user's status to both targets.",
+		target: "allAdjacentFoes",
 		onTryHit(target, source, move) {
 			if (!source.status) return false;
 			move.status = source.status;
@@ -761,9 +772,6 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		self: {
 			onHit(pokemon) {
 				pokemon.cureStatus();
-				for (const allyActive of pokemon.adjacentAllies()) {
-					allyActive.cureStatus();
-				}
 			},
 		},
 	},
@@ -779,6 +787,53 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		},
 	},
 	// Some signature Moves
+	triplearrows: {
+		inherit: true,
+		isNonstandard: null,
+		basePower: 100,
+	},
+	aquastep: {
+		inherit: true,
+		isNonstandard: null,
+		basePower: 90,
+	},
+	stoneaxe: {
+		inherit: true,
+		isNonstandard: null,
+		accuracy: 100,
+	},
+	ceaselessedge: {
+		inherit: true,
+		isNonstandard: null,
+		accuracy: 100,
+	},
+	dragonhammer: {
+		inherit: true,
+		isNonstandard: null,
+		basePower: 100,
+	},
+	blazingtorque: {
+		inherit: true,
+		isNonstandard: null,
+		basePower: 100,
+	},
+	noxioustorque: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	magicaltorque: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	combattorque: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	wickedtorque: {
+		inherit: true,
+		basePower: 100,
+		isNonstandard: null,
+	},
 	electroshot: {
 		inherit: true,
 		isNonstandard: null,
@@ -956,7 +1011,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		inherit: true,
 		isNonstandard: null,
 		shortDesc: "Hits Twice, 20% to drop defense",
-		basePower: 50,
+		basePower: 45,
 		multihit: 2,
 	},
 	ragefist: {
@@ -978,20 +1033,16 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 			},
 		},
 	},
-	dragondarts: {
-		inherit: true,
-		basePower: 55
-	},
 	twinbeam: {
 		inherit: true,
 		shortDesc: "Hits twice. Doubles: Tries to hit each foe once.",
-		basePower: 55,
+		basePower: 50,
 		smartTarget: true,
 	},
 	diamondstorm: {
 		inherit: true,
 		isNonstandard: null,
-		shortDesc: "Hits both in sandstorm, 50% raise defense by 1",
+		shortDesc: "Hits both in sandstorm, 50% raise defense by 1.",
 		target: "normal",
 		category: "Special",
 		basePower: 95,
@@ -1381,7 +1432,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		inherit: true,
 		isNonstandard: null,
 		pp: 1,
-		shortDesc: "Charges, User's type to first move, Omniboost turn 2.",
+		shortDesc: "Charges, User's type to first move, Omniboost T2.",
 		boosts: {atk: 1, def: 1, spa: 1, spd: 1, spe: 1},
 		flags: {charge: 1, nonsky: 1, nosleeptalk: 1, failinstruct: 1},
 		onTryMove(attacker, defender, move) {
@@ -1400,7 +1451,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		inherit: true,
 		isNonstandard: null,
 		isZ: false,
-		shortDesc: "Eevee Only, Charges, Double Omniboosts turn 2",
+		shortDesc: "Eevee Only, Charges, Double Omniboosts turn 2.",
 		onTry(source, target, move) {
 			if (source.species.name === 'Eevee' || move.hasBounced) {
 				return;
@@ -1570,7 +1621,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		inherit: true,
 		self: null,
 		shortDesc: "User cannot move next turn if it fails to KO.",
-		basePower: 140,
+		basePower: 130,
 		onHit(target, source) {
 			if (target.hp) {
 				source.addVolatile('mustrecharge');
@@ -1581,7 +1632,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		inherit: true,
 		self: null,
 		shortDesc: "User cannot move next turn if it fails to KO.",
-		basePower: 140,
+		basePower: 130,
 		onHit(target, source) {
 			if (target.hp) {
 				source.addVolatile('mustrecharge');
@@ -1592,7 +1643,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		inherit: true,
 		self: null,
 		shortDesc: "User recharges doesn't KO. Physical if Atk > SpA.",
-		basePower: 140,
+		basePower: 130,
 		onHit(target, source, move) {
 			if (target.hp) {
 				source.addVolatile('mustrecharge');
@@ -1610,7 +1661,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		inherit: true,
 		self: null,
 		shortDesc: "User recharges doesn't KO. Physical if Atk > SpA.",
-		basePower: 140,
+		basePower: 130,
 		onHit(target, source, move) {
 			if (target.hp) {
 				source.addVolatile('mustrecharge');
@@ -1628,7 +1679,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		inherit: true,
 		self: null,
 		shortDesc: "User recharges doesn't KO. Physical if Atk > SpA.",
-		basePower: 140,
+		basePower: 130,
 		onHit(target, source, move) {
 			if (target.hp) {
 				source.addVolatile('mustrecharge');
@@ -1647,7 +1698,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		isNonstandard: null,
 		self: null,
 		shortDesc: "User cannot move next turn if it fails to KO.",
-		basePower: 140,
+		basePower: 130,
 		onHit(target, source) {
 			if (target.hp) {
 				source.addVolatile('mustrecharge');
@@ -1659,26 +1710,10 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		isNonstandard: null,
 		self: null,
 		shortDesc: "User cannot move next turn if it fails to KO.",
-		basePower: 150,
+		basePower: 130,
 		onHit(target, source) {
 			if (target.hp) {
 				source.addVolatile('mustrecharge');
-			}
-		},
-	},
-	roaroftime: {
-		inherit: true,
-		isNonstandard: null,
-		self: null,
-		shortDesc: "User recharges doesn't KO. Dialga-Origin: Hits both foes.",
-		onHit(target, source) {
-			if (target.hp) {
-				source.addVolatile('mustrecharge');
-			}
-		},
-		onModifyMove(move, pokemon) {
-			if (pokemon.species.name === 'Dialga-Origin') {
-				move.target = 'allAdjacentFoes';
 			}
 		},
 	},
@@ -1686,7 +1721,8 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		inherit: true,
 		isNonstandard: null,
 		self: null,
-		shortDesc: "User recharges doesn't KO. 30% paralysis.",
+		shortDesc: "User recharges if doesn't KO. 30% paralysis.",
+		basePower: 130,
 		flags: {recharge: 1, protect: 1, mirror: 1, nosleeptalk: 1, failinstruct: 1},
 		onTryMove(attacker, defender, move) {
 			return;
@@ -1701,7 +1737,8 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		inherit: true,
 		isNonstandard: null,
 		self: null,
-		shortDesc: "User recharges doesn't KO. 30% burn.",
+		shortDesc: "User recharges if doesn't KO. 30% burn.",
+		basePower: 130,
 		flags: {recharge: 1, protect: 1, mirror: 1, nosleeptalk: 1, failinstruct: 1},
 		onTryMove(attacker, defender, move) {
 			return;
@@ -1716,8 +1753,8 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		inherit: true,
 		isNonstandard: null,
 		self: null,
-		basePower: 140,
-		shortDesc: "User recharges doesn't KO. Physical if Atk > SpA.",
+		basePower: 130,
+		shortDesc: "User recharges if doesn't KO. Physical if Atk > SpA.",
 		onModifyMove(move, pokemon) {
 			if (pokemon.getStat('atk', false, true) > pokemon.getStat('spa', false, true)) move.category = 'Physical';
 		},
@@ -1730,14 +1767,52 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 	eternabeam: {
 		inherit: true,
 		isNonstandard: null,
-		self: null,
-		basePower: 200,
+		basePower: 180,
+	},
+	spectralthief: {
+		inherit: true,
+		isNonstandard: null,
+		basePower: 100,
+	},
+	darkvoid: {
+		inherit: true,
+		isNonstandard: null,
+		accuracy: 70,
+	},
+	hyperspacehole: {
+		inherit: true,
+		isNonstandard: null,
+		basePower: 90,
+	},
+	confusion: {
+		inherit: true,
+		basePower: 30,
+		shortDesc: "Uses Highest attacking stat. 25% Recoil.",
+		recoil: [1, 4],
+		secondary: {},
+		onModifyMove(move, pokemon) {
+			if (pokemon.getStat('atk', false, true) > pokemon.getStat('spa', false, true)) move.category = 'Physical';
+		},
 	},
 	// Origin forme changes
+	roaroftime: {
+		inherit: true,
+		isNonstandard: null,
+		self: null,
+		basePower: 130,
+		shortDesc: "User recharge if doesn't KO. Dialga-O: No Recharge.",
+		onHit(target, source) {
+			if (target.hp || source.species.name === 'Dialga-Origin') {
+				source.addVolatile('mustrecharge');
+			}
+		},
+	},
 	spacialrend: {
 		inherit: true,
 		isNonstandard: null,
-		shortDesc: "High critical hit ratio. Palkia-Origin: Always crits.",
+		basePower: 95,
+		accuracy: true,
+		shortDesc: "High critical hit ratio. Palkia-O: Always crits.",
 		onModifyMove(move, pokemon) {
 			if (pokemon.species.name === 'Palkia-Origin') {
 				move.willCrit = true;
@@ -1747,7 +1822,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 	shadowforce: {
 		inherit: true,
 		isNonstandard: null,
-		shortDesc: "Breaks protection. Not Giratina-Origin: Disappears T1, hits T2.",
+		shortDesc: "Breaks Protect. Not Gira-O: Disappears T1, hits T2.",
 		onTryMove(attacker, defender, move) {
 			if (attacker.removeVolatile(move.id)) {
 				return;
@@ -1769,6 +1844,9 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		isNonstandard: null,
 		basePower: 90,
 		shortDesc: "10% sleep. Transforms Meloetta. Uses highest stat.",
+		onModifyMove(move, pokemon) {
+			if (pokemon.getStat('atk', false, true) < pokemon.getStat('spa', false, true)) move.category = 'Special';
+		},
 	},
 	// Thick Fat makes weight-based moves deal maximum damage
 	heatcrash: {
@@ -2166,32 +2244,6 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	dragonhammer: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	blazingtorque: {
-		inherit: true,
-		basePower: 100,
-		isNonstandard: null,
-	},
-	noxioustorque: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	magicaltorque: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	combattorque: {
-		inherit: true,
-		isNonstandard: null,
-	},
-	wickedtorque: {
-		inherit: true,
-		basePower: 100,
-		isNonstandard: null,
-	},
 	secretsword: {
 		inherit: true,
 		isNonstandard: null,
@@ -2265,25 +2317,8 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		inherit: true,
 		isNonstandard: null,
 	},
-	// Move Deletions
-	slam: {
+	vcreate: {
 		inherit: true,
-		isNonstandard: "CAP",
+		isNonstandard: null,
 	},
-	bubblebeam: {
-		inherit: true,
-		isNonstandard: "CAP",
-	},
-	psybeam: {
-		inherit: true,
-		isNonstandard: "CAP",
-	},
-	hornattack: {
-		inherit: true,
-		isNonstandard: "CAP",
-	},
-	powdersnow: {
-		inherit: true,
-		isNonstandard: "CAP",
-	}
 };

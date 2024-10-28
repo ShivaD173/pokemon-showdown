@@ -1,7 +1,6 @@
 export const TypeChart: import('../sim/dex-data').TypeDataTable = {
 	bug: {
 		damageTaken: {
-			locusts: 3,
 			Bug: 0,
 			Dark: 0,
 			Dragon: 0,

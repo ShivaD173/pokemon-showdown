@@ -189,15 +189,17 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 	},
 	liquidooze: {
 		inherit: true,
-		shortDesc: "Deals damage instead of draining, Replaces foods with Black Sludges on hit.",
+		shortDesc: "This Pokemon's contact moves replace items with Black Sludges on hit.",
+		onSourceTryHeal(damage, target, source, effect) {
+		},
 		onModifyMove(move) {
 			move.secondaries?.push({
 				chance: 100,
 				onHit(target) {
-					if (target.item === "leftovers" || target.item.endsWith("berry")) {
-						this.add('message', 'Item replaced with Liquid Ooze');
-						target.setItem("blacksludge");
-					}
+					const item = target.getItem();
+					if (!this.singleEvent('TakeItem', item, target.itemState, target, target, move, item)) return;
+					this.add('message', 'Item replaced with Liquid Ooze');
+					target.setItem("blacksludge");
 				}
 			});
 		}
@@ -265,6 +267,10 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 	illuminate: {
 		inherit: true,
 		shortDesc: "While this Pokemon is active, all moves has 1.2x accuracy.",
+		onStart(pokemon) {
+			if (this.suppressingAbility(pokemon)) return;
+			this.add('-ability', pokemon, 'Illuminate');
+		},
 		onTryBoost(boost, target, source, effect) {
 		},
 		onModifyMove(move) {
@@ -324,7 +330,7 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 	},
 	snowcloak: {
 		inherit: true,
-		shortDesc: "1.2x Special Defense in Snow",
+		shortDesc: "1.2x Special Defense in Snow.",
 		onModifyAccuracy(accuracy) {
 		},
 		onModifySpDPriority: 6,
@@ -478,7 +484,7 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 	},
 	hadronengine: {
 		inherit: true,
-		shortDesc: "During E. Terrain, Atk and SpA is 1.3333x.",
+		shortDesc: "During Electric Terrain, Atk and SpA is 1.3333x.",
 		onStart(pokemon) {},
 		onModifyAtkPriority: 5,
 		onModifyAtk(atk, pokemon) {
@@ -494,10 +500,6 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 				return this.chainModify([5461, 4096]);
 			}
 		},
-		flags: {},
-		name: "Hadron Engine",
-		rating: 4.5,
-		num: 289,
 	},
 	toxicboost: {
 		inherit: true,
@@ -952,13 +954,13 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 			}
 		},
 	},
-	magician: {
-		inherit: true,
-		shortDesc: "Sets Magic Room on entrance, steals item with attack.",
-		onStart(source) {
-			this.field.addPseudoWeather('magicroom');
-		},
-	},
+	// magician: {
+	// 	inherit: true,
+	// 	shortDesc: "Sets Magic Room on entrance, steals item with attack.",
+	// 	onStart(source) {
+	// 		this.field.addPseudoWeather('magicroom');
+	// 	},
+	// },
 	watercompaction: {
 		inherit: true,
 		shortDesc: "This Pokemon's defense is raised by 2 stages if hit by a Water move; Water Immunity.",
@@ -1108,6 +1110,8 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 			if (move.flags['contact']) mod /= 2;
 			return this.chainModify(mod);
 		},
+		onTryBoost(boost, target, source, effect) {
+		},
 	},
 	lingeringaroma: {
 		inherit: true,
@@ -1245,32 +1249,42 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 	// turboblaze/teravolt buffs
 	turboblaze: {
 		inherit: true,
-		shortDesc: "Mold Breaker effect. Fire moves: 1.5x when resisted.",
+		shortDesc: "Mold Breaker. Fire moves: 1.3x when resisted.",
 		onModifyDamage(damage, source, target, move) {
 			if (target.getMoveHitData(move).typeMod < 0 && move.type === 'Fire') {
 				this.debug('Turboblaze boost');
-				return this.chainModify(1.5);
+				return this.chainModify(1.3);
 			}
 		},
 	},
 	teravolt: {
 		inherit: true,
-		shortDesc: "Mold Breaker effect. Electric moves: 1.5x when resisted.",
+		shortDesc: "Mold Breaker. Electric moves: Immunity becomes resistance, 1.3x when resisted.",
 		onModifyDamage(damage, source, target, move) {
 			if (target.getMoveHitData(move).typeMod < 0 && move.type === 'Electric') {
 				this.debug('Teravolt boost');
-				return this.chainModify(1.5);
+				return this.chainModify(1.3);
 			}
+		},
+		onModifyMovePriority: -5,
+		onModifyMove(move) {
+			if (!move.ignoreImmunity) move.ignoreImmunity = {};
+			if (move.ignoreImmunity !== true) {
+				move.ignoreImmunity['Electric'] = true;
+			}
+		},
+		onFoeEffectiveness(typeMod, target, type, move) {
+			if (type === 'Ground' && move.type === 'Electric') return -1;
 		},
 	},
 	// As One now gives Symbioisis
 	asoneglastrier: {
 		inherit: true,
+		shortDesc: "Combination of the Symbiosis and Chilling Neigh Abilities.",
 		onPreStart(pokemon) {
 		},
 		onStart(pokemon) {
 			this.add('-ability', pokemon, 'As One');
-			this.add('-ability', pokemon, 'Unnerve');
 		},
 		onEnd() {
 		},
@@ -1294,11 +1308,11 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 	},
 	asonespectrier: {
 		inherit: true,
+		shortDesc: "Combination of the Symbiosis and Grim Neigh Abilities.",
 		onPreStart(pokemon) {
 		},
 		onStart(pokemon) {
 			this.add('-ability', pokemon, 'As One');
-			this.add('-ability', pokemon, 'Unnerve');
 		},
 		onEnd() {
 		},
@@ -1516,5 +1530,21 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 	megashifty: {
 		inherit: true,
 		isNonstandard: null,
-	}
+	},
+	timelord: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	ancestor: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	serenegracidea: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	loophole: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };

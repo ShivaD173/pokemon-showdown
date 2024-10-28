@@ -457,6 +457,24 @@ export const ssbSets: SSBSets = {
 		signatureMove: 'Hydrostatics',
 		evs: {def: 4, spa: 252, spe: 252}, nature: 'Modest', teraType: 'Water', shiny: 2,
 	},
+	Imperial: {
+		species: 'Kyurem', ability: 'Frozen Fortuity', item: 'Never-Melt Ice', gender: 'N',
+		moves: ['Chilly Reception', 'Fusion Bolt', 'Fusion Flare'],
+		signatureMove: 'Storm Shroud',
+		evs: {atk: 128, spa: 128, spe: 252}, nature: 'Docile', teraType: 'Ice', shiny: 193,
+	},
+	'Imperial-Black': {
+		species: 'Kyurem-Black', ability: 'Frozen Fortuity', item: 'Never-Melt Ice', gender: 'N',
+		moves: ['Mountain Gale', 'Fusion Bolt', 'Ice Shard'],
+		signatureMove: 'Storm Shroud',
+		evs: {atk: 252, def: 4, spe: 252}, nature: 'Adamant', teraType: 'Electric', shiny: 193, skip: 'Imperial',
+	},
+	'Imperial-White': {
+		species: 'Kyurem-White', ability: 'Frozen Fortuity', item: 'Never-Melt Ice', gender: 'N',
+		moves: ['Ice Beam', 'Freeze-Dry', 'Fusion Flare'],
+		signatureMove: 'Storm Shroud',
+		evs: {spa: 252, spd: 4, spe: 252}, nature: 'Modest', teraType: 'Fire', shiny: 193, skip: 'Imperial',
+	},
 	'in the hills': {
 		species: 'Gligar', ability: 'Illiterit', item: 'Eviolite', gender: 'M',
 		moves: ['Roost', 'Knock Off', 'Tidy Up'],
@@ -685,6 +703,12 @@ export const ssbSets: SSBSets = {
 		signatureMove: 'Cotton Candy Crush',
 		evs: {hp: 248, spd: 164, spe: 96}, nature: 'Careful', shiny: 4,
 	},
+	pants: {
+		species: 'Annihilape', ability: 'Drifting', item: 'Leftovers', gender: 'M',
+		moves: ['Rage Fist', 'Drain Punch', 'Dragon Dance'],
+		signatureMove: 'Eerie Apathy',
+		evs: {hp: 240, spd: 252, spe: 16}, nature: 'Careful', teraType: 'Ghost',
+	},
 	PartMan: {
 		species: 'Chandelure', ability: 'C- Tier Shitposter', item: 'Leek', gender: 'M',
 		moves: ['Searing Shot', 'Hex', 'Morning Sun'],
@@ -702,12 +726,6 @@ export const ssbSets: SSBSets = {
 		moves: ['Lock On', 'Sheer Cold', 'Substitute'],
 		signatureMove: 'Gear Grind',
 		evs: {hp: 252, def: 4, spe: 252}, nature: 'Jolly',
-	},
-	PenQuin: {
-		species: 'Empoleon', ability: '\'Poleon\'s Pyro Quirk', item: 'Assault Vest', gender: 'M',
-		moves: ['Liquidation', 'Sacred Fire', 'Knock Off'],
-		signatureMove: 'Splash n\' Lucky Blaze',
-		evs: {atk: 252, def: 252, spe: 4}, nature: 'Adamant', teraType: 'Fire',
 	},
 	phoopes: {
 		species: 'Jynx', ability: 'I Did It Again', item: 'Focus Sash', gender: 'F',
@@ -787,6 +805,12 @@ export const ssbSets: SSBSets = {
 		moves: ['Hyper Voice', 'Psyshock', 'Focus Blast'],
 		signatureMove: 'Monke Magic',
 		evs: {hp: 252, def: 4, spa: 252}, ivs: {spe: 0}, nature: 'Quiet', teraType: 'Fighting',
+	},
+	Rissoux: {
+		species: 'Arcanine-Hisui', ability: 'Hard Headed', item: 'Heavy-Duty Boots', gender: 'M',
+		moves: ['Head Smash', 'Flare Blitz', 'Morning Sun'],
+		signatureMove: 'Call of the Wild',
+		evs: {hp: 4, atk: 252, spe: 252}, nature: 'Jolly', teraType: 'Grass',
 	},
 	RSB: {
 		species: 'Growlithe', ability: 'Hot Pursuit', item: 'Eviolite', gender: 'M',

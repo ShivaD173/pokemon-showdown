@@ -404,7 +404,7 @@ export class BattleActions {
 				this.runMove(move.id, dancer, dancersTargetLoc, {sourceEffect: this.dex.abilities.get('ballin'), externalMove: true});
 			}
 		}
-		if (this.battle.format.fullname.includes("vgcgay")) {
+		if (this.battle.format.fullname.includes("vgcpride")) {
 			if (pokemon.hasAbility("plus") && moveDidSomething && !move.isExternal) {
 				const dancers = [];
 				for (const currentPoke of this.battle.getAllActive()) {

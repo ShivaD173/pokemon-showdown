@@ -76,7 +76,7 @@ export class RandomGayTeams extends RandomTeams {
 		} else if (CONSISTENT.includes(species.name)) {
 			return 50;
 		} else if (BITCHES.includes(species.name)) {
-			return 49;
+			return 50;
 		} else {
 			return 50;
 		}
@@ -144,14 +144,6 @@ export class RandomGayTeams extends RandomTeams {
 		// const abilities = new Set(Object.values(species.abilities));
 		// if (species.unreleasedHidden) abilities.delete(species.abilities.H);
 
-		// Get moves
-		// const moves = this.randomMoveset(types, abilities, teamDetails, species, isLead, isDoubles, movePool, teraType, role);
-		const moves = new Set<string>();
-		for (const moveid of movePool) {
-			moves.add(moveid);
-		}
-		// moves = set["movepool"];
-		// const counter = this.queryMoves(moves, species, teraType, abilities);
 
 		// Shouldn't need to do this?
 		// let hasHiddenPower = false;
@@ -185,6 +177,7 @@ export class RandomGayTeams extends RandomTeams {
 			item = this.sample(USEFUL_ITEMS.concat(set["items"]).filter(i => !this.items.includes(i)));
 		}
 		this.items.push(item);
+
 		// First, the priority items
 		// item = this.getPriorityItem(ability, types, moves, counter, teamDetails, species, isLead, isDoubles, teraType, role);
 		// if (item === undefined) {
@@ -195,9 +188,23 @@ export class RandomGayTeams extends RandomTeams {
 		// 	}
 		// }
 
-		// if (species.baseSpecies === 'Pikachu') {
-		// 	forme = 'Pikachu' + this.sample(['', '-Original', '-Hoenn', '-Sinnoh', '-Unova', '-Kalos', '-Alola', '-Partner', '-World']);
-		// }
+		// Get moves
+		// const moves = this.randomMoveset(types, abilities, teamDetails, species, isLead, isDoubles, movePool, teraType, role);
+		// If not choiced, add weather moves into moveset
+		if (!["Choice Band", "Choice Scarf", "Choice Specs", "Assault Vest"].includes(item)) {
+			if (["Chlorophyll", "Flower Gift", "Solar Power"].includes(ability) && !["Jumpluff"].includes(forme)) {
+				movePool[3] = "Sunny Day";
+			}
+			if (["Swift Swim"].includes(ability)) {
+				movePool[3] = "Rain Dance";
+			}
+		}
+		const moves = new Set<string>();
+		for (const moveid of movePool) {
+			moves.add(moveid);
+		}
+		// moves = set["movepool"];
+		// const counter = this.queryMoves(moves, species, teraType, abilities);
 
 		// Get level
 		const level = this.getLevel(species, isDoubles);

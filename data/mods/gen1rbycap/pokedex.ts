@@ -15,7 +15,7 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 		num: 2001,
 		name: "Corupcake",
 		types: ["Fire", "Poison"],
-		baseStats: {hp: 93, atk: 105, def: 82, spa: 95, spd: 95, spe: 81},
+		baseStats: {hp: 97, atk: 105, def: 87, spa: 95, spd: 95, spe: 81},
 		abilities: {0: "No Ability"},
 		heightm: 1.4,
 		weightkg: 189.5,
@@ -57,6 +57,18 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 		weightkg: 43,
 		color: "Yellow",
 		eggGroups: ["Water 1"],
+		gen: 1,
+	},
+	probosicle: {
+		num: 2005,
+		name: "Probosicle",
+		types: ["Bug", "Ice"],
+		baseStats: {hp: 48, atk: 120, def: 100, spa: 63, spd: 63, spe: 105},
+		abilities: {0: "No Ability"},
+		heightm: 1, // placeholder
+		weightkg: 0.1, // placeholder
+		color: "Blue",
+		eggGroups: ["Bug"],
 		gen: 1,
 	},
 };

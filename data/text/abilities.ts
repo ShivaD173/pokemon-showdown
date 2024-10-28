@@ -726,6 +726,7 @@ export const AbilitiesText: {[id: IDEntry]: AbilityText} = {
 		name: "Illuminate",
 		desc: "Prevents other Pokemon from lowering this Pokemon's accuracy stat stage. This Pokemon ignores a target's evasiveness stat stage.",
 		shortDesc: "This Pokemon's accuracy can't be lowered by others; ignores their evasiveness stat.",
+		start: "  [POKEMON] lit up the battlefield!",
 		gen8: {
 			desc: "No competitive use.",
 			shortDesc: "No competitive use.",
@@ -1230,7 +1231,11 @@ export const AbilitiesText: {[id: IDEntry]: AbilityText} = {
 	},
 	pickup: {
 		name: "Pickup",
+		desc: "At the end of each turn, if this Pokemon is not holding an item and at least one adjacent Pokemon used an item during this turn, one of those Pokemon is selected at random and this Pokemon obtains that Pokemon's last used item. An item is not considered the last used if it was a popped Air Balloon, if the item was picked up by another Pokemon with this Ability, or if the item was lost to Bug Bite, Corrosive Gas, Covet, Incinerate, Knock Off, Pluck, or Thief. Items thrown with Fling can be picked up.",
 		shortDesc: "If this Pokemon has no item, it finds one used by an adjacent Pokemon this turn.",
+		gen7: {
+			desc: "At the end of each turn, if this Pokemon is not holding an item and at least one adjacent Pokemon used an item during this turn, one of those Pokemon is selected at random and this Pokemon obtains that Pokemon's last used item. An item is not considered the last used if it was a popped Air Balloon, if the item was picked up by another Pokemon with this Ability, or if the item was lost to Bug Bite, Covet, Incinerate, Knock Off, Pluck, or Thief. Items thrown with Fling can be picked up.",
+		},
 		gen4: {
 			desc: "No competitive use.",
 			shortDesc: "No competitive use.",
@@ -2267,8 +2272,8 @@ export const AbilitiesText: {[id: IDEntry]: AbilityText} = {
 	// GAY
 	triplethreat: {
 		name: "Triple Threat",
-		desc: "Moves hit 3 times at 40% power and halved effects.",
-		shortDesc: "Moves hit 3 times at 40% power and halved effects.",
+		desc: "Moves hit exactly 3 times at 1/3 power and halved effects.",
+		shortDesc: "Moves hit exactly 3 times at 1/3 power and halved effects.",
 	},
 	mindsurfer: {
 		name: "Mind Surfer",
@@ -2360,8 +2365,8 @@ export const AbilitiesText: {[id: IDEntry]: AbilityText} = {
 	},
 	singularity: {
 		name: "Singularity",
-		desc: "All moves not -6 priority used while this pokemon is active have 0 priority.",
-		shortDesc: "All moves not -6 priority used while this pokemon is active have 0 priority.",
+		desc: "All moves more than -6 priority used while this pokemon is active have 0 priority.",
+		shortDesc: "All moves more than -6 priority used while this pokemon is active have 0 priority.",
 		start: "  [POKEMON]'s Singularity brought all moves to this dimension!",
 	},
 	catscradle: {
@@ -2401,8 +2406,8 @@ export const AbilitiesText: {[id: IDEntry]: AbilityText} = {
 	},
 	hammertime: {
 		name: "Hammer Time",
-		desc: "Hammer-based moves deal 1.5x damage.",
-		shortDesc: "Hammer-based moves deal 1.5x damage.",
+		desc: "Hammer-based moves deal 1.3x damage.",
+		shortDesc: "Hammer-based moves deal 1.3x damage.",
 	},
 	rampage: {
 		name: "Rampage",
@@ -2485,62 +2490,57 @@ export const AbilitiesText: {[id: IDEntry]: AbilityText} = {
 	},
 	copycore: {
 		name: "Copy Core",
-		desc: "User uses Psych Up on opposite Pokemon on switch in.",
-		shortDesc: "User uses Psych Up on opposite Pokemon on switch in.",
+		desc: "User uses Copycat on opposite Pokemon on switch in.",
+		shortDesc: "User uses Copycat on opposite Pokemon on switch in.",
 	},
 	onslaughtcore: {
 		name: "Onslaught Core",
-		desc: "User uses Hidden Power on opposite Pokemon on switch in.",
-		shortDesc: "User uses Hidden Power on opposite Pokemon on switch in.",
+		desc: "User uses Confusion (30bp, 25% recoil) on opposite Pokemon on switch in.",
+		shortDesc: "User uses Confusion (30bp, 25% recoil) on opposite Pokemon on switch in.",
 	},
 	barriercore: {
 		name: "Barrier Core",
-		desc: "User uses Magic Coat on switch in.",
-		shortDesc: "User uses Barrier on switch in.",
+		desc: "User uses Cosmic Power on switch in.",
+		shortDesc: "User uses Cosmic Power on switch in.",
 	},
 	hazardcore: {
 		name: "Hazard Core",
 		desc: "User uses Spikes on switch in.",
 		shortDesc: "User uses Spikes on switch in.",
 	},
-	hyperbolictime: {
-		name: "Hyperbolic Time",
-		desc: "End-of-turn effects happen twice while user is on the field.",
-		shortDesc: "End-of-turn effects happen twice while user is on the field.",
+	timelord: {
+		name: "Time Lord",
+		desc: "Priority moves used by opposing Pokemon targeting this Pokemon only are prevented from having an effect.",
+		shortDesc: "This Pokemon is protected from opposing priority moves.",
+		block: "#damp",
 	},
 	megashiftx: {
 		name: "Mega Shift X",
-		desc: "If this Pokemon is a Mewtwo, it transforms into Mewtwo-Mega-X if it attacks and knocks out another Pokemon.",
-		shortDesc: "After KOing a Pokemon: becomes Mewtwo-Mega-X.",
+		desc: "Upon switching out, Mewtwo Mega Evolves into its X form",
+		shortDesc: "Upon switching out, Mewtwo Mega Evolves into its X form",
 		activate: "  [POKEMON] became fully charged due to its bond with its Trainer!",
 		transform: "[POKEMON] Mega Evolved into Mewtwo-Mega-X!",
 	},
 	megashifty: {
 		name: "Mega Shift Y",
-		desc: "If this Pokemon is a Mewtwo, it transforms into Mewtwo-Mega-Y if it attacks and knocks out another Pokemon.",
-		shortDesc: "After KOing a Pokemon: becomes Mewtwo-Mega-Y.",
+		desc: "Upon switching out, Mewtwo Mega Evolves into its Y form",
+		shortDesc: "Upon switching out, Mewtwo Mega Evolves into its Y form",
 		activate: "  [POKEMON] became fully charged due to its bond with its Trainer!",
 		transform: "[POKEMON] Mega Evolved into Mewtwo-Mega-Y!",
 	},
-	loveydovey: {
-		name: "Lovey-Dovey",
-		desc: "Sets up Love In The Air, which makes all Fairy moves perfectly accurate.",
-		shortDesc: "Sets up Love In The Air."
+	ancestor: {
+		name: "Ancestor",
+		desc: "This Pokemon's type changes to match the type of the move it is about to use. This effect comes after all effects that change a move's type.",
+		shortDesc: "This Pokemon's type changes to match the type of the move it is about to use.",
 	},
-	acidrain: {
-		name: "Acid Rain",
-		desc: "Sets up Acid Rain.",
-		shortDesc: "Sets up Acid Rain."
+	serenegracidea: {
+		name: "Serene Grace",
+		desc: "This Pokemon's moves have their secondary effect chance 2.5x. This effect stacks with the Rainbow effect, except for secondary effects that cause the target to flinch.",
+		shortDesc: "This Pokemon's moves have their secondary effect chance 2.5x.",
 	},
-	pollinator: {
-		name: "Pollinator",
-		desc: "Sets up Pollen.",
-		shortDesc: "Sets up Pollen."
-	},
-	lonewolf: {
-		name: "Lone Wolf",
-		shortDesc: "1.3x damage if alone or in darkness.",
-		desc: "1.3x damage if no allies on the field or in darkness.",
-		activate: "  [POKEMON] Powered up!",
+	loophole: {
+		name: "Loophole",
+		desc: "This Pokemon's moves ignore substitutes, protects and the opposing side's Reflect, Light Screen, Safeguard, Mist, and Aurora Veil.",
+		shortDesc: "Moves ignore Protects, Substitute, Screens, Safeguard, and Mist.",
 	},
 };

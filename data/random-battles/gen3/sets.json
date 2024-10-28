@@ -85,7 +85,7 @@
         ]
     },
     "pidgeot": {
-        "level": 88,
+        "level": 87,
         "sets": [
             {
                 "role": "Fast Attacker",
@@ -394,7 +394,7 @@
         ]
     },
     "machamp": {
-        "level": 84,
+        "level": 83,
         "sets": [
             {
                 "role": "Fast Attacker",
@@ -525,7 +525,7 @@
         ]
     },
     "dewgong": {
-        "level": 88,
+        "level": 87,
         "sets": [
             {
                 "role": "Staller",
@@ -571,7 +571,7 @@
         ]
     },
     "gengar": {
-        "level": 75,
+        "level": 74,
         "sets": [
             {
                 "role": "Fast Attacker",
@@ -602,7 +602,7 @@
         ]
     },
     "kingler": {
-        "level": 90,
+        "level": 91,
         "sets": [
             {
                 "role": "Setup Sweeper",
@@ -888,7 +888,7 @@
         ]
     },
     "lapras": {
-        "level": 80,
+        "level": 79,
         "sets": [
             {
                 "role": "Bulky Attacker",
@@ -1003,12 +1003,12 @@
             {
                 "role": "Bulky Support",
                 "movepool": ["bodyslam", "curse", "rest", "sleeptalk"],
-                "abilities": ["Immunity"]
+                "abilities": ["Thick Fat"]
             },
             {
                 "role": "Bulky Setup",
                 "movepool": ["bodyslam", "curse", "earthquake", "rest"],
-                "abilities": ["Immunity"]
+                "abilities": ["Immunity", "Thick Fat"]
             }
         ]
     },
@@ -1155,7 +1155,7 @@
         ]
     },
     "furret": {
-        "level": 88,
+        "level": 87,
         "sets": [
             {
                 "role": "Wallbreaker",
@@ -1221,7 +1221,7 @@
         ]
     },
     "crobat": {
-        "level": 80,
+        "level": 79,
         "sets": [
             {
                 "role": "Fast Attacker",
@@ -1247,6 +1247,11 @@
             {
                 "role": "Staller",
                 "movepool": ["charm", "encore", "flamethrower", "seismictoss", "softboiled", "thunderwave", "toxic"],
+                "abilities": ["Serene Grace"]
+            },
+            {
+                "role": "Bulky Support",
+                "movepool": ["protect", "seismictoss", "toxic", "wish"],
                 "abilities": ["Serene Grace"]
             }
         ]
@@ -1387,7 +1392,7 @@
         ]
     },
     "yanma": {
-        "level": 90,
+        "level": 91,
         "sets": [
             {
                 "role": "Berry Sweeper",
@@ -1774,7 +1779,7 @@
         ]
     },
     "mantine": {
-        "level": 85,
+        "level": 86,
         "sets": [
             {
                 "role": "Bulky Support",
@@ -2244,7 +2249,7 @@
         ]
     },
     "slaking": {
-        "level": 79,
+        "level": 78,
         "sets": [
             {
                 "role": "Fast Attacker",
@@ -2273,8 +2278,9 @@
         "sets": [
             {
                 "role": "Fast Attacker",
-                "movepool": ["agility", "batonpass", "hiddenpowerfighting", "hiddenpowerground", "shadowball", "silverwind", "toxic"],
-                "abilities": ["Wonder Guard"]
+                "movepool": ["agility", "batonpass", "hiddenpowerfighting", "shadowball", "silverwind", "toxic"],
+                "abilities": ["Wonder Guard"],
+                "preferredTypes": ["Fighting"]
             }
         ]
     },
@@ -2584,9 +2590,8 @@
         "sets": [
             {
                 "role": "Wallbreaker",
-                "movepool": ["dragonclaw", "earthquake", "fireblast", "hiddenpowerbug", "rockslide"],
-                "abilities": ["Levitate"],
-                "preferredTypes": ["Bug", "Rock"]
+                "movepool": ["earthquake", "hiddenpowerbug", "quickattack", "rockslide"],
+                "abilities": ["Levitate"]
             },
             {
                 "role": "Staller",
@@ -2997,7 +3002,7 @@
         ]
     },
     "latias": {
-        "level": 66,
+        "level": 67,
         "sets": [
             {
                 "role": "Bulky Setup",

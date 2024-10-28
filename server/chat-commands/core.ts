@@ -273,6 +273,26 @@ export const commands: Chat.ChatCommands = {
 	},
 	noreplyhelp: [`/noreply [command] - Runs the command without displaying the response.`],
 
+	async linksmogon(target, room, user) {
+		if (Config.smogonauth && !Users.globalAuth.atLeast(user, Config.smogonauth)) {
+			throw new Chat.ErrorMessage("Access denied.");
+		}
+		if (!user.registered) {
+			throw new Chat.ErrorMessage(
+				"You must be registered in order to use this command. If you just registered, please refresh and try again."
+			);
+		}
+		this.sendReply("Linking...");
+		const response = await LoginServer.request("smogon/validate", {
+			username: user.id,
+		});
+		const name = response[0]?.signed_username;
+		if (response[1] || !name) {
+			throw new Chat.ErrorMessage("Error while verifying username: " + (response[1]?.message || "malformed name received"));
+		}
+		user.send(`|openpage|https://smogon.com/tools/connect-ps-account/${user.id}/${name}`);
+	},
+
 	async msgroom(target, room, user, connection) {
 		const [targetId, message] = Utils.splitFirst(target, ',').map(i => i.trim());
 		if (!targetId || !message) {
@@ -406,10 +426,23 @@ export const commands: Chat.ChatCommands = {
 
 		const pmTarget = this.pmTarget; // not room means it's a PM
 		if (!pmTarget) {
-			const {targetUser, rest: targetRoomid} = this.requireUser(target);
-			const targetRoom = targetRoomid ? Rooms.search(targetRoomid) : room;
-			if (!targetRoom) return this.errorReply(this.tr`The room "${targetRoomid}" was not found.`);
-			return this.parse(`/pm ${targetUser.name}, /invite ${targetRoom.roomid}`);
+			const users = target.split(',').map(part => part.trim());
+			let targetRoom;
+			if (users.length > 1 && Rooms.search(users[users.length - 1])) {
+				targetRoom = users.pop();
+			} else {
+				targetRoom = room;
+			}
+			if (users.length > 1 && !user.trusted) {
+				return this.errorReply("You do not have permission to mass-invite users.");
+			}
+			if (users.length > 10) {
+				return this.errorReply("You cannot invite more than 10 users at once.");
+			}
+			for (const toInvite of users) {
+				this.parse(`/pm ${toInvite}, /invite ${targetRoom}`);
+			}
+			return;
 		}
 
 		const targetRoom = Rooms.search(target);
@@ -436,6 +469,7 @@ export const commands: Chat.ChatCommands = {
 	},
 	invitehelp: [
 		`/invite [username] - Invites the player [username] to join the room you sent the command to.`,
+		`/invite [comma-separated usernames] - Invites multiple users to join the room you sent the command to. Requires trusted`,
 		`/invite [username], [roomname] - Invites the player [username] to join the room [roomname].`,
 		`(in a PM) /invite [roomname] - Invites the player you're PMing to join the room [roomname].`,
 	],
@@ -536,7 +570,7 @@ export const commands: Chat.ChatCommands = {
 	},
 	blockinviteshelp: [
 		`/blockinvites [rank] - Allows only users with the given [rank] to invite you to rooms.`,
-		`Valid settings: autoconfirmed, trusted, unlocked, +, %, @, &.`,
+		`Valid settings: autoconfirmed, trusted, unlocked, +, %, @, ~.`,
 		`/unblockinvites - Allows anyone to invite you to rooms.`,
 	],
 
@@ -605,7 +639,7 @@ export const commands: Chat.ChatCommands = {
 	},
 	clearstatushelp: [
 		`/clearstatus - Clears your status message.`,
-		`/clearstatus user, reason - Clears another person's status message. Requires: % @ &`,
+		`/clearstatus user, reason - Clears another person's status message. Requires: % @ ~`,
 	],
 
 	unaway: 'back',
@@ -664,8 +698,7 @@ export const commands: Chat.ChatCommands = {
 		if (user.tempGroup === group) {
 			return this.errorReply(this.tr`You already have the temporary symbol '${group}'.`);
 		}
-		if (!Users.Auth.isValidSymbol(group) || !(group in Config.groups) ||
-			(group === Users.SECTIONLEADER_SYMBOL && !(Users.globalAuth.sectionLeaders.has(user.id) || user.can('bypassall')))) {
+		if (!Users.Auth.isValidSymbol(group) || !(group in Config.groups)) {
 			return this.errorReply(this.tr`You must specify a valid group symbol.`);
 		}
 		if (!isShow && Config.groups[group].rank > Config.groups[user.tempGroup].rank) {
@@ -828,7 +861,7 @@ export const commands: Chat.ChatCommands = {
 			this.sendReply(this.tr`Battle input log re-requested.`);
 		}
 	},
-	exportinputloghelp: [`/exportinputlog - Asks players in a battle for permission to export an inputlog. Requires: &`],
+	exportinputloghelp: [`/exportinputlog - Asks players in a battle for permission to export an inputlog. Requires: ~`],
 
 	importinputlog(target, room, user, connection) {
 		this.checkCan('importinputlog');
@@ -853,7 +886,7 @@ export const commands: Chat.ChatCommands = {
 			battleRoom.battle!.sendInviteForm(user);
 		}, 500);
 	},
-	importinputloghelp: [`/importinputlog [inputlog] - Starts a battle with a given inputlog. Requires: + % @ &`],
+	importinputloghelp: [`/importinputlog [inputlog] - Starts a battle with a given inputlog. Requires: + % @ ~`],
 
 	showteam: 'showset',
 	async showset(target, room, user, connection, cmd) {
@@ -1014,7 +1047,7 @@ export const commands: Chat.ChatCommands = {
 			}
 		}
 	},
-	offertiehelp: [`/offertie - Offers a tie to all players in a battle; if all accept, it ties. Can only be used after 100+ turns have passed. Requires: \u2606 @ # &`],
+	offertiehelp: [`/offertie - Offers a tie to all players in a battle; if all accept, it ties. Can only be used after 100+ turns have passed. Requires: \u2606 @ # ~`],
 
 	rejectdraw: 'rejecttie',
 	rejecttie(target, room, user) {
@@ -1128,7 +1161,7 @@ export const commands: Chat.ChatCommands = {
 		if (room.battle.replaySaved) this.parse('/savereplay');
 		this.addModAction(room.tr`${user.name} hid the replay of this battle.`);
 	},
-	hidereplayhelp: [`/hidereplay - Hides the replay of the current battle. Requires: ${Users.PLAYER_SYMBOL} &`],
+	hidereplayhelp: [`/hidereplay - Hides the replay of the current battle. Requires: ${Users.PLAYER_SYMBOL} ~`],
 
 	addplayer: 'invitebattle',
 	invitebattle(target, room, user, connection) {
@@ -1254,7 +1287,7 @@ export const commands: Chat.ChatCommands = {
 	},
 	uninvitebattlehelp: [
 		`/uninvitebattle [username] - Revokes an invite from a user to join a battle.`,
-		`Requires: ${Users.PLAYER_SYMBOL} &`,
+		`Requires: ${Users.PLAYER_SYMBOL} ~`,
 	],
 
 	restoreplayers(target, room, user) {
@@ -1316,7 +1349,7 @@ export const commands: Chat.ChatCommands = {
 			this.errorReply("/kickbattle - User isn't in battle.");
 		}
 	},
-	kickbattlehelp: [`/kickbattle [username], [reason] - Kicks a user from a battle with reason. Requires: % @ &`],
+	kickbattlehelp: [`/kickbattle [username], [reason] - Kicks a user from a battle with reason. Requires: % @ ~`],
 
 	kickinactive(target, room, user) {
 		this.parse(`/timer on`);
@@ -1362,7 +1395,7 @@ export const commands: Chat.ChatCommands = {
 		}
 	},
 	timerhelp: [
-		`/timer [start|stop] - Starts or stops the game timer. Requires: ${Users.PLAYER_SYMBOL} % @ &`,
+		`/timer [start|stop] - Starts or stops the game timer. Requires: ${Users.PLAYER_SYMBOL} % @ ~`,
 	],
 
 	autotimer: 'forcetimer',
@@ -1381,7 +1414,7 @@ export const commands: Chat.ChatCommands = {
 		}
 	},
 	forcetimerhelp: [
-		`/forcetimer [start|stop] - Forces all battles to have the inactive timer enabled. Requires: &`,
+		`/forcetimer [start|stop] - Forces all battles to have the inactive timer enabled. Requires: ~`,
 	],
 
 	forcetie: 'forcewin',
@@ -1409,8 +1442,8 @@ export const commands: Chat.ChatCommands = {
 		this.modlog('FORCEWIN', targetUser.id);
 	},
 	forcewinhelp: [
-		`/forcetie - Forces the current match to end in a tie. Requires: &`,
-		`/forcewin [user] - Forces the current match to end in a win for a user. Requires: &`,
+		`/forcetie - Forces the current match to end in a tie. Requires: ~`,
+		`/forcewin [user] - Forces the current match to end in a win for a user. Requires: ~`,
 	],
 
 	/*********************************************************
@@ -1669,7 +1702,7 @@ export const commands: Chat.ChatCommands = {
 		if (target.startsWith('/') || target.startsWith('!')) target = target.slice(1);
 
 		if (!target) {
-			const broadcastMsg = this.tr`(replace / with ! to broadcast. Broadcasting requires: + % @ # &)`;
+			const broadcastMsg = this.tr`(replace / with ! to broadcast. Broadcasting requires: + % @ # ~)`;
 
 			this.sendReply(`${this.tr`COMMANDS`}: /report, /msg, /reply, /logout, /challenge, /search, /rating, /whois, /user, /join, /leave, /userauth, /roomauth`);
 			this.sendReply(`${this.tr`BATTLE ROOM COMMANDS`}: /savereplay, /hideroom, /inviteonly, /invite, /timer, /forfeit`);
