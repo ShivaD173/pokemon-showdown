@@ -2500,8 +2500,8 @@ export const AbilitiesText: {[id: IDEntry]: AbilityText} = {
 	},
 	barriercore: {
 		name: "Barrier Core",
-		desc: "User uses Magic Coat on switch in.",
-		shortDesc: "User uses Magic Coat on switch in.",
+		desc: "User uses Cosmic Power on switch in.",
+		shortDesc: "User uses Cosmic Power on switch in.",
 	},
 	hazardcore: {
 		name: "Hazard Core",

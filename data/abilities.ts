@@ -6446,7 +6446,7 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 			}
 		},
 		onBasePower(basePower, attacker, defender, move) {
-			if (move.sourceEffect === "ballin'") {
+			if (move.sourceEffect === "ballin") {
 				this.debug('Ballin Debuff');
 				return this.chainModify([2048, 4096]);
 			}
@@ -6538,7 +6538,7 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 	},
 	barriercore: {
 		onStart(pokemon) {
-			this.actions.useMove(this.dex.moves.get('magiccoat'), pokemon);
+			this.actions.useMove(this.dex.moves.get('cosmicpower'), pokemon);
 		},
 		name: "Barrier Core",
 		isNonstandard: "CAP",

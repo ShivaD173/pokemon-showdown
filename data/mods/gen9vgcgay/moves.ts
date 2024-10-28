@@ -1432,7 +1432,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		inherit: true,
 		isNonstandard: null,
 		pp: 1,
-		shortDesc: "Charges, User's type to first move, Omniboost turn 2.",
+		shortDesc: "Charges, User's type to first move, Omniboost T2.",
 		boosts: {atk: 1, def: 1, spa: 1, spd: 1, spe: 1},
 		flags: {charge: 1, nonsky: 1, nosleeptalk: 1, failinstruct: 1},
 		onTryMove(attacker, defender, move) {

@@ -11756,11 +11756,11 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 		],
 		"baseStats": {
 			"hp": 75,
-			"atk": 105,
-			"def": 105,
-			"spa": 105,
-			"spd": 105,
-			"spe": 105
+			"atk": 75,
+			"def": 75,
+			"spa": 75,
+			"spd": 75,
+			"spe": 75
 		},
 		"abilities": {
 			"0": "Pressure",
@@ -12968,10 +12968,10 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 			"Ice"
 		],
 		"baseStats": {
-			"hp": 100,
+			"hp": 90,
 			"atk": 165,
 			"def": 150,
-			"spa": 85,
+			"spa": 95,
 			"spd": 130,
 			"spe": 50
 		},
@@ -12986,8 +12986,8 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 			"Ghost"
 		],
 		"baseStats": {
-			"hp": 100,
-			"atk": 85,
+			"hp": 90,
+			"atk": 95,
 			"def": 80,
 			"spa": 165,
 			"spd": 100,

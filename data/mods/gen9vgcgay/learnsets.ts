@@ -34146,9 +34146,6 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
             "alluringvoice": [
                 "9M"
             ],
-            "allyswitch": [
-                "9M"
-            ],
             "attract": [
                 "9M"
             ],
@@ -70612,6 +70609,12 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
             ],
             "zapcannon": [
                 "9M"
+            ],
+            "lightscreen": [
+                "9M"
+            ],
+            "reflect": [
+                "9M"
             ]
         }
     },
@@ -80679,9 +80682,6 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
                 "9M"
             ],
             "airslash": [
-                "9M"
-            ],
-            "allyswitch": [
                 "9M"
             ],
             "ancientpower": [
@@ -94300,9 +94300,6 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
             "afteryou": [
                 "9M"
             ],
-            "allyswitch": [
-                "9M"
-            ],
             "aromatherapy": [
                 "9M"
             ],
@@ -107218,9 +107215,6 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
             "agility": [
                 "9M"
             ],
-            "allyswitch": [
-                "9M"
-            ],
             "aquajet": [
                 "9M"
             ],
@@ -111526,9 +111520,6 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
                 "9M"
             ],
             "agility": [
-                "9M"
-            ],
-            "allyswitch": [
                 "9M"
             ],
             "assurance": [
@@ -144823,9 +144814,6 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
             "afteryou": [
                 "9M"
             ],
-            "allyswitch": [
-                "9M"
-            ],
             "amnesia": [
                 "9M"
             ],
@@ -147776,9 +147764,6 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
             "agility": [
                 "9M"
             ],
-            "allyswitch": [
-                "9M"
-            ],
             "aromatherapy": [
                 "9M"
             ],
@@ -148106,9 +148091,6 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
         "inherit": true,
         "learnset": {
             "agility": [
-                "9M"
-            ],
-            "allyswitch": [
                 "9M"
             ],
             "aromatherapy": [
