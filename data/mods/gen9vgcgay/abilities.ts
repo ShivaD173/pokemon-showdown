@@ -1334,6 +1334,17 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 			this.add('-activate', source, 'ability: As One', myItem, '[of] ' + pokemon);
 		},
 	},
+	// Diancie now "Mega Evolves on switch in cuz I feel like it"
+	magicbounce: {
+		inherit: true,
+		onPreStart(pokemon) {
+			if (pokemon.baseSpecies.baseSpecies !== 'Diancie') return;
+			if (pokemon.species.forme !== 'Mega') {
+				this.add('-activate', pokemon, 'ability: Magic Bounce');
+				pokemon.formeChange('Diancie-Mega', this.effect, true);
+			}
+		},
+	},
 	// New Abilities
 	triplethreat: {
 		inherit: true,
