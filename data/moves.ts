@@ -22071,7 +22071,7 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		secondary: {
-			chance: 50,
+			chance: 30,
 			status: 'fst',
 		},
 		onPrepareHit(target, source, move) {
@@ -22093,7 +22093,7 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		secondary: {
-			chance: 50,
+			chance: 30,
 			status: 'par',
 		},
 		onPrepareHit(target, source, move) {

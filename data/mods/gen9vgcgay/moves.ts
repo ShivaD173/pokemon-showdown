@@ -257,6 +257,12 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		"basePower": 250
 	},
 	// Regular Moves
+	coaching: {
+		inherit: true,
+		desc: "Raises the target's Attack and Defense by 1 stage. Fails if there is no ally adjacent to the user.",
+		shortDesc: "Raises an non-protecting ally's Attack and Defense by 1.",
+		flags: {bypasssub: 1, allyanim: 1, metronome: 1, protect: 1},
+	},
 	rocksmash: {
 		inherit: true,
 		shortDesc: "100% chance to lower the target's Defense by 1.",
@@ -2046,6 +2052,15 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		"isNonstandard": null,
 	},
 	// Making Standard
+	sacredfire: {
+		inherit: true,
+		desc: "30% chance to burn the target. Thaws user.",
+		shortDesc: "30% chance to burn the target. Thaws user.",
+		secondary: {
+			chance: 30,
+			status: 'brn',
+		},
+	},
 	purifyingwater: {
 		inherit: true,
 		isNonstandard: null,

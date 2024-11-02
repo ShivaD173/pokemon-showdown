@@ -7552,13 +7552,13 @@ export const MovesText: {[id: IDEntry]: MoveText} = {
 	},
 	purifyingwater: {
 		name: "Purifying Water",
-		shortDesc: "50% chance to Frostbite.",
-		desc: "50% chance to Frostbite.",
+		shortDesc: "30% chance to Frostbite.",
+		desc: "30% chance to Frostbite.",
 	},
 	divinesmite: {
 		name: "Divine Smite",
-		shortDesc: "50% chance to Paralyze.",
-		desc: "50% chance to Paralyze.",
+		shortDesc: "30% chance to Paralyze.",
+		desc: "30% chance to Paralyze.",
 	},
 	stalacbite: {
 		name: "Stalacbite",
