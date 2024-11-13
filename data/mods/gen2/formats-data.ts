@@ -45,7 +45,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "ZUBL",
 	},
 	pidgey: {
-		tier: "8U",
+		tier: "IU",
 	},
 	pidgeotto: {
 		tier: "SUBL",
@@ -87,7 +87,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "UU",
 	},
 	nidoranf: {
-		tier: "8U",
+		tier: "IU",
 	},
 	nidorina: {
 		tier: "ZU",
@@ -222,7 +222,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "OU",
 	},
 	bellsprout: {
-		tier: "IU",
+		tier: "8U",
 	},
 	weepinbell: {
 		tier: "ZU",
@@ -549,13 +549,13 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "PU",
 	},
 	ledyba: {
-		tier: "IU",
+		tier: "8U",
 	},
 	ledian: {
 		tier: "NU",
 	},
 	spinarak: {
-		tier: "IU",
+		tier: "8U",
 	},
 	ariados: {
 		tier: "PU",
@@ -588,7 +588,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "UU",
 	},
 	marill: {
-		tier: "8U",
+		tier: "IU",
 	},
 	azumarill: {
 		tier: "NU",
