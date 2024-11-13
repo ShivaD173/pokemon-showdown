@@ -111,7 +111,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "SU",
 	},
 	clefable: {
-		tier: "UU",
+		tier: "RU",
 	},
 	vulpix: {
 		tier: "IU",
@@ -576,7 +576,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "SU",
 	},
 	xatu: {
-		tier: "UU",
+		tier: "RU",
 	},
 	mareep: {
 		tier: "IU",
