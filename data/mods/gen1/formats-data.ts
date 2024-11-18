@@ -72,7 +72,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "ZUBL",
 	},
 	pikachu: {
-		tier: "IU",
+		tier: "SU",
 	},
 	raichu: {
 		tier: "UU",
@@ -219,7 +219,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "UU",
 	},
 	geodude: {
-		tier: "IU",
+		tier: "SU",
 	},
 	graveler: {
 		tier: "PU",
@@ -249,7 +249,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "IU",
 	},
 	doduo: {
-		tier: "IU",
+		tier: "SU",
 	},
 	dodrio: {
 		tier: "UU",
@@ -318,7 +318,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "SU",
 	},
 	hitmonchan: {
-		tier: "IU",
+		tier: "SU",
 	},
 	lickitung: {
 		tier: "SU",
@@ -351,7 +351,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "NU",
 	},
 	goldeen: {
-		tier: "8U",
+		tier: "SU",
 	},
 	seaking: {
 		tier: "PU",
@@ -417,7 +417,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "UU",
 	},
 	kabuto: {
-		tier: "SU",
+		tier: "IU",
 	},
 	kabutops: {
 		tier: "NU",

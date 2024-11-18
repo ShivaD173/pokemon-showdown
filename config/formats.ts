@@ -242,6 +242,13 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		searchShow: true,
 	},
 	{
+		name: "[Gen 3] NFE",
+		mod: 'gen3',
+		desc: `Only Pok&eacute;mon that can evolve are allowed.`,
+		ruleset: ['Standard', 'Not Fully Evolved'],
+		searchShow: true,
+	},
+	{
 		name: "[Gen 3] SU",
 		mod: 'gen3',
 		searchShow: true,

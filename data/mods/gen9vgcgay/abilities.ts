@@ -1277,6 +1277,43 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 			if (type === 'Ground' && move.type === 'Electric') return -1;
 		},
 	},
+	forecast: {
+		inherit: true,
+		shortDesc: "Castform's type changes to the current weather condition's type",
+		onWeatherChange(pokemon) {
+			if (pokemon.baseSpecies.baseSpecies !== 'Castform' || pokemon.transformed) return;
+			let forme = null;
+			if (pokemon.species.id !== 'castform') forme = 'Castform';
+			let type = "Normal";
+			switch (pokemon.effectiveWeather()) {
+			case 'sunnyday':
+			case 'desolateland':
+				if (pokemon.species.id !== 'castformsunny') forme = 'Castform-Sunny';
+				type = "Fire";
+				break;
+			case 'raindance':
+			case 'primordialsea':
+				if (pokemon.species.id !== 'castformrainy') forme = 'Castform-Rainy';
+				type = "Water";
+				break;
+			case 'hail':
+			case 'snow':
+				if (pokemon.species.id !== 'castformsnowy') forme = 'Castform-Snowy';
+				type = "Ice";
+				break;
+			case 'sandstorm':
+				type = "Rock";
+				break;
+			}
+			if (pokemon.isActive && forme) {
+				pokemon.formeChange(forme, this.effect, false, '[msg]');
+			}
+			if (type && pokemon.getTypes().join() !== type) {
+				if (!pokemon.setType(type)) return;
+				this.add('-start', pokemon, 'typechange', type, '[from] ability: Forecast');
+			}
+		},
+	},
 	// As One now gives Symbioisis
 	asoneglastrier: {
 		inherit: true,
