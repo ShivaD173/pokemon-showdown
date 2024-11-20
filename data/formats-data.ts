@@ -1117,7 +1117,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	omastar: {
 		isNonstandard: "Past",
 		tier: "Illegal",
-		natDexTier: "ZU",
+		natDexTier: "ZUBL",
 	},
 	kabuto: {
 		isNonstandard: "Past",
@@ -2873,7 +2873,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	shaymin: {
 		tier: "ZU",
 		doublesTier: "(DUU)",
-		natDexTier: "ZU",
+		natDexTier: "ZUBL",
 	},
 	shayminsky: {
 		tier: "Uber",
@@ -3868,7 +3868,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	slurpuff: {
 		isNonstandard: "Past",
 		tier: "Illegal",
-		natDexTier: "ZU",
+		natDexTier: "ZUBL",
 	},
 	inkay: {
 		tier: "LC",
@@ -4693,7 +4693,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	inteleon: {
 		tier: "NU",
 		doublesTier: "(DUU)",
-		natDexTier: "ZU",
+		natDexTier: "ZUBL",
 	},
 	inteleongmax: {
 		isNonstandard: "Past",
