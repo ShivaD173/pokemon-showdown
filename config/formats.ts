@@ -40,9 +40,9 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		searchShow: true,
 		mod: 'gen9vgcgay',
 		gameType: 'doubles',
-		ruleset: ['Flat Rules', '!! Adjust Level = 50', 'Tera Type Preview', 'Sketch Post-Gen 7 Moves', 'Draft Timer'],
+		ruleset: ['Flat Rules', '!! Adjust Level = 50', 'Tera Type Preview', 'Sketch Post-Gen 7 Moves', 'Draft Timer', 'Uber'],
 		bestOfDefault: true,
-		unbanlist: ['Greninja-Bond'],
+		unbanlist: ['Greninja-Bond', 'Mythical'],
 	},
 	{
 		name: "[Gen 9] VGC Pride Restricted",

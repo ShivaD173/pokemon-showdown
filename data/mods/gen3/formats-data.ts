@@ -573,7 +573,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "PU",
 	},
 	natu: {
-		tier: "SU",
+		tier: "IU",
 	},
 	xatu: {
 		tier: "RU",
