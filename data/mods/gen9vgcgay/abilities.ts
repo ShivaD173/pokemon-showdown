@@ -158,7 +158,7 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 	},
 	magmaarmor: {
 		inherit: true,
-		shortDesc: "Reduces Contact damage by 25%, 30% Chance to burn on contact moves",
+		shortDesc: "Reduces Contact damage by 25%, 30% Chance to burn on contact moves.",
 		onSourceModifyDamage(damage, source, target, move) {
 			let mod = 1;
 			if (move.flags['contact']) mod /= 1.5;
@@ -221,7 +221,7 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 	},
 	healer: {
 		inherit: true,
-		shortDesc: "Heals ally by 1/16th, Also 30% to heal ally status",
+		shortDesc: "Heals ally by 1/16th, Also 30% to heal ally status.",
 		onResidual(pokemon) {
 			for (const allyActive of pokemon.adjacentAllies()) {
 				if (allyActive.maxhp > allyActive.hp) {
@@ -583,7 +583,7 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 	},
 	flowergift: {
 		inherit: true,
-		shortDesc: "If Sunny Day active, it and allies' Atk, SpA, Def, and SpDef are 1.3x",
+		shortDesc: "If Sunny Day active, it and allies' Atk, SpA, Def, and SpDef are 1.3x.",
 		onAllyModifySpAPriority: 3,
 		onAllyModifySpA(atk, pokemon) {
 			if (this.effectState.target.baseSpecies.baseSpecies !== 'Cherrim') return;
@@ -1174,7 +1174,7 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 	},
 	cottondown: {
 		inherit: true,
-		shortDesc: "If this Pokemon is hit, gets +1 Def, All other Pokemon: -1 Speed",
+		shortDesc: "If this Pokemon is hit, gets +1 Def, All other Pokemon: -1 Speed.",
 		onDamagingHit(damage, target, source, move) {
 			let activated = false;
 			for (const pokemon of this.getAllActive()) {

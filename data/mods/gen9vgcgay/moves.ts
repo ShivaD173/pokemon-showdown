@@ -185,13 +185,14 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 	},
 	"swagger": {
 		inherit: true,
+		isNonstandard: null,
 		"accuracy": 95,
-		isNonstandard: null
 	},
 	"falseswipe": {
 		inherit: true,
+		isNonstandard: null,
 		"basePower": 140,
-		isNonstandard: null
+		flags: {contact: 1, protect: 1, mirror: 1, metronome: 1, slicing: 1},
 	},
 	// Multi Turn
 	"razorwind": {
@@ -260,7 +261,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 	coaching: {
 		inherit: true,
 		desc: "Raises the target's Attack and Defense by 1 stage. Fails if there is no ally adjacent to the user.",
-		shortDesc: "Raises an non-protecting ally's Attack and Defense by 1.",
+		shortDesc: "Raises a non-protecting ally's Atk and Def by 1.",
 		flags: {bypasssub: 1, allyanim: 1, metronome: 1, protect: 1},
 	},
 	rocksmash: {
@@ -1016,7 +1017,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 	shadowbone: {
 		inherit: true,
 		isNonstandard: null,
-		shortDesc: "Hits Twice, 20% to drop defense",
+		shortDesc: "Hits Twice, 20% to drop defense.",
 		basePower: 45,
 		multihit: 2,
 	},
@@ -1921,6 +1922,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 	whirlwind: {
 		inherit: true,
 		pp: 10,
+		type: 'Flying'
 	},
 	flamethrower: {
 		inherit: true,
@@ -2270,6 +2272,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 	bonemerang: {
 		inherit: true,
 		isNonstandard: null,
+		basePower: 45,
 	},
 	mefirst: {
 		inherit: true,

@@ -2458,8 +2458,8 @@ export const AbilitiesText: {[id: IDEntry]: AbilityText} = {
 	},
 	windchime: {
 		name: "Wind Chime",
-		desc: "When any pokemon uses a Wind move, this pokemon uses Echoed Voice.",
-		shortDesc: "When any pokemon uses a Wind move, this pokemon uses Echoed Voice.",
+		desc: "When another pokemon uses a Wind move, this pokemon uses Echoed Voice.",
+		shortDesc: "When another pokemon uses a Wind move, this pokemon uses Echoed Voice.",
 	},
 	machinelearning: {
 		name: "Machine Learning",
