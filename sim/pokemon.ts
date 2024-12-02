@@ -1435,15 +1435,15 @@ export class Pokemon {
 			if (isSinnohItem) {
 				let abilityKey: keyof typeof rawSpecies.abilities;
 				const baseSpecies = this.battle.dex.species.get(rawSpecies.baseSpecies);
-				let abilitySlot;
+				let oldAbilitySlot;
 
 				for (abilityKey in baseSpecies.abilities) {
 					if (baseName === this.battle.dex.abilities.get(baseSpecies.abilities[abilityKey]).name) {
-						if (!(abilityKey as string).includes('I')) abilitySlot = abilityKey;
+						if (!(abilityKey as string).includes('I')) oldAbilitySlot = abilityKey;
 					}
 				}
-				if (species.abilities[abilitySlot as string] === undefined) abilitySlot = '0';
-				this.setAbility(species.abilities[abilitySlot as string], null, true);
+				if (species.abilities[oldAbilitySlot as string] === undefined) oldAbilitySlot = '0';
+				this.setAbility(species.abilities[oldAbilitySlot as string], null, true);
 				this.baseAbility = this.ability;
 			}
 		}
