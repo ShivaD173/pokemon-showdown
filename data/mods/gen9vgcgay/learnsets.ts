@@ -31932,6 +31932,9 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
             ],
             "weatherball": [
                 "9M"
+            ],
+            "flashfreeze": [
+                "9M"
             ]
         }
     },
@@ -82374,6 +82377,9 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
                 "9M"
             ],
             "snowscape": [
+                "9M"
+            ],
+            "whirlwind": [
                 "9M"
             ]
         }
@@ -135985,6 +135991,12 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
             ],
             "closecombat": [
                 "9M"
+            ],
+            "armthrust": [
+                "9M"
+            ],
+            "barrage": [
+                "9M"
             ]
         }
     },
@@ -139321,9 +139333,6 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
                 "9M"
             ],
             "trick": [
-                "9M"
-            ],
-            "trickroom": [
                 "9M"
             ],
             "uproar": [
@@ -154597,6 +154606,185 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
                 "9M"
             ],
             "zenheadbutt": [
+                "9M"
+            ]
+        }
+    },
+    "cherubi": {
+        "inherit": true,
+        "learnset": {
+            "aromatherapy": [
+                "9M"
+            ],
+            "attract": [
+                "9M"
+            ],
+            "bulletseed": [
+                "9M"
+            ],
+            "captivate": [
+                "9M"
+            ],
+            "confide": [
+                "9M"
+            ],
+            "dazzlinggleam": [
+                "9M"
+            ],
+            "defensecurl": [
+                "9M"
+            ],
+            "doubleteam": [
+                "9M"
+            ],
+            "drainingkiss": [
+                "9M"
+            ],
+            "endure": [
+                "9M"
+            ],
+            "energyball": [
+                "9M"
+            ],
+            "facade": [
+                "9M"
+            ],
+            "flash": [
+                "9M"
+            ],
+            "flowershield": [
+                "9M"
+            ],
+            "frustration": [
+                "9M"
+            ],
+            "gigadrain": [
+                "9M"
+            ],
+            "grassknot": [
+                "9M"
+            ],
+            "grasswhistle": [
+                "9M"
+            ],
+            "grassyglide": [
+                "9M"
+            ],
+            "grassyterrain": [
+                "9M"
+            ],
+            "growth": [
+                "9M"
+            ],
+            "healingwish": [
+                "9M"
+            ],
+            "healpulse": [
+                "9M"
+            ],
+            "helpinghand": [
+                "9M"
+            ],
+            "hiddenpower": [
+                "9M"
+            ],
+            "leafage": [
+                "9M"
+            ],
+            "leechseed": [
+                "9M"
+            ],
+            "luckychant": [
+                "9M"
+            ],
+            "magicalleaf": [
+                "9M"
+            ],
+            "morningsun": [
+                "9M"
+            ],
+            "naturalgift": [
+                "9M"
+            ],
+            "naturepower": [
+                "9M"
+            ],
+            "petalblizzard": [
+                "9M"
+            ],
+            "pollenpuff": [
+                "9M"
+            ],
+            "protect": [
+                "9M"
+            ],
+            "razorleaf": [
+                "9M"
+            ],
+            "rest": [
+                "9M"
+            ],
+            "return": [
+                "9M"
+            ],
+            "rollout": [
+                "9M"
+            ],
+            "round": [
+                "9M"
+            ],
+            "safeguard": [
+                "9M"
+            ],
+            "secretpower": [
+                "9M"
+            ],
+            "seedbomb": [
+                "9M"
+            ],
+            "sleeptalk": [
+                "9M"
+            ],
+            "snore": [
+                "9M"
+            ],
+            "solarbeam": [
+                "9M"
+            ],
+            "substitute": [
+                "9M"
+            ],
+            "sunnyday": [
+                "9M"
+            ],
+            "swagger": [
+                "9M"
+            ],
+            "sweetscent": [
+                "9M"
+            ],
+            "swordsdance": [
+                "9M"
+            ],
+            "synthesis": [
+                "9M"
+            ],
+            "tackle": [
+                "9M"
+            ],
+            "takedown": [
+                "9M"
+            ],
+            "tickle": [
+                "9M"
+            ],
+            "toxic": [
+                "9M"
+            ],
+            "weatherball": [
+                "9M"
+            ],
+            "worryseed": [
                 "9M"
             ]
         }

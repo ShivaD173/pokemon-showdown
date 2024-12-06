@@ -33,7 +33,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "11U",
 	},
 	butterfree: {
-		tier: "SU",
+		tier: "IU",
 	},
 	weedle: {
 		tier: "11U",
@@ -855,7 +855,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "LC",
 	},
 	masquerain: {
-		tier: "SU",
+		tier: "IU",
 	},
 	shroomish: {
 		tier: "IU",

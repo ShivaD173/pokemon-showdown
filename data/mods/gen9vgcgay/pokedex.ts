@@ -810,12 +810,12 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 			"Grass"
 		],
 		"baseStats": {
-			"hp": 70,
+			"hp": 60,
 			"atk": 50,
 			"def": 70,
 			"spa": 80,
 			"spd": 80,
-			"spe": 160
+			"spe": 150
 		},
 		"abilities": {
 			"0": "Soundproof",
@@ -5128,8 +5128,7 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 			"spe": 77
 		},
 		"abilities": {
-			"0": "Flash Fire",
-			"H": "Magma Armor"
+			"0": "Flash Fire"
 		},
 		"inherit": true
 	},
@@ -5405,7 +5404,7 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 			"Rock"
 		],
 		"baseStats": {
-			"hp": 85,
+			"hp": 80,
 			"atk": 60,
 			"def": 130,
 			"spa": 135,
