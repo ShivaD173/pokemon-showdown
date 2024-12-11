@@ -436,11 +436,11 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 		],
 		"baseStats": {
 			"hp": 75,
-			"atk": 95,
+			"atk": 99,
 			"def": 70,
-			"spa": 85,
+			"spa": 89,
 			"spd": 75,
-			"spe": 125
+			"spe": 127
 		},
 		"abilities": {
 			"0": "Limber",
@@ -603,6 +603,26 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 			"0": "Clear Body",
 			"1": "Liquid Ooze",
 			"H": "Rain Dish"
+		},
+		"inherit": true
+	},
+	"golem": {
+		"types": [
+			"Rock",
+			"Ground"
+		],
+		"baseStats": {
+			"hp": 90,
+			"atk": 130,
+			"def": 130,
+			"spa": 55,
+			"spd": 65,
+			"spe": 65
+		},
+		"abilities": {
+			"0": "Rock Head",
+			"1": "Sturdy",
+			"H": "Ballin'"
 		},
 		"inherit": true
 	},
@@ -1698,7 +1718,7 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 			"Flying"
 		],
 		"baseStats": {
-			"hp": 70,
+			"hp": 65,
 			"atk": 80,
 			"def": 75,
 			"spa": 100,
@@ -4344,9 +4364,9 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 		],
 		"baseStats": {
 			"hp": 81,
-			"atk": 87,
+			"atk": 85,
 			"def": 74,
-			"spa": 74,
+			"spa": 68,
 			"spd": 69,
 			"spe": 143
 		},
@@ -5785,7 +5805,7 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 		},
 		"abilities": {
 			"0": "Mummy",
-			"H": "Frisk"
+			"H": "Homophobia"
 		},
 		"inherit": true
 	},
@@ -5857,7 +5877,7 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 			"def": 60,
 			"spa": 125,
 			"spd": 60,
-			"spe": 105
+			"spe": 110
 		},
 		"abilities": {
 			"0": "Illusion"
@@ -8017,12 +8037,12 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 			"Normal"
 		],
 		"baseStats": {
-			"hp": 99,
-			"atk": 99,
-			"def": 99,
-			"spa": 99,
-			"spd": 99,
-			"spe": 99
+			"hp": 95,
+			"atk": 95,
+			"def": 95,
+			"spa": 95,
+			"spd": 95,
+			"spe": 95
 		},
 		"abilities": {
 			"0": "RKS System"
@@ -8034,12 +8054,12 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 			"Bug"
 		],
 		"baseStats": {
-			"hp": 99,
-			"atk": 99,
-			"def": 99,
-			"spa": 99,
-			"spd": 99,
-			"spe": 99
+			"hp": 95,
+			"atk": 95,
+			"def": 95,
+			"spa": 95,
+			"spd": 95,
+			"spe": 95
 		},
 		"abilities": {
 			"0": "RKS System"
@@ -8051,12 +8071,12 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 			"Dark"
 		],
 		"baseStats": {
-			"hp": 99,
-			"atk": 99,
-			"def": 99,
-			"spa": 99,
-			"spd": 99,
-			"spe": 99
+			"hp": 95,
+			"atk": 95,
+			"def": 95,
+			"spa": 95,
+			"spd": 95,
+			"spe": 95
 		},
 		"abilities": {
 			"0": "RKS System"
@@ -8068,12 +8088,12 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 			"Dragon"
 		],
 		"baseStats": {
-			"hp": 99,
-			"atk": 99,
-			"def": 99,
-			"spa": 99,
-			"spd": 99,
-			"spe": 99
+			"hp": 95,
+			"atk": 95,
+			"def": 95,
+			"spa": 95,
+			"spd": 95,
+			"spe": 95
 		},
 		"abilities": {
 			"0": "RKS System"
@@ -8085,12 +8105,12 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 			"Electric"
 		],
 		"baseStats": {
-			"hp": 99,
-			"atk": 99,
-			"def": 99,
-			"spa": 99,
-			"spd": 99,
-			"spe": 99
+			"hp": 95,
+			"atk": 95,
+			"def": 95,
+			"spa": 95,
+			"spd": 95,
+			"spe": 95
 		},
 		"abilities": {
 			"0": "RKS System"
@@ -8102,12 +8122,12 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 			"Fairy"
 		],
 		"baseStats": {
-			"hp": 99,
-			"atk": 99,
-			"def": 99,
-			"spa": 99,
-			"spd": 99,
-			"spe": 99
+			"hp": 95,
+			"atk": 95,
+			"def": 95,
+			"spa": 95,
+			"spd": 95,
+			"spe": 95
 		},
 		"abilities": {
 			"0": "RKS System"
@@ -8119,12 +8139,12 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 			"Fighting"
 		],
 		"baseStats": {
-			"hp": 99,
-			"atk": 99,
-			"def": 99,
-			"spa": 99,
-			"spd": 99,
-			"spe": 99
+			"hp": 95,
+			"atk": 95,
+			"def": 95,
+			"spa": 95,
+			"spd": 95,
+			"spe": 95
 		},
 		"abilities": {
 			"0": "RKS System"
@@ -8136,12 +8156,12 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 			"Fire"
 		],
 		"baseStats": {
-			"hp": 99,
-			"atk": 99,
-			"def": 99,
-			"spa": 99,
-			"spd": 99,
-			"spe": 99
+			"hp": 95,
+			"atk": 95,
+			"def": 95,
+			"spa": 95,
+			"spd": 95,
+			"spe": 95
 		},
 		"abilities": {
 			"0": "RKS System"
@@ -8153,12 +8173,12 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 			"Flying"
 		],
 		"baseStats": {
-			"hp": 99,
-			"atk": 99,
-			"def": 99,
-			"spa": 99,
-			"spd": 99,
-			"spe": 99
+			"hp": 95,
+			"atk": 95,
+			"def": 95,
+			"spa": 95,
+			"spd": 95,
+			"spe": 95
 		},
 		"abilities": {
 			"0": "RKS System"
@@ -8170,12 +8190,12 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 			"Ghost"
 		],
 		"baseStats": {
-			"hp": 99,
-			"atk": 99,
-			"def": 99,
-			"spa": 99,
-			"spd": 99,
-			"spe": 99
+			"hp": 95,
+			"atk": 95,
+			"def": 95,
+			"spa": 95,
+			"spd": 95,
+			"spe": 95
 		},
 		"abilities": {
 			"0": "RKS System"
@@ -8187,12 +8207,12 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 			"Grass"
 		],
 		"baseStats": {
-			"hp": 99,
-			"atk": 99,
-			"def": 99,
-			"spa": 99,
-			"spd": 99,
-			"spe": 99
+			"hp": 95,
+			"atk": 95,
+			"def": 95,
+			"spa": 95,
+			"spd": 95,
+			"spe": 95
 		},
 		"abilities": {
 			"0": "RKS System"
@@ -8204,12 +8224,12 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 			"Ground"
 		],
 		"baseStats": {
-			"hp": 99,
-			"atk": 99,
-			"def": 99,
-			"spa": 99,
-			"spd": 99,
-			"spe": 99
+			"hp": 95,
+			"atk": 95,
+			"def": 95,
+			"spa": 95,
+			"spd": 95,
+			"spe": 95
 		},
 		"abilities": {
 			"0": "RKS System"
@@ -8221,12 +8241,12 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 			"Ice"
 		],
 		"baseStats": {
-			"hp": 99,
-			"atk": 99,
-			"def": 99,
-			"spa": 99,
-			"spd": 99,
-			"spe": 99
+			"hp": 95,
+			"atk": 95,
+			"def": 95,
+			"spa": 95,
+			"spd": 95,
+			"spe": 95
 		},
 		"abilities": {
 			"0": "RKS System"
@@ -8238,12 +8258,12 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 			"Poison"
 		],
 		"baseStats": {
-			"hp": 99,
-			"atk": 99,
-			"def": 99,
-			"spa": 99,
-			"spd": 99,
-			"spe": 99
+			"hp": 95,
+			"atk": 95,
+			"def": 95,
+			"spa": 95,
+			"spd": 95,
+			"spe": 95
 		},
 		"abilities": {
 			"0": "RKS System"
@@ -8255,12 +8275,12 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 			"Psychic"
 		],
 		"baseStats": {
-			"hp": 99,
-			"atk": 99,
-			"def": 99,
-			"spa": 99,
-			"spd": 99,
-			"spe": 99
+			"hp": 95,
+			"atk": 95,
+			"def": 95,
+			"spa": 95,
+			"spd": 95,
+			"spe": 95
 		},
 		"abilities": {
 			"0": "RKS System"
@@ -8272,12 +8292,12 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 			"Rock"
 		],
 		"baseStats": {
-			"hp": 99,
-			"atk": 99,
-			"def": 99,
-			"spa": 99,
-			"spd": 99,
-			"spe": 99
+			"hp": 95,
+			"atk": 95,
+			"def": 95,
+			"spa": 95,
+			"spd": 95,
+			"spe": 95
 		},
 		"abilities": {
 			"0": "RKS System"
@@ -8289,12 +8309,12 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 			"Steel"
 		],
 		"baseStats": {
-			"hp": 99,
-			"atk": 99,
-			"def": 99,
-			"spa": 99,
-			"spd": 99,
-			"spe": 99
+			"hp": 95,
+			"atk": 95,
+			"def": 95,
+			"spa": 95,
+			"spd": 95,
+			"spe": 95
 		},
 		"abilities": {
 			"0": "RKS System"
@@ -8306,12 +8326,12 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 			"Water"
 		],
 		"baseStats": {
-			"hp": 99,
-			"atk": 99,
-			"def": 99,
-			"spa": 99,
-			"spd": 99,
-			"spe": 99
+			"hp": 95,
+			"atk": 95,
+			"def": 95,
+			"spa": 95,
+			"spd": 95,
+			"spe": 95
 		},
 		"abilities": {
 			"0": "RKS System"
@@ -9393,7 +9413,7 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 			"Electric"
 		],
 		"baseStats": {
-			"hp": 68,
+			"hp": 63,
 			"atk": 111,
 			"def": 100,
 			"spa": 111,
@@ -10406,7 +10426,7 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 		],
 		"baseStats": {
 			"hp": 85,
-			"atk": 75,
+			"atk": 70,
 			"def": 77,
 			"spa": 70,
 			"spd": 105,
@@ -12931,14 +12951,15 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 		],
 		"baseStats": {
 			"hp": 140,
-			"atk": 85,
+			"atk": 95,
 			"def": 95,
 			"spa": 145,
 			"spd": 95,
 			"spe": 130
 		},
 		"abilities": {
-			"0": "Pressure"
+			"0": "Pressure",
+			"H": "Corrosion"
 		},
 		"inherit": true
 	},

@@ -7,7 +7,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 	spore: {
 		inherit: true,
 		pp: 5,
-		shortDesc: "Puts target to sleep. Fails if priority",
+		shortDesc: "Puts target to sleep. Fails if priority.",
 		onTryMove(attacker, defender, move) {
 			if (move.pranksterBoosted) {
 				this.add('-fail', attacker, 'move: Spore');
@@ -1183,7 +1183,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 	},
 	freezingglare: {
 		inherit: true,
-		shortDesc: "20% chance to frostbite, +Ice Type",
+		shortDesc: "20% chance to frostbite, +Ice Type.",
 		secondary: {chance: 20, status: 'fst'},
 		onEffectiveness(typeMod, target, type, move) {
 			return typeMod + this.dex.getEffectiveness('Ice', type);
@@ -1191,14 +1191,14 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 	},
 	thunderouskick: {
 		inherit: true,
-		shortDesc: "Lowers Def by 1, +Elec Type",
+		shortDesc: "Lowers Def by 1, +Electric Type.",
 		onEffectiveness(typeMod, target, type, move) {
 			return typeMod + this.dex.getEffectiveness('Electric', type);
 		},
 	},
 	fierywrath: {
 		inherit: true,
-		shortDesc: "20% to make foe(s) flinch, +Fire Type",
+		shortDesc: "20% to make foe(s) flinch, +Fire Type.",
 		onEffectiveness(typeMod, target, type, move) {
 			return typeMod + this.dex.getEffectiveness('Fire', type);
 		},
@@ -1920,6 +1920,11 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 	},
 	// pp changes
 	whirlwind: {
+		inherit: true,
+		pp: 10,
+		type: 'Flying'
+	},
+	thunderwave: {
 		inherit: true,
 		pp: 10,
 		type: 'Flying'

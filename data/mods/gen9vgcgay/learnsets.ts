@@ -9731,6 +9731,293 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
             ]
         }
     },
+    "golem": {
+        "inherit": true,
+        "learnset": {
+            "ancientpower": [
+                "9M"
+            ],
+            "attract": [
+                "9M"
+            ],
+            "bide": [
+                "9M"
+            ],
+            "block": [
+                "9M"
+            ],
+            "bodypress": [
+                "9M"
+            ],
+            "bodyslam": [
+                "9M"
+            ],
+            "brickbreak": [
+                "9M"
+            ],
+            "bulldoze": [
+                "9M"
+            ],
+            "captivate": [
+                "9M"
+            ],
+            "confide": [
+                "9M"
+            ],
+            "counter": [
+                "9M"
+            ],
+            "curse": [
+                "9M"
+            ],
+            "defensecurl": [
+                "9M"
+            ],
+            "dig": [
+                "9M"
+            ],
+            "doubleedge": [
+                "9M"
+            ],
+            "doubleteam": [
+                "9M"
+            ],
+            "dynamicpunch": [
+                "9M"
+            ],
+            "earthpower": [
+                "9M"
+            ],
+            "earthquake": [
+                "9M"
+            ],
+            "endure": [
+                "9M"
+            ],
+            "explosion": [
+                "9M"
+            ],
+            "facade": [
+                "9M"
+            ],
+            "fireblast": [
+                "9M"
+            ],
+            "firepunch": [
+                "9M"
+            ],
+            "fissure": [
+                "9M"
+            ],
+            "flamethrower": [
+                "9M"
+            ],
+            "fling": [
+                "9M"
+            ],
+            "focusblast": [
+                "9M"
+            ],
+            "focuspunch": [
+                "9M"
+            ],
+            "frustration": [
+                "9M"
+            ],
+            "furycutter": [
+                "9M"
+            ],
+            "gigaimpact": [
+                "9M"
+            ],
+            "gyroball": [
+                "9M"
+            ],
+            "harden": [
+                "9M"
+            ],
+            "hardpress": [
+                "9M"
+            ],
+            "headbutt": [
+                "9M"
+            ],
+            "heavyslam": [
+                "9M"
+            ],
+            "hiddenpower": [
+                "9M"
+            ],
+            "highhorsepower": [
+                "9M"
+            ],
+            "hyperbeam": [
+                "9M"
+            ],
+            "incinerate": [
+                "9M"
+            ],
+            "irondefense": [
+                "9M"
+            ],
+            "ironhead": [
+                "9M"
+            ],
+            "magnitude": [
+                "9M"
+            ],
+            "megakick": [
+                "9M"
+            ],
+            "megapunch": [
+                "9M"
+            ],
+            "metronome": [
+                "9M"
+            ],
+            "mimic": [
+                "9M"
+            ],
+            "mudshot": [
+                "9M"
+            ],
+            "mudslap": [
+                "9M"
+            ],
+            "mudsport": [
+                "9M"
+            ],
+            "naturalgift": [
+                "9M"
+            ],
+            "naturepower": [
+                "9M"
+            ],
+            "poweruppunch": [
+                "9M"
+            ],
+            "protect": [
+                "9M"
+            ],
+            "rage": [
+                "9M"
+            ],
+            "rest": [
+                "9M"
+            ],
+            "return": [
+                "9M"
+            ],
+            "roar": [
+                "9M"
+            ],
+            "rockblast": [
+                "9M"
+            ],
+            "rockclimb": [
+                "9M"
+            ],
+            "rockpolish": [
+                "9M"
+            ],
+            "rockslide": [
+                "9M"
+            ],
+            "rocksmash": [
+                "9M"
+            ],
+            "rockthrow": [
+                "9M"
+            ],
+            "rocktomb": [
+                "9M"
+            ],
+            "rollout": [
+                "9M"
+            ],
+            "round": [
+                "9M"
+            ],
+            "sandattack": [
+                "9M"
+            ],
+            "sandstorm": [
+                "9M"
+            ],
+            "scaryface": [
+                "9M"
+            ],
+            "secretpower": [
+                "9M"
+            ],
+            "seismictoss": [
+                "9M"
+            ],
+            "selfdestruct": [
+                "9M"
+            ],
+            "sleeptalk": [
+                "9M"
+            ],
+            "smackdown": [
+                "9M"
+            ],
+            "snore": [
+                "9M"
+            ],
+            "stealthrock": [
+                "9M"
+            ],
+            "steamroller": [
+                "9M"
+            ],
+            "stompingtantrum": [
+                "9M"
+            ],
+            "stoneedge": [
+                "9M"
+            ],
+            "strength": [
+                "9M"
+            ],
+            "submission": [
+                "9M"
+            ],
+            "substitute": [
+                "9M"
+            ],
+            "suckerpunch": [
+                "9M"
+            ],
+            "sunnyday": [
+                "9M"
+            ],
+            "superpower": [
+                "9M"
+            ],
+            "swagger": [
+                "9M"
+            ],
+            "tackle": [
+                "9M"
+            ],
+            "takedown": [
+                "9M"
+            ],
+            "terablast": [
+                "9M"
+            ],
+            "thunderpunch": [
+                "9M"
+            ],
+            "toxic": [
+                "9M"
+            ],
+            "shadowball": [
+                "9M"
+            ]
+        }
+    },
     "golemalola": {
         "inherit": true,
         "learnset": {
@@ -25496,9 +25783,6 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
                 "9M"
             ],
             "sunnyday": [
-                "9M"
-            ],
-            "swagger": [
                 "9M"
             ],
             "swift": [
