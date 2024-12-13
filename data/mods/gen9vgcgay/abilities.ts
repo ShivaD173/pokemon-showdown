@@ -131,16 +131,6 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 		},
 		shortDesc: "Traps target and -1 speed on contact."
 	},
-	rockhead: {
-		inherit: true,
-		shortDesc: "This Pokemon does not take recoil damage besides Struggle/Life Orb damage.",
-		onDamage(damage, target, source, effect) {
-			if (effect.id === 'recoil' || effect.id === 'mindblown' || effect.id === 'steelbeam') {
-				if (!this.activeMove) throw new Error("Battle.activeMove is null");
-				if (this.activeMove.id !== 'struggle') return null;
-			}
-		}
-	},
 	rivalry: {
 		inherit: true,
 		shortDesc: "1.5x damage on same gender, 0.9x damage on opposite gender",
@@ -266,7 +256,7 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 	},
 	illuminate: {
 		inherit: true,
-		shortDesc: "While this Pokemon is active, all moves has 1.2x accuracy.",
+		shortDesc: "While this Pokemon is active, all moves have 1.2x accuracy.",
 		onStart(pokemon) {
 			if (this.suppressingAbility(pokemon)) return;
 			this.add('-ability', pokemon, 'Illuminate');

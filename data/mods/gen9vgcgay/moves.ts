@@ -17,6 +17,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 	},
 	hypnosis: {
 		inherit: true,
+		accuracy: 55,
 		pp: 5,
 	},
 	sleeppowder: {
@@ -25,7 +26,6 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 	},
 	sing: {
 		inherit: true,
-		accuracy: 60,
 		pp: 5,
 	},
 	// Sleeping Moves
@@ -1784,7 +1784,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 	darkvoid: {
 		inherit: true,
 		isNonstandard: null,
-		accuracy: 70,
+		accuracy: 60,
 	},
 	hyperspacehole: {
 		inherit: true,
@@ -1927,7 +1927,6 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 	thunderwave: {
 		inherit: true,
 		pp: 10,
-		type: 'Flying'
 	},
 	flamethrower: {
 		inherit: true,
