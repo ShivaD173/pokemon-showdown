@@ -4162,7 +4162,8 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 			"spe": 50
 		},
 		"abilities": {
-			"0": "Intimidate",
+			"0": "Swarm",
+			"1": "Intimidate",
 			"H": "Unnerve"
 		},
 		"inherit": true

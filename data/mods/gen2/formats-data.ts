@@ -33,7 +33,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "10U",
 	},
 	butterfree: {
-		tier: "ZU",
+		tier: "SU",
 	},
 	weedle: {
 		tier: "10U",
@@ -48,7 +48,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "IU",
 	},
 	pidgeotto: {
-		tier: "SUBL",
+		tier: "SU",
 	},
 	pidgeot: {
 		tier: "NU",
@@ -81,7 +81,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "NUBL",
 	},
 	sandshrew: {
-		tier: "ZU",
+		tier: "SU",
 	},
 	sandslash: {
 		tier: "UU",
@@ -99,7 +99,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "8U",
 	},
 	nidorino: {
-		tier: "ZU",
+		tier: "SU",
 	},
 	nidoking: {
 		tier: "OU",
@@ -153,7 +153,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "8U",
 	},
 	parasect: {
-		tier: "ZU",
+		tier: "SU",
 	},
 	venonat: {
 		tier: "SU",
@@ -186,7 +186,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "NU",
 	},
 	growlithe: {
-		tier: "ZU",
+		tier: "SU",
 	},
 	arcanine: {
 		tier: "UU",
@@ -408,7 +408,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "UUBL",
 	},
 	smoochum: {
-		tier: "ZU",
+		tier: "SU",
 	},
 	jynx: {
 		tier: "OU",
@@ -495,7 +495,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "UUBL",
 	},
 	dratini: {
-		tier: "ZU",
+		tier: "SU",
 	},
 	dragonair: {
 		tier: "NU",
@@ -573,13 +573,13 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "ZU",
 	},
 	natu: {
-		tier: "ZU",
+		tier: "SU",
 	},
 	xatu: {
 		tier: "NU",
 	},
 	mareep: {
-		tier: "ZU",
+		tier: "SU",
 	},
 	flaaffy: {
 		tier: "PU",
@@ -669,7 +669,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "PU",
 	},
 	teddiursa: {
-		tier: "ZU",
+		tier: "SU",
 	},
 	ursaring: {
 		tier: "UUBL",
