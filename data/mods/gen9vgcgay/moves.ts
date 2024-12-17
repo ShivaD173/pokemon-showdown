@@ -2129,6 +2129,10 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		inherit: true,
 		isNonstandard: null,
 	},
+	bruxishblast: {
+		inherit: true,
+		isNonstandard: null,
+	},
 	lightofruin: {
 		inherit: true,
 		isNonstandard: null,
