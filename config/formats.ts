@@ -150,7 +150,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		name: "[Gen 1] SU",
 		mod: 'gen1',
 		searchShow: true,
-		ruleset: ['[Gen 1] ZU'],
+		ruleset: ['[Gen 1] ZU', 'PT Clause'],
 		banlist: ['ZU', 'SUBL', 'Confuse Ray'],
 	},
 	{
@@ -166,7 +166,6 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		searchShow: true,
 		ruleset: ['[Gen 1] IU'],
 		banlist: ['IU', '8UBL'],
-		unbanlist: ['Confuse Ray'],
 	},
 	{
 		name: "[Gen 1] 9U",
@@ -209,7 +208,6 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		mod: 'gen2',
 		searchShow: true,
 		ruleset: ['[Gen 2] SU'],
-		unbanlist: ['Swagger'],
 		banlist: ['SU', 'IUBL'],
 	},
 	{
@@ -260,9 +258,8 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		name: "[Gen 3] IU",
 		mod: 'gen3',
 		searchShow: true,
-		ruleset: ['[Gen 3] SU', '!Baton Pass Stat Trap Clause'],
+		ruleset: ['[Gen 3] SU'],
 		banlist: ['SU', 'IUBL'],
-		unbanlist: ['Baton Pass + Substitute']
 	},
 	// {
 	// 	name: "[Gen 3] Lol",
@@ -300,7 +297,6 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		searchShow: true,
 		ruleset: ['[Gen 4] ZU'],
 		banlist: ['ZU', 'SUBL', 'SU', 'IUBL', 'Heat Rock'],
-		unbanlist: ['Damp Rock'],
 	},
 	// {
 	// 	name: "[Gen 4] Lol",

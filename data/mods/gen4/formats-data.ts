@@ -480,7 +480,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "(OU)",
 	},
 	flareon: {
-		tier: "ZU",
+		tier: "SU",
 	},
 	espeon: {
 		tier: "RU",
@@ -642,7 +642,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "LC",
 	},
 	sudowoodo: {
-		tier: "ZU",
+		tier: "SU",
 	},
 	hoppip: {
 		tier: "LC",
@@ -943,7 +943,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "SUBL",
 	},
 	slaking: {
-		tier: "SUBL",
+		tier: "ZU",
 	},
 	nincada: {
 		tier: "LC",
@@ -1009,7 +1009,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "NU",
 	},
 	plusle: {
-		tier: "SUBL",
+		tier: "ZU",
 	},
 	minun: {
 		tier: "SUBL",
