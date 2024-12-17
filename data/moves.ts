@@ -22398,7 +22398,7 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		name: "Bruxish Blast",
 		pp: 10,
 		priority: 0,
-		flags: {protect: 1, mirror: 1, metronome: 1},
+		flags: {protect: 1, mirror: 1, contact: 1, metronome: 1, bite: 1},
 		onBasePower(basePower, source) {
 			if (this.field.isTerrain('psychicterrain') && source.isGrounded()) {
 				this.debug('terrain buff');

@@ -7656,4 +7656,9 @@ export const MovesText: {[id: IDEntry]: MoveText} = {
 		activate: "  [POKEMON] is considering the proposition with [TARGET]!",
 		cant: "[POKEMON] is taking the proposition!",
 	},
+	bruxishblast: {
+		name: "Bruxish Blast",
+		desc: "If the current terrain is Psychic Terrain and the user is grounded, this move hits all opposing Pokemon and has its power multiplied by 1.5. Counts as a biting move.",
+		shortDesc: "User on Psychic Terrain: 1.5x power, hits foes.",
+	},
 };
