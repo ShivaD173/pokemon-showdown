@@ -6666,4 +6666,22 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		rating: 2.5,
 		num: 151,
 	},
+	stuckinthepast: {
+		onTryBoostPriority: 2,
+		onTryBoost(boost, target, source, effect) {
+			if (boost.spa) {
+				delete boost.spa;
+				this.boost({spd: 1}, target, target, null, false, true);
+			}
+		},
+		onModifyMove(move){
+			if (move.category === 'Special') {
+				move.overrideOffensiveStat = 'spd';
+			}
+		},
+		flags: {},
+		name: "Stuck In The Past",
+		rating: 2.5,
+		num: -63,
+	},
 };
