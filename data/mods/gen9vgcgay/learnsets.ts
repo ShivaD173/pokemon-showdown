@@ -75645,10 +75645,10 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
             "mist": [
                 "9M"
             ],
-            "aromaticmist": [
+            "mistyterrain": [
                 "9M"
             ],
-            "mistyterrain": [
+            "terrainpulse": [
                 "9M"
             ]
         }
@@ -78012,6 +78012,9 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
                 "9M"
             ],
             "upperhand": [
+                "9M"
+            ],
+            "drainpunch": [
                 "9M"
             ]
         }
@@ -86820,6 +86823,12 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
             ],
             "return": [
                 "9M"
+            ],
+            "psychicfangs": [
+                "9M"
+            ],
+            "thunderfang": [
+                "9M"
             ]
         }
     },
@@ -94732,6 +94741,9 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
                 "9M"
             ],
             "terablast": [
+                "9M"
+            ],
+            "flatter": [
                 "9M"
             ]
         }
@@ -107677,6 +107689,9 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
                 "9M"
             ],
             "wonderroom": [
+                "9M"
+            ],
+            "bruxishblast": [
                 "9M"
             ]
         }

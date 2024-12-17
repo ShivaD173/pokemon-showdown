@@ -617,6 +617,15 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		],
 	},
 	// Near Signaure Moves
+	aromaticmist: {
+		inherit: true,
+		shortDesc: "Gives an ally +1 SpD. Misty Terrain: +1 SpA.",
+		onHit(target, source, move) {
+			if (this.field.isTerrain('mistyterrain')) {
+				target.boostBy({spa: 1});
+			}
+		},
+	},
 	veeveevolley: {
 		inherit: true,
 		isNonstandard: null,

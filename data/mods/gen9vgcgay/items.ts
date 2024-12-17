@@ -26,6 +26,16 @@ export const Items: import('../../../sim/dex-items').ModdedItemDataTable = {
 			}
 		},
 	},
+	bigroot: {
+		inherit: true,
+		shortDesc: "Holder gains 1.5x HP from draining/Aqua Ring/Ingrain/Leech Seed/Strength Sap.",
+		onTryHeal(damage, target, source, effect) {
+			const heals = ['drain', 'leechseed', 'ingrain', 'aquaring', 'strengthsap'];
+			if (heals.includes(effect.id)) {
+				return this.chainModify([6144, 4096]);
+			}
+		},
+	},
 	luckypunch: {
 		inherit: true,
 		isNonstandard: null,

@@ -493,7 +493,12 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 	},
 	toxicboost: {
 		inherit: true,
-		shortDesc: "While Pokemon is poisoned, its physical attacks have 1.5x power, Immune to psn dmg.",
+		shortDesc: "While Pokemon is poisoned, its attacks have 1.5x power, Immune to psn dmg.",
+		onBasePower(basePower, attacker, defender, move) {
+			if ((attacker.status === 'psn' || attacker.status === 'tox')) {
+				return this.chainModify(1.5);
+			}
+		},
 		onDamage(damage, target, source, effect) {
 			if (effect.name === 'psn' || effect.name === 'tox') {
 				return false;

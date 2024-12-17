@@ -517,8 +517,8 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		"tier": "Illegal"
 	},
 	"slowbro": {
-		"isNonstandard": "Past",
-		"tier": "Illegal"
+		"isNonstandard": null,
+		"tier": "OU"
 	},
 	"slowbromega": {
 		"isNonstandard": "Past",
@@ -1133,8 +1133,8 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		"tier": "Illegal"
 	},
 	"slowking": {
-		"isNonstandard": "Past",
-		"tier": "Illegal"
+		"isNonstandard": null,
+		"tier": "OU"
 	},
 	"slowkinggalar": {
 		"isNonstandard": null,

@@ -666,6 +666,25 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 		},
 		"inherit": true
 	},
+	"slowbro": {
+		"types": [
+			"Water",
+			"Psychic"
+		],
+		"baseStats": {
+			"hp": 95,
+			"atk": 75,
+			"def": 110,
+			"spa": 100,
+			"spd": 80,
+			"spe": 30
+		},
+		"abilities": {
+			"0": "Oblivious",
+			"H": "Regenerator"
+		},
+		"inherit": true
+	},
 	"slowbrogalar": {
 		"types": [
 			"Poison",
@@ -1904,6 +1923,26 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 			"0": "Synchronize",
 			"1": "Magic Guard",
 			"H": "Inner Focus"
+		},
+		"inherit": true
+	},
+	"slowking": {
+		"types": [
+			"Water",
+			"Psychic"
+		],
+		"baseStats": {
+			"hp": 95,
+			"atk": 65,
+			"def": 85,
+			"spa": 110,
+			"spd": 115,
+			"spe": 30
+		},
+		"abilities": {
+			"0": "Toxic Boost",
+			"1": "Regal Majesty",
+			"H": "Regenerator"
 		},
 		"inherit": true
 	},
