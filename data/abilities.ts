@@ -6670,8 +6670,8 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		onTryBoostPriority: 2,
 		onTryBoost(boost, target, source, effect) {
 			if (boost.spa) {
+				this.boost({spd: boost.spa}, target, target, null, false, true);
 				delete boost.spa;
-				this.boost({spd: 1}, target, target, null, false, true);
 			}
 		},
 		onModifyMove(move){
