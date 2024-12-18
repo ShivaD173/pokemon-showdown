@@ -603,7 +603,7 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		contestType: "Clever",
 	},
 	aromaticmist: {
-		num: 597,
+		num: 597, 
 		accuracy: true,
 		basePower: 0,
 		category: "Status",
