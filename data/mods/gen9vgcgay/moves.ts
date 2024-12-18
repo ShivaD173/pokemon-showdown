@@ -631,10 +631,8 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 	aromaticmist: {
 		inherit: true,
 		shortDesc: "Gives an ally +1 SpD. Misty Terrain: +1 SpA.",
-		onHit(target, source, move) {
-			if (this.field.isTerrain('mistyterrain')) {
-				target.boostBy({spa: 1});
-			}
+		onModifyMove(move, pokemon) {
+			if (this.field.isTerrain('mistyterrain')) move.boosts = {spa: 1, spd: 1};
 		},
 	},
 	veeveevolley: {
