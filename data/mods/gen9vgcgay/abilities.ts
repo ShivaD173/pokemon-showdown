@@ -1590,4 +1590,8 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 		inherit: true,
 		isNonstandard: null,
 	},
+	stuckinthepast: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };

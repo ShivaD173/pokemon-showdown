@@ -1764,6 +1764,9 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
             ],
             "megakick": [
                 "9M"
+            ],
+            "focusblast": [
+                "9M"
             ]
         }
     },
@@ -45067,6 +45070,9 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
                 "9M"
             ],
             "wavecrash": [
+                "9M"
+            ],
+            "expandingmaws": [
                 "9M"
             ]
         }
@@ -107691,7 +107697,7 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
             "wonderroom": [
                 "9M"
             ],
-            "bruxishblast": [
+            "expandingmaws": [
                 "9M"
             ]
         }
@@ -129954,6 +129960,9 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
             ],
             "weatherball": [
                 "9M"
+            ],
+            "expandingmaws": [
+                "9M"
             ]
         }
     },
@@ -137347,6 +137356,9 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
                 "9M"
             ],
             "psychout": [
+                "9M"
+            ],
+            "expandingmaws": [
                 "9M"
             ]
         }

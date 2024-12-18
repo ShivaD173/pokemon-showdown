@@ -2543,4 +2543,9 @@ export const AbilitiesText: {[id: IDEntry]: AbilityText} = {
 		desc: "This Pokemon's moves ignore substitutes, protects and the opposing side's Reflect, Light Screen, Safeguard, Mist, and Aurora Veil.",
 		shortDesc: "Moves ignore Protects, Substitute, Screens, Safeguard, and Mist.",
 	},
+	stuckinthepast: {
+		name: "Stuck In The Past",
+		desc: "This Pokemon uses its Special Defense stat as if it were its Special Attack stat. Stat changes to its Special Attack stat change its Special Defense instead.",
+		shortDesc: "This Pokemon's Special Defense stat is its Special stat."
+	}
 };

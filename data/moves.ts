@@ -22389,6 +22389,35 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		zMove: {effect: 'clearnegativeboost'},
 		contestType: "Cute",
 	},
+	expandingmaws: {
+		num: 0,
+		basePower: 80,
+		accuracy: 100,
+		category: "Physical",
+		isNonstandard: "CAP",
+		name: "Expanding Maws",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, contact: 1, metronome: 1, bite: 1},
+		onBasePower(basePower, source) {
+			if (this.field.isTerrain('psychicterrain') && source.isGrounded()) {
+				this.debug('terrain buff');
+				return this.chainModify(1.5);
+			}
+		},
+		onModifyMove(move, source, target) {
+			if (this.field.isTerrain('psychicterrain') && source.isGrounded()) {
+				move.target = 'allAdjacentFoes';
+			}
+		},
+		onPrepareHit(target, source, move) {
+			this.attrLastMove('[still]');
+			this.add('-anim', source, "Psychic Fangs", target);
+		},
+		secondary: null,
+		target: "normal",
+		type: "Psychic",
+	},
 
 	// CAP moves
 

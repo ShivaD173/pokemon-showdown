@@ -15,6 +15,17 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 			}
 		},
 	},
+	afteryou: {
+		inherit: true,
+		pp: 10,
+		shortDesc: "Target makes its move next. Fails if priority.",
+		onTryMove(attacker, defender, move) {
+			if (move.pranksterBoosted) {
+				this.add('-fail', attacker, 'move: After You');
+				return null;
+			}
+		},
+	},
 	hypnosis: {
 		inherit: true,
 		accuracy: 55,
@@ -2135,6 +2146,10 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		},
 	},
 	proposition: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	expandingmaws: {
 		inherit: true,
 		isNonstandard: null,
 	},

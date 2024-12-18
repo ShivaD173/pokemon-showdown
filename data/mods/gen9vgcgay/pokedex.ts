@@ -107,7 +107,7 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 			"hp": 83,
 			"atk": 80,
 			"def": 75,
-			"spa": 130,
+			"spa": 120,
 			"spd": 75,
 			"spe": 116
 		},
@@ -681,6 +681,7 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 		},
 		"abilities": {
 			"0": "Oblivious",
+			"1": "Stuck In The Past",
 			"H": "Regenerator"
 		},
 		"inherit": true
