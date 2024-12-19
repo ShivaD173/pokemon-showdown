@@ -20547,6 +20547,9 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
             ],
             "fellstinger": [
                 "9M"
+            ],
+            "uturn": [
+                "9M"
             ]
         }
     },
@@ -137359,6 +137362,9 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
                 "9M"
             ],
             "expandingmaws": [
+                "9M"
+            ],
+            "flashfreeze": [
                 "9M"
             ]
         }

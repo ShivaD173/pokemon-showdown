@@ -2117,7 +2117,7 @@ export const Rulesets: import('../sim/dex-formats').FormatDataTable = {
 		desc: "Bans the combination of Agility and partial trapping moves like Wrap.",
 		banlist: ['Agility + Wrap', 'Agility + Fire Spin', 'Agility + Bind', 'Agility + Clamp'],
 	},
-	ptclause: {
+	partialtrappingclause: {
 		effectType: 'ValidatorRule',
 		name: 'Partial Trapping Clause',
 		desc: "Bans all partial trapping moves like Wrap.",
