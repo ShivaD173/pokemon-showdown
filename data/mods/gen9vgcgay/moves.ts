@@ -48,6 +48,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 	dreameater: {
 		inherit: true,
 		shortDesc: "User or Target must be sleeping. Heal 50%.",
+		pp: 5,
 		onTryImmunity(target, source) {
 			return target.status === 'slp' || target.hasAbility('comatose') ||
 					source.status === 'slp' || source.hasAbility('comatose');
@@ -1058,6 +1059,10 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 			},
 		},
 	},
+	psyshieldbash: {
+		inherit: true,
+		accuracy: 100
+	},
 	twinbeam: {
 		inherit: true,
 		shortDesc: "Hits twice. Doubles: Tries to hit each foe once.",
@@ -1827,7 +1832,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		basePower: 130,
 		shortDesc: "User recharge if doesn't KO. Dialga-O: No Recharge.",
 		onHit(target, source) {
-			if (target.hp || source.species.name === 'Dialga-Origin') {
+			if (target.hp && source.species.name !== 'Dialga-Origin') {
 				source.addVolatile('mustrecharge');
 			}
 		},

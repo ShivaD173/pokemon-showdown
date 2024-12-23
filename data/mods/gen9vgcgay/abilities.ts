@@ -1244,21 +1244,21 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 	// turboblaze/teravolt buffs
 	turboblaze: {
 		inherit: true,
-		shortDesc: "Mold Breaker. Fire moves: 1.3x when resisted.",
+		shortDesc: "Mold Breaker. Fire moves: 1.2x when resisted.",
 		onModifyDamage(damage, source, target, move) {
 			if (target.getMoveHitData(move).typeMod < 0 && move.type === 'Fire') {
 				this.debug('Turboblaze boost');
-				return this.chainModify(1.3);
+				return this.chainModify([4915, 4096]);
 			}
 		},
 	},
 	teravolt: {
 		inherit: true,
-		shortDesc: "Mold Breaker. Electric moves: Immunity becomes resistance, 1.3x when resisted.",
+		shortDesc: "Mold Breaker. Electric moves: Immunity becomes resistance, 1.2x when resisted.",
 		onModifyDamage(damage, source, target, move) {
 			if (target.getMoveHitData(move).typeMod < 0 && move.type === 'Electric') {
 				this.debug('Teravolt boost');
-				return this.chainModify(1.3);
+				return this.chainModify([4915, 4096]);
 			}
 		},
 		onModifyMovePriority: -5,

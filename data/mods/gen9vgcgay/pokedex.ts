@@ -673,10 +673,10 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 		],
 		"baseStats": {
 			"hp": 95,
-			"atk": 75,
-			"def": 110,
+			"atk": 100,
+			"def": 100,
 			"spa": 100,
-			"spd": 80,
+			"spd": 75,
 			"spe": 30
 		},
 		"abilities": {
@@ -909,7 +909,7 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 			"Ghost"
 		],
 		"baseStats": {
-			"hp": 65,
+			"hp": 60,
 			"atk": 80,
 			"def": 110,
 			"spa": 50,
@@ -7023,11 +7023,11 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 			"Fairy"
 		],
 		"baseStats": {
-			"hp": 111,
+			"hp": 106,
 			"atk": 82,
-			"def": 82,
+			"def": 77,
 			"spa": 109,
-			"spd": 99,
+			"spd": 94,
 			"spe": 29
 		},
 		"abilities": {
@@ -11117,12 +11117,12 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 			"Grass"
 		],
 		"baseStats": {
-			"hp": 155,
-			"atk": 55,
-			"def": 75,
-			"spa": 110,
-			"spd": 120,
-			"spe": 45
+			"hp": 115,
+			"atk": 80,
+			"def": 90,
+			"spa": 95,
+			"spd": 125,
+			"spe": 55
 		},
 		"abilities": {
 			"0": "Tablets of Ruin"
@@ -12851,8 +12851,8 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 			"Fairy"
 		],
 		"baseStats": {
-			"hp": 80,
-			"atk": 95,
+			"hp": 75,
+			"atk": 100,
 			"def": 115,
 			"spa": 130,
 			"spd": 115,
@@ -13030,9 +13030,9 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 		],
 		"baseStats": {
 			"hp": 90,
-			"atk": 165,
+			"atk": 160,
 			"def": 150,
-			"spa": 95,
+			"spa": 100,
 			"spd": 130,
 			"spe": 50
 		},
@@ -13048,9 +13048,9 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 		],
 		"baseStats": {
 			"hp": 90,
-			"atk": 95,
+			"atk": 100,
 			"def": 80,
-			"spa": 165,
+			"spa": 160,
 			"spd": 100,
 			"spe": 150
 		},
