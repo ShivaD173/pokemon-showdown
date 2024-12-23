@@ -3016,7 +3016,7 @@ export class Battle {
 		return team as PokemonSet[];
 	}
 
-	showOpenTeamSheets(hideFromSpectators = false) {
+	showOpenTeamSheets() {
 		if (this.turn !== 0) return;
 		for (const side of this.sides) {
 			const team = side.pokemon.map(pokemon => {
@@ -3053,13 +3053,8 @@ export class Battle {
 				}
 				return newSet;
 			});
-			if (hideFromSpectators) {
-				for (const s of this.sides) {
-					this.addSplit(s.id, ['showteam', side.id, Teams.pack(team)]);
-				}
-			} else {
-				this.add('showteam', side.id, Teams.pack(team));
-			}
+
+			this.add('showteam', side.id, Teams.pack(team));
 		}
 	}
 
