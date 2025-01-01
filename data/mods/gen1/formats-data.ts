@@ -6,7 +6,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "SU",
 	},
 	venusaur: {
-		tier: "NU",
+		tier: "PU",
 	},
 	charmander: {
 		tier: "IU",
@@ -63,7 +63,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "8U",
 	},
 	fearow: {
-		tier: "PU",
+		tier: "NU",
 	},
 	ekans: {
 		tier: "9UBL",
@@ -99,7 +99,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "IU",
 	},
 	nidoking: {
-		tier: "NU",
+		tier: "PU",
 	},
 	clefairy: {
 		tier: "SU",
@@ -117,7 +117,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "8U",
 	},
 	wigglytuff: {
-		tier: "NU",
+		tier: "PU",
 	},
 	zubat: {
 		tier: "9U",
@@ -162,7 +162,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "IU",
 	},
 	golduck: {
-		tier: "NU",
+		tier: "PU",
 	},
 	mankey: {
 		tier: "8U",
@@ -174,7 +174,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "8U",
 	},
 	arcanine: {
-		tier: "PU",
+		tier: "NU",
 	},
 	poliwag: {
 		tier: "ZU",
@@ -243,7 +243,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "IU",
 	},
 	magneton: {
-		tier: "SUBL",
+		tier: "NU",
 	},
 	farfetchd: {
 		tier: "IU",
@@ -294,7 +294,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "9U",
 	},
 	kingler: {
-		tier: "NU",
+		tier: "PU",
 	},
 	voltorb: {
 		tier: "SU",
@@ -303,7 +303,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "UU",
 	},
 	exeggcute: {
-		tier: "NU",
+		tier: "PU",
 	},
 	exeggutor: {
 		tier: "OU",
