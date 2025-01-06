@@ -5253,7 +5253,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		tier: "LC",
 	},
 	palafin: {
-		tier: "(OU)",
+		tier: "Uber",
 		doublesTier: "(DUU)",
 		natDexTier: "Uber",
 	},
