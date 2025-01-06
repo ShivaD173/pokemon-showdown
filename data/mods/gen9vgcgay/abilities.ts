@@ -826,7 +826,7 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 	},
 	gulpmissile: {
 		inherit: true,
-		shortDesc: "When hit after Surf/Dive and start, attacker takes 33% and -1 Def or Para",
+		shortDesc: "When hit after Surf/Dive and start, attacker takes 33% and -1 Def or Para.",
 		onSwitchIn(pokemon) {
 			if (
 				pokemon.hasAbility('gulpmissile') && pokemon.species.name === 'Cramorant'

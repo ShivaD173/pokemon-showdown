@@ -1078,10 +1078,7 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 			"1": "Filter",
 			"H": "Technician"
 		},
-		"inherit": true,
-		"evos": [
-			"Mr. Rime"
-		]
+		"inherit": true
 	},
 	"mrmimegalar": {
 		"types": [
@@ -1101,7 +1098,10 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 			"1": "Screen Cleaner",
 			"H": "Ice Body"
 		},
-		"inherit": true
+		"inherit": true,
+		"evos": [
+			"Mr. Mime"
+		]
 	},
 	"jynx": {
 		"types": [
