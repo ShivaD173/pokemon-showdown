@@ -803,7 +803,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 	},
 	upperhand: {
 		inherit: true,
-		shortDesc: "100% flinch. Fails unless target using priority (includes status).",
+		shortDesc: "100% flinch. Fails unless target using ANY priority.",
 		onTry(source, target) {
 			const action = this.queue.willMove(target);
 			const move = action?.choice === 'move' ? action.move : null;

@@ -3968,6 +3968,9 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
             ],
             "chillingwater": [
                 "9M"
+            ],
+            "megahorn": [
+                "9M"
             ]
         }
     },
