@@ -164,7 +164,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 	tailslap: {
 		"inherit": true,
 		"accuracy": 100,
-		shortDesc: "Hits 3-5 Times",
+		shortDesc: "Hits 3-5 Times.",
 		multihit: [3, 5],
 	},
 	"flameburst": {
@@ -1042,7 +1042,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 	},
 	ragefist: {
 		inherit: true,
-		shortDesc: "+50 power each time user was hit. Max: 1000bp",
+		shortDesc: "+50 power each time user was hit. Max: 1000bp.",
 		basePowerCallback(pokemon) {
 			return Math.min(1000, 50 + 50 * pokemon.timesAttacked);
 		},
@@ -1193,9 +1193,9 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 	fairylock: {
 		inherit: true,
 		isNonstandard: null,
-		shortDesc: "Prevents all Pokemon from switching for next 3 turns.",
+		shortDesc: "Prevents all Pokemon from switching for 3 turns.",
 		condition: {
-			duration: 4,
+			duration: 3,
 			onFieldStart(target) {
 				this.add('-fieldactivate', 'move: Fairy Lock');
 			},

@@ -3139,7 +3139,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		tier: "LC",
 	},
 	whimsicott: {
-		tier: "NU",
+		tier: "ZU",
 		doublesTier: "DOU",
 		natDexTier: "ZU",
 	},
