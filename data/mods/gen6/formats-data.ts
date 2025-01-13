@@ -761,7 +761,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "LC",
 	},
 	croconaw: {
-		tier: "IU",
+		tier: "SU",
 	},
 	feraligatr: {
 		tier: "UU",
@@ -814,7 +814,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		doublesTier: "DOU",
 	},
 	natu: {
-		tier: "IU",
+		tier: "SU",
 	},
 	xatu: {
 		tier: "NU",
@@ -1039,7 +1039,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		doublesTier: "(DUU)",
 	},
 	stantler: {
-		tier: "SU",
+		tier: "IU",
 		doublesTier: "(DUU)",
 	},
 	smeargle: {
@@ -1240,7 +1240,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		doublesTier: "NFE",
 	},
 	slaking: {
-		tier: "SU",
+		tier: "IU",
 		doublesTier: "(DUU)",
 	},
 	nincada: {
@@ -1386,7 +1386,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "LC",
 	},
 	wailord: {
-		tier: "SU",
+		tier: "IU",
 		doublesTier: "(DUU)",
 	},
 	numel: {
@@ -1452,7 +1452,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		doublesTier: "(DUU)",
 	},
 	lunatone: {
-		tier: "SU",
+		tier: "IU",
 		doublesTier: "(DUU)",
 	},
 	solrock: {
@@ -1700,7 +1700,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "LC",
 	},
 	grotle: {
-		tier: "SU",
+		tier: "IU",
 	},
 	torterra: {
 		tier: "NU",
@@ -2471,7 +2471,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "LC",
 	},
 	lampent: {
-		tier: "IU",
+		tier: "SU",
 	},
 	chandelure: {
 		tier: "UU",
@@ -2566,7 +2566,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "LC",
 	},
 	zweilous: {
-		tier: "SU",
+		tier: "IU",
 	},
 	hydreigon: {
 		tier: "UU",
@@ -2791,7 +2791,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 	aegislashblade: {
 	},
 	spritzee: {
-		tier: "SU",
+		tier: "IU",
 	},
 	aromatisse: {
 		tier: "RU",
