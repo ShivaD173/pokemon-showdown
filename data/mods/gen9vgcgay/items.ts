@@ -26,6 +26,25 @@ export const Items: import('../../../sim/dex-items').ModdedItemDataTable = {
 			}
 		},
 	},
+	widelens: {
+		inherit: true,
+		shortDesc: "The accuracy of attacks by the holder is 1.111x.",
+		onSourceModifyAccuracy(accuracy) {
+			if (typeof accuracy === 'number') {
+				return this.chainModify([4551, 4096]);
+			}
+		},
+	},
+	zoomlens: {
+		inherit: true,
+		shortDesc: "The accuracy of attacks by the holder is 1.25x if it moves after its target.",
+		onSourceModifyAccuracy(accuracy, target) {
+			if (typeof accuracy === 'number' && !this.queue.willMove(target)) {
+				this.debug('Zoom Lens boosting accuracy');
+				return this.chainModify([5120, 4096]);
+			}
+		},
+	},
 	bigroot: {
 		inherit: true,
 		shortDesc: "Holder gains 1.5x HP from draining/Aqua Ring/Ingrain/Leech Seed/Strength Sap.",

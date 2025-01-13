@@ -2371,8 +2371,8 @@ export const AbilitiesText: {[id: IDEntry]: AbilityText} = {
 	},
 	catscradle: {
 		name: "Cat's Cradle",
-		desc: "If the opponent tries to switch out, this pokemon attacks immediately at 2x power.",
-		shortDesc: "If the opponent tries to switch out, this pokemon attacks immediately at 2x power.",
+		desc: "If target is switching, this pokemon attacks immediately 2x power. If this pokemon is using a spread move, the ability triggers on any switch.",
+		shortDesc: "If target is switching, attacks immediately 2x power. If Spread, any switch triggers.",
 	},
 	superduperluck: {
 		name: "Super Duper Luck",

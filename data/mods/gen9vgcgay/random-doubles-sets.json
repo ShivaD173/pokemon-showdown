@@ -7,7 +7,7 @@
 					"Clear Smog",
 					"Helping Hand",
 					"Armor Cannon",
-					"Follow Me"
+					"Protect"
 				],
 				"items": [
 					"Sitrus Berry"
@@ -120,9 +120,25 @@
 				"items": [
 					"Choice Scarf"
 				],
-				"ability": "Beast Boost",
+				"ability": "Reckless",
 				"teraTypes": [
 					"Fire"
+				]
+			},
+			{
+				"role": "Sash",
+				"movepool": [
+					"Shadow Ball",
+					"Heat Wave",
+					"Overheat",
+					"Protect"
+				],
+				"items": [
+					"Focus Sash"
+				],
+				"ability": "Beast Boost",
+				"teraTypes": [
+					"Stellar"
 				]
 			}
 		]
@@ -674,7 +690,7 @@
 				],
 				"ability": "Regenerator",
 				"teraTypes": [
-					"Grass"
+					"Water"
 				]
 			}
 		]
@@ -820,15 +836,15 @@
 			{
 				"role": "Sash",
 				"movepool": [
-					"Shadow Ball",
+					"G-Max Terror",
 					"Fire Blast",
-					"Energy Ball",
+					"Trick Room",
 					"Protect"
 				],
 				"items": [
 					"Focus Sash"
 				],
-				"ability": "Shadow Tagged",
+				"ability": "Flash Fire",
 				"teraTypes": [
 					"Grass"
 				]
@@ -836,7 +852,7 @@
 			{
 				"role": "Scarf",
 				"movepool": [
-					"Shadow Ball",
+					"G-Max Terror",
 					"Overheat",
 					"Energy Ball",
 					"Heat Wave"
@@ -844,7 +860,7 @@
 				"items": [
 					"Choice Scarf"
 				],
-				"ability": "Flash Fire",
+				"ability": "Infiltrator",
 				"teraTypes": [
 					"Grass"
 				]
@@ -919,6 +935,22 @@
 				],
 				"items": [
 					"Leftovers"
+				],
+				"ability": "Flash Fire",
+				"teraTypes": [
+					"Grass"
+				]
+			},
+			{
+				"role": "Magma Tran",
+				"movepool": [
+					"Magma Storm",
+					"Protect",
+					"Earth Power",
+					"Flash Cannon"
+				],
+				"items": [
+					"Zoom Lens"
 				],
 				"ability": "Flash Fire",
 				"teraTypes": [
@@ -1302,7 +1334,7 @@
 				],
 				"ability": "Illuminate",
 				"teraTypes": [
-					"Ice"
+					"Electric"
 				]
 			}
 		]
@@ -1314,15 +1346,15 @@
 				"movepool": [
 					"Heavy Slam",
 					"Dig",
-					"Stalacbite",
-					"Power-Up Punch"
+					"Rock Slide",
+					"Superpower"
 				],
 				"items": [
 					"Assault Vest"
 				],
 				"ability": "Earth Eater",
 				"teraTypes": [
-					"Steel"
+					"Ghost"
 				]
 			}
 		]
@@ -1405,7 +1437,7 @@
 				"role": "Prankster Supp",
 				"movepool": [
 					"Knock Off",
-					"Shadow Claw",
+					"Poltergeist",
 					"Destiny Bond",
 					"Will-O-Wisp"
 				],
@@ -2366,6 +2398,22 @@
 				"teraTypes": [
 					"Fighting"
 				]
+			},
+			{
+				"role": "Technotop",
+				"movepool": [
+					"Fake Out",
+					"Close Combat",
+					"Hidden Power Ghost",
+					"Triple Axel"
+				],
+				"items": [
+					"Clear Amulet"
+				],
+				"ability": "Technician",
+				"teraTypes": [
+					"Fighting"
+				]
 			}
 		]
 	},
@@ -2411,16 +2459,16 @@
 				"role": "Snow Support",
 				"movepool": [
 					"Blizzard",
-					"Whirlpool",
 					"Encore",
-					"Flash Freeze"
+					"Flash Freeze",
+					"Whirlpool"
 				],
 				"items": [
 					"Sitrus Berry"
 				],
 				"ability": "Arctic Rush",
 				"teraTypes": [
-					"Water"
+					"Grass"
 				]
 			}
 		]
@@ -2570,7 +2618,7 @@
 				"items": [
 					"Sitrus Berry"
 				],
-				"ability": "Singularity",
+				"ability": "Frisk",
 				"teraTypes": [
 					"Normal"
 				]
@@ -3144,7 +3192,7 @@
 				],
 				"ability": "Inner Focus",
 				"teraTypes": [
-					"Ghost"
+					"Dark"
 				]
 			}
 		]
@@ -3180,11 +3228,11 @@
 					"Protect"
 				],
 				"items": [
-					"Psychic Seed"
+					"White Herb"
 				],
 				"ability": "Unburden",
 				"teraTypes": [
-					"Poison"
+					"Fighting"
 				]
 			}
 		]
@@ -3197,7 +3245,7 @@
 					"Hydro Pump",
 					"Icy Wind",
 					"Freeze-Dry",
-					"Flash Freeze"
+					"Protect"
 				],
 				"items": [
 					"Booster Energy"
@@ -3332,8 +3380,8 @@
 				"movepool": [
 					"Wave Crash",
 					"Last Respects",
-					"Outrage",
-					"Head Smash"
+					"Flip Turn",
+					"Protect"
 				],
 				"items": [
 					"Life Orb"
@@ -3407,9 +3455,9 @@
 				"role": "SunRoom Sweeper",
 				"movepool": [
 					"Solar Beam",
-					"Sludge Bomb",
-					"Morning Sun",
-					"Earth Power"
+					"Fire Blast",
+					"Earth Power",
+					"Morning Sun"
 				],
 				"items": [
 					"Sitrus Berry"
@@ -3694,7 +3742,7 @@
 			{
 				"role": "He Ballin",
 				"movepool": [
-					"Energy Ball",
+					"Shadow Ball",
 					"Close Combat",
 					"Knock Off",
 					"Protect"
@@ -3704,7 +3752,7 @@
 				],
 				"ability": "Ballin'",
 				"teraTypes": [
-					"Fighting"
+					"Ghost"
 				]
 			}
 		]
@@ -3781,6 +3829,26 @@
 				"ability": "Supreme Overlord",
 				"teraTypes": [
 					"Fire"
+				]
+			}
+		]
+	},
+	"cranidos": {
+		"sets": [
+			{
+				"role": "Sash",
+				"movepool": [
+					"Head Smash",
+					"Flare Blitz",
+					"Double-Edge",
+					"Superpower"
+				],
+				"items": [
+					"Focus Sash"
+				],
+				"ability": "Rock Head",
+				"teraTypes": [
+					"Rock"
 				]
 			}
 		]
@@ -3918,6 +3986,22 @@
 				"teraTypes": [
 					"Steel"
 				]
+			},
+			{
+				"role": "TR Setter",
+				"movepool": [
+					"Mystical Power",
+					"Trick Room",
+					"U-turn",
+					"Yawn"
+				],
+				"items": [
+					"Leftovers"
+				],
+				"ability": "Levitate",
+				"teraTypes": [
+					"Steel"
+				]
 			}
 		]
 	},
@@ -3966,7 +4050,7 @@
 			{
 				"role": "Fast Support",
 				"movepool": [
-					"Shadow Ball",
+					"G-Max Terror",
 					"Focus Blast",
 					"Taunt",
 					"Destiny Bond"
@@ -3974,7 +4058,23 @@
 				"items": [
 					"Wiki Berry"
 				],
-				"ability": "Shadow Tagged",
+				"ability": "Levitate",
+				"teraTypes": [
+					"Fighting"
+				]
+			},
+			{
+				"role": "LO Mystic Fist",
+				"movepool": [
+					"Ice Punch",
+					"Shadow Punch",
+					"Focus Blast",
+					"Sludge Bomb"
+				],
+				"items": [
+					"Life Orb"
+				],
+				"ability": "Mystic Fist",
 				"teraTypes": [
 					"Fighting"
 				]
@@ -4153,6 +4253,22 @@
 				"ability": "Sword of Ruin",
 				"teraTypes": [
 					"Ghost"
+				]
+			},
+			{
+				"role": "Assault Vest",
+				"movepool": [
+					"Sucker Punch",
+					"Sacred Sword",
+					"Tera Blast",
+					"Ice Spinner"
+				],
+				"items": [
+					"Assault Vest"
+				],
+				"ability": "Sword of Ruin",
+				"teraTypes": [
+					"Electric"
 				]
 			}
 		]
@@ -4622,7 +4738,7 @@
 				"movepool": [
 					"Tailwind",
 					"Taunt",
-					"Brave Bird",
+					"Detect",
 					"Head Smash"
 				],
 				"items": [
@@ -4638,7 +4754,7 @@
 				"movepool": [
 					"Tailwind",
 					"Protect",
-					"Brave Bird",
+					"Dual Wingbeat",
 					"Head Smash"
 				],
 				"items": [
@@ -4885,16 +5001,32 @@
 				"role": "Crit",
 				"movepool": [
 					"Focus Energy",
-					"Snarl",
+					"Dark Pulse",
 					"Draco Meteor",
-					"Fire Blast"
+					"Heat Wave"
 				],
 				"items": [
 					"Scope Lens"
 				],
+				"ability": "Levitate",
+				"teraTypes": [
+					"Fire"
+				]
+			},
+			{
+				"role": "Specs",
+				"movepool": [
+					"Snarl",
+					"Dark Pulse",
+					"Draco Meteor",
+					"Heat Wave"
+				],
+				"items": [
+					"Choice Specs"
+				],
 				"ability": "Triple Threat",
 				"teraTypes": [
-					"Dark"
+					"Fire"
 				]
 			}
 		]
@@ -5382,7 +5514,7 @@
 				],
 				"ability": "Skill Link",
 				"teraTypes": [
-					"Bug"
+					"Rock"
 				]
 			}
 		]
@@ -5402,7 +5534,7 @@
 				],
 				"ability": "Snow Warning",
 				"teraTypes": [
-					"Grass"
+					"Water"
 				]
 			}
 		]
@@ -5499,6 +5631,22 @@
 				"ability": "Technician",
 				"teraTypes": [
 					"Normal"
+				]
+			},
+			{
+				"role": "Unnerve Supp",
+				"movepool": [
+					"Fake Out",
+					"Parting Shot",
+					"Knock Off",
+					"Taunt"
+				],
+				"items": [
+					"Covert Cloak"
+				],
+				"ability": "Unnerve",
+				"teraTypes": [
+					"Dark"
 				]
 			}
 		]
@@ -5670,7 +5818,7 @@
 				],
 				"ability": "Inner Focus",
 				"teraTypes": [
-					"Water"
+					"Ghost"
 				]
 			}
 		]
@@ -5681,9 +5829,9 @@
 				"role": "Quiver Dance Sun",
 				"movepool": [
 					"Moonblast",
-					"Sludge Bomb",
 					"Quiver Dance",
-					"Solar Beam"
+					"Solar Beam",
+					"Sludge Bomb"
 				],
 				"items": [
 					"Sitrus Berry"
@@ -5877,7 +6025,7 @@
 				"role": "Offensive",
 				"movepool": [
 					"Fake Out",
-					"Axe Kick",
+					"Close Combat",
 					"Skill Swap",
 					"Zen Headbutt"
 				],
@@ -5918,8 +6066,8 @@
 				"movepool": [
 					"Parting Shot",
 					"Mat Block",
-					"Destiny Bond",
-					"Milk Drink"
+					"Psych Out",
+					"Flash Freeze"
 				],
 				"items": [
 					"Focus Sash"
@@ -6102,7 +6250,7 @@
 				],
 				"ability": "Triple Threat",
 				"teraTypes": [
-					"Ground"
+					"Steel"
 				]
 			}
 		]
@@ -6166,7 +6314,7 @@
 				]
 			},
 			{
-				"role": "Electric Seed",
+				"role": "Unburden",
 				"movepool": [
 					"Bleakwind Storm",
 					"Shadow Ball",
@@ -6174,7 +6322,7 @@
 					"Will-O-Wisp"
 				],
 				"items": [
-					"Electric Seed"
+					"Focus Sash"
 				],
 				"ability": "Unburden",
 				"teraTypes": [
@@ -6520,17 +6668,33 @@
 			{
 				"role": "Bulk Up",
 				"movepool": [
-					"Acrobatics",
+					"Brave Bird",
 					"Thunderous Kick",
 					"Bulk Up",
 					"Detect"
 				],
 				"items": [
-					"Misty Seed"
+					"Leftovers"
 				],
 				"ability": "Defiant",
 				"teraTypes": [
 					"Fighting"
+				]
+			},
+			{
+				"role": "Scarf",
+				"movepool": [
+					"Close Combat",
+					"Brave Bird",
+					"U-turn",
+					"Tera Blast"
+				],
+				"items": [
+					"Choice Scarf"
+				],
+				"ability": "Defiant",
+				"teraTypes": [
+					"Ghost"
 				]
 			}
 		]
@@ -6982,7 +7146,7 @@
 				],
 				"ability": "Intimidate",
 				"teraTypes": [
-					"Water"
+					"Steel"
 				]
 			},
 			{
@@ -7692,7 +7856,23 @@
 				"items": [
 					"Sitrus Berry"
 				],
-				"ability": "Singularity",
+				"ability": "Lifetaker",
+				"teraTypes": [
+					"Dark"
+				]
+			},
+			{
+				"role": "Band",
+				"movepool": [
+					"Outrage",
+					"Knock Off",
+					"Heat Crash",
+					"High Horsepower"
+				],
+				"items": [
+					"Choice Band"
+				],
+				"ability": "Dragon's Maw",
 				"teraTypes": [
 					"Dark"
 				]
@@ -7791,6 +7971,46 @@
 			}
 		]
 	},
+	"slowbro": {
+		"sets": [
+			{
+				"role": "Psychic Seed",
+				"movepool": [
+					"Amnesia",
+					"Expanding Force",
+					"Scald",
+					"Slack Off"
+				],
+				"items": [
+					"Psychic Seed"
+				],
+				"ability": "Stuck In The Past",
+				"teraTypes": [
+					"Grass"
+				]
+			}
+		]
+	},
+	"slowking": {
+		"sets": [
+			{
+				"role": "Toxic Orb",
+				"movepool": [
+					"Scald",
+					"Chilly Reception",
+					"Trick Room",
+					"Psychic"
+				],
+				"items": [
+					"Toxic Orb"
+				],
+				"ability": "Toxic Boost",
+				"teraTypes": [
+					"Ghost"
+				]
+			}
+		]
+	},
 	"rabsca": {
 		"sets": [
 			{
@@ -7854,12 +8074,12 @@
 	"aromatisse": {
 		"sets": [
 			{
-				"role": "Support",
+				"role": "Standard",
 				"movepool": [
 					"Heal Pulse",
 					"Helping Hand",
 					"Moonblast",
-					"Charm"
+					"Aromatic Mist"
 				],
 				"items": [
 					"Misty Seed"
@@ -7896,7 +8116,7 @@
 			{
 				"role": "Offensive Sand",
 				"movepool": [
-					"Helping Hand",
+					"Accelerock",
 					"Close Combat",
 					"Endeavor",
 					"Stone Edge"
@@ -7917,7 +8137,7 @@
 				"role": "Critter",
 				"movepool": [
 					"Sucker Punch",
-					"Acrobatics",
+					"Protect",
 					"Brave Bird",
 					"Superpower"
 				],
@@ -8044,22 +8264,6 @@
 				"teraTypes": [
 					"Fighting"
 				]
-			},
-			{
-				"role": "Full Support",
-				"movepool": [
-					"Wide Guard",
-					"Heavy Slam",
-					"Super Fang",
-					"Rest"
-				],
-				"items": [
-					"Chesto Berry"
-				],
-				"ability": "Solid Rock",
-				"teraTypes": [
-					"Ghost"
-				]
 			}
 		]
 	},
@@ -8126,8 +8330,8 @@
 				"movepool": [
 					"Electroweb",
 					"Thunderbolt",
-					"Aura Sphere",
-					"Surf"
+					"Hyper Beam",
+					"Aura Sphere"
 				],
 				"items": [
 					"Life Orb"
@@ -8348,7 +8552,7 @@
 	"crabominable": {
 		"sets": [
 			{
-				"role": "Physical AV",
+				"role": "Fur Coat AV",
 				"movepool": [
 					"Ice Hammer",
 					"Hammer Arm",
@@ -8357,6 +8561,22 @@
 				],
 				"items": [
 					"Assault Vest"
+				],
+				"ability": "Fur Coat",
+				"teraTypes": [
+					"Fighting"
+				]
+			},
+			{
+				"role": "TR Attacker",
+				"movepool": [
+					"Ice Hammer",
+					"Hammer Arm",
+					"Thunder Punch",
+					"Protect"
+				],
+				"items": [
+					"Life Orb"
 				],
 				"ability": "Iron Fist",
 				"teraTypes": [
@@ -8542,15 +8762,15 @@
 			{
 				"role": "Physical LO",
 				"movepool": [
-					"Return",
+					"Supercell Slam",
 					"Flare Blitz",
 					"Jump Kick",
-					"Quick Attack"
+					"Protect"
 				],
 				"items": [
 					"Life Orb"
 				],
-				"ability": "Galvanize",
+				"ability": "Reckless",
 				"teraTypes": [
 					"Electric"
 				]
@@ -8632,7 +8852,7 @@
 				],
 				"ability": "Storm Drain",
 				"teraTypes": [
-					"Rock"
+					"Fire"
 				]
 			}
 		]
@@ -8856,7 +9076,7 @@
 				"movepool": [
 					"Extreme Speed",
 					"Outrage",
-					"Dual Wingbeat",
+					"Dragon Rush",
 					"Earthquake"
 				],
 				"items": [
@@ -8865,6 +9085,22 @@
 				"ability": "Inner Focus",
 				"teraTypes": [
 					"Normal"
+				]
+			},
+			{
+				"role": "Dragon Dance",
+				"movepool": [
+					"Dragon Dance",
+					"Tera Blast",
+					"Dragon Rush",
+					"Extreme Speed"
+				],
+				"items": [
+					"Leftovers"
+				],
+				"ability": "Multiscale",
+				"teraTypes": [
+					"Flying"
 				]
 			}
 		]
@@ -9368,19 +9604,19 @@
 	"vespiquen": {
 		"sets": [
 			{
-				"role": "Band",
+				"role": "Iron Press",
 				"movepool": [
-					"Attack Order",
-					"Dual Wingbeat",
-					"Return",
-					"Tera Blast"
+					"Defend Order",
+					"Heal Order",
+					"Body Press",
+					"Hurricane"
 				],
 				"items": [
-					"Choice Band"
+					"Leftovers"
 				],
-				"ability": "Hustle",
+				"ability": "Unnerve",
 				"teraTypes": [
-					"Ground"
+					"Fighting"
 				]
 			},
 			{
@@ -9435,6 +9671,22 @@
 					"Mystic Water"
 				],
 				"ability": "Dazzling",
+				"teraTypes": [
+					"Grass"
+				]
+			},
+			{
+				"role": "Band PsySpam",
+				"movepool": [
+					"Expanding Maws",
+					"Hidden Power Fighting",
+					"Wave Crash",
+					"Flip Turn"
+				],
+				"items": [
+					"Choice Band"
+				],
+				"ability": "Psychic Surge",
 				"teraTypes": [
 					"Grass"
 				]
@@ -9660,19 +9912,35 @@
 	"luxray": {
 		"sets": [
 			{
-				"role": "Physical AV",
+				"role": "Support",
 				"movepool": [
-					"Play Rough",
+					"Return",
 					"Wild Charge",
-					"Superpower",
-					"Throat Chop"
+					"Eerie Impulse",
+					"Glare"
 				],
 				"items": [
-					"Assault Vest"
+					"Sitrus Berry"
 				],
 				"ability": "Intimidate",
 				"teraTypes": [
-					"Electric"
+					"Ghost"
+				]
+			},
+			{
+				"role": "Guts",
+				"movepool": [
+					"Protect",
+					"Wild Charge",
+					"Facade",
+					"Glare"
+				],
+				"items": [
+					"Flame Orb"
+				],
+				"ability": "Guts",
+				"teraTypes": [
+					"Normal"
 				]
 			}
 		]
@@ -9680,7 +9948,7 @@
 	"hitmonlee": {
 		"sets": [
 			{
-				"role": "Offensive Seed",
+				"role": "Unburden",
 				"movepool": [
 					"High Jump Kick",
 					"Stone Edge",
@@ -9688,7 +9956,7 @@
 					"Fake Out"
 				],
 				"items": [
-					"Grassy Seed"
+					"Normal Gem"
 				],
 				"ability": "Unburden",
 				"teraTypes": [
@@ -9982,6 +10250,22 @@
 				"teraTypes": [
 					"Fairy"
 				]
+			},
+			{
+				"role": "Life Orb",
+				"movepool": [
+					"Accelerock",
+					"Play Rough",
+					"Close Combat",
+					"Protect"
+				],
+				"items": [
+					"Life Orb"
+				],
+				"ability": "Tough Claws",
+				"teraTypes": [
+					"Fairy"
+				]
 			}
 		]
 	},
@@ -10000,7 +10284,7 @@
 				],
 				"ability": "Grass Pelt",
 				"teraTypes": [
-					"Grass"
+					"Fighting"
 				]
 			}
 		]
@@ -10350,6 +10634,22 @@
 				"teraTypes": [
 					"Grass"
 				]
+			},
+			{
+				"role": "Unnerve Supp",
+				"movepool": [
+					"Will-O-Wisp",
+					"Dark Pulse",
+					"Protect",
+					"Overheat"
+				],
+				"items": [
+					"Focus Sash"
+				],
+				"ability": "Unnerve",
+				"teraTypes": [
+					"Grass"
+				]
 			}
 		]
 	},
@@ -10492,7 +10792,7 @@
 				"movepool": [
 					"Return",
 					"Aqua Jet",
-					"Waterfall",
+					"Liquidation",
 					"Swords Dance"
 				],
 				"items": [
@@ -10540,7 +10840,7 @@
 				],
 				"ability": "Stance Change",
 				"teraTypes": [
-					"Steel"
+					"Water"
 				]
 			}
 		]
@@ -10617,42 +10917,6 @@
 				"ability": "Oblivious",
 				"teraTypes": [
 					"Ice"
-				]
-			}
-		]
-	},
-	"duraludon": {
-		"sets": [
-			{
-				"role": "Fast AV",
-				"movepool": [
-					"Steel Beam",
-					"Draco Meteor",
-					"G-Max Depletion",
-					"Thunderbolt"
-				],
-				"items": [
-					"Assault Vest"
-				],
-				"ability": "Rampage",
-				"teraTypes": [
-					"Electric"
-				]
-			},
-			{
-				"role": "Specs",
-				"movepool": [
-					"Steel Beam",
-					"Draco Meteor",
-					"G-Max Depletion",
-					"Thunderbolt"
-				],
-				"items": [
-					"Choice Specs"
-				],
-				"ability": "Rampage",
-				"teraTypes": [
-					"Dragon"
 				]
 			}
 		]
@@ -10857,26 +11121,6 @@
 				"ability": "Multiscale",
 				"teraTypes": [
 					"Water"
-				]
-			}
-		]
-	},
-	"dipplin": {
-		"sets": [
-			{
-				"role": "Bulky Leech",
-				"movepool": [
-					"Syrup Bomb",
-					"Draco Meteor",
-					"Protect",
-					"Leech Seed"
-				],
-				"items": [
-					"Eviolite"
-				],
-				"ability": "Supersweet Syrup",
-				"teraTypes": [
-					"Steel"
 				]
 			}
 		]
@@ -11276,7 +11520,7 @@
 				],
 				"ability": "Toxic Chain",
 				"teraTypes": [
-					"Poison"
+					"Ghost"
 				]
 			}
 		]
@@ -11450,7 +11694,7 @@
 				"items": [
 					"Sitrus Berry"
 				],
-				"ability": "Rampage",
+				"ability": "Speed Boost",
 				"teraTypes": [
 					"Fairy"
 				]
@@ -11589,6 +11833,42 @@
 			}
 		]
 	},
+	"nidoqueen": {
+		"sets": [
+			{
+				"role": "Special LO",
+				"movepool": [
+					"Earth Power",
+					"Sludge Bomb",
+					"Ice Beam",
+					"Protect"
+				],
+				"items": [
+					"Life Orb"
+				],
+				"ability": "Sheer Force",
+				"teraTypes": [
+					"Ground"
+				]
+			},
+			{
+				"role": "Physical LO",
+				"movepool": [
+					"Head Smash",
+					"High Horsepower",
+					"Poison Jab",
+					"Protect"
+				],
+				"items": [
+					"Life Orb"
+				],
+				"ability": "Big Balls",
+				"teraTypes": [
+					"Rock"
+				]
+			}
+		]
+	},
 	"galvantula": {
 		"sets": [
 			{
@@ -11605,6 +11885,22 @@
 				"ability": "Compound Eyes",
 				"teraTypes": [
 					"Fighting"
+				]
+			},
+			{
+				"role": "Bulky Support",
+				"movepool": [
+					"Electroweb",
+					"Bug Buzz",
+					"Volt Switch",
+					"Struggle Bug"
+				],
+				"items": [
+					"Assault Vest"
+				],
+				"ability": "Unnerve",
+				"teraTypes": [
+					"Ghost"
 				]
 			}
 		]
@@ -12171,9 +12467,9 @@
 				"role": "LO Sun",
 				"movepool": [
 					"High Jump Kick",
-					"Blaze Kick",
 					"Giga Impact",
-					"Horn Leech"
+					"Horn Leech",
+					"Blaze Kick"
 				],
 				"items": [
 					"Life Orb"
@@ -12396,19 +12692,19 @@
 	"slurpuff": {
 		"sets": [
 			{
-				"role": "Fast Support",
+				"role": "Belly Drum",
 				"movepool": [
-					"After You",
-					"Dazzling Gleam",
-					"Fake Tears",
-					"Misty Explosion"
+					"Belly Drum",
+					"Play Rough",
+					"Drain Punch",
+					"Tera Blast"
 				],
 				"items": [
-					"Electric Seed"
+					"Sitrus Berry"
 				],
 				"ability": "Unburden",
 				"teraTypes": [
-					"Steel"
+					"Ground"
 				]
 			}
 		]
@@ -12448,7 +12744,7 @@
 				],
 				"ability": "Water Bubble",
 				"teraTypes": [
-					"Poison"
+					"Water"
 				]
 			}
 		]
@@ -12656,7 +12952,7 @@
 				"movepool": [
 					"Tailwind",
 					"Trick Room",
-					"Hyper Voice",
+					"Oblivion Wing",
 					"Eerie Impulse"
 				],
 				"items": [
@@ -12724,7 +13020,7 @@
 				],
 				"ability": "Rock Head",
 				"teraTypes": [
-					"Fire"
+					"Grass"
 				]
 			}
 		]
@@ -12796,7 +13092,7 @@
 				"movepool": [
 					"Boomburst",
 					"Protect",
-					"Aeroblast",
+					"Chatter",
 					"Heat Wave"
 				],
 				"items": [
@@ -13195,9 +13491,9 @@
 				"role": "Sun Sweeper",
 				"movepool": [
 					"Overheat",
-					"Solar Beam",
+					"Chloroblast",
 					"Will-O-Wisp",
-					"Chloroblast"
+					"Solar Beam"
 				],
 				"items": [
 					"Life Orb"
@@ -13629,6 +13925,42 @@
 			}
 		]
 	},
+	"golem": {
+		"sets": [
+			{
+				"role": "Shell Smash",
+				"movepool": [
+					"Shell Smash",
+					"Stone Edge",
+					"Earthquake",
+					"Sucker Punch"
+				],
+				"items": [
+					"Clear Amulet"
+				],
+				"ability": "Sturdy",
+				"teraTypes": [
+					"Rock"
+				]
+			},
+			{
+				"role": "Ballin Attacker",
+				"movepool": [
+					"Wide Guard",
+					"High Horsepower",
+					"Shadow Ball",
+					"Explosion"
+				],
+				"items": [
+					"Life Orb"
+				],
+				"ability": "Ballin'",
+				"teraTypes": [
+					"Ghost"
+				]
+			}
+		]
+	},
 	"golemalola": {
 		"sets": [
 			{
@@ -13664,7 +13996,7 @@
 				],
 				"ability": "Intimidate",
 				"teraTypes": [
-					"Fire"
+					"Grass"
 				]
 			}
 		]
@@ -13684,7 +14016,23 @@
 				],
 				"ability": "Protosynthesis",
 				"teraTypes": [
-					"Electric"
+					"Fairy"
+				]
+			},
+			{
+				"role": "Assault Vest",
+				"movepool": [
+					"Electroweb",
+					"Volt Switch",
+					"Draco Meteor",
+					"Thunderclap"
+				],
+				"items": [
+					"Assault Vest"
+				],
+				"ability": "Protosynthesis",
+				"teraTypes": [
+					"Fairy"
 				]
 			}
 		]
@@ -13706,6 +14054,22 @@
 				"teraTypes": [
 					"Fire"
 				]
+			},
+			{
+				"role": "Bulky Booster",
+				"movepool": [
+					"Burning Bulwark",
+					"Breaking Swipe",
+					"Heat Crash",
+					"Howl"
+				],
+				"items": [
+					"Booster Energy"
+				],
+				"ability": "Protosynthesis",
+				"teraTypes": [
+					"Grass"
+				]
 			}
 		]
 	},
@@ -13723,6 +14087,22 @@
 					"Eject Pack"
 				],
 				"ability": "Regenerator",
+				"teraTypes": [
+					"Water"
+				]
+			},
+			{
+				"role": "Offensive Supp",
+				"movepool": [
+					"Fickle Beam",
+					"Leaf Storm",
+					"Yawn",
+					"Protect"
+				],
+				"items": [
+					"Sitrus Berry"
+				],
+				"ability": "Supersweet Syrup",
 				"teraTypes": [
 					"Water"
 				]
@@ -13744,7 +14124,7 @@
 				],
 				"ability": "Stamina",
 				"teraTypes": [
-					"Flying"
+					"Grass"
 				]
 			},
 			{
@@ -13760,7 +14140,7 @@
 				],
 				"ability": "Stamina",
 				"teraTypes": [
-					"Electric"
+					"Ghost"
 				]
 			}
 		]
@@ -13817,6 +14197,2150 @@
 				"ability": "Quark Drive",
 				"teraTypes": [
 					"Fighting"
+				]
+			}
+		]
+	},
+	"calyrexshadow": {
+		"sets": [
+			{
+				"role": "Nasty Plot",
+				"movepool": [
+					"Nasty Plot",
+					"Astral Barrage",
+					"Draining Kiss",
+					"Protect"
+				],
+				"items": [
+					"Covert Cloak"
+				],
+				"ability": "As One (Spectrier)",
+				"teraTypes": [
+					"Fairy"
+				]
+			},
+			{
+				"role": "Specs",
+				"movepool": [
+					"Tera Blast",
+					"Astral Barrage",
+					"Psychic",
+					"Leaf Storm"
+				],
+				"items": [
+					"Choice Specs"
+				],
+				"ability": "As One (Spectrier)",
+				"teraTypes": [
+					"Fighting"
+				]
+			}
+		]
+	},
+	"calyrexice": {
+		"sets": [
+			{
+				"role": "Assault Vest",
+				"movepool": [
+					"Glacial Lance",
+					"Close Combat",
+					"Tera Blast",
+					"High Horsepower"
+				],
+				"items": [
+					"Assault Vest"
+				],
+				"ability": "As One (Glastrier)",
+				"teraTypes": [
+					"Water"
+				]
+			},
+			{
+				"role": "TR Setter",
+				"movepool": [
+					"Glacial Lance",
+					"Close Combat",
+					"Trick Room",
+					"High Horsepower"
+				],
+				"items": [
+					"Clear Amulet"
+				],
+				"ability": "As One (Glastrier)",
+				"teraTypes": [
+					"Fire"
+				]
+			}
+		]
+	},
+	"koraidon": {
+		"sets": [
+			{
+				"role": "Sweeper",
+				"movepool": [
+					"Collision Course",
+					"Flare Blitz",
+					"Protect",
+					"Scale Shot"
+				],
+				"items": [
+					"Clear Amulet"
+				],
+				"ability": "Orichalcum Pulse",
+				"teraTypes": [
+					"Fire"
+				]
+			},
+			{
+				"role": "Choice Band",
+				"movepool": [
+					"Close Combat",
+					"Flare Blitz",
+					"Protect",
+					"Outrage"
+				],
+				"items": [
+					"Choice Band"
+				],
+				"ability": "Orichalcum Pulse",
+				"teraTypes": [
+					"Fire"
+				]
+			}
+		]
+	},
+	"miraidon": {
+		"sets": [
+			{
+				"role": "Eject Pack",
+				"movepool": [
+					"Electro Drift",
+					"Draco Meteor",
+					"Protect",
+					"Overheat"
+				],
+				"items": [
+					"Eject Pack"
+				],
+				"ability": "Hadron Engine",
+				"teraTypes": [
+					"Flying"
+				]
+			},
+			{
+				"role": "Specs",
+				"movepool": [
+					"Electro Drift",
+					"Draco Meteor",
+					"Volt Switch",
+					"Dazzling Gleam"
+				],
+				"items": [
+					"Choice Specs"
+				],
+				"ability": "Hadron Engine",
+				"teraTypes": [
+					"Fairy"
+				]
+			}
+		]
+	},
+	"groudon": {
+		"sets": [
+			{
+				"role": "Assault Vest",
+				"movepool": [
+					"Precipice Blades",
+					"Stone Edge",
+					"Heat Crash",
+					"Thunder Punch"
+				],
+				"items": [
+					"Assault Vest"
+				],
+				"ability": "Drought",
+				"teraTypes": [
+					"Grass"
+				]
+			},
+			{
+				"role": "Swords Dance",
+				"movepool": [
+					"Swords Dance",
+					"Precipice Blades",
+					"Stone Edge",
+					"Protect"
+				],
+				"items": [
+					"Leftovers"
+				],
+				"ability": "Drought",
+				"teraTypes": [
+					"Ground"
+				]
+			}
+		]
+	},
+	"kyogre": {
+		"sets": [
+			{
+				"role": "Scarf",
+				"movepool": [
+					"Origin Pulse",
+					"Water Spout",
+					"Thunder",
+					"Ice Beam"
+				],
+				"items": [
+					"Choice Scarf"
+				],
+				"ability": "Drizzle",
+				"teraTypes": [
+					"Water"
+				]
+			},
+			{
+				"role": "Calm Mind",
+				"movepool": [
+					"Origin Pulse",
+					"Calm Mind",
+					"Protect",
+					"Thunder"
+				],
+				"items": [
+					"Leftovers"
+				],
+				"ability": "Drizzle",
+				"teraTypes": [
+					"Electric"
+				]
+			}
+		]
+	},
+	"kyuremblack": {
+		"sets": [
+			{
+				"role": "Loaded Dice",
+				"movepool": [
+					"Scale Shot",
+					"Icicle Spear",
+					"Fusion Bolt",
+					"Protect"
+				],
+				"items": [
+					"Loaded Dice"
+				],
+				"ability": "Teravolt",
+				"teraTypes": [
+					"Electric"
+				]
+			},
+			{
+				"role": "Band",
+				"movepool": [
+					"Outrage",
+					"Freeze Shock",
+					"Fusion Bolt",
+					"Protect"
+				],
+				"items": [
+					"Choice Band"
+				],
+				"ability": "Teravolt",
+				"teraTypes": [
+					"Electric"
+				]
+			}
+		]
+	},
+	"kyuremwhite": {
+		"sets": [
+			{
+				"role": "Specs",
+				"movepool": [
+					"Blizzard",
+					"Freeze-Dry",
+					"Draco Meteor",
+					"Fusion Flare"
+				],
+				"items": [
+					"Choice Specs"
+				],
+				"ability": "Turboblaze",
+				"teraTypes": [
+					"Fire"
+				]
+			},
+			{
+				"role": "Assault Vest",
+				"movepool": [
+					"Ice Burn",
+					"Freeze-Dry",
+					"Draco Meteor",
+					"Fusion Flare"
+				],
+				"items": [
+					"Assault Vest"
+				],
+				"ability": "Turboblaze",
+				"teraTypes": [
+					"Fire"
+				]
+			}
+		]
+	},
+	"terapagosterastal": {
+		"sets": [
+			{
+				"role": "Specs",
+				"movepool": [
+					"Tera Starstorm",
+					"Hyper Beam",
+					"Ice Beam",
+					"Dark Pulse"
+				],
+				"items": [
+					"Choice Specs"
+				],
+				"ability": "Tera Shell",
+				"teraTypes": [
+					"Stellar"
+				]
+			},
+			{
+				"role": "Calm Mind",
+				"movepool": [
+					"Tera Starstorm",
+					"Calm Mind",
+					"Ice Beam",
+					"Protect"
+				],
+				"items": [
+					"Leftovers"
+				],
+				"ability": "Tera Shell",
+				"teraTypes": [
+					"Stellar"
+				]
+			}
+		]
+	},
+	"zacian": {
+		"sets": [
+			{
+				"role": "Band",
+				"movepool": [
+					"Play Rough",
+					"Close Combat",
+					"Psychic Fangs",
+					"Solar Blade"
+				],
+				"items": [
+					"Choice Band"
+				],
+				"ability": "Intrepid Sword",
+				"teraTypes": [
+					"Fighting"
+				]
+			}
+		]
+	},
+	"zaciancrowned": {
+		"sets": [
+			{
+				"role": "Swords Dance",
+				"movepool": [
+					"Behemoth Blade",
+					"Play Rough",
+					"Protect",
+					"Swords Dance"
+				],
+				"items": [
+					"Rusted Sword"
+				],
+				"ability": "Intrepid Sword",
+				"teraTypes": [
+					"Fairy"
+				]
+			}
+		]
+	},
+	"rayquaza": {
+		"sets": [
+			{
+				"role": "Band",
+				"movepool": [
+					"Extreme Speed",
+					"Dragon Ascent",
+					"Outrage",
+					"Earthquake"
+				],
+				"items": [
+					"Choice Band"
+				],
+				"ability": "Air Lock",
+				"teraTypes": [
+					"Normal"
+				]
+			},
+			{
+				"role": "Dragon Dance",
+				"movepool": [
+					"Dragon Dance",
+					"Extreme Speed",
+					"Dragon Ascent",
+					"V-create"
+				],
+				"items": [
+					"Life Orb"
+				],
+				"ability": "Air Lock",
+				"teraTypes": [
+					"Normal"
+				]
+			}
+		]
+	},
+	"zamazentacrowned": {
+		"sets": [
+			{
+				"role": "Iron Press",
+				"movepool": [
+					"Iron Defense",
+					"Body Press",
+					"Wide Guard",
+					"Behemoth Bash"
+				],
+				"items": [
+					"Rusted Shield"
+				],
+				"ability": "Dauntless Shield",
+				"teraTypes": [
+					"Dragon"
+				]
+			}
+		]
+	},
+	"zamazenta": {
+		"sets": [
+			{
+				"role": "Band",
+				"movepool": [
+					"Body Press",
+					"Coaching",
+					"Psychic Fangs",
+					"Wild Charge"
+				],
+				"items": [
+					"Choice Band"
+				],
+				"ability": "Dauntless Shield",
+				"teraTypes": [
+					"Fighting"
+				]
+			}
+		]
+	},
+	"dialga": {
+		"sets": [
+			{
+				"role": "TR Setter",
+				"movepool": [
+					"Flash Cannon",
+					"Protect",
+					"Trick Room",
+					"Dragon Pulse"
+				],
+				"items": [
+					"Sitrus Berry"
+				],
+				"ability": "Telepathy",
+				"teraTypes": [
+					"Flying"
+				]
+			},
+			{
+				"role": "Origin Nuker",
+				"movepool": [
+					"Roar of Time",
+					"Flash Cannon",
+					"Fire Blast",
+					"Protect"
+				],
+				"items": [
+					"Adamant Crystal"
+				],
+				"ability": "Pressure",
+				"teraTypes": [
+					"Dragon"
+				]
+			}
+		]
+	},
+	"dialgaorigin": {
+		"sets": [
+			{
+				"role": "Origin Nuker",
+				"movepool": [
+					"Roar of Time",
+					"Flash Cannon",
+					"Fire Blast",
+					"Protect"
+				],
+				"items": [
+					"Adamant Crystal"
+				],
+				"ability": "Time Lord",
+				"teraTypes": [
+					"Dragon"
+				]
+			}
+		]
+	},
+	"palkia": {
+		"sets": [
+			{
+				"role": "Offensive Origin",
+				"movepool": [
+					"Hydro Pump",
+					"Spacial Rend",
+					"Fire Blast",
+					"Protect"
+				],
+				"items": [
+					"Lustrous Globe"
+				],
+				"ability": "Pressure",
+				"teraTypes": [
+					"Water"
+				]
+			},
+			{
+				"role": "Lustrous Orb",
+				"movepool": [
+					"Spacial Rend",
+					"Hydro Pump",
+					"Protect",
+					"Trick Room"
+				],
+				"items": [
+					"Lustrous Orb"
+				],
+				"ability": "Telepathy",
+				"teraTypes": [
+					"Water"
+				]
+			}
+		]
+	},
+	"palkiaorigin": {
+		"sets": [
+			{
+				"role": "Offensive Origin",
+				"movepool": [
+					"Hydro Pump",
+					"Spacial Rend",
+					"Fire Blast",
+					"Protect"
+				],
+				"items": [
+					"Lustrous Globe"
+				],
+				"ability": "Stalwart",
+				"teraTypes": [
+					"Water"
+				]
+			}
+		]
+	},
+	"giratina": {
+		"sets": [
+			{
+				"role": "Defensive",
+				"movepool": [
+					"Will-O-Wisp",
+					"Poltergeist",
+					"Breaking Swipe",
+					"Protect"
+				],
+				"items": [
+					"Leftovers"
+				],
+				"ability": "Pressure",
+				"teraTypes": [
+					"Fairy"
+				]
+			},
+			{
+				"role": "Offensive Core",
+				"movepool": [
+					"Shadow Force",
+					"Outrage",
+					"Protect",
+					"Will-O-Wisp"
+				],
+				"items": [
+					"Griseous Core"
+				],
+				"ability": "Telepathy",
+				"teraTypes": [
+					"Ghost"
+				]
+			}
+		]
+	},
+	"giratinaorigin": {
+		"sets": [
+			{
+				"role": "Offensive Core",
+				"movepool": [
+					"Shadow Force",
+					"Outrage",
+					"Protect",
+					"Will-O-Wisp"
+				],
+				"items": [
+					"Griseous Core"
+				],
+				"ability": "Telepathy",
+				"teraTypes": [
+					"Ghost"
+				]
+			}
+		]
+	},
+	"xerneas": {
+		"sets": [
+			{
+				"role": "Geomancy",
+				"movepool": [
+					"Geomancy",
+					"Play Rough",
+					"Close Combat",
+					"Protect"
+				],
+				"items": [
+					"Power Herb"
+				],
+				"ability": "Fairy Aura",
+				"teraTypes": [
+					"Fighting"
+				]
+			},
+			{
+				"role": "Specs",
+				"movepool": [
+					"Moonblast",
+					"Misty Explosion",
+					"Thunderbolt",
+					"Focus Blast"
+				],
+				"items": [
+					"Choice Specs"
+				],
+				"ability": "Fairy Aura",
+				"teraTypes": [
+					"Fairy"
+				]
+			}
+		]
+	},
+	"yveltal": {
+		"sets": [
+			{
+				"role": "Supportive",
+				"movepool": [
+					"Foul Play",
+					"Sucker Punch",
+					"Snarl",
+					"Tailwind"
+				],
+				"items": [
+					"Leftovers"
+				],
+				"ability": "Dark Aura",
+				"teraTypes": [
+					"Dark"
+				]
+			},
+			{
+				"role": "Special Attacker",
+				"movepool": [
+					"Sucker Punch",
+					"Oblivion Wing",
+					"Snarl",
+					"Dark Pulse"
+				],
+				"items": [
+					"Black Glasses"
+				],
+				"ability": "Dark Aura",
+				"teraTypes": [
+					"Dark"
+				]
+			}
+		]
+	},
+	"necrozmadawnwings": {
+		"sets": [
+			{
+				"role": "Meteor Beam",
+				"movepool": [
+					"Moongeist Beam",
+					"Prismatic Laser",
+					"Trick Room",
+					"Meteor Beam"
+				],
+				"items": [
+					"Power Herb"
+				],
+				"ability": "Neuroforce",
+				"teraTypes": [
+					"Rock"
+				]
+			}
+		]
+	},
+	"necrozmaduskmane": {
+		"sets": [
+			{
+				"role": "SPOON",
+				"movepool": [
+					"Sunsteel Strike",
+					"Prismatic Laser",
+					"Protect",
+					"Morning Sun"
+				],
+				"items": [
+					"Twisted Spoon"
+				],
+				"ability": "Neuroforce",
+				"teraTypes": [
+					"Psychic"
+				]
+			},
+			{
+				"role": "Dragon Dance",
+				"movepool": [
+					"Dragon Dance",
+					"Prismatic Laser",
+					"Sunsteel Strike",
+					"Earthquake"
+				],
+				"items": [
+					"Leftovers"
+				],
+				"ability": "Neuroforce",
+				"teraTypes": [
+					"Ground"
+				]
+			}
+		]
+	},
+	"solgaleo": {
+		"sets": [
+			{
+				"role": "Calm Mind",
+				"movepool": [
+					"Calm Mind",
+					"Stored Power",
+					"Flash Cannon",
+					"Morning Sun"
+				],
+				"items": [
+					"Leftovers"
+				],
+				"ability": "Full Metal Body",
+				"teraTypes": [
+					"Fairy"
+				]
+			},
+			{
+				"role": "Offensive Support",
+				"movepool": [
+					"Wide Guard",
+					"Sunsteel Strike",
+					"Psychic Fangs",
+					"Close Combat"
+				],
+				"items": [
+					"Sitrus Berry"
+				],
+				"ability": "Full Metal Body",
+				"teraTypes": [
+					"Fighting"
+				]
+			}
+		]
+	},
+	"lunala": {
+		"sets": [
+			{
+				"role": "Meteor Beam",
+				"movepool": [
+					"Moongeist Beam",
+					"Meteor Beam",
+					"Expanding Force",
+					"Trick Room"
+				],
+				"items": [
+					"Power Herb"
+				],
+				"ability": "Shadow Shield",
+				"teraTypes": [
+					"Grass"
+				]
+			},
+			{
+				"role": "Calm Mind",
+				"movepool": [
+					"Moongeist Beam",
+					"Moonblast",
+					"Calm Mind",
+					"Protect"
+				],
+				"items": [
+					"Leftovers"
+				],
+				"ability": "Shadow Shield",
+				"teraTypes": [
+					"Fairy"
+				]
+			}
+		]
+	},
+	"eternatus": {
+		"sets": [
+			{
+				"role": "Specs",
+				"movepool": [
+					"Eternabeam",
+					"Sludge Wave",
+					"Dynamax Cannon",
+					"Fire Blast"
+				],
+				"items": [
+					"Choice Specs"
+				],
+				"ability": "Corrosion",
+				"teraTypes": [
+					"Poison"
+				]
+			},
+			{
+				"role": "Cosmic Power",
+				"movepool": [
+					"Cosmic Power",
+					"Dynamax Cannon",
+					"Sludge Bomb",
+					"Recover"
+				],
+				"items": [
+					"Leftovers"
+				],
+				"ability": "Corrosion",
+				"teraTypes": [
+					"Poison"
+				]
+			}
+		]
+	},
+	"lugia": {
+		"sets": [
+			{
+				"role": "Offensive",
+				"movepool": [
+					"Hydro Pump",
+					"Hurricane",
+					"Roost",
+					"Protect"
+				],
+				"items": [
+					"Leftovers"
+				],
+				"ability": "Water Bubble",
+				"teraTypes": [
+					"Water"
+				]
+			},
+			{
+				"role": "Weakness Policy",
+				"movepool": [
+					"Psychic",
+					"Aeroblast",
+					"Roost",
+					"Calm Mind"
+				],
+				"items": [
+					"Weakness Policy"
+				],
+				"ability": "Multiscale",
+				"teraTypes": [
+					"Ground"
+				]
+			}
+		]
+	},
+	"hooh": {
+		"sets": [
+			{
+				"role": "Burner Support",
+				"movepool": [
+					"Sacred Fire",
+					"Brave Bird",
+					"Protect",
+					"Tailwind"
+				],
+				"items": [
+					"Leftovers"
+				],
+				"ability": "Serene Grace",
+				"teraTypes": [
+					"Steel"
+				]
+			},
+			{
+				"role": "Physical Attacker",
+				"movepool": [
+					"Sacred Fire",
+					"Brave Bird",
+					"Roost",
+					"Protect"
+				],
+				"items": [
+					"Clear Amulet"
+				],
+				"ability": "Regenerator",
+				"teraTypes": [
+					"Steel"
+				]
+			}
+		]
+	},
+	"reshiram": {
+		"sets": [
+			{
+				"role": "Specs",
+				"movepool": [
+					"Blue Flare",
+					"Draco Meteor",
+					"Fusion Flare",
+					"Heat Wave"
+				],
+				"items": [
+					"Choice Specs"
+				],
+				"ability": "Turboblaze",
+				"teraTypes": [
+					"Fire"
+				]
+			},
+			{
+				"role": "Offensive Support",
+				"movepool": [
+					"Blue Flare",
+					"Tailwind",
+					"Will-O-Wisp",
+					"Protect"
+				],
+				"items": [
+					"Charcoal"
+				],
+				"ability": "Turboblaze",
+				"teraTypes": [
+					"Fairy"
+				]
+			}
+		]
+	},
+	"zekrom": {
+		"sets": [
+			{
+				"role": "Dragon Dance",
+				"movepool": [
+					"Bolt Strike",
+					"Dragon Dance",
+					"Outrage",
+					"Protect"
+				],
+				"items": [
+					"Life Orb"
+				],
+				"ability": "Teravolt",
+				"teraTypes": [
+					"Electric"
+				]
+			}
+		]
+	},
+	"mewtwo": {
+		"sets": [
+			{
+				"role": "Nueroforce",
+				"movepool": [
+					"Psystrike",
+					"Aura Sphere",
+					"Fire Blast",
+					"Protect"
+				],
+				"items": [
+					"Life Orb"
+				],
+				"ability": "Neuroforce",
+				"teraTypes": [
+					"Fire"
+				]
+			},
+			{
+				"role": "Mega Y",
+				"movepool": [
+					"Psystrike",
+					"Focus Blast",
+					"Protect",
+					"Recover"
+				],
+				"items": [
+					"Twisted Spoon"
+				],
+				"ability": "Mega Shift Y",
+				"teraTypes": [
+					"Fighting"
+				]
+			},
+			{
+				"role": "Mega X",
+				"movepool": [
+					"Bulk Up",
+					"Zen Headbutt",
+					"Drain Punch",
+					"Knock Off"
+				],
+				"items": [
+					"Sitrus Berry"
+				],
+				"ability": "Mega Shift X",
+				"teraTypes": [
+					"Dark"
+				]
+			}
+		]
+	},
+	"arceus": {
+		"sets": [
+			{
+				"role": "Extreme Killer",
+				"movepool": [
+					"Swords Dance",
+					"Extreme Speed",
+					"Recover",
+					"Shadow Force"
+				],
+				"items": [
+					"Life Orb"
+				],
+				"ability": "Multitype",
+				"teraTypes": [
+					"Normal"
+				]
+			}
+		]
+	},
+	"arceusbug": {
+		"sets": [
+			{
+				"role": "Calm Mind",
+				"movepool": [
+					"Calm Mind",
+					"Judgment",
+					"Fire Blast",
+					"Recover"
+				],
+				"items": [
+					"Insect Plate"
+				],
+				"ability": "Multitype",
+				"teraTypes": [
+					"Fire"
+				]
+			}
+		]
+	},
+	"arceusdark": {
+		"sets": [
+			{
+				"role": "Supportive",
+				"movepool": [
+					"Will-O-Wisp",
+					"Snarl",
+					"Judgment",
+					"Tailwind"
+				],
+				"items": [
+					"Dread Plate"
+				],
+				"ability": "Multitype",
+				"teraTypes": [
+					"Ground"
+				]
+			}
+		]
+	},
+	"arceusdragon": {
+		"sets": [
+			{
+				"role": "Calm Mind",
+				"movepool": [
+					"Spacial Rend",
+					"Blast Burn",
+					"Calm Mind",
+					"Recover"
+				],
+				"items": [
+					"Draco Plate"
+				],
+				"ability": "Multitype",
+				"teraTypes": [
+					"Dragon"
+				]
+			}
+		]
+	},
+	"arceuselectric": {
+		"sets": [
+			{
+				"role": "Calm Mind",
+				"movepool": [
+					"Judgment",
+					"Ice Beam",
+					"Calm Mind",
+					"Recover"
+				],
+				"items": [
+					"Zap Plate"
+				],
+				"ability": "Multitype",
+				"teraTypes": [
+					"Flying"
+				]
+			}
+		]
+	},
+	"arceusfairy": {
+		"sets": [
+			{
+				"role": "Calm Mind",
+				"movepool": [
+					"Calm Mind",
+					"Judgment",
+					"Earth Power",
+					"Recover"
+				],
+				"items": [
+					"Pixie Plate"
+				],
+				"ability": "Multitype",
+				"teraTypes": [
+					"Ground"
+				]
+			}
+		]
+	},
+	"arceusfighting": {
+		"sets": [
+			{
+				"role": "Calm Mind",
+				"movepool": [
+					"Judgment",
+					"Shadow Ball",
+					"Calm Mind",
+					"Recover"
+				],
+				"items": [
+					"Fist Plate"
+				],
+				"ability": "Multitype",
+				"teraTypes": [
+					"Ghost"
+				]
+			}
+		]
+	},
+	"arceusfire": {
+		"sets": [
+			{
+				"role": "Swords Dance",
+				"movepool": [
+					"Extreme Speed",
+					"Swords Dance",
+					"Flare Blitz",
+					"Recover"
+				],
+				"items": [
+					"Flame Plate"
+				],
+				"ability": "Multitype",
+				"teraTypes": [
+					"Normal"
+				]
+			}
+		]
+	},
+	"arceusflying": {
+		"sets": [
+			{
+				"role": "Calm Mind",
+				"movepool": [
+					"Judgment",
+					"Earth Power",
+					"Calm Mind",
+					"Recover"
+				],
+				"items": [
+					"Sky Plate"
+				],
+				"ability": "Multitype",
+				"teraTypes": [
+					"Ground"
+				]
+			}
+		]
+	},
+	"arceusghost": {
+		"sets": [
+			{
+				"role": "Calm Mind",
+				"movepool": [
+					"Judgment",
+					"Focus Blast",
+					"Calm Mind",
+					"Recover"
+				],
+				"items": [
+					"Spooky Plate"
+				],
+				"ability": "Multitype",
+				"teraTypes": [
+					"Fighting"
+				]
+			}
+		]
+	},
+	"arceusgrass": {
+		"sets": [
+			{
+				"role": "Calm Mind",
+				"movepool": [
+					"Judgment",
+					"Roar of Time",
+					"Calm Mind",
+					"Recover"
+				],
+				"items": [
+					"Meadow Plate"
+				],
+				"ability": "Multitype",
+				"teraTypes": [
+					"Dragon"
+				]
+			}
+		]
+	},
+	"arceusground": {
+		"sets": [
+			{
+				"role": "Calm Mind",
+				"movepool": [
+					"Judgment",
+					"Blast Burn",
+					"Calm Mind",
+					"Recover"
+				],
+				"items": [
+					"Earth Plate"
+				],
+				"ability": "Multitype",
+				"teraTypes": [
+					"Fire"
+				]
+			}
+		]
+	},
+	"arceusice": {
+		"sets": [
+			{
+				"role": "Calm Mind",
+				"movepool": [
+					"Judgment",
+					"Thunderbolt",
+					"Calm Mind",
+					"Recover"
+				],
+				"items": [
+					"Icicle Plate"
+				],
+				"ability": "Multitype",
+				"teraTypes": [
+					"Electric"
+				]
+			}
+		]
+	},
+	"arceuspoison": {
+		"sets": [
+			{
+				"role": "Swords Dance",
+				"movepool": [
+					"Extreme Speed",
+					"Gunk Shot",
+					"Swords Dance",
+					"Recover"
+				],
+				"items": [
+					"Toxic Plate"
+				],
+				"ability": "Multitype",
+				"teraTypes": [
+					"Normal"
+				]
+			}
+		]
+	},
+	"arceuspsychic": {
+		"sets": [
+			{
+				"role": "Calm Mind",
+				"movepool": [
+					"Judgment",
+					"Focus Blast",
+					"Calm Mind",
+					"Recover"
+				],
+				"items": [
+					"Mind Plate"
+				],
+				"ability": "Multitype",
+				"teraTypes": [
+					"Fighting"
+				]
+			}
+		]
+	},
+	"arceusrock": {
+		"sets": [
+			{
+				"role": "Calm Mind",
+				"movepool": [
+					"Judgment",
+					"Earth Power",
+					"Calm Mind",
+					"Recover"
+				],
+				"items": [
+					"Stone Plate"
+				],
+				"ability": "Multitype",
+				"teraTypes": [
+					"Ground"
+				]
+			}
+		]
+	},
+	"arceussteel": {
+		"sets": [
+			{
+				"role": "Calm Mind",
+				"movepool": [
+					"Judgment",
+					"Earth Power",
+					"Calm Mind",
+					"Recover"
+				],
+				"items": [
+					"Iron Plate"
+				],
+				"ability": "Multitype",
+				"teraTypes": [
+					"Ground"
+				]
+			}
+		]
+	},
+	"arceuswater": {
+		"sets": [
+			{
+				"role": "Calm Mind",
+				"movepool": [
+					"Judgment",
+					"Dazzling Gleam",
+					"Calm Mind",
+					"Recover"
+				],
+				"items": [
+					"Splash Plate"
+				],
+				"ability": "Multitype",
+				"teraTypes": [
+					"Fairy"
+				]
+			}
+		]
+	},
+	"cosmoem": {
+		"sets": [
+			{
+				"role": "The Only Set",
+				"movepool": [
+					"Stored Power",
+					"Teleport",
+					"Cosmic Power",
+					"Splash"
+				],
+				"items": [
+					"Eviolite"
+				],
+				"ability": "Singularity",
+				"teraTypes": [
+					"Fairy"
+				]
+			}
+		]
+	},
+	"darkrai": {
+		"sets": [
+			{
+				"role": "Sash Sleeper",
+				"movepool": [
+					"Dark Void",
+					"Dark Pulse",
+					"Focus Blast",
+					"Protect"
+				],
+				"items": [
+					"Focus Sash"
+				],
+				"ability": "Bad Dreams",
+				"teraTypes": [
+					"Ghost"
+				]
+			}
+		]
+	},
+	"deoxysattack": {
+		"sets": [
+			{
+				"role": "Sash Attacker",
+				"movepool": [
+					"Psycho Boost",
+					"Superpower",
+					"Detect",
+					"Ice Beam"
+				],
+				"items": [
+					"Focus Sash"
+				],
+				"ability": "Pressure",
+				"teraTypes": [
+					"Stellar"
+				]
+			},
+			{
+				"role": "LO Mixed",
+				"movepool": [
+					"Psycho Boost",
+					"Superpower",
+					"Detect",
+					"Ice Beam"
+				],
+				"items": [
+					"Life Orb"
+				],
+				"ability": "Onslaught Core",
+				"teraTypes": [
+					"Fighting"
+				]
+			}
+		]
+	},
+	"deoxysdefense": {
+		"sets": [
+			{
+				"role": "TR Setter",
+				"movepool": [
+					"Trick Room",
+					"Meteor Beam",
+					"Psychic",
+					"Recover"
+				],
+				"items": [
+					"Power Herb"
+				],
+				"ability": "Barrier Core",
+				"teraTypes": [
+					"Ghost"
+				]
+			}
+		]
+	},
+	"deoxysspeed": {
+		"sets": [
+			{
+				"role": "Hazard Stack",
+				"movepool": [
+					"Psycho Boost",
+					"Superpower",
+					"Taunt",
+					"Detect"
+				],
+				"items": [
+					"Eject Pack"
+				],
+				"ability": "Hazard Core",
+				"teraTypes": [
+					"Psychic"
+				]
+			}
+		]
+	},
+	"deoxys": {
+		"sets": [
+			{
+				"role": "Mixed Attacker",
+				"movepool": [
+					"Psycho Boost",
+					"Extreme Speed",
+					"Superpower",
+					"Detect"
+				],
+				"items": [
+					"Sitrus Berry"
+				],
+				"ability": "Copy Core",
+				"teraTypes": [
+					"Fighting"
+				]
+			}
+		]
+	},
+	"diancie": {
+		"sets": [
+			{
+				"role": "Meteor Beam",
+				"movepool": [
+					"Meteor Beam",
+					"Moonblast",
+					"Trick Room",
+					"Protect"
+				],
+				"items": [
+					"Power Herb"
+				],
+				"ability": "Magic Bounce",
+				"teraTypes": [
+					"Water"
+				]
+			}
+		]
+	},
+	"hoopaunbound": {
+		"sets": [
+			{
+				"role": "TR Special",
+				"movepool": [
+					"Hyperspace Hole",
+					"Dark Pulse",
+					"Trick Room",
+					"Protect"
+				],
+				"items": [
+					"Sitrus Berry"
+				],
+				"ability": "Loophole",
+				"teraTypes": [
+					"Fire"
+				]
+			},
+			{
+				"role": "Band",
+				"movepool": [
+					"Hyperspace Fury",
+					"Gunk Shot",
+					"Zen Headbutt",
+					"Drain Punch"
+				],
+				"items": [
+					"Choice Band"
+				],
+				"ability": "Loophole",
+				"teraTypes": [
+					"Poison"
+				]
+			},
+			{
+				"role": "Big Nugget",
+				"movepool": [
+					"Fling",
+					"Hyperspace Fury",
+					"Gunk Shot",
+					"Protect"
+				],
+				"items": [
+					"Big Nugget"
+				],
+				"ability": "Magician",
+				"teraTypes": [
+					"Dark"
+				]
+			}
+		]
+	},
+	"magearna": {
+		"sets": [
+			{
+				"role": "Trick Room",
+				"movepool": [
+					"Trick Room",
+					"Fleur Cannon",
+					"Flash Cannon",
+					"Protect"
+				],
+				"items": [
+					"Sitrus Berry"
+				],
+				"ability": "Soul-Heart",
+				"teraTypes": [
+					"Water"
+				]
+			},
+			{
+				"role": "Assault Vest",
+				"movepool": [
+					"Fleur Cannon",
+					"Flash Cannon",
+					"Volt Switch",
+					"Dazzling Gleam"
+				],
+				"items": [
+					"Assault Vest"
+				],
+				"ability": "Soul-Heart",
+				"teraTypes": [
+					"Water"
+				]
+			}
+		]
+	},
+	"marshadow": {
+		"sets": [
+			{
+				"role": "Band",
+				"movepool": [
+					"Shadow Sneak",
+					"Spectral Thief",
+					"Close Combat",
+					"Knock Off"
+				],
+				"items": [
+					"Choice Band"
+				],
+				"ability": "Technician",
+				"teraTypes": [
+					"Ghost"
+				]
+			},
+			{
+				"role": "Offensive Support",
+				"movepool": [
+					"Spectral Thief",
+					"Coaching",
+					"Close Combat",
+					"Protect"
+				],
+				"items": [
+					"Focus Sash"
+				],
+				"ability": "Technician",
+				"teraTypes": [
+					"Dark"
+				]
+			}
+		]
+	},
+	"mew": {
+		"sets": [
+			{
+				"role": "Support",
+				"movepool": [
+					"Tailwind",
+					"Coaching",
+					"Taunt",
+					"Close Combat"
+				],
+				"items": [
+					"Sitrus Berry"
+				],
+				"ability": "Ancestor",
+				"teraTypes": [
+					"Fairy"
+				]
+			},
+			{
+				"role": "Dragon Dance",
+				"movepool": [
+					"Dragon Dance",
+					"Brave Bird",
+					"Close Combat",
+					"Protect"
+				],
+				"items": [
+					"Life Orb"
+				],
+				"ability": "Ancestor",
+				"teraTypes": [
+					"Flying"
+				]
+			},
+			{
+				"role": "Nasty Plot",
+				"movepool": [
+					"Nasty Plot",
+					"Fire Blast",
+					"Dazzling Gleam",
+					"Hydro Cannon"
+				],
+				"items": [
+					"Sitrus Berry"
+				],
+				"ability": "Ancestor",
+				"teraTypes": [
+					"Fairy"
+				]
+			}
+		]
+	},
+	"zygarde10": {
+		"sets": [
+			{
+				"role": "Sash",
+				"movepool": [
+					"Thousand Arrows",
+					"Outrage",
+					"Extreme Speed",
+					"Protect"
+				],
+				"items": [
+					"Focus Sash"
+				],
+				"ability": "Power Construct",
+				"teraTypes": [
+					"Normal"
+				]
+			},
+			{
+				"role": "Band",
+				"movepool": [
+					"Thousand Arrows",
+					"Extreme Speed",
+					"High Horsepower",
+					"Outrage"
+				],
+				"items": [
+					"Choice Band"
+				],
+				"ability": "Aura Break",
+				"teraTypes": [
+					"Normal"
+				]
+			}
+		]
+	},
+	"zygarde": {
+		"sets": [
+			{
+				"role": "Coil",
+				"movepool": [
+					"Coil",
+					"Thousand Arrows",
+					"Extreme Speed",
+					"Protect"
+				],
+				"items": [
+					"Leftovers"
+				],
+				"ability": "Power Construct",
+				"teraTypes": [
+					"Normal"
+				]
+			}
+		]
+	},
+	"zygardecomplete": {
+		"sets": [
+			{
+				"role": "Coil",
+				"movepool": [
+					"Coil",
+					"Thousand Arrows",
+					"Extreme Speed",
+					"Protect"
+				],
+				"items": [
+					"Leftovers"
+				],
+				"ability": "Power Construct",
+				"teraTypes": [
+					"Normal"
+				]
+			}
+		]
+	},
+	"shayminsky": {
+		"sets": [
+			{
+				"role": "Sash Flincher",
+				"movepool": [
+					"Seed Flare",
+					"Air Slash",
+					"Ominous Wind",
+					"Protect"
+				],
+				"items": [
+					"Focus Sash"
+				],
+				"ability": "Serene Gracidea",
+				"teraTypes": [
+					"Ghost"
+				]
+			}
+		]
+	},
+	"celebi": {
+		"sets": [
+			{
+				"role": "Leech Support",
+				"movepool": [
+					"Leech Seed",
+					"Psychic",
+					"Thunder Wave",
+					"Protect"
+				],
+				"items": [
+					"Leftovers"
+				],
+				"ability": "Natural Cure",
+				"teraTypes": [
+					"Fire"
+				]
+			}
+		]
+	},
+	"jirachi": {
+		"sets": [
+			{
+				"role": "Support",
+				"movepool": [
+					"Doom Desire",
+					"Psychic",
+					"Thunder Wave",
+					"Icy Wind"
+				],
+				"items": [
+					"Sitrus Berry"
+				],
+				"ability": "Serene Grace",
+				"teraTypes": [
+					"Water"
+				]
+			},
+			{
+				"role": "Scarf",
+				"movepool": [
+					"Iron Head",
+					"Body Slam",
+					"Fire Punch",
+					"U-turn"
+				],
+				"items": [
+					"Choice Scarf"
+				],
+				"ability": "Serene Grace",
+				"teraTypes": [
+					"Steel"
+				]
+			}
+		]
+	},
+	"manaphy": {
+		"sets": [
+			{
+				"role": "Tail Glow",
+				"movepool": [
+					"Tail Glow",
+					"Hydro Pump",
+					"Ice Beam",
+					"Grass Knot"
+				],
+				"items": [
+					"Sitrus Berry"
+				],
+				"ability": "Hydration",
+				"teraTypes": [
+					"Water"
+				]
+			}
+		]
+	},
+	"victini": {
+		"sets": [
+			{
+				"role": "Scarf",
+				"movepool": [
+					"V-create",
+					"Bolt Strike",
+					"Will-O-Wisp",
+					"Veevee Volley"
+				],
+				"items": [
+					"Choice Scarf"
+				],
+				"ability": "Victory Star",
+				"teraTypes": [
+					"Electric"
+				]
+			},
+			{
+				"role": "Victory Dance",
+				"movepool": [
+					"Victory Dance",
+					"Bolt Strike",
+					"V-create",
+					"Baton Pass"
+				],
+				"items": [
+					"Sitrus Berry"
+				],
+				"ability": "Victory Star",
+				"teraTypes": [
+					"Ghost"
+				]
+			}
+		]
+	},
+	"keldeo": {
+		"sets": [
+			{
+				"role": "LO Attacker",
+				"movepool": [
+					"Secret Sword",
+					"Hydro Pump",
+					"Vacuum Wave",
+					"Protect"
+				],
+				"items": [
+					"Life Orb"
+				],
+				"ability": "Justified",
+				"teraTypes": [
+					"Water"
+				]
+			}
+		]
+	},
+	"meloetta": {
+		"sets": [
+			{
+				"role": "Mixed LO",
+				"movepool": [
+					"Relic Song",
+					"Close Combat",
+					"Psychic",
+					"Protect"
+				],
+				"items": [
+					"Life Orb"
+				],
+				"ability": "Serene Grace",
+				"teraTypes": [
+					"Normal"
+				]
+			},
+			{
+				"role": "Physical Sash",
+				"movepool": [
+					"Relic Song",
+					"Close Combat",
+					"Triple Axel",
+					"Protect"
+				],
+				"items": [
+					"Focus Sash"
+				],
+				"ability": "Serene Grace",
+				"teraTypes": [
+					"Normal"
+				]
+			}
+		]
+	},
+	"genesect": {
+		"sets": [
+			{
+				"role": "Band",
+				"movepool": [
+					"U-turn",
+					"Extreme Speed",
+					"Explosion",
+					"Iron Head"
+				],
+				"items": [
+					"Choice Band"
+				],
+				"ability": "Download",
+				"teraTypes": [
+					"Normal"
+				]
+			},
+			{
+				"role": "Mixed LO",
+				"movepool": [
+					"U-turn",
+					"Flamethrower",
+					"Flash Cannon",
+					"Protect"
+				],
+				"items": [
+					"Life Orb"
+				],
+				"ability": "Download",
+				"teraTypes": [
+					"Bug"
+				]
+			}
+		]
+	},
+	"volcanion": {
+		"sets": [
+			{
+				"role": "Assault Vest",
+				"movepool": [
+					"Steam Eruption",
+					"Flamethrower",
+					"Earth Power",
+					"Explosion"
+				],
+				"items": [
+					"Assault Vest"
+				],
+				"ability": "Water Absorb",
+				"teraTypes": [
+					"Grass"
+				]
+			},
+			{
+				"role": "Bulky Attacker",
+				"movepool": [
+					"Steam Eruption",
+					"Flamethrower",
+					"Will-O-Wisp",
+					"Taunt"
+				],
+				"items": [
+					"Sitrus Berry"
+				],
+				"ability": "Water Absorb",
+				"teraTypes": [
+					"Fire"
+				]
+			}
+		]
+	},
+	"zeraora": {
+		"sets": [
+			{
+				"role": "Support",
+				"movepool": [
+					"Plasma Fists",
+					"Snarl",
+					"Coaching",
+					"Close Combat"
+				],
+				"items": [
+					"Focus Sash"
+				],
+				"ability": "Volt Absorb",
+				"teraTypes": [
+					"Ghost"
+				]
+			}
+		]
+	},
+	"zarude": {
+		"sets": [
+			{
+				"role": "Offensive LO",
+				"movepool": [
+					"Knock Off",
+					"Close Combat",
+					"Power Whip",
+					"Protect"
+				],
+				"items": [
+					"Life Orb"
+				],
+				"ability": "Seed Sower",
+				"teraTypes": [
+					"Fairy"
+				]
+			},
+			{
+				"role": "Assault Vest",
+				"movepool": [
+					"Knock Off",
+					"Close Combat",
+					"Power Whip",
+					"U-turn"
+				],
+				"items": [
+					"Assault Vest"
+				],
+				"ability": "Seed Sower",
+				"teraTypes": [
+					"Fairy"
+				]
+			}
+		]
+	},
+	"melmetal": {
+		"sets": [
+			{
+				"role": "Assault Vest",
+				"movepool": [
+					"Double Iron Bash",
+					"Ice Punch",
+					"Thunder Punch",
+					"Superpower"
+				],
+				"items": [
+					"Assault Vest"
+				],
+				"ability": "Iron Fist",
+				"teraTypes": [
+					"Steel"
+				]
+			},
+			{
+				"role": "Band",
+				"movepool": [
+					"Double Iron Bash",
+					"Self-Destruct",
+					"Thunder Punch",
+					"Superpower"
+				],
+				"items": [
+					"Choice Band"
+				],
+				"ability": "Iron Fist",
+				"teraTypes": [
+					"Steel"
 				]
 			}
 		]

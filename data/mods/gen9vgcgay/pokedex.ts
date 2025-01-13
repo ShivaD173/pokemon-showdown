@@ -291,7 +291,10 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 			"1": "Magic Guard",
 			"H": "Friend Guard"
 		},
-		"inherit": true
+		"inherit": true,
+		"evos": [
+			"Mr. Mime"
+		]
 	},
 	"ninetales": {
 		"types": [

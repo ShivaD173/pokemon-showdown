@@ -49,6 +49,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		inherit: true,
 		shortDesc: "User or Target must be sleeping. Heal 50%.",
 		pp: 5,
+		sleepUsable: true,
 		onTryImmunity(target, source) {
 			return target.status === 'slp' || target.hasAbility('comatose') ||
 					source.status === 'slp' || source.hasAbility('comatose');
@@ -459,7 +460,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		inherit: true,
 		accuracy: 100,
 		basePower: 40,
-		shortDesc: "Raises Special Attack by 1.",
+		shortDesc: "100% to raise Special Attack by 1.",
 		secondary: {
 			chance: 100,
 			self: {
