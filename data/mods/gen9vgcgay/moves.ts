@@ -1809,6 +1809,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		inherit: true,
 		isNonstandard: null,
 		accuracy: 60,
+		pp: 5,
 	},
 	hyperspacehole: {
 		inherit: true,

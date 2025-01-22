@@ -1510,7 +1510,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		natDexTier: "ZU",
 	},
 	sneaselhisui: {
-		tier: "SU",
+		tier: "SUBL",
 		doublesTier: "NFE",
 		natDexTier: "PU",
 	},
@@ -3613,7 +3613,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		natDexTier: "RUBL",
 	},
 	virizion: {
-		tier: "SU",
+		tier: "SUBL",
 		doublesTier: "(DUU)",
 		natDexTier: "ZU",
 	},
@@ -4184,7 +4184,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		natDexTier: "ZU",
 	},
 	oricoriosensu: {
-		tier: "SU",
+		tier: "SUBL",
 		doublesTier: "(DUU)",
 		natDexTier: "ZU",
 	},
