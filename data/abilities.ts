@@ -6344,23 +6344,20 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		num: -42,
 	},
 	putridstench: {
-		onPreStart(pokemon) {
-			this.add('-ability', pokemon, 'Putrid Stench');
-			this.effectState.unnerved = true;
-		},
+		onSwitchInPriority: 1,
 		onStart(pokemon) {
-			if (this.effectState.unnerved) return;
+			if (this.effectState.putrid) return;
 			this.add('-ability', pokemon, 'Putrid Stench');
-			this.effectState.unnerved = true;
+			this.effectState.putrid = true;
 		},
 		onEnd() {
-			this.effectState.unnerved = false;
+			this.effectState.putrid = false;
 		},
 		onFoeTryEatItem() {
-			return !this.effectState.unnerved;
+			return !this.effectState.putrid;
 		},
 		onFoeTryHeal(relayVar, target, source, effect) {
-			if (this.effectState.unnerved && effect.name === "Leftovers") {
+			if (this.effectState.putrid && effect.name === "Leftovers") {
 				return false;
 			}
 		},

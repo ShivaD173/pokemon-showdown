@@ -238,9 +238,7 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 			if (effect.name === 'Intimidate' && boost.atk) {
 				this.add('-fail', target, 'unboost', 'Attack', '[from] ability: Big Pecks', '[of] ' + target);
 				boost.atk = 1;
-				// boost.def = 1;
 				boost.spa = 1;
-				// boost.spd = 1;
 				boost.spe = 1;
 			}
 		},
@@ -368,8 +366,6 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 	unnerve: {
 		inherit: true,
 		shortDesc: "On switch-in, lowers the Special Attack of opponents by 1 stage.",
-		onPreStart(pokemon) {
-		},
 		onStart(pokemon) {
 			let activated = false;
 			for (const target of pokemon.adjacentFoes()) {
@@ -865,12 +861,6 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 				pokemon.cureStatus();
 			}
 		},
-		onAllySwitchIn(pokemon) {
-			if (pokemon.status) {
-				this.add('-activate', this.effectState.target, 'ability: Pastel Veil');
-				pokemon.cureStatus();
-			}
-		},
 		onSetStatus(status, target, source, effect) {
 			if ((effect as Move)?.status) {
 				this.add('-immune', target, '[from] ability: Pastel Veil');
@@ -1313,8 +1303,6 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 	asoneglastrier: {
 		inherit: true,
 		shortDesc: "Combination of the Symbiosis and Chilling Neigh Abilities.",
-		onPreStart(pokemon) {
-		},
 		onStart(pokemon) {
 			this.add('-ability', pokemon, 'As One');
 		},
@@ -1341,8 +1329,6 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 	asonespectrier: {
 		inherit: true,
 		shortDesc: "Combination of the Symbiosis and Grim Neigh Abilities.",
-		onPreStart(pokemon) {
-		},
 		onStart(pokemon) {
 			this.add('-ability', pokemon, 'As One');
 		},
@@ -1367,16 +1353,16 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 		},
 	},
 	// Diancie now "Mega Evolves on switch in cuz I feel like it"
-	magicbounce: {
-		inherit: true,
-		onPreStart(pokemon) {
-			if (pokemon.baseSpecies.baseSpecies !== 'Diancie') return;
-			if (pokemon.species.forme !== 'Mega') {
-				this.add('-activate', pokemon, 'ability: Magic Bounce');
-				pokemon.formeChange('Diancie-Mega', this.effect, true);
-			}
-		},
-	},
+	// magicbounce: {
+	// 	inherit: true,
+	// 	onPreStart(pokemon) {
+	// 		if (pokemon.baseSpecies.baseSpecies !== 'Diancie') return;
+	// 		if (pokemon.species.forme !== 'Mega') {
+	// 			this.add('-activate', pokemon, 'ability: Magic Bounce');
+	// 			pokemon.formeChange('Diancie-Mega', this.effect, true);
+	// 		}
+	// 	},
+	// },
 	// New Abilities
 	triplethreat: {
 		inherit: true,
