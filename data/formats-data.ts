@@ -1904,7 +1904,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	shedinja: {
 		isNonstandard: "Past",
 		tier: "Illegal",
-		natDexTier: "UU",
+		natDexTier: "RU",
 	},
 	whismur: {
 		isNonstandard: "Past",
@@ -2097,7 +2097,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		natDexTier: "RU",
 	},
 	torkoal: {
-		tier: "NU",
+		tier: "PU",
 		doublesTier: "DOU",
 		natDexTier: "PU",
 	},
@@ -4184,7 +4184,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		natDexTier: "ZU",
 	},
 	oricoriosensu: {
-		tier: "SUBL",
+		tier: "NUBL",
 		doublesTier: "(DUU)",
 		natDexTier: "ZU",
 	},
