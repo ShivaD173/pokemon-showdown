@@ -1555,6 +1555,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	},
 	piloswine: {
 		tier: "SU",
+		natDexTier: "NFE"
 	},
 	mamoswine: {
 		tier: "RU",

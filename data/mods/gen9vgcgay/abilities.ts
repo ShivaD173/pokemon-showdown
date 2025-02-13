@@ -1031,7 +1031,7 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 	},
 	guarddog: {
 		inherit: true,
-		shortDesc: "Takes an attack directed at ally once per switch in, Reverses Intim",
+		shortDesc: "Takes an attack directed at ally once per switch in, Reverses Intim.",
 		onSwitchIn(pokemon) {
 			this.effectState.guardDog = false;
 		},
