@@ -54,19 +54,19 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "NU",
 	},
 	rattata: {
-		tier: "IUBL",
+		tier: "SU",
 	},
 	raticate: {
 		tier: "NU",
 	},
 	spearow: {
-		tier: "IUBL",
+		tier: "IU",
 	},
 	fearow: {
 		tier: "NU",
 	},
 	ekans: {
-		tier: "SU",
+		tier: "IU",
 	},
 	arbok: {
 		tier: "NU",
@@ -138,7 +138,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "UU",
 	},
 	oddish: {
-		tier: "SU",
+		tier: "IU",
 	},
 	gloom: {
 		tier: "NU",
@@ -156,7 +156,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "SU",
 	},
 	venonat: {
-		tier: "SU",
+		tier: "IU",
 	},
 	venomoth: {
 		tier: "PU",
@@ -213,7 +213,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "OU",
 	},
 	machop: {
-		tier: "SU",
+		tier: "IU",
 	},
 	machoke: {
 		tier: "PU",
@@ -510,7 +510,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "Uber",
 	},
 	chikorita: {
-		tier: "SU",
+		tier: "IU",
 	},
 	bayleef: {
 		tier: "ZU",
@@ -600,7 +600,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "9U",
 	},
 	skiploom: {
-		tier: "SU",
+		tier: "IU",
 	},
 	jumpluff: {
 		tier: "UU",
