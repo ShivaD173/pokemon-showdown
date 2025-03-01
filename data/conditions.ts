@@ -22,7 +22,7 @@ export const Conditions: import('../sim/dex-conditions').ConditionDataTable = {
 		effectType: 'Status',
 		onStart(target, source, sourceEffect) {
 			if (sourceEffect && sourceEffect.effectType === 'Ability') {
-				this.add('-status', target, 'fst', '[from] ability: ' + sourceEffect.name, '[of] ' + source);
+				this.add('-status', target, 'fst', '[from] ability: ' + sourceEffect.name, `[of] ${source}`);
 			} else {
 				this.add('-status', target, 'fst');
 			}
@@ -649,7 +649,7 @@ export const Conditions: import('../sim/dex-conditions').ConditionDataTable = {
 		},
 		onFieldStart(field, source, effect) {
 			if (effect?.effectType === 'Ability') {
-				this.add('-weather', 'Thunderstorm', '[from] ability: ' + effect.name, '[of] ' + source);
+				this.add('-weather', 'Thunderstorm', '[from] ability: ' + effect.name, `[of] ${source}`);
 			} else {
 				this.add('-weather', 'Thunderstorm');
 			}

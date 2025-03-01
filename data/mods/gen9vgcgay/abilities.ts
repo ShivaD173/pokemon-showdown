@@ -232,11 +232,11 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 			if (boost.def && boost.def < 0) {
 				delete boost.def;
 				if (!(effect as ActiveMove).secondaries && effect.id !== 'octolock') {
-					this.add("-fail", target, "unboost", "Defense", "[from] ability: Big Pecks", "[of] " + target);
+					this.add("-fail", target, "unboost", "Defense", "[from] ability: Big Pecks", `[of] ${target}`);
 				}
 			}
 			if (effect.name === 'Intimidate' && boost.atk) {
-				this.add('-fail', target, 'unboost', 'Attack', '[from] ability: Big Pecks', '[of] ' + target);
+				this.add('-fail', target, 'unboost', 'Attack', '[from] ability: Big Pecks', `[of] ${target}`);
 				boost.atk = 1;
 				boost.spa = 1;
 				boost.spe = 1;
@@ -281,7 +281,7 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 		onTryBoost(boost, target, source, effect) {
 			if (effect.name === 'Intimidate' && boost.atk) {
 				delete boost.atk;
-				this.add('-fail', target, 'unboost', 'Attack', '[from] ability: Justified', '[of] ' + target);
+				this.add('-fail', target, 'unboost', 'Attack', '[from] ability: Justified', `[of] ${target}`);
 			}
 		},
 	},
@@ -358,7 +358,7 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 			if (boost.atk && boost.atk < 0) {
 				delete boost.atk;
 				if (!(effect as ActiveMove).secondaries) {
-					this.add("-fail", target, "unboost", "Attack", "[from] ability: Hyper Cutter", "[of] " + target);
+					this.add("-fail", target, "unboost", "Attack", "[from] ability: Hyper Cutter", `[of] ${target}`);
 				}
 			}
 		},
@@ -925,7 +925,7 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 			if (ability.flags['noreceiver'] || ability.id === 'noability') return;
 			if (this.effectState.target.setAbility(ability)) {
 				this.boost(target.boosts, this.effectState.target, this.effectState.target);
-				this.add('-ability', this.effectState.target, ability, '[from] ability: Receiver', '[of] ' + target);
+				this.add('-ability', this.effectState.target, ability, '[from] ability: Receiver', `[of] ${target}`);
 			}
 		},
 	},

@@ -6306,7 +6306,7 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 				for (const pokemon of source.allies()) {
 					if (pokemon.hasAbility('Tremor Sense')) { tremorHaver = pokemon; }
 				}
-				this.add('-immune', source, '[from] ability: Tremor Sense', '[of] ' + tremorHaver);
+				this.add('-immune', source, '[from] ability: Tremor Sense', `[of] ${tremorHaver}`);
 				return null;
 			}
 		},
@@ -6330,7 +6330,7 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 			const dazzlingHolder = this.effectState.target;
 			if ((source.isAlly(dazzlingHolder) || move.target === 'all') && move.priority > 0.1) {
 				this.attrLastMove('[still]');
-				this.add('cant', dazzlingHolder, 'ability: Regal Majesty', move, '[of] ' + target);
+				this.add('cant', dazzlingHolder, 'ability: Regal Majesty', move, `[of] ${target}`);
 				return false;
 			}
 		},
@@ -6546,7 +6546,7 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 			const dazzlingHolder = this.effectState.target;
 			if ((source === dazzlingHolder || move.target === 'all') && move.priority > 0.1) {
 				this.attrLastMove('[still]');
-				this.add('cant', dazzlingHolder, 'ability: Time Lord', move, '[of] ' + target);
+				this.add('cant', dazzlingHolder, 'ability: Time Lord', move, `[of] ${target}`);
 				return false;
 			}
 		},
