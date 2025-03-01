@@ -3797,14 +3797,14 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		mod: 'gen8bdsp',
 		searchShow: false,
 		ruleset: ['[Gen 8 BDSP] UU'],
-		banlist: ['UU', 'RUBL'],
+		banlist: ['UU', 'RUBL', 'Drought'],
 	},
 	{
 		name: "[Gen 8 BDSP] NU",
 		mod: 'gen8bdsp',
 		searchShow: false,
 		ruleset: ['[Gen 8 BDSP] RU'],
-		banlist: ['RU', 'NUBL'],
+		banlist: ['RU', 'NUBL', 'Damp Rock', 'Heat Rock', 'Sticky Web'],
 	},
 	{
 		name: "[Gen 8 BDSP] PU",
