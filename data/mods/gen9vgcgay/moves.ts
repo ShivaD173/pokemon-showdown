@@ -52,7 +52,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		sleepUsable: true,
 		onTryImmunity(target, source) {
 			return target.status === 'slp' || target.hasAbility('comatose') ||
-					source.status === 'slp' || source.hasAbility('comatose');
+				source.status === 'slp' || source.hasAbility('comatose');
 		},
 	},
 	// Genie moves
@@ -96,7 +96,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		secondary: {
 			chance: 15,
 			self: {
-				boosts: {atk: 1, def: 1, spa: 1, spd: 1, spe: 1},
+				boosts: { atk: 1, def: 1, spa: 1, spd: 1, spe: 1 },
 			},
 		},
 	},
@@ -107,7 +107,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		secondary: {
 			chance: 15,
 			self: {
-				boosts: {atk: 1, def: 1, spa: 1, spd: 1, spe: 1},
+				boosts: { atk: 1, def: 1, spa: 1, spd: 1, spe: 1 },
 			},
 		},
 	},
@@ -117,7 +117,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		secondary: {
 			chance: 15,
 			self: {
-				boosts: {atk: 1, def: 1, spa: 1, spd: 1, spe: 1},
+				boosts: { atk: 1, def: 1, spa: 1, spd: 1, spe: 1 },
 			},
 		},
 		"isNonstandard": null,
@@ -184,7 +184,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 	},
 	armthrust: {
 		inherit: true,
-		basePower: 25
+		basePower: 25,
 	},
 	clamp: {
 		inherit: true,
@@ -205,13 +205,13 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		inherit: true,
 		isNonstandard: null,
 		"basePower": 140,
-		flags: {contact: 1, protect: 1, mirror: 1, metronome: 1, slicing: 1},
+		flags: { contact: 1, protect: 1, mirror: 1, metronome: 1, slicing: 1 },
 	},
 	// Multi Turn
 	"razorwind": {
 		inherit: true,
 		"basePower": 150,
-		isNonstandard: null
+		isNonstandard: null,
 	},
 	"fly": {
 		inherit: true,
@@ -260,22 +260,22 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 	"mistyexplosion": {
 		inherit: true,
 		"basePower": 150,
-		isNonstandard: null
+		isNonstandard: null,
 	},
 	"explosion": {
 		inherit: true,
-		"basePower": 325
+		"basePower": 325,
 	},
 	"selfdestruct": {
 		inherit: true,
-		"basePower": 250
+		"basePower": 250,
 	},
 	// Regular Moves
 	coaching: {
 		inherit: true,
 		desc: "Raises the target's Attack and Defense by 1 stage. Fails if there is no ally adjacent to the user.",
 		shortDesc: "Raises a non-protecting ally's Atk and Def by 1.",
-		flags: {bypasssub: 1, allyanim: 1, metronome: 1, protect: 1},
+		flags: { bypasssub: 1, allyanim: 1, metronome: 1, protect: 1 },
 	},
 	rocksmash: {
 		inherit: true,
@@ -318,18 +318,18 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 	},
 	holdhands: {
 		inherit: true,
-		boosts: {atk: 1, spa: 1},
+		boosts: { atk: 1, spa: 1 },
 		shortDesc: "Inspire each other, boosting both Pokemon Atk/SpA by 1.",
 		onHit(target, source, move) {
-			this.boost({atk: 1, spa: 1}, target, source, move, false, true);
-			this.boost({atk: 1, spa: 1}, source, source, move, false, true);
+			this.boost({ atk: 1, spa: 1 }, target, source, move, false, true);
+			this.boost({ atk: 1, spa: 1 }, source, source, move, false, true);
 		},
 	},
 	gastroacid: {
 		inherit: true,
 		target: "allAdjacent",
 		shortDesc: "Nullifies the ability of all other pokemon.",
-		flags: {protect: 1, reflectable: 1, mirror: 1, distance: 1},
+		flags: { protect: 1, reflectable: 1, mirror: 1, distance: 1 },
 		condition: {
 			onStart(pokemon) {
 				if (pokemon.getAbility().flags['cantsuppress']) return false;
@@ -347,7 +347,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 	lick: {
 		inherit: true,
 		shortDesc: "50% chance to paralyze the target.",
-		secondary: {chance: 50, status: 'par'},
+		secondary: { chance: 50, status: 'par' },
 	},
 	growth: {
 		inherit: true,
@@ -355,7 +355,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		onModifyMove(move, pokemon) {
 			if (['sunnyday', 'desolateland'].includes(pokemon.effectiveWeather()) ||
 				this.field.isTerrain('grassyterrain') && pokemon.isGrounded()) {
-				move.boosts = {atk: 2, spa: 2};
+				move.boosts = { atk: 2, spa: 2 };
 			}
 		},
 	},
@@ -435,14 +435,14 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 	},
 	smartstrike: {
 		inherit: true,
-		flags: {contact: 1, protect: 1, mirror: 1, slicing: 1},
-		isNonstandard: null
+		flags: { contact: 1, protect: 1, mirror: 1, slicing: 1 },
+		isNonstandard: null,
 	},
 	slash: {
 		inherit: true,
 		basePower: 60,
 		shortDesc: "Always crits.",
-		willCrit: true
+		willCrit: true,
 	},
 	echoedvoice: {
 		inherit: true,
@@ -468,7 +468,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 					spa: 1,
 				},
 			},
-		}
+		},
 	},
 	eggbomb: {
 		inherit: true,
@@ -481,7 +481,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		inherit: true,
 		shortDesc: "20% to lower target's Attack by 1.",
 		basePower: 75,
-		secondary: {chance: 20, boosts: {atk: -1}},
+		secondary: { chance: 20, boosts: { atk: -1 } },
 	},
 	powder: {
 		inherit: true,
@@ -524,12 +524,12 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 	},
 	feint: {
 		inherit: true,
-		basePower: 40
+		basePower: 40,
 	},
 	megapunch: {
 		inherit: true,
 		basePower: 90,
-		accuracy: 100
+		accuracy: 100,
 	},
 	megakick: {
 		inherit: true,
@@ -571,7 +571,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		inherit: true,
 		isNonstandard: null,
 		basePower: 75,
-		accuracy: 95
+		accuracy: 95,
 	},
 	rollingkick: {
 		inherit: true,
@@ -579,13 +579,13 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		shortDesc: "100% chance to lower speed by 1.",
 		basePower: 70,
 		accuracy: 100,
-		secondary: {chance: 100, boosts: {spe: -1}},
+		secondary: { chance: 100, boosts: { spe: -1 } },
 	},
 	frostbreath: {
 		inherit: true,
 		isNonstandard: null,
 		basePower: 55,
-		accuracy: 100
+		accuracy: 100,
 	},
 	skyuppercut: {
 		inherit: true,
@@ -614,19 +614,19 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 	},
 	firefang: {
 		inherit: true,
-		basePower: 75
+		basePower: 75,
 	},
 	thunderfang: {
 		inherit: true,
-		basePower: 75
+		basePower: 75,
 	},
 	icefang: {
 		inherit: true,
 		basePower: 75,
 		shortDesc: "10% chance to frostbite. 10% to flinch.",
 		secondaries: [
-			{chance: 10, status: 'fst'},
-			{chance: 10, volatileStatus: 'flinch'},
+			{ chance: 10, status: 'fst' },
+			{ chance: 10, volatileStatus: 'flinch' },
 		],
 	},
 	// Near Signaure Moves
@@ -634,7 +634,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		inherit: true,
 		shortDesc: "Gives an ally +1 SpD. Misty Terrain: +1 SpA.",
 		onModifyMove(move, pokemon) {
-			if (this.field.isTerrain('mistyterrain')) move.boosts = {spa: 1, spd: 1};
+			if (this.field.isTerrain('mistyterrain')) move.boosts = { spa: 1, spd: 1 };
 		},
 	},
 	veeveevolley: {
@@ -652,12 +652,12 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 	razorshell: {
 		inherit: true,
 		shortDesc: "100% chance to lower the target's Defense by 1.",
-		secondary: {chance: 100, boosts: {def: -1}},
+		secondary: { chance: 100, boosts: { def: -1 } },
 	},
 	magneticflux: {
 		shortDesc: "Burns all other Steel types on field.",
 		target: "all",
-		flags: {distance: 1},
+		flags: { distance: 1 },
 		onHitField(t, source, move) {
 			const targets: Pokemon[] = [];
 			for (const pokemon of this.getAllActive()) {
@@ -704,21 +704,21 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		inherit: true,
 		shortDesc: "User Eats berry, gains +1 Atk, +2 Def.",
 		onHit(pokemon) {
-			if (!this.boost({atk: 1, def: 2})) return null;
+			if (!this.boost({ atk: 1, def: 2 })) return null;
 			pokemon.eatItem(true);
 		},
 	},
 	needlearm: {
 		inherit: true,
 		isNonstandard: null,
-		basePower: 90
+		basePower: 90,
 	},
 	crabhammer: {
 		inherit: true,
 		shortDesc: "High Crit Ratio, 30% chance to lower speed by 1.",
 		secondary: {
 			chance: 30,
-			boosts: {spe: -1},
+			boosts: { spe: -1 },
 		},
 	},
 	present: {
@@ -769,7 +769,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		shortDesc: "Boosts Atk and SpDef by 1",
 		boosts: {
 			atk: 1,
-			spd: 1
+			spd: 1,
 		},
 	},
 	charge: {
@@ -864,25 +864,25 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 	electroshot: {
 		inherit: true,
 		isNonstandard: null,
-		basePower: 120
+		basePower: 120,
 	},
 	aeroblast: {
 		inherit: true,
 		isNonstandard: null,
-		basePower: 90
+		basePower: 90,
 	},
 	wickedblow: {
 		inherit: true,
-		basePower: 69
+		basePower: 69,
 	},
 	chloroblast: {
 		inherit: true,
-		accuracy: 100
+		accuracy: 100,
 	},
 	syrupbomb: {
 		inherit: true,
 		basePower: 80,
-		accuracy: 100
+		accuracy: 100,
 	},
 	searingshot: {
 		inherit: true,
@@ -915,7 +915,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 			const item = pokemon.getItem();
 			if (!item.onDrive) return;
 			move.type = item.onDrive;
-		}
+		},
 	},
 	headcharge: {
 		inherit: true,
@@ -930,12 +930,12 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 	shelter: {
 		inherit: true,
 		shortDesc: "Raises the user's Defense and Sp. Def by 1.",
-		boosts: {def: 1, spd: 1},
+		boosts: { def: 1, spd: 1 },
 	},
 	spicyextract: {
 		inherit: true,
 		shortDesc: "Raises target's Atk by 3 and lowers its Def by 3.",
-		boosts: {atk: 3, def: -3},
+		boosts: { atk: 3, def: -3 },
 	},
 	mysticalpower: {
 		inherit: true,
@@ -980,7 +980,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		target: "allAdjacentFoes",
 		isNonstandard: null,
 		accuracy: 90,
-		secondary: {chance: 20, status: 'fst'},
+		secondary: { chance: 20, status: 'fst' },
 	},
 	gravapple: {
 		inherit: true,
@@ -1017,14 +1017,14 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		shortDesc: "Heals the user by 100% of its max HP.",
 		pp: 5,
 		heal: [1, 1],
-		isNonstandard: null
+		isNonstandard: null,
 	},
 	milkdrink: {
 		inherit: true,
 		shortDesc: "Heals the user by 100% of its max HP.",
 		pp: 5,
 		heal: [1, 1],
-		isNonstandard: null
+		isNonstandard: null,
 	},
 	tropkick: {
 		inherit: true,
@@ -1062,7 +1062,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 	},
 	psyshieldbash: {
 		inherit: true,
-		accuracy: 100
+		accuracy: 100,
 	},
 	twinbeam: {
 		inherit: true,
@@ -1085,12 +1085,12 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		},
 		self: {
 			chance: 50,
-			boosts: {def: 1},
+			boosts: { def: 1 },
 		},
 	},
 	doubleshock: {
 		inherit: true,
-		basePower: 130
+		basePower: 130,
 	},
 	revelationdance: {
 		inherit: true,
@@ -1111,7 +1111,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 	geargrind: {
 		inherit: true,
 		isNonstandard: null,
-		accuracy: 90
+		accuracy: 90,
 	},
 	gearup: {
 		inherit: true,
@@ -1124,14 +1124,14 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 			if (!targets.length) return false;
 			let didSomething = false;
 			for (const target of targets) {
-				didSomething = this.boost({atk: 1, spa: 1}, target, source, move, false, true) || didSomething;
+				didSomething = this.boost({ atk: 1, spa: 1 }, target, source, move, false, true) || didSomething;
 			}
 			return didSomething;
 		},
 	},
 	icehammer: {
 		inherit: true,
-		basePower: 110
+		basePower: 110,
 	},
 	steamroller: {
 		inherit: true,
@@ -1170,11 +1170,11 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 					this.add('-end', pokemon, 'Octolock', '[partiallytrapped]', '[silent]');
 					return;
 				}
-				this.boost({def: -1, spd: -1}, pokemon, source, this.dex.getActiveMove('octolock'));
+				this.boost({ def: -1, spd: -1 }, pokemon, source, this.dex.getActiveMove('octolock'));
 				this.damage(pokemon.baseMaxhp / this.effectState.boundDivisor);
 			},
 			onTrapPokemon(pokemon) {
-				if (this.effectState.source && this.effectState.source.isActive) pokemon.tryTrap();
+				if (this.effectState.source?.isActive) pokemon.tryTrap();
 			},
 		},
 	},
@@ -1208,7 +1208,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 	freezingglare: {
 		inherit: true,
 		shortDesc: "20% chance to frostbite, +Ice Type.",
-		secondary: {chance: 20, status: 'fst'},
+		secondary: { chance: 20, status: 'fst' },
 		onEffectiveness(typeMod, target, type, move) {
 			return typeMod + this.dex.getEffectiveness('Ice', type);
 		},
@@ -1233,7 +1233,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		shortDesc: "100% chance to reduce SpDef by 1.",
 		basePower: 75,
 		secondary: {
-			chance: 100, boosts: {spd: -1},
+			chance: 100, boosts: { spd: -1 },
 		},
 	},
 	mistball: {
@@ -1242,7 +1242,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		shortDesc: "100% chance to reduce SpA by 1.",
 		basePower: 75,
 		secondary: {
-			chance: 100, boosts: {spa: -1},
+			chance: 100, boosts: { spa: -1 },
 		},
 	},
 	ficklebeam: {
@@ -1314,7 +1314,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 			onAnyModifyDamage(damage, source, target, move) {
 				if (target !== source && this.effectState.target.hasAlly(target)) {
 					if ((target.side.getSideCondition('reflect') && this.getCategory(move) === 'Physical') ||
-							(target.side.getSideCondition('lightscreen') && this.getCategory(move) === 'Special')) {
+						(target.side.getSideCondition('lightscreen') && this.getCategory(move) === 'Special')) {
 						return;
 					}
 					if (!target.getMoveHitData(move).crit && !move.infiltrates) {
@@ -1444,28 +1444,28 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		isNonstandard: null,
 		shortDesc: "Charges, +Grass to target type, omniboost turn 2.",
 		pp: 1,
-		flags: {charge: 1, protect: 1, reflectable: 1, mirror: 1, allyanim: 1},
+		flags: { charge: 1, protect: 1, reflectable: 1, mirror: 1, allyanim: 1 },
 		onTryMove(attacker, defender, move) {
 			if (attacker.removeVolatile(move.id)) {
-				this.boost({atk: 1, def: 1, spa: 1, spd: 1, spe: 1}, attacker, attacker, move);
+				this.boost({ atk: 1, def: 1, spa: 1, spd: 1, spe: 1 }, attacker, attacker, move);
 				return;
 			}
 			this.add('-prepare', attacker, move.name);
 			if (!this.runEvent('ChargeMove', attacker, defender, move)) {
-				this.boost({atk: 1, def: 1, spa: 1, spd: 1, spe: 1}, attacker, attacker, move);
+				this.boost({ atk: 1, def: 1, spa: 1, spd: 1, spe: 1 }, attacker, attacker, move);
 				return;
 			}
 			attacker.addVolatile('twoturnmove', defender);
 			return null;
-		}
+		},
 	},
 	conversion: {
 		inherit: true,
 		isNonstandard: null,
 		pp: 1,
 		shortDesc: "Charges, User's type to first move, Omniboost T2.",
-		boosts: {atk: 1, def: 1, spa: 1, spd: 1, spe: 1},
-		flags: {charge: 1, nonsky: 1, nosleeptalk: 1, failinstruct: 1},
+		boosts: { atk: 1, def: 1, spa: 1, spd: 1, spe: 1 },
+		flags: { charge: 1, nonsky: 1, nosleeptalk: 1, failinstruct: 1 },
 		onTryMove(attacker, defender, move) {
 			if (attacker.removeVolatile(move.id)) {
 				return;
@@ -1476,7 +1476,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 			}
 			attacker.addVolatile('twoturnmove', defender);
 			return null;
-		}
+		},
 	},
 	extremeevoboost: {
 		inherit: true,
@@ -1501,7 +1501,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 			}
 			attacker.addVolatile('twoturnmove', defender);
 			return null;
-		}
+		},
 	},
 	// i'm putting Geomancy here cuz i can
 	geomancy: {
@@ -1518,7 +1518,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		inherit: true,
 		isNonstandard: null,
 		isMax: false,
-		flags: {protect: 1, mirror: 1},
+		flags: { protect: 1, mirror: 1 },
 		basePower: 65,
 		shortDesc: "Restores berry on attack.",
 		self: {
@@ -1538,7 +1538,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		inherit: true,
 		isNonstandard: null,
 		isMax: false,
-		flags: {protect: 1, mirror: 1},
+		flags: { protect: 1, mirror: 1 },
 		basePower: 80,
 		shortDesc: "Poisons both foes after successful use.",
 	},
@@ -1546,7 +1546,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		inherit: true,
 		isNonstandard: null,
 		isMax: false,
-		flags: {protect: 1, mirror: 1},
+		flags: { protect: 1, mirror: 1 },
 		basePower: 80,
 		category: "Special",
 		secondary: {
@@ -1561,7 +1561,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		inherit: true,
 		isNonstandard: null,
 		isMax: false,
-		flags: {protect: 1, mirror: 1},
+		flags: { protect: 1, mirror: 1 },
 		basePower: 90,
 		shortDesc: "Sets up a Steel Hazard after use.",
 	},
@@ -1569,7 +1569,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		inherit: true,
 		isNonstandard: null,
 		isMax: false,
-		flags: {protect: 1, mirror: 1},
+		flags: { protect: 1, mirror: 1 },
 		category: "Special",
 		basePower: 90,
 		shortDesc: "Sets up Gravity after succesful use.",
@@ -1578,7 +1578,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		inherit: true,
 		isNonstandard: null,
 		isMax: false,
-		flags: {protect: 1, mirror: 1},
+		flags: { protect: 1, mirror: 1 },
 		category: "Special",
 		basePower: 80,
 		shortDesc: "Heals self and allies by 1/6th.",
@@ -1587,7 +1587,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		inherit: true,
 		isNonstandard: null,
 		isMax: false,
-		flags: {protect: 1, mirror: 1},
+		flags: { protect: 1, mirror: 1 },
 		category: "Special",
 		basePower: 90,
 		shortDesc: "Foes: last move -2 PP.",
@@ -1602,7 +1602,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 				return 200;
 			}
 			return 80;
-		}
+		},
 	},
 	waterpledge: {
 		inherit: true,
@@ -1613,7 +1613,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 				return 200;
 			}
 			return 80;
-		}
+		},
 	},
 	grasspledge: {
 		inherit: true,
@@ -1624,28 +1624,28 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 				return 200;
 			}
 			return 80;
-		}
+		},
 	},
 	// Freeze -> Frostbite
 	blizzard: {
 		inherit: true,
 		shortDesc: "15% chance to frostbite foes. Can't miss in Snow.",
-		secondary: {chance: 15, status: 'fst'},
+		secondary: { chance: 15, status: 'fst' },
 	},
 	icebeam: {
 		inherit: true,
 		shortDesc: "10% chance to frostbite.",
-		secondary: {chance: 10, status: 'fst'},
+		secondary: { chance: 10, status: 'fst' },
 	},
 	freezedry: {
 		inherit: true,
 		shortDesc: "10% chance to frostbite. Super effective on Water.",
-		secondary: {chance: 10, status: 'fst'},
+		secondary: { chance: 10, status: 'fst' },
 	},
 	icepunch: {
 		inherit: true,
 		shortDesc: "10% chance to frostbite.",
-		secondary: {chance: 10, status: 'fst'},
+		secondary: { chance: 10, status: 'fst' },
 	},
 	// Recharge moves
 	hyperbeam: {
@@ -1754,7 +1754,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		self: null,
 		shortDesc: "User recharges if doesn't KO. 30% paralysis.",
 		basePower: 130,
-		flags: {recharge: 1, protect: 1, mirror: 1, nosleeptalk: 1, failinstruct: 1},
+		flags: { recharge: 1, protect: 1, mirror: 1, nosleeptalk: 1, failinstruct: 1 },
 		onTryMove(attacker, defender, move) {
 			return;
 		},
@@ -1770,7 +1770,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		self: null,
 		shortDesc: "User recharges if doesn't KO. 30% burn.",
 		basePower: 130,
-		flags: {recharge: 1, protect: 1, mirror: 1, nosleeptalk: 1, failinstruct: 1},
+		flags: { recharge: 1, protect: 1, mirror: 1, nosleeptalk: 1, failinstruct: 1 },
 		onTryMove(attacker, defender, move) {
 			return;
 		},
@@ -1947,7 +1947,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 	whirlwind: {
 		inherit: true,
 		pp: 10,
-		type: 'Flying'
+		type: 'Flying',
 	},
 	thunderwave: {
 		inherit: true,
@@ -1993,7 +1993,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		inherit: true,
 		isNonstandard: null,
 		category: "Physical",
-		pp: 2
+		pp: 2,
 	},
 	// Hidden Powers
 	hiddenpower: {
@@ -2322,7 +2322,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 	shellsidearm: {
 		inherit: true,
 		isNonstandard: null,
-		flags: {protect: 1, mirror: 1, bullet: 1},
+		flags: { protect: 1, mirror: 1, bullet: 1 },
 	},
 	autotomize: {
 		inherit: true,

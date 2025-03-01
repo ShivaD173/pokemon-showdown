@@ -5,7 +5,7 @@ export const Items: import('../../../sim/dex-items').ModdedItemDataTable = {
 		isNonstandard: null,
 		desc: "On switch-in, raises holder's Attack by 1 and confuses it. Single use.",
 		shortDesc: "On switch-in, raises holder's Attack by 1 and confuses it. Single use.",
-		boosts: {atk: 1},
+		boosts: { atk: 1 },
 		onStart() {
 			this.effectState.started = true;
 		},
@@ -76,7 +76,7 @@ export const Items: import('../../../sim/dex-items').ModdedItemDataTable = {
 			if (pokemon.species.id === 'palkiaorigin' || pokemon.hp > pokemon.maxhp / 2) return;
 			this.add('-activate', pokemon, 'item: Lustrous Globe');
 			pokemon.formeChange('Palkia-Origin', this.effect, true);
-		},*/
+		}, */
 		onUpdate(pokemon) {
 			if (pokemon.baseSpecies.baseSpecies !== 'Palkia' || pokemon.transformed || !pokemon.hp) return;
 			if (pokemon.species.id === 'palkiaorigin' || pokemon.hp > pokemon.maxhp / 2) return;
@@ -97,7 +97,7 @@ export const Items: import('../../../sim/dex-items').ModdedItemDataTable = {
 			if (pokemon.species.id === 'dialgaorigin' || pokemon.hp > pokemon.maxhp / 2) return;
 			this.add('-activate', pokemon, 'item: Adamant Crystal');
 			pokemon.formeChange('Dialga-Origin', this.effect, true);
-		},*/
+		}, */
 		onUpdate(pokemon) {
 			if (pokemon.baseSpecies.baseSpecies !== 'Dialga' || pokemon.transformed || !pokemon.hp) return;
 			if (pokemon.species.id === 'dialgaorigin' || pokemon.hp > pokemon.maxhp / 2) return;
@@ -118,7 +118,7 @@ export const Items: import('../../../sim/dex-items').ModdedItemDataTable = {
 			if (pokemon.species.id === 'giratinaorigin' || pokemon.hp > pokemon.maxhp / 2) return;
 			this.add('-activate', pokemon, 'item: Griseous Core');
 			pokemon.formeChange('Giratina-Origin', this.effect, true);
-		},*/
+		}, */
 		onUpdate(pokemon) {
 			if (pokemon.baseSpecies.baseSpecies !== 'Giratina' || pokemon.transformed || !pokemon.hp) return;
 			if (pokemon.species.id === 'giratinaorigin' || pokemon.hp > pokemon.maxhp / 2) return;
@@ -277,7 +277,7 @@ export const Items: import('../../../sim/dex-items').ModdedItemDataTable = {
 	dubiousdisc: {
 		"inherit": true,
 		isNonstandard: null,
-		onDrive: 'Ghost'
+		onDrive: 'Ghost',
 	},
 	deepseascale: {
 		inherit: true,

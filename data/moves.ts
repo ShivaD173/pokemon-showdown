@@ -22078,7 +22078,7 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		name: "Hidden Power Fairy",
 		pp: 15,
 		priority: 0,
-		flags: {protect: 1, mirror: 1},
+		flags: { protect: 1, mirror: 1 },
 		secondary: null,
 		target: "normal",
 		type: "Fairy",
@@ -22093,7 +22093,7 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		name: "Purifying Water",
 		pp: 5,
 		priority: 0,
-		flags: {protect: 1, mirror: 1},
+		flags: { protect: 1, mirror: 1 },
 		secondary: {
 			chance: 30,
 			status: 'fst',
@@ -22115,7 +22115,7 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		name: "Divine Smite",
 		pp: 5,
 		priority: 0,
-		flags: {protect: 1, mirror: 1},
+		flags: { protect: 1, mirror: 1 },
 		secondary: {
 			chance: 30,
 			status: 'par',
@@ -22141,7 +22141,7 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "Crunch", target);
 		},
-		flags: {bite: 1, contact: 1, protect: 1, mirror: 1},
+		flags: { bite: 1, contact: 1, protect: 1, mirror: 1 },
 		secondaries: [
 			{
 				chance: 10,
@@ -22170,7 +22170,7 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "Brave Bird", target);
 		},
-		flags: {contact: 1, protect: 1, mirror: 1, gravity: 1},
+		flags: { contact: 1, protect: 1, mirror: 1, gravity: 1 },
 		hasCrashDamage: true,
 		onMoveFail(target, source, move) {
 			this.damage(source.baseMaxhp / 2, source, source, this.dex.conditions.get('High Jump Kick'));
@@ -22189,7 +22189,7 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		isNonstandard: "CAP",
 		pp: 10,
 		priority: 3,
-		flags: {contact: 1, protect: 1, mirror: 1},
+		flags: { contact: 1, protect: 1, mirror: 1 },
 		onPrepareHit(target, source, move) {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "Fake Out", target);
@@ -22217,7 +22217,7 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		name: "Quarry",
 		pp: 5,
 		priority: 0,
-		flags: {snatch: 1},
+		flags: { snatch: 1 },
 		volatileStatus: 'quarry',
 		condition: {
 			onStart(pokemon) {
@@ -22235,7 +22235,7 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		secondary: null,
 		target: "self",
 		type: "Rock",
-		zMove: {boost: {def: 1}},
+		zMove: { boost: { def: 1 } },
 		contestType: "Beautiful",
 	},
 	smeltery: {
@@ -22247,7 +22247,7 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		name: "Smeltery",
 		pp: 5,
 		priority: 0,
-		flags: {snatch: 1},
+		flags: { snatch: 1 },
 		volatileStatus: 'Smeltery',
 		condition: {
 			onStart(pokemon) {
@@ -22265,7 +22265,7 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		secondary: null,
 		target: "self",
 		type: "Steel",
-		zMove: {boost: {def: 1}},
+		zMove: { boost: { def: 1 } },
 		contestType: "Beautiful",
 	},
 	icerink: {
@@ -22277,7 +22277,7 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		name: "Ice Rink",
 		pp: 5,
 		priority: 0,
-		flags: {snatch: 1},
+		flags: { snatch: 1 },
 		volatileStatus: 'Ice Rink',
 		condition: {
 			onStart(pokemon) {
@@ -22295,7 +22295,7 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		secondary: null,
 		target: "self",
 		type: "Ice",
-		zMove: {boost: {def: 1}},
+		zMove: { boost: { def: 1 } },
 		contestType: "Beautiful",
 	},
 	flashfreeze: {
@@ -22307,7 +22307,7 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		name: "Flash Freeze",
 		pp: 15,
 		priority: 0,
-		flags: {protect: 1, reflectable: 1, mirror: 1},
+		flags: { protect: 1, reflectable: 1, mirror: 1 },
 		status: 'fst',
 		onPrepareHit(target, source, move) {
 			this.attrLastMove('[still]');
@@ -22316,7 +22316,7 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		secondary: null,
 		target: "normal",
 		type: "Ice",
-		zMove: {boost: {spa: 1}},
+		zMove: { boost: { spa: 1 } },
 		contestType: "Beautiful",
 	},
 	slushcrush: {
@@ -22346,7 +22346,7 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		name: "Slush Crush",
 		pp: 10,
 		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1, nonsky: 1},
+		flags: { contact: 1, protect: 1, mirror: 1, nonsky: 1 },
 		onTryHit(target, pokemon, move) {
 			if (target.volatiles['dynamax']) {
 				this.add('-fail', pokemon, 'Dynamax');
@@ -22361,8 +22361,8 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		secondary: null,
 		target: "normal",
 		type: "Ice",
-		zMove: {basePower: 160},
-		maxMove: {basePower: 130},
+		zMove: { basePower: 160 },
+		maxMove: { basePower: 130 },
 		contestType: "Tough",
 	},
 	proposition: {
@@ -22374,7 +22374,7 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		isNonstandard: "CAP",
 		pp: 5,
 		priority: 0,
-		flags: {protect: 1, reflectable: 1, mirror: 1, bypasssub: 1},
+		flags: { protect: 1, reflectable: 1, mirror: 1, bypasssub: 1 },
 		volatileStatus: 'attract',
 		condition: {
 			noCopy: true, // doesn't get copied by Baton Pass
@@ -22402,7 +22402,7 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		secondary: null,
 		target: "normal",
 		type: "Normal",
-		zMove: {effect: 'clearnegativeboost'},
+		zMove: { effect: 'clearnegativeboost' },
 		contestType: "Cute",
 	},
 	expandingmaws: {
@@ -22414,7 +22414,7 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		name: "Expanding Maws",
 		pp: 10,
 		priority: 0,
-		flags: {protect: 1, mirror: 1, contact: 1, metronome: 1, bite: 1},
+		flags: { protect: 1, mirror: 1, contact: 1, metronome: 1, bite: 1 },
 		onBasePower(basePower, source) {
 			if (this.field.isTerrain('psychicterrain') && source.isGrounded()) {
 				this.debug('terrain buff');

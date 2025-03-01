@@ -2,7 +2,7 @@ import RandomTeams from '../../random-battles/gen9/teams';
 
 // Always useful items
 const USEFUL_ITEMS = [
-	'Sitrus Berry', 'Covert Cloak', 'Leftovers', 'Rocky Helmet', 'Lum Berry', 'Iapapa Berry', 'Focus Sash'
+	'Sitrus Berry', 'Covert Cloak', 'Leftovers', 'Rocky Helmet', 'Lum Berry', 'Iapapa Berry', 'Focus Sash',
 ];
 const NICHE_POKEMON = [
 	// Niche Strat
@@ -17,7 +17,7 @@ const KINDA_NICHE_POKEMON = [
 	// Sun
 	'Victreebel', 'Exeggutor', 'Leafeon', 'Scovillian', 'Heliolisk', 'Charizard', 'Leavanny',
 	// Rain
-	 'Barraskewda', 'Floatzel', 'Poliwrath', 'Masquerain', 'Kabutops', 'Relicanth', 'Seismitoad', 'Gorebyss',
+	'Barraskewda', 'Floatzel', 'Poliwrath', 'Masquerain', 'Kabutops', 'Relicanth', 'Seismitoad', 'Gorebyss',
 	// Hail
 	'Beartic', 'Arctozolt', 'Cetitan', 'Glaceon', 'Sandslash-Alola',
 	// Sand
@@ -52,12 +52,12 @@ const CONSISTENT = [
 ];
 
 const BITCHES = [
-	'Registeel', 'Goodra-Hisui', 'Kecleon', 'Tropius', 'Greedent'
+	'Registeel', 'Goodra-Hisui', 'Kecleon', 'Tropius', 'Greedent',
 ];
 
 export class RandomGayTeams extends RandomTeams {
-	randomSets: {[species: string]: RandomTeamsTypes.RandomSpeciesData} = require('./random-doubles-sets.json');
-	randomDoublesSets: {[species: string]: RandomTeamsTypes.RandomSpeciesData} = require('./random-doubles-sets.json');
+	randomSets: { [species: string]: RandomTeamsTypes.RandomSpeciesData } = require('./random-doubles-sets.json');
+	randomDoublesSets: { [species: string]: RandomTeamsTypes.RandomSpeciesData } = require('./random-doubles-sets.json');
 	items: string[] = [];
 
 	protected enforceNoDirectCustomBanlistChanges() {
@@ -137,13 +137,12 @@ export class RandomGayTeams extends RandomTeams {
 		let ability = '';
 		let item = undefined;
 
-		const evs = {hp: 85, atk: 85, def: 85, spa: 85, spd: 85, spe: 85};
-		const ivs = {hp: 31, atk: 31, def: 31, spa: 31, spd: 31, spe: 31};
+		const evs = { hp: 85, atk: 85, def: 85, spa: 85, spd: 85, spe: 85 };
+		const ivs = { hp: 31, atk: 31, def: 31, spa: 31, spd: 31, spe: 31 };
 
 		// const types = species.types;
 		// const abilities = new Set(Object.values(species.abilities));
 		// if (species.unreleasedHidden) abilities.delete(species.abilities.H);
-
 
 		// Shouldn't need to do this?
 		// let hasHiddenPower = false;

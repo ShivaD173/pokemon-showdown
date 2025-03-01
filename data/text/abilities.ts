@@ -2474,7 +2474,7 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 	ballin: {
 		name: "Ballin'",
 		desc: "Uses highest attacking stats on all ball/bullet moves. After another Pokemon uses a ball/bullet move, this Pokemon uses the same move at half power. The copied move is subject to all effects that can prevent a move from being executed. A move used through this Ability cannot be copied again by other Pokemon with this Ability.",
-		shortDesc: "Ball/Bullet moves use higher attacking stat. Copies Ball/Bullet Moves at half power."
+		shortDesc: "Ball/Bullet moves use higher attacking stat. Copies Ball/Bullet Moves at half power.",
 	},
 	runningstart: {
 		name: "Running Start",
@@ -2546,6 +2546,6 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 	stuckinthepast: {
 		name: "Stuck In The Past",
 		desc: "This Pokemon uses its Special Defense stat as if it were its Special Attack stat. Stat changes to its Special Attack stat change its Special Defense instead.",
-		shortDesc: "This Pokemon's Special Defense stat is its Special stat."
-	}
+		shortDesc: "This Pokemon's Special Defense stat is its Special stat.",
+	},
 };

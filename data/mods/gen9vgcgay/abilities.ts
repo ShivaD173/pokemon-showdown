@@ -57,7 +57,7 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 			if (!lastAttackedBy) return;
 			const damage = move.multihit ? move.totalDamage : lastAttackedBy.damage;
 			if (target.hp <= target.maxhp / 2 && target.hp + damage > target.maxhp / 2) {
-				this.boost({atk: 1, spa: 1}, target, target);
+				this.boost({ atk: 1, spa: 1 }, target, target);
 			}
 		},
 	},
@@ -126,10 +126,10 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 			if (this.checkMoveMakesContact(move, source, target, true)) {
 				this.add('-ability', target, 'Tangling Hair');
 				source.addVolatile('trapped', source, null, 'trapper');
-				this.boost({spe: -1}, source, target, null, true);
+				this.boost({ spe: -1 }, source, target, null, true);
 			}
 		},
-		shortDesc: "Traps target and -1 speed on contact."
+		shortDesc: "Traps target and -1 speed on contact.",
 	},
 	rivalry: {
 		inherit: true,
@@ -190,9 +190,9 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 					if (!this.singleEvent('TakeItem', item, target.itemState, target, target, move, item)) return;
 					this.add('message', 'Item replaced with Liquid Ooze');
 					target.setItem("blacksludge");
-				}
+				},
 			});
-		}
+		},
 	},
 	stickyhold: {
 		inherit: true,
@@ -275,7 +275,7 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 		shortDesc: "Immune to Intimidate, +1 Atk, SpA after damaged by a Dark-type move.",
 		onDamagingHit(damage, target, source, move) {
 			if (move.type === 'Dark') {
-				this.boost({atk: 1, spa: 1});
+				this.boost({ atk: 1, spa: 1 });
 			}
 		},
 		onTryBoost(boost, target, source, effect) {
@@ -349,7 +349,7 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 		onModifySpDPriority: 6,
 		onModifySpD(spd, pokemon) {
 			return this.chainModify([11, 10]);
-		}
+		},
 	},
 	hypercutter: {
 		inherit: true,
@@ -376,7 +376,7 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 				if (target.volatiles['substitute']) {
 					this.add('-immune', target);
 				} else {
-					this.boost({spa: -1}, target, pokemon, null, true);
+					this.boost({ spa: -1 }, target, pokemon, null, true);
 				}
 			}
 		},
@@ -407,14 +407,14 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 		shortDesc: "Copies all moves used by an ally with Minus.",
 		// Done in battle-actions.ts
 		onModifySpA(spa, pokemon) {
-		}
+		},
 	},
 	minus: {
 		inherit: true,
 		shortDesc: "Copies all moves used by an ally with Plus.",
 		// Done in battle-actions.ts
 		onModifySpA(spa, pokemon) {
-		}
+		},
 	},
 	toxicchain: {
 		inherit: true,
@@ -536,7 +536,7 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 				if (target.volatiles['substitute']) {
 					this.add('-immune', target);
 				} else {
-					this.boost({evasion: -1}, target, pokemon, null, true);
+					this.boost({ evasion: -1 }, target, pokemon, null, true);
 				}
 			}
 		},
@@ -615,7 +615,7 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 	},
 	colorchange: {
 		inherit: true,
-		flags: {failroleplay: 1, noreceiver: 1, noentrain: 1, failskillswap: 1, breakable: 1},
+		flags: { failroleplay: 1, noreceiver: 1, noentrain: 1, failskillswap: 1, breakable: 1 },
 		shortDesc: "Changes type to be perfect offensive and defensive type once per turn.",
 		onResidualOrder: 29,
 		onResidual(pokemon) {
@@ -723,7 +723,7 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 		onModifyDamage(damage, source, target, move) {
 			const typeMod = target.getMoveHitData(move).typeMod;
 			if (typeMod < 0) {
-				return this.chainModify(Math.pow(2, -typeMod));
+				return this.chainModify(2 ** -typeMod);
 			}
 		},
 	},
@@ -836,7 +836,7 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 			if (['cramorantgulping', 'cramorantgorging'].includes(target.species.id)) {
 				this.damage(source.baseMaxhp / 3, source, target);
 				if (target.species.id === 'cramorantgulping') {
-					this.boost({def: -1}, source, target, null, true);
+					this.boost({ def: -1 }, source, target, null, true);
 				} else {
 					source.trySetStatus('par', target, move);
 				}
@@ -951,13 +951,13 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 		shortDesc: "This Pokemon's defense is raised by 2 stages if hit by a Water move; Water Immunity.",
 		onTryHit(target, source, move) {
 			if (target !== source && move.type === 'Water') {
-				if (!this.boost({def: 2})) {
+				if (!this.boost({ def: 2 })) {
 					this.add('-immune', target, '[from] ability: Water Compaction');
 				}
 				return null;
 			}
 		},
-		flags: {breakable: 1},
+		flags: { breakable: 1 },
 	},
 	emergencyexit: {
 		inherit: true,
@@ -1011,12 +1011,12 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 		shortDesc: "+1 Atk when Tailwind begins, +2 Attack if hit by a wind move. Wind move immunity.",
 		onStart(pokemon) {
 			if (pokemon.side.sideConditions['tailwind']) {
-				this.boost({atk: 1}, pokemon, pokemon);
+				this.boost({ atk: 1 }, pokemon, pokemon);
 			}
 		},
 		onTryHit(target, source, move) {
 			if (target !== source && move.flags['wind']) {
-				if (!this.boost({atk: 2}, target, target)) {
+				if (!this.boost({ atk: 2 }, target, target)) {
 					this.add('-immune', target, '[from] ability: Wind Rider');
 				}
 				return null;
@@ -1025,7 +1025,7 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 		onAllySideConditionStart(target, source, sideCondition) {
 			const pokemon = this.effectState.target;
 			if (sideCondition.id === 'tailwind') {
-				this.boost({atk: 1}, pokemon, pokemon);
+				this.boost({ atk: 1 }, pokemon, pokemon);
 			}
 		},
 	},
@@ -1068,7 +1068,7 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 			if (pokemon.species.baseSpecies !== "Cofagrigus") {
 				return this.chainModify([4, 5]);
 			}
-		}
+		},
 	},
 	wanderingspirit: {
 		inherit: true,
@@ -1084,7 +1084,7 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 			if (pokemon.species.baseSpecies !== "Runerigus") {
 				return this.chainModify([4, 5]);
 			}
-		}
+		},
 	},
 	fullmetalbody: {
 		inherit: true,
@@ -1141,7 +1141,7 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 		},
 		onDamagingHit(damage, target, source, move) {
 			if (!this.effectState.angerShell) {
-				this.boost({atk: 1, spa: 1, spe: 1, def: -1, spd: -1}, target, target);
+				this.boost({ atk: 1, spa: 1, spe: 1, def: -1, spd: -1 }, target, target);
 				this.effectState.angerShell = true;
 			}
 		},
@@ -1166,10 +1166,10 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 				if (pokemon === target || pokemon.fainted) continue;
 				if (!activated) {
 					// this.add('-ability', target, 'Cotton Down');
-					this.boost({def: 1}, target, target);
+					this.boost({ def: 1 }, target, target);
 					activated = true;
 				}
-				this.boost({spe: -1}, pokemon, target, null, true);
+				this.boost({ spe: -1 }, pokemon, target, null, true);
 			}
 		},
 	},

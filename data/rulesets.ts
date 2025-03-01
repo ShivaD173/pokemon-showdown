@@ -2231,7 +2231,7 @@ export const Rulesets: import('../sim/dex-formats').FormatDataTable = {
 		},
 		onModifySpecies(species, target, source, effect) {
 			if (!species.baseStats) return;
-			const boosts: {[tier: string]: number} = {
+			const boosts: { [tier: string]: number } = {
 				uu: 15,
 				rubl: 15,
 				ru: 15,

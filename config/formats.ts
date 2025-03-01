@@ -432,21 +432,21 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		mod: 'gen9',
 		searchShow: true,
 		ruleset: ['[Gen 9] National Dex RU'],
-		banlist: ['ND RU', 'ND NUBL']
+		banlist: ['ND RU', 'ND NUBL'],
 	},
 	{
 		name: "[Gen 9] National Dex PU",
 		mod: 'gen9',
 		searchShow: true,
 		ruleset: ['[Gen 9] National Dex NU'],
-		banlist: ['ND NU', 'ND PUBL']
+		banlist: ['ND NU', 'ND PUBL'],
 	},
 	{
 		name: "[Gen 9] National Dex ZU",
 		mod: 'gen9',
 		searchShow: true,
 		ruleset: ['[Gen 9] National Dex PU'],
-		banlist: ['ND PU', 'ND ZUBL']
+		banlist: ['ND PU', 'ND ZUBL'],
 	},
 	{
 		section: "S/V Singles",

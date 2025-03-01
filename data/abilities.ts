@@ -5713,7 +5713,7 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		},
 		isNonstandard: "CAP",
 		name: "Arctic Rush",
-		flags: {breakable: 1},
+		flags: { breakable: 1 },
 		rating: 3,
 		num: -9,
 	},
@@ -5727,7 +5727,7 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		},
 		isNonstandard: "CAP",
 		name: "Cloak Change",
-		flags: {failroleplay: 1, noreceiver: 1, noentrain: 1, notrace: 1, failskillswap: 1, cantsuppress: 1},
+		flags: { failroleplay: 1, noreceiver: 1, noentrain: 1, notrace: 1, failskillswap: 1, cantsuppress: 1 },
 		rating: 4,
 		num: -10,
 	},
@@ -5762,7 +5762,7 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		},
 		isNonstandard: "CAP",
 		name: "Odd Keystone",
-		flags: {breakable: 1},
+		flags: { breakable: 1 },
 		rating: 4,
 		num: -12,
 	},
@@ -5817,7 +5817,7 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		},
 		isNonstandard: "CAP",
 		name: "Wide Eyed",
-		flags: {failroleplay: 1, noreceiver: 1, noentrain: 1, failskillswap: 1},
+		flags: { failroleplay: 1, noreceiver: 1, noentrain: 1, failskillswap: 1 },
 		rating: 4,
 		num: -14,
 	},
@@ -5836,7 +5836,7 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 	heatsink: {
 		onTryHit(target, source, move) {
 			if (target !== source && move.type === 'Fire') {
-				if (!this.boost({spa: 1})) {
+				if (!this.boost({ spa: 1 })) {
 					this.add('-immune', target, '[from] ability: Heat Sink');
 				}
 				return null;
@@ -5844,7 +5844,7 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		},
 		isNonstandard: "CAP",
 		name: "Heat Sink",
-		flags: {breakable: 1},
+		flags: { breakable: 1 },
 		rating: 4,
 		num: -16,
 	},
@@ -6017,7 +6017,7 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 					this.add('-immune', target);
 				} else {
 					(this.event.name as string) = "Intimidate";
-					this.boost({atk: -1}, target, pokemon, null, true);
+					this.boost({ atk: -1 }, target, pokemon, null, true);
 				}
 			}
 		},
@@ -6075,7 +6075,7 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		},
 		isNonstandard: "CAP",
 		name: "Growing Pumpkin",
-		flags: {failroleplay: 1, noreceiver: 1, noentrain: 1, notrace: 1, failskillswap: 1, cantsuppress: 1},
+		flags: { failroleplay: 1, noreceiver: 1, noentrain: 1, notrace: 1, failskillswap: 1, cantsuppress: 1 },
 		rating: 4,
 		num: -28,
 	},
@@ -6089,7 +6089,7 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		},
 		isNonstandard: "CAP",
 		name: "Double Down",
-		flags: {failroleplay: 1, noreceiver: 1, noentrain: 1, failskillswap: 1, breakable: 1},
+		flags: { failroleplay: 1, noreceiver: 1, noentrain: 1, failskillswap: 1, breakable: 1 },
 		rating: 4,
 		num: -29,
 	},
@@ -6241,7 +6241,7 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 			if (this.checkMoveMakesContact(move, source, target, true)) {
 				this.add('-ability', target, 'Shadow Tagged');
 				source.addVolatile('trapped', source, null, 'trapper');
-				this.boost({evasion: -1}, source, target, null, true);
+				this.boost({ evasion: -1 }, source, target, null, true);
 			}
 		},
 		name: "Shadow Tagged",
@@ -6273,7 +6273,7 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 			}
 		},
 		name: "Molten Down",
-		flags: {breakable: 1},
+		flags: { breakable: 1 },
 		rating: 3,
 		num: -38,
 	},
@@ -6287,7 +6287,7 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 				if (!lastAttackedBy) return;
 				const damage = move.multihit ? move.totalDamage : lastAttackedBy.damage;
 				if (target.hp <= target.maxhp / 2 && target.hp + damage > target.maxhp / 2) {
-					this.boost({atk: 1}, target, target);
+					this.boost({ atk: 1 }, target, target);
 					this.heal(target.baseMaxhp, target, target);
 					this.effectState.usedSpirit = true;
 				}
@@ -6316,7 +6316,7 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 				return null;
 			}
 		},
-		flags: {breakable: 1},
+		flags: { breakable: 1 },
 		rating: 4,
 		num: -41,
 	},
@@ -6334,7 +6334,7 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 				return false;
 			}
 		},
-		flags: {breakable: 1},
+		flags: { breakable: 1 },
 		name: "Regal Majesty",
 		isNonstandard: "CAP",
 		rating: 2.5,
@@ -6377,18 +6377,18 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		onDamagingHit(damage, target, source, move) {
 			if (move.category === "Special") {
 				if (this.effectState.lastBoost === 'P') {
-					this.boost({def: -1});
+					this.boost({ def: -1 });
 				}
 				if (this.effectState.lastBoost !== 'S') {
-					this.boost({spd: 1});
+					this.boost({ spd: 1 });
 				}
 				this.effectState.lastBoost = "S";
 			} else if (move.category === "Physical") {
 				if (this.effectState.lastBoost === 'S') {
-					this.boost({spd: -1});
+					this.boost({ spd: -1 });
 				}
 				if (this.effectState.lastBoost !== 'P') {
-					this.boost({def: 1});
+					this.boost({ def: 1 });
 				}
 				this.effectState.lastBoost = "P";
 			}
@@ -6511,7 +6511,7 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		onStart(pokemon) {
 			const target = pokemon.side.foe.active[pokemon.side.foe.active.length - 1 - pokemon.position];
 			if (target) {
-				this.actions.useMove(this.dex.moves.get('confusion'), pokemon, {target: target});
+				this.actions.useMove(this.dex.moves.get('confusion'), pokemon, { target });
 			}
 		},
 		name: "Onslaught Core",
@@ -6550,7 +6550,7 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 				return false;
 			}
 		},
-		flags: {breakable: 1},
+		flags: { breakable: 1 },
 		name: "Time Lord",
 		isNonstandard: "CAP",
 		rating: 4,
@@ -6575,7 +6575,7 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 				this.effectState.heroMessageDisplayed = true;
 			}
 		},
-		flags: {failroleplay: 1, noreceiver: 1, noentrain: 1, notrace: 1, failskillswap: 1, cantsuppress: 1, notransform: 1},
+		flags: { failroleplay: 1, noreceiver: 1, noentrain: 1, notrace: 1, failskillswap: 1, cantsuppress: 1, notransform: 1 },
 		name: "Mega Shift X",
 		isNonstandard: "CAP",
 		rating: 4,
@@ -6600,7 +6600,7 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 				this.effectState.heroMessageDisplayed = true;
 			}
 		},
-		flags: {failroleplay: 1, noreceiver: 1, noentrain: 1, notrace: 1, failskillswap: 1, cantsuppress: 1, notransform: 1},
+		flags: { failroleplay: 1, noreceiver: 1, noentrain: 1, notrace: 1, failskillswap: 1, cantsuppress: 1, notransform: 1 },
 		name: "Mega Shift Y",
 		isNonstandard: "CAP",
 		rating: 4,
@@ -6653,7 +6653,7 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		onTryBoost(boost, target, source, effect) {
 			if (boost.spa) {
 				const spdBoost = boost.spd ?? 0;
-				this.boost({spd: boost.spa + spdBoost}, target, target, null, false, true);
+				this.boost({ spd: boost.spa + spdBoost }, target, target, null, false, true);
 				delete boost.spa;
 			}
 		},
