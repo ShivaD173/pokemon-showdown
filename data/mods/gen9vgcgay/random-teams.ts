@@ -56,37 +56,40 @@ const BITCHES = [
 ];
 
 export class RandomGayTeams extends RandomTeams {
-	randomSets: { [species: string]: RandomTeamsTypes.RandomSpeciesData } = require('./random-doubles-sets.json');
-	randomDoublesSets: { [species: string]: RandomTeamsTypes.RandomSpeciesData } = require('./random-doubles-sets.json');
+	override randomSets: { [species: string]: RandomTeamsTypes.RandomSpeciesData } = require('./random-doubles-sets.json');
+	override randomDoublesSets: { [species: string]: RandomTeamsTypes.RandomSpeciesData } = require('./random-doubles-sets.json');
 	items: string[] = [];
 
-	protected enforceNoDirectCustomBanlistChanges() {
+	protected override enforceNoDirectCustomBanlistChanges() {
+		// Left empty to stop super 
 	}
-	getLevel(
+	override getLevel(
 		species: Species,
 		isDoubles: boolean,
 	): number {
 		if (this.adjustLevel) return this.adjustLevel;
-		if (NICHE_POKEMON.includes(species.name)) {
-			return 50;
-		} else if (KINDA_NICHE_POKEMON.includes(species.name)) {
-			return 50;
-		} else if (HARD_TO_USE.includes(species.name)) {
-			return 50;
-		} else if (CONSISTENT.includes(species.name)) {
-			return 50;
-		} else if (BITCHES.includes(species.name)) {
-			return 50;
-		} else {
-			return 50;
-		}
+		return 50;
+		// If I want to re-add level scaling
+		// if (NICHE_POKEMON.includes(species.name)) {
+		// 	return 50;
+		// } else if (KINDA_NICHE_POKEMON.includes(species.name)) {
+		// 	return 50;
+		// } else if (HARD_TO_USE.includes(species.name)) {
+		// 	return 50;
+		// } else if (CONSISTENT.includes(species.name)) {
+		// 	return 50;
+		// } else if (BITCHES.includes(species.name)) {
+		// 	return 50;
+		// } else {
+		// 	return 50;
+		// }
 	}
 
-	randomTeam() {
+	override randomTeam() {
 		this.items = [];
 		return super.randomTeam();
 	}
-	randomSet(
+	override randomSet(
 		species: string | Species,
 		teamDetails: RandomTeamsTypes.TeamDetails = {},
 		isLead = false,
