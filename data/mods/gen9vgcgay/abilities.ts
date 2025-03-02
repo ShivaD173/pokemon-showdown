@@ -1323,7 +1323,7 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 				source.item = myItem.id;
 				return;
 			}
-			this.add('-activate', source, 'ability: As One', myItem, '[of] ' + pokemon);
+			this.add('-activate', source, 'ability: As One', myItem, `[of] ${pokemon}`);
 		},
 	},
 	asonespectrier: {
@@ -1349,7 +1349,7 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 				source.item = myItem.id;
 				return;
 			}
-			this.add('-activate', source, 'ability: As One', myItem, '[of] ' + pokemon);
+			this.add('-activate', source, 'ability: As One', myItem, `[of] ${pokemon}`);
 		},
 	},
 	// Diancie now "Mega Evolves on switch in cuz I feel like it"

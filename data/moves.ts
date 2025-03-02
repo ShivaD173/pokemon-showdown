@@ -22339,7 +22339,7 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 			} else {
 				bp = 40;
 			}
-			this.debug('BP: ' + bp);
+			this.debug(`BP: ${bp}`);
 			return bp;
 		},
 		category: "Physical",
@@ -22383,7 +22383,7 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 			},
 			onUpdate(pokemon) {
 				if (this.effectState.source && !this.effectState.source.isActive && pokemon.volatiles['attract']) {
-					this.debug('Removing Attract volatile on ' + pokemon);
+					this.debug(`Removing Attract volatile on ${pokemon}`);
 					pokemon.removeVolatile('attract');
 				}
 			},

@@ -637,32 +637,6 @@ export const Conditions: import('../sim/dex-conditions').ConditionDataTable = {
 			this.add('-weather', 'none');
 		},
 	},
-	thunderstorm: {
-		name: 'Thunderstorm',
-		effectType: 'Weather',
-		duration: 5,
-		onWeatherModifyDamage(damage, attacker, defender, move) {
-			if (defender.hasItem('utilityumbrella')) return;
-			if (move.type === 'Water' || move.type === 'Electric') {
-				return this.chainModify(1.3);
-			}
-		},
-		onFieldStart(field, source, effect) {
-			if (effect?.effectType === 'Ability') {
-				this.add('-weather', 'Thunderstorm', '[from] ability: ' + effect.name, `[of] ${source}`);
-			} else {
-				this.add('-weather', 'Thunderstorm');
-			}
-		},
-		onFieldResidualOrder: 1,
-		onFieldResidual() {
-			this.add('-weather', 'Thunderstorm', '[upkeep]');
-			this.eachEvent('Weather');
-		},
-		onFieldEnd() {
-			this.add('-weather', 'none');
-		},
-	},
 	sandstorm: {
 		name: 'Sandstorm',
 		effectType: 'Weather',
