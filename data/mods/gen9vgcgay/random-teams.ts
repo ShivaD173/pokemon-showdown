@@ -4,64 +4,16 @@ import RandomTeams from '../../random-battles/gen9/teams';
 const USEFUL_ITEMS = [
 	'Sitrus Berry', 'Covert Cloak', 'Leftovers', 'Rocky Helmet', 'Lum Berry', 'Iapapa Berry', 'Focus Sash',
 ];
-const NICHE_POKEMON = [
-	// Niche Strat
-	'Orbeetle', 'Slaking', 'Regigigas', 'Bombirdier', 'Spinda', 'Tatusgiri', 'Spidops',
-	// Weather/Terrain Abuser
-	'Seaking', 'Lumineon', 'Dewgong', 'Sudowoodo', 'Sunflora', 'Cherrim', 'Gogoat', 'Hypno', 'Raichu-Alola',
-	// Meme Mon
-	'Clamperl', 'Unown', 'Pyukumuku', 'Dipplin', 'Shedinja',
-];
-
-const KINDA_NICHE_POKEMON = [
-	// Sun
-	'Victreebel', 'Exeggutor', 'Leafeon', 'Scovillian', 'Heliolisk', 'Charizard', 'Leavanny',
-	// Rain
-	'Barraskewda', 'Floatzel', 'Poliwrath', 'Masquerain', 'Kabutops', 'Relicanth', 'Seismitoad', 'Gorebyss',
-	// Hail
-	'Beartic', 'Arctozolt', 'Cetitan', 'Glaceon', 'Sandslash-Alola',
-	// Sand
-	'Lycanroc', 'Houndstone',
-	// Requires Specific Support but decent
-	'Flamigo', 'Dachsbun', 'Kricketune', 'Slurpuff', 'Castform', 'Linoone', 'Hitmonlee', 'Hawlucha', 'Oinkologne',
-	// Specific Support
-	'Weezing-Galar', 'Skuntank', 'Charjabug', 'Espathra',
-	// Unoptimized Sets
-	'Eelektross', 'Wyrdeer', 'Lurantis', 'Sawsbuck', 'Machamp',
-	// Blobs
-	'Bastiodon', 'Vaporeon', 'Probopass', 'Shuckle', 'Walrein',
-];
-
-const HARD_TO_USE = [
-	// Require TR
-	'Marowak-Alola', 'Cursola', 'Arboliva', 'Vikavolt', 'Camerupt', 'Exeggutor-Alola',
-	// Super frail
-	'Ninjask', 'Wugtrio', 'Eevee', 'Squawkabilly', 'Pikachu', 'Flapple', 'Raticate', 'Dugtrio-Alola',
-	// Require Enemy
-	'Brambleghast', 'Shiftry', 'Klawf',
-];
-
-const CONSISTENT = [
-	'Heatran', 'Latios', 'Latias', 'Blissey', 'Iron Hands',
-	// Tailwind
-	'Whimsicott', 'Volbeat', 'Illumise', 'Tornadus', 'Aerodactyl',
-	// Follow Me
-	'Blastoise', 'Indeedee-F', 'Maushold', 'Magmortar', 'Furret', 'Furfrou', 'Togekiss',
-	// Fake Out
-	'Lopunny', 'Hitmontop', 'Hitmonchan', 'Mr. Mime', 'Mr. Mime-Galar', 'Accelgor',
-];
-
-const BITCHES = [
-	'Registeel', 'Goodra-Hisui', 'Kecleon', 'Tropius', 'Greedent',
-];
 
 export class RandomGayTeams extends RandomTeams {
-	override randomSets: { [species: string]: RandomTeamsTypes.RandomSpeciesData } = require('./random-doubles-sets.json');
-	override randomDoublesSets: { [species: string]: RandomTeamsTypes.RandomSpeciesData } = require('./random-doubles-sets.json');
+	override randomSets: { [species: string]: RandomTeamsTypes.RandomSpeciesData; } =
+		require('./random-doubles-sets.json');
+	override randomDoublesSets: { [species: string]: RandomTeamsTypes.RandomSpeciesData; } =
+		require('./random-doubles-sets.json');
 	items: string[] = [];
 
 	protected override enforceNoDirectCustomBanlistChanges() {
-		// Left empty to stop super 
+		// Left empty to stop super
 	}
 	override getLevel(
 		species: Species,
@@ -69,20 +21,6 @@ export class RandomGayTeams extends RandomTeams {
 	): number {
 		if (this.adjustLevel) return this.adjustLevel;
 		return 50;
-		// If I want to re-add level scaling
-		// if (NICHE_POKEMON.includes(species.name)) {
-		// 	return 50;
-		// } else if (KINDA_NICHE_POKEMON.includes(species.name)) {
-		// 	return 50;
-		// } else if (HARD_TO_USE.includes(species.name)) {
-		// 	return 50;
-		// } else if (CONSISTENT.includes(species.name)) {
-		// 	return 50;
-		// } else if (BITCHES.includes(species.name)) {
-		// 	return 50;
-		// } else {
-		// 	return 50;
-		// }
 	}
 
 	override randomTeam() {
