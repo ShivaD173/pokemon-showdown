@@ -6,9 +6,9 @@ const USEFUL_ITEMS = [
 ];
 
 export class RandomGayTeams extends RandomTeams {
-	override randomSets: { [species: string]: RandomTeamsTypes.RandomSpeciesData; } =
+	override randomSets: { [species: string]: RandomTeamsTypes.RandomSpeciesData } =
 		require('./random-doubles-sets.json');
-	override randomDoublesSets: { [species: string]: RandomTeamsTypes.RandomSpeciesData; } =
+	override randomDoublesSets: { [species: string]: RandomTeamsTypes.RandomSpeciesData } =
 		require('./random-doubles-sets.json');
 	items: string[] = [];
 
