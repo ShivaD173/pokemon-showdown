@@ -3826,7 +3826,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		name: "[Gen 8 BDSP] SU",
 		mod: 'gen8bdsp',
 		searchShow: false,
-		ruleset: ['[Gen 8 BDSP] ZU'],
+		ruleset: ['[Gen 8 BDSP] ZU', 'Sleep Moves Clause'],
 		banlist: ['ZU', 'SUBL'],
 	},
 	{

@@ -1564,7 +1564,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "LC",
 	},
 	bastiodon: {
-		tier: "ZU",
+		tier: "SU",
 		doublesTier: "DUU",
 	},
 	burmy: {
