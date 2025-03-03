@@ -1,6 +1,6 @@
 export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormatsDataTable = {
 	bulbasaur: {
-		tier: "IU",
+		tier: "8U",
 	},
 	ivysaur: {
 		tier: "SU",
@@ -48,7 +48,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "9U",
 	},
 	pidgeotto: {
-		tier: "8U",
+		tier: "IU",
 	},
 	pidgeot: {
 		tier: "ZU",
@@ -87,7 +87,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "9U",
 	},
 	nidorina: {
-		tier: "IU",
+		tier: "8U",
 	},
 	nidoqueen: {
 		tier: "PU",
@@ -171,7 +171,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "ZU",
 	},
 	growlithe: {
-		tier: "8U",
+		tier: "IU",
 	},
 	arcanine: {
 		tier: "NU",
@@ -204,7 +204,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "PU",
 	},
 	bellsprout: {
-		tier: "IU",
+		tier: "8U",
 	},
 	weepinbell: {
 		tier: "SU",

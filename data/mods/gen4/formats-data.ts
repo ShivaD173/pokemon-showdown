@@ -21,7 +21,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "LC",
 	},
 	wartortle: {
-		tier: "SU",
+		tier: "IU",
 	},
 	blastoise: {
 		tier: "UU",
@@ -216,7 +216,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "UU",
 	},
 	machop: {
-		tier: "IU",
+		tier: "SU",
 	},
 	machoke: {
 		tier: "PU",
@@ -309,7 +309,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "OU",
 	},
 	onix: {
-		tier: "IU",
+		tier: "SU",
 	},
 	steelix: {
 		tier: "RU",
@@ -585,7 +585,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "LC",
 	},
 	noctowl: {
-		tier: "SU",
+		tier: "IU",
 	},
 	ledyba: {
 		tier: "LC",
@@ -702,7 +702,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "ZU",
 	},
 	pineco: {
-		tier: "IU",
+		tier: "SU",
 	},
 	forretress: {
 		tier: "OU",
@@ -748,7 +748,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "LC",
 	},
 	magcargo: {
-		tier: "SU",
+		tier: "IU",
 	},
 	swinub: {
 		tier: "LC",
@@ -760,7 +760,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "(OU)",
 	},
 	corsola: {
-		tier: "SU",
+		tier: "IU",
 	},
 	remoraid: {
 		tier: "LC",
@@ -1021,7 +1021,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "IU",
 	},
 	budew: {
-		tier: "IU",
+		tier: "SU",
 	},
 	roselia: {
 		tier: "NU",

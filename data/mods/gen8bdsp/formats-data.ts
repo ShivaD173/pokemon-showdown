@@ -563,7 +563,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		doublesTier: "DUU",
 	},
 	flareon: {
-		tier: "ZU",
+		tier: "SU",
 		doublesTier: "DUU",
 	},
 	espeon: {
@@ -753,7 +753,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "LC",
 	},
 	sudowoodo: {
-		tier: "SU",
+		tier: "ZU",
 		doublesTier: "DUU",
 	},
 	hoppip: {
