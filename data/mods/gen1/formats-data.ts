@@ -21,7 +21,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "8U",
 	},
 	wartortle: {
-		tier: "ZU",
+		tier: "SU",
 	},
 	blastoise: {
 		tier: "NU",
@@ -69,7 +69,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "9UBL",
 	},
 	arbok: {
-		tier: "ZU",
+		tier: "SU",
 	},
 	pikachu: {
 		tier: "SU",
@@ -228,7 +228,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "UU",
 	},
 	ponyta: {
-		tier: "ZU",
+		tier: "SU",
 	},
 	rapidash: {
 		tier: "PU",
@@ -264,7 +264,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "IU",
 	},
 	muk: {
-		tier: "SU",
+		tier: "ZU",
 	},
 	shellder: {
 		tier: "IU",
@@ -312,7 +312,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "IU",
 	},
 	marowak: {
-		tier: "ZU",
+		tier: "SU",
 	},
 	hitmonlee: {
 		tier: "SU",
@@ -330,7 +330,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "ZU",
 	},
 	rhyhorn: {
-		tier: "ZU",
+		tier: "SU",
 	},
 	rhydon: {
 		tier: "OU",
