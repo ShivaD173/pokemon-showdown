@@ -1066,7 +1066,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "UR",
 	},
 	trapinch: {
-		tier: "LC",
+		tier: "SUBL",
 	},
 	vibrava: {
 		tier: "SU",

@@ -291,7 +291,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		mod: 'gen4',
 		searchShow: true,
 		ruleset: ['[Gen 4] ZU', 'Sleep Moves Clause', '!Sleep Clause Mod'],
-		banlist: ['ZU', 'SUBL'],
+		banlist: ['ZU', 'SUBL', 'Baton Pass'],
 	},
 	{
 		name: "[Gen 4] IU",
