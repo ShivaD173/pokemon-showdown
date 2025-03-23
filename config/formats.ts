@@ -680,6 +680,13 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		section: "Unofficial Metagames",
 	},
 	{
+		name: "[Gen 9] National Dex SU",
+		mod: 'gen9',
+		searchShow: true,
+		ruleset: ['[Gen 9] National Dex ZU'],
+		banlist: ['ND ZU'],
+	},
+	{
 		name: "[Gen 9] 1v1",
 		desc: `Bring three Pok&eacute;mon to Team Preview and choose one to battle.`,
 		mod: 'gen9',
