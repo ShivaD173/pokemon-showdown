@@ -25,28 +25,6 @@ export const Rulesets: import('../sim/dex-formats').FormatDataTable = {
 			'Sleep Clause Mod', 'Species Clause', 'Nickname Clause', 'OHKO Clause', 'Evasion Items Clause', 'Evasion Moves Clause',
 		],
 	},
-	tblegality: {
-		effectType: 'ValidatorRule',
-		name: 'TB Legality',
-		desc: "Allow every Pokemon to learn Tera Blast",
-		checkCanLearn(move, species, setSources, set) {
-			const unincluded = ["wobbuffet", "cosmog", "cosmoem", "ditto", "unown"];
-			if (move.id === "terablast" && !unincluded.includes(species.id)) return null;
-			return this.checkCanLearn(move, species, setSources, set);
-		},
-	},
-	hptblegality: {
-		effectType: 'ValidatorRule',
-		name: 'HP TB Legality',
-		desc: "Allow every Pokemon to learn Hidden Power",
-		checkCanLearn(move, species, setSources, set) {
-			const noHP = ["ditto", "wobbuffet", "cosmog", "cosmoem"];
-			if (move.id === "hiddenpower" && !noHP.includes(species.id)) return null;
-			const noTB = ["wobbuffet", "cosmog", "cosmoem"];
-			if (move.id === "terablast" && !noTB.includes(species.id)) return null;
-			return this.checkCanLearn(move, species, setSources, set);
-		},
-	},
 	standardnext: {
 		effectType: 'ValidatorRule',
 		name: 'Standard NEXT',

@@ -332,7 +332,6 @@ export const TypeChart: import('../sim/dex-data').TypeDataTable = {
 		damageTaken: {
 			psn: 3,
 			tox: 3,
-			acidrain: 3,
 			Bug: 2,
 			Dark: 0,
 			Dragon: 0,
