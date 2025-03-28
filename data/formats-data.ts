@@ -1315,7 +1315,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	xatu: {
 		isNonstandard: "Past",
 		tier: "Illegal",
-		natDexTier: "SU",
+		natDexTier: "ZU",
 	},
 	mareep: {
 		tier: "LC",
@@ -2857,9 +2857,9 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		natDexTier: "RU",
 	},
 	phione: {
-		tier: "SU",
+		tier: "IU",
 		doublesTier: "(DUU)",
-		natDexTier: "ZU",
+		natDexTier: "SU",
 	},
 	manaphy: {
 		tier: "RUBL",
