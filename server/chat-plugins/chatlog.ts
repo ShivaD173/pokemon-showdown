@@ -545,12 +545,6 @@ export abstract class Searcher {
 	// this would normally be abstract, but it's very difficult with ripgrep
 	// so it's easier to just do it the same way for both.
 	async roomStats(room: RoomID, month: string) {
-		if (!Monitor.logPath(`chat/${room}`).existsSync()) {
-			return LogViewer.error(Utils.html`Room ${room} not found.`);
-		}
-		if (!Monitor.logPath(`chat/${room}/${month}`).existsSync()) {
-			return LogViewer.error(Utils.html`Room ${room} does not have logs for the month ${month}.`);
-		}
 		const stats = await LogSearcher.activityStats(room, month);
 		let buf = `<div class="pad"><h2>Room stats for ${room} [${month}]</h2><hr />`;
 		buf += `<strong>Total days with logs: ${stats.average.days}</strong><br />`;
@@ -706,6 +700,22 @@ export class FSLogSearcher extends Searcher {
 		return num / waitIncrements.length;
 	}
 	async activityStats(room: RoomID, month: string) {
+		const collected: RoomStats = {
+			deadTime: 0,
+			deadPercent: 0,
+			lines: {},
+			users: {},
+			days: 0,
+			linesPerUser: 0,
+			totalLines: 0,
+			averagePresent: 0,
+		};
+		if (!Monitor.logPath(`chat/${room}`).existsSync()) {
+			return { days: [], average: collected };
+		}
+		if (!Monitor.logPath(`chat/${room}/${month}`).existsSync()) {
+			return { days: [], average: collected };
+		}
 		const days = (await Monitor.logPath(`chat/${room}/${month}`).readdir()).map(f => f.slice(0, -4));
 		const stats: RoomStats[] = [];
 		const today = Chat.toTimestamp(new Date()).split(' ')[0];
@@ -718,16 +728,7 @@ export class FSLogSearcher extends Searcher {
 			stats.push(curStats);
 		}
 		// now, having collected the stats for each day, we need to merge them together
-		const collected: RoomStats = {
-			deadTime: 0,
-			deadPercent: 0,
-			lines: {},
-			users: {},
-			days: days.length,
-			linesPerUser: 0,
-			totalLines: 0,
-			averagePresent: 0,
-		};
+		collected.days = days.length;
 
 		// merge
 		for (const entry of stats) {
@@ -953,7 +954,7 @@ export const pages: Chat.PageTable = {
 			return this.errorReply(`You must specify an exact month - both a year and a month.`);
 		}
 		this.title = `[Log Stats] ${date}`;
-		return LogSearcher.runLinecountSearch(this, room ? room.roomid : args[2] as RoomID, date, toID(target));
+		return LogSearcher.runLinecountSearch(this, room ? room.roomid : args[0] as RoomID, date, toID(target));
 	},
 	async logsaccess(query) {
 		this.checkCan('rangeban');
@@ -1108,10 +1109,12 @@ export const commands: Chat.ChatCommands = {
 			switch (key) {
 			case 'room': case 'roomid':
 				const tarRoom = Rooms.search(val);
-				if (!tarRoom) {
+				if (!tarRoom && !user.can('bypassall')) {
 					return this.errorReply(`Room '${val}' not found.`);
 				}
-				search.roomid = tarRoom.roomid;
+				search.roomid = (
+					tarRoom?.roomid || val.toLowerCase().replace(/[^a-z0-9-]/g, '') as RoomID
+				);
 				break;
 			case 'user': case 'id': case 'userid':
 				search.user = toID(val);
