@@ -2440,7 +2440,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	rayquazamega: {
 		isNonstandard: "Past",
 		tier: "Illegal",
-		natDexTier: "Uber",
+		natDexTier: "AG",
 	},
 	jirachi: {
 		tier: "RU",

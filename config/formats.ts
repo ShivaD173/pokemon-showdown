@@ -453,48 +453,11 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		column: 2,
 	},
 	{
-		name: "[Gen 9] Monkey's Paw Random Battle",
-		desc: `Every Pokemon can wish for something with the Monkey's Paw once.`,
-		mod: 'monkeyspaw',
+		name: "[Gen 9] Random Battle",
+		desc: `Randomized teams of Pok&eacute;mon with sets that are generated to be competitively viable.`,
+		mod: 'gen9',
 		team: 'random',
-		ruleset: ['[Gen 9] Random Battle'],
-		onBegin() {
-			for (const side of this.sides) {
-				// @ts-expect-error I hate references with all of my life force
-				side.wishes = { luck: 1, knowledge: 1, power: 1, life: 1 };
-				// @ts-expect-error
-				side.wishesRemaining = 4;
-			}
-			let buf = `<div class="broadcast-blue"><h3>What does which wish do?</h3><hr />`;
-			buf += `<details><summary>What does which wish do?</summary>`;
-			buf += `&bullet; <b>Mega Evolution:</b> Wish for life &ndash; <span style="font-size: 9px;">Revive one fainted Pokemon</span><br />`;
-			buf += `&bullet; <b>Mega Evolution X:</b> Wish for power &ndash; <span style="font-size: 9px;">Gain a +2 boost in the current Pokemon's dominant attack and defense stat</span><br />`;
-			buf += `&bullet; <b>Mega Evolution Y:</b> Wish for luck &ndash; <span style="font-size: 9px;">Give the current Pokemon innate Serene Grace + Focus Energy for the rest of the game</span><br />`;
-			buf += `&bullet; <b>Terastallize:</b> Wish for knowledge &ndash; <span style="font-size: 9px;">Scout the active Pokemon for one of their moves</span><br />`;
-			buf += `</details></div>`;
-			this.add('message', `You've found a Monkey's Paw. You have 4 wishes.`);
-			this.add(`raw|${buf}`);
-		},
-		onSwitchIn(pokemon) {
-			if (pokemon.m.revivedByMonkeysPaw) {
-				pokemon.addVolatile('slowstart', null, this.dex.conditions.get('monkeypaw'));
-			}
-			if (pokemon.m.monkeyPawLuck) {
-				pokemon.addVolatile('focusenergy');
-				pokemon.addVolatile('confusion', null, this.dex.conditions.get('monkeypaw'));
-			}
-		},
-		onModifyMovePriority: -2,
-		onModifyMove(move, pokemon) {
-			if (!pokemon.m.monkeyPawLuck) return;
-			if (move.secondaries) {
-				this.debug('doubling secondary chance');
-				for (const secondary of move.secondaries) {
-					if (secondary.chance) secondary.chance *= 2;
-				}
-			}
-			if (move.self?.chance) move.self.chance *= 2;
-		},
+		ruleset: ['PotD', 'Obtainable', 'Species Clause', 'HP Percentage Mod', 'Cancel Mod', 'Sleep Clause Mod', 'Illusion Level Mod'],
 	},
 	{
 		name: "[Gen 9] Unrated Random Battle",
@@ -752,14 +715,6 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 			'Scream Tail', 'Shaymin-Sky', 'Snorlax', 'Solgaleo', 'Terapagos', 'Zacian', 'Zacian-Crowned', 'Zamazenta', 'Zamazenta-Crowned', 'Zekrom', 'Moody',
 			'Focus Band', 'Focus Sash', 'King\'s Rock', 'Razor Fang', 'Quick Claw', 'Acupressure', 'Perish Song',
 		],
-		// AFD
-		onModifyDamage(damage, source, target, move) {
-			const sourceNickID = this.toID(source.name);
-			const targetNickID = this.toID(target.name);
-			if (sourceNickID === 'paper' && targetNickID === 'rock') return this.chainModify(1.5);
-			if (sourceNickID === 'rock' && targetNickID === 'scissors') return this.chainModify(1.5);
-			if (sourceNickID === 'scissors' && targetNickID === 'paper') return this.chainModify(1.5);
-		},
 	},
 	{
 		name: "[Gen 9] 2v2 Doubles",
@@ -999,7 +954,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		mod: 'gen9',
 		ruleset: [
 			'Standard AG', '!Obtainable Formes', '+Past', 'Evasion Clause', 'Forme Clause', 'OHKO Clause', 'Overflow Stat Mod',
-			'Sleep Moves Clause', 'Species Reveal Clause', 'Hackmons Forme Legality',
+			'Sleep Moves Clause', 'Species Reveal Clause', 'Hackmons Forme Legality', 'Mega Rayquaza Clause',
 		],
 		banlist: ['Calyrex-Shadow', 'Gengar-Mega', 'Miraidon', 'Moody', 'King\'s Rock', 'Razor Fang', 'Baton Pass'],
 		onValidateSet(set, format, setHas, teamHas) {
@@ -1008,37 +963,121 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		},
 	},
 	{
-		name: "[Gen 9] April Fool's Day",
-		desc: "April Fool's Day",
-		mod: 'gen9ssb',
-		debug: true,
-		team: 'randomStaffBros',
-		ruleset: ['HP Percentage Mod', 'Cancel Mod', 'Sleep Clause Mod'],
-		onBegin() {
-			this.add('message', 'April Fools Day');
-		},
-		onSwitchInPriority: 100,
-		onSwitchIn(pokemon) {
-			let name: string = this.toID(pokemon.illusion ? pokemon.illusion.name : pokemon.name);
-			if (this.dex.species.get(name).exists || this.dex.moves.get(name).exists ||
-				this.dex.abilities.get(name).exists || name === 'blitz') {
-				// Certain pokemon have volatiles named after their id
-				// To prevent overwriting those, and to prevent accidentaly leaking
-				// that a pokemon is on a team through the onStart even triggering
-				// at the start of a match, users with pokemon names will need their
-				// statuses to end in "user".
-				name = `${name}user`;
-			}
-			// Add the mon's status effect to it as a volatile.
-			const status = this.dex.conditions.get(name);
-			if (status?.exists) {
-				pokemon.addVolatile(name, pokemon);
-			}
-			if ((pokemon.illusion || pokemon).getTypes(true, true).join('/') !==
-				this.dex.forGen(9).species.get((pokemon.illusion || pokemon).species.name).types.join('/') &&
-				!pokemon.terastallized) {
-				this.add('-start', pokemon, 'typechange', (pokemon.illusion || pokemon).getTypes(true).join('/'), '[silent]');
-			}
+		name: "[Gen 9] Relay Race",
+		desc: `The effects of the move Baton Pass are triggered upon manually withdrawing a Pok&eacute;mon from battle.`,
+		mod: 'gen9',
+		ruleset: ['Standard OMs', 'Sleep Moves Clause'],
+		banlist: [
+			'Annihilape', 'Arceus', 'Archaludon', 'Baxcalibur', 'Calyrex-Ice', 'Calyrex-Shadow', 'Chien-Pao', 'Chi-Yu', 'Deoxys-Normal', 'Deoxys-Attack', 'Dialga',
+			'Dialga-Origin', 'Enamorus-Incarnate', 'Eternatus', 'Flutter Mane', 'Giratina', 'Giratina-Origin', 'Gouging Fire', 'Groudon', 'Ho-Oh', 'Iron Bundle',
+			'Koraidon', 'Kyogre', 'Kyurem-Black', 'Kyurem-White', 'Landorus-Incarnate', 'Lugia', 'Lunala', 'Magearna', 'Mewtwo', 'Miraidon', 'Necrozma-Dawn-Wings',
+			'Necrozma-Dusk-Mane', 'Ogerpon-Hearthflame', 'Palafin', 'Palkia', 'Palkia-Origin', 'Rayquaza', 'Regieleki', 'Reshiram', 'Shaymin-Sky', 'Sneasler', 'Solgaleo',
+			'Spectrier', 'Terapagos', 'Ursaluna-Bloodmoon', 'Urshifu', 'Urshifu-Rapid-Strike', 'Zacian', 'Zacian-Crowned', 'Zamazenta-Crowned', 'Zekrom', 'Arena Trap',
+			'Moody', 'Sand Veil', 'Shadow Tag', 'Snow Cloak', 'Speed Boost', 'Bright Powder', 'King\'s Rock', 'Razor Fang', 'Clangorous Soul', 'Last Respects',
+			'Mud-Slap', 'Muddy Water', 'Night Daze', 'No Retreat', 'Sand Attack', 'Shell Smash', 'Smokescreen', 'Victory Dance', 'Quiver Dance',
+		],
+		actions: {
+			switchIn(pokemon, pos, sourceEffect, isDrag) {
+				if (!pokemon || pokemon.isActive) {
+					this.battle.hint("A switch failed because the Pokémon trying to switch in is already in.");
+					return false;
+				}
+
+				const side = pokemon.side;
+				if (pos >= side.active.length) {
+					throw new Error(`Invalid switch position ${pos} / ${side.active.length}`);
+				}
+				const oldActive = side.active[pos];
+				const unfaintedActive = oldActive?.hp ? oldActive : null;
+				if (unfaintedActive) {
+					oldActive.beingCalledBack = true;
+					let switchCopyFlag: 'copyvolatile' | 'shedtail' | boolean = false;
+					if (sourceEffect && typeof (sourceEffect as Move).selfSwitch) {
+						if (typeof (sourceEffect as Move).selfSwitch === 'string') {
+							switchCopyFlag = (sourceEffect as Move).selfSwitch!;
+						}
+					} else {
+						if (!isDrag && !sourceEffect) switchCopyFlag = 'copyvolatile';
+					}
+					if (!oldActive.skipBeforeSwitchOutEventFlag && !isDrag) {
+						this.battle.runEvent('BeforeSwitchOut', oldActive);
+						if (this.battle.gen >= 5) {
+							this.battle.eachEvent('Update');
+						}
+					}
+					oldActive.skipBeforeSwitchOutEventFlag = false;
+					if (!this.battle.runEvent('SwitchOut', oldActive)) {
+						// Warning: DO NOT interrupt a switch-out if you just want to trap a pokemon.
+						// To trap a pokemon and prevent it from switching out, (e.g. Mean Look, Magnet Pull)
+						// use the 'trapped' flag instead.
+
+						// Note: Nothing in the real games can interrupt a switch-out (except Pursuit KOing,
+						// which is handled elsewhere); this is just for custom formats.
+						return false;
+					}
+					if (!oldActive.hp) {
+						// a pokemon fainted from Pursuit before it could switch
+						return 'pursuitfaint';
+					}
+
+					// will definitely switch out at this point
+
+					oldActive.illusion = null;
+					this.battle.singleEvent('End', oldActive.getAbility(), oldActive.abilityState, oldActive);
+					this.battle.singleEvent('End', oldActive.getItem(), oldActive.itemState, oldActive);
+
+					// if a pokemon is forced out by Whirlwind/etc or Eject Button/Pack, it can't use its chosen move
+					this.battle.queue.cancelAction(oldActive);
+
+					let newMove = null;
+					if (this.battle.gen === 4 && sourceEffect) {
+						newMove = oldActive.lastMove;
+					}
+					if (switchCopyFlag) {
+						pokemon.copyVolatileFrom(oldActive, switchCopyFlag);
+					}
+					if (newMove) pokemon.lastMove = newMove;
+					oldActive.clearVolatile();
+				}
+				if (oldActive) {
+					oldActive.isActive = false;
+					oldActive.isStarted = false;
+					oldActive.usedItemThisTurn = false;
+					oldActive.statsRaisedThisTurn = false;
+					oldActive.statsLoweredThisTurn = false;
+					oldActive.position = pokemon.position;
+					if (oldActive.fainted) oldActive.status = '';
+					pokemon.position = pos;
+					side.pokemon[pokemon.position] = pokemon;
+					side.pokemon[oldActive.position] = oldActive;
+				}
+				pokemon.isActive = true;
+				side.active[pos] = pokemon;
+				pokemon.activeTurns = 0;
+				pokemon.activeMoveActions = 0;
+				for (const moveSlot of pokemon.moveSlots) {
+					moveSlot.used = false;
+				}
+				pokemon.abilityState.effectOrder = this.battle.effectOrder++;
+				pokemon.itemState.effectOrder = this.battle.effectOrder++;
+				this.battle.runEvent('BeforeSwitchIn', pokemon);
+				if (sourceEffect) {
+					this.battle.add(isDrag ? 'drag' : 'switch', pokemon, pokemon.getFullDetails, `[from] ${sourceEffect}`);
+				} else {
+					this.battle.add(isDrag ? 'drag' : 'switch', pokemon, pokemon.getFullDetails);
+				}
+				if (isDrag && this.battle.gen === 2) pokemon.draggedIn = this.battle.turn;
+				pokemon.previouslySwitchedIn++;
+
+				if (isDrag && this.battle.gen >= 5) {
+					// runSwitch happens immediately so that Mold Breaker can make hazards bypass Clear Body and Levitate
+					this.runSwitch(pokemon);
+				} else {
+					this.battle.queue.insertChoice({ choice: 'runSwitch', pokemon });
+				}
+
+				return true;
+			},
 		},
 	},
 
@@ -1182,8 +1221,8 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		restricted: [
 			'Armor Tail', 'Chlorophyll', 'Comatose', 'Contrary', 'Dazzling', 'Fur Coat', 'Gale Wings', 'Good as Gold', 'Huge Power', 'Ice Scales', 'Illusion', 'Imposter',
 			'Magic Bounce', 'Magic Guard', 'Magnet Pull', 'Mold Breaker', 'Multiscale', 'Poison Heal', 'Prankster', 'Protosynthesis', 'Psychic Surge', 'Pure Power',
-			'Quark Drive', 'Queenly Majesty', 'Quick Draw', 'Quick Feet', 'Regenerator', 'Sand Rush', 'Simple', 'Slush Rush', 'Stakeout', 'Stamina',
-			'Sturdy', 'Surge Surfer', 'Technician', 'Tinted Lens', 'Triage', 'Unaware', 'Unburden', 'Water Bubble',
+			'Quark Drive', 'Queenly Majesty', 'Quick Draw', 'Quick Feet', 'Regenerator', 'Sand Rush', 'Simple', 'Slush Rush', 'Stakeout', 'Stamina', 'Sturdy',
+			'Surge Surfer', 'Technician', 'Tinted Lens', 'Triage', 'Unaware', 'Unburden', 'Water Bubble',
 		],
 		onValidateRule() {
 			if (this.format.gameType !== 'singles') {
@@ -2846,7 +2885,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		banlist: [
 			'ND Uber', 'ND AG', 'ND OU', 'ND UUBL', 'ND UU', 'ND RUBL', 'ND RU', 'ND NFE', 'ND LC',
 			'Battle Bond', 'Moody', 'Power Construct', 'Shadow Tag', 'Berserk Gene', 'King\'s Rock', 'Quick Claw', 'Razor Fang', 'Acupressure',
-			'Last Respects', 'Baton Pass + Contrary', 'Baton Pass + Rapid Spin',
+			'Last Respects', 'Shed Tail', 'Baton Pass + Contrary', 'Baton Pass + Rapid Spin',
 		],
 		unbanlist: [
 			'Kingdra', 'Crustle', 'Corsola-Base', 'Dipplin', 'Dusknoir', 'Drampa', 'Pincurchin', 'Type: Null', 'Camerupt-Base', 'Rotom-Base', 'Raticate-Base', 'Bombirdier',
@@ -2871,7 +2910,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 	{
 		name: "[Gen 9] National Dex Ubers",
 		mod: 'gen9',
-		ruleset: ['Standard NatDex', '!Evasion Clause', 'Evasion Moves Clause', 'Evasion Items Clause'],
+		ruleset: ['Standard NatDex', '!Evasion Clause', 'Evasion Moves Clause', 'Evasion Items Clause', 'Mega Rayquaza Clause'],
 		banlist: ['ND AG', 'Shedinja', 'Assist', 'Baton Pass'],
 	},
 	{
@@ -2914,12 +2953,6 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 			'Focus Band', 'Icy Rock', 'King\'s Rock', 'Leppa Berry', 'Quick Claw', 'Razor Fang', 'Smooth Rock', 'Terrain Extender', 'Acupressure', 'Baton Pass',
 			'Last Respects', 'Shed Tail',
 		],
-		onValidateSet(set, format) {
-			const species = this.dex.species.get(set.species);
-			if (species.types.includes('Steel')) {
-				return [`${species.name} is a Steel-type, which is banned from ${format.name}.`];
-			}
-		},
 	},
 	{
 		name: "[Gen 9] National Dex Doubles",
@@ -3084,13 +3117,6 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		column: 4,
 	},
 	{
-		name: "[Gen 9] Random Battle",
-		desc: `Randomized teams of Pok&eacute;mon with sets that are generated to be competitively viable.`,
-		mod: 'gen9',
-		team: 'random',
-		ruleset: ['PotD', 'Obtainable', 'Species Clause', 'HP Percentage Mod', 'Cancel Mod', 'Sleep Clause Mod', 'Illusion Level Mod'],
-	},
-	{
 		name: "[Gen 9] B6P4 Random Doubles Battle (Bo3)",
 		desc: `[Gen 9] Random Doubles Battle, but with open team sheets and each player selects four Pok&eacute;mon to battle with.`,
 		mod: 'gen9',
@@ -3105,12 +3131,56 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		team: 'random',
 	},
 	{
+		name: "[Gen 9] Monkey's Paw Random Battle",
+		desc: `Every Pokemon can wish for something with the Monkey's Paw once.`,
+		mod: 'monkeyspaw',
+		team: 'random',
+		ruleset: ['[Gen 9] Random Battle'],
+		onBegin() {
+			for (const side of this.sides) {
+				// @ts-expect-error I hate references with all of my life force
+				side.wishes = { luck: 1, knowledge: 1, power: 1, life: 1 };
+				// @ts-expect-error
+				side.wishesRemaining = 4;
+			}
+			let buf = `<div class="broadcast-blue"><h3>What does which wish do?</h3><hr />`;
+			buf += `<details><summary>What does which wish do?</summary>`;
+			buf += `&bullet; <b>Mega Evolution:</b> Wish for life &ndash; <span style="font-size: 9px;">Revive one fainted Pokemon</span><br />`;
+			buf += `&bullet; <b>Mega Evolution X:</b> Wish for power &ndash; <span style="font-size: 9px;">Gain a +2 boost in the current Pokemon's dominant attack and defense stat</span><br />`;
+			buf += `&bullet; <b>Mega Evolution Y:</b> Wish for luck &ndash; <span style="font-size: 9px;">Give the current Pokemon innate Serene Grace + Focus Energy for the rest of the game</span><br />`;
+			buf += `&bullet; <b>Terastallize:</b> Wish for knowledge &ndash; <span style="font-size: 9px;">Scout the active Pokemon for one of their moves</span><br />`;
+			buf += `</details></div>`;
+			this.add('message', `You've found a Monkey's Paw. You have 4 wishes.`);
+			this.add(`raw|${buf}`);
+		},
+		onSwitchIn(pokemon) {
+			if (pokemon.m.revivedByMonkeysPaw) {
+				pokemon.addVolatile('slowstart', null, this.dex.conditions.get('monkeypaw'));
+			}
+			if (pokemon.m.monkeyPawLuck) {
+				pokemon.addVolatile('focusenergy');
+				pokemon.addVolatile('confusion', null, this.dex.conditions.get('monkeypaw'));
+			}
+		},
+		onModifyMovePriority: -2,
+		onModifyMove(move, pokemon) {
+			if (!pokemon.m.monkeyPawLuck) return;
+			if (move.secondaries) {
+				this.debug('doubling secondary chance');
+				for (const secondary of move.secondaries) {
+					if (secondary.chance) secondary.chance *= 2;
+				}
+			}
+			if (move.self?.chance) move.self.chance *= 2;
+		},
+	},
+	{
 		name: "[Gen 9] Super Staff Bros Ultimate",
 		desc: "The fifth iteration of Super Staff Bros is here! Battle with a random team of pokemon created by the sim staff.",
 		mod: 'gen9ssb',
 		debug: true,
 		team: 'randomStaffBros',
-		ruleset: ['HP Percentage Mod', 'Cancel Mod', 'Sleep Clause Mod', 'Dynamax Clause'],
+		ruleset: ['HP Percentage Mod', 'Cancel Mod', 'Sleep Clause Mod'],
 		onBegin() {
 			// TODO look into making an event to put this right after turn|1
 			// https://discordapp.com/channels/630837856075513856/630845310033330206/716126469528485909
@@ -3121,6 +3191,10 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 				this.add('message', 'Fox only');
 				this.add('message', 'No items');
 				this.add('message', 'Final Destination');
+				return;
+			} else if (this.ruleTable.has('zmovesclause')) {
+				// Old joke format we're bringing back
+				this.add('message', 'April Fool\'s Day');
 				return;
 			}
 
