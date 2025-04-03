@@ -24873,6 +24873,9 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
             ],
             "trailblaze": [
                 "9M"
+            ],
+            "skittersmack": [
+                "9M"
             ]
         }
     },
@@ -25120,6 +25123,9 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
                 "9M"
             ],
             "xscissor": [
+                "9M"
+            ],
+            "silktrap": [
                 "9M"
             ]
         }
@@ -71870,6 +71876,9 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
                 "9M"
             ],
             "magnetrise": [
+                "9M"
+            ],
+            "": [
                 "9M"
             ]
         }
@@ -124010,6 +124019,9 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
             ],
             "return": [
                 "9M"
+            ],
+            "teleport": [
+                "9M"
             ]
         }
     },
@@ -152797,9 +152809,6 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
             "sunnyday": [
                 "9M"
             ],
-            "swagger": [
-                "9M"
-            ],
             "swift": [
                 "9M"
             ],
@@ -158839,6 +158848,251 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
                 "9M"
             ],
             "zenheadbutt": [
+                "9M"
+            ]
+        }
+    },
+    "tangela": {
+        "inherit": true,
+        "learnset": {
+            "absorb": [
+                "9M"
+            ],
+            "amnesia": [
+                "9M"
+            ],
+            "ancientpower": [
+                "9M"
+            ],
+            "attract": [
+                "9M"
+            ],
+            "bide": [
+                "9M"
+            ],
+            "bind": [
+                "9M"
+            ],
+            "bodyslam": [
+                "9M"
+            ],
+            "bulletseed": [
+                "9M"
+            ],
+            "captivate": [
+                "9M"
+            ],
+            "confide": [
+                "9M"
+            ],
+            "confusion": [
+                "9M"
+            ],
+            "constrict": [
+                "9M"
+            ],
+            "curse": [
+                "9M"
+            ],
+            "cut": [
+                "9M"
+            ],
+            "doubleedge": [
+                "9M"
+            ],
+            "doubleteam": [
+                "9M"
+            ],
+            "endeavor": [
+                "9M"
+            ],
+            "endure": [
+                "9M"
+            ],
+            "energyball": [
+                "9M"
+            ],
+            "facade": [
+                "9M"
+            ],
+            "flail": [
+                "9M"
+            ],
+            "flash": [
+                "9M"
+            ],
+            "frustration": [
+                "9M"
+            ],
+            "gigadrain": [
+                "9M"
+            ],
+            "gigaimpact": [
+                "9M"
+            ],
+            "grassknot": [
+                "9M"
+            ],
+            "grassyglide": [
+                "9M"
+            ],
+            "grassyterrain": [
+                "9M"
+            ],
+            "growth": [
+                "9M"
+            ],
+            "headbutt": [
+                "9M"
+            ],
+            "hiddenpower": [
+                "9M"
+            ],
+            "hyperbeam": [
+                "9M"
+            ],
+            "infestation": [
+                "9M"
+            ],
+            "ingrain": [
+                "9M"
+            ],
+            "knockoff": [
+                "9M"
+            ],
+            "leafstorm": [
+                "9M"
+            ],
+            "leechseed": [
+                "9M"
+            ],
+            "megadrain": [
+                "9M"
+            ],
+            "mimic": [
+                "9M"
+            ],
+            "morningsun": [
+                "9M"
+            ],
+            "naturalgift": [
+                "9M"
+            ],
+            "naturepower": [
+                "9M"
+            ],
+            "painsplit": [
+                "9M"
+            ],
+            "poisonpowder": [
+                "9M"
+            ],
+            "powerswap": [
+                "9M"
+            ],
+            "powerwhip": [
+                "9M"
+            ],
+            "protect": [
+                "9M"
+            ],
+            "psychup": [
+                "9M"
+            ],
+            "rage": [
+                "9M"
+            ],
+            "ragepowder": [
+                "9M"
+            ],
+            "reflect": [
+                "9M"
+            ],
+            "rest": [
+                "9M"
+            ],
+            "return": [
+                "9M"
+            ],
+            "rocksmash": [
+                "9M"
+            ],
+            "round": [
+                "9M"
+            ],
+            "secretpower": [
+                "9M"
+            ],
+            "seedbomb": [
+                "9M"
+            ],
+            "shockwave": [
+                "9M"
+            ],
+            "skullbash": [
+                "9M"
+            ],
+            "slam": [
+                "9M"
+            ],
+            "sleeppowder": [
+                "9M"
+            ],
+            "sleeptalk": [
+                "9M"
+            ],
+            "sludgebomb": [
+                "9M"
+            ],
+            "snore": [
+                "9M"
+            ],
+            "solarbeam": [
+                "9M"
+            ],
+            "stunspore": [
+                "9M"
+            ],
+            "substitute": [
+                "9M"
+            ],
+            "sunnyday": [
+                "9M"
+            ],
+            "swagger": [
+                "9M"
+            ],
+            "sweetscent": [
+                "9M"
+            ],
+            "swordsdance": [
+                "9M"
+            ],
+            "synthesis": [
+                "9M"
+            ],
+            "takedown": [
+                "9M"
+            ],
+            "thief": [
+                "9M"
+            ],
+            "tickle": [
+                "9M"
+            ],
+            "toxic": [
+                "9M"
+            ],
+            "vinewhip": [
+                "9M"
+            ],
+            "wakeupslap": [
+                "9M"
+            ],
+            "worryseed": [
+                "9M"
+            ],
+            "wringout": [
                 "9M"
             ]
         }
