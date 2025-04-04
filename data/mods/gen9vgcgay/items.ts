@@ -67,6 +67,21 @@ export const Items: import('../../../sim/dex-items').ModdedItemDataTable = {
 		},
 		itemUser: ["Chansey", "Ledian"],
 	},
+	berryjuice: {
+		inherit: true,
+		isNonstandard: null,
+		isBerry: true,
+		shortDesc: "Restores 30 HP when at 1/4 max HP or less. Shuckle: 5x effective.",
+		onUpdate(pokemon) {
+			if (pokemon.hp <= pokemon.maxhp / 4) {
+				const healAmount = pokemon.species.baseSpecies === 'Shuckle' ? 150 : 30;
+				if (this.runEvent('TryHeal', pokemon, null, this.effect, healAmount) && pokemon.useItem()) {
+					this.heal(20);
+				}
+			}
+		},
+		itemUser: ["Shuckle"],
+	},
 	// Origin forme items
 	lustrousglobe: {
 		inherit: true,

@@ -900,7 +900,7 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 			"spe": 40,
 		},
 		"abilities": {
-			"0": "Frisk",
+			"0": "Lightning Rod",
 			"1": "Hammer Time",
 			"H": "Harvest",
 		},
@@ -2212,7 +2212,7 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 			"hp": 85,
 			"atk": 105,
 			"def": 85,
-			"spa": 110,
+			"spa": 105,
 			"spd": 85,
 			"spe": 45,
 		},
@@ -2310,10 +2310,10 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 		],
 		"baseStats": {
 			"hp": 80,
-			"atk": 95,
-			"def": 95,
-			"spa": 95,
-			"spd": 95,
+			"atk": 100,
+			"def": 100,
+			"spa": 100,
+			"spd": 100,
 			"spe": 85,
 		},
 		"abilities": {
@@ -2347,7 +2347,7 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 			"Normal",
 		],
 		"baseStats": {
-			"hp": 75,
+			"hp": 85,
 			"atk": 80,
 			"def": 90,
 			"spa": 105,
@@ -2506,7 +2506,7 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 		},
 		"abilities": {
 			"0": "Sand Stream",
-			"H": "Sand Force",
+			"H": "Earth Eater",
 		},
 		"inherit": true,
 	},
@@ -3750,7 +3750,7 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 			"hp": 55,
 			"atk": 30,
 			"def": 70,
-			"spa": 105,
+			"spa": 95,
 			"spd": 70,
 			"spe": 125,
 		},
@@ -9907,11 +9907,11 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 		],
 		"baseStats": {
 			"hp": 120,
-			"atk": 112,
+			"atk": 107,
 			"def": 65,
 			"spa": 100,
 			"spd": 75,
-			"spe": 78,
+			"spe": 73,
 		},
 		"abilities": {
 			"0": "Swift Swim",
@@ -9922,7 +9922,7 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 	},
 	"sneasler": {
 		"types": [
-			"Fighting",
+			"Ice",
 			"Poison",
 		],
 		"baseStats": {

@@ -2333,7 +2333,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	gorebyss: {
 		isNonstandard: "Past",
 		tier: "Illegal",
-		natDexTier: "SU",
+		natDexTier: "SUBL",
 	},
 	relicanth: {
 		isNonstandard: "Past",
@@ -3439,7 +3439,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	klinklang: {
 		isNonstandard: "Past",
 		tier: "Illegal",
-		natDexTier: "SU",
+		natDexTier: "SUBL",
 	},
 	tynamo: {
 		tier: "LC",

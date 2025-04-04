@@ -29149,6 +29149,9 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
             ],
             "mortalspin": [
                 "9M"
+            ],
+            "spikecannon": [
+                "9M"
             ]
         }
     },
@@ -31513,6 +31516,9 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
                 "9M"
             ],
             "bodypress": [
+                "9M"
+            ],
+            "meteorbeam": [
                 "9M"
             ]
         }
@@ -115483,6 +115489,15 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
             ],
             "return": [
                 "9M"
+            ],
+            "coil": [
+                "9M"
+            ],
+            "machpunch": [
+                "9M"
+            ],
+            "aquajet": [
+                "9M"
             ]
         }
     },
@@ -122132,6 +122147,18 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
                 "9M"
             ],
             "punishment": [
+                "9M"
+            ],
+            "icepunch": [
+                "9M"
+            ],
+            "iceshard": [
+                "9M"
+            ],
+            "iciclespear": [
+                "9M"
+            ],
+            "tripleaxel": [
                 "9M"
             ]
         }
@@ -138632,6 +138659,9 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
             ],
             "faketears": [
                 "9M"
+            ],
+            "psychicnoise": [
+                "9M"
             ]
         }
     },
@@ -140516,6 +140546,9 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
             ],
             "twister": [
                 "9M"
+            ],
+            "futuresight": [
+                "9M"
             ]
         }
     },
@@ -140811,6 +140844,9 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
                 "9M"
             ],
             "whirlpool": [
+                "9M"
+            ],
+            "lusterpurge": [
                 "9M"
             ]
         }

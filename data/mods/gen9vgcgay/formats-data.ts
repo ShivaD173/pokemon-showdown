@@ -3314,7 +3314,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 	},
 	"genesect": {
 		"isNonstandard": null,
-		"tier": "OU",
+		"tier": "Uber",
 	},
 	"genesectdouse": {
 		"isNonstandard": null,
@@ -3821,6 +3821,10 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		"tier": "Illegal",
 	},
 	"rockruff": {
+		"isNonstandard": "Past",
+		"tier": "Illegal",
+	},
+	"rockruffdusk": {
 		"isNonstandard": "Past",
 		"tier": "Illegal",
 	},
@@ -5612,7 +5616,19 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		"isNonstandard": "Past",
 		"tier": "Illegal",
 	},
+	"chuggon": {
+		"isNonstandard": "Past",
+		"tier": "Illegal",
+	},
+	"draggalong": {
+		"isNonstandard": "Past",
+		"tier": "Illegal",
+	},
 	"chuggalong": {
+		"isNonstandard": "Past",
+		"tier": "Illegal",
+	},
+	"shox": {
 		"isNonstandard": "Past",
 		"tier": "Illegal",
 	},

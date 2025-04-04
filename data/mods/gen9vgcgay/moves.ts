@@ -725,6 +725,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		inherit: true,
 		shortDesc: "80, 110, 140 power, if target ally, heals 50%.",
 		accuracy: 100,
+		type: "Ice",
 		onTryHit(target, source, move) {
 			if (source.isAlly(target)) {
 				move.basePower = 0;
