@@ -62,7 +62,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		accuracy: 85,
 		shortDesc: "30% to lower foe(s) Speed by 1. Snow: can't miss.",
 		onModifyMove(move, pokemon, target) {
-			if (this.field.isWeather(['hail', 'snow'])) move.accuracy = true;
+			if (this.field.isWeather(['hail', 'snowscape'])) move.accuracy = true;
 		},
 	},
 	sandsearstorm: {
@@ -1301,7 +1301,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 	auroraveil: {
 		inherit: true,
 		onTry(source) {
-			return this.field.isWeather(['hail', 'snow']) || source.hasAbility("trueaurora");
+			return this.field.isWeather(['hail', 'snowscape']) || source.hasAbility("trueaurora");
 		},
 		condition: {
 			duration: 5,
@@ -1466,6 +1466,29 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		},
 	},
 	// Max Moves
+	gmaxbefuddle: {
+		inherit: true,
+		isNonstandard: null,
+		isMax: false,
+		flags: { protect: 1, mirror: 1 },
+		category: "Special",
+		basePower: 90,
+		shortDesc: "100% chance to sleep, poison, or paralyze target.",
+		self: {},
+		secondary: {
+			chance: 100,
+			onHit(target, source) {
+				const result = this.random(3);
+				if (result === 0) {
+					target.trySetStatus('psn', source);
+				} else if (result === 1) {
+					target.trySetStatus('par', source);
+				} else {
+					target.trySetStatus('slp', source);
+				}
+			},
+		},
+	},
 	gmaxreplenish: {
 		inherit: true,
 		isNonstandard: null,

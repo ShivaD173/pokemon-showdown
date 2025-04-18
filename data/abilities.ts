@@ -5709,12 +5709,12 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 	},
 	arcticrush: {
 		onModifySpe(spe, pokemon) {
-			if (this.field.isWeather(['hail', 'snow', 'raindance', 'primordialsea'])) {
+			if (this.field.isWeather(['hail', 'snowscape', 'raindance', 'primordialsea'])) {
 				return this.chainModify(2);
 			}
 		},
 		onModifySpD(spd, pokemon) {
-			if (this.field.isWeather(['hail', 'snow', 'raindance', 'primordialsea'])) {
+			if (this.field.isWeather(['hail', 'snowscape', 'raindance', 'primordialsea'])) {
 				return this.chainModify([3, 2]);
 			}
 		},

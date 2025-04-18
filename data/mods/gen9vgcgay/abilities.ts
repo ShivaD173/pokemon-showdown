@@ -323,7 +323,7 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 		},
 		onModifySpDPriority: 6,
 		onModifySpD(spd) {
-			if (this.field.isWeather(['hail', 'snow'])) {
+			if (this.field.isWeather(['hail', 'snowscape'])) {
 				return this.chainModify(1.2);
 			}
 		},
@@ -1282,7 +1282,7 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 				type = "Water";
 				break;
 			case 'hail':
-			case 'snow':
+			case 'snowscape':
 				if (pokemon.species.id !== 'castformsnowy') forme = 'Castform-Snowy';
 				type = "Ice";
 				break;
