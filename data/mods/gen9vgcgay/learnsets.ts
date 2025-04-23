@@ -1301,6 +1301,9 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
             ],
             "pounce": [
                 "9M"
+            ],
+            "gmaxbefuddle": [
+                "9M"
             ]
         }
     },
@@ -37702,6 +37705,9 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
             ],
             "pounce": [
                 "9M"
+            ],
+            "earthquake": [
+                "9M"
             ]
         }
     },
@@ -38807,6 +38813,9 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
                 "9M"
             ],
             "xscissor": [
+                "9M"
+            ],
+            "encore": [
                 "9M"
             ]
         }
@@ -69255,6 +69264,9 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
             ],
             "grassyterrain": [
                 "9M"
+            ],
+            "growth": [
+                "9M"
             ]
         }
     },
@@ -98029,6 +98041,9 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
                 "9M"
             ],
             "playrough": [
+                "9M"
+            ],
+            "wideguard": [
                 "9M"
             ]
         }
