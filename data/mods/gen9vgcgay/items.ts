@@ -76,7 +76,7 @@ export const Items: import('../../../sim/dex-items').ModdedItemDataTable = {
 			if (pokemon.hp <= pokemon.maxhp / 4) {
 				const healAmount = pokemon.species.baseSpecies === 'Shuckle' ? 150 : 30;
 				if (this.runEvent('TryHeal', pokemon, null, this.effect, healAmount) && pokemon.useItem()) {
-					this.heal(20);
+					this.heal(healAmount);
 				}
 			}
 		},

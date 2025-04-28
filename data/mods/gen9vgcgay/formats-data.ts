@@ -3318,19 +3318,19 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 	},
 	"genesectdouse": {
 		"isNonstandard": null,
-		"tier": "OU",
+		"tier": "Uber",
 	},
 	"genesectshock": {
 		"isNonstandard": null,
-		"tier": "OU",
+		"tier": "Uber",
 	},
 	"genesectburn": {
 		"isNonstandard": null,
-		"tier": "OU",
+		"tier": "Uber",
 	},
 	"genesectchill": {
 		"isNonstandard": null,
-		"tier": "OU",
+		"tier": "Uber",
 	},
 	"chespin": {
 		"isNonstandard": "Past",
@@ -4218,7 +4218,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 	},
 	"melmetal": {
 		"isNonstandard": null,
-		"tier": "OU",
+		"tier": "Uber",
 	},
 	"melmetalgmax": {
 		"isNonstandard": "Past",

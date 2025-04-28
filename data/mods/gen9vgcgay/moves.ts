@@ -277,6 +277,11 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		shortDesc: "Raises a non-protecting ally's Atk and Def by 1.",
 		flags: { bypasssub: 1, allyanim: 1, metronome: 1, protect: 1 },
 	},
+	skittersmack: {
+		inherit: true,
+		basePower: 80,
+		accuracy: 100,
+	},
 	rocksmash: {
 		inherit: true,
 		shortDesc: "100% chance to lower the target's Defense by 1.",
@@ -520,7 +525,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		inherit: true,
 		target: "allAdjacentFoes",
 		shortDesc: "Hits both foes, High Crit Rate, 10% to poison.",
-		basePower: 75,
+		basePower: 80,
 	},
 	feint: {
 		inherit: true,
@@ -767,7 +772,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 	meditate: {
 		inherit: true,
 		isNonstandard: null,
-		shortDesc: "Boosts Atk and SpDef by 1",
+		shortDesc: "Boosts the users Atk and SpDef by 1.",
 		boosts: {
 			atk: 1,
 			spd: 1,
@@ -1901,13 +1906,6 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		},
 	},
 	// nerfs
-	doubleironbash: {
-		inherit: true,
-		isNonstandard: null,
-		basePower: 50,
-		shortDesc: "Hits twice.",
-		secondary: {},
-	},
 	glaciallance: {
 		inherit: true,
 		isNonstandard: null,

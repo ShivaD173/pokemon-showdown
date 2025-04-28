@@ -5829,8 +5829,11 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		num: -14,
 	},
 	constrictor: {
-		onAfterMoveSecondarySelf(source, target, move) {
-			if (move.flags['contact'] && move.target === 'normal') {
+		onSourceDamagingHit(damage, target, source, move) {
+			if (!target.hp) return;
+			// Despite not being a secondary, Shield Dust / Covert Cloak block Poison Touch's effect
+			if (target.hasAbility('shielddust') || target.hasItem('covertcloak')) return;
+			if (this.checkMoveMakesContact(move, target, source)) {
 				this.add('-ability', source, 'Constrictor');
 				target.addVolatile('partiallytrapped', source);
 			}
