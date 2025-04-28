@@ -1825,8 +1825,8 @@ export const commands: Chat.ChatCommands = {
 		if (!this.runBroadcast()) return;
 		this.sendReplyBox(
 			`Welcome to Smogon's official simulator! The <a href="https://www.smogon.com/forums/forums/intro_hub">Information & Resources forum</a> can help you get integrated into the community.<br />` +
-			`- <a href="https://www.smogon.com/forums/threads/3526346">Useful Smogon Info</a><br />` +
-			`- <a href="https://www.smogon.com/forums/threads/3644714">Tiering FAQ</a><br />`
+			`- <a href="https://www.smogon.com/forums/threads/3710821/">Introduction to Smogon</a><br />` +
+			`- <a href="https://www.smogon.com/forums/threads/3652546/">Smogon Discord Directory</a><br />`
 		);
 	},
 	smogintrohelp: [`/smogintro - Provides an introduction to Smogon.`],
@@ -1915,10 +1915,10 @@ export const commands: Chat.ChatCommands = {
 	async formathelp(target, room, user, connection, cmd) {
 		if (!target && this.runBroadcast()) {
 			return this.sendReplyBox(
-				`- <a href="https://www.smogon.com/tiers/">Smogon Tiers</a><br />` +
-				`- <a href="https://www.smogon.com/forums/threads/3498332/">Tiering FAQ</a><br />` +
-				`- <a href="https://www.smogon.com/xyhub/tiers">The banlists for each tier</a><br />` +
-				"<br /><em>Type /formatshelp <strong>[format|section]</strong> to get details about an available format or group of formats.</em>"
+				`- <a href="https://www.smogon.com/forums/forums/smogon-metagames.725/">Smogon Metagames</a><br />` +
+				`- <a href="https://www.smogon.com/forums/threads/3628026/">Tiering Framework</a><br />` +
+				`- <a href="https://www.smogon.com/forums/threads/3644714/">Tiering FAQ</a><br />` +
+				"<br /><em>Type /tier <strong>[tier name]</strong> to get details, banlists, and helpful resources like sample teams for any tier!</em>"
 			);
 		}
 
