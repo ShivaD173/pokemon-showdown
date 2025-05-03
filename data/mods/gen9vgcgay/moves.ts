@@ -1477,7 +1477,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		isMax: false,
 		flags: { protect: 1, mirror: 1 },
 		category: "Special",
-		basePower: 90,
+		basePower: 80,
 		shortDesc: "100% chance to sleep, poison, or paralyze target.",
 		self: {},
 		secondary: {
@@ -2342,6 +2342,10 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		isNonstandard: null,
 	},
 	vcreate: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	doubleironbash: {
 		inherit: true,
 		isNonstandard: null,
 	},

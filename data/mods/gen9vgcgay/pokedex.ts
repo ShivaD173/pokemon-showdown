@@ -68,9 +68,9 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 			"hp": 70,
 			"atk": 55,
 			"def": 60,
-			"spa": 110,
+			"spa": 100,
 			"spd": 90,
-			"spe": 75,
+			"spe": 70,
 		},
 		"abilities": {
 			"0": "Compound Eyes",
@@ -3305,7 +3305,7 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 		"abilities": {
 			"0": "Shed Skin",
 			"1": "Merciless",
-			"H": "Infiltrator",
+			"H": "Constrictor",
 		},
 		"inherit": true,
 	},
@@ -12905,11 +12905,11 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 			"Steel",
 		],
 		"baseStats": {
-			"hp": 125,
-			"atk": 133,
-			"def": 133,
-			"spa": 85,
-			"spd": 60,
+			"hp": 135,
+			"atk": 143,
+			"def": 143,
+			"spa": 80,
+			"spd": 65,
 			"spe": 34,
 		},
 		"abilities": {
