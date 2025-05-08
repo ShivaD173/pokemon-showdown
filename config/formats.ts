@@ -3967,6 +3967,16 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		column: 4,
 	},
 	{
+		name: "[Gen 8] NFE",
+		desc: `Only Pok&eacute;mon that can evolve are allowed.`,
+		mod: 'gen8',
+		ruleset: ['Standard OMs', 'Not Fully Evolved', 'Sleep Moves Clause'],
+		banlist: [
+			'Chansey', 'Doublade', 'Mr. Mime-Galar', 'Golbat', 'Haunter', 'Kadabra', 'Magmar',
+			'Magneton', 'Pawniard', 'Pikachu', 'Porygon2', 'Rhydon', 'Scyther', 'Sneasel', 'Type: Null', 'Vulpix-Base', 'Arena Trap', 'Shadow Tag', 'Baton Pass',
+		],
+	},
+	{
 		name: "[Gen 8] Ubers",
 		mod: 'gen8',
 		searchShow: false,
