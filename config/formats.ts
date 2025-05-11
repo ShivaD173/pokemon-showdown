@@ -241,13 +241,6 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		searchShow: true,
 	},
 	{
-		name: "[Gen 3] NFE",
-		mod: 'gen3',
-		desc: `Only Pok&eacute;mon that can evolve are allowed.`,
-		ruleset: ['Standard', 'Not Fully Evolved'],
-		searchShow: true,
-	},
-	{
 		name: "[Gen 3] SU",
 		mod: 'gen3',
 		searchShow: true,
@@ -4229,6 +4222,17 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		column: 4,
 	},
 	{
+		name: "[Gen 7] NFE",
+		desc: `Only Pok&eacute;mon that can evolve are allowed.`,
+		mod: 'gen7',
+		ruleset: ['Standard OMs', 'Not Fully Evolved'],
+		banlist: [
+			'Chansey', 'Doublade', 'Gligar', 'Golbat', 'Gurdurr',
+			'Magneton', 'Piloswine', 'Porygon2', 'Rhydon', 'Scyther', 'Sneasel', 'Type: Null', 'Vigoroth',
+			'Aurora Veil', 'Arena Trap', 'Drought', 'Moody', 'Shadow Tag', 'Baton Pass',
+		],
+	},
+	{
 		name: "[Gen 7] Ubers",
 		mod: 'gen7',
 		searchShow: false,
@@ -4440,6 +4444,17 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		ruleset: ['Standard', 'Swagger Clause', 'Mega Rayquaza Clause'],
 	},
 	{
+		name: "[Gen 6] NFE",
+		desc: `Only Pok&eacute;mon that can evolve are allowed.`,
+		mod: 'gen6',
+		ruleset: ['Standard OMs', 'Not Fully Evolved'],
+		banlist: [
+			'Chansey', 'Doublade', 'Fletchinder', 'Frogadier', 'Gligar', 'Haunter',
+			'Kadabra', 'Machoke', 'Magneton', 'Piloswine', 'Porygon2', 'Rhydon', 'Scyther', 'Sneasel', 'Vigoroth',
+			'Arena Trap', 'Moody', 'Shadow Tag', 'Baton Pass', 'Swagger', 'Drought',
+		],
+	},
+	{
 		name: "[Gen 6] UU",
 		mod: 'gen6',
 		searchShow: false,
@@ -4625,6 +4640,17 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		column: 4,
 	},
 	{
+		name: "[Gen 5] NFE",
+		desc: `Only Pok&eacute;mon that can evolve are allowed.`,
+		mod: 'gen5',
+		ruleset: ['Standard OMs', 'Not Fully Evolved', 'Sleep Moves Clause'],
+		banlist: [
+			'Chansey', 'Dusclops', 'Fraxure', 'Gligar', 'Gurdurr', 'Haunter',
+			'Machoke', 'Magmar', 'Magneton', 'Piloswine', 'Porygon2', 'Riolu', 'Rhydon', 'Scyther', 'Vigoroth',
+			'Arena Trap', 'Moody', 'Shadow Tag', 'Baton Pass', 'Swagger', 'Drought', 'Sand Veil', 'Snow Cloak',
+		],
+	},
+	{
 		name: "[Gen 5] Ubers",
 		mod: 'gen5',
 		searchShow: false,
@@ -4808,6 +4834,17 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		column: 4,
 	},
 	{
+		name: "[Gen 4] NFE",
+		desc: `Only Pok&eacute;mon that can evolve are allowed.`,
+		mod: 'gen4',
+		ruleset: ['Standard OMs', 'Not Fully Evolved'],
+		banlist: [
+			'Chansey', 'Dragonair', 'Dusclops', 'Electabuzz', 'Gabite', 'Haunter',
+			'Machoke', 'Magmar', 'Magneton', 'Porygon2', 'Rhydon', 'Scyther',
+			'Shadow Tag', 'Baton Pass', 'Sunny Day', 'Sand Veil', 'Snow Cloak', 'Light Clay', 'Light Ball', 'Deep Sea Tooth',
+		],
+	},
+	{
 		name: "[Gen 4] Ubers",
 		mod: 'gen4',
 		searchShow: false,
@@ -4949,6 +4986,17 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		column: 4,
 	},
 	{
+		name: "[Gen 3] NFE",
+		desc: `Only Pok&eacute;mon that can evolve are allowed.`,
+		mod: 'gen3',
+		ruleset: ['Standard OMs', 'Not Fully Evolved'],
+		banlist: [
+			'Chansey', 'Diglett', 'Dragonair', 'Haunter',
+			'Kadabra', 'Scyther', 'Vigoroth', 'Wynaut',
+			'Light Ball', 'Deep Sea Tooth',
+		],
+	},
+	{
 		name: "[Gen 3] Ubers",
 		mod: 'gen3',
 		searchShow: false,
@@ -5040,6 +5088,16 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		ruleset: ['HP Percentage Mod', 'Cancel Mod', 'Max Team Size = 24', 'Max Move Count = 24', 'Max Level = 9999', 'Default Level = 100'],
 	},
 	{
+		name: "[Gen 2] NFE",
+		desc: `Only Pok&eacute;mon that can evolve are allowed.`,
+		mod: 'gen2',
+		ruleset: ['Standard OMs', 'Not Fully Evolved'],
+		banlist: [
+			'Chansey', 'Haunter',
+			'Kadabra', 'Pikachu', 'Poliwhirl', 'Scyther',
+		],
+	},
+	{
 		name: "[Gen 2] Ubers",
 		mod: 'gen2',
 		searchShow: false,
@@ -5108,6 +5166,14 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		debug: true,
 		battle: { trunc: Math.trunc },
 		ruleset: ['HP Percentage Mod', 'Cancel Mod', 'Max Team Size = 24', 'Max Move Count = 24', 'Max Level = 9999', 'Default Level = 100'],
+	},
+	{
+		name: "[Gen 1] NFE",
+		desc: `Only Pok&eacute;mon that can evolve are allowed.`,
+		mod: 'gen1',
+		ruleset: ['Standard OMs', 'Not Fully Evolved'],
+		banlist: [
+		],
 	},
 	{
 		name: "[Gen 1] Ubers",
