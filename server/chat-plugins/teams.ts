@@ -170,6 +170,9 @@ export const TeamsHandler = new class {
 		for (const set of team) {
 			set.name = this.isOMNickname(set.name, user) || set.species;
 
+			// Trim empty moveslots
+			set.moves = set.moves.filter(Boolean);
+
 			if (!Dex.species.get(set.species).exists) {
 				connection.popup(`Invalid Pokemon ${set.species} in team.`);
 				return null;
@@ -211,7 +214,7 @@ export const TeamsHandler = new class {
 				return null;
 			}
 			if (set.teraType && !strValid(set.teraType)) {
-				connection.popup(`Invalid Tera Type ${set.nature} on ${set.species}.`);
+				connection.popup(`Invalid Tera Type ${set.teraType} on ${set.species}.`);
 				return null;
 			}
 		}
@@ -372,7 +375,10 @@ export const TeamsHandler = new class {
 			err("You cannot currently use the teams database.");
 		}
 		if (user.locked || user.semilocked) err("You cannot use the teams database while locked.");
-		if (!user.autoconfirmed) err("You must be autoconfirmed to use the teams database.");
+		if (!user.autoconfirmed) err(
+			`To use the teams database, you must be autoconfirmed, which means being registered for at least ` +
+			`one week and winning one rated game.`
+		);
 	}
 	async count(user: string | User) {
 		const id = toID(user);
@@ -511,6 +517,7 @@ export const commands: Chat.ChatCommands = {
 					this.refreshPage(pageid);
 				}
 			}
+			connection.send(`|queryresponse|teamupdate|` + JSON.stringify({ teamid: teamId, privacy }));
 			return this.popupReply(privacy ? `Team set to private. Password: ${privacy}` : `Team set to public.`);
 		},
 		search(target, room, user) {
