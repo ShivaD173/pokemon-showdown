@@ -5868,15 +5868,12 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 			// Hack to get around the fact that perish song doesnt hit
 			if (move.id === "perishsong") {
 				if (move.flags['sound'] && !source.alliesAndSelf().includes(target)) {
-					// this.add('-ability', source, 'Captivating Song');
 					target.addVolatile('trapped', source, move, 'trapper');
 				}
 			}
 		},
 		onSourceHit(target, source, move) {
-		// onHit(target, source, move) {
 			if (move.flags['sound'] && !source.alliesAndSelf().includes(target)) {
-				// this.add('-ability', source, 'Captivating Song');
 				return target.addVolatile('trapped', source, move, 'trapper');
 			}
 		},
@@ -6104,7 +6101,8 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		},
 		isNonstandard: "CAP",
 		name: "Double Down",
-		flags: { failroleplay: 1, noreceiver: 1, noentrain: 1, failskillswap: 1, breakable: 1 },
+		// flags: { failroleplay: 1, noreceiver: 1, noentrain: 1, failskillswap: 1, breakable: 1 },
+		flags: { noreceiver: 1, breakable: 1 },
 		rating: 4,
 		num: -29,
 	},
