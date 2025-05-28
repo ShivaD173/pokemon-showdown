@@ -287,19 +287,17 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 	},
 	analytic: {
 		inherit: true,
-		shortDesc: "1.3x power and 1.1x accuracy if it is the last to move in a turn.",
+		shortDesc: "1.3x power and 1.1x accuracy if user moves after target.",
+		onBasePower(basePower, attacker, defender, move) {
+			if (!this.queue.willMove(defender)) {
+				this.debug('Analytic boost');
+				return this.chainModify([5325, 4096]);
+			}
+		},
 		onModifyAccuracyPriority: -2,
 		onModifyAccuracy(accuracy, target, source, move) {
 			if (typeof accuracy !== 'number') return;
-			let boosted = true;
-			for (const pokemon of this.getAllActive()) {
-				if (pokemon === source) continue;
-				if (this.queue.willMove(pokemon)) {
-					boosted = false;
-					break;
-				}
-			}
-			if (boosted) {
+			if (!this.queue.willMove(source)) {
 				return this.chainModify([11, 10]);
 			}
 		},

@@ -2126,7 +2126,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 	},
 	"cranidos": {
 		"isNonstandard": null,
-		"tier": "OU",
+		"tier": "LC",
 	},
 	"rampardos": {
 		"isNonstandard": null,

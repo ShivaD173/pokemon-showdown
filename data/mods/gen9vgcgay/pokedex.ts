@@ -1085,8 +1085,8 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 	},
 	"mrmimegalar": {
 		"types": [
-			"Ice",
 			"Psychic",
+			"Ice",
 		],
 		"baseStats": {
 			"hp": 55,
@@ -3922,10 +3922,10 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 		],
 		"baseStats": {
 			"hp": 77,
-			"atk": 104,
-			"def": 71,
-			"spa": 104,
-			"spd": 71,
+			"atk": 99,
+			"def": 76,
+			"spa": 99,
+			"spd": 76,
 			"spe": 108,
 		},
 		"abilities": {
@@ -4117,7 +4117,7 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 			"Grass",
 		],
 		"baseStats": {
-			"hp": 80,
+			"hp": 85,
 			"atk": 69,
 			"def": 85,
 			"spa": 129,
@@ -4125,9 +4125,7 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 			"spe": 36,
 		},
 		"abilities": {
-			"0": "Anticipation",
-			"1": "Cloak Change",
-			"H": "Overcoat",
+			"0": "Cloak Change",
 		},
 		"inherit": true,
 	},
@@ -4137,7 +4135,7 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 			"Ground",
 		],
 		"baseStats": {
-			"hp": 80,
+			"hp": 85,
 			"atk": 129,
 			"def": 115,
 			"spa": 69,
@@ -4145,9 +4143,7 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 			"spe": 36,
 		},
 		"abilities": {
-			"0": "Anticipation",
-			"1": "Cloak Change",
-			"H": "Overcoat",
+			"0": "Cloak Change",
 		},
 		"inherit": true,
 	},
@@ -4157,7 +4153,7 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 			"Steel",
 		],
 		"baseStats": {
-			"hp": 80,
+			"hp": 85,
 			"atk": 69,
 			"def": 130,
 			"spa": 69,
@@ -4165,9 +4161,7 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 			"spe": 36,
 		},
 		"abilities": {
-			"0": "Anticipation",
-			"1": "Cloak Change",
-			"H": "Overcoat",
+			"0": "Cloak Change",
 		},
 		"inherit": true,
 	},
@@ -4486,7 +4480,7 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 			"Dark",
 		],
 		"baseStats": {
-			"hp": 50,
+			"hp": 108,
 			"atk": 92,
 			"def": 108,
 			"spa": 92,
@@ -4494,8 +4488,8 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 			"spe": 35,
 		},
 		"abilities": {
-			"0": "Bad Dreams",
-			"1": "Odd Keystone",
+			"0": "Pressure",
+			"1": "Bad Dreams",
 			"H": "Infiltrator",
 		},
 		"inherit": true,
@@ -4762,8 +4756,8 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 		"baseStats": {
 			"hp": 75,
 			"atk": 125,
-			"def": 67,
-			"spa": 95,
+			"def": 95,
+			"spa": 67,
 			"spd": 83,
 			"spe": 95,
 		},
@@ -5200,7 +5194,7 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 			"Normal",
 		],
 		"baseStats": {
-			"hp": 110,
+			"hp": 100,
 			"atk": 200,
 			"def": 110,
 			"spa": 80,

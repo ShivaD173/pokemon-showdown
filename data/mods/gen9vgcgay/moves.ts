@@ -270,7 +270,47 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		inherit: true,
 		"basePower": 250,
 	},
+	// HMs
+	cut: {
+		inherit: true,
+		isNonstandard: null,
+		basePower: 70,
+		type: "Steel",
+	},
+	strength: {
+		inherit: true,
+		isNonstandard: null,
+		basePower: 80,
+		type: "Fighting",
+	},
+	rockclimb: {
+		inherit: true,
+		isNonstandard: null,
+		type: "Rock",
+		basePower: 85,
+		accuracy: 95,
+	},
 	// Regular Moves
+	megadrain: {
+		inherit: true,
+		basePower: 60,
+	},
+	sludge: {
+		inherit: true,
+		basePower: 60,
+	},
+	retaliate: {
+		inherit: true,
+		basePower: 80,
+		desc: "Power doubles if one of the user's party members fainted this turn or last turn.",
+		shortDesc: "Power doubles if ally fainted this or last turn.",
+		onBasePower(basePower, pokemon) {
+			if (pokemon.side.faintedLastTurn || pokemon.side.faintedThisTurn) {
+				this.debug('Boosted for a faint last turn');
+				return this.chainModify(2);
+			}
+		},
+	},
 	coaching: {
 		inherit: true,
 		desc: "Raises the target's Attack and Defense by 1 stage. Fails if there is no ally adjacent to the user.",
@@ -1368,6 +1408,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 	},
 	superfang: {
 		inherit: true,
+		flags: { contact: 1, protect: 1, mirror: 1, metronome: 1, bite: 1 },
 		damageCallback(pokemon, target) {
 			if (pokemon.ability === 'strongjaw') {
 				return this.clampIntRange(target.getUndynamaxedHP() * 3 / 4, 1);

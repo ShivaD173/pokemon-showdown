@@ -58677,6 +58677,9 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
             ],
             "trailblaze": [
                 "9M"
+            ],
+            "triattack": [
+                "9M"
             ]
         }
     },
@@ -64398,6 +64401,9 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
             "silverwind": [
                 "9M"
             ],
+            "skillswap": [
+                "9M"
+            ],
             "sleeptalk": [
                 "9M"
             ],
@@ -64450,6 +64456,9 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
                 "9M"
             ],
             "trick": [
+                "9M"
+            ],
+            "trickroom": [
                 "9M"
             ],
             "uproar": [
@@ -71808,6 +71817,9 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
                 "9M"
             ],
             "wonderroom": [
+                "9M"
+            ],
+            "drainpunch": [
                 "9M"
             ]
         }
@@ -141290,6 +141302,9 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
                 "9M"
             ],
             "lusterpurge": [
+                "9M"
+            ],
+            "calmmind": [
                 "9M"
             ]
         }
