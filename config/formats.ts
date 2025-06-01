@@ -2865,14 +2865,6 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		section: "National Dex",
 	},
 	{
-		name: "[Gen 9] National Dex VGC",
-		mod: 'gen9',
-		gameType: 'doubles',
-		searchShow: false,
-		bestOfDefault: true,
-		ruleset: ['Standard Natdex', 'Flat Rules', '!! Adjust Level = 50', 'Min Source Gen = 9', 'VGC Timer', 'Open Team Sheets'],
-	},
-	{
 		name: "[Gen 9] National Dex",
 		mod: 'gen9',
 		ruleset: ['Standard NatDex', 'Terastal Clause'],
