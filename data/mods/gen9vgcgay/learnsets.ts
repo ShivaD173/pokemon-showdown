@@ -62036,6 +62036,15 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
             ],
             "workup": [
                 "9M"
+            ],
+            "quickattack": [
+                "9M"
+            ],
+            "followme": [
+                "9M"
+            ],
+            "feint": [
+                "9M"
             ]
         }
     },
@@ -76088,6 +76097,9 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
             ],
             "hydrocannon": [
                 "9M"
+            ],
+            "wavecrash": [
+                "9M"
             ]
         }
     },
@@ -78005,6 +78017,9 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
                 "9M"
             ],
             "workup": [
+                "9M"
+            ],
+            "rockclimb": [
                 "9M"
             ]
         }
@@ -80879,6 +80894,9 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
                 "9M"
             ],
             "punishment": [
+                "9M"
+            ],
+            "bodypress": [
                 "9M"
             ]
         }
@@ -87178,9 +87196,6 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
             "infestation": [
                 "9M"
             ],
-            "knockoff": [
-                "9M"
-            ],
             "laserfocus": [
                 "9M"
             ],
@@ -87281,9 +87296,6 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
                 "9M"
             ],
             "terablast": [
-                "9M"
-            ],
-            "partingshot": [
                 "9M"
             ],
             "darkpulse": [
@@ -95648,6 +95660,9 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
                 "9M"
             ],
             "terablast": [
+                "9M"
+            ],
+            "bodypress": [
                 "9M"
             ]
         }
@@ -113503,6 +113518,9 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
                 "9M"
             ],
             "extrasensory": [
+                "9M"
+            ],
+            "abduction": [
                 "9M"
             ]
         }

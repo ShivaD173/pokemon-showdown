@@ -1578,4 +1578,12 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 		inherit: true,
 		isNonstandard: null,
 	},
+	waterpressure: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	phantomthief: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };

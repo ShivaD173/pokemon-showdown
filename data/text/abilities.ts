@@ -2561,4 +2561,14 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		desc: "This Pokemon uses its Special Defense stat as if it were its Special Attack stat. Stat changes to its Special Attack stat change its Special Defense instead.",
 		shortDesc: "This Pokemon's Special Defense stat is its Special stat.",
 	},
+	waterpressure: {
+		name: "Water Pressure",
+		desc: "If Rain Dance is active, this Pokemon's Speed is doubled. This effect is prevented if this Pokemon is holding a Utility Umbrella.",
+		shortDesc: "If Rain Dance is active, this Pokemon's Def and SpD is doubled.",
+	},
+	phantomthief: {
+		name: "Phantom Thief",
+		desc: "This Pokemon's Dark-type moves have their priority increased by 1.",
+		shortDesc: "This Pokemon's Dark-type moves have their priority increased by 1.",
+	},
 };

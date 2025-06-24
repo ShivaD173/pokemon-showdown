@@ -6686,7 +6686,35 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		},
 		flags: {},
 		name: "Stuck In The Past",
-		rating: 2.5,
+		isNonstandard: "CAP",
+		rating: 4,
 		num: -64,
+	},
+	waterpressure: {
+		onModifyDef(def, pokemon) {
+			if (['raindance', 'primordialsea'].includes(pokemon.effectiveWeather())) {
+				return this.chainModify(2);
+			}
+		},
+		onModifySpD(spd, pokemon) {
+			if (['raindance', 'primordialsea'].includes(pokemon.effectiveWeather())) {
+				return this.chainModify(2);
+			}
+		},
+		flags: {},
+		name: "Water Pressure",
+		isNonstandard: "CAP",
+		rating: 4,
+		num: -65,
+	},
+	phantomthief: {
+		onModifyPriority(priority, pokemon, target, move) {
+			if (move?.type === 'Dark') return priority + 1;
+		},
+		flags: {},
+		name: "Phantom Thief",
+		isNonstandard: "CAP",
+		rating: 1.5,
+		num: -66,
 	},
 };

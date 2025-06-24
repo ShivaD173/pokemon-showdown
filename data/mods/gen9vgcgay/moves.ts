@@ -275,6 +275,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		inherit: true,
 		isNonstandard: null,
 		basePower: 70,
+		accuracy: 100,
 		type: "Steel",
 	},
 	strength: {
@@ -291,6 +292,10 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		accuracy: 95,
 	},
 	// Regular Moves
+	stringshot: {
+		inherit: true,
+		accuracy: 100,
+	},
 	megadrain: {
 		inherit: true,
 		basePower: 60,
@@ -1544,7 +1549,6 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		shortDesc: "Restores berry on attack.",
 		self: {
 			onHit(source) {
-				// if (this.random(2) === 0) return;
 				if (source.item) return;
 				if (source.lastItem && this.dex.items.get(source.lastItem).isBerry) {
 					const item = source.lastItem;
@@ -2169,6 +2173,10 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		isNonstandard: null,
 	},
 	expandingmaws: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	abduction: {
 		inherit: true,
 		isNonstandard: null,
 	},
