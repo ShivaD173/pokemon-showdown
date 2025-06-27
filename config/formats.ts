@@ -451,6 +451,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		desc: `Randomized teams of Pok&eacute;mon with sets that are generated to be competitively viable.`,
 		mod: 'gen9',
 		team: 'random',
+		bestOfDefault: true,
 		ruleset: ['PotD', 'Obtainable', 'Species Clause', 'HP Percentage Mod', 'Cancel Mod', 'Sleep Clause Mod', 'Illusion Level Mod'],
 	},
 	{
@@ -474,6 +475,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		name: "[Gen 9] Random Battle (Blitz)",
 		mod: 'gen9',
 		team: 'random',
+		bestOfDefault: true,
 		ruleset: ['[Gen 9] Random Battle', 'Blitz'],
 	},
 	{
@@ -592,6 +594,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		mod: 'gen9',
 		gameType: 'doubles',
 		team: 'random',
+		bestOfDefault: true,
 		ruleset: ['PotD', 'Obtainable', 'Species Clause', 'HP Percentage Mod', 'Cancel Mod', 'Illusion Level Mod', 'Sleep Clause Mod'],
 	},
 	{
@@ -2520,7 +2523,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 
 				if (move.spreadHit) {
 					// multi-target modifier (doubles only)
-					const spreadModifier = move.spreadModifier || (this.battle.gameType === 'freeforall' ? 0.5 : 0.75);
+					const spreadModifier = this.battle.gameType === 'freeforall' ? 0.5 : 0.75;
 					this.battle.debug(`Spread modifier: ${spreadModifier}`);
 					baseDamage = this.battle.modify(baseDamage, spreadModifier);
 				} else if (move.multihitType === 'parentalbond' && move.hit > 1) {
@@ -3261,6 +3264,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		desc: `Random Battles in a random generation! [Gen 1] Random Battle - [Gen 9] Random Battle.`,
 		mod: 'randomroulette',
 		team: 'random',
+		bestOfDefault: true,
 	},
 	{
 		name: "[Gen 9] Monkey's Paw Random Battle",
@@ -3312,6 +3316,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		mod: 'gen9ssb',
 		debug: true,
 		team: 'randomStaffBros',
+		bestOfDefault: true,
 		ruleset: ['HP Percentage Mod', 'Cancel Mod', 'Sleep Clause Mod'],
 		onBegin() {
 			// TODO look into making an event to put this right after turn|1
@@ -3361,6 +3366,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		name: "[Gen 9] Monotype Random Battle",
 		mod: 'gen9',
 		team: 'random',
+		bestOfDefault: true,
 		ruleset: ['Obtainable', 'Same Type Clause', 'HP Percentage Mod', 'Cancel Mod', 'Sleep Clause Mod', 'Illusion Level Mod'],
 	},
 	{
@@ -3368,6 +3374,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		desc: `[Gen 9] Random Battle with Team Preview, Bring 12 Pick 6, and Shared Power.`,
 		mod: 'sharedpower',
 		team: 'random',
+		bestOfDefault: true,
 		ruleset: ['[Gen 9] Random Battle', 'Team Preview', 'Max Team Size = 12', 'Picked Team Size = 6'],
 		onValidateRule() {
 			if (this.format.gameType !== 'singles') {
@@ -3390,6 +3397,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		desc: `[Gen 9] Random Battle with Team Preview and elements of Camomons, Inverse, Scalemons, and Shared Power.`,
 		mod: 'sharedpower',
 		team: 'random',
+		bestOfDefault: true,
 		ruleset: ['[Gen 9] Random Battle', 'Team Preview', 'Camomons Mod', 'Inverse Mod', 'Scalemons Mod'],
 		onValidateRule() {
 			if (this.format.gameType !== 'singles') {
@@ -3412,6 +3420,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		desc: `Randomized teams of Pok&eacute;mon for a generated Smogon tier with sets that are competitively viable.`,
 		mod: 'gen9',
 		team: 'randomFactory',
+		bestOfDefault: true,
 		ruleset: ['Standard'],
 		onBegin() {
 			this.add(`raw|<div class="broadcast-blue"><b>Battle Factory Tier: ${this.teamGenerator.factoryTier}</b></div>`);
@@ -3422,6 +3431,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		desc: `Randomized 3v3 Singles featuring Pok&eacute;mon and movesets popular in Battle Stadium Singles.`,
 		mod: 'gen9',
 		team: 'randomBSSFactory',
+		bestOfDefault: true,
 		ruleset: ['Flat Rules', 'VGC Timer'],
 	},
 	{
@@ -3429,6 +3439,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		desc: `Randomized matchups sourced from various 6v6 singles draft leagues.`,
 		mod: 'gen9',
 		team: 'randomDraftFactory',
+		bestOfDefault: true,
 		ruleset: ['Standard Draft', '!Team Preview'],
 		onBegin() {
 			for (const pokemon of this.getAllPokemon()) {
@@ -3459,6 +3470,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		name: "[Gen 9] Baby Random Battle",
 		mod: 'gen9',
 		team: 'randomBaby',
+		bestOfDefault: true,
 		ruleset: ['Obtainable', 'Species Clause', 'HP Percentage Mod', 'Cancel Mod', 'Sleep Clause Mod', 'Illusion Level Mod'],
 	},
 	{
@@ -3468,6 +3480,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 			`with <a href="https://forms.gle/DYwQN5qGVegz3YU38">this form</a>.`,
 		mod: 'gen9',
 		team: 'computerGenerated',
+		bestOfDefault: true,
 		ruleset: ['Obtainable', 'Species Clause', 'HP Percentage Mod', 'Cancel Mod', 'Sleep Clause Mod', 'Illusion Level Mod'],
 	},
 	{
@@ -3475,6 +3488,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		desc: `Randomized teams of level-balanced Pok&eacute;mon with absolutely any ability, moves, and item.`,
 		mod: 'gen9',
 		team: 'randomHC',
+		bestOfDefault: true,
 		ruleset: ['HP Percentage Mod', 'Cancel Mod'],
 		banlist: ['CAP', 'LGPE', 'MissingNo.', 'Pikachu-Cosplay', 'Pichu-Spiky-eared', 'Pokestar Smeargle', 'Pokestar UFO', 'Pokestar UFO-2', 'Pokestar Brycen-Man', 'Pokestar MT', 'Pokestar MT2', 'Pokestar Transport', 'Pokestar Giant', 'Pokestar Humanoid', 'Pokestar Monster', 'Pokestar F-00', 'Pokestar F-002', 'Pokestar Spirit', 'Pokestar Black Door', 'Pokestar White Door', 'Pokestar Black Belt', 'Pokestar UFO-PropU2', 'Xerneas-Neutral'],
 	},
@@ -3484,6 +3498,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		mod: 'gen9',
 		team: 'randomHC',
 		searchShow: false,
+		bestOfDefault: true,
 		gameType: 'doubles',
 		ruleset: ['[Gen 9] Hackmons Cup'],
 	},
@@ -3492,6 +3507,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		desc: `[Gen 9] Hackmons Cup but with only the most powerful Pok&eacute;mon, moves, abilities, and items.`,
 
 		team: 'randomHC',
+		bestOfDefault: true,
 		ruleset: ['HP Percentage Mod', 'Cancel Mod'],
 		banlist: ['All Pokemon', 'All Abilities', 'All Items', 'All Moves'],
 		unbanlist: [
@@ -3605,6 +3621,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		desc: `Get a randomized team of level-balanced Pok&eacute;mon with absolutely any legal ability, moves, and item, and choose one to battle.`,
 		mod: 'gen9',
 		team: 'randomCC',
+		bestOfDefault: true,
 		ruleset: ['Obtainable', 'HP Percentage Mod', 'Cancel Mod', 'Team Preview', 'Terastal Clause', 'Picked Team Size = 1'],
 	},
 	{
@@ -3613,6 +3630,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		mod: 'gen9',
 		team: 'randomCC',
 		gameType: 'doubles',
+		bestOfDefault: true,
 		ruleset: ['Obtainable', 'HP Percentage Mod', 'Cancel Mod', 'Team Preview', 'Picked Team Size = 2'],
 	},
 	{
@@ -3621,12 +3639,14 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		mod: 'gen9',
 		team: 'randomCC',
 		searchShow: false,
+		bestOfDefault: true,
 		ruleset: ['Obtainable', 'HP Percentage Mod', 'Cancel Mod'],
 	},
 	{
 		name: "[Gen 9] Metronome Battle",
 		mod: 'gen9',
 		gameType: 'doubles',
+		bestOfDefault: true,
 		ruleset: ['Max Team Size = 2', 'HP Percentage Mod', 'Cancel Mod'],
 		banlist: [
 			'Pokestar Spirit', 'Pecharunt', 'Terapagos', 'Shedinja + Sturdy', 'Cheek Pouch', 'Commander', 'Cursed Body', 'Dry Skin', 'Earth Eater', 'Fur Coat',
@@ -3666,6 +3686,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		desc: `Randomized teams of level-balanced Pok&eacute;mon with sets that are generated to be competitively viable.`,
 		mod: 'gen8',
 		team: 'random',
+		bestOfDefault: true,
 		ruleset: ['PotD', 'Obtainable', 'Species Clause', 'HP Percentage Mod', 'Cancel Mod', 'Sleep Clause Mod', 'Illusion Level Mod'],
 	},
 	{
@@ -3674,6 +3695,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		gameType: 'doubles',
 		team: 'random',
 		searchShow: false,
+		bestOfDefault: true,
 		ruleset: ['PotD', 'Obtainable', 'Species Clause', 'HP Percentage Mod', 'Cancel Mod', 'Illusion Level Mod'],
 	},
 	{
@@ -3705,6 +3727,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		mod: 'gen8',
 		team: 'randomFactory',
 		searchShow: false,
+		bestOfDefault: true,
 		ruleset: ['Standard', 'Dynamax Clause'],
 		onBegin() {
 			this.add(`raw|<div class="broadcast-blue"><b>Battle Factory Tier: ${this.teamGenerator.factoryTier}</b></div>`);
@@ -3716,6 +3739,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		mod: 'gen8',
 		team: 'randomBSSFactory',
 		searchShow: false,
+		bestOfDefault: true,
 		ruleset: ['Flat Rules'],
 	},
 	{
@@ -3724,6 +3748,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		mod: 'gen8',
 		team: 'randomHC',
 		searchShow: false,
+		bestOfDefault: true,
 		ruleset: ['HP Percentage Mod', 'Cancel Mod'],
 		banlist: ['Nonexistent'],
 	},
@@ -3731,8 +3756,9 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		name: "[Gen 8] CAP 1v1",
 		desc: `Randomly generated 1v1-style teams only including Pok&eacute;mon made by the Create-A-Pok&eacute;mon Project.`,
 		mod: 'gen8',
-		searchShow: false,
 		team: 'randomCAP1v1',
+		searchShow: false,
+		bestOfDefault: true,
 		ruleset: [
 			'Picked Team Size = 1',
 			'Max Team Size = 3',
@@ -3744,6 +3770,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		desc: `Randomized teams of level-balanced Pok&eacute;mon with sets that are generated to be competitively viable.`,
 		mod: 'gen8bdsp',
 		team: 'random',
+		bestOfDefault: true,
 		searchShow: false,
 		ruleset: ['[Gen 8] Random Battle', '!PotD'],
 	},
@@ -3752,6 +3779,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		desc: `Randomized teams of level-balanced Pok&eacute;mon with sets that are generated to be competitively viable.`,
 		mod: 'gen7',
 		team: 'random',
+		bestOfDefault: true,
 		ruleset: ['Obtainable', 'Sleep Clause Mod', 'HP Percentage Mod', 'Cancel Mod', 'Illusion Level Mod'],
 	},
 	{
@@ -3760,6 +3788,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		mod: 'gen7',
 		team: 'randomFactory',
 		searchShow: false,
+		bestOfDefault: true,
 		ruleset: ['Obtainable', 'Sleep Clause Mod', 'Team Preview', 'HP Percentage Mod', 'Cancel Mod', 'Mega Rayquaza Clause'],
 		onBegin() {
 			this.add(`raw|<div class="broadcast-blue"><b>Battle Factory Tier: ${this.teamGenerator.factoryTier}</b></div>`);
@@ -3771,6 +3800,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		mod: 'gen7',
 		team: 'randomBSSFactory',
 		searchShow: false,
+		bestOfDefault: true,
 		ruleset: ['Flat Rules'],
 	},
 	{
@@ -3788,12 +3818,14 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		mod: 'gen7letsgo',
 		team: 'random',
 		searchShow: false,
+		bestOfDefault: true,
 		ruleset: ['Obtainable', 'Allow AVs', 'HP Percentage Mod', 'Cancel Mod', 'Sleep Clause Mod'],
 	},
 	{
 		name: "[Gen 6] Random Battle",
 		mod: 'gen6',
 		team: 'random',
+		bestOfDefault: true,
 		ruleset: ['Obtainable', 'Sleep Clause Mod', 'HP Percentage Mod', 'Cancel Mod', 'Illusion Level Mod'],
 	},
 	{
@@ -3812,30 +3844,35 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		name: "[Gen 5] Random Battle",
 		mod: 'gen5',
 		team: 'random',
+		bestOfDefault: true,
 		ruleset: ['Obtainable', 'Sleep Clause Mod', 'HP Percentage Mod', 'Cancel Mod', 'Illusion Level Mod'],
 	},
 	{
 		name: "[Gen 4] Random Battle",
 		mod: 'gen4',
 		team: 'random',
+		bestOfDefault: true,
 		ruleset: ['Obtainable', 'Sleep Clause Mod', 'HP Percentage Mod', 'Cancel Mod'],
 	},
 	{
 		name: "[Gen 3] Random Battle",
 		mod: 'gen3',
 		team: 'random',
+		bestOfDefault: true,
 		ruleset: ['Standard'],
 	},
 	{
 		name: "[Gen 2] Random Battle",
 		mod: 'gen2',
 		team: 'random',
+		bestOfDefault: true,
 		ruleset: ['Standard'],
 	},
 	{
 		name: "[Gen 1] Random Battle",
 		mod: 'gen1',
 		team: 'random',
+		bestOfDefault: true,
 		ruleset: ['Standard'],
 	},
 	{
@@ -5323,7 +5360,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		searchShow: false,
 		ruleset: [
 			'Picked Team Size = 3', 'Min Level = 50', 'Max Level = 55', 'Max Total Level = 155',
-			'Obtainable', 'Team Preview', 'Stadium Sleep Clause', 'Species Clause', 'Nickname Clause', 'HP Percentage Mod', 'Cancel Mod', 'NC 1997 Move Legality',
+			'Obtainable', 'Team Preview', 'Stadium Sleep Clause', 'Species Clause', 'Nickname Clause', 'Cancel Mod', 'NC 1997 Move Legality',
 		],
 		banlist: ['Uber'],
 	},
