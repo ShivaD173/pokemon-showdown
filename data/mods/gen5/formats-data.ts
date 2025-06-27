@@ -47,7 +47,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "NFE",
 	},
 	beedrill: {
-		tier: "SU",
+		tier: "IU",
 		doublesTier: "DUU",
 	},
 	pidgey: {
@@ -92,7 +92,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		doublesTier: "DUU",
 	},
 	sandshrew: {
-		tier: "SU",
+		tier: "LC",
 	},
 	sandslash: {
 		tier: "RU",
@@ -356,7 +356,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		doublesTier: "DOU",
 	},
 	onix: {
-		tier: "LC",
+		tier: "SU",
 	},
 	steelix: {
 		tier: "RU",
@@ -885,7 +885,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "LC",
 	},
 	magcargo: {
-		tier: "SU",
+		tier: "IU",
 		doublesTier: "DUU",
 	},
 	swinub: {
@@ -1239,7 +1239,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "LC",
 	},
 	wailord: {
-		tier: "IU",
+		tier: "SU",
 		doublesTier: "DUU",
 	},
 	numel: {
@@ -1326,7 +1326,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		doublesTier: "DUU",
 	},
 	lileep: {
-		tier: "SU",
+		tier: "LC",
 	},
 	cradily: {
 		tier: "NU",
@@ -1728,7 +1728,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "LC",
 	},
 	lumineon: {
-		tier: "IU",
+		tier: "SU",
 		doublesTier: "DUU",
 	},
 	snover: {
