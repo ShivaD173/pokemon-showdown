@@ -183,12 +183,13 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 		onSourceTryHeal(damage, target, source, effect) {
 		},
 		onModifyMove(move) {
-			move.secondaries?.push({
+			move.secondaries ??= [];
+			move.secondaries.push({
 				chance: 100,
 				onHit(target) {
 					const item = target.getItem();
 					if (!this.singleEvent('TakeItem', item, target.itemState, target, target, move, item)) return;
-					this.add('message', 'Item replaced with Liquid Ooze');
+					this.add('-item', target, this.dex.items.get('blacksludge'), '[from] ability: Liquid Ooze');
 					target.setItem("blacksludge");
 				},
 			});
