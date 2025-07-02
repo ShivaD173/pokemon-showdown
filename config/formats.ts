@@ -399,7 +399,6 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 	{
 		section: "Gen 9 Lower Tiers",
 	},
-	// Commented because OMotM
 	{
 		name: "[Gen 9] Tier Shift",
 		mod: 'gen9',
@@ -2784,18 +2783,6 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 				}
 			},
 		},
-	},
-	{
-		name: "[Gen 9] Tier Shift",
-		desc: `Pok&eacute;mon below OU get their stats, excluding HP, boosted. UU/RUBL get +15, RU/NUBL get +20, NU/PUBL get +25, and PU or lower get +30.`,
-		mod: 'gen9',
-		searchShow: false,
-		ruleset: ['Standard OMs', 'Sleep Moves Clause', 'Terastal Clause', 'Evasion Clause', 'Tier Shift Mod'],
-		banlist: [
-			'Arceus', 'Calyrex-Shadow', 'Koraidon', 'Kyogre', 'Medicham', 'Miraidon', 'Necrozma-Dusk-Mane', 'Zacian-Crowned', 'Drizzle', 'Moody', 'Arena Trap', 'Shadow Tag',
-			'Baton Pass', 'Last Respects', 'Shed Tail', 'Heat Rock', 'King\'s Rock', 'Light Clay', 'Razor Fang',
-		],
-		unbanlist: ['Arceus-Bug', 'Arceus-Grass', 'Arceus-Ice'],
 	},
 	{
 		name: "[Gen 9] Trademarked",
