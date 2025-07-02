@@ -231,7 +231,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "SU",
 	},
 	rapidash: {
-		tier: "PU",
+		tier: "PUBL",
 	},
 	slowpoke: {
 		tier: "ZU",
