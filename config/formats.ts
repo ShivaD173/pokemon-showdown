@@ -339,7 +339,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		mod: 'gen6',
 		searchShow: true,
 		ruleset: ['[Gen 6] ZU'],
-		banlist: ['ZU', 'SUBL', 'Light Clay'],
+		banlist: ['ZU', 'SUBL'],
 	},
 	{
 		name: "[Gen 6] IU",
