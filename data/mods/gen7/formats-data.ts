@@ -1658,7 +1658,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "LC",
 	},
 	huntail: {
-		tier: "SU",
+		tier: "SUBL",
 		doublesTier: "(DUU)",
 	},
 	gorebyss: {
