@@ -602,7 +602,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 	slowbromega: {
 		isNonstandard: "Past",
 		tier: "Illegal",
-		natDexTier: "(RU)",
+		natDexTier: "UU",
 	},
 	slowbrogalar: {
 		tier: "PU",
@@ -1100,7 +1100,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		tier: "NFE",
 	},
 	porygon2: {
-		tier: "NFE",
+		tier: "ZU",
 		doublesTier: "DUU",
 		natDexTier: "PU",
 	},
@@ -2900,7 +2900,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		natDexTier: "NFE",
 	},
 	serperior: {
-		tier: "RU",
+		tier: "RUBL",
 		doublesTier: "(DUU)",
 		natDexTier: "UU",
 	},
