@@ -48,7 +48,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "IU",
 	},
 	pidgeotto: {
-		tier: "SU",
+		tier: "SUBL",
 	},
 	pidgeot: {
 		tier: "NU",
@@ -408,7 +408,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "UUBL",
 	},
 	smoochum: {
-		tier: "SU",
+		tier: "SUBL",
 	},
 	jynx: {
 		tier: "OU",
