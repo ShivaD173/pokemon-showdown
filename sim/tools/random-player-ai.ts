@@ -195,6 +195,8 @@ export class RandomPlayerAI extends BattlePlayer {
 	}
 
 	protected chooseMove(active: AnyObject, moves: { choice: string, move: AnyObject }[]): string {
+		// FIXME: I don't know why this is broken.
+		moves = moves.filter(m => m.move.move !== "Revival Blessing");
 		return this.prng.sample(moves).choice;
 	}
 
