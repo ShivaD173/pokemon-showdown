@@ -2580,6 +2580,15 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
             ],
             "acupressure": [
                 "9M"
+            ],
+            "dragonrush": [
+                "9M"
+            ],
+            "twister": [
+                "9M"
+            ],
+            "dracometeor": [
+                "9M"
             ]
         }
     },
@@ -5143,6 +5152,9 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
                 "9M"
             ],
             "dazzlinggleam": [
+                "9M"
+            ],
+            "playrough": [
                 "9M"
             ]
         }
@@ -33561,6 +33573,9 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
                 "9M"
             ],
             "willowisp": [
+                "9M"
+            ],
+            "lavaplume": [
                 "9M"
             ]
         }
@@ -62045,6 +62060,9 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
             ],
             "feint": [
                 "9M"
+            ],
+            "tailslap": [
+                "9M"
             ]
         }
     },
@@ -75881,6 +75899,9 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
                 "9M"
             ],
             "blastburn": [
+                "9M"
+            ],
+            "lavaplume": [
                 "9M"
             ]
         }
@@ -103722,6 +103743,12 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
             ],
             "snowscape": [
                 "9M"
+            ],
+            "barbbarrage": [
+                "9M"
+            ],
+            "flipturn": [
+                "9M"
             ]
         }
     },
@@ -125539,6 +125566,9 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
             ],
             "aquaring": [
                 "9M"
+            ],
+            "hydropump": [
+                "9M"
             ]
         }
     },
@@ -125860,6 +125890,9 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
                 "9M"
             ],
             "stalacbite": [
+                "9M"
+            ],
+            "partingshot": [
                 "9M"
             ]
         }
@@ -127626,6 +127659,9 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
                 "9M"
             ],
             "divebomb": [
+                "9M"
+            ],
+            "populationbomb": [
                 "9M"
             ]
         }

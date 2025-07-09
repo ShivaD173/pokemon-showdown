@@ -401,6 +401,22 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 		},
 	},
 	// Signature Ability Buffs
+	rockypayload: {
+		inherit: true,
+		shortDesc: "This Pokemon's offensive stat is 1.5x while using a Rock-type or 'Bomb' attack.",
+		onModifyAtk(atk, attacker, defender, move) {
+			if (move.type === 'Rock' || move.name.toLowerCase().includes('bomb')) {
+				this.debug('Rocky Payload boost');
+				return this.chainModify(1.5);
+			}
+		},
+		onModifySpA(atk, attacker, defender, move) {
+			if (move.type === 'Rock' || move.name.toLowerCase().includes('bomb')) {
+				this.debug('Rocky Payload boost');
+				return this.chainModify(1.5);
+			}
+		},
+	},
 	plus: {
 		inherit: true,
 		shortDesc: "Copies all moves used by an ally with Minus.",

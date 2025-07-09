@@ -160,7 +160,7 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 	"arbok": {
 		"types": [
 			"Poison",
-			"Dark",
+			"Dragon",
 		],
 		"baseStats": {
 			"hp": 85,
@@ -221,7 +221,7 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 		],
 		"baseStats": {
 			"hp": 85,
-			"atk": 115,
+			"atk": 125,
 			"def": 125,
 			"spa": 25,
 			"spd": 70,
@@ -400,11 +400,11 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 		],
 		"baseStats": {
 			"hp": 80,
-			"atk": 70,
+			"atk": 65,
 			"def": 65,
-			"spa": 100,
+			"spa": 105,
 			"spd": 80,
-			"spe": 95,
+			"spe": 105,
 		},
 		"abilities": {
 			"0": "Shield Dust",
@@ -1258,9 +1258,8 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 			"spe": 60,
 		},
 		"abilities": {
-			"0": "Limber",
-			"1": "Wonder Guard",
-			"H": "Imposter",
+			"0": "Imposter",
+			"H": "Wonder Guard",
 		},
 		"inherit": true,
 	},
@@ -3361,9 +3360,7 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 			"spe": 70,
 		},
 		"abilities": {
-			"0": "Oblivious",
-			"1": "Tremor Sense",
-			"H": "Hydration",
+			"0": "Tremor Sense",
 		},
 		"inherit": true,
 	},
@@ -7808,7 +7805,7 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 		],
 		"baseStats": {
 			"hp": 50,
-			"atk": 53,
+			"atk": 73,
 			"def": 152,
 			"spa": 63,
 			"spd": 142,
@@ -10171,9 +10168,9 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 			"Normal",
 		],
 		"baseStats": {
-			"hp": 88,
+			"hp": 108,
 			"atk": 69,
-			"def": 90,
+			"def": 100,
 			"spa": 130,
 			"spd": 109,
 			"spe": 39,
@@ -10502,7 +10499,7 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 		],
 		"baseStats": {
 			"hp": 80,
-			"atk": 118,
+			"atk": 108,
 			"def": 90,
 			"spa": 70,
 			"spd": 90,
@@ -11673,8 +11670,7 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 			"spe": 100,
 		},
 		"abilities": {
-			"0": "Synchronize",
-			"H": "Ancestor",
+			"0": "Ancestor",
 		},
 		"inherit": true,
 	},
