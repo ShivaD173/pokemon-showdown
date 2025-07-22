@@ -1413,7 +1413,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		natDexTier: "NFE",
 	},
 	mismagius: {
-		tier: "SU",
+		tier: "SUBL",
 		doublesTier: "(DUU)",
 		natDexTier: "ZU",
 	},
@@ -3158,7 +3158,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		natDexTier: "RUBL",
 	},
 	basculin: {
-		tier: "SU",
+		tier: "SUBL",
 		doublesTier: "(DUU)",
 		natDexTier: "SU",
 	},
@@ -3488,7 +3488,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		tier: "LC",
 	},
 	beartic: {
-		tier: "IU",
+		tier: "SUBL",
 		doublesTier: "(DUU)",
 		natDexTier: "SU",
 	},
@@ -3875,7 +3875,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		tier: "LC",
 	},
 	malamar: {
-		tier: "SU",
+		tier: "SUBL",
 		doublesTier: "(DUU)",
 		natDexTier: "SU",
 	},
