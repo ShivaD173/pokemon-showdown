@@ -1606,6 +1606,12 @@ export class Battle {
 						delete pokemon.volatiles['partiallytrapped'];
 					}
 				}
+				if (pokemon.volatiles['fakepartiallytrapped']) {
+					const counterpart = pokemon.volatiles['fakepartiallytrapped'].counterpart;
+					if (counterpart.hp <= 0 || !counterpart.volatiles['fakepartiallytrapped']) {
+						delete pokemon.volatiles['fakepartiallytrapped'];
+					}
+				}
 			}
 		}
 
@@ -3036,7 +3042,20 @@ export class Battle {
 			return;
 		}
 
+		let updated = false;
+		if (side.requestState === 'move') {
+			for (const action of side.choice.actions) {
+				const pokemon = action.pokemon;
+				if (action.choice !== 'move' || !pokemon) continue;
+				if (side.updateRequestForPokemon(pokemon, req => side.updateDisabledRequest(pokemon, req))) {
+					updated = true;
+				}
+			}
+		}
+
 		side.clearChoice();
+
+		if (updated) side.emitRequest(side.activeRequest!, true);
 	}
 
 	/**
