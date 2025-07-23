@@ -760,7 +760,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		ruleset: ['[Gen 7] Ubers'],
 		banlist: [
 			// Ubers OU
-			'Arceus-Normal', 
+			'Arceus-Normal',
 			// Ubers UUBL
 		],
 	},
