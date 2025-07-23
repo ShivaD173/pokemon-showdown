@@ -745,6 +745,26 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		],
 	},
 	{
+		name: "[Gen 8] Ubers UU",
+		mod: 'gen9',
+		ruleset: ['[Gen 8] Ubers'],
+		banlist: [
+			// Ubers OU
+			'Calyrex-Ice',
+			// Ubers UUBL
+		],
+	},
+	{
+		name: "[Gen 7] Ubers UU",
+		mod: 'gen7',
+		ruleset: ['[Gen 7] Ubers'],
+		banlist: [
+			// Ubers OU
+			'Arceus-Normal', 
+			// Ubers UUBL
+		],
+	},
+	{
 		name: "[Gen 9] ZU",
 		mod: 'gen9',
 		ruleset: ['[Gen 9] PU'],
