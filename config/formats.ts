@@ -4531,7 +4531,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		name: "[Gen 6] NFE",
 		desc: `Only Pok&eacute;mon that can evolve are allowed.`,
 		mod: 'gen6',
-		ruleset: ['Standard OMs', 'Not Fully Evolved'],
+		ruleset: ['Standard OMs', 'Not Fully Evolved', 'Sleep Clause Mod'],
 		banlist: [
 			'Chansey', 'Doublade', 'Fletchinder', 'Frogadier', 'Gligar', 'Haunter',
 			'Kadabra', 'Machoke', 'Magneton', 'Piloswine', 'Porygon2', 'Rhydon', 'Scyther', 'Sneasel', 'Vigoroth',
