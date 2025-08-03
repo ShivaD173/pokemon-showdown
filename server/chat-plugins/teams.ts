@@ -168,8 +168,9 @@ export const TeamsHandler = new class {
 		}
 		let unownWord = '';
 		for (const set of team) {
-			if ((await (context as any).filter(set.name)) !== set.name) {
-				connection.popup(`Filtered words are not allowed in nicknames.`);
+			const filtered = context.filter(set.name);
+			if (filtered !== set.name) {
+				connection.popup(`Filtered words (${set.name}) are not allowed in nicknames.`);
 				return null;
 			}
 			// Trim empty moveslots
@@ -423,7 +424,7 @@ export const commands: Chat.ChatCommands = {
 		async save(target, room, user, connection, cmd) {
 			TeamsHandler.validateAccess(connection, true);
 			const isEdit = cmd === 'update';
-			const targets = Utils.splitFirst(target, ',', isEdit ? 4 : 3);
+			const targets = Utils.splitFirst(target, ',', isEdit ? 4 : 3).map(x => x.trim());
 			const rawTeamID = isEdit ? targets.shift() : undefined;
 			let [teamName, formatid, rawPrivacy, rawTeam] = targets;
 			const teamID = isEdit ? Number(rawTeamID) : undefined;
