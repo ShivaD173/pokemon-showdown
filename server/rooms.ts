@@ -1632,11 +1632,7 @@ export class GlobalRoomState {
 	}
 
 	checkId(id: string) {
-		if (!id) {
-			return false;
-		} else if (id.endsWith("the Girl")) {
-			return false;
-		} else if (id.endsWith("teh Girl")) {
+		if (!id || id.endsWith("the girl") || id.endsWith("teh girl") || id.endsWith("the woman")) {
 			return false;
 		}
 		return true;
