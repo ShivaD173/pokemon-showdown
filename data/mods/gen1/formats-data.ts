@@ -198,7 +198,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "8U",
 	},
 	machoke: {
-		tier: "SU",
+		tier: "IU",
 	},
 	machamp: {
 		tier: "PU",
@@ -219,7 +219,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "UU",
 	},
 	geodude: {
-		tier: "SU",
+		tier: "IU",
 	},
 	graveler: {
 		tier: "PU",
@@ -246,10 +246,10 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "NU",
 	},
 	farfetchd: {
-		tier: "IU",
+		tier: "SU",
 	},
 	doduo: {
-		tier: "SU",
+		tier: "IU",
 	},
 	dodrio: {
 		tier: "UU",
@@ -318,7 +318,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "SU",
 	},
 	hitmonchan: {
-		tier: "SU",
+		tier: "IU",
 	},
 	lickitung: {
 		tier: "SU",
@@ -438,7 +438,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "NU",
 	},
 	dratini: {
-		tier: "SU",
+		tier: "IU",
 	},
 	dragonair: {
 		tier: "ZU",
