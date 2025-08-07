@@ -254,7 +254,7 @@ export function destroy() {
 	}
 }
 
-// rollTimer();
+rollTimer();
 
 export const commands: Chat.ChatCommands = {
 	seasonschedule: 'seasons',
