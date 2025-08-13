@@ -837,11 +837,12 @@ export class RoomBattle extends RoomGame<RoomBattlePlayer> {
 		let p1score = 0.5;
 		const winnerid = toID(winnerName);
 
+		// Bot check
+		const valid = Rooms.global.checkId(this.p1.id) && Rooms.global.checkId(this.p2.id);
+
 		// Check if the battle was rated to update the ladder, return its response, and log the battle.
 		const p1name = this.p1.name;
 		const p2name = this.p2.name;
-		// Bot check
-		const valid = Rooms.global.checkId(this.p1.id) && Rooms.global.checkId(this.p2.id);
 
 		const p1Cap = ('' + p1name).replace(/[^a-zA-Z0-9]+/g, '') as ID;
 		const p2Cap = ('' + p2name).replace(/[^a-zA-Z0-9]+/g, '') as ID;
