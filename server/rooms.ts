@@ -676,6 +676,12 @@ export abstract class BasicRoom {
 		}
 	}
 	expire() {
+		const game = this.getGame(BestOfGame);
+		// do not expire parent room until children expire
+		if (game?.games.length) {
+			this.pokeExpireTimer();
+			return;
+		}
 		this.send('|expire|');
 		this.destroy();
 	}
@@ -2057,6 +2063,7 @@ export class GameRoom extends BasicRoom {
 		let rating: number | undefined;
 		if (battle.ended && this.rated) rating = this.rated;
 		let { id, password } = this.getReplayData();
+		if (password) password = (battle.password ||= password);
 		const silent = options === 'forpunishment' || options === 'silent' || options === 'auto';
 		if (silent) connection = undefined;
 		const isPrivate = this.settings.isPrivate || this.hideReplay;
