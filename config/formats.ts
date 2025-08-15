@@ -906,7 +906,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		name: "[Gen 9] ChatBats",
 		desc: `A Random Battles Solomod made by the Pet Mods chatroom on Showdown.`,
 		mod: 'chatbats',
-		team: 'random',
+		team: 'randomChatBats',
 		ruleset: ['Obtainable', 'Species Clause', 'HP Percentage Mod', 'Sleep Clause Mod', 'Data Preview', 'Cancel Mod'],
 		onSwitchIn(pokemon) {
 			this.add('-start', pokemon, 'typechange', pokemon.species.types.join('/'), '[silent]');
@@ -931,7 +931,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 						randomFoe.setSpecies(rawSpecies, null);
 						randomFoe.baseSpecies = rawSpecies;
 						randomFoe.details = randomFoe.getUpdatedDetails();
-						randomFoe.setAbility('Orichalcum Pulse', null, true);
+						randomFoe.setAbility('Orichalcum Pulse', null, null, true);
 						randomFoe.baseAbility = randomFoe.ability;
 						if (this.randomChance(1, 2)) {
 							const randomFoeItem = (this.randomChance(1, 2) ? 'choicescarf' : 'choiceband');
