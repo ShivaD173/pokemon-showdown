@@ -701,7 +701,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		doublesTier: "(DUU)",
 	},
 	ditto: {
-		tier: "IU",
+		tier: "SU",
 		doublesTier: "(DUU)",
 	},
 	eevee: {
@@ -965,7 +965,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		doublesTier: "(DUU)",
 	},
 	murkrow: {
-		tier: "NFE",
+		tier: "SU",
 	},
 	honchkrow: {
 		tier: "RU",
@@ -1024,7 +1024,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		doublesTier: "(DUU)",
 	},
 	shuckle: {
-		tier: "IU",
+		tier: "SU",
 		doublesTier: "(DUU)",
 	},
 	heracross: {
@@ -1320,7 +1320,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "LC",
 	},
 	ninjask: {
-		tier: "IU",
+		tier: "SU",
 		doublesTier: "(DUU)",
 	},
 	shedinja: {
@@ -1666,7 +1666,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		doublesTier: "(DUU)",
 	},
 	relicanth: {
-		tier: "IU",
+		tier: "SU",
 		doublesTier: "(DUU)",
 	},
 	luvdisc: {
@@ -2350,7 +2350,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "LC",
 	},
 	krokorok: {
-		tier: "SU",
+		tier: "NFE",
 	},
 	krookodile: {
 		tier: "UU",
@@ -2434,7 +2434,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "NFE",
 	},
 	gothitelle: {
-		tier: "SU",
+		tier: "IU",
 		doublesTier: "DOU",
 	},
 	solosis: {
@@ -2468,7 +2468,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "LC",
 	},
 	sawsbuck: {
-		tier: "SU",
+		tier: "IU",
 		doublesTier: "(DUU)",
 	},
 	emolga: {
@@ -2585,7 +2585,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		doublesTier: "(DUU)",
 	},
 	mienfoo: {
-		tier: "SU",
+		tier: "LC",
 	},
 	mienshao: {
 		tier: "RUBL",
@@ -3143,7 +3143,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		doublesTier: "(DUU)",
 	},
 	oricoriopau: {
-		tier: "SU",
+		tier: "IU",
 		doublesTier: "(DUU)",
 	},
 	oricoriosensu: {
