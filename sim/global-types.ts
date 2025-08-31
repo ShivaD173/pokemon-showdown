@@ -67,6 +67,7 @@ interface EventInfo {
 	japan?: boolean;
 	/** For Emerald event eggs to allow Pomeg glitched moves */
 	emeraldEventEgg?: boolean;
+	source?: string;
 }
 
 type Effect = Ability | Item | ActiveMove | Species | Condition | Format;
