@@ -5569,7 +5569,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		tier: "LC",
 	},
 	toedscruel: {
-		tier: "ZU",
+		tier: "SU",
 		doublesTier: "(DUU)",
 		natDexTier: "SU",
 	},
