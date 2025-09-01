@@ -651,7 +651,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		tier: "LC",
 	},
 	dodrio: {
-		tier: "SU",
+		tier: "IU",
 		doublesTier: "(DUU)",
 		natDexTier: "SU",
 	},
@@ -2055,7 +2055,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		tier: "LC",
 	},
 	swalot: {
-		tier: "IU",
+		tier: "SU",
 		doublesTier: "(DUU)",
 		natDexTier: "SU",
 	},
@@ -5543,7 +5543,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		tier: "LC",
 	},
 	tinkatuff: {
-		tier: "NFE",
+		tier: "SU",
 		doublesTier: "NFE",
 		natDexTier: "NFE",
 	},
