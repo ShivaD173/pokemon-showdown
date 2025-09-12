@@ -1638,7 +1638,7 @@ export class GlobalRoomState {
 	}
 
 	checkId(id: string) {
-		if (!id || id.endsWith("the girl") || id.endsWith("teh girl") || id.endsWith("the woman")) {
+		if (!id || id.endsWith("thegirl") || id.endsWith("tehgirl") || id.endsWith("thewoman")) {
 			return false;
 		}
 		return true;
