@@ -4940,7 +4940,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		mod: 'gen5',
 		ruleset: ['Standard OMs', 'Not Fully Evolved', 'Sleep Moves Clause'],
 		banlist: [
-			'Chansey', 'Dusclops', 'Fraxure', 'Gligar', 'Gurdurr', 'Haunter',
+			'Chansey', 'Dusclops', 'Fraxure', 'Gligar', 'Gurdurr', 'Haunter', 'Golbat',
 			'Machoke', 'Magmar', 'Magneton', 'Piloswine', 'Porygon2', 'Riolu', 'Rhydon', 'Scyther', 'Vigoroth',
 			'Arena Trap', 'Moody', 'Shadow Tag', 'Baton Pass', 'Swagger', 'Drought', 'Sand Veil', 'Snow Cloak',
 		],
@@ -4986,7 +4986,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		searchShow: false,
 		ruleset: ['Standard', 'Little Cup', 'Sleep Moves Clause'],
 		banlist: [
-			'Gligar', 'Meditite', 'Misdreavus', 'Murkrow', 'Scraggy', 'Scyther', 'Sneasel', 'Tangela', 'Vulpix', 'Yanma', 'Golbat',
+			'Gligar', 'Meditite', 'Misdreavus', 'Murkrow', 'Scraggy', 'Scyther', 'Sneasel', 'Tangela', 'Vulpix', 'Yanma',
 			'Sand Rush', 'Sand Veil', 'Berry Juice', 'Soul Dew', 'Baton Pass', 'Dragon Rage', 'Sonic Boom', 'Swagger',
 		],
 	},
@@ -5135,7 +5135,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		ruleset: ['Standard OMs', 'Not Fully Evolved'],
 		banlist: [
 			'Chansey', 'Dragonair', 'Dusclops', 'Electabuzz', 'Gabite', 'Haunter',
-			'Machoke', 'Magmar', 'Magneton', 'Porygon2', 'Rhydon', 'Scyther',
+			'Machoke', 'Magmar', 'Magneton', 'Porygon2', 'Rhydon', 'Scyther', 'Sneasel',
 			'Shadow Tag', 'Baton Pass', 'Sunny Day', 'Sand Veil', 'Snow Cloak', 'Light Clay', 'Light Ball', 'Deep Sea Tooth',
 		],
 	},
@@ -5168,7 +5168,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		searchShow: false,
 		ruleset: ['Standard', 'Little Cup', 'Evasion Abilities Clause', 'Sleep Moves Clause'],
 		banlist: [
-			'Meditite', 'Misdreavus', 'Murkrow', 'Scyther', 'Sneasel', 'Tangela', 'Yanma', 'Sneasel',
+			'Meditite', 'Misdreavus', 'Murkrow', 'Scyther', 'Sneasel', 'Tangela', 'Yanma',
 			'Berry Juice', 'Deep Sea Tooth', 'Dragon Rage', 'Sonic Boom', 'Swagger',
 		],
 	},
