@@ -1240,7 +1240,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		doublesTier: "NFE",
 	},
 	slaking: {
-		tier: "IU",
+		tier: "SU",
 		doublesTier: "(DUU)",
 	},
 	nincada: {
@@ -2289,7 +2289,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		doublesTier: "(DUU)",
 	},
 	maractus: {
-		tier: "SU",
+		tier: "IU",
 		doublesTier: "(DUU)",
 	},
 	dwebble: {
@@ -2566,7 +2566,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "LC",
 	},
 	zweilous: {
-		tier: "NFE",
+		tier: "SU",
 	},
 	hydreigon: {
 		tier: "UU",
