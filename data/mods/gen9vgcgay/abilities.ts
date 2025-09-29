@@ -1580,4 +1580,8 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 		inherit: true,
 		isNonstandard: null,
 	},
+	resonant: {
+		inherit: true,
+		isNonstandard: null,
+	},
 };
