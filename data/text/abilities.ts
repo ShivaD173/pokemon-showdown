@@ -2571,8 +2571,8 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 		desc: "This Pokemon's Dark-type moves have their priority increased by 1.",
 		shortDesc: "This Pokemon's Dark-type moves have their priority increased by 1.",
 	},
-	resonance: {
-		name: "Resonance",
+	resonant: {
+		name: "Resonant",
 		desc: "After this Pokemon attacks, it uses Echoed Voice.",
 		shortDesc: "After this Pokemon attacks, it uses Echoed Voice.",
 	},

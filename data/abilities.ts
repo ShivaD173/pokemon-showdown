@@ -6686,10 +6686,10 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		rating: 1.5,
 		num: -66,
 	},
-	resonance: {
+	resonant: {
 		// Implemented in battle-actions.ts
 		flags: {},
-		name: "Resonance",
+		name: "Resonant",
 		isNonstandard: "CAP",
 		rating: 1.5,
 		num: -67,

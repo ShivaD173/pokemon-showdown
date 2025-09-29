@@ -444,10 +444,10 @@ export class BattleActions {
 				}
 			}
 
-			if (pokemon.hasAbility("resonance") && moveDidSomething && !move.isExternal) {
+			if (pokemon.hasAbility("resonant") && moveDidSomething && !move.isExternal) {
 				const targetOf1stDance = this.battle.activeTarget!;
 				const dancersTargetLoc = pokemon.getLocOf(targetOf1stDance);
-				this.runMove("echoedvoice", pokemon, dancersTargetLoc, { sourceEffect: this.dex.abilities.get('resonance'), externalMove: true });
+				this.runMove("echoedvoice", pokemon, dancersTargetLoc, { sourceEffect: this.dex.abilities.get('resonant'), externalMove: true });
 			}
 		}
 		if (noLock && pokemon.volatiles['lockedmove']) delete pokemon.volatiles['lockedmove'];
