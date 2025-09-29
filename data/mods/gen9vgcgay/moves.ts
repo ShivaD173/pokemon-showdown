@@ -99,6 +99,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 				boosts: { atk: 1, def: 1, spa: 1, spd: 1, spe: 1 },
 			},
 		},
+		flags: { protect: 1, mirror: 1, metronome: 1, wind: 1 },
 	},
 	ancientpower: {
 		inherit: true,
@@ -113,6 +114,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 	},
 	"silverwind": {
 		"inherit": true,
+		"isNonstandard": null,
 		shortDesc: "15% chance to raise all stats by 1 (not acc/eva).",
 		secondary: {
 			chance: 15,
@@ -120,7 +122,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 				boosts: { atk: 1, def: 1, spa: 1, spd: 1, spe: 1 },
 			},
 		},
-		"isNonstandard": null,
+		flags: { protect: 1, mirror: 1, metronome: 1, wind: 1 },
 	},
 	// Multi Hits
 	"barrage": {
@@ -283,6 +285,15 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		isNonstandard: null,
 		basePower: 80,
 		type: "Fighting",
+		shortDesc: "20% chance to raise the user's Attack by 1.",
+		secondary: {
+			chance: 20,
+			self: {
+				boosts: {
+					atk: 1,
+				},
+			},
+		},
 	},
 	rockclimb: {
 		inherit: true,
@@ -691,7 +702,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		inherit: true,
 		isNonstandard: null,
 		desc: "Power is equal to the greater of (user's Happiness * 2/5), rounded down, or 1. Can't Miss. Uses user's primary type. Becomes Special if user's spA is higher.",
-		shortDesc: "Max: 102 BP. Uses primary type and highest atk stat.",
+		shortDesc: "Max: 102 BP. Uses base primary type and higher atk stat.",
 		onModifyMove(move, pokemon) {
 			if (pokemon.getStat('atk', false, true) < pokemon.getStat('spa', false, true)) move.category = 'Special';
 		},
@@ -826,7 +837,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 	charge: {
 		inherit: true,
 		isNonstandard: null,
-		shortDesc: "Doubles next Electric attack and heals 33%",
+		shortDesc: "Doubles next Electric attack and heals 33%.",
 		heal: [1, 3],
 		pp: 5,
 		boosts: null,

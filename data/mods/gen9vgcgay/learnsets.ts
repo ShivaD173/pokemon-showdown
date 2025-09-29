@@ -36898,6 +36898,9 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
             ],
             "xscissor": [
                 "9M"
+            ],
+            "dracometeor": [
+                "9M"
             ]
         }
     },
@@ -40631,6 +40634,9 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
                 "9M"
             ],
             "armthrust": [
+                "9M"
+            ],
+            "grassyglide": [
                 "9M"
             ]
         }
@@ -53635,6 +53641,9 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
             ],
             "chillingwater": [
                 "9M"
+            ],
+            "iceshard": [
+                "9M"
             ]
         }
     },
@@ -54885,6 +54894,9 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
                 "9M"
             ],
             "psychic": [
+                "9M"
+            ],
+            "psychicfangs": [
                 "9M"
             ],
             "psychicnoise": [
@@ -62966,6 +62978,9 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
             ],
             "eeriespell": [
                 "9M"
+            ],
+            "flashfreeze": [
+                "9M"
             ]
         }
     },
@@ -69721,6 +69736,15 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
                 "9M"
             ],
             "growth": [
+                "9M"
+            ],
+            "powerwhip": [
+                "9M"
+            ],
+            "temperflare": [
+                "9M"
+            ],
+            "stompingtantrum": [
                 "9M"
             ]
         }
@@ -77225,6 +77249,9 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
                 "9M"
             ],
             "focusblast": [
+                "9M"
+            ],
+            "takeheart": [
                 "9M"
             ]
         }
@@ -138162,6 +138189,9 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
                 "9M"
             ],
             "flashfreeze": [
+                "9M"
+            ],
+            "barrage": [
                 "9M"
             ]
         }

@@ -346,55 +346,56 @@ export class BattleActions {
 				this.runMove(move.id, dancer, dancersTargetLoc, { sourceEffect: this.dex.abilities.get('dancer'), externalMove: true });
 			}
 		}
-		// Chimecho's Gay Ability
-		if (move.flags['wind'] && moveDidSomething && !move.isExternal) {
-			const dancers = [];
-			for (const currentPoke of this.battle.getAllActive()) {
-				if (pokemon === currentPoke) continue;
-				if (currentPoke.hasAbility('windchime') && !currentPoke.isSemiInvulnerable()) {
-					dancers.push(currentPoke);
-				}
-			}
-			dancers.sort(
-				(a, b) => -(b.storedStats['spe'] - a.storedStats['spe']) || b.abilityState.effectOrder - a.abilityState.effectOrder
-			);
-			const targetOf1stDance = this.battle.activeTarget!;
-			for (const dancer of dancers) {
-				if (this.battle.faintMessages()) break;
-				if (dancer.fainted) continue;
-				this.battle.add('-activate', dancer, 'ability: Wind Chime');
-				const dancersTarget = !targetOf1stDance.isAlly(dancer) && pokemon.isAlly(dancer) ?
-					targetOf1stDance :
-					pokemon;
-				const dancersTargetLoc = dancer.getLocOf(dancersTarget);
-				this.runMove("echoedvoice", dancer, dancersTargetLoc, { sourceEffect: this.dex.abilities.get('windchime'), externalMove: true });
-			}
-		}
-		// Passimian's Gay Ability
-		if (move.flags['bullet'] && moveDidSomething && !move.isExternal) {
-			const dancers = [];
-			for (const currentPoke of this.battle.getAllActive()) {
-				if (pokemon === currentPoke) continue;
-				if (currentPoke.hasAbility('ballin') && !currentPoke.isSemiInvulnerable()) {
-					dancers.push(currentPoke);
-				}
-			}
-			dancers.sort(
-				(a, b) => -(b.storedStats['spe'] - a.storedStats['spe']) || b.abilityState.effectOrder - a.abilityState.effectOrder
-			);
-			const targetOf1stDance = this.battle.activeTarget!;
-			for (const dancer of dancers) {
-				if (this.battle.faintMessages()) break;
-				if (dancer.fainted) continue;
-				this.battle.add('-activate', dancer, "ability: Ballin'");
-				const dancersTarget = !targetOf1stDance.isAlly(dancer) && pokemon.isAlly(dancer) ?
-					targetOf1stDance :
-					pokemon;
-				const dancersTargetLoc = dancer.getLocOf(dancersTarget);
-				this.runMove(move.id, dancer, dancersTargetLoc, { sourceEffect: this.dex.abilities.get('ballin'), externalMove: true });
-			}
-		}
 		if (this.battle.format.fullname.includes("vgcpride")) {
+			// Wind Chime
+			if (move.flags['wind'] && moveDidSomething && !move.isExternal) {
+				const dancers = [];
+				for (const currentPoke of this.battle.getAllActive()) {
+					if (pokemon === currentPoke) continue;
+					if (currentPoke.hasAbility('windchime') && !currentPoke.isSemiInvulnerable()) {
+						dancers.push(currentPoke);
+					}
+				}
+				dancers.sort(
+					(a, b) => -(b.storedStats['spe'] - a.storedStats['spe']) || b.abilityState.effectOrder - a.abilityState.effectOrder
+				);
+				const targetOf1stDance = this.battle.activeTarget!;
+				for (const dancer of dancers) {
+					if (this.battle.faintMessages()) break;
+					if (dancer.fainted) continue;
+					this.battle.add('-activate', dancer, 'ability: Wind Chime');
+					const dancersTarget = !targetOf1stDance.isAlly(dancer) && pokemon.isAlly(dancer) ?
+						targetOf1stDance :
+						pokemon;
+					const dancersTargetLoc = dancer.getLocOf(dancersTarget);
+					this.runMove("echoedvoice", dancer, dancersTargetLoc, { sourceEffect: this.dex.abilities.get('windchime'), externalMove: true });
+				}
+			}
+
+			// Ballin'
+			if (move.flags['bullet'] && moveDidSomething && !move.isExternal) {
+				const dancers = [];
+				for (const currentPoke of this.battle.getAllActive()) {
+					if (pokemon === currentPoke) continue;
+					if (currentPoke.hasAbility('ballin') && !currentPoke.isSemiInvulnerable()) {
+						dancers.push(currentPoke);
+					}
+				}
+				dancers.sort(
+					(a, b) => -(b.storedStats['spe'] - a.storedStats['spe']) || b.abilityState.effectOrder - a.abilityState.effectOrder
+				);
+				const targetOf1stDance = this.battle.activeTarget!;
+				for (const dancer of dancers) {
+					if (this.battle.faintMessages()) break;
+					if (dancer.fainted) continue;
+					this.battle.add('-activate', dancer, "ability: Ballin'");
+					const dancersTarget = !targetOf1stDance.isAlly(dancer) && pokemon.isAlly(dancer) ?
+						targetOf1stDance :
+						pokemon;
+					const dancersTargetLoc = dancer.getLocOf(dancersTarget);
+					this.runMove(move.id, dancer, dancersTargetLoc, { sourceEffect: this.dex.abilities.get('ballin'), externalMove: true });
+				}
+			}
 			if (pokemon.hasAbility("plus") && moveDidSomething && !move.isExternal) {
 				const dancers = [];
 				for (const currentPoke of this.battle.getAllActive()) {
@@ -441,6 +442,12 @@ export class BattleActions {
 					const dancersTargetLoc = dancer.getLocOf(dancersTarget);
 					this.runMove(move.id, dancer, dancersTargetLoc, { sourceEffect: this.dex.abilities.get('plus'), externalMove: true });
 				}
+			}
+
+			if (pokemon.hasAbility("resonance") && moveDidSomething && !move.isExternal) {
+				const targetOf1stDance = this.battle.activeTarget!;
+				const dancersTargetLoc = pokemon.getLocOf(targetOf1stDance);
+				this.runMove("echoedvoice", pokemon, dancersTargetLoc, { sourceEffect: this.dex.abilities.get('resonance'), externalMove: true });
 			}
 		}
 		if (noLock && pokemon.volatiles['lockedmove']) delete pokemon.volatiles['lockedmove'];
