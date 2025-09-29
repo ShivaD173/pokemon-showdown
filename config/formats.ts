@@ -331,7 +331,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		name: "[Gen 6] Tier Shift",
 		mod: 'gen6',
 		ruleset: ['[Gen 6] OU', 'Tier Shift Mod', 'Evasion Clause'],
-		banlist: ['Drizzle', 'Eviolite', 'Frogadier', 'Quick Claw'],
+		banlist: ['Drizzle', 'Eviolite', 'Frogadier'],
 		searchShow: true,
 	},
 	{
