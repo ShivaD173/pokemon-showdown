@@ -346,7 +346,7 @@ export class BattleActions {
 				this.runMove(move.id, dancer, dancersTargetLoc, { sourceEffect: this.dex.abilities.get('dancer'), externalMove: true });
 			}
 		}
-		if (this.battle.format.fullname.includes("vgcpride")) {
+		if (this.battle.format.id.includes("vgcpride")) {
 			// Wind Chime
 			if (move.flags['wind'] && moveDidSomething && !move.isExternal) {
 				const dancers = [];
