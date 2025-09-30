@@ -508,6 +508,10 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 	echoedvoice: {
 		inherit: true,
 		shortDesc: "Raises Special Attack by 1.",
+		// Remove the base echoed voice doubling
+		basePowerCallback(pokemon, target, move) {
+			return 40;
+		},
 		secondary: {
 			chance: 100,
 			self: {
@@ -691,6 +695,21 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		],
 	},
 	// Near Signaure Moves
+	bittermalice: {
+		inherit: true,
+		basePower: 60,
+		desc: "50% fst. 2x power if target already frostbitten.",
+		shortDesc: "50% fst. 2x power if target already frostbitten.",
+		onBasePower(basePower, pokemon, target) {
+			if (target.status === 'fst') {
+				return this.chainModify(2);
+			}
+		},
+		secondary: {
+			chance: 50,
+			status: 'fst',
+		},
+	},
 	aromaticmist: {
 		inherit: true,
 		shortDesc: "Gives an ally +1 SpD. Misty Terrain: +1 SpA.",
@@ -1287,24 +1306,6 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		shortDesc: "20% to make foe(s) flinch, +Fire Type.",
 		onEffectiveness(typeMod, target, type, move) {
 			return typeMod + this.dex.getEffectiveness('Fire', type);
-		},
-	},
-	lusterpurge: {
-		inherit: true,
-		isNonstandard: null,
-		shortDesc: "100% chance to reduce SpDef by 1.",
-		basePower: 75,
-		secondary: {
-			chance: 100, boosts: { spd: -1 },
-		},
-	},
-	mistball: {
-		inherit: true,
-		isNonstandard: null,
-		shortDesc: "100% chance to reduce SpA by 1.",
-		basePower: 75,
-		secondary: {
-			chance: 100, boosts: { spa: -1 },
 		},
 	},
 	ficklebeam: {

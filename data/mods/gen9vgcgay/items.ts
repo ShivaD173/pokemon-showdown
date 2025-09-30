@@ -82,6 +82,12 @@ export const Items: import('../../../sim/dex-items').ModdedItemDataTable = {
 		},
 		itemUser: ["Shuckle"],
 	},
+	roomservice: {
+		inherit: true,
+		boosts: {
+			spe: -2,
+		},
+	},
 	// Origin forme items
 	lustrousglobe: {
 		inherit: true,
