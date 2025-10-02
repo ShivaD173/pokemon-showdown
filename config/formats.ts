@@ -772,8 +772,9 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		banlist: [
 			// Ubers OU
 			'Arceus-Normal', 'Arceus-Fairy', 'Arceus-Ghost', 'Arceus-Ground', 'Arceus-Water', 'Calyrex-Ice', 'Chien-Pao', 'Deoxys-Attack', 'Deoxys-Speed', 'Ditto',
-			'Dondozo', 'Eternatus', 'Flutter Mane', 'Giratina-Origin', 'Glimmora', 'Gliscor', 'Groudon', 'Hatterene', 'Ho-Oh', 'Kingambit', 'Koraidon', 'Kyogre',
-			'Kyurem-Black', 'Landorus-Therian', 'Lunala', 'Miraidon', 'Necrozma-Dusk-Mane', 'Rayquaza', 'Ribombee', 'Skeledirge', 'Terapagos', 'Ting-Lu', 'Zacian-Crowned',
+			'Dondozo', 'Eternatus', 'Flutter Mane', 'Giratina', 'Giratina-Origin', 'Glimmora', 'Gliscor', 'Grimmsnarl', 'Groudon', 'Hatterene', 'Ho-Oh', 'Kingambit',
+			'Koraidon', 'Kyogre', 'Kyurem-Black', 'Landorus-Therian', 'Lunala', 'Necrozma-Dusk-Mane', 'Rayquaza', 'Regieleki', 'Ribombee', 'Skeledirge', 'Terapagos',
+			'Ting-Lu', 'Zacian-Crowned',
 			// Ubers UUBL + Lunala, Arceus-Ghost, Arceus-Water
 			'Arceus-Dragon', 'Arceus-Fire', 'Arceus-Flying', 'Arceus-Steel', 'Necrozma-Dawn-Wings', 'Shaymin-Sky', 'Spectrier', 'Zacian', 'Zekrom',
 		],
@@ -827,8 +828,9 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		searchShow: false,
 		ruleset: ['[Gen 9] LC'],
 		banlist: [
-			'Chinchou', 'Diglett-Alola', 'Elekid', 'Foongus', 'Glimmet', 'Gothita', 'Grookey', 'Growlithe-Hisui', 'Mareanie', 'Mienfoo', 'Mudbray',
-			'Pawniard', 'Sandshrew-Alola', 'Shellder', 'Shellos', 'Shroodle', 'Snubbull', 'Stunky', 'Tinkatink', 'Toedscool', 'Vullaby', 'Wingull',
+			'Chinchou', 'Diglett-Alola', 'Elekid', 'Foongus', 'Glimmet', 'Gothita', 'Grookey', 'Growlithe-Hisui', 'Larvesta', 'Mareanie', 'Mienfoo',
+			'Mudbray', 'Munchlax', 'Pawniard', 'Sandshrew-Alola', 'Shellder', 'Shellos', 'Shroodle', 'Snover', 'Stunky', 'Timburr', 'Tinkatink',
+			'Toedscool', 'Trapinch', 'Vullaby', 'Wingull', 'Zorua-Hisui',
 			// LC UUBL
 			'Deerling', 'Minccino',
 		],
@@ -3038,9 +3040,10 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 			'Last Respects', 'Shed Tail', 'Baton Pass + Contrary', 'Baton Pass + Rapid Spin',
 		],
 		unbanlist: [
-			'Arbok', 'Avalugg-Base', 'Cacturne', 'Chesnaught', 'Clodsire', 'Cobalion', 'Crawdaunt', 'Eldegoss', 'Empoleon', 'Falinks', 'Feraligatr', 'Ferrothorn',
-			'Florges', 'Galvantula', 'Grimmsnarl', 'Klawf', 'Lucario-Base', 'Ludicolo', 'Mantine', 'Marowak-Alola', 'Milotic', 'Musharna', 'Overqwil', 'Pincurchin',
-			'Primeape', 'Regice', 'Sceptile-Base', 'Scolipede', 'Silvally-Dragon', 'Slurpuff', 'Torterra', 'Toxicroak', 'Trapinch', 'Vikavolt-Base', 'Wormadam-Base',
+			'Ambipom', 'Armarouge', 'Articuno-Base', 'Basculegion-F', 'Bibarel', 'Copperajah', 'Corviknight', 'Crobat', 'Dudunsparce', 'Dugtrio-Alola', 'Farigiraf',
+			'Floatzel', 'Froslass', 'Golem-Alola', 'Hippowdon', 'Magmortar', 'Meganium', 'Muk-Alola', 'Munkidori', 'Nidoking', 'Ninjask', 'Orthworm', 'Perrserker',
+			'Porygon-Z', 'Pyukumuku', 'Sandslash-Base', 'Sigilyph', 'Simisear', 'Sirfetch’d', 'Spinda', 'Steelix-Base', 'Tauros-Base', 'Tauros-Paldea-Aqua',
+			'Weezing-Galar', 'Zoroark-Base',
 		],
 		// Stupid hardcode
 		onValidateSet(set, format, setHas, teamHas) {
@@ -3305,16 +3308,16 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		section: "Pet Mods",
 	},
 	{
-		name: "[Gen 9] Do Not Use Random Battle",
-		desc: `A National Dex random battle format where only Pok&eacute;mon with 280 BST or less (with some exceptions) are allowed.`,
-		mod: 'gen9',
-		team: 'randomDNU',
-		ruleset: ['Species Clause', 'HP Percentage Mod', 'Cancel Mod', 'Sleep Clause Mod', 'Illusion Level Mod', 'Terastal Clause'],
+		name: "[Gen 9] Blank Canvas Random Battle",
+		desc: `A Gen 9 micrometa feautring only Fakemon made by teams of players with a limited budget.`,
+		mod: 'blankcanvas',
+		team: 'randomBLC',
+		ruleset: ['Species Clause', 'HP Percentage Mod', 'Cancel Mod', 'Sleep Clause Mod', 'Illusion Level Mod', 'Terastal Clause', 'Data Preview', 'Sprite Viewer'],
 		onBegin() {
-			this.add(`raw|Welcome to Do Not Use Random Battle!`);
-			this.add(`raw|<a href="https://www.smogon.com/forums/threads/3734326/">Do Not Use</a> is a Solomod where ONLY Pok&eacute;mon with 280 BST or less are allowed!`);
-			this.add(`raw|(with some exceptions, like Luvdisc and Capsakid.)`);
-			this.add(`raw|You are invited to come the <a href="https://play.pokemonshowdown.com/petmods">Pet Mods</a> room to discuss the metagame.`);
+			this.add('-message', `Welcome to Blank Canvas Random Battle!`);
+			this.add('-message', `This is a Gen 9 micrometa feautring only Fakemon made by teams of players with a limited budget!`);
+			this.add('-message', `You can find our thread and metagame resources here:`);
+			this.add('-message', `https://www.smogon.com/forums/threads/3748841/`);
 		},
 		onSwitchInPriority: 100,
 		onSwitchIn(pokemon) {
@@ -3326,23 +3329,37 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		},
 	},
 	{
-		name: "[Gen 9] National Dex Do Not Use", // roomtours
-		desc: `A National Dex solomod where only Pok&eacute;mon with 280 BST or less are allowed.`,
-		mod: 'gen9',
+		name: "[Gen 9] Blank Canvas Expanded", // roomtours
+		desc: `A Gen 9 micrometa feautring only Fakemon made by teams of players with a limited budget.`,
+		mod: 'blankcanvas',
 		searchShow: false,
-		ruleset: ['Standard NatDex', 'Terastal Clause', 'Z-Move Clause'],
-		banlist: ['Dewpider', 'Diglett-Alola', 'Flittle', 'Shedinja', 'Smeargle', 'Wattrel', 'Wingull', 'Wishiwashi', 'Zigzagoon-Base', 'Arena Trap', 'Cute Charm', 'Huge Power', 'Hustle', 'Moody', 'Pure Power', 'Shadow Tag', 'Baton Pass'],
+		ruleset: ['Standard', 'Terastal Clause', 'Data Preview', 'Sleep Moves Clause', '!Sleep Clause Mod', 'Sprite Viewer'],
+		banlist: ['All Pokemon', 'Arena Trap', 'Moody', 'Shadow Tag', 'King\'s Rock', 'Baton Pass', 'Last Respects', 'Shed Tail', 'Razor Fang', 'Light Clay'],
+		unbanlist: [
+			'Actaniathan', 'Flarenheit', 'Groundead', 'Deadward', 'Obaki', 'Sylravage', 'Twinkaton', 'Fausteil', 'Geoporka',
+			'Porcupyre', 'Plasmage', 'Seaode', 'Bellolysk', 'Tryonite', 'Scarachnid', 'Serpvoltidae', 'Maldractice', 'Geigeramp',
+			'Bufferfly', 'Dastard', 'Sheepquake', 'Cottentration', 'Sorrowcean', 'Psyllapse', 'Haarstorm', 'Borealis', 'Bazhigangquan',
+			'Leechmonner', 'Iron Crest', 'Odonata', 'Hebicikuga', 'Devestial', 'Lundicare', 'Lyvamp', 'Strumorthio', 'Iron Mike',
+			'Badjur', 'Eolikopter', 'Freightmare', 'Frostengu', 'Goblantern', 'Hippaint', 'Jackoswarm', 'Jokerpent', 'Kadraoke',
+			'Treatmint', 'Turvarpega', 'Goodjur', 'Liftaton', 'Triceracotta', 'Woolverine', 'Combustoad', 'Hearthind', 'Koiryu',
+			'Pestiligy', 'Saxum', 'Sascratch', 'Guttergar', 'Rakasa', 'Thermostatic', 'Formaldehydra', 'Arachnode', 'Arsenstorm',
+			'Blobbiam', 'Brasspecter', 'Bugswarm', 'Bulionage', 'Capricorrie', 'Copperhead', 'Craggon', 'Crystuit', 'Drakkannon',
+			'Faeruin', 'Karmalice', 'Martorse', 'Massassin', 'Mohawtter', 'Mon Mothra', 'Parasike', 'Pinaturbo', 'Piss', 'Vipult',
+			'Fettogre', 'Florustitia', 'Searytch', 'Sleet Shell', 'Snabterra', 'Socknbuskn', 'Thaumaton', 'Versalyre',
+			'Lavalisk', 'Llanfairwyrm', 'Primordialith', 'Reversadusa', 'Sculptera', 'Wizhazard', 'Yamateraph',
+		],
 		onBegin() {
-			this.add('-message', `Welcome to Do Not Use!`);
-			this.add('-message', `This is a National Dex metagame where only Pokemon with less than 280 BST are allowed, plus a select few others!`);
+			this.add('-message', `Welcome to Blank Canvas!`);
+			this.add('-message', `This is a Gen 9 micrometa feautring only Fakemon made by teams of players with a limited budget!`);
 			this.add('-message', `You can find our thread and metagame resources here:`);
-			this.add('-message', `https://www.smogon.com/forums/threads/3734326/`);
+			this.add('-message', `https://www.smogon.com/forums/threads/3748841/`);
 		},
-		onValidateSet(set) {
-			const species = this.dex.species.get(set.species);
-			if (species.bst > 280) {
-				if (['Luvdisc', 'Unown', 'Capsakid', 'Snorunt', 'Swablu', 'Beldum'].includes(species.baseSpecies)) return;
-				return [`Only Pok\u00e9mon with a BST of 280 or lower are allowed.`, `(${species.name}'s BST is ${species.bst}.)`];
+		onSwitchInPriority: 100,
+		onSwitchIn(pokemon) {
+			if ((pokemon.illusion || pokemon).getTypes(true, true).join('/') !==
+				this.dex.forGen(9).species.get((pokemon.illusion || pokemon).species.name).types.join('/') &&
+				!pokemon.terastallized) {
+				this.add('-start', pokemon, 'typechange', (pokemon.illusion || pokemon).getTypes(true).join('/'), '[silent]');
 			}
 		},
 	},
