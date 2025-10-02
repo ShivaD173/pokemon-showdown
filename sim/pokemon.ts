@@ -1464,7 +1464,7 @@ export class Pokemon {
 					}
 				}
 				if (species.abilities[oldAbilitySlot as string] === undefined) oldAbilitySlot = '0';
-				this.setAbility(species.abilities[oldAbilitySlot as string], null, true);
+				this.setAbility(species.abilities[oldAbilitySlot as string], null, null, true);
 				this.baseAbility = this.ability;
 			}
 		}
