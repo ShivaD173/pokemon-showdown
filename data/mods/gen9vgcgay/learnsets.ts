@@ -9232,6 +9232,15 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
             ],
             "machpunch": [
                 "9M"
+            ],
+            "drainpunch": [
+                "9M"
+            ],
+            "hammerarm": [
+                "9M"
+            ],
+            "skyuppercut": [
+                "9M"
             ]
         }
     },
@@ -79022,6 +79031,9 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
             ],
             "solarblade": [
                 "9M"
+            ],
+            "silktrap": [
+                "9M"
             ]
         }
     },
@@ -81928,6 +81940,9 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
                 "9M"
             ],
             "stalacbite": [
+                "9M"
+            ],
+            "furyattack": [
                 "9M"
             ]
         }

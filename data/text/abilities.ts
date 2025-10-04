@@ -2491,8 +2491,8 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 	},
 	runningstart: {
 		name: "Running Start",
-		desc: "This pokemon is grounded (loses flying typing) and cannot use flying moves on its first attack.",
-		shortDesc: "This pokemon is grounded and cannot use flying moves on its first attack.",
+		desc: "This pokemon is grounded (loses Flying typing) and cannot use flying moves on its first attack.",
+		shortDesc: "This pokemon is grounded and cannot use Flying moves on its first attack.",
 		start: "  [POKEMON] can't get off the ground!",
 		end: "  [POKEMON] took flight!",
 	},
@@ -2563,8 +2563,8 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 	},
 	waterpressure: {
 		name: "Water Pressure",
-		desc: "If Rain Dance is active, this Pokemon's Speed is doubled. This effect is prevented if this Pokemon is holding a Utility Umbrella.",
-		shortDesc: "If Rain Dance is active, this Pokemon's Def and SpD is doubled.",
+		desc: "If Rain Dance is active, this Pokemon's Def and SpD are 1.5x.",
+		shortDesc: "If Rain Dance is active, this Pokemon's Def and SpD are 1.5x.",
 	},
 	phantomthief: {
 		name: "Phantom Thief",

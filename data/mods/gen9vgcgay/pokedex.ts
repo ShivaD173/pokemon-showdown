@@ -5562,7 +5562,7 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 			"spe": 79,
 		},
 		"abilities": {
-			"0": "Resonance",
+			"0": "Resonant",
 			"1": "Poison Touch",
 			"H": "Water Absorb",
 		},

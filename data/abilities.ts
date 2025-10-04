@@ -6662,12 +6662,12 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 	waterpressure: {
 		onModifyDef(def, pokemon) {
 			if (['raindance', 'primordialsea'].includes(pokemon.effectiveWeather())) {
-				return this.chainModify(2);
+				return this.chainModify(1.5);
 			}
 		},
 		onModifySpD(spd, pokemon) {
 			if (['raindance', 'primordialsea'].includes(pokemon.effectiveWeather())) {
-				return this.chainModify(2);
+				return this.chainModify(1.5);
 			}
 		},
 		flags: {},
