@@ -303,6 +303,10 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		accuracy: 95,
 	},
 	// Regular Moves
+	expandingforce: {
+		inherit: true,
+		basePower: 70,
+	},
 	stringshot: {
 		inherit: true,
 		accuracy: 100,
@@ -721,12 +725,16 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		inherit: true,
 		isNonstandard: null,
 		desc: "Power is equal to the greater of (user's Happiness * 2/5), rounded down, or 1. Can't Miss. Uses user's primary type. Becomes Special if user's spA is higher.",
-		shortDesc: "Max: 102 BP. Uses base primary type and higher atk stat.",
+		shortDesc: "Max: 102 BP. Uses primary type and higher atk stat.",
 		onModifyMove(move, pokemon) {
 			if (pokemon.getStat('atk', false, true) < pokemon.getStat('spa', false, true)) move.category = 'Special';
 		},
 		onModifyType(move, pokemon) {
-			move.type = pokemon.baseTypes[0];
+			const types = pokemon.getTypes();
+			let type = types[0];
+			if (type === 'Bird') type = '???';
+			if (type === '???' && types[1]) type = types[1];
+			move.type = type;
 		},
 	},
 	razorshell: {
@@ -1192,7 +1200,8 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 	geargrind: {
 		inherit: true,
 		isNonstandard: null,
-		accuracy: 90,
+		basePower: 45,
+		accuracy: 100,
 	},
 	gearup: {
 		inherit: true,

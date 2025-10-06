@@ -22378,7 +22378,7 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 	},
 	expandingmaws: {
 		num: 0,
-		basePower: 80,
+		basePower: 70,
 		accuracy: 100,
 		category: "Physical",
 		isNonstandard: "CAP",

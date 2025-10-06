@@ -5554,11 +5554,11 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 			"Ground",
 		],
 		"baseStats": {
-			"hp": 105,
+			"hp": 95,
 			"atk": 100,
-			"def": 75,
+			"def": 70,
 			"spa": 90,
-			"spd": 75,
+			"spd": 70,
 			"spe": 79,
 		},
 		"abilities": {
@@ -5996,12 +5996,13 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 	"vanilluxe": {
 		"types": [
 			"Ice",
+			"Normal",
 		],
 		"baseStats": {
 			"hp": 71,
 			"atk": 95,
 			"def": 85,
-			"spa": 115,
+			"spa": 125,
 			"spd": 95,
 			"spe": 79,
 		},
@@ -6119,13 +6120,13 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 			"hp": 170,
 			"atk": 75,
 			"def": 85,
-			"spa": 40,
+			"spa": 75,
 			"spd": 50,
 			"spe": 65,
 		},
 		"abilities": {
 			"0": "Healer",
-			"1": "Hydration",
+			"1": "Soul Heart",
 			"H": "Regenerator",
 		},
 		"inherit": true,

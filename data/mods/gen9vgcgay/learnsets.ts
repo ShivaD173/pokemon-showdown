@@ -83408,6 +83408,9 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
             "acidarmor": [
                 "9M"
             ],
+            "allyswitch": [
+                "9M"
+            ],
             "astonish": [
                 "9M"
             ],
@@ -83562,6 +83565,9 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
                 "9M"
             ],
             "flashfreeze": [
+                "9M"
+            ],
+            "dazzlinggleam": [
                 "9M"
             ],
             "chillingwater": [
@@ -169533,6 +169539,170 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
         }
     },
     "klink": {
+        "inherit": true,
+        "learnset": {
+            "assurance": [
+                "9M"
+            ],
+            "autotomize": [
+                "9M"
+            ],
+            "bind": [
+                "9M"
+            ],
+            "charge": [
+                "9M"
+            ],
+            "chargebeam": [
+                "9M"
+            ],
+            "confide": [
+                "9M"
+            ],
+            "discharge": [
+                "9M"
+            ],
+            "doubleteam": [
+                "9M"
+            ],
+            "endure": [
+                "9M"
+            ],
+            "facade": [
+                "9M"
+            ],
+            "flashcannon": [
+                "9M"
+            ],
+            "frustration": [
+                "9M"
+            ],
+            "geargrind": [
+                "9M"
+            ],
+            "gravity": [
+                "9M"
+            ],
+            "hiddenpower": [
+                "9M"
+            ],
+            "hyperbeam": [
+                "9M"
+            ],
+            "irondefense": [
+                "9M"
+            ],
+            "lockon": [
+                "9M"
+            ],
+            "magiccoat": [
+                "9M"
+            ],
+            "magnetrise": [
+                "9M"
+            ],
+            "metalsound": [
+                "9M"
+            ],
+            "mirrorshot": [
+                "9M"
+            ],
+            "powergem": [
+                "9M"
+            ],
+            "protect": [
+                "9M"
+            ],
+            "recycle": [
+                "9M"
+            ],
+            "rest": [
+                "9M"
+            ],
+            "return": [
+                "9M"
+            ],
+            "risingvoltage": [
+                "9M"
+            ],
+            "rockpolish": [
+                "9M"
+            ],
+            "rocksmash": [
+                "9M"
+            ],
+            "round": [
+                "9M"
+            ],
+            "sandstorm": [
+                "9M"
+            ],
+            "screech": [
+                "9M"
+            ],
+            "secretpower": [
+                "9M"
+            ],
+            "shiftgear": [
+                "9M"
+            ],
+            "shockwave": [
+                "9M"
+            ],
+            "signalbeam": [
+                "9M"
+            ],
+            "sleeptalk": [
+                "9M"
+            ],
+            "snore": [
+                "9M"
+            ],
+            "steelbeam": [
+                "9M"
+            ],
+            "steelroller": [
+                "9M"
+            ],
+            "substitute": [
+                "9M"
+            ],
+            "swagger": [
+                "9M"
+            ],
+            "telekinesis": [
+                "9M"
+            ],
+            "thunderbolt": [
+                "9M"
+            ],
+            "thundershock": [
+                "9M"
+            ],
+            "thunderwave": [
+                "9M"
+            ],
+            "toxic": [
+                "9M"
+            ],
+            "uproar": [
+                "9M"
+            ],
+            "visegrip": [
+                "9M"
+            ],
+            "voltswitch": [
+                "9M"
+            ],
+            "wildcharge": [
+                "9M"
+            ],
+            "zapcannon": [
+                "9M"
+            ]
+        }
+    },
+    "klang": {
         "inherit": true,
         "learnset": {
             "assurance": [
