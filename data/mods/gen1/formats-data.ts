@@ -66,7 +66,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "NU",
 	},
 	ekans: {
-		tier: "9UBL",
+		tier: "8U",
 	},
 	arbok: {
 		tier: "SU",
@@ -126,7 +126,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "SU",
 	},
 	oddish: {
-		tier: "8U",
+		tier: "9U",
 	},
 	gloom: {
 		tier: "IU",
@@ -165,7 +165,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "PU",
 	},
 	mankey: {
-		tier: "8U",
+		tier: "9U",
 	},
 	primeape: {
 		tier: "ZU",
