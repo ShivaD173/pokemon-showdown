@@ -305,25 +305,25 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 	},
 	sandveil: {
 		inherit: true,
-		shortDesc: "1.2x Defense in Sandstorm. Immune to Sandstorm.",
+		shortDesc: "1.3x Defense in Sandstorm. Immune to Sandstorm.",
 		onModifyAccuracy(accuracy) {
 		},
 		onModifyDefPriority: 6,
 		onModifyDef(def) {
 			if (this.field.isWeather('sandstorm')) {
-				return this.chainModify(1.2);
+				return this.chainModify(1.3);
 			}
 		},
 	},
 	snowcloak: {
 		inherit: true,
-		shortDesc: "1.2x Special Defense in Snow.",
+		shortDesc: "1.3x Special Defense in Snow.",
 		onModifyAccuracy(accuracy) {
 		},
 		onModifySpDPriority: 6,
 		onModifySpD(spd) {
 			if (this.field.isWeather(['hail', 'snowscape'])) {
-				return this.chainModify(1.2);
+				return this.chainModify(1.3);
 			}
 		},
 	},
