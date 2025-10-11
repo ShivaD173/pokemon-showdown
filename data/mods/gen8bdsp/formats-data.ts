@@ -37,7 +37,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "NFE",
 	},
 	butterfree: {
-		tier: "PU",
+		tier: "ZU",
 		doublesTier: "DUU",
 	},
 	weedle: {
@@ -254,7 +254,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "LC",
 	},
 	machoke: {
-		tier: "ZU",
+		tier: "PU",
 	},
 	machamp: {
 		tier: "UU",
@@ -291,7 +291,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "LC",
 	},
 	rapidash: {
-		tier: "PU",
+		tier: "ZU",
 		doublesTier: "DUU",
 	},
 	slowpoke: {
@@ -370,7 +370,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "LC",
 	},
 	hypno: {
-		tier: "ZU",
+		tier: "PU",
 		doublesTier: "DUU",
 	},
 	krabby: {
@@ -398,7 +398,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "LC",
 	},
 	marowak: {
-		tier: "PU",
+		tier: "ZU",
 		doublesTier: "DUU",
 	},
 	tyrogue: {
@@ -420,7 +420,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "LC",
 	},
 	lickilicky: {
-		tier: "PU",
+		tier: "ZU",
 		doublesTier: "DUU",
 	},
 	koffing: {
@@ -548,7 +548,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		doublesTier: "DUU",
 	},
 	ditto: {
-		tier: "PU",
+		tier: "SU",
 		doublesTier: "DUU",
 	},
 	eevee: {
@@ -654,7 +654,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "NFE",
 	},
 	meganium: {
-		tier: "ZU",
+		tier: "PU",
 		doublesTier: "DUU",
 	},
 	cyndaquil: {
@@ -688,7 +688,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "LC",
 	},
 	noctowl: {
-		tier: "PU",
+		tier: "ZU",
 		doublesTier: "DUU",
 	},
 	ledyba: {
@@ -820,7 +820,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		doublesTier: "DUU",
 	},
 	girafarig: {
-		tier: "ZU",
+		tier: "PU",
 		doublesTier: "DUU",
 	},
 	pineco: {
@@ -887,14 +887,14 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "LC",
 	},
 	piloswine: {
-		tier: "PU",
+		tier: "ZU",
 	},
 	mamoswine: {
 		tier: "OU",
 		doublesTier: "DOU",
 	},
 	corsola: {
-		tier: "ZU",
+		tier: "PU",
 		doublesTier: "DUU",
 	},
 	remoraid: {
@@ -1241,7 +1241,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		doublesTier: "DUU",
 	},
 	torkoal: {
-		tier: "PU",
+		tier: "ZU",
 		doublesTier: "DOU",
 	},
 	spoink: {
@@ -1327,7 +1327,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "LC",
 	},
 	armaldo: {
-		tier: "PU",
+		tier: "ZU",
 		doublesTier: "DUU",
 	},
 	feebas: {
@@ -1356,7 +1356,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "LC",
 	},
 	dusclops: {
-		tier: "PU",
+		tier: "ZU",
 	},
 	dusknoir: {
 		tier: "NU",
@@ -1410,7 +1410,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		doublesTier: "DUU",
 	},
 	relicanth: {
-		tier: "PU",
+		tier: "ZU",
 		doublesTier: "DUU",
 	},
 	luvdisc: {
@@ -1550,14 +1550,14 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "NFE",
 	},
 	luxray: {
-		tier: "PU",
+		tier: "ZU",
 		doublesTier: "DUU",
 	},
 	cranidos: {
 		tier: "LC",
 	},
 	rampardos: {
-		tier: "PU",
+		tier: "ZU",
 		doublesTier: "DUU",
 	},
 	shieldon: {
@@ -1583,7 +1583,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		doublesTier: "DUU",
 	},
 	mothim: {
-		tier: "ZU",
+		tier: "SU",
 		doublesTier: "DUU",
 	},
 	combee: {
@@ -1629,14 +1629,14 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "LC",
 	},
 	lopunny: {
-		tier: "ZU",
+		tier: "SU",
 		doublesTier: "DUU",
 	},
 	glameow: {
 		tier: "LC",
 	},
 	purugly: {
-		tier: "ZU",
+		tier: "PU",
 		doublesTier: "DUU",
 	},
 	stunky: {
@@ -1766,7 +1766,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		doublesTier: "DOU",
 	},
 	regigigas: {
-		tier: "PU",
+		tier: "ZU",
 		doublesTier: "DUU",
 	},
 	giratina: {
