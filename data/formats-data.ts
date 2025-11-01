@@ -4913,7 +4913,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		tier: "LC",
 	},
 	flapple: {
-		tier: "ZU",
+		tier: "SU",
 		doublesTier: "(DUU)",
 		natDexTier: "SU",
 	},
