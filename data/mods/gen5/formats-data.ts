@@ -71,7 +71,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "LC",
 	},
 	fearow: {
-		tier: "SU",
+		tier: "SUBL",
 		doublesTier: "DUU",
 	},
 	ekans: {
