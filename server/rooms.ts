@@ -2096,7 +2096,7 @@ export class GameRoom extends BasicRoom {
 					log,
 					players: battle.players.map(p => p.name),
 					format: format.name,
-					rating: rating || null,
+					rating: Math.round(rating || 0) || null,
 					private: hidden,
 					password,
 					inputlog: battle.inputLog?.join('\n') || null,
