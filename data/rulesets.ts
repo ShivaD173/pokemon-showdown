@@ -1021,6 +1021,17 @@ export const Rulesets: import('../sim/dex-formats').FormatDataTable = {
 			return problems;
 		},
 	},
+	grafaiaisleepclause: {
+		effectType: 'ValidatorRule',
+		name: 'Grafaiai Sleep Clause',
+		desc: "Bans sleep moves in conjunction with Grafaiai.",
+		banlist: [
+			'Grafaiai + Dark Void', 'Grafaiai + Grass Whistle', 'Grafaiai + Hypnosis', 'Grafaiai + Lovely Kiss', 'Grafaiai + Sing', 'Grafaiai + Sleep Powder', 'Grafaiai + Spore',
+		],
+		onBegin() {
+			this.add('rule', 'Grafaiai Sleep Clause: The combination of sleep-inducing moves with Grafaiai are banned');
+		},
+	},
 	gravitysleepclause: {
 		effectType: 'ValidatorRule',
 		name: 'Gravity Sleep Clause',

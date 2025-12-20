@@ -5960,8 +5960,9 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 					continue;
 				}
 				if (moveAction.pokemon.hasAbility('catscradle')) {
-					const targets = ["allAdjacent", "allAdjacentFoes"];
-					if (moveAction.originalTarget === pokemon || targets.includes(moveAction.move.target)) {
+					if (moveAction.originalTarget === pokemon ||
+						moveAction.move.target === "allAdjacent" ||
+						(moveAction.move.target === "allAdjacentFoes" && !this.activePokemon?.isAlly(pokemon))) {
 						this.add('-ability', moveAction.pokemon, "Cat's Cradle");
 						(moveAction.move.basePower as any) = moveAction.move.basePower * 2;
 						this.actions.runMove(moveAction.move, moveAction.pokemon, moveAction.targetLoc);

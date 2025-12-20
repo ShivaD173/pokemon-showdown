@@ -1119,10 +1119,6 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		inherit: true,
 		basePower: 80,
 	},
-	originpulse: {
-		inherit: true,
-		basePower: 100,
-	},
 	shadowbone: {
 		inherit: true,
 		isNonstandard: null,

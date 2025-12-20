@@ -84,6 +84,7 @@ export const Items: import('../../../sim/dex-items').ModdedItemDataTable = {
 	},
 	roomservice: {
 		inherit: true,
+		shortDesc: "If Trick Room is active, the holder's Speed is lowered by 2 stages. Single use.",
 		boosts: {
 			spe: -2,
 		},

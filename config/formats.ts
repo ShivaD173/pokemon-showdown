@@ -40,7 +40,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		searchShow: true,
 		mod: 'gen9vgcgay',
 		gameType: 'doubles',
-		ruleset: ['Flat Rules', '!! Adjust Level = 50', 'Tera Type Preview', 'Sketch Post-Gen 7 Moves', 'Draft Timer', 'Open Team Sheets'],
+		ruleset: ['Flat Rules', '!! Adjust Level = 50', 'Tera Type Preview', 'Sketch Post-Gen 7 Moves', 'Draft Timer', 'Open Team Sheets', 'Grafaiai Sleep Clause'],
 		bestOfDefault: true,
 		banlist: ['Uber'],
 		unbanlist: ['Greninja-Bond', 'Mythical'],
@@ -50,7 +50,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		searchShow: true,
 		mod: 'gen9vgcgay',
 		gameType: 'doubles',
-		ruleset: ['Flat Rules', '!! Adjust Level = 50', 'Tera Type Preview', 'Sketch Post-Gen 7 Moves', 'Draft Timer', 'Limit Two Restricted', 'Open Team Sheets'],
+		ruleset: ['Flat Rules', '!! Adjust Level = 50', 'Tera Type Preview', 'Sketch Post-Gen 7 Moves', 'Draft Timer', 'Limit Two Restricted', 'Open Team Sheets', 'Grafaiai Sleep Clause'],
 		bestOfDefault: true,
 		unbanlist: ['Mythical', 'Restricted Legendary', 'Greninja-Bond'],
 		restricted: ['Uber'],
@@ -3439,8 +3439,6 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		mod: 'gen9legendsou',
 		ruleset: ['Standard Draft', '+Unobtainable', '+Past', 'Min Source Gen = 1', 'Terastal Clause'],
 	},
-
-	
 
 	///////////////////////////////////////////////////////////////////
 	// Randomized Format Spotlight

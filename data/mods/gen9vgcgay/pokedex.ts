@@ -1597,7 +1597,7 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 	"feraligatr": {
 		"types": [
 			"Water",
-			"Dark",
+			"Dragon",
 		],
 		"baseStats": {
 			"hp": 90,
@@ -1609,7 +1609,7 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 		},
 		"abilities": {
 			"0": "Torrent",
-			"1": "Intimidate",
+			"1": "Dragon's Maw",
 			"H": "Sheer Force",
 		},
 		"inherit": true,
@@ -6251,8 +6251,8 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 			"Dragon",
 		],
 		"baseStats": {
-			"hp": 76,
-			"atk": 147,
+			"hp": 81,
+			"atk": 152,
 			"def": 90,
 			"spa": 60,
 			"spd": 70,
@@ -6278,7 +6278,7 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 			"spe": 50,
 		},
 		"abilities": {
-			"0": "Snow Cloak",
+			"0": "Tough Claws",
 			"1": "Arctic Rush",
 			"H": "Overcoat",
 		},
@@ -6466,7 +6466,7 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 		],
 		"baseStats": {
 			"hp": 110,
-			"atk": 65,
+			"atk": 75,
 			"def": 110,
 			"spa": 55,
 			"spd": 105,
@@ -7034,11 +7034,11 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 		],
 		"baseStats": {
 			"hp": 92,
-			"atk": 95,
-			"def": 101,
-			"spa": 95,
-			"spd": 80,
-			"spe": 77,
+			"atk": 90,
+			"def": 91,
+			"spa": 85,
+			"spd": 75,
+			"spe": 82,
 		},
 		"abilities": {
 			"0": "Sweet Veil",
@@ -7140,7 +7140,7 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 		},
 		"abilities": {
 			"0": "Dry Skin",
-			"1": "Sand Veil",
+			"1": "Sand Rush",
 			"H": "Solar Power",
 		},
 		"inherit": true,
@@ -7860,10 +7860,10 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 		],
 		"baseStats": {
 			"hp": 80,
-			"atk": 110,
-			"def": 90,
-			"spa": 90,
-			"spd": 90,
+			"atk": 115,
+			"def": 95,
+			"spa": 95,
+			"spd": 95,
 			"spe": 45,
 		},
 		"abilities": {
@@ -9427,8 +9427,8 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 		],
 		"baseStats": {
 			"hp": 75,
-			"atk": 105,
-			"def": 100,
+			"atk": 110,
+			"def": 105,
 			"spa": 70,
 			"spd": 65,
 			"spe": 75,
@@ -9501,9 +9501,9 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 		],
 		"baseStats": {
 			"hp": 85,
-			"atk": 85,
+			"atk": 95,
 			"def": 115,
-			"spa": 80,
+			"spa": 70,
 			"spd": 95,
 			"spe": 50,
 		},
@@ -9518,9 +9518,9 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 		],
 		"baseStats": {
 			"hp": 85,
-			"atk": 85,
+			"atk": 95,
 			"def": 70,
-			"spa": 80,
+			"spa": 70,
 			"spd": 50,
 			"spe": 140,
 		},

@@ -290,6 +290,9 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
             ],
             "junglehealing": [
                 "9M"
+            ],
+            "sludgewave": [
+                "9M"
             ]
         }
     },
@@ -1563,6 +1566,9 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
                 "9M"
             ],
             "pounce": [
+                "9M"
+            ],
+            "lunge": [
                 "9M"
             ]
         }
@@ -5900,6 +5906,9 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
                 "9M"
             ],
             "aurasphere": [
+                "9M"
+            ],
+            "fakeout": [
                 "9M"
             ]
         }
@@ -19151,6 +19160,9 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
             ],
             "veeveevolley": [
                 "9M"
+            ],
+            "taunt": [
+                "9M"
             ]
         }
     },
@@ -21848,6 +21860,9 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
             ],
             "return": [
                 "9M"
+            ],
+            "roost": [
+                "9M"
             ]
         }
     },
@@ -21966,6 +21981,9 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
                 "9M"
             ],
             "lightscreen": [
+                "9M"
+            ],
+            "magneticflux": [
                 "9M"
             ],
             "metalsound": [
@@ -22316,6 +22334,9 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
                 "9M"
             ],
             "return": [
+                "9M"
+            ],
+            "roost": [
                 "9M"
             ]
         }
@@ -22752,6 +22773,9 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
                 "9M"
             ],
             "return": [
+                "9M"
+            ],
+            "roost": [
                 "9M"
             ]
         }
@@ -24019,10 +24043,7 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
             "snowscape": [
                 "9M"
             ],
-            "suckerpunch": [
-                "9M"
-            ],
-            "punishment": [
+            "dualchop": [
                 "9M"
             ]
         }
@@ -25153,6 +25174,9 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
                 "9M"
             ],
             "silktrap": [
+                "9M"
+            ],
+            "firstimpression": [
                 "9M"
             ]
         }
@@ -28466,6 +28490,9 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
             ],
             "punishment": [
                 "9M"
+            ],
+            "knockoff": [
+                "9M"
             ]
         }
     },
@@ -30832,6 +30859,9 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
                 "9M"
             ],
             "return": [
+                "9M"
+            ],
+            "mortalspin": [
                 "9M"
             ]
         }
@@ -42731,6 +42761,9 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
             ],
             "stalacbite": [
                 "9M"
+            ],
+            "partingshot": [
+                "9M"
             ]
         }
     },
@@ -48519,6 +48552,9 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
                 "9M"
             ],
             "zenheadbutt": [
+                "9M"
+            ],
+            "fakeout": [
                 "9M"
             ]
         }
@@ -57762,6 +57798,9 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
                 "9M"
             ],
             "divebomb": [
+                "9M"
+            ],
+            "knockoff": [
                 "9M"
             ]
         }
@@ -75515,6 +75554,9 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
             ],
             "psychout": [
                 "9M"
+            ],
+            "partingshot": [
+                "9M"
             ]
         }
     },
@@ -77488,6 +77530,9 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
                 "9M"
             ],
             "xscissor": [
+                "9M"
+            ],
+            "icespinner": [
                 "9M"
             ]
         }
@@ -86963,6 +87008,9 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
             ],
             "xscissor": [
                 "9M"
+            ],
+            "icespinner": [
+                "9M"
             ]
         }
     },
@@ -88499,6 +88547,9 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
             ],
             "shadowsneak": [
                 "9M"
+            ],
+            "explosion": [
+                "9M"
             ]
         }
     },
@@ -88998,6 +89049,9 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
             ],
             "trailblaze": [
                 "9M"
+            ],
+            "bodypress": [
+                "9M"
             ]
         }
     },
@@ -89457,6 +89511,12 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
                 "9M"
             ],
             "powertrip": [
+                "9M"
+            ],
+            "curse": [
+                "9M"
+            ],
+            "bodypress": [
                 "9M"
             ]
         }
@@ -93439,6 +93499,9 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
             ],
             "furyattack": [
                 "9M"
+            ],
+            "skyattack": [
+                "9M"
             ]
         }
     },
@@ -93644,6 +93707,9 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
                 "9M"
             ],
             "weatherball": [
+                "9M"
+            ],
+            "dazzlinggleam": [
                 "9M"
             ]
         }
@@ -93862,6 +93928,9 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
                 "9M"
             ],
             "torchsong": [
+                "9M"
+            ],
+            "earthpower": [
                 "9M"
             ]
         }
@@ -94301,6 +94370,9 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
                 "9M"
             ],
             "zenheadbutt": [
+                "9M"
+            ],
+            "megahorn": [
                 "9M"
             ]
         }
@@ -95733,6 +95805,9 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
             ],
             "bodypress": [
                 "9M"
+            ],
+            "decorate": [
+                "9M"
             ]
         }
     },
@@ -96321,6 +96396,12 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
                 "9M"
             ],
             "aquajet": [
+                "9M"
+            ],
+            "rockclimb": [
+                "9M"
+            ],
+            "closecombat": [
                 "9M"
             ]
         }
@@ -97017,6 +97098,9 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
                 "9M"
             ],
             "overheat": [
+                "9M"
+            ],
+            "shedtail": [
                 "9M"
             ]
         }
@@ -98330,6 +98414,9 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
             ],
             "babydolleyes": [
                 "9M"
+            ],
+            "fakeout": [
+                "9M"
             ]
         }
     },
@@ -98840,6 +98927,9 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
                 "9M"
             ],
             "snowscape": [
+                "9M"
+            ],
+            "calmmind": [
                 "9M"
             ]
         }
@@ -100229,6 +100319,9 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
                 "9M"
             ],
             "bleakwindstorm": [
+                "9M"
+            ],
+            "snarl": [
                 "9M"
             ]
         }
@@ -102177,6 +102270,12 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
                 "9M"
             ],
             "hammerarm": [
+                "9M"
+            ],
+            "mountaingale": [
+                "9M"
+            ],
+            "machpunch": [
                 "9M"
             ]
         }
@@ -110704,6 +110803,9 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
             ],
             "terablast": [
                 "9M"
+            ],
+            "strength": [
+                "9M"
             ]
         }
     },
@@ -116052,6 +116154,12 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
             ],
             "aquajet": [
                 "9M"
+            ],
+            "bulletpunch": [
+                "9M"
+            ],
+            "knockoff": [
+                "9M"
             ]
         }
     },
@@ -118518,6 +118626,9 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
             ],
             "return": [
                 "9M"
+            ],
+            "roost": [
+                "9M"
             ]
         }
     },
@@ -119466,6 +119577,9 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
                 "9M"
             ],
             "return": [
+                "9M"
+            ],
+            "nuzzle": [
                 "9M"
             ]
         }
@@ -125617,6 +125731,9 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
             ],
             "hydropump": [
                 "9M"
+            ],
+            "yawn": [
+                "9M"
             ]
         }
     },
@@ -127000,6 +127117,9 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
                 "9M"
             ],
             "focusblast": [
+                "9M"
+            ],
+            "allyswitch": [
                 "9M"
             ]
         }
@@ -132917,6 +133037,9 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
             ],
             "return": [
                 "9M"
+            ],
+            "surf": [
+                "9M"
             ]
         }
     },
@@ -136090,9 +136213,6 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
                 "9M"
             ],
             "breakingswipe": [
-                "9M"
-            ],
-            "calmmind": [
                 "9M"
             ],
             "chargebeam": [
@@ -147569,6 +147689,9 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
             ],
             "terablast": [
                 "9M"
+            ],
+            "machpunch": [
+                "9M"
             ]
         }
     },
@@ -147651,6 +147774,9 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
                 "9M"
             ],
             "facade": [
+                "9M"
+            ],
+            "fakeout": [
                 "9M"
             ],
             "falseswipe": [
@@ -147822,6 +147948,9 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
                 "9M"
             ],
             "terablast": [
+                "9M"
+            ],
+            "machpunch": [
                 "9M"
             ]
         }
@@ -173942,9 +174071,6 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
                 "9M"
             ],
             "bodyslam": [
-                "9M"
-            ],
-            "brutalswing": [
                 "9M"
             ],
             "bulldoze": [
