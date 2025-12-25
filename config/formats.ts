@@ -150,7 +150,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		name: "[Gen 1] SU",
 		mod: 'gen1',
 		searchShow: true,
-		ruleset: ['[Gen 1] ZU', 'Partial Trapping Clause'],
+		ruleset: ['[Gen 1] ZU', 'Partial Trapping Clause', 'Accuracy Moves Clause'],
 		banlist: ['ZU', 'SUBL'],
 	},
 	{
