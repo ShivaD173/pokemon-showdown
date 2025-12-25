@@ -9250,6 +9250,9 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
             ],
             "skyuppercut": [
                 "9M"
+            ],
+            "platinumbuster": [
+                "9M"
             ]
         }
     },
@@ -124165,6 +124168,12 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
             ],
             "punishment": [
                 "9M"
+            ],
+            "brutalswing": [
+                "9M"
+            ],
+            "surf": [
+                "9M"
             ]
         }
     },
@@ -126735,6 +126744,9 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
                 "9M"
             ],
             "return": [
+                "9M"
+            ],
+            "honeclaws": [
                 "9M"
             ]
         }

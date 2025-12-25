@@ -7,13 +7,6 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 	spore: {
 		inherit: true,
 		pp: 5,
-		shortDesc: "Puts target to sleep. Fails if priority.",
-		onTryMove(attacker, defender, move) {
-			if (move.pranksterBoosted) {
-				this.add('-fail', attacker, 'move: Spore');
-				return null;
-			}
-		},
 	},
 	afteryou: {
 		inherit: true,
@@ -2194,6 +2187,10 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		isNonstandard: null,
 	},
 	abduction: {
+		inherit: true,
+		isNonstandard: null,
+	},
+	platinumbuster: {
 		inherit: true,
 		isNonstandard: null,
 	},
