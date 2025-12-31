@@ -34381,6 +34381,9 @@ export const Learnsets: import('../../../sim/dex-species').ModdedLearnsetDataTab
             ],
             "terrainpulse": [
                 "9M"
+            ],
+            "voltswitch": [
+                "9M"
             ]
         }
     },
