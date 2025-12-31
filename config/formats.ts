@@ -3432,7 +3432,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 	},
 
 	{
-		name: "[Gen 9] Legends Z-A NatDex Draft",
+		name: "[Gen 9] NatDex Legends Z-A Draft",
 		desc: `National Dex draft format, which includes the changes made in the Legends ZA OU Pet Mod.`,
 		threads: [
 			`&bullet; <a href="https://www.smogon.com/forums/threads/3772808/">Discussion</a>`,
