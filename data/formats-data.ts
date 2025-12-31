@@ -317,7 +317,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		tier: "LC",
 	},
 	clefairy: {
-		tier: "NFE",
+		tier: "SU",
 		doublesTier: "DUU",
 		natDexTier: "NFE",
 	},
