@@ -6126,7 +6126,7 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 		},
 		"abilities": {
 			"0": "Healer",
-			"1": "Soul Heart",
+			"1": "Soul-Heart",
 			"H": "Regenerator",
 		},
 		"inherit": true,
