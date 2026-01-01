@@ -161,13 +161,6 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		ruleset: ['[Gen 1] OU', 'Pre RU Tier Shift Mod', 'Partial Trapping Clause'],
 		searchShow: true,
 	},
-	// {
-	// 	name: "[Gen 1] ZU",
-	// 	mod: 'gen1',
-	// 	searchShow: true,
-	// 	ruleset: ['[Gen 1] PU'],
-	// 	banlist: ['PU'],
-	// },
 	{
 		name: "[Gen 1] SU",
 		mod: 'gen1',
