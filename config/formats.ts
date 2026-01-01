@@ -421,13 +421,14 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 	{
 		section: "Gen 9 Lower Tiers",
 	},
-	{
-		name: "[Gen 9] Tier Shift",
-		mod: 'gen9',
-		ruleset: ['[Gen 9] OU', 'Tier Shift Mod'],
-		banlist: ['Politoed', 'Eviolite'],
-		searchShow: true,
-	},
+	// Removing Gen 9 Tier shift while it is OMotM
+	// {
+	// 	name: "[Gen 9] Tier Shift",
+	// 	mod: 'gen9',
+	// 	ruleset: ['[Gen 9] OU', 'Tier Shift Mod'],
+	// 	banlist: ['Politoed', 'Eviolite'],
+	// 	searchShow: true,
+	// },
 	{
 		name: "[Gen 9] SU",
 		mod: 'gen9',
