@@ -468,9 +468,6 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		team: 'random',
 		bestOfDefault: true,
 		ruleset: ['PotD', 'Obtainable', 'Species Clause', 'HP Percentage Mod', 'Cancel Mod', 'Sleep Clause Mod', 'Illusion Level Mod'],
-		onBegin() {
-			this.add(`raw|<div class="broadcast-blue">Player Signups for <b>Random Battles Team Tournament IX</b> are now open! If you enjoy Random Battles, want the chance to rep a team's mascot with a custom avatar, and are raring to compete at the highest level, <a href="https://www.smogon.com/forums/threads/3775536">sign up now</a> and battle with the best of the best!</div>`);
-		},
 	},
 	{
 		name: "[Gen 9] Unrated Random Battle",
@@ -614,9 +611,6 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		team: 'random',
 		bestOfDefault: true,
 		ruleset: ['PotD', 'Obtainable', 'Species Clause', 'HP Percentage Mod', 'Cancel Mod', 'Illusion Level Mod', 'Sleep Clause Mod'],
-		onBegin() {
-			this.add(`raw|<div class="broadcast-blue">Player Signups for <b>Random Battles Team Tournament IX</b> are now open! If you enjoy Random Battles, want the chance to rep a team's mascot with a custom avatar, and are raring to compete at the highest level, <a href="https://www.smogon.com/forums/threads/3775536">sign up now</a> and battle with the best of the best!</div>`);
-		},
 	},
 	{
 		name: "[Gen 9] Doubles OU",
@@ -962,7 +956,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 	},
 	{
 		name: "[Gen 9] Bio Mech Mons",
-		desc: `Items, abilites, and moves a Pok&eacute;mon has access to can be put in any item/move/ability slot.`,
+		desc: `Items, abilities, and moves a Pok&eacute;mon has access to can be put in any item/move/ability slot.`,
 		mod: 'biomechmons',
 		// searchShow: false,
 		ruleset: ['Standard OMs', 'Sleep Moves Clause'],
@@ -994,33 +988,60 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 			) {
 				return this.validateSet(set, teamHas);
 			}
-			const allThings = [set.ability, set.item, ...set.moves];
+			const allThings = [set.ability, set.item, ...set.moves]
+				.map(e => e.replace(/^(item|move|ability):?/i, '')).filter(e => e.length);
+			for (const thing of allThings) {
+				if (!dex.moves.get(thing).exists && !dex.abilities.get(thing).exists && !dex.items.get(thing).exists) {
+					return [`${thing} does not exist.`];
+				}
+			}
 			if (
 				allThings.some(y => effectFunctions.some(x => x.get(y).isNonstandard &&
 					!this.ruleTable.has(`+pokemontag:${this.toID(x.get(y).isNonstandard)}`)))
 			) {
 				return this.validateSet(set, teamHas);
 			}
-			const moves = allThings.filter(thing => thing !== 'metronome' && dex.moves.get(thing).exists);
+			const moves = allThings.filter(thing => this.toID(thing) !== 'metronome' && dex.moves.get(thing).exists);
+			for (const m of moves) {
+				const moveName = this.dex.moves.get(m).name;
+				if (this.ruleTable.isBanned(`move:${this.toID(moveName)}`)) return [`${set.species}'s move ${moveName} is banned.`];
+			}
 			const abilities = allThings.filter(thing => dex.abilities.get(thing).exists);
+			for (const a of abilities) {
+				const abilName = this.dex.abilities.get(a).name;
+				if (this.ruleTable.isBanned(`ability:${this.toID(abilName)}`)) {
+					return [`${set.species}'s ability ${abilName} is banned.`];
+				}
+			}
 			const items = allThings.filter(thing => dex.items.get(thing).exists);
+			for (const i of items) {
+				const itemName = this.dex.items.get(i).name;
+				if (this.ruleTable.isBanned(`item:${this.toID(itemName)}`)) return [`${set.species}'s item ${itemName} is banned.`];
+			}
+			const setHas: { [k: string]: true } = {};
+			for (const thing of allThings) {
+				if (setHas[this.toID(thing)]) return [`${set.species} has multiple copies of ${thing}.`];
+				setHas[this.toID(thing)] = true;
+			}
 			const normalAbility = set.ability;
 			if (!abilities.length) {
 				set.ability = 'noability';
 			} else {
 				set.ability = this.toID(abilities[0]);
 			}
-			if (
-				!Object.values(species.abilities).map(this.toID).includes(this.toID(set.ability)) &&
+			if (abilities.some(abil => !Object.values(species.abilities).map(this.toID).includes(this.toID(abil))) &&
 				this.ruleTable.has('obtainableabilities')
 			) {
-				if (set.ability !== 'noability') return [`${set.ability} is not a valid ability for ${set.species}.`];
+				if (set.ability !== 'noability') return [`${set.species} has illegal abilities.`];
 			}
 			if (requiredAbility && !abilities.map(this.toID).includes(this.toID(requiredAbility))) {
 				return [`${set.species} requires ${requiredAbility} on its set.`];
 			}
 			if (!moves.length) {
 				return [`${set.species} requires at least one move.`];
+			}
+			if (set.moves.length > this.ruleTable.maxMoveCount) {
+				return [`${set.name} has ${set.moves.length} moves, which is more than the limit of ${this.ruleTable.maxMoveCount}.`];
 			}
 			const normalMoves = set.moves;
 			set.moves = [moves[0]];
@@ -3383,8 +3404,8 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		searchShow: false,
 		ruleset: ['[Gen 9] National Dex Ubers'],
 		banlist: [
-			'Arceus-Normal', 'Arceus-Dark', 'Arceus-Ground', 'Calyrex-Ice', 'Chansey', 'Deoxys-Attack', 'Deoxys-Speed', 'Ditto', 'Dondozo', 'Eternatus', 'Giratina-Origin', 'Groudon-Primal',
-			'Hatterene', 'Ho-Oh', 'Kyogre-Primal', 'Lunala', 'Marshadow', 'Melmetal', 'Mewtwo-Mega-Y', 'Necrozma-Dusk-Mane', 'Necrozma-Ultra', 'Salamence-Mega', 'Smeargle', 'Yveltal',
+			'Alomomola', 'Arceus-Normal', 'Arceus-Dark', 'Arceus-Ground', 'Calyrex-Ice', 'Chansey', 'Deoxys-Attack', 'Ditto', 'Dondozo', 'Eternatus', 'Giratina-Origin', 'Groudon-Primal',
+			'Hatterene', 'Ho-Oh', 'Kingambit', 'Kyogre-Primal', 'Lunala', 'Marshadow', 'Mewtwo-Mega-Y', 'Necrozma-Dusk-Mane', 'Necrozma-Ultra', 'Salamence-Mega', 'Smeargle', 'Yveltal',
 			'Zacian-Crowned', 'Zygarde-50%',
 			// UUBL
 			'Arceus-Dragon', 'Arceus-Fairy', 'Arceus-Fire', 'Arceus-Flying', 'Arceus-Ghost', 'Arceus-Water', 'Blaziken-Mega', 'Chi-Yu', 'Chien-Pao', 'Dracovish', 'Flutter Mane', 'Groudon',
@@ -3558,24 +3579,21 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		section: "Pet Mods",
 	},
 	{
-		name: "[Gen 9] Monster Hunter Random Battle",
-		desc: `A Gen 9 solomod where each Pokemon is based on a monster from the Monster Hunter franchise.`,
-		mod: 'monsterhunter',
-		team: 'randomMHS',
+		name: "[Gen 9] Scootopia Random Battle",
+		desc: `A Gen 9 Fakemon micrometa featuring the Super Types mechanic, granting 1 Pokemon per team an additional and powerful new typing.`,
+		mod: 'scootopiav2',
+		team: 'randomSC',
 		ruleset: [
 			'Species Clause', 'HP Percentage Mod', 'Cancel Mod', 'Sleep Clause Mod', 'Illusion Level Mod',
-			'Terastal Clause', 'Data Preview', 'Sprite Viewer', 'Mega Data Mod', 'Status Mod',
+			'Terastal Clause', 'Super Type Moves Rule', 'Data Preview', 'Sprite Viewer',
 		],
 		onBegin() {
-			this.add(`raw|<div class='broadcast-green'><b>Need help with all of the new moves, abilities, and wacky stuff?<br />Then make sure to check out the <a href="https://tinyurl.com/MonHunShow" target="_blank">MHS Wikia</a> or use /dt!</b></div>`);
-			this.add('-message', `Welcome to Monster Hunter Showdown!`);
-			this.add('-message', `Coded by KnivesMK, it reimagines the Monsters from Monster Hunter as Competitive Pokemon!`);
-			this.add('-message', `Community Discord can be found here:`);
-			this.add('-message', `https://discord.gg/JjjRGVrEvc`);
-			this.add('-message', `Format Wikia can be found here:`);
-			this.add('-message', `https://tinyurl.com/MonHunShow`);
-			this.add('-message', `Special thanks to EggEggEgg for most of the Sprites, and Kestis for the Icons!`);
-			this.add('-message', `(Monster Hunter Showdown is in no way officially affiliated with the Monster Hunter games or CAPCOM and is purely a fan project.)`);
+			this.add(`raw|<div class='broadcast-green'><b>Need help with all of the new moves, abilities, and wacky stuff?<br />Then make sure to check out the <a href="https://docs.google.com/spreadsheets/d/1khgnzqe3xldhLw1LbfjyYDcsltZrgyo8by4Y8EDE4vQ/edit#gid=524466747" target="_blank">Scootopia Spreadsheet</a> or use /dt!</b></div>`);
+			this.add('-message', `Welcome to Scootopia!`);
+			this.add('-message', `This is a fakemon micrometa created by Scoopapa, featuring the Super Types mechanic!`);
+			this.add('-message', `Super Types are powerful additional types that a Pokemon can gain by holding a specific Super Type Orb!`);
+			this.add('-message', `You can find our thread and metagame resources here:`);
+			this.add('-message', `https://www.smogon.com/forums/threads/3742131/`);
 		},
 		onSwitchInPriority: 100,
 		onSwitchIn(pokemon) {
@@ -3587,55 +3605,32 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		},
 	},
 	{
-		name: "[Gen 9] Monster Hunter Showdown OU", // Roomtours
-		desc: `A Gen 9 solomod where each Pokemon is based on a monster from the Monster Hunter franchise.`,
-		mod: 'monsterhunter',
+		name: "[Gen 9] Scootopia", // Roomtours
+		desc: `A Gen 9 Fakemon micrometa featuring the Super Types mechanic, granting 1 Pokemon per team an additional and powerful new typing.`,
+		mod: 'scootopiav2',
 		searchShow: false,
-		ruleset: ['Standard NatDex', 'Data Preview', 'Mega Data Mod', 'Status Mod', 'Terastal Clause', 'Sprite Viewer'],
+		ruleset: ['Standard NatDex', 'Terastal Clause', 'Z-Move Clause', 'Super Type Moves Rule', 'Data Preview', 'Sprite Viewer'],
 		banlist: [
-			'All Pokemon', 'Normalium Z', 'Fairium Z', 'Fightinium Z', 'Firium Z', 'Flyinium Z', 'Darkinium Z', 'Dragonium Z',
-			'Buginium Z', 'Waterium Z', 'Electrium Z', 'Ghostium Z', 'Grassium Z', 'Groundium Z', 'Icium Z', 'Poisonium Z',
-			'Psychium Z', 'Rockium Z', 'Steelium Z', 'Shed Tail', 'Baton Pass',
+			'All Pokemon', 'Crystal Heart', 'Wild Heart',
+			'King\'s Rock', 'Razor Fang', 'Baton Pass',
 		],
 		unbanlist: [
-			'Acidinus', 'Agnaktor-EX', 'Ahtal-Ka', 'Alatreon', 'Amatsu', 'Arbitrellian',
-			'Arkveld', 'Ash-Shan Lung', 'Auroracanth', 'Blackveil Hazak', 'Blue Kutku', 'Brachydios', 'Ceadeus',
-			'Chameleos', 'Chaotic Gore', 'Dah\'ren Mohran', 'Dalamadur', 'Deviljho-Starving', 'Diablos', 'Dire Miralis',
-			'Doomtrellian', 'Duremudira', 'Eruzerion', 'Espinas', 'Estrellian', 'Fatalis', 'Flaminas', 'Gaismagorm',
-			'Gammoth', 'Glavenus', 'Glowstrax', 'Gogmazios', 'Goldeus', 'Goldthian', 'Goss Harag', 'Greencuga', 'Gureadomosu',
-			'Hallowed Mohran', 'Harudomerugu', 'Inagami', 'Inferonis', 'Jhen Mohran', 'Jin Dahaad', 'Jyuratodus', 'Kirin',
-			'Kulve Taroth', 'Kushala Daora', 'Landgiacrus', 'Lao-Shan Lung', 'Lucacuga', 'Magmadron', 'Magnamalo', 'Malzeno',
-			'Nakarkos', 'Namielle', 'Nargacuga', 'Narwa', 'Nef-Garmat', 'Nergigante', 'Odibatorasu', 'Oltura', 'Oltura-Larval',
-			'Oroshirin', 'Palepinas', 'Primozeno', 'Rajang', 'Rathian', 'Rey Dau', 'Rushala Daora', 'Safi\'jiiva', 'Sandrioth',
-			'Seregios', 'Shagaru Magala', 'Shahmadur', 'Shantien', 'Shara Ishvalda', 'Shen Gaoren', 'Silvalos', 'Tartaronis',
-			'Teostra', 'Tigrex', 'Ukanlos', 'Unknown', 'Uth Duna', 'Valstrax', 'Velkhana', 'Vizutsune', 'Xeno\'jiiva', 'Xu Wu',
-			'Yama Kurai', 'Yama Tsukami', 'Zoh Shia', 'Zorah Magdaros', 'Agnaktor', 'Ajarakan', 'Akantor', 'Akura Vashimu',
-			'Almudron', 'Anjanath', 'Astalos', 'Azurelos', 'Balahara', 'Barioth', 'Basarios-Sandstone', 'Bazelgeuse', 'Bishaten',
-			'Blackblos', 'Blackvios', 'Coral-Pukei', 'Daimyo Hermitaur', 'Deviljho', 'Disufiroa', 'Disufiroa-Sol', 'Doshaguma',
-			'Duramboros', 'Ebogaron', 'Fuljanath', 'Garangolm', 'Glanaktor', 'Gore Magala', 'Gravios', 'Great Izuchi', 'Greensioth',
-			'Gypceros', 'Ibushi', 'Ivogiacrus', 'Kulu-Ya-Ku', 'Lagiacrus', 'Lala Barina', 'Legiana', 'Lunagaron', 'Lunastra',
-			'Malfestio', 'Mizutsune', 'Molgrex', 'Monoblos', 'Najarala', 'Nightlumu', 'Nu Udra', 'Odogaron', 'Orangaten', 'Paolumu',
-			'Pinkthian', 'Plesioth', 'Pukei-Pukei', 'Pyre-Kadaki', 'Radobaan', 'Rakna-Kadaki', 'Rathalos', 'Rompopolo',
-			'Rustramboros', 'Seltas Queen', 'Shogun Ceanataur', 'Stygiogre', 'Terrataur', 'Tetranadon', 'Tzitzi-Ya-Ku',
-			'Uragaan', 'Vaal Hazak', 'Whiteblos', 'Yian Garuga', 'Yian Kutku', 'Zamtrios', 'Zinogre', 'Zinogre-Howling', 'Aknosom',
-			'Arzuros', 'Balenox', 'Banbaro', 'Barroth', 'Basarios', 'Beotodus', 'Blangonga', 'Bulldrome', 'Cephadrome',
-			'Chatacabra', 'Congalala', 'Crysarios', 'Dodogama', 'Emgalala', 'Gendrome', 'Giadrome', 'Gigginox', 'Gobul',
-			'Great Baggi', 'Great Girros', 'Great Jaggi', 'Great Jagras', 'Great Maccao', 'Great Wroggi', 'Hirabami',
-			'Hypnocatrice', 'Iodrome', 'Kecha Wacha', 'Khezu', 'King Shakalaka', 'Lagombi', 'Lavasioth', 'Nerscylla',
-			'Nibelsnarf', 'Palamute', 'Palico', 'Pokaradon', 'Purple Ludroth', 'Quematrice', 'Qurupeco', 'Redzu', 'Royal Ludroth',
-			'Seltas', 'Shroudcylla', 'Somnacanth', 'Spiribird', 'Spiribird-Orange', 'Spiribird-Red', 'Spiribird-Yellow',
-			'Tetsucabra', 'Tobi-Kadachi', 'Velocidrome', 'Vespoid Queen', 'Volvidon',
+			'Arbrella', 'Krachiten', 'Scalaron', 'Rantler', 'Woolora', 'Albatrygon', 'Orchile',
+			'Embuck', 'Cindoe', 'Cobracotta', 'Minillow', 'Crossont', 'Torgeist', 'Platypad', 'Lumoth',
+			'Aurorowl', 'Carapex', 'Dojodo', 'Nunopod', 'Zeploom', 'Brawnkey', 'Salamalix', 'Cinnastar',
+			'MuabBoa', 'Sturgard', 'Harzodia', 'Cyllindrake', 'Kodokai', 'Electangle', 'Dolphena', 'Soleron',
+			'Soleron-Awakened', 'Jaegorm', 'Jaegorm-Collective', 'Elemadillo', 'Axolacred', 'Roscenti',
+			'Blunderbusk', 'Barracoth', 'Jamborai', 'Dracoil', 'Celespirit', 'Noxtrice', 'Avastar',
+			'Faerenheit', 'Cellsius', 'Kelven', 'Salaos', 'Morndos', 'Pythos', 'Corundell', 'Quadringo',
+			'Saphor', 'Fenreil', 'Efflor', 'Flocura', 'Flocura-Nexus',
 		],
 		onBegin() {
-			this.add(`raw|<div class='broadcast-green'><b>Need help with all of the new moves, abilities, and wacky stuff?<br />Then make sure to check out the <a href="https://tinyurl.com/MonHunShow" target="_blank">MHS Wikia</a> or use /dt!</b></div>`);
-			this.add('-message', `Welcome to Monster Hunter Showdown!`);
-			this.add('-message', `Coded by KnivesMK, it reimagines the Monsters from Monster Hunter as Competitive Pokemon!`);
-			this.add('-message', `Community Discord can be found here:`);
-			this.add('-message', `https://discord.gg/JjjRGVrEvc`);
-			this.add('-message', `Format Wikia can be found here:`);
-			this.add('-message', `https://tinyurl.com/MonHunShow`);
-			this.add('-message', `Special thanks to EggEggEgg for most of the Sprites, and Kestis for the Icons!`);
-			this.add('-message', `(Monster Hunter Showdown is in no way officially affiliated with the Monster Hunter games or CAPCOM and is purely a fan project.)`);
+			this.add(`raw|<div class='broadcast-green'><b>Need help with all of the new moves, abilities, and wacky stuff?<br />Then make sure to check out the <a href="https://docs.google.com/spreadsheets/d/1khgnzqe3xldhLw1LbfjyYDcsltZrgyo8by4Y8EDE4vQ/edit#gid=524466747" target="_blank">Scootopia Spreadsheet</a> or use /dt!</b></div>`);
+			this.add('-message', `Welcome to Scootopia!`);
+			this.add('-message', `This is a fakemon micrometa created by Scoopapa, featuring the Super Types mechanic!`);
+			this.add('-message', `Super Types are powerful additional types that a Pokemon can gain by holding a specific Super Type Orb!`);
+			this.add('-message', `You can find our thread and metagame resources here:`);
+			this.add('-message', `https://www.smogon.com/forums/threads/3742131/`);
 		},
 		onSwitchInPriority: 100,
 		onSwitchIn(pokemon) {
@@ -3701,9 +3696,6 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		mod: 'gen9',
 		team: 'randomBSSFactory',
 		ruleset: ['Flat Rules', 'VGC Timer', 'Best of = 3'],
-		onBegin() {
-			this.add(`raw|<div class="broadcast-blue">Player Signups for <b>Random Battles Team Tournament IX</b> are now open! If you enjoy Random Battles, want the chance to rep a team's mascot with a custom avatar, and are raring to compete at the highest level, <a href="https://www.smogon.com/forums/threads/3775536">sign up now</a> and battle with the best of the best!</div>`);
-		},
 	},
 	{
 		name: "[Gen 9] Random Roulette",
@@ -3711,9 +3703,6 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		mod: 'randomroulette',
 		team: 'random',
 		bestOfDefault: true,
-		onBegin() {
-			this.add(`raw|<div class="broadcast-blue">Player Signups for <b>Random Battles Team Tournament IX</b> are now open! If you enjoy Random Battles, want the chance to rep a team's mascot with a custom avatar, and are raring to compete at the highest level, <a href="https://www.smogon.com/forums/threads/3775536">sign up now</a> and battle with the best of the best!</div>`);
-		},
 	},
 	{
 		name: "[Gen 9] Monkey's Paw Random Battle",
@@ -3883,9 +3872,6 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		team: 'randomBSSFactory',
 		bestOfDefault: true,
 		ruleset: ['Flat Rules', 'VGC Timer'],
-		onBegin() {
-			this.add(`raw|<div class="broadcast-blue">Player Signups for <b>Random Battles Team Tournament IX</b> are now open! If you enjoy Random Battles, want the chance to rep a team's mascot with a custom avatar, and are raring to compete at the highest level, <a href="https://www.smogon.com/forums/threads/3775536">sign up now</a> and battle with the best of the best!</div>`);
-		},
 	},
 	{
 		name: "[Gen 9] Draft Factory",
@@ -3935,9 +3921,6 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		bestOfDefault: true,
 		ruleset: ['HP Percentage Mod', 'Cancel Mod'],
 		banlist: ['CAP', 'Custom', 'Future', 'LGPE', 'MissingNo.', 'Pikachu-Cosplay', 'Pichu-Spiky-eared', 'Xerneas-Neutral'],
-		onBegin() {
-			this.add(`raw|<div class="broadcast-blue">Player Signups for <b>Random Battles Team Tournament IX</b> are now open! If you enjoy Random Battles, want the chance to rep a team's mascot with a custom avatar, and are raring to compete at the highest level, <a href="https://www.smogon.com/forums/threads/3775536">sign up now</a> and battle with the best of the best!</div>`);
-		},
 	},
 	{
 		name: "[Gen 9] Doubles Hackmons Cup",
@@ -4135,9 +4118,6 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		team: 'random',
 		bestOfDefault: true,
 		ruleset: ['PotD', 'Obtainable', 'Species Clause', 'HP Percentage Mod', 'Cancel Mod', 'Sleep Clause Mod', 'Illusion Level Mod'],
-		onBegin() {
-			this.add(`raw|<div class="broadcast-blue">Player Signups for <b>Random Battles Team Tournament IX</b> are now open! If you enjoy Random Battles, want the chance to rep a team's mascot with a custom avatar, and are raring to compete at the highest level, <a href="https://www.smogon.com/forums/threads/3775536">sign up now</a> and battle with the best of the best!</div>`);
-		},
 	},
 	{
 		name: "[Gen 8] Random Doubles Battle",
@@ -4231,9 +4211,6 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		team: 'random',
 		bestOfDefault: true,
 		ruleset: ['Obtainable', 'Sleep Clause Mod', 'HP Percentage Mod', 'Cancel Mod', 'Illusion Level Mod'],
-		onBegin() {
-			this.add(`raw|<div class="broadcast-blue">Player Signups for <b>Random Battles Team Tournament IX</b> are now open! If you enjoy Random Battles, want the chance to rep a team's mascot with a custom avatar, and are raring to compete at the highest level, <a href="https://www.smogon.com/forums/threads/3775536">sign up now</a> and battle with the best of the best!</div>`);
-		},
 	},
 	{
 		name: "[Gen 7] Battle Factory",
@@ -4280,9 +4257,6 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		team: 'random',
 		bestOfDefault: true,
 		ruleset: ['Obtainable', 'Sleep Clause Mod', 'HP Percentage Mod', 'Cancel Mod', 'Illusion Level Mod'],
-		onBegin() {
-			this.add(`raw|<div class="broadcast-blue">Player Signups for <b>Random Battles Team Tournament IX</b> are now open! If you enjoy Random Battles, want the chance to rep a team's mascot with a custom avatar, and are raring to compete at the highest level, <a href="https://www.smogon.com/forums/threads/3775536">sign up now</a> and battle with the best of the best!</div>`);
-		},
 	},
 	{
 		name: "[Gen 6] Battle Factory",
@@ -4302,9 +4276,6 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		team: 'random',
 		bestOfDefault: true,
 		ruleset: ['Obtainable', 'Sleep Clause Mod', 'HP Percentage Mod', 'Cancel Mod', 'Illusion Level Mod'],
-		onBegin() {
-			this.add(`raw|<div class="broadcast-blue">Player Signups for <b>Random Battles Team Tournament IX</b> are now open! If you enjoy Random Battles, want the chance to rep a team's mascot with a custom avatar, and are raring to compete at the highest level, <a href="https://www.smogon.com/forums/threads/3775536">sign up now</a> and battle with the best of the best!</div>`);
-		},
 	},
 	{
 		name: "[Gen 4] Random Battle",
@@ -4312,9 +4283,6 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		team: 'random',
 		bestOfDefault: true,
 		ruleset: ['Obtainable', 'Sleep Clause Mod', 'HP Percentage Mod', 'Cancel Mod'],
-		onBegin() {
-			this.add(`raw|<div class="broadcast-blue">Player Signups for <b>Random Battles Team Tournament IX</b> are now open! If you enjoy Random Battles, want the chance to rep a team's mascot with a custom avatar, and are raring to compete at the highest level, <a href="https://www.smogon.com/forums/threads/3775536">sign up now</a> and battle with the best of the best!</div>`);
-		},
 	},
 	{
 		name: "[Gen 3] Random Battle",
@@ -4322,9 +4290,6 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		team: 'random',
 		bestOfDefault: true,
 		ruleset: ['Standard'],
-		onBegin() {
-			this.add(`raw|<div class="broadcast-blue">Player Signups for <b>Random Battles Team Tournament IX</b> are now open! If you enjoy Random Battles, want the chance to rep a team's mascot with a custom avatar, and are raring to compete at the highest level, <a href="https://www.smogon.com/forums/threads/3775536">sign up now</a> and battle with the best of the best!</div>`);
-		},
 	},
 	{
 		name: "[Gen 2] Random Battle",
@@ -4332,9 +4297,6 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		team: 'random',
 		bestOfDefault: true,
 		ruleset: ['Standard'],
-		onBegin() {
-			this.add(`raw|<div class="broadcast-blue">Player Signups for <b>Random Battles Team Tournament IX</b> are now open! If you enjoy Random Battles, want the chance to rep a team's mascot with a custom avatar, and are raring to compete at the highest level, <a href="https://www.smogon.com/forums/threads/3775536">sign up now</a> and battle with the best of the best!</div>`);
-		},
 	},
 	{
 		name: "[Gen 1] Random Battle",
@@ -4342,9 +4304,6 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		team: 'random',
 		bestOfDefault: true,
 		ruleset: ['Standard'],
-		onBegin() {
-			this.add(`raw|<div class="broadcast-blue">Player Signups for <b>Random Battles Team Tournament IX</b> are now open! If you enjoy Random Battles, want the chance to rep a team's mascot with a custom avatar, and are raring to compete at the highest level, <a href="https://www.smogon.com/forums/threads/3775536">sign up now</a> and battle with the best of the best!</div>`);
-		},
 	},
 	{
 		name: "[Gen 1] Challenge Cup",
