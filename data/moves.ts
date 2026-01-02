@@ -22542,7 +22542,7 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		num: 0,
 		accuracy: 100,
 		basePower: 40,
-		category: "Special",
+		category: "Physical",
 		name: "Platinum Buster",
 		pp: 5,
 		priority: 0,
@@ -22550,7 +22550,7 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		flags: { protect: 1, mirror: 1, metronome: 1, cantusetwice: 1, contact: 1, punch: 1 },
 		secondary: null,
 		target: "normal",
-		type: "Normal",
+		type: "Fighting",
 	},
 
 	// CAP moves
