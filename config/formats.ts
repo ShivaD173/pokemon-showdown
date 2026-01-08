@@ -575,7 +575,6 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 	{
 		name: "[Gen 9] BSS Reg I",
 		mod: 'gen9',
-		searchShow: false,
 		bestOfDefault: true,
 		ruleset: ['Flat Rules', '!! Adjust Level = 50', 'Min Source Gen = 9', 'VGC Timer', 'Limit Two Restricted'],
 		restricted: ['Restricted Legendary'],
@@ -583,6 +582,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 	{
 		name: "[Gen 9] BSS Reg J",
 		mod: 'gen9',
+		searchShow: false,
 		bestOfDefault: true,
 		ruleset: ['Flat Rules', '!! Adjust Level = 50', 'Min Source Gen = 9', 'VGC Timer', 'Limit Two Restricted'],
 		restricted: ['Restricted Legendary', 'Mythical'],
@@ -644,29 +644,38 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		],
 	},
 	{
-		name: "[Gen 9] VGC 2025 Reg I",
+		name: "[Gen 9] VGC 2023 Reg C",
+		mod: 'gen9predlc',
+		gameType: 'doubles',
+		searchShow: false,
+		bestOfDefault: true,
+		ruleset: ['Flat Rules', '!! Adjust Level = 50', 'Min Source Gen = 9', 'VGC Timer', 'Open Team Sheets', 'Paldea Pokedex'],
+	},
+	{
+		name: "[Gen 9] VGC 2023 Reg D",
+		mod: 'gen9predlc',
+		gameType: 'doubles',
+		searchShow: false,
+		bestOfDefault: true,
+		ruleset: ['Flat Rules', '!! Adjust Level = 50', 'Min Source Gen = 9', 'VGC Timer', 'Open Team Sheets'],
+		banlist: ['Walking Wake', 'Iron Leaves'],
+	},
+	{
+		name: "[Gen 9] VGC 2024 Reg G",
 		mod: 'gen9',
 		gameType: 'doubles',
 		searchShow: false,
 		bestOfDefault: true,
-		ruleset: ['Flat Rules', '!! Adjust Level = 50', 'Min Source Gen = 9', 'VGC Timer', 'Open Team Sheets', 'Limit Two Restricted'],
+		ruleset: ['Flat Rules', '!! Adjust Level = 50', 'Min Source Gen = 9', 'VGC Timer', 'Open Team Sheets', 'Limit One Restricted'],
 		restricted: ['Restricted Legendary'],
 	},
 	{
-		name: "[Gen 9] VGC 2025 Reg J",
+		name: "[Gen 9] VGC 2026 Reg I", // Change back to 2025 after removing the ladder
 		mod: 'gen9',
 		gameType: 'doubles',
 		bestOfDefault: true,
 		ruleset: ['Flat Rules', '!! Adjust Level = 50', 'Min Source Gen = 9', 'VGC Timer', 'Limit Two Restricted'],
-		restricted: ['Restricted Legendary', 'Mythical'],
-	},
-	{
-		name: "[Gen 9] VGC 2025 Reg J (Bo3)",
-		mod: 'gen9',
-		gameType: 'doubles',
-		searchShow: false,
-		ruleset: ['Flat Rules', '!! Adjust Level = 50', 'Min Source Gen = 9', 'VGC Timer', 'Force Open Team Sheets', 'Best of = 3', 'Limit Two Restricted'],
-		restricted: ['Restricted Legendary', 'Mythical'],
+		restricted: ['Restricted Legendary'],
 	},
 	{
 		name: "[Gen 9] VGC 2026 Reg F",
@@ -961,12 +970,12 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		// searchShow: false,
 		ruleset: ['Standard OMs', 'Sleep Moves Clause'],
 		banlist: [
-			'Annihilape​', 'Arceus​', 'Archaludon​', 'Baxcalibur​', 'Calyrex-Ice​', 'Calyrex-Shadow​', 'Chien-Pao​', 'Chi-Yu​', 'Deoxys​', 'Deoxys-Attack​', 'Dialga​', 'Dialga-Origin​',
-			'Espathra​', 'Eternatus​', 'Flutter Mane​', 'Giratina​', 'Giratina-Origin​', 'Gouging Fire​', 'Groudon​', 'Ho-Oh​', 'Iron Bundle​', 'Koraidon​', 'Kyogre​', 'Kyurem-Black​', 'Kyurem-White​',
-			'Landorus-Incarnate', 'Lugia​', 'Lunala​', 'Magearna​', 'Mewtwo​', 'Miraidon​', 'Necrozma-Dawn-Wings​', 'Necrozma-Dusk-Mane​', 'Ogerpon-Hearthflame​', 'Palafin​', 'Palkia​', 'Palkia-Origin​',
-			'Rayquaza​', 'Regieleki​', 'Regigigas​', 'Reshiram​', 'Roaring Moon​', 'Slaking​', 'Shaymin-Sky​', 'Sneasler​', 'Solgaleo​', 'Spectrier​', 'Terapagos​', 'Ursaluna-Bloodmoon​', 'Urshifu',
-			'Urshifu-Rapid-Strike​', 'Volcarona​', 'Zacian​', 'Zacian-Crowned​', 'Zamazenta-Crowned', 'Zekrom​', 'Arena Trap​', 'Moody​', 'Sand Veil​', 'Shadow Tag​', 'Snow Cloak​', '​Bright Powder​',
-			'Choice Band​', 'Choice Specs​', 'King\'s Rock​', 'Razor Fang​', 'Baton Pass​', 'Last Respects​', 'Shed Tail​',
+			'Annihilape', 'Arceus', 'Archaludon', 'Baxcalibur', 'Calyrex-Ice', 'Calyrex-Shadow', 'Chien-Pao', 'Chi-Yu', 'Deoxys-Normal', 'Deoxys-Attack', 'Dialga', 'Dialga-Origin',
+			'Espathra', 'Eternatus', 'Flutter Mane', 'Giratina', 'Giratina-Origin', 'Gouging Fire', 'Groudon', 'Ho-Oh', 'Iron Bundle', 'Koraidon', 'Kyogre', 'Kyurem-Black', 'Kyurem-White',
+			'Landorus-Incarnate', 'Lugia', 'Lunala', 'Magearna', 'Mewtwo', 'Miraidon', 'Necrozma-Dawn-Wings', 'Necrozma-Dusk-Mane', 'Ogerpon-Hearthflame', 'Palafin', 'Palkia', 'Palkia-Origin',
+			'Rayquaza', 'Regieleki', 'Regigigas', 'Reshiram', 'Roaring Moon', 'Slaking', 'Shaymin-Sky', 'Sneasler', 'Solgaleo', 'Spectrier', 'Terapagos', 'Ursaluna-Bloodmoon', 'Urshifu',
+			'Urshifu-Rapid-Strike', 'Volcarona', 'Zacian', 'Zacian-Crowned', 'Zamazenta-Crowned', 'Zekrom', 'Arena Trap', 'Moody', 'Sand Veil', 'Shadow Tag', 'Snow Cloak', 'Bright Powder',
+			'Choice Band', 'Choice Specs', 'King\'s Rock', 'Razor Fang', 'Baton Pass', 'Last Respects', 'Shed Tail',
 		],
 		validateSet(set, teamHas) {
 			const dex = this.dex;
@@ -989,7 +998,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 				return this.validateSet(set, teamHas);
 			}
 			const allThings = [set.ability, set.item, ...set.moves]
-				.map(e => e.replace(/^(item|move|ability):?/i, '')).filter(e => e.length);
+				.map(e => e.replace(/^(item|move|ability):?(?!\s*shield)/i, '')).filter(e => e.length);
 			for (const thing of allThings) {
 				if (!dex.moves.get(thing).exists && !dex.abilities.get(thing).exists && !dex.items.get(thing).exists) {
 					return [`${thing} does not exist.`];
@@ -1020,8 +1029,11 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 			}
 			const setHas: { [k: string]: true } = {};
 			for (const thing of allThings) {
-				if (setHas[this.toID(thing)]) return [`${set.species} has multiple copies of ${thing}.`];
-				setHas[this.toID(thing)] = true;
+				let sanitizedThing: Item | Move | Ability = this.dex.items.get(thing);
+				if (!sanitizedThing.exists) sanitizedThing = this.dex.abilities.get(thing);
+				if (!sanitizedThing.exists) sanitizedThing = this.dex.moves.get(thing);
+				if (setHas[sanitizedThing.id]) return [`${set.species} has multiple copies of ${sanitizedThing.name}.`];
+				setHas[sanitizedThing.id] = true;
 			}
 			const normalAbility = set.ability;
 			if (!abilities.length) {
@@ -1123,22 +1135,22 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 				};
 
 				if (this.dex.items.get(pokemon.set.ability).exists) {
-					pokemon.m.scrambled.items.push({ thing: pokemon.set.ability, inSlot: 'Ability' });
+					pokemon.m.scrambled.items.push({ thing: this.dex.items.get(pokemon.set.ability).name, inSlot: 'Ability' });
 				} else if (this.dex.moves.get(pokemon.set.ability).exists) {
-					pokemon.m.scrambled.moves.push({ thing: pokemon.set.ability, inSlot: 'Ability' });
+					pokemon.m.scrambled.moves.push({ thing: this.dex.moves.get(pokemon.set.ability).name, inSlot: 'Ability' });
 				}
 
 				if (this.dex.abilities.get(pokemon.set.item).exists) {
-					pokemon.m.scrambled.abilities.push({ thing: pokemon.set.item, inSlot: 'Item' });
+					pokemon.m.scrambled.abilities.push({ thing: this.dex.abilities.get(pokemon.set.item).name, inSlot: 'Item' });
 				} else if (this.dex.moves.get(pokemon.set.item).exists) {
-					pokemon.m.scrambled.moves.push({ thing: pokemon.set.item, inSlot: 'Item' });
+					pokemon.m.scrambled.moves.push({ thing: this.dex.moves.get(pokemon.set.item).name, inSlot: 'Item' });
 				}
 
 				for (const move of pokemon.set.moves) {
 					if (this.dex.abilities.get(move).exists) {
-						pokemon.m.scrambled.abilities.push({ thing: move, inSlot: 'Move' });
+						pokemon.m.scrambled.abilities.push({ thing: this.dex.abilities.get(move).name, inSlot: 'Move' });
 					} else if (this.dex.items.get(move).exists) {
-						pokemon.m.scrambled.items.push({ thing: move, inSlot: 'Move' });
+						pokemon.m.scrambled.items.push({ thing: this.dex.items.get(move).name, inSlot: 'Move' });
 					}
 				}
 
@@ -3307,10 +3319,10 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 			'Last Respects', 'Shed Tail', 'Baton Pass + Contrary', 'Baton Pass + Rapid Spin',
 		],
 		unbanlist: [
-			'Beedrill-Base', 'Blastoise-Base', 'Bombirdier', 'Braviary-Hisui', 'Centiskorch', 'Cherrim', 'Cyclizar', 'Delcatty', 'Drampa-Base', 'Falinks-Base',
-			'Galvantula', 'Glastrier', 'Goodra-Base', 'Gothitelle', 'Hypno', 'Klinklang', 'Lurantis-Base', 'Mamoswine', 'Mandibuzz', 'Mismagius', 'Mothim',
-			'Oricorio-Baile', 'Perrserker', 'Revavroom', 'Scrafty-Base', 'Serperior', 'Sinistcha', 'Skarmory-Base', 'Squawkabilly-Green', 'Swoobat', 'Uxie',
-			'Vanilluxe', 'Walrein', 'Wishiwashi', 'Wyrdeer', 'Ultranecrozium Z', 'Solganium Z', 'Lunalium Z', 'Mewnium Z', 'Marshadium Z',
+			'Carracosta', 'Celebi', 'Cinccino', 'Cobalion', 'Cradily', 'Dedenne', 'Fezandipiti', 'Gabite', 'Granbull', 'Greedent', 'Hatterene', 'Heatmor',
+			'Houndstone', 'Indeedee-M', 'Lilligant-Base', 'Medicham-Base', 'Orbeetle', 'Oricorio-Pom-Pom', 'Overqwil', 'Pincurchin', 'Pinsir-Base', 'Rotom-Wash',
+			'Samurott-Base', 'Scovillain-Base', 'Sharpedo-Base', 'Shedinja', 'Shiftry', 'Steelix-Base', 'Tropius', 'Type: Null', 'Typhlosion-Hisui', 'Tyrantrum',
+			'Veluza', 'Vivillon', 'Whimsicott', 'Ultranecrozium Z', 'Solganium Z', 'Lunalium Z', 'Mewnium Z', 'Marshadium Z',
 		],
 		// Stupid hardcode
 		onValidateSet(set, format, setHas, teamHas) {
