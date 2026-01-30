@@ -217,7 +217,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		mod: 'gen2',
 		searchShow: true,
 		ruleset: ['[Gen 2] ZU'],
-		banlist: ['ZU', 'SUBL', 'Swagger', 'Baton Pass'],
+		banlist: ['ZU', 'SUBL', 'Swagger'],
 	},
 	{
 		name: "[Gen 2] IU",
