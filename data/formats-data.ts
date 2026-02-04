@@ -420,7 +420,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		natDexTier: "SU",
 	},
 	dugtrioalola: {
-		tier: "SU",
+		tier: "IU",
 		doublesTier: "(DUU)",
 		natDexTier: "SU",
 	},
@@ -667,7 +667,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		tier: "LC",
 	},
 	dodrio: {
-		tier: "SU",
+		tier: "IU",
 		doublesTier: "(DUU)",
 		natDexTier: "SU",
 	},
@@ -1435,7 +1435,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		doublesTier: "DUU",
 	},
 	honchkrow: {
-		tier: "SU",
+		tier: "IU",
 		doublesTier: "(DUU)",
 		natDexTier: "SU",
 	},
