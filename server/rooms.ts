@@ -1648,6 +1648,9 @@ export class GlobalRoomState {
 		if (!id || id.endsWith("thegirl") || id.endsWith("tehgirl") || id.endsWith("thewoman")) {
 			return false;
 		}
+		if (id === "playerwhitney" || id === "playerkorrina") {
+			return false;
+		}
 		return true;
 	}
 
