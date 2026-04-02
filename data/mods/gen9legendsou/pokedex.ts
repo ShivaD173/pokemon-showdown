@@ -64,10 +64,6 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 		inherit: true,
 		abilities: { 0: "Sharpness" },
 	},
-	froslassmega: {
-		inherit: true,
-		abilities: { 0: "Snow Warning" },
-	},
 	garchompmegaz: {
 		inherit: true,
 		abilities: { 0: "Rough Skin" },
@@ -83,10 +79,6 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 	darkraimega: {
 		inherit: true,
 		abilities: { 0: "Dark Aura" },
-	},
-	emboarmega: {
-		inherit: true,
-		abilities: { 0: "Supreme Overlord" },
 	},
 	excadrillmega: {
 		inherit: true,

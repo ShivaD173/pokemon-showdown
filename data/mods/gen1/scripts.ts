@@ -25,24 +25,26 @@ export const Scripts: ModdedBattleScriptsData = {
 	// BattlePokemon scripts.
 	pokemon: {
 		inherit: true,
-		// In gen 1, a Pokémon can have two instances of the same move using Mimic
-		// we need to make sure to deduct PP from a move that has PP left
-		deductPP(move, amount, target) {
-			move = this.battle.dex.moves.get(move);
-			// first loop: get the first instance with PP left
-			// second loop: get the first instance, even if it has no PP left
-			for (let i = 0; i < 2; i++) {
-				for (const ppData of this.moveSlots) {
-					if (ppData.id !== move.id) continue;
-					ppData.used = true;
-					if (!ppData.pp && i === 0) continue;
+		deductPP(move, amount) {
+			// deduct PP based on side.lastSelectedMoveSlot
+			const ppData = this.getMoveSlot(this.side.lastSelectedMoveSlot);
+			if (!ppData) return 0;
+			ppData.used = true;
 
-					if (!amount) amount = 1;
-					ppData.pp -= amount;
-					return amount;
-				}
+			if (!amount) amount = 1;
+			ppData.pp -= amount;
+
+			if (ppData.pp < 0) {
+				this.battle.hint("In Gen 1, if a Pokémon is forced to use a move with 0 PP, the move will underflow to have 63 PP.");
 			}
-			return 0;
+			ppData.pp = ((ppData.pp % 64) + 64) % 64;
+
+			if (ppData.virtual && !this.transformed) {
+				// sync PP from Mimic's slot, or Metronome/Mirror Move that called Mimic
+				this.baseMoveSlots[this.side.lastSelectedMoveSlot].pp = ppData.pp;
+			}
+
+			return amount;
 		},
 		getStat(statName, unmodified) {
 			// @ts-expect-error type checking prevents 'hp' from being passed, but we're paranoid
@@ -167,7 +169,7 @@ export const Scripts: ModdedBattleScriptsData = {
 
 			this.battle.setActiveMove(move, pokemon, target);
 
-			if (pokemon.moveThisTurn || !this.battle.runEvent('BeforeMove', pokemon, target, move)) {
+			if (pokemon.moveThisTurn || move.id === 'cantmove' || !this.battle.runEvent('BeforeMove', pokemon, target, move)) {
 				this.battle.clearActiveMove(true);
 				// This is only run for sleep.
 				this.battle.runEvent('AfterMoveSelf', pokemon, target, move);
@@ -178,27 +180,29 @@ export const Scripts: ModdedBattleScriptsData = {
 				return;
 			}
 
-			const lockedMove = pokemon.getLockedMove();
-			if (lockedMove) sourceEffect = move;
+			if (move.id !== 'struggle') {
+				const lockedMove = pokemon.getLockedMove();
+				if (lockedMove) sourceEffect = move;
 
-			// Locked moves don't deduct PP
-			// Two-turn moves like Sky Attack deduct PP on their second turn.
-			if (!lockedMove || pokemon.volatiles['twoturnmove']) {
-				const ppMove = pokemon.volatiles['twoturnmove']?.ppMove || move.id;
-				pokemon.deductPP(ppMove, null, target);
-				const moveSlot = pokemon.getMoveData(ppMove);
-				if (moveSlot && moveSlot.pp < 0) {
-					moveSlot.pp += 64;
-					this.battle.hint("In Gen 1, if a pokemon is forced to use a move with 0 PP, the move will underflow to have 63 PP.");
+				// Locked moves don't deduct PP
+				// Two-turn moves like Sky Attack deduct PP on their second turn.
+				if ((!lockedMove && !TWO_TURN_MOVES.includes(move.id)) || pokemon.volatiles['twoturnmove']) {
+					const moveSlot = pokemon.getMoveSlot(pokemon.side.lastSelectedMoveSlot);
+					if (moveSlot) pokemon.deductPP(moveSlot.id, null, target);
+				}
+
+				if (move.id !== pokemon.getMoveSlot(pokemon.side.lastSelectedMoveSlot)?.id) {
+					this.battle.hint("Desync Clause Mod activated!");
+					this.battle.hint(
+						"In Gen 1, a Pokémon that thaws out might try to use a move that doesn't match the move " +
+						"of the slot it last selected (switches reset to the first slot).",
+					);
+					this.battle.clearActiveMove(true);
+					return;
 				}
 			}
 
 			this.useMove(move, pokemon, { target, sourceEffect });
-
-			if (pokemon.volatiles['twoturnmove']) {
-				pokemon.deductPP(move, -1, target);
-				pokemon.volatiles['twoturnmove'].ppMove = move.id;
-			}
 		},
 		// This function deals with AfterMoveSelf events.
 		// This leads with partial trapping moves shenanigans after the move has been used.
@@ -213,6 +217,19 @@ export const Scripts: ModdedBattleScriptsData = {
 				target = pokemon;
 			}
 			if (sourceEffect) move.sourceEffect = sourceEffect.id;
+
+			if (sourceEffect?.id === 'metronome' || sourceEffect?.id === 'mirrormove') {
+				if (TWO_TURN_MOVES.includes(move.id)) {
+					const moveSlot = pokemon.getMoveSlot(pokemon.side.lastSelectedMoveSlot);
+					if (moveSlot) pokemon.deductPP(moveSlot.id, -1, target);
+				}
+				// FIXME: this should happen even if the slot was empty before Transform
+				// https://bulbapedia.bulbagarden.net/wiki/List_of_Transform_glitches#Transform_.2B_Mirror_Move.2FMetronome_PP_error
+				if (pokemon.transformed && pokemon.side.lastSelectedMoveSlot < pokemon.baseMoveSlots.length) {
+					pokemon.baseMoveSlots[pokemon.side.lastSelectedMoveSlot].pp += 1;
+					pokemon.baseMoveSlots[pokemon.side.lastSelectedMoveSlot].pp %= 64;
+				}
+			}
 
 			this.battle.singleEvent('ModifyMove', move, null, pokemon, target, move, move);
 			if (baseMove.target !== move.target) {
