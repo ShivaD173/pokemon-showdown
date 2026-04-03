@@ -2294,8 +2294,8 @@ export const AbilitiesText: { [id: IDEntry]: AbilityText } = {
 	// GAY
 	triplethreat: {
 		name: "Triple Threat",
-		desc: "Moves hit exactly 3 times at 1/3 power and halved effects.",
-		shortDesc: "Moves hit exactly 3 times at 1/3 power and halved effects.",
+		desc: "Moves hit exactly 3 times at 35% power (rounded down) and halved effects.",
+		shortDesc: "Moves hit exactly 3 times at 35% power and halved effects.",
 	},
 	mindsurfer: {
 		name: "Mind Surfer",

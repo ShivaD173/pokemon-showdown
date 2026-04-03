@@ -5647,7 +5647,6 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 
 	// GAY
 	triplethreat: {
-		onModifyMovePriority: 0,
 		onModifyMove(move) {
 			if (move.secondaries) {
 				this.debug('halving secondary chance');
@@ -5658,7 +5657,7 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 			if (move.self?.chance) move.self.chance *= 0.5;
 			if (move.basePower > 0) {
 				if (!move.multihit) {
-					move.basePower = this.modify(move.basePower, 1366, 4096);
+					move.multihitType = 'triplethreat';
 				}
 				move.multihit = 3;
 			}

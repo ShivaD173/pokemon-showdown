@@ -1851,6 +1851,10 @@ export class BattleActions {
 			baseDamage = this.battle.modify(baseDamage, bondModifier);
 		}
 
+		if (move.multihitType === 'triplethreat') {
+			baseDamage = this.battle.modify(baseDamage, 1434, 4096);
+		}
+
 		// weather modifier
 		baseDamage = this.battle.runEvent('WeatherModifyDamage', pokemon, target, move, baseDamage);
 
