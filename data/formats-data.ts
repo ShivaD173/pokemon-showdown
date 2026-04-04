@@ -464,7 +464,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		tier: "LC",
 	},
 	primeape: {
-		tier: "SU",
+		tier: "SUBL",
 		doublesTier: "NFE",
 		natDexTier: "NFE",
 	},
