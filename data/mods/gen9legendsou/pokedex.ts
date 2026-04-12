@@ -18,7 +18,6 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 	starmiemega: {
 		inherit: true,
 		baseStats: { hp: 60, atk: 100, def: 105, spa: 130, spd: 105, spe: 120 },
-		abilities: { 0: "Pure Power" },
 	},
 	dragonitemega: {
 		inherit: true,
@@ -39,14 +38,6 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 	absolmegaz: {
 		inherit: true,
 		abilities: { 0: "Technician" },
-	},
-	chimechomega: {
-		inherit: true,
-		abilities: { 0: "Levitate" },
-	},
-	skarmorymega: {
-		inherit: true,
-		abilities: { 0: "Tough Claws" },
 	},
 	mawilemega: {
 		inherit: true,
@@ -136,10 +127,6 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 		inherit: true,
 		abilities: { 0: "Regenerator" },
 	},
-	floettemega: {
-		inherit: true,
-		abilities: { 0: "Regenerator" },
-	},
 	malamarmega: {
 		inherit: true,
 		abilities: { 0: "Contrary" },
@@ -148,17 +135,9 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 		inherit: true,
 		abilities: { 0: "Tough Claws" },
 	},
-	hawluchamega: {
-		inherit: true,
-		abilities: { 0: "Stamina" },
-	},
 	zygardemega: {
 		inherit: true,
 		abilities: { 0: "Aura Break" },
-	},
-	crabominablemega: {
-		inherit: true,
-		abilities: { 0: "Ice Scales" },
 	},
 	golisopodmega: {
 		inherit: true,

@@ -603,7 +603,7 @@ export class Battle {
 			this.debug(eventid + ' handler suppressed by Mold Breaker');
 			return relayVar;
 		}
-		if (eventid !== 'Start' && eventid !== 'TakeItem' && effect.effectType === 'Item' &&
+		if (eventid !== 'Start' && eventid !== 'TakeItem' && eventid !== 'SetAbility' && effect.effectType === 'Item' &&
 			(target instanceof Pokemon) && target.ignoringItem()) {
 			this.debug(eventid + ' handler suppressed by Embargo, Klutz or Magic Room');
 			return relayVar;
@@ -1294,6 +1294,17 @@ export class Battle {
 			return false;
 		}
 		return !!move.flags['contact'];
+	}
+
+	checkMoveBreaksProtect(move: ActiveMove, attacker: Pokemon, defender: Pokemon, blockStatus = true) {
+		if (move.flags['protect'] && (move.category !== 'Status' || blockStatus)) {
+			return false;
+		}
+		if ((move.isZOrMaxPowered || attacker.hasAbility('piercingdrill')) &&
+			!['gmaxoneblow', 'gmaxrapidflow'].includes(move.id)) {
+			defender.getMoveHitData(move).brokeProtect = true;
+		}
+		return true;
 	}
 
 	skillSwap(source: Pokemon, target: Pokemon) {
@@ -2372,6 +2383,13 @@ export class Battle {
 		return stat;
 	}
 
+	calculatePP(move: Move, ppUps = 3) {
+		if (move.noPPBoosts) return move.pp;
+		let pp = move.pp * (5 + ppUps) / 5;
+		if (this.gen <= 2 && move.pp === 40) pp -= ppUps;
+		return pp;
+	}
+
 	finalModify(relayVar: number) {
 		relayVar = this.modify(relayVar, this.event.modifier);
 		this.event.modifier = 1;
@@ -2654,7 +2672,13 @@ export class Battle {
 		if (!action.pokemon) {
 			action.speed = 1;
 		} else {
-			action.speed = action.pokemon.getActionSpeed();
+			if (this.gen <= 4 && action.choice === 'move' && action.fractionalPriority < 0) {
+				// in Gen 4, Pokemon with decrease fractional priority act in reverse speed order
+				// ignores Trick Room, does not ignore boosts and Simple
+				action.speed = -action.pokemon.getStat('spe', false, false);
+			} else {
+				action.speed = action.pokemon.getActionSpeed();
+			}
 		}
 	}
 
@@ -3194,8 +3218,8 @@ export class Battle {
 					ivs: null!,
 					level: set.level,
 				};
-				if (this.gen === 8) newSet.gigantamax = set.gigantamax;
-				if (this.gen === 9) newSet.teraType = set.teraType;
+				if (this.gen === 8 && !this.ruleTable.has('dynamaxclause')) newSet.gigantamax = set.gigantamax;
+				if (this.gen === 9 && !this.ruleTable.has('terastalclause')) newSet.teraType = set.teraType;
 				// Only display Hidden Power type if the Pokemon has Hidden Power
 				// This is based on how team sheets were written in past VGC formats
 				if (set.moves.some(m => this.dex.moves.get(m).id === 'hiddenpower')) newSet.hpType = set.hpType;

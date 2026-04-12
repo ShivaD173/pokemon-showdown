@@ -281,9 +281,10 @@ interface ModdedBattlePokemon {
 		this: Pokemon, move: string | Move, amount?: number | null, target?: Pokemon | null | false
 	) => number;
 	eatItem?: (this: Pokemon, force?: boolean, source?: Pokemon, sourceEffect?: Effect) => boolean;
-	effectiveWeather?: (this: Pokemon) => ID;
+	effectiveWeather?: (this: Pokemon, message?: string | boolean) => ID;
 	formeChange?: (
-		this: Pokemon, speciesId: string | Species, source: Effect, isPermanent?: boolean, message?: string
+		this: Pokemon, speciesId: string | Species, source: Effect, isPermanent?: boolean, abilitySlot?: string,
+		message?: string,
 	) => boolean;
 	hasType?: (this: Pokemon, type: string | string[]) => boolean;
 	getAbility?: (this: Pokemon) => Ability;
@@ -386,8 +387,12 @@ interface ModdedBattleScriptsData extends Partial<BattleScriptsData> {
 	win?: (this: Battle, side?: SideID | '' | Side | null) => boolean;
 	faintMessages?: (this: Battle, lastFirst?: boolean, forceCheck?: boolean, checkWin?: boolean) => boolean | undefined;
 	tiebreak?: (this: Battle) => boolean;
+	calculatePP?: (this: Battle, move: Move, ppUps?: number) => number;
 	checkMoveMakesContact?: (
 		this: Battle, move: ActiveMove, attacker: Pokemon, defender: Pokemon, announcePads?: boolean
+	) => boolean;
+	checkMoveBreaksProtect?: (
+		this: Battle, move: ActiveMove, attacker: Pokemon, defender: Pokemon, blockStatus?: boolean
 	) => boolean;
 	checkWin?: (this: Battle, faintQueue?: Battle['faintQueue'][0]) => true | undefined;
 	fieldEvent?: (this: Battle, eventid: string, targets?: Pokemon[]) => void;
