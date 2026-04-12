@@ -2385,7 +2385,7 @@ export class Battle {
 
 	calculatePP(move: Move, ppUps = 3) {
 		if (move.noPPBoosts) return move.pp;
-		let pp = move.pp * (5 + ppUps) / 5;
+		let pp = Math.floor(move.pp * (5 + ppUps) / 5);
 		if (this.gen <= 2 && move.pp === 40) pp -= ppUps;
 		return pp;
 	}
