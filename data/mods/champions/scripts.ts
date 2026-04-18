@@ -30,16 +30,6 @@ export const Scripts: ModdedBattleScriptsData = {
 	calculatePP(move, ppUps) {
 		return move.noPPBoosts ? move.pp : (move.pp / 5 + 1) * 4;
 	},
-	checkMoveBreaksProtect(move, attacker, defender, blockStatus = true) {
-		if (move.flags['protect'] && (move.category !== 'Status' || blockStatus)) {
-			return false;
-		}
-		if ((move.isZOrMaxPowered || attacker.hasAbility(['piercingdrill', 'unseenfist'])) &&
-			!['gmaxoneblow', 'gmaxrapidflow'].includes(move.id)) {
-			defender.getMoveHitData(move).brokeProtect = true;
-		}
-		return true;
-	},
 	pokemon: {
 		// Remove Trick Room underflow
 		getActionSpeed() {
@@ -182,90 +172,23 @@ export const Scripts: ModdedBattleScriptsData = {
 			}
 			return true;
 		},
-		// Disable Fake Out if the user has already acted since switching in
-		getMoves(lockedMove, restrictData) {
-			if (lockedMove) {
-				lockedMove = this.battle.toID(lockedMove);
-				if (lockedMove === 'recharge') {
-					return [{
-						move: 'Recharge',
-						id: 'recharge' as ID,
-					}];
-				}
-				for (const moveSlot of this.moveSlots) {
-					if (moveSlot.id !== lockedMove) continue;
-					return [{
-						move: moveSlot.move,
-						id: moveSlot.id,
-					}];
-				}
-				// does this happen?
-				return [{
-					move: this.battle.dex.moves.get(lockedMove).name,
-					id: lockedMove,
-				}];
-			}
-			const moves = [];
-			let hasValidMove = false;
-			for (const moveSlot of this.moveSlots) {
-				let moveName = moveSlot.move;
-				if (moveSlot.id === 'hiddenpower') {
-					moveName = `Hidden Power ${this.hpType}`;
-					if (this.battle.gen < 6) moveName += ` ${this.hpPower}`;
-				} else if (moveSlot.id === 'return' || moveSlot.id === 'frustration') {
-					const basePowerCallback = this.battle.dex.moves.get(moveSlot.id).basePowerCallback as (pokemon: Pokemon) => number;
-					moveName += ` ${basePowerCallback(this)}`;
-				}
-				let target = moveSlot.target;
-				switch (moveSlot.id) {
-				case 'curse':
-					if (!this.hasType('Ghost')) {
-						target = this.battle.dex.moves.get('curse').nonGhostTarget;
-					}
-					break;
-				case 'pollenpuff':
-					// Heal Block only prevents Pollen Puff from targeting an ally when the user has Heal Block
-					if (this.volatiles['healblock']) {
-						target = 'adjacentFoe';
-					}
-					break;
-				case 'terastarstorm':
-					if (this.species.name === 'Terapagos-Stellar') {
-						target = 'allAdjacentFoes';
-					}
-					break;
-				}
-				let disabled = moveSlot.disabled;
-				if (this.volatiles['dynamax']) {
-					// if each of a Pokemon's base moves are disabled by one of these effects, it will Struggle
-					const canCauseStruggle = ['Encore', 'Disable', 'Taunt', 'Assault Vest', 'Belch', 'Stuff Cheeks'];
-					disabled = this.maxMoveDisabled(moveSlot.id) || disabled && canCauseStruggle.includes(moveSlot.disabledSource!);
-				} else if (moveSlot.pp <= 0 || (moveSlot.id === 'fakeout' && this.activeMoveActions > 0)) {
-					disabled = true;
-				}
-
-				if (disabled === 'hidden') {
-					disabled = !restrictData;
-				}
-				if (!disabled) {
-					hasValidMove = true;
-				}
-
-				moves.push({
-					move: moveName,
-					id: moveSlot.id,
-					pp: moveSlot.pp,
-					maxpp: moveSlot.maxpp,
-					target,
-					disabled,
-				});
-			}
-			return hasValidMove ? moves : [];
-		},
 	},
 	actions: {
 		canTerastallize(pokemon) {
 			return null;
+		},
+		canMegaEvo(pokemon: Pokemon) {
+			const species = pokemon.baseSpecies;
+			const altForme = species.otherFormes && this.dex.species.get(species.otherFormes[0]);
+			const item = pokemon.getItem();
+			// Mega Rayquaza
+			if ((this.battle.gen <= 7 || this.battle.ruleTable.has('+pokemontag:past') ||
+				this.battle.ruleTable.has('+pokemontag:future')) &&
+				altForme?.isMega && altForme?.requiredMove &&
+				pokemon.baseMoves.includes(toID(altForme.requiredMove)) && !item.zMove) {
+				return altForme.name;
+			}
+			return item.megaStone?.[species.name] || null;
 		},
 		// Announce 4x and 0.25x effectiveness
 		modifyDamage(baseDamage, pokemon, target, move, suppressMessages) {
@@ -370,9 +293,13 @@ export const Scripts: ModdedBattleScriptsData = {
 			// Final modifier. Modifiers that modify damage after min damage check, such as Life Orb.
 			baseDamage = this.battle.runEvent('ModifyDamage', pokemon, target, move, baseDamage);
 
-			if (target.getMoveHitData(move).brokeProtect) {
+			const bypassProtect = target.getMoveHitData(move).bypassProtect;
+			if (bypassProtect) {
 				baseDamage = this.battle.modify(baseDamage, 0.25);
-				if (move.isZOrMaxPowered) this.battle.add('-zbroken', target);
+				if (bypassProtect !== true && bypassProtect.effectType === 'Ability') {
+					this.battle.add('-ability', pokemon, bypassProtect.name);
+				}
+				this.battle.add('-zbroken', target);
 			}
 
 			// Generation 6-7 moves the check for minimum 1 damage after the final modifier...

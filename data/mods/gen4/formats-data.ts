@@ -525,7 +525,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "(OU)",
 	},
 	articuno: {
-		tier: "NU",
+		tier: "PUBL",
 	},
 	zapdos: {
 		tier: "OU",
@@ -865,7 +865,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "LC",
 	},
 	linoone: {
-		tier: "NU",
+		tier: "PUBL",
 	},
 	wurmple: {
 		tier: "11U",
@@ -1024,7 +1024,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "SU",
 	},
 	roselia: {
-		tier: "NU",
+		tier: "PUBL",
 	},
 	roserade: {
 		tier: "OU",
