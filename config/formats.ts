@@ -696,6 +696,12 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		banlist: ['AG', 'Uber', 'Moody', 'Baton Pass', 'Last Respects', 'Shed Tail'],
 	},
 	{
+		name: "[Gen 9 Champions] SU",
+		mod: 'champions',
+		ruleset: ['[Gen 9 Champions] OU'],
+		banlist: ['OU'],
+	},
+	{
 		name: "[Gen 9 Champions] BSS Reg M-A",
 		mod: 'champions',
 		bestOfDefault: true,
@@ -3505,7 +3511,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		mod: 'gen9',
 		searchShow: false,
 		ruleset: [
-			'Standard NatDex', 'Terastal Clause', '!Obtainable Moves', '!Team Preview', 'Camomons Mod', 'CFZ Clause',
+			'Standard OMs', 'NatDex Mod', 'Terastal Clause', '!Obtainable Moves', '!Team Preview', 'Camomons Mod', 'CFZ Clause',
 			'Sleep Moves Clause', 'Team Type Preview',
 		],
 		banlist: [
