@@ -11,10 +11,10 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 		inherit: true,
 		baseStats: { hp: 60, atk: 100, def: 105, spa: 130, spd: 105, spe: 120 },
 	},
-	ampharosmega: {
-		inherit: true,
-		abilities: { 0: "Fluffy" },
-	},
+	// ampharosmega: {
+	// 	inherit: true,
+	// 	abilities: { 0: "Fluffy" },
+	// },
 	absolmegaz: {
 		inherit: true,
 		abilities: { 0: "Technician" },
@@ -31,10 +31,10 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 		inherit: true,
 		abilities: { 0: "Tough Claws" },
 	},
-	gallademega: {
-		inherit: true,
-		abilities: { 0: "Sharpness" },
-	},
+	// gallademega: {
+	// 	inherit: true,
+	// 	abilities: { 0: "Sharpness" },
+	// },
 	garchompmegaz: {
 		inherit: true,
 		abilities: { 0: "Rough Skin" },
@@ -51,10 +51,10 @@ export const Pokedex: import('../../../sim/dex-species').ModdedSpeciesDataTable 
 		inherit: true,
 		abilities: { 0: "Dark Aura" },
 	},
-	audinomega: {
-		inherit: true,
-		abilities: { 0: "Regenerator" },
-	},
+	// audinomega: {
+	// 	inherit: true,
+	// 	abilities: { 0: "Regenerator" },
+	// },
 	scolipedemega: {
 		inherit: true,
 		abilities: { 0: "Tinted Lens" },
