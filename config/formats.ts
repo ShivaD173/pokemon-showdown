@@ -4147,7 +4147,7 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 			`&bullet; <a href="https://www.smogon.com/forums/posts/10749086">List of Changes</a>`,
 		],
 		mod: 'gen9legendsou',
-		ruleset: ['Standard Draft', '+Past', 'Min Source Gen = 9'],
+		ruleset: ['Standard Draft', '+Past', 'Tera Type Preview', 'Min Source Gen = 9'],
 	},
 
 	// Randomized Metas
