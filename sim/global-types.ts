@@ -39,7 +39,7 @@ type Nonstandard = 'Past' | 'Future' | 'Unobtainable' | 'CAP' | 'LGPE' | 'Custom
 type PokemonSet = import('./teams').PokemonSet;
 
 declare namespace TierTypes {
-	export type Singles = "AG" | "Uber" | "(Uber)" | "OU" | "(OU)" | "UUBL" | "UU" | "RUBL" | "RU" | "(RU)" | "NUBL" |
+	export type Singles = "AG" | "Uber" | "(AG)" | "OU" | "(OU)" | "UUBL" | "UU" | "RUBL" | "RU" | "(RU)" | "NUBL" |
 		"NU" | "(NU)" | "PUBL" | "PU" | "(PU)" | "ZUBL" | "ZU" | "SUBL" | "SU" | "IUBL" | "IU" | "UR" | "6UBL" | "6U" |
 		"7UBL" | "7U" | "8UBL" | "8U" | "9UBL" | "9U" | "10UBL" | "10U" | "11UBL" | "11U" | "NFE" | "LC";
 	export type Doubles = "DUber" | "(DUber)" | "DOU" | "(DOU)" | "DBL" | "DUU" | "(DUU)" | "NFE" | "LC";
