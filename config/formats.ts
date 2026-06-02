@@ -6163,11 +6163,19 @@ export const Formats: import('../sim/dex-formats').FormatList = [
 		unbanlist: ['Mean Look + Baton Pass', 'Spider Web + Baton Pass'],
 	},
 	{
+		name: "[Gen 2] RU",
+		mod: 'gen2',
+		searchShow: false,
+		ruleset: ['[Gen 2] UU'],
+		banlist: ['UU', 'RUBL', 'Swagger'],
+		unbanlist: ['Agility + Baton Pass'],
+	},
+	{
 		name: "[Gen 2] NU",
 		mod: 'gen2',
 		searchShow: false,
 		ruleset: ['[Gen 2] UU'],
-		banlist: ['UU', 'NUBL', 'Swagger'],
+		banlist: ['UU', 'RUBL', 'RU', 'NUBL', 'Swagger'],
 		unbanlist: ['Agility + Baton Pass'],
 	},
 	{
