@@ -138,7 +138,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "RU",
 	},
 	oddish: {
-		tier: "IU",
+		tier: "SU",
 	},
 	gloom: {
 		tier: "NU",
@@ -213,7 +213,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "OU",
 	},
 	machop: {
-		tier: "IU",
+		tier: "SU",
 	},
 	machoke: {
 		tier: "PU",
@@ -288,7 +288,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "RU",
 	},
 	shellder: {
-		tier: "IU",
+		tier: "SU",
 	},
 	cloyster: {
 		tier: "OU",
@@ -387,7 +387,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "UUBL",
 	},
 	goldeen: {
-		tier: "IU",
+		tier: "SU",
 	},
 	seaking: {
 		tier: "PU",
@@ -510,7 +510,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "Uber",
 	},
 	chikorita: {
-		tier: "IU",
+		tier: "SU",
 	},
 	bayleef: {
 		tier: "PU",
@@ -600,7 +600,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "9U",
 	},
 	skiploom: {
-		tier: "IU",
+		tier: "SU",
 	},
 	jumpluff: {
 		tier: "RU",
