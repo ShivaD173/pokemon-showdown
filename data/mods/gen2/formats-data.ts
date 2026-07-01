@@ -81,7 +81,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "RU",
 	},
 	sandshrew: {
-		tier: "ZU",
+		tier: "SU",
 	},
 	sandslash: {
 		tier: "RU",
@@ -153,7 +153,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "8U",
 	},
 	parasect: {
-		tier: "ZU",
+		tier: "SU",
 	},
 	venonat: {
 		tier: "IU",
@@ -162,7 +162,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "PU",
 	},
 	diglett: {
-		tier: "SU",
+		tier: "ZU",
 	},
 	dugtrio: {
 		tier: "NU",
@@ -252,7 +252,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "NU",
 	},
 	slowpoke: {
-		tier: "SU",
+		tier: "ZU",
 	},
 	slowbro: {
 		tier: "UU",
@@ -420,7 +420,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "UU",
 	},
 	magby: {
-		tier: "ZU",
+		tier: "SU",
 	},
 	magmar: {
 		tier: "NU",
@@ -495,7 +495,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "UUBL",
 	},
 	dratini: {
-		tier: "ZU",
+		tier: "SU",
 	},
 	dragonair: {
 		tier: "NU",
