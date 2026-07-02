@@ -34,7 +34,7 @@ type SparseStatsTable = Partial<StatsTable>;
 type BoostID = StatIDExceptHP | 'accuracy' | 'evasion';
 type BoostsTable = { [boost in BoostID]: number };
 type SparseBoostsTable = Partial<BoostsTable>;
-type Nonstandard = 'Past' | 'Future' | 'Unobtainable' | 'CAP' | 'LGPE' | 'Custom' | 'Gigantamax';
+type Nonstandard = 'Past' | 'Future' | 'Unobtainable' | 'CAP' | 'LGPE' | 'Custom';
 
 type PokemonSet = import('./teams').PokemonSet;
 
@@ -99,6 +99,10 @@ interface CommonHandlers {
 	VoidSourceMove: (this: Battle, source: Pokemon, target: Pokemon, move: ActiveMove) => void;
 }
 
+type TableGenericTag = "True Past" | "Past Unobtainable";
+type TableSpeciesTag = "Mythical" | "Restricted Legendary" | "Sub-Legendary" | "Ultra Beast" | "Paradox" | "Pokestar";
+type TableTag = TableGenericTag | TableSpeciesTag;
+
 interface EffectData {
 	name?: string;
 	desc?: string;
@@ -106,7 +110,10 @@ interface EffectData {
 	durationCallback?: (this: Battle, target: Pokemon, source: Pokemon, effect: Effect | null) => number;
 	effectType?: string;
 	infiltrates?: boolean;
+	placeholderFor?: string;
 	isNonstandard?: Nonstandard | null;
+	/** "Are you or are you not on this list" data. */
+	tags?: TableTag[];
 	shortDesc?: string;
 }
 
