@@ -1468,7 +1468,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		tier: "NFE",
 	},
 	farigiraf: {
-		tier: "ZU",
+		tier: "SUBL",
 		doublesTier: "DOU",
 		natDexTier: "SU",
 	},
@@ -2028,7 +2028,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		tier: "NFE",
 	},
 	medicham: {
-		tier: "ZU",
+		tier: "SUBL",
 		doublesTier: "(DUU)",
 		natDexTier: "ZUBL",
 	},
@@ -5419,7 +5419,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		natDexTier: "UUBL",
 	},
 	veluza: {
-		tier: "ZU",
+		tier: "SUBL",
 		doublesTier: "(DUU)",
 		natDexTier: "SU",
 	},
