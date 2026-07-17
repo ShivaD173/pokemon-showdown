@@ -10,6 +10,7 @@ import * as crypto from 'crypto';
 
 /** Maximum amount of teams a user can have stored at once. */
 const MAX_TEAMS = 200;
+const MAX_SETS = 300; // 50 teams, 6 sets each
 /** Max teams that can be viewed in a search */
 const MAX_SEARCH = 3000;
 const ALPHABET = '0123456789abcdefghijklmnopqrstuvwxyz'.split('');
@@ -171,8 +172,8 @@ export const TeamsHandler = new class {
 			connection.popup('Invalid team:\n\n' + team.packedTeam);
 			return null;
 		}
-		if (sets.length > 50) {
-			connection.popup("Your team has too many Pokemon (max 50).");
+		if (sets.length > MAX_SETS) {
+			connection.popup(`Your team has too many Pokemon (max ${MAX_SETS}).`);
 		}
 		let unownWord = '';
 		for (const set of sets) {
@@ -317,17 +318,13 @@ export const TeamsHandler = new class {
 			Monitor.crashlog(new Error(`Malformed team drawn from database`), 'A teams chat page', teamData);
 			throw new Chat.ErrorMessage("Oops! Something went wrong. Try again later.");
 		}
-		let link = `view-team-${teamData.teamid}`;
-		if (teamData.private) {
-			link += `-${teamData.private}`;
-		}
-		buf += `<br /><a class="subtle" href="/${link}">`;
-		buf += team.map(set => `<psicon pokemon="${set.species}" />`).join(' ');
-		buf += `</a><br /><a href="/${link}">${!isFull ? 'View full team' : 'Shareable link to team'}</a><br />`;
 		const url = `${teamData.teamid}${teamData.private ? `-${teamData.private}` : ''}`;
-		buf += ` <small>(you can also copy/paste <code>&lt;&lt;view-team-${url}&gt;&gt;</code> on-site `;
-		const fullUrl = `https://psim.us/t/${url}`;
-		buf += `or share <code><a href="${fullUrl}">${fullUrl}</a></code> off-site!)</small>`;
+		buf += `<br /><a class="subtle" href="/view-team-${url}">`;
+		buf += team.map(set => `<psicon pokemon="${set.species}" />`).join(' ');
+		buf += `</a><br /><a href="https://psim.us/t/${url}">${!isFull ? 'View full team' : 'Shareable link to team'}</a>`;
+		buf += ` <small>(https://psim.us/t/${url})</small>`;
+		buf += `<br />`;
+		buf += ` <small>(you can also copy/paste <code>&lt;&lt;view-team-${url}&gt;&gt;</code> to share on-site)</small>`;
 
 		if (user && (teamData.ownerid === user.id || user.can('rangeban'))) {
 			buf += `<br />`;

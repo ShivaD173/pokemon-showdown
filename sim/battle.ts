@@ -2108,7 +2108,7 @@ export class Battle {
 			}
 			if (targetDamage !== 0) targetDamage = this.clampIntRange(targetDamage, 1);
 
-			if (effect.id !== 'struggle-recoil') { // Struggle recoil is not affected by effects
+			if (effect.id !== 'strugglerecoil') { // Struggle recoil is not affected by effects
 				if (effect.effectType === 'Weather' && !target.runStatusImmunity(effect.id)) {
 					this.debug('weather immunity');
 					retVals[i] = 0;
@@ -2157,12 +2157,6 @@ export class Battle {
 			}
 
 			if (targetDamage && effect.effectType === 'Move') {
-				if (this.gen <= 1 && effect.recoil && source) {
-					if (this.dex.currentMod !== 'gen1stadium' || target.hp > 0) {
-						const amount = this.clampIntRange(Math.floor(targetDamage * effect.recoil[0] / effect.recoil[1]), 1);
-						this.damage(amount, source, target, 'recoil');
-					}
-				}
 				if (this.gen <= 4 && effect.drain && source) {
 					const amount = this.clampIntRange(Math.floor(targetDamage * effect.drain[0] / effect.drain[1]), 1);
 					// Draining can be countered in gen 1
@@ -2185,17 +2179,7 @@ export class Battle {
 					this.faintMessages(true);
 					if (this.gen <= 2) {
 						target.faint();
-						if (this.gen <= 1) {
-							this.queue.clear();
-							// Fainting clears accumulated Bide damage
-							for (const pokemon of this.getAllActive()) {
-								if (pokemon.volatiles['bide']?.damage) {
-									pokemon.volatiles['bide'].damage = 0;
-									this.hint("Desync Clause Mod activated!");
-									this.hint("In Gen 1, Bide's accumulated damage is reset to 0 when a Pokemon faints.");
-								}
-							}
-						}
+						if (this.gen <= 1) this.queue.clear();
 					}
 				}
 			}
@@ -2594,14 +2578,6 @@ export class Battle {
 			// in gen 1, fainting skips the rest of the turn
 			// residuals don't exist in gen 1
 			this.queue.clear();
-			// Fainting clears accumulated Bide damage
-			for (const pokemon of this.getAllActive()) {
-				if (pokemon.volatiles['bide']?.damage) {
-					pokemon.volatiles['bide'].damage = 0;
-					this.hint("Desync Clause Mod activated!");
-					this.hint("In Gen 1, Bide's accumulated damage is reset to 0 when a Pokemon faints.");
-				}
-			}
 		} else if (this.gen <= 3 && this.gameType === 'singles') {
 			// in gen 3 or earlier, fainting in singles skips to residuals
 			for (const pokemon of this.getAllActive()) {
