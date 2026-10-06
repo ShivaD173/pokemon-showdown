@@ -259,7 +259,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		natDexTier: "ZU",
 	},
 	raichualola: {
-		tier: "PUBL",
+		tier: "PU",
 		doublesTier: "(DUU)",
 		natDexTier: "NUBL",
 	},
@@ -3595,7 +3595,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		natDexTier: "RUBL",
 	},
 	virizion: {
-		tier: "PUBL",
+		tier: "PU",
 		doublesTier: "(DUU)",
 		natDexTier: "NU",
 	},
@@ -4603,7 +4603,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		natDexTier: "OU",
 	},
 	guzzlord: {
-		tier: "PUBL",
+		tier: "PU",
 		doublesTier: "(DUU)",
 		natDexTier: "PU",
 	},

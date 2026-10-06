@@ -718,6 +718,8 @@ export class TeamValidator {
 			} else if (species.requiredTeraType && species.requiredTeraType !== type.name && ruleTable.has('obtainablemisc')) {
 				problems.push(`${species.name}'s Terastal type needs to be ${species.requiredTeraType}.`);
 			}
+			const problem = this.checkTeraType(set, type, setHas);
+			if (problem) problems.push(problem);
 			set.teraType = type.name;
 		} else {
 			delete set.teraType;
@@ -728,6 +730,11 @@ export class TeamValidator {
 
 		problem = this.checkItem(set, item, setHas);
 		if (problem) problems.push(problem);
+
+		for (const typeName of species.types) {
+			problem = this.checkType(set, dex.types.get(typeName), setHas);
+			if (problem) problems.push(problem);
+		}
 		if (ruleTable.has('obtainablemisc')) {
 			if (dex.gen === 4 && item.id === 'griseousorb' && species.num !== 487) {
 				problems.push(`${set.name} cannot hold the Griseous Orb.`, `(In Gen 4, only Giratina could hold the Griseous Orb).`);
@@ -1439,7 +1446,7 @@ export class TeamValidator {
 				isHidden: !!this.dex.mod('gen5').species.get(species.id).abilities['H'],
 			};
 		} else if (source.charAt(1) === 'E') {
-			if (this.findEggMoveFathers(source, species, setSources)) {
+			if (this.findEggMoveFathers(source, species, setSources, 2)) {
 				return undefined;
 			}
 			if (because) throw new Error(`Wrong place to get an egg incompatibility message`);
@@ -1452,11 +1459,12 @@ export class TeamValidator {
 		return this.validateEvent(set, setSources, eventData, eventSpecies, because as any) as any;
 	}
 
-	findEggMoveFathers(source: PokemonSource, species: Species, setSources: PokemonSources,
-		getAll?: false, pokemonBlacklist?: ID[], noRecurse?: true): boolean;
-	findEggMoveFathers(source: PokemonSource, species: Species, setSources: PokemonSources, getAll?: true): ID[] | null;
-	findEggMoveFathers(source: PokemonSource, species: Species, setSources: PokemonSources,
-		getAll?: boolean, pokemonBlacklist?: ID[], noRecurse?: boolean) {
+	findEggMoveFathers(source: PokemonSource, species: Species, setSources: PokemonSources, recurse: number,
+		getAll?: false, pokemonBlacklist?: ID[]): boolean;
+	findEggMoveFathers(source: PokemonSource, species: Species, setSources: PokemonSources, recurse: number,
+		getAll?: true): ID[] | null;
+	findEggMoveFathers(source: PokemonSource, species: Species, setSources: PokemonSources, recurse: number,
+		getAll?: boolean, pokemonBlacklist?: ID[]) {
 		if (!pokemonBlacklist) pokemonBlacklist = [];
 		if (!pokemonBlacklist.includes(species.id)) pokemonBlacklist.push(species.id);
 		// tradebacks have an eggGen of 2 even though the source is 1ET
@@ -1522,7 +1530,7 @@ export class TeamValidator {
 			if (!father.eggGroups.some(eggGroup => eggGroups.includes(eggGroup))) continue;
 
 			// father must be able to learn the move
-			if (!this.fatherCanLearn(species, father, eggMoves, eggGen, pokemonBlacklist, noRecurse)) continue;
+			if (!this.fatherCanLearn(species, father, eggMoves, eggGen, pokemonBlacklist, recurse)) continue;
 
 			// father found!
 			if (!getAll) return true;
@@ -1533,17 +1541,14 @@ export class TeamValidator {
 	}
 
 	/**
-	 * We could, if we wanted, do a complete move validation of the father's
-	 * moveset to see if it's valid. This would recurse and be NP-Hard so
-	 * instead we won't. We'll instead use a simplified algorithm: The father
-	 * is allowed to have multiple egg moves and a maximum of one move from
-	 * any other restrictive source; recursion is done only if there are less
-	 * egg moves to validate or if the father has an egg group it doesn't
-	 * share with the egg Pokemon. Recursion is also limited to two iterations
-	 * of calling findEggMoveFathers.
+	 * This uses a miniature form of validateMoves to check if the father can
+	 * legitimately pass down the given egg moves. To prevent unnecessary
+	 * recursion, a maximum of three iterations of calling findEggMoveFathers
+	 * is allowed (this limit can be raised if a more complex chainbreed is
+	 * discovered)
 	 */
 	fatherCanLearn(baseSpecies: Species, species: Species, moves: ID[], eggGen: number, pokemonBlacklist: ID[],
-		noRecurse: boolean | undefined) {
+		recurse: number) {
 		if (!this.dex.species.getLearnsetData(species.id).learnset) return false;
 
 		if (species.id === 'smeargle') return true;
@@ -1588,18 +1593,21 @@ export class TeamValidator {
 		}
 		pokemonBlacklist.push(species.id);
 		if (allEggSources.limitedEggMoves && allEggSources.limitedEggMoves.length > 1) {
-			if (noRecurse) return false;
-			let canChainbreed = false;
+			if (recurse <= 0) return false;
+			let hasOtherEggGroup = false;
 			for (const fatherEggGroup of species.eggGroups) {
 				if (!baseSpecies.eggGroups.includes(fatherEggGroup)) {
-					canChainbreed = true;
+					hasOtherEggGroup = true;
 					break;
 				}
 			}
-			if (!canChainbreed && allEggSources.limitedEggMoves.length === moves.length) return false;
+			const hasLessEggMoves = allEggSources.limitedEggMoves.length < moves.length;
+			// Waste of time to check Pokemon without a different egg group and the same amount of egg moves
+			if (!hasOtherEggGroup && !hasLessEggMoves) return false;
 			const setSources = new PokemonSources();
 			setSources.limitedEggMoves = allEggSources.limitedEggMoves;
-			return this.findEggMoveFathers(allEggSources.sources[0], species, setSources, false, pokemonBlacklist, true);
+			return this.findEggMoveFathers(allEggSources.sources[0], species, setSources, recurse - 1, false,
+				hasLessEggMoves ? [] : pokemonBlacklist);
 		}
 		return true;
 	}
@@ -1925,6 +1933,9 @@ export class TeamValidator {
 				// this to happen with an unusual ruleset, though, so we won't throw.
 				return `${displayName} is a placeholder for a Gigantamax sprite, not a real Pokémon. (This message is likely a validator bug.)`;
 			}
+			if (thing.effectType === 'Move' && thing.isNonstandard === 'Gmax') {
+				return `${displayName} is a placeholder for the Gigantamax version of ${thing.isMax}. It can't actually exist on a normal moveset.`;
+			}
 			if (thing.isNonstandard === 'Past' || thing.isNonstandard === 'Future') {
 				return `${displayName} does not exist in Gen ${dex.gen}.`;
 			}
@@ -1985,6 +1996,34 @@ export class TeamValidator {
 
 		const tagProblem = this.checkTagRules(set, move, setHas);
 		if (tagProblem !== undefined) return tagProblem;
+
+		return null;
+	}
+
+	checkType(set: PokemonSet, type: TypeInfo, setHas: { [k: string]: true }) {
+		const ruleTable = this.ruleTable;
+
+		setHas['type:' + type.id] = true;
+
+		const banReason = ruleTable.check('type:' + type.id);
+		if (banReason) {
+			return `${set.name}'s type ${type.name} is ${banReason}.`;
+		}
+		if (banReason === '') return null;
+
+		return null;
+	}
+
+	checkTeraType(set: PokemonSet, teraType: TypeInfo, setHas: { [k: string]: true }) {
+		const ruleTable = this.ruleTable;
+
+		setHas['teratype:' + teraType.id] = true;
+
+		const banReason = ruleTable.check('teratype:' + teraType.id);
+		if (banReason) {
+			return `${set.name}'s Tera type ${teraType.name} is ${banReason}.`;
+		}
+		if (banReason === '') return null;
 
 		return null;
 	}

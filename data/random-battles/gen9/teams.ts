@@ -138,10 +138,10 @@ const PRIORITY_POKEMON = [
 
 /** Pokemon who should never be in the lead slot */
 const NO_LEAD_POKEMON = [
-	'Zacian', 'Zamazenta',
+	'dugtrio', 'gothitelle', 'ironthorns', 'kingambit', 'zacian', 'zaciancrowned', 'zamazenta', 'zamazentacrowned',
 ];
 const DOUBLES_NO_LEAD_POKEMON = [
-	'Basculegion', 'Houndstone', 'Iron Bundle', 'Roaring Moon', 'Zacian', 'Zamazenta',
+	'basculegion', 'basculegionf', 'dugtrio', 'gothitelle', 'houndstone', 'ironbundle', 'roaringmoon', 'zacian', 'zaciancrowned', 'zamazenta', 'zamazentacrowned',
 ];
 
 const DEFENSIVE_TERA_BLAST_USERS = [
@@ -549,12 +549,13 @@ export class RandomTeams {
 				[RECOVERY_MOVES, ['healpulse', 'lifedew']],
 				['healpulse', 'lifedew'],
 				['haze', 'icywind'],
-				[['hydropump', 'muddywater'], ['muddywater', 'scald']],
+				[['hydropump', 'muddywater'], ['muddywater', 'scald', 'weatherball']],
 				['disable', 'encore'],
 				['freezedry', 'icebeam'],
 				['energyball', 'leafstorm'],
 				['earthpower', 'sandsearstorm'],
-				['coaching', ['helpinghand', 'howl']],
+				[PROTECT_MOVES, PROTECT_MOVES],
+				['coaching', ['helpinghand', 'howl', 'pollenpuff']],
 			];
 
 			for (const pair of doublesIncompatiblePairs) this.incompatibleMoves(moves, movePool, pair[0], pair[1]);
@@ -636,8 +637,6 @@ export class RandomTeams {
 		if (species.id === 'quagsire') this.incompatibleMoves(moves, movePool, 'spikes', 'icebeam');
 		// Taunt/Knock should be Cyclizar's flex moveslot
 		if (species.id === 'cyclizar') this.incompatibleMoves(moves, movePool, 'taunt', 'knockoff');
-		// To force Stealth Rock on Camerupt
-		if (species.id === 'camerupt') this.incompatibleMoves(moves, movePool, 'roar', 'willowisp');
 		// nothing else rolls these lol
 		if (species.id === 'coalossal') this.incompatibleMoves(moves, movePool, 'flamethrower', 'overheat');
 	}
@@ -708,6 +707,21 @@ export class RandomTeams {
 			if (species.name.endsWith("Wellspring")) return "Water";
 			if (species.name.endsWith("Hearthflame")) return "Fire";
 			if (species.name.endsWith("Cornerstone")) return "Rock";
+		}
+
+		if (move.name === 'Terrain Pulse') {
+			if (abilities.includes('Grassy Surge') || abilities.includes('Seed Sower')) return 'Grass';
+			if (abilities.includes('Psychic Surge')) return 'Psychic';
+			if (abilities.includes('Electric Surge')) return 'Electric';
+		}
+
+		const sunAbilities = ['Chlorophyll', 'Drought', 'Mega Sol', 'Orichalcum Pulse'];
+		if (move.name === 'Weather Ball') {
+			if (
+				abilities.some(a => sunAbilities.includes(a)) ||
+				species.isMega && Object.values(species.abilities).some(a => sunAbilities.includes(a))
+			) return 'Fire';
+			if (abilities.includes('Drizzle')) return 'Water';
 		}
 
 		const moveType = move.type;
@@ -792,6 +806,14 @@ export class RandomTeams {
 			}
 			if (movePool.includes('defog')) {
 				counter = this.addMove('defog', moves, types, abilities, teamDetails, species, isLead,
+					movePool, teraType, role, isDoubles);
+			}
+		}
+
+		// Enforce Stealth Rock on sets with phazing moves and low Speed
+		if (['dragontail', 'roar', 'whirlwind'].some(m => movePool.includes(m)) && species.baseStats.spe <= 60) {
+			if (movePool.includes('stealthrock') && !teamDetails.stealthRock) {
+				counter = this.addMove('stealthrock', moves, types, abilities, teamDetails, species, isLead,
 					movePool, teraType, role, isDoubles);
 			}
 		}
@@ -1284,7 +1306,7 @@ export class RandomTeams {
 			(!types.has('Flying') || this.dex.getEffectiveness('Rock', species) >= 2)
 		) return 'Heavy-Duty Boots';
 		if (
-			role === 'Doubles Support' && ability === 'Prankster' && moves.has('tailwind') && this.randomChance(3, 4)
+			role === 'Doubles Support' && ability === 'Prankster' && moves.has('tailwind') && this.randomChance(1, 4)
 		) return 'Covert Cloak';
 		if (
 			(role === 'Bulky Protect' && counter.get('setup')) ||
@@ -1459,6 +1481,11 @@ export class RandomTeams {
 		}
 		if (species.baseSpecies === 'Basculin') return 'Basculin' + this.sample(['', '-Blue-Striped']);
 		if (species.baseSpecies === 'Magearna') return 'Magearna' + this.sample(['', '-Original']);
+		if (
+			species.baseSpecies === 'Squawkabilly' &&
+			(this.format.mod.startsWith('champions') || this.format.gameType !== 'singles')) {
+			return 'Squawkabilly' + this.sample(['', '-Blue', '-White', '-Yellow']);
+		}
 		if (species.baseSpecies === 'Keldeo' && this.gen <= 7) return 'Keldeo' + this.sample(['', '-Resolute']);
 		if (species.baseSpecies === 'Pikachu' && this.gen >= 8 && !this.format.mod.startsWith('champions')) {
 			return 'Pikachu' + this.sample(
@@ -1842,8 +1869,8 @@ export class RandomTeams {
 
 			if (leadsRemaining) {
 				if (
-					isDoubles && DOUBLES_NO_LEAD_POKEMON.includes(species.baseSpecies) ||
-					!isDoubles && NO_LEAD_POKEMON.includes(species.baseSpecies)
+					isDoubles && DOUBLES_NO_LEAD_POKEMON.includes(species.id) ||
+					!isDoubles && NO_LEAD_POKEMON.includes(species.id)
 				) {
 					if (pokemon.length + leadsRemaining === this.maxTeamSize) continue;
 					set = this.randomSet(species, teamDetails, false, isDoubles);
