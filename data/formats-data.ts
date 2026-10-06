@@ -1735,7 +1735,7 @@ export const FormatsData: import('../sim/dex-species').SpeciesFormatsDataTable =
 		tier: "NFE",
 	},
 	sceptile: {
-		tier: "SUBL",
+		tier: "SU",
 		doublesTier: "(DUU)",
 		natDexTier: "SU",
 	},
