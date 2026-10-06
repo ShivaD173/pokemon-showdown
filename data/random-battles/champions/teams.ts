@@ -8,7 +8,7 @@ const RECOVERY_MOVES = [
 ];
 // Moves that boost Attack:
 const PHYSICAL_SETUP = [
-	'bellydrum', 'bulkup', 'coil', 'curse', 'dragondance', 'honeclaws', 'howl', 'meditate', 'poweruppunch', 'swordsdance', 'tidyup', 'victorydance',
+	'bellydrum', 'bulkup', 'coil', 'curse', 'dragondance', 'fellstinger', 'honeclaws', 'howl', 'meditate', 'poweruppunch', 'swordsdance', 'tidyup', 'victorydance',
 ];
 // Some moves that only boost Speed:
 const SPEED_SETUP = [
@@ -17,8 +17,8 @@ const SPEED_SETUP = [
 // Conglomerate for ease of access
 const SETUP = [
 	'acidarmor', 'agility', 'autotomize', 'bellydrum', 'bulkup', 'calmmind', 'clangoroussoul', 'coil', 'cosmicpower', 'curse', 'dragondance',
-	'flamecharge', 'growth', 'honeclaws', 'howl', 'irondefense', 'meditate', 'nastyplot', 'noretreat', 'poweruppunch', 'quiverdance', 'raindance',
-	'rockpolish', 'shellsmash', 'shelter', 'shiftgear', 'sunnyday', 'swordsdance', 'tailglow', 'takeheart', 'tidyup', 'trailblaze', 'workup',
+	'fellstinger', 'flamecharge', 'growth', 'honeclaws', 'howl', 'irondefense', 'meditate', 'nastyplot', 'noretreat', 'poweruppunch', 'quiverdance',
+	'raindance', 'rockpolish', 'shellsmash', 'shelter', 'shiftgear', 'sunnyday', 'swordsdance', 'tailglow', 'takeheart', 'tidyup', 'trailblaze', 'workup',
 	'victorydance',
 ];
 // Speed control moves (for doubles)
@@ -28,7 +28,7 @@ const SPEED_CONTROL = [
 // Moves that shouldn't be the only STAB moves:
 const NO_STAB = [
 	'acidspray', 'accelerock', 'aquajet', 'bounce', 'breakingswipe', 'bulletpunch', 'chatter', 'chloroblast', 'clearsmog', 'covet',
-	'dragontail', 'doomdesire', 'electroweb', 'eruption', 'explosion', 'fakeout', 'feint', 'flamecharge', 'flipturn', 'futuresight',
+	'dragontail', 'doomdesire', 'electroweb', 'eruption', 'explosion', 'fakeout', 'feint', 'fellstinger', 'flamecharge', 'flipturn', 'futuresight',
 	'grassyglide', 'iceshard', 'icywind', 'incinerate', 'infestation', 'machpunch', 'meteorbeam', 'mortalspin', 'nuzzle', 'pluck', 'pursuit',
 	'quickattack', 'rapidspin', 'reversal', 'selfdestruct', 'shadowsneak', 'skydrop', 'snarl', 'snaptrap', 'strugglebug', 'suckerpunch', 'trailblaze',
 	'uturn', 'vacuumwave', 'voltswitch', 'watershuriken', 'waterspout',
@@ -56,7 +56,16 @@ const MOVE_PAIRS = [
 
 /** Pokemon who always want priority STAB, and are fine with it as its only STAB move of that type */
 const PRIORITY_POKEMON = [
-	'lopunnymega', 'mimikyu', 'palafin', 'scizor', 'scizormega',
+	'golisopod', 'golisopodmega', 'mimikyu', 'palafin', 'scizor', 'scizormega',
+];
+
+/** Pokemon who should never be in the lead slot. Currently just Kingambit, but more may be added in the future */
+const NO_LEAD_POKEMON = [
+	'kingambit',
+];
+
+const DOUBLES_NO_LEAD_POKEMON = [
+	'basculegion', 'basculegionf', 'houndstone',
 ];
 
 // 1.2x type boosting items
@@ -106,14 +115,16 @@ export class RandomChampionsTeams extends RandomTeams {
 			Ghost: (movePool, moves, abilities, types, counter) => !counter.get('Ghost'),
 			Grass: (movePool, moves, abilities, types, counter, species) => (
 				!counter.get('Grass') && (
-					species.baseStats.atk >= 100 || movePool.includes('leafstorm') || types.has('Ghost')
+					species.baseStats.atk >= 100 || movePool.includes('leafstorm') ||
+					types.has('Ghost') || abilities.includes('Seed Sower')
 				)
 			),
 			Ground: (movePool, moves, abilities, types, counter) => !counter.get('Ground'),
 			Ice: (movePool, moves, abilities, types, counter) => !counter.get('Ice'),
-			Normal: (movePool, moves, abilities, types, counter) => (
+			Normal: (movePool, moves, abilities, types, counter, species) => (
 				!counter.get('Normal') && (
-					movePool.includes('boomburst') || ['Electric', 'Fire', 'Ghost', 'Ground'].some(t => types.has(t))
+					movePool.includes('boomburst') || ['Electric', 'Fire', 'Ghost', 'Grass', 'Ground'].some(t => types.has(t)) ||
+					species.baseSpecies === 'Squawkabilly'
 				)
 			),
 			Poison: (movePool, moves, abilities, types, counter) => !counter.get('Poison'),
@@ -208,7 +219,9 @@ export class RandomChampionsTeams extends RandomTeams {
 
 			for (const pair of doublesIncompatiblePairs) this.incompatibleMoves(moves, movePool, pair[0], pair[1]);
 
-			if (!role.includes('Protect')) this.incompatibleMoves(moves, movePool, PROTECT_MOVES, 'uturn');
+			if (!['Offensive Protect', 'Doubles Fast Attacker'].includes(role)) {
+				this.incompatibleMoves(moves, movePool, PROTECT_MOVES, 'uturn');
+			}
 		}
 
 		// General incompatibilities
@@ -227,19 +240,22 @@ export class RandomChampionsTeams extends RandomTeams {
 
 			// These attacks are redundant with each other
 			[['psychic', 'psychicnoise'], ['psyshock', 'psychicnoise']],
-			[['muddywater', 'scald', 'surf', 'waterfall'], 'hydropump'],
+			[['scald', 'surf', 'waterfall'], 'hydropump'],
+			['muddywater', 'weatherball'],
 			[['gigadrain', 'hornleech', 'tropkick'], ['leafstorm', 'powerwhip', 'woodhammer']],
-			['dazzlinggleam', ['alluringvoice', 'moonblast']],
-			[['fireblast', 'flamethrower'], ['fierydance', 'heatwave', 'overheat']],
+			['dazzlinggleam', ['alluringvoice', 'moonblast', 'playrough']],
+			[['fireblast', 'flamethrower', 'weatherball'], ['fierydance', 'heatwave', 'overheat']],
 			['aurasphere', 'focusblast'],
 			['closecombat', 'drainpunch'],
 			[['dragonpulse', 'ficklebeam'], 'dracometeor'],
 			['risingvoltage', 'volttackle'],
+			['bodyslam', 'doubleedge'],
+			['gunkshot', 'sludgewave'],
 			['rockslide', 'stoneedge'],
 			['foulplay', 'knockoff'],
 
 			// Status move incompatibilities
-			['taunt', 'encore'],
+			[['taunt', 'clearsmog'], 'encore'],
 			['roar', 'yawn'],
 			[statusInflictingMoves, 'toxicspikes'],
 			[statusInflictingMoves, statusInflictingMoves],
@@ -258,8 +274,9 @@ export class RandomChampionsTeams extends RandomTeams {
 		// This space reserved for assorted hardcodes that make little sense out of context and can't fit in the const:
 		if (!isDoubles) {
 			// To force Stealth Rock on Camerupt
-			if (species.id === 'camerupt') this.incompatibleMoves(moves, movePool, 'roar', 'willowisp');
 			if (species.id === 'cameruptmega') this.incompatibleMoves(moves, movePool, 'ancientpower', 'willowisp');
+			// To force Grassy Glide on Rillaboom
+			if (species.id === 'rillaboom') this.incompatibleMoves(moves, movePool, 'highhorsepower', 'knockoff');
 		}
 	}
 
@@ -306,8 +323,8 @@ export class RandomChampionsTeams extends RandomTeams {
 
 		// Add other moves you really want to have, e.g. STAB, recovery, setup.
 
-		// Enforce Aurora Veil, Blizzard, and Sticky Web
-		for (const moveid of ['auroraveil', 'blizzard', 'stickyweb']) {
+		// Enforce Aurora Veil, Blizzard, Court Change, Revival Blessing, and Sticky Web
+		for (const moveid of ['auroraveil', 'blizzard', 'courtchange', 'revivalblessing', 'stickyweb']) {
 			if (movePool.includes(moveid)) {
 				counter = this.addMove(moveid, moves, types, abilities, teamDetails, species, isLead,
 					movePool, preferredType, role, isDoubles);
@@ -338,6 +355,14 @@ export class RandomChampionsTeams extends RandomTeams {
 		if (movePool.includes('irondefense') || movePool.includes('shelter')) {
 			if (movePool.includes('bodypress')) {
 				counter = this.addMove('bodypress', moves, types, abilities, teamDetails, species, isLead,
+					movePool, preferredType, role, isDoubles);
+			}
+		}
+
+		// Enforce Stealth Rock on sets with phazing moves
+		if (['dragontail', 'roar', 'whirlwind'].some(m => movePool.includes(m))) {
+			if (movePool.includes('stealthrock') && !teamDetails.stealthRock) {
+				counter = this.addMove('stealthrock', moves, types, abilities, teamDetails, species, isLead,
 					movePool, preferredType, role, isDoubles);
 			}
 		}
@@ -684,15 +709,17 @@ export class RandomChampionsTeams extends RandomTeams {
 	): string | undefined {
 		if (species.requiredItems) return this.sample(species.requiredItems);
 		if (species.id === 'pikachu') return 'Light Ball';
+		if (['farfetchd', 'sirfetchd'].includes(species.id)) return 'Leek';
 		// Move this back to getDoublesItem() if Choice Band/Specs get added
 		if (role === 'Choice Item user') return 'Choice Scarf';
 		if (
-			['Cheek Pouch', 'Cud Chew', 'Harvest', 'Ripen'].some(m => ability === m) || moves.has('bellydrum')
+			['Cheek Pouch', 'Cud Chew', 'Emergency Exit', 'Harvest', 'Ripen'].some(m => ability === m) || moves.has('bellydrum')
 		) return 'Sitrus Berry';
 		if (species.id === 'alakazam' && this.randomChance(1, 2)) return 'Focus Sash';
 		if (species.id === 'glimmora') return 'Focus Sash';
 		if (species.id === 'rampardos' && role === 'Fast Attacker') return 'Choice Scarf';
 		if (species.id === 'ditto' && !isDoubles) return 'Choice Scarf';
+		if (species.id === 'inteleon' && moves.has('focusenergy')) return 'Scope Lens';
 		if (['healingwish', 'switcheroo', 'trick'].some(m => moves.has(m))) return 'Choice Scarf';
 		if (ability === 'Unburden') return (moves.has('closecombat') || moves.has('leafstorm')) ? 'White Herb' : 'Sitrus Berry';
 		if (moves.has('shellsmash')) return 'White Herb';
@@ -706,9 +733,11 @@ export class RandomChampionsTeams extends RandomTeams {
 		if (types.has('Normal') && moves.has('doubleedge') && moves.has('fakeout')) return 'Silk Scarf';
 		if (
 			(species.id === 'froslass' && moves.has('tripleaxel')) || moves.has('populationbomb') ||
-			(ability === 'Hustle' && counter.get('setup') && this.randomChance(1, 2)) ||
+			(ability === 'Hustle' && this.randomChance(1, 2)) ||
 			(species.id === 'tsareena' && role === 'Offensive Protect')
 		) return 'Wide Lens';
+		// 1.2x type boosting items
+		if (types.has(preferredType)) return TYPE_BOOSTING_ITEMS[preferredType];
 	}
 
 	override getDoublesItem(
@@ -722,9 +751,8 @@ export class RandomChampionsTeams extends RandomTeams {
 		preferredType: string,
 		role: RandomTeamsTypes.Role,
 	): string {
-		// 1.2x type boosting items
-		if (types.has(preferredType)) return TYPE_BOOSTING_ITEMS[preferredType];
 		if (role === 'Doubles Fast Attacker') return 'Focus Sash';
+		if (species.baseStats.spe <= 70 && (moves.has('ragepowder') || moves.has('followme'))) return 'Rocky Helmet';
 		if (role === 'Doubles Bulky Setup' && !moves.has('dragondance')) return 'Leftovers';
 		if (['Offensive Protect', 'Doubles Wallbreaker', 'Doubles Setup Sweeper'].includes(role)) return 'Life Orb';
 		return 'Sitrus Berry';
@@ -747,17 +775,28 @@ export class RandomChampionsTeams extends RandomTeams {
 			['fakeout', 'trailblaze'].every(m => !moves.has(m)) &&
 			(!counter.get('Status') || counter.get('Status') === 1 && moves.has('partingshot'))
 		) return 'Choice Scarf';
-		if (['flamecharge', 'kingsshield', 'nuzzle', 'rapidspin', 'substitute'].some(m => moves.has(m))) return 'Leftovers';
+
+		if (['flamecharge', 'kingsshield', 'nuzzle', 'substitute'].some(m => moves.has(m))) return 'Leftovers';
 		if (moves.has('outrage') && counter.get('setup')) return 'Lum Berry';
+
+		// Give physically bulky Pokemon with either Regenerator or a recovery move a chance at Rocky Helmet
+		if (
+			ability === 'Rough Skin' || (
+				ability === 'Regenerator' && (role === 'Bulky Support' || role === 'Bulky Attacker') &&
+				(species.baseStats.hp + species.baseStats.def) >= 180 && this.randomChance(1, 2)
+			) || (
+				ability !== 'Regenerator' && !counter.get('setup') && counter.get('recovery') &&
+				(species.baseStats.hp + species.baseStats.def) > 200 && this.randomChance(1, 2)
+			)
+		) return 'Rocky Helmet';
 
 		// Default to Leftovers for Bulky roles
 		if (role.includes('Bulky')) return 'Leftovers';
 
 		// Default to Life Orb for offensive roles
-		if (['Fast Attacker', 'Setup Sweeper', 'Wallbreaker'].includes(role)) {
-			if (['basculegion', 'palafin'].includes(species.id)) return 'Mystic Water';
-			if (this.dex.getEffectiveness('Rock', species) < 2) return 'Life Orb';
-		}
+		if (
+			['Fast Attacker', 'Setup Sweeper', 'Wallbreaker'].includes(role) && this.dex.getEffectiveness('Rock', species) < 2
+		) return 'Life Orb';
 
 		// Fast Support defaults to Life Orb if >= 3 attacks and Leftovers otherwise. It can generate Focus Sash in the lead slot with hazards
 		if (role === 'Fast Support') {
@@ -948,6 +987,10 @@ export class RandomChampionsTeams extends RandomTeams {
 			[sunSetters, [...rainSetters, ...sandSetters, ...snowSetters]],
 			[rainSetters, [...sandSetters, ...snowSetters]],
 			[sandSetters, snowSetters],
+
+			// Prevent conflicting terrain abilities from generating together
+			['pincurchin', ['indeedee', 'indeedeef', 'rillaboom', 'arboliva']],
+			[['rillaboom', 'arboliva'], ['indeedee', 'indeedeef']],
 		];
 
 		const incompatibilityList = isDoubles ? doublesIncompatiblePokemon : incompatiblePokemon;
@@ -1085,8 +1128,11 @@ export class RandomChampionsTeams extends RandomTeams {
 				!ruleTable.has('pickedteamsize') && !ruleTable.has('teampreview')
 			);
 			const set = this.randomSet(species, teamDetails, isLead, isDoubles);
-			// Last Respects shouldn't appear in the lead slot
-			if (set.moves.includes('lastrespects') && pokemon.length >= this.maxTeamSize - 2) {
+			// Some Pokemon should not be in the lead slot
+			if (
+				(isDoubles && DOUBLES_NO_LEAD_POKEMON.includes(species.id) && isLead) ||
+				(!isDoubles && NO_LEAD_POKEMON.includes(species.id) && isLead)
+			) {
 				pokemon.push(set);
 			} else {
 				pokemon.unshift(set);

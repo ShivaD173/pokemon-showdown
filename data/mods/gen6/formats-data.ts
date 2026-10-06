@@ -407,7 +407,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		doublesTier: "NFE",
 	},
 	gengar: {
-		tier: "OU",
+		tier: "(OU)",
 		doublesTier: "DOU",
 	},
 	gengarmega: {
@@ -548,7 +548,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "SU",
 	},
 	starmie: {
-		tier: "OU",
+		tier: "(OU)",
 		doublesTier: "(DUU)",
 	},
 	mimejr: {
@@ -602,7 +602,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		doublesTier: "(DUU)",
 	},
 	pinsirmega: {
-		tier: "OU",
+		tier: "(OU)",
 		doublesTier: "(DUU)",
 	},
 	tauros: {
@@ -1073,7 +1073,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		doublesTier: "DOU",
 	},
 	tyranitarmega: {
-		tier: "(OU)",
+		tier: "OU",
 		doublesTier: "(DOU)",
 	},
 	lugia: {
@@ -1207,7 +1207,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		doublesTier: "DUU",
 	},
 	gardevoirmega: {
-		tier: "OU",
+		tier: "(OU)",
 		doublesTier: "DOU",
 	},
 	gallade: {
@@ -1229,7 +1229,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "LC",
 	},
 	breloom: {
-		tier: "OU",
+		tier: "(OU)",
 		doublesTier: "DOU",
 	},
 	slakoth: {
@@ -1334,7 +1334,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		doublesTier: "(DUU)",
 	},
 	manectricmega: {
-		tier: "OU",
+		tier: "(OU)",
 		doublesTier: "(DUU)",
 	},
 	plusle: {
@@ -1978,7 +1978,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		doublesTier: "(DUU)",
 	},
 	azelf: {
-		tier: "OU",
+		tier: "(OU)",
 		doublesTier: "(DUU)",
 	},
 	dialga: {

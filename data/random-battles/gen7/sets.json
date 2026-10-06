@@ -71,7 +71,7 @@
         ]
     },
     "blastoise": {
-        "level": 86,
+        "level": 87,
         "sets": [
             {
                 "role": "Bulky Support",
@@ -397,7 +397,7 @@
         "level": 84,
         "sets": [
             {
-                "role": "Fast Support",
+                "role": "Fast Attacker",
                 "movepool": ["earthquake", "honeclaws", "stealthrock", "stoneedge", "suckerpunch"],
                 "abilities": ["Arena Trap"]
             },
@@ -439,7 +439,7 @@
         ]
     },
     "persianalola": {
-        "level": 84,
+        "level": 85,
         "sets": [
             {
                 "role": "Bulky Setup",
@@ -455,7 +455,7 @@
         ]
     },
     "golduck": {
-        "level": 92,
+        "level": 91,
         "sets": [
             {
                 "role": "Bulky Setup",
@@ -535,7 +535,7 @@
         ]
     },
     "alakazammega": {
-        "level": 77,
+        "level": 78,
         "sets": [
             {
                 "role": "Setup Sweeper",
@@ -1449,7 +1449,7 @@
         ]
     },
     "ampharosmega": {
-        "level": 85,
+        "level": 84,
         "sets": [
             {
                 "role": "Bulky Attacker",
@@ -1694,7 +1694,7 @@
         ]
     },
     "granbull": {
-        "level": 89,
+        "level": 90,
         "sets": [
             {
                 "role": "Bulky Attacker",
@@ -1704,7 +1704,7 @@
         ]
     },
     "qwilfish": {
-        "level": 86,
+        "level": 85,
         "sets": [
             {
                 "role": "Fast Support",
@@ -1994,7 +1994,7 @@
         ]
     },
     "raikou": {
-        "level": 81,
+        "level": 80,
         "sets": [
             {
                 "role": "Fast Attacker",
@@ -2010,7 +2010,7 @@
         ]
     },
     "entei": {
-        "level": 78,
+        "level": 79,
         "sets": [
             {
                 "role": "Wallbreaker",
@@ -2084,13 +2084,13 @@
         "sets": [
             {
                 "role": "Bulky Attacker",
-                "movepool": ["bravebird", "defog", "earthquake", "roost", "sacredfire", "substitute", "toxic"],
+                "movepool": ["bravebird", "defog", "earthquake", "recover", "sacredfire", "substitute", "toxic"],
                 "abilities": ["Regenerator"]
             }
         ]
     },
     "celebi": {
-        "level": 82,
+        "level": 81,
         "sets": [
             {
                 "role": "Fast Attacker",
@@ -2639,7 +2639,7 @@
         ]
     },
     "sharpedomega": {
-        "level": 82,
+        "level": 81,
         "sets": [
             {
                 "role": "Staller",
@@ -2926,7 +2926,7 @@
         ]
     },
     "kecleon": {
-        "level": 90,
+        "level": 91,
         "sets": [
             {
                 "role": "Fast Support",
@@ -3234,7 +3234,7 @@
         ]
     },
     "latiasmega": {
-        "level": 78,
+        "level": 77,
         "sets": [
             {
                 "role": "Bulky Attacker",
@@ -3551,7 +3551,7 @@
         ]
     },
     "bastiodon": {
-        "level": 93,
+        "level": 92,
         "sets": [
             {
                 "role": "Bulky Support",
@@ -3581,7 +3581,7 @@
         ]
     },
     "wormadamsandy": {
-        "level": 91,
+        "level": 90,
         "sets": [
             {
                 "role": "Staller",
@@ -3831,7 +3831,7 @@
         ]
     },
     "garchomp": {
-        "level": 75,
+        "level": 74,
         "sets": [
             {
                 "role": "Fast Support",
@@ -4043,7 +4043,7 @@
         ]
     },
     "tangrowth": {
-        "level": 89,
+        "level": 88,
         "sets": [
             {
                 "role": "Bulky Attacker",
@@ -4069,7 +4069,7 @@
         ]
     },
     "magmortar": {
-        "level": 88,
+        "level": 87,
         "sets": [
             {
                 "role": "Bulky Attacker",
@@ -4292,7 +4292,7 @@
         ]
     },
     "rotomfrost": {
-        "level": 85,
+        "level": 86,
         "sets": [
             {
                 "role": "Bulky Attacker",
@@ -4308,7 +4308,7 @@
         ]
     },
     "rotomfan": {
-        "level": 84,
+        "level": 85,
         "sets": [
             {
                 "role": "Bulky Support",
@@ -4340,12 +4340,6 @@
     "mesprit": {
         "level": 86,
         "sets": [
-            {
-                "role": "Fast Attacker",
-                "movepool": ["calmmind", "healingwish", "hiddenpowerfire", "psychic", "psyshock", "signalbeam", "thunderbolt", "uturn"],
-                "abilities": ["Levitate"],
-                "preferredTypes": ["Bug"]
-            },
             {
                 "role": "Bulky Support",
                 "movepool": ["knockoff", "psychic", "stealthrock", "thunderwave", "toxic", "uturn"],
@@ -4436,7 +4430,7 @@
         ]
     },
     "giratina": {
-        "level": 76,
+        "level": 75,
         "sets": [
             {
                 "role": "Fast Support",
@@ -4931,7 +4925,7 @@
         ]
     },
     "simipour": {
-        "level": 88,
+        "level": 89,
         "sets": [
             {
                 "role": "Setup Sweeper",
@@ -5180,7 +5174,7 @@
         ]
     },
     "krookodile": {
-        "level": 79,
+        "level": 78,
         "sets": [
             {
                 "role": "Fast Attacker",
@@ -5319,7 +5313,7 @@
         ]
     },
     "cinccino": {
-        "level": 84,
+        "level": 85,
         "sets": [
             {
                 "role": "Fast Attacker",
@@ -5474,7 +5468,7 @@
         ]
     },
     "ferrothorn": {
-        "level": 72,
+        "level": 71,
         "sets": [
             {
                 "role": "Bulky Attacker",
@@ -5855,7 +5849,7 @@
         ]
     },
     "thundurustherian": {
-        "level": 80,
+        "level": 79,
         "sets": [
             {
                 "role": "Fast Attacker",
@@ -6443,7 +6437,7 @@
         ]
     },
     "klefki": {
-        "level": 83,
+        "level": 82,
         "sets": [
             {
                 "role": "Bulky Support",
@@ -7007,7 +7001,7 @@
         ]
     },
     "oranguru": {
-        "level": 93,
+        "level": 94,
         "sets": [
             {
                 "role": "Wallbreaker",
@@ -7277,7 +7271,7 @@
         ]
     },
     "minior": {
-        "level": 79,
+        "level": 80,
         "sets": [
             {
                 "role": "Setup Sweeper",
@@ -7636,29 +7630,39 @@
         "sets": [
             {
                 "role": "Bulky Setup",
-                "movepool": ["autotomize", "earthquake", "knockoff", "photongeyser", "sunsteelstrike", "swordsdance"],
+                "movepool": ["autotomize", "earthquake", "knockoff", "photongeyser", "sunsteelstrike"],
                 "abilities": ["Prism Armor"],
                 "preferredTypes": ["Ground"]
             },
             {
                 "role": "Z-Move user",
-                "movepool": ["autotomize", "earthquake", "knockoff", "photongeyser", "sunsteelstrike", "swordsdance"],
+                "movepool": ["autotomize", "earthquake", "knockoff", "photongeyser", "sunsteelstrike"],
                 "abilities": ["Prism Armor"],
-                "preferredTypes": ["Psychic"]
+                "preferredTypes": ["Ground"]
+            },
+            {
+                "role": "Z-Move user",
+                "movepool": ["earthquake", "outrage", "photongeyser", "swordsdance"],
+                "abilities": ["Prism Armor"]
             }
         ]
     },
     "necrozmadawnwings": {
-        "level": 71,
+        "level": 72,
         "sets": [
             {
                 "role": "Setup Sweeper",
-                "movepool": ["autotomize", "calmmind", "heatwave", "moongeistbeam", "photongeyser", "signalbeam"],
+                "movepool": ["autotomize", "calmmind", "moongeistbeam", "photongeyser", "signalbeam"],
                 "abilities": ["Prism Armor"]
             },
             {
                 "role": "Z-Move user",
-                "movepool": ["autotomize", "calmmind", "heatwave", "moongeistbeam", "photongeyser", "signalbeam"],
+                "movepool": ["autotomize", "calmmind", "moongeistbeam", "photongeyser", "signalbeam"],
+                "abilities": ["Prism Armor"]
+            },
+            {
+                "role": "Z-Move user",
+                "movepool": ["earthquake", "outrage", "photongeyser", "swordsdance"],
                 "abilities": ["Prism Armor"]
             }
         ]
@@ -7685,7 +7689,7 @@
         ]
     },
     "marshadow": {
-        "level": 70,
+        "level": 69,
         "sets": [
             {
                 "role": "Fast Attacker",

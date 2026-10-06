@@ -49,6 +49,7 @@ function getDefaultStats(): Stats {
 			gen9babyrandombattle: { mons: {} },
 			gen9chatbats: { mons: {} },
 			gen9ccapm2025randombattle: { mons: {} },
+			gen9mixandmegalimitedsupplyrandombattle: { mons: {} },
 			gen9superstaffbrosultimate: { mons: {} },
 			gen9championsrandombattle: { mons: {} },
 			gen9championsrandomdoublesbattle: { mons: {} },
@@ -106,10 +107,9 @@ export function getSpeciesName(set: PokemonSet, format: Format) {
 		return 'Polteageist';
 	} else if (species === 'Sinistcha-Masterpiece') {
 		return 'Sinistcha';
-	} else if (species === "Squawkabilly-Blue") {
-		return "Squawkabilly";
-	} else if (species === "Squawkabilly-White") {
-		return "Squawkabilly-Yellow";
+	} else if (species.startsWith("Squawkabilly-")) {
+		if (species === "Squawkabilly-Blue") return "Squawkabilly";
+		return format.id === 'gen9randombattle' ? "Squawkabilly-Yellow" : "Squawkabilly";
 	} else if (species.startsWith("Basculin-")) {
 		return "Basculin";
 	} else if (species.startsWith("Sawsbuck-")) {
@@ -179,20 +179,22 @@ async function collectStats(battle: RoomBattle, winner: ID, players: ID[]) {
 	const format = Dex.formats.get(battle.format);
 	if (format.mod.startsWith('champions')) {
 		// ladder is inactive, so use a lower threshold
-		eloFloor = (format.gameType === 'doubles') ? 1150 : 1250;
+		eloFloor = (format.gameType === 'doubles') ? 1200 : 1250;
 	} else if (format.mod === 'gen2') {
 		eloFloor = 1150;
 	} else if (format.team === 'randomBaby') {
 		// ladder is even more inactive, so an even lower threshold
 		eloFloor = 1000;
+	} else if (format.mod === 'gen9mnmlimitedsupply') {
+		eloFloor = 1100;
 	} else if (format.mod !== `gen${Dex.gen}`) {
 		eloFloor = 1300;
 	} else if (format.gameType === 'doubles') {
 		// may need to be raised again if ladder takes off further
 		eloFloor = 1400;
 	}
-	if (!formatData || ((format.mod !== 'gen9ssb' && format.mod !== 'chatbats' &&
-		format.mod !== 'ccapm2025') && battle.rated < eloFloor) || !winner)
+	if (!formatData || ((format.mod !== 'gen9ssb' && format.mod !== 'chatbats') &&
+		battle.rated < eloFloor) || !winner)
 		return;
 	checkRollover();
 	for (const p of battle.players) {
