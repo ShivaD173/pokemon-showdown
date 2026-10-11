@@ -21239,13 +21239,12 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		accuracy: 100,
 		basePower: 60,
 		category: "Special",
-		realMove: "Hidden Power",
+		placeholderFor: "Hidden Power",
 		isNonstandard: "CAP",
 		name: "Hidden Power Fairy",
 		pp: 15,
 		priority: 0,
 		flags: { protect: 1, mirror: 1 },
-		secondary: null,
 		target: "normal",
 		type: "Fairy",
 		contestType: "Clever",
@@ -21341,7 +21340,6 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		onMoveFail(target, source, move) {
 			this.damage(source.baseMaxhp / 2, source, source, this.dex.conditions.get('High Jump Kick'));
 		},
-		secondary: null,
 		target: "normal",
 		type: "Flying",
 		contestType: "Cool",
@@ -21398,7 +21396,6 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "Rock Polish", target);
 		},
-		secondary: null,
 		target: "self",
 		type: "Rock",
 		zMove: { boost: { def: 1 } },
@@ -21428,7 +21425,6 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "Acid Armor", target);
 		},
-		secondary: null,
 		target: "self",
 		type: "Steel",
 		zMove: { boost: { def: 1 } },
@@ -21458,7 +21454,6 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "Aurora Veil", target);
 		},
-		secondary: null,
 		target: "self",
 		type: "Ice",
 		zMove: { boost: { def: 1 } },
@@ -21479,7 +21474,6 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "Sheer Cold", target);
 		},
-		secondary: null,
 		target: "normal",
 		type: "Ice",
 		zMove: { boost: { spa: 1 } },
@@ -21524,7 +21518,6 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "Heavy Slam", target);
 		},
-		secondary: null,
 		target: "normal",
 		type: "Ice",
 		zMove: { basePower: 160 },
@@ -21565,7 +21558,6 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 				this.add('-end', pokemon, 'Attract', '[silent]');
 			},
 		},
-		secondary: null,
 		target: "normal",
 		type: "Normal",
 		zMove: { effect: 'clearnegativeboost' },
@@ -21596,7 +21588,6 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 			this.attrLastMove('[still]');
 			this.add('-anim', source, "Psychic Fangs", target);
 		},
-		secondary: null,
 		target: "normal",
 		type: "Psychic",
 	},
@@ -21710,13 +21701,13 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 				}
 			},
 		},
-		secondary: null,
 		target: "any",
 		type: "Psychic",
 		contestType: "Tough",
 	},
 	platinumbuster: {
 		num: 0,
+		isNonstandard: "CAP",
 		accuracy: 100,
 		basePower: 40,
 		category: "Physical",
@@ -21725,7 +21716,6 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 		priority: 0,
 		multihit: 4,
 		flags: { protect: 1, mirror: 1, metronome: 1, cantusetwice: 1, contact: 1, punch: 1 },
-		secondary: null,
 		target: "normal",
 		type: "Fighting",
 	},

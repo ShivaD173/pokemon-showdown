@@ -6369,7 +6369,6 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 	tremorsense: {
 		isNonstandard: "CAP",
 		name: "Tremor Sense",
-		shortDesc: "User and Ally avoid all ground attacks.",
 		onAllyTryHit(source, target, move) {
 			if (target !== source && move.type === 'Ground') {
 				let tremorHaver = source;

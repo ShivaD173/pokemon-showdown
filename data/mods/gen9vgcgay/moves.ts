@@ -860,7 +860,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 		shortDesc: "Doubles next Electric attack and heals 33%.",
 		heal: [1, 3],
 		pp: 5,
-		boosts: null,
+		boosts: undefined,
 	},
 	smellingsalts: {
 		inherit: true,
@@ -1685,7 +1685,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 	// Recharge moves
 	hyperbeam: {
 		inherit: true,
-		self: null,
+		self: undefined,
 		shortDesc: "User cannot move next turn if it fails to KO.",
 		basePower: 130,
 		onHit(target, source) {
@@ -1696,7 +1696,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 	},
 	gigaimpact: {
 		inherit: true,
-		self: null,
+		self: undefined,
 		shortDesc: "User cannot move next turn if it fails to KO.",
 		basePower: 130,
 		onHit(target, source) {
@@ -1707,7 +1707,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 	},
 	frenzyplant: {
 		inherit: true,
-		self: null,
+		self: undefined,
 		shortDesc: "User recharges doesn't KO. Physical if Atk > SpA.",
 		basePower: 130,
 		onHit(target, source, move) {
@@ -1725,7 +1725,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 	},
 	hydrocannon: {
 		inherit: true,
-		self: null,
+		self: undefined,
 		shortDesc: "User recharges doesn't KO. Physical if Atk > SpA.",
 		basePower: 130,
 		onHit(target, source, move) {
@@ -1743,7 +1743,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 	},
 	blastburn: {
 		inherit: true,
-		self: null,
+		self: undefined,
 		shortDesc: "User recharges doesn't KO. Physical if Atk > SpA.",
 		basePower: 130,
 		onHit(target, source, move) {
@@ -1762,7 +1762,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 	rockwrecker: {
 		inherit: true,
 		isNonstandard: null,
-		self: null,
+		self: undefined,
 		shortDesc: "User cannot move next turn if it fails to KO.",
 		basePower: 130,
 		onHit(target, source) {
@@ -1774,7 +1774,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 	meteorassault: {
 		inherit: true,
 		isNonstandard: null,
-		self: null,
+		self: undefined,
 		shortDesc: "User cannot move next turn if it fails to KO.",
 		basePower: 130,
 		onHit(target, source) {
@@ -1786,7 +1786,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 	freezeshock: {
 		inherit: true,
 		isNonstandard: null,
-		self: null,
+		self: undefined,
 		shortDesc: "User recharges if doesn't KO. 30% paralysis.",
 		basePower: 130,
 		flags: { recharge: 1, protect: 1, mirror: 1, nosleeptalk: 1, failinstruct: 1 },
@@ -1802,7 +1802,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 	iceburn: {
 		inherit: true,
 		isNonstandard: null,
-		self: null,
+		self: undefined,
 		shortDesc: "User recharges if doesn't KO. 30% burn.",
 		basePower: 130,
 		flags: { recharge: 1, protect: 1, mirror: 1, nosleeptalk: 1, failinstruct: 1 },
@@ -1818,7 +1818,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 	prismaticlaser: {
 		inherit: true,
 		isNonstandard: null,
-		self: null,
+		self: undefined,
 		basePower: 130,
 		shortDesc: "User recharges if doesn't KO. Physical if Atk > SpA.",
 		onModifyMove(move, pokemon) {
@@ -1865,7 +1865,7 @@ export const Moves: import('../../../sim/dex-moves').ModdedMoveDataTable = {
 	roaroftime: {
 		inherit: true,
 		isNonstandard: null,
-		self: null,
+		self: undefined,
 		basePower: 130,
 		shortDesc: "User recharge if doesn't KO. Dialga-O: No Recharge.",
 		onHit(target, source) {

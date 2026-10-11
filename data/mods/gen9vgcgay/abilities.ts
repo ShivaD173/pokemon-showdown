@@ -977,7 +977,7 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 	emergencyexit: {
 		inherit: true,
 		shortDesc: "When reaches <= 50% HP, Immediately attacks and then switches out.",
-		onEmergencyExit(target) {
+		onEmergencyExit(originalHp, target) {
 			if (!this.canSwitch(target.side) || target.forceSwitchFlag || target.switchFlag) return;
 			for (const side of this.sides) {
 				for (const active of side.active) {
