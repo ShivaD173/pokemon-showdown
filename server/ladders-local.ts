@@ -14,6 +14,7 @@
  */
 
 import { FS, Utils } from '../lib';
+import type { LadderUpdate } from './ladders';
 
 // ladderCaches = {formatid: ladder OR Promise(ladder)}
 // Use Ladders(formatid).ladder to guarantee a Promise(ladder).
@@ -127,7 +128,7 @@ export class LadderStore {
 	 * ladder toplist, to be displayed directly in the ladder tab of the
 	 * client.
 	 */
-	async getTop(prefix?: string) {
+	async getTop(prefix?: string): Promise<[string, string]> {
 		const formatid = this.formatid;
 		const name = Dex.formats.get(formatid).name;
 		const ladder = await this.getLadder();
@@ -187,7 +188,7 @@ export class LadderStore {
 	 * Update the Elo rating for two players after a battle, and display
 	 * the results in the passed room.
 	 */
-	async updateRating(p1name: string, p2name: string, p1score: number, room: AnyObject) {
+	async updateRating(p1name: string, p2name: string, p1score: number, room: AnyObject): Promise<LadderUpdate> {
 		if (Ladders.disabled) {
 			room.addRaw(`Ratings not updated. The ladders are currently disabled.`).update();
 			return [p1score, null, null];
@@ -278,7 +279,11 @@ export class LadderStore {
 			room.update();
 		}
 
-		return [p1score, p1newElo, p2newElo];
+		return [
+			p1score,
+			p1newElo === undefined ? null : { elo: p1newElo },
+			p2newElo === undefined ? null : { elo: p2newElo },
+		];
 	}
 
 	/**
