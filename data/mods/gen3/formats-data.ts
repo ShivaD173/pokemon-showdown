@@ -420,7 +420,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		tier: "UU",
 	},
 	magby: {
-		tier: "SUBL",
+		tier: "SU",
 	},
 	magmar: {
 		tier: "RU",
