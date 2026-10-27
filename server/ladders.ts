@@ -322,13 +322,13 @@ class Ladder extends LadderStore {
 		for (const roomid of user.games) {
 			const room = Rooms.get(roomid);
 			if (!room) {
-				Monitor.warn(`while searching, room ${roomid} expired for user ${user.id} in rooms ${[...user.inRooms]} and games ${[...user.games]}`);
+				Monitor.warn(`while searching, room ${roomid} expired for user ${user.id} in rooms ${[...user.inRooms].join(',')} and games ${[...user.games].join(',')}`);
 				user.games.delete(roomid);
 				continue;
 			}
 			const game = room.game;
 			if (!game) {
-				Monitor.warn(`while searching, room ${roomid} has no game for user ${user.id} in rooms ${[...user.inRooms]} and games ${[...user.games]}`);
+				Monitor.warn(`while searching, room ${roomid} has no game for user ${user.id} in rooms ${[...user.inRooms].join(',')} and games ${[...user.games].join(',')}`);
 				user.games.delete(roomid);
 				continue;
 			}
@@ -399,9 +399,14 @@ class Ladder extends LadderStore {
 		}
 
 		// if one user is a bot and one is a suspect user or a ladder tour player, do not match
+		// if one user is a bot and the other non-bot users have not all opted in to matchmaking bots, do not match
 		for (const [search, user] of matches) {
-			const bots = users.filter(x => x.isUserBot && x.id !== user.id);
+			const bots = users.filter(x => x.isUserBot && x.id !== user.id).map(x => x.id);
+			const hasNonOptedInUsers = users.some(
+				u => !u.isUserBot && !u.settings.allowLadderBots
+			);
 			if (search.custom === 'suspect' && bots.length) return false;
+			if (users.some(u => u.isUserBot) && hasNonOptedInUsers) return false;
 			if (Config.forcedprefixes?.some((p: any) => user.id.startsWith(p.prefix)) && bots.length) return false;
 		}
 
