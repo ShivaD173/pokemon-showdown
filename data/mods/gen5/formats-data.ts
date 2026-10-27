@@ -612,7 +612,7 @@ export const FormatsData: import('../../../sim/dex-species').ModdedSpeciesFormat
 		doublesTier: "DUU",
 	},
 	munchlax: {
-		tier: "SUBL",
+		tier: "SU",
 	},
 	snorlax: {
 		tier: "UU",
