@@ -458,7 +458,7 @@ export const Abilities: import('../../../sim/dex-abilities').ModdedAbilityDataTa
 			}
 		},
 		onDamage(damage, target, source, effect) {
-			if (effect && effect.id === 'brn') {
+			if (effect?.id === 'brn') {
 				return damage / 4;
 			}
 		},

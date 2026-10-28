@@ -415,7 +415,7 @@ export class BattleActions {
 				);
 				const targetOf1stDance = this.battle.activeTarget!;
 				for (const dancer of dancers) {
-					if (this.battle.faintMessages()) break;
+					if (this.battle.resolveFaints()) break;
 					if (dancer.fainted) continue;
 					this.battle.add('-activate', dancer, 'ability: Wind Chime');
 					const dancersTarget = !targetOf1stDance.isAlly(dancer) && pokemon.isAlly(dancer) ?
@@ -440,7 +440,7 @@ export class BattleActions {
 				);
 				const targetOf1stDance = this.battle.activeTarget!;
 				for (const dancer of dancers) {
-					if (this.battle.faintMessages()) break;
+					if (this.battle.resolveFaints()) break;
 					if (dancer.fainted) continue;
 					this.battle.add('-activate', dancer, "ability: Ballin'");
 					const dancersTarget = !targetOf1stDance.isAlly(dancer) && pokemon.isAlly(dancer) ?
@@ -463,7 +463,7 @@ export class BattleActions {
 				);
 				const targetOf1stDance = this.battle.activeTarget!;
 				for (const dancer of dancers) {
-					if (this.battle.faintMessages()) break;
+					if (this.battle.resolveFaints()) break;
 					if (dancer.fainted) continue;
 					this.battle.add('-activate', dancer, "ability: Minus");
 					const dancersTarget = !targetOf1stDance.isAlly(dancer) && pokemon.isAlly(dancer) ?
@@ -487,7 +487,7 @@ export class BattleActions {
 				);
 				const targetOf1stDance = this.battle.activeTarget!;
 				for (const dancer of dancers) {
-					if (this.battle.faintMessages()) break;
+					if (this.battle.resolveFaints()) break;
 					if (dancer.fainted) continue;
 					this.battle.add('-activate', dancer, "ability: Plus");
 					const dancersTarget = !targetOf1stDance.isAlly(dancer) && pokemon.isAlly(dancer) ?

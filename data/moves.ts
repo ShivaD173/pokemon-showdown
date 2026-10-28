@@ -21613,7 +21613,7 @@ export const Moves: import('../sim/dex-moves').MoveDataTable = {
 			}
 		},
 		onMoveFail(target, source) {
-			if (source.volatiles['twoturnmove'] && source.volatiles['twoturnmove'].duration === 1) {
+			if (source.volatiles['twoturnmove']?.duration === 1) {
 				source.removeVolatile('abduction');
 				source.removeVolatile('twoturnmove');
 				if (target === this.effectState.target) {

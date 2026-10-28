@@ -6150,7 +6150,7 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 	},
 	doubledown: {
 		onChangeBoost(boost, target, source, effect) {
-			if (effect && effect.id === 'zpower') return;
+			if (effect?.id === 'zpower') return;
 			let i: BoostID;
 			for (i in boost) {
 				boost[i]! *= -2;
@@ -6210,7 +6210,7 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 		},
 		onDamagePriority: -101,
 		onAnyDamage(damage, target, source, effect) {
-			if (source && source.ability === "rampage" && damage >= target.hp) {
+			if (source?.ability === "rampage" && damage >= target.hp) {
 				this.effectState.rampage = true;
 				const lockedmove = source.getVolatile('lockedmove');
 				if (lockedmove) {
@@ -6296,7 +6296,7 @@ export const Abilities: import('../sim/dex-abilities').AbilityDataTable = {
 	},
 	lifetaker: {
 		onSourceAfterFaint(length, target, source, effect) {
-			if (effect && effect.effectType === 'Move') {
+			if (effect?.effectType === 'Move') {
 				this.heal(source.baseMaxhp / 3, source);
 			}
 		},
